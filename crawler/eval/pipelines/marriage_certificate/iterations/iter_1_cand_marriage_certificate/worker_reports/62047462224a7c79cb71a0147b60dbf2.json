@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-certificate-requirement",
+      "text": "When an applicant's marital status is listed as married, a legal marriage certificate issued by the province, territory, or country where the marriage took place must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant in case 62047462224a7c79cb71a0147b60dbf2 has declared marital status as married for the marriage_certificate document upload slot."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "62047462224a7c79cb71a0147b60dbf2",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "62047462224a7c79cb71a0147b60dbf2.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "bdd1d6df97e7bf2031f81dcf769190479d038f4baaf42ed920eeefd1fc53bb36",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70d5c9e6de1b058c0a06652945be079d07ca12b21cbeaa54c33b6cb451fc21bd",
+    "prompt_hash": "608d4d93ec77c7b3803d5f30c7ce6e494561cd5f38296120709108ac1d0d89f1",
+    "output_hash": "cbe87c8d1e772d0e7e87d283f553751e412fa152d2ba4a8ac08418f836718767",
+    "returncode": 0,
+    "timestamp": "2026-07-24T10:05:12.612903+00:00",
+    "provenance_digest": "045997e34c36dbfb7fa21982de9890d3a274b37481e993eba4718a5385d7d8e0"
+  }
+}

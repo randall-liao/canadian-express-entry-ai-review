@@ -1,0 +1,130 @@
+{
+  "doc_type": "digital_photo",
+  "timestamp": "2026-07-23T03:37:28.580780+00:00",
+  "summary": "Live research on IRCC digital photo specifications for Express Entry and Permanent Residence applications reveals that non-compliant photos account for a major portion of application returns and processing delays. Primary rejection triggers include dimensions violating 50x70mm ratio or pixel range limits (715x1000 to 2000x2800 px), photos older than 6 months or lacking proof of date taken, improper chin-to-crown framing outside 31-36mm, and image defects such as background/facial shadows, glare, or non-white backgrounds.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:39:25.246173+00:00",
+    "duration_seconds": 123.02,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "b526ecfe6303de33ceef325ed4b552cb15e79d79b28c028ee607d215265a905b",
+    "raw_output_sha256": "7f90c738dc424d371a3d3788ae249a1303330c68016de07ebd630e37cb711657",
+    "returncode": 0,
+    "provenance_token": "fe9c8ccf3343149d703157001bc069774f055983feb4407890bc83fb0267cce9",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 7,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-DIGITAL_-01",
+      "category": "pfl_spec_non_compliance",
+      "severity": "critical",
+      "title": "Photo Dimensions and File Specification Non-Compliance (< 50x70mm or Out of Pixel Range)",
+      "description": "The uploaded digital photo fails to meet physical aspect ratio specifications (equivalent to 50 mm wide x 70 mm high) or digital parameters, such as pixel dimensions outside the mandatory 715 x 1000 to 2000 x 2800 pixels range or a file size exceeding 4 MB. Non-compliant digital dimensions trigger automated portal validation warnings or rejection at completeness check.",
+      "affected_fields": [
+        "photo_dimensions",
+        "pixel_resolution",
+        "file_size"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/card/photos.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "We may return your photo if... the measurements are not between 715 × 1000 and 2000 × 2800 pixels... the file size is above 4 MB... it does not meet the photo requirements.",
+      "remediation_hypothesis": "Obtain a original professional digital photo in JPEG format sized between 715 x 1000 and 2000 x 2800 pixels and under 4 MB, ensuring aspect ratio strictly reflects 50 mm width by 70 mm height.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DIGITAL_-02",
+      "category": "pfl_outdated_document",
+      "severity": "critical",
+      "title": "Photo Recency Non-Compliance (Date Taken Older Than 6 Months)",
+      "description": "The submitted photo was taken more than 6 months prior to application submission or fails to reflect the applicant's current appearance. Reusing outdated photos or submitting photos without the required photographer receipt/declaration showing date taken triggers a Procedural Fairness Letter (PFL) or photo resubmission request.",
+      "affected_fields": [
+        "photo_date_taken",
+        "applicant_appearance_recency",
+        "photographer_receipt"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/card/photos.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Upload a document that includes the information that would normally be listed on the back of the photo: the name and date of birth of the person in the photo, the date taken and the name and complete address of the photo studio, a confirmation from the photo studio (for example, a receipt).",
+      "remediation_hypothesis": "Re-take a new digital photo at a professional studio within 6 months of submission and upload the photographer receipt/studio invoice confirming studio details and exact date photo was taken.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DIGITAL_-03",
+      "category": "pfl_incorrect_framing",
+      "severity": "high",
+      "title": "Incorrect Chin-to-Crown Frame Size and Face Composition",
+      "description": "The facial height in the image fails to meet the 31 mm to 36 mm (chin to crown) proportion requirement, or the applicant is not centered facing directly forward with neutral facial expression. Improper cropping or head size proportional errors cause biometric validation failure.",
+      "affected_fields": [
+        "chin_to_crown_height",
+        "face_framing_position",
+        "facial_expression"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/card/photos.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The size of the head, from chin to crown, must be between 31 mm and 36 mm. Head and shoulders must be centered and squared to the camera with neutral expression.",
+      "remediation_hypothesis": "Re-shoot photo with a commercial photographer providing the official IRCC PR photograph specification guide to ensure chin-to-crown measurement occupies 31 mm to 36 mm height with head centered.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DIGITAL_-04",
+      "category": "pfl_lighting_background_defect",
+      "severity": "high",
+      "title": "Shadow, Glare, or Non-White Background Defect",
+      "description": "The photo contains dark background/facial shadows, flash reflections, glare on eyeglasses, or an off-white/patterned background. Facial shadows or reflections interfere with facial recognition processing and result in photo return.",
+      "affected_fields": [
+        "background_color",
+        "lighting_quality",
+        "glare_shadows"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/permanent-residents/card/photos.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "We may return your photo if it’s too dark, the background is not white, or there is too much glare in the photo. Photos must have uniform lighting with no shadows, glare or flash reflections.",
+      "remediation_hypothesis": "Provide a replacement studio digital photo shot against a solid, plain white, untextured background using balanced studio flash diffusion to eliminate shadows and glass glare.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

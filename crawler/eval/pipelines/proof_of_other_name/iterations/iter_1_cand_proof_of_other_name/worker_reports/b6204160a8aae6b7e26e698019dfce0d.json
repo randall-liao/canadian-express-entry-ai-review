@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "Information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)."
+    }
+  ],
+  "basis": [
+    "The applicant declared having used another name in their personal history, but document fields indicate proof_of_other_name is N/A and Document Status is Missing Certificate for case b6204160a8aae6b7e26e698019dfce0d. Defect PFL-POON_NAME-01 applies because the required government-issued certificate or supporting documentation is missing and was not attached."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b6204160a8aae6b7e26e698019dfce0d",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b6204160a8aae6b7e26e698019dfce0d.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "83644cacaf79dfc35bda01b085e953ab558962136932db80ac5d30f63cf8569a",
+    "allowed_text_sha256": null,
+    "bundle_hash": "748b40f14cf988381632e9add00202e9c1a5ae2f047e07ca25d5ecd9f374c4d8",
+    "prompt_hash": "cca637be17b72f6762edec5554d2e4c8ceb437e2a480e8ae55713246123e924d",
+    "output_hash": "d24a5f8941c40935da84b94844450b1fe2368d07f0cb57d460473bece73e05de",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:00:55.751840+00:00",
+    "provenance_digest": "136fa19c73c9ddb32210c57bd260c726542431fbcc6bf3341619d13199fc71ce"
+  }
+}

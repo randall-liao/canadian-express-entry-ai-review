@@ -1,0 +1,62 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    },
+    {
+      "id": "document-verification-verdict",
+      "text": "The submitted document verification verdict for this adoption certificate is meets_requirements.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant has declared a dependent child whose status is listed as adopted (opaque case ID: 62a2d308c5710bbc25a2327218691cc2). The submitted scanned adoption certificate and supporting records were verified against the four-point verification checklist (final judicial court adoption order, full legal adoption severing biological parental ties, provincial letter of no objection, and verified consent with completed home study report) and satisfy all document verification criteria with a verdict of meets_requirements."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "62a2d308c5710bbc25a2327218691cc2",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "62a2d308c5710bbc25a2327218691cc2.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "6525987d93172001fb8fe90a2345cfb5bf2598466a4aa68898a32ad062547b38",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "4420209fc4f7d6ebdea8b9c0d0c9568948083be4dbf82d1d9f8127afcee82d7b",
+    "output_hash": "82f1e0477d992202f0b620f62e6aacb5e598a218e5fd6fff33e6764d836702e3",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:12:31.487842+00:00",
+    "provenance_digest": "ff68fec99a54da4b720703b857c8bae91dc01db12b2c3ffda70ba54b12a149e4"
+  }
+}

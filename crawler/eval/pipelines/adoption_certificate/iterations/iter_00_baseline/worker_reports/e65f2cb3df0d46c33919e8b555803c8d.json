@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "Adoption certificate or legal adoption papers.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "Document slot adoption_certificate evaluated for case e65f2cb3df0d46c33919e8b555803c8d where dependent child status is listed as adopted."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e65f2cb3df0d46c33919e8b555803c8d",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e65f2cb3df0d46c33919e8b555803c8d.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a85f1dc9f83174b8ae6c632786ee67157c2960e51cd4d3539dbeaed306bfb4e6",
+    "allowed_text_sha256": null,
+    "bundle_hash": "129ef955fe8dac19cf9f98b704c507cd09fe2678d3dff76a6e07cd81e56a972f",
+    "prompt_hash": "0ae4361db6ec2edbb9e167271c22fbff34aaa6cc499e40589a56bc9f8ae7032d",
+    "output_hash": "83fba160f3bbadcdf4b32c82bf3f4abb6215a7cfee2faad4d435296e97d122ee",
+    "returncode": 0,
+    "timestamp": "2026-07-23T08:59:10.733077+00:00",
+    "provenance_digest": "c247799a29aaf00a36fb6be4e83c847c8bb8f4bba910dedcfc914963a9e2da4a"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "How must a foreign educational credential be assessed for Express Entry?",
+  "claims": [
+    {
+      "id": "eca_requirement",
+      "text": "A foreign educational credential must be submitted with an educational credential assessment (ECA) report issued by a designated organization or institution.",
+      "citations": [
+        "pr-pdi/express-entry-assessing-electronic-application-on-section-a11-2.md#015"
+      ],
+      "quote": "submit their completed foreign educational credential and the equivalency assessment (educational credential assessment [ECA] report) issued by a [designated organization or institution](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/partners-service-providers/foreign-educational-credential-assessment.html)"
+    }
+  ],
+  "basis": [
+    "Document uploaded under educational_credential_assessment slot for case f49c459f717534ca70ec124b8665b668."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "f49c459f717534ca70ec124b8665b668",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f49c459f717534ca70ec124b8665b668.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "8f7c394b7ad9c2b87e753bb061a9ea20043e52c7c5fe9ecf9fc40a546aaa85fd",
+    "allowed_text_sha256": null,
+    "bundle_hash": "3fba09ee6cc737403cf7f5bc2b1bff4b78d04d92506e4eed3415347a3598173c",
+    "prompt_hash": "4a0b9e637b34e08372cf64884519fb05a1d08bc74f8526ef5187d96722a097e2",
+    "output_hash": "a78328e6fdf18d453d1cb5bd8855818a07c9d3d45792c33c0d8420eebe4a09ab",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:46:28.301742+00:00",
+    "provenance_digest": "6820d3950e57e6c4cc962606ad4813e9c31e106e5d1ed586edee99ed58b430ae"
+  }
+}

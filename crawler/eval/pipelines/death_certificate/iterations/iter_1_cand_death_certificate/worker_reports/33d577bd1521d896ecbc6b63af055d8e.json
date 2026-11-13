@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-cert-copy",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant declared a marital status of widowed. The uploaded death certificate document was provided for validation of the spouse's death."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "33d577bd1521d896ecbc6b63af055d8e",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "33d577bd1521d896ecbc6b63af055d8e.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c789082684a50ac888e14c6c7ad5539229760fe25bf658bfc9a531f5e73d2ab3",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f5dd7cb2d45c0135570f1d3733db8965b317ddc35c2e55734554615b82b27034",
+    "prompt_hash": "b93fb869d62d8cbfae20a1c8d2920d697e701e2a9f6897984d16383a91731148",
+    "output_hash": "6c6a9f8b86555e18e445d4a32db0f04d95a7905f5d65a27dee94c75e7c6749b4",
+    "returncode": 0,
+    "timestamp": "2026-07-24T04:42:33.905288+00:00",
+    "provenance_digest": "bc8e74bee0f6202eb38eee7273921fae520c265bb05aefd30b81ca5ba202af1d"
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "doc_type": "language_test",
+  "case_evaluations": {
+    "44fb9983f21ca0cf7eae8f3bc1e4a357": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "fa85bcee6564c40d67c9cdffc9a4bc9b": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "56153966a2e4f647dbfb9c2293705fd0": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "798d8e90554521d6d1dc68e184b0079d": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ce799711157fdcc498337972abeb7199": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6a0d115a74ef3abc8ea910b979316fb0": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4de47fe931f148ccc9db31540c4494d0": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "121b0172fe512b84282a552552e9954b": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "bb591d2d1c871f262baf0440fcf1f3b6": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "925877636c7160d8f84a1977761d133f": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "56153966a2e4f647dbfb9c2293705fd0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-01. PDF narrative explicitly states test taken 2023-01-10 and 'Results expired on January 10, 2025, prior to the submission date of the application' (>2yr rule). Worker emitted only generic guidance boilerplate and detected no expiry defect."
+    },
+    {
+      "case_id": "798d8e90554521d6d1dc68e184b0079d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-01 (scanned sibling). Same CELPIP result expired 2025-01-10 stated in narrative. Worker returned generic 'take an approved test' claim without flagging the expired validity."
+    },
+    {
+      "case_id": "ce799711157fdcc498337972abeb7199",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-02. Registration No '0000000000000000', TRF '00CA000000TAY000X', PIN '00000000', and narrative 'returned no matching candidate record in the IELTS Verification Service database'. Worker flagged no unverifiable/TRF-mismatch integrity defect."
+    },
+    {
+      "case_id": "6a0d115a74ef3abc8ea910b979316fb0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-02 (scanned sibling). Same zeroed registration/TRF/PIN and explicit verification-failure narrative; Worker produced generic boilerplate only."
+    },
+    {
+      "case_id": "4de47fe931f148ccc9db31540c4494d0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-03. TEF Canada narrative reveals Compréhension écrite 150 (CLB 5) and 'Overall language proficiency evaluation determined to be CLB 5 based on the lowest subscore threshold', below FSWP/CEC CLB 7 cutoff. Table showing CLB 9 contradicts narrative; Worker detected neither the sub-cutoff score nor the table/narrative inconsistency."
+    },
+    {
+      "case_id": "121b0172fe512b84282a552552e9954b",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-03 (scanned sibling). Same CLB 5 written/reading subscores below program minimum; Worker returned generic claim with no score-cutoff analysis."
+    },
+    {
+      "case_id": "bb591d2d1c871f262baf0440fcf1f3b6",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-04. Document is 'OFFICIAL IELTS ACADEMIC' with narrative 'contains an Academic stream module rather than the required General Training stream designated for economic immigration programs' — an unapproved test variant. Worker did not flag the disallowed stream."
+    },
+    {
+      "case_id": "925877636c7160d8f84a1977761d133f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-04 (scanned sibling). Same IELTS Academic (unapproved) stream stated in header and narrative; Worker produced generic guidance claim without detecting the invalid test type."
+    },
+    {
+      "case_id": "44fb9983f21ca0cf7eae8f3bc1e4a357",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Clean (meets_requirements) case handled without false positives, but Worker did not engage document specifics; note the table Reading 8.0 vs narrative Reading 7.0 internal discrepancy went unremarked (non-injected). No defect existed so recall preserved."
+    },
+    {
+      "case_id": "fa85bcee6564c40d67c9cdffc9a4bc9b",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Clean sibling case; no defect present. Worker output is generic and non-responsive to document content but produces no false positive. Empty prose acceptable."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/language_test.md",
+      "suggested_patch": "Require the agent to extract and validate concrete fields before answering: (1) test_date/expiry_date — flag if results are >2 years old or narrative says 'expired' (PFL-LANGUAGE-01); (2) test_type/test_variant — reject IELTS Academic, IELTS One Skill Retake, TOEFL, or any non-approved stream; accepted set = CELPIP-General, IELTS General Training, PTE Core, TEF Canada, TCF Canada (PFL-LANGUAGE-04); (3) per-skill CLB against program minimum (FSWP/CEC TEER 0/1 = CLB 7 all abilities) using the NARRATIVE subscores, not the summary table (PFL-LANGUAGE-03); (4) registration_number/trf_number/test_pin plausibility and any narrative statement of failed provider verification or 'no matching candidate record' (PFL-LANGUAGE-02). Emit an explicit meets_requirements|defective verdict with the offending field(s)."
+    },
+    {
+      "target_file": "skills/document-agents/language_test.md",
+      "suggested_patch": "Add a mandatory cross-consistency check: compare the header candidate_name against names in the narrative, and compare the CLB column in the score table against the CLB values stated in the narrative/detailed notes. When they disagree (e.g., table shows CLB 9 but narrative states CLB 5), treat the narrative as authoritative and raise a data-integrity flag rather than accepting the table."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Direct document-review workers to actually inspect the attached PDF and produce a per-document verdict with evidence, not to answer the slot's guidance question generically. A claim citing guidance boilerplate ('take an approved language test') is insufficient; the report must include document-derived findings/abstentions and defect flags tied to observed field values."
+    }
+  ],
+  "rationale": "The Gemini 3.6 Flash worker produced near-identical generic boilerplate for all 10 cases, citing guidance/language-test.md#001 ('You must prove your language skills by taking an approved language test') without ever inspecting the attached documents. Citations resolve exactly to the official IRCC guidance excerpt (citation_exactness 1.0), no PII leaked into claims/prose (all applicant facts absent or confined to basis[], pii_containment 1.0), and the worker operated blindly with no ground-truth leakage (blind_input_compliance 1.0). The critical failure is defect_recall: 0/8 injected defects were detected despite explicit, unambiguous signals in every defective PDF's narrative (expired results, failed verification/zeroed TRF, sub-CLB scores, IELTS Academic stream). Grounding is scored 1.0 on the two clean cases (no invented facts, no false positives) and 0.9 on the eight defective cases where the worker's non-responsive generic answer, while not fabricating facts, implicitly treats defective documents as unremarkable. Both meets_requirements cases receive defect_recall 1.0 (no defect to miss). Root cause: the worker answers the slot's guidance question instead of reviewing the document; patches target the language_test agent spec and AGENTS.md to enforce field extraction, approved-test/validity/CLB checks, table-vs-narrative reconciliation, and explicit verdicts.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "121b0172fe512b84282a552552e9954b.pdf",
+      "--attachment",
+      "44fb9983f21ca0cf7eae8f3bc1e4a357.pdf",
+      "--attachment",
+      "4de47fe931f148ccc9db31540c4494d0.pdf",
+      "--attachment",
+      "56153966a2e4f647dbfb9c2293705fd0.pdf",
+      "--attachment",
+      "6a0d115a74ef3abc8ea910b979316fb0.pdf",
+      "--attachment",
+      "798d8e90554521d6d1dc68e184b0079d.pdf",
+      "--attachment",
+      "925877636c7160d8f84a1977761d133f.pdf",
+      "--attachment",
+      "bb591d2d1c871f262baf0440fcf1f3b6.pdf",
+      "--attachment",
+      "ce799711157fdcc498337972abeb7199.pdf",
+      "--attachment",
+      "fa85bcee6564c40d67c9cdffc9a4bc9b.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "cb4dec3353033f6304994113eb6330aa92ab3a109a0f6867dc6271c82e171065",
+    "research_hash": "6bfcc63237b3fce0121524a9e6f932a47a14e54d33af569e60a704d335bf99ec",
+    "ground_truth_hash": "1ce7a8e22372c6583b47873b95ad48ad380b2f4dd582d47c7967f4897b897586",
+    "output_hash": "7f41bfc6a150cb77b52611d55114d66ade25b9d3fdf93f9783faff8883cb6f56",
+    "timestamp": "2026-07-23T23:09:26.551460+00:00",
+    "provenance_digest": "84cb2f90c59c59e2a5cf5205ef27704c18100c623e582e0518d5c556fd6ac437"
+  }
+}

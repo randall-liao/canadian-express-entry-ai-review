@@ -1,0 +1,70 @@
+{
+  "question": "What must an applicant provide to claim a relative in Canada for points?",
+  "claims": [
+    {
+      "id": "relative-status-proof",
+      "text": "A copy of both sides of the family member's Canadian citizenship document, Canadian birth certificate and/or permanent resident card must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "A copy of **both** sides of the family member's Canadian citizenship document, Canadian birth certificate and/or permanent resident card must be provided."
+    },
+    {
+      "id": "relative-residence-evidence",
+      "text": "Evidence that the family member currently resides in Canada must be provided (a residential lease, mortgage documents, utility bills, etc.).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Evidence that the family member currently resides in Canada must be provided (a residential lease, mortgage documents, utility bills, etc.)."
+    },
+    {
+      "id": "relative-relationship-proof",
+      "text": "Proof of the relationship of the applicant or the accompanying spouse or common-law partner to the family member must also be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Proof of the relationship of the applicant or the accompanying spouse or common-law partner to the family member must also be provided (e.g., a birth certificate, an official document naming the applicant as a relative, a copy of the inside back cover of the relative’s passport showing the relative’s parents’ marriage certificate, legal adoption documents and any other documents that prove or describe the relationship)."
+    }
+  ],
+  "basis": [
+    "The applicant indicates having a relative in Canada to claim adaptability or additional CRS points for Express Entry case 30ed110465efad8a0e363567815ccbe9."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "30ed110465efad8a0e363567815ccbe9",
+  "doc_type": "relative_in_canada",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "30ed110465efad8a0e363567815ccbe9.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "14de86a8c27e1892be3ba74f106decd97cda71e72a316bb6901584340ca603f6",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2f1f40f094cef106be7456e66355dedb2f4bfb3f04e122aa516f1b82e15a9223",
+    "prompt_hash": "f1a456988f0b6648e130a5e1de60fb331d8f39003c9715adb84ece9bc579b3dc",
+    "output_hash": "ca7a8d5489808f272918464b79134036278357e90844787518ebc1238c7168a2",
+    "returncode": 0,
+    "timestamp": "2026-07-23T17:41:27.580355+00:00",
+    "provenance_digest": "e91e0bcd78b6e9626dc2a3f879df2b0d21d93fa925506a5b51d973d773e646c8"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-certificate-requirement",
+      "text": "When an applicant's marital status is listed as widowed, a copy of a death certificate, executorships, or other legal certificate issued by the country, territory, or region where the death occurred must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "This document is requested only when the marital status is listed as widowed."
+    }
+  ],
+  "basis": [
+    "The applicant's declared marital status is widowed for opaque case ID 4532662d42f42c242130dedf908fe366."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "4532662d42f42c242130dedf908fe366",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4532662d42f42c242130dedf908fe366.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "f8eea10d64d7e2854fcdee023e378d8a4760b634d9eab9d2b390339b8ffc8a10",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f5dd7cb2d45c0135570f1d3733db8965b317ddc35c2e55734554615b82b27034",
+    "prompt_hash": "626a8866af2bb2a25ffd404962b17d20c160f9a2dd940433e28ee2ed9fe0a90b",
+    "output_hash": "80d58dc54ff7d4f84171130dc98af0b7c38d978cf1213b62cfdfe83e11a42d06",
+    "returncode": 0,
+    "timestamp": "2026-07-24T04:53:41.719614+00:00",
+    "provenance_digest": "462d0cc49f620b500dcd8ba0b3ed242bde672e60c3674bed42d47063a52543d1"
+  }
+}

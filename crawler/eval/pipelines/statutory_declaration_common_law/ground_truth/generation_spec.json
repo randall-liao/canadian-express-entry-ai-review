@@ -1,0 +1,256 @@
+{
+  "doc_type": "statutory_declaration_common_law",
+  "timestamp": "2026-07-23T07:04:58.709000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "statutory_declaration_common_law",
+      "title": "IMM 5409 Statutory Declaration of Common-Law Union",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-06-15",
+      "expiry_date": null,
+      "fields": {
+        "declarant_1_full_name": "Alex Morgan",
+        "declarant_2_full_name": "Taylor Jordan Reed",
+        "current_address": "742 Evergreen Terrace, Toronto, ON M5V 2T6, Canada",
+        "imm5409_cohabitation_start_date": "2022-05-01",
+        "imm5409_cohabitation_end_date": "2024-06-15",
+        "cohabitation_duration_months": 25,
+        "imm5409_section_2_financial_arrangements": "Joint bank account with RBC, joint residential lease agreement, mutual life insurance beneficiary designation, shared utility accounts.",
+        "joint_bank_statement_proof": "RBC Joint Chequing Account #****4821 active since June 2022",
+        "shared_utility_bills_proof": "Enbridge Gas & Toronto Hydro accounts in both names since July 2022",
+        "insurance_beneficiary_proof": "Sun Life Policy #SL-99382 listing Taylor Reed as primary beneficiary",
+        "express_entry_personal_history_address": "742 Evergreen Terrace, Toronto, ON (May 2022 - Present)",
+        "express_entry_address_history": "742 Evergreen Terrace, Toronto, ON M5V 2T6",
+        "cra_tax_marital_status": "Common-Law (declared tax year 2022 and 2023)",
+        "drivers_license_address": "742 Evergreen Terrace, Toronto, ON M5V 2T6",
+        "proof_of_cohabitation_dates": "Continuous from 2022-05-01 to 2024-06-15",
+        "imm5409_cohabitation_dates": "2022-05-01 to Present",
+        "imm5409_deponent_signatures": "Signed by Alex Morgan and Taylor Jordan Reed on 2024-06-15",
+        "imm5409_solemn_declaration_signature": "Commissioner for Oaths Signature Verified (ID #ON-COMM-88412)",
+        "imm5409_commissioner_stamp": "Official Notary Public / Commissioner Seal - City of Toronto, Province of Ontario",
+        "imm5409_declaration_date": "2024-06-15"
+      },
+      "narrative_blocks": [
+        "We, Alex Morgan and Taylor Jordan Reed, solemnly declare that we have cohabited in a continuous conjugal relationship at 742 Evergreen Terrace, Toronto, ON, Canada since May 1, 2022.",
+        "We share full joint financial responsibility, including a joint chequing account with Royal Bank of Canada, joint tenancy on our primary residence lease, mutual designation as primary beneficiaries on life insurance policies, and joint utility service obligations.",
+        "Solemnly declared before Sarah Jenkins, Notary Public and Commissioner for Taking Affidavits in the Province of Ontario, at the City of Toronto, this 15th day of June, 2024."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "statutory_declaration_common_law",
+      "title": "IMM 5409 Statutory Declaration of Common-Law Union",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-06-15",
+      "expiry_date": null,
+      "fields": {
+        "declarant_1_full_name": "Liam Ethan Bennett",
+        "declarant_2_full_name": "Sophia Marie Chen",
+        "current_address": "1088 Burrard Street, Suite 402, Vancouver, BC V6Z 2R9, Canada",
+        "imm5409_cohabitation_start_date": "2022-01-10",
+        "imm5409_cohabitation_end_date": "2024-06-15",
+        "cohabitation_duration_months": 29,
+        "imm5409_section_2_financial_arrangements": "Joint tenancy lease and joint savings account.",
+        "joint_bank_statement_proof": "TD Canada Trust Joint Account #****1092",
+        "shared_utility_bills_proof": "BC Hydro account under both names",
+        "insurance_beneficiary_proof": "Manulife Policy #MN-30219",
+        "express_entry_personal_history_address": "1088 Burrard Street, Vancouver, BC (Jan 2022 - Present)",
+        "express_entry_address_history": "1088 Burrard Street, Vancouver, BC V6Z 2R9",
+        "cra_tax_marital_status": "Common-Law",
+        "drivers_license_address": "1088 Burrard Street, Vancouver, BC V6Z 2R9",
+        "proof_of_cohabitation_dates": "Continuous from 2022-01-10 to 2024-06-15",
+        "imm5409_cohabitation_dates": "2022-01-10 to Present",
+        "imm5409_deponent_signatures": null,
+        "imm5409_solemn_declaration_signature": null,
+        "imm5409_commissioner_stamp": null,
+        "imm5409_declaration_date": null
+      },
+      "narrative_blocks": [
+        "We, Liam Ethan Bennett and Sophia Marie Chen, declare that we have cohabited in a conjugal relationship at 1088 Burrard Street, Vancouver, BC since January 10, 2022.",
+        "This document was submitted without being solemnized before a Commissioner for Oaths, Notary Public, or Justice of the Peace. Section 4 remains unexecuted.",
+        "The statutory declaration lacks required attestation signatures, official notarization stamp, and solemnization date."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-STATUTOR-01",
+        "category": "pfl_invalid_legal_declaration",
+        "severity": "critical",
+        "description": "The IMM 5409 statutory declaration form lacks required solemnization signatures, notary/commissioner seal, official stamp, and execution date, rendering it legally invalid.",
+        "affected_fields": [
+          "imm5409_solemn_declaration_signature",
+          "imm5409_commissioner_stamp",
+          "imm5409_declaration_date",
+          "imm5409_deponent_signatures"
+        ],
+        "mutation_details": {
+          "missing_signatures": true,
+          "missing_commissioner_stamp": true,
+          "missing_declaration_date": true,
+          "legal_status": "unsolemnized"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "statutory_declaration_common_law",
+      "title": "IMM 5409 Statutory Declaration of Common-Law Union",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-05-10",
+      "expiry_date": null,
+      "fields": {
+        "declarant_1_full_name": "Marcus Aurelius Vance",
+        "declarant_2_full_name": "Elena Rostova",
+        "current_address": "450 8th Avenue SW, Calgary, AB T2P 1G2, Canada",
+        "imm5409_cohabitation_start_date": "2023-11-01",
+        "imm5409_cohabitation_end_date": "2024-05-10",
+        "cohabitation_duration_months": 6,
+        "imm5409_section_2_financial_arrangements": "Joint lease and joint bank account",
+        "joint_bank_statement_proof": "Scotiabank Joint Account #****7732",
+        "shared_utility_bills_proof": "ENMAX Utilities bill",
+        "insurance_beneficiary_proof": "Canada Life Policy #CL-88120",
+        "express_entry_personal_history_address": "450 8th Avenue SW, Calgary, AB (Nov 2023 - May 2024: 6 months); Previous: 120 4th St, Calgary, AB (Alone)",
+        "express_entry_address_history": "450 8th Avenue SW, Calgary, AB T2P 1G2",
+        "cra_tax_marital_status": "Single",
+        "drivers_license_address": "450 8th Avenue SW, Calgary, AB T2P 1G2",
+        "proof_of_cohabitation_dates": "2023-11-01 to 2024-05-10 (6 months continuous cohabitation)",
+        "imm5409_cohabitation_dates": "2023-11-01 to 2024-05-10",
+        "imm5409_deponent_signatures": "Signed by Marcus Vance and Elena Rostova on 2024-05-10",
+        "imm5409_solemn_declaration_signature": "Commissioner for Oaths Signature Verified (ID #AB-COMM-44109)",
+        "imm5409_commissioner_stamp": "Official Notary Stamp - Province of Alberta",
+        "imm5409_declaration_date": "2024-05-10"
+      },
+      "narrative_blocks": [
+        "We, Marcus Aurelius Vance and Elena Rostova, declare that we have cohabited continuously at 450 8th Avenue SW, Calgary, AB from November 1, 2023 to May 10, 2024.",
+        "The period of continuous cohabitation documented is only 6 months, failing to meet the legal standard of 12 continuous months required under Canadian immigration regulations for common-law status.",
+        "Personal history and lease records confirm separate residential addresses prior to November 1, 2023."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-STATUTOR-02",
+        "category": "pfl_cohabitation_duration_gap",
+        "severity": "critical",
+        "description": "The declaration and supporting evidence demonstrate only 6 months of continuous cohabitation prior to application submission, failing to meet the mandatory 12 consecutive months requirement.",
+        "affected_fields": [
+          "imm5409_cohabitation_start_date",
+          "imm5409_cohabitation_end_date",
+          "express_entry_personal_history_address",
+          "proof_of_cohabitation_dates"
+        ],
+        "mutation_details": {
+          "start_date": "2023-11-01",
+          "end_date": "2024-05-10",
+          "actual_cohabitation_months": 6,
+          "required_cohabitation_months": 12,
+          "gap_description": "Insufficient cohabitation duration (6 months vs 12 required)"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "statutory_declaration_common_law",
+      "title": "IMM 5409 Statutory Declaration of Common-Law Union",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-04-20",
+      "expiry_date": null,
+      "fields": {
+        "declarant_1_full_name": "David Robert Sterling",
+        "declarant_2_full_name": "Chloe Victoria Adams",
+        "current_address": "305 Rideau Street, Ottawa, ON K1N 9E5, Canada",
+        "imm5409_cohabitation_start_date": "2022-09-01",
+        "imm5409_cohabitation_end_date": "2024-04-20",
+        "cohabitation_duration_months": 19,
+        "imm5409_section_2_financial_arrangements": "None selected. All financial arrangements, utility bills, and insurance policies are maintained completely separately.",
+        "joint_bank_statement_proof": null,
+        "shared_utility_bills_proof": null,
+        "insurance_beneficiary_proof": null,
+        "express_entry_personal_history_address": "305 Rideau Street, Ottawa, ON (Sept 2022 - Present)",
+        "express_entry_address_history": "305 Rideau Street, Ottawa, ON K1N 9E5",
+        "cra_tax_marital_status": "Single",
+        "drivers_license_address": "305 Rideau Street, Ottawa, ON K1N 9E5",
+        "proof_of_cohabitation_dates": "2022-09-01 to 2024-04-20",
+        "imm5409_cohabitation_dates": "2022-09-01 to Present",
+        "imm5409_deponent_signatures": "Signed by David Sterling and Chloe Adams on 2024-04-20",
+        "imm5409_solemn_declaration_signature": "Commissioner for Oaths Signature Verified (ID #ON-COMM-99210)",
+        "imm5409_commissioner_stamp": "Official Notary Stamp - City of Ottawa",
+        "imm5409_declaration_date": "2024-04-20"
+      },
+      "narrative_blocks": [
+        "We, David Robert Sterling and Chloe Victoria Adams, declare cohabitation at 305 Rideau Street, Ottawa, ON since September 1, 2022.",
+        "No joint financial accounts, shared utility liabilities, joint property leases, or mutual insurance beneficiary designations exist. All financial affairs remain entirely separate.",
+        "Section 2 of IMM 5409 indicates zero joint financial arrangements or shared financial interdependence."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-STATUTOR-03",
+        "category": "pfl_insufficient_financial_interdependence",
+        "severity": "warning",
+        "description": "Complete absence of joint financial arrangements, joint banking, shared utility obligations, or insurance beneficiary designations to substantiate financial interdependence.",
+        "affected_fields": [
+          "imm5409_section_2_financial_arrangements",
+          "joint_bank_statement_proof",
+          "shared_utility_bills_proof",
+          "insurance_beneficiary_proof"
+        ],
+        "mutation_details": {
+          "has_joint_bank_account": false,
+          "has_shared_utility_bills": false,
+          "has_insurance_beneficiary": false,
+          "financial_interdependence_level": "none"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "statutory_declaration_common_law",
+      "title": "IMM 5409 Statutory Declaration of Common-Law Union",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-03-12",
+      "expiry_date": null,
+      "fields": {
+        "declarant_1_full_name": "Ethan Gabriel Wright",
+        "declarant_2_full_name": "Hannah Isobel Taylor",
+        "current_address": "1500 Main Street, Winnipeg, MB R2W 3Z3, Canada",
+        "imm5409_cohabitation_start_date": "2021-06-01",
+        "imm5409_cohabitation_end_date": "2024-03-12",
+        "cohabitation_duration_months": 33,
+        "imm5409_section_2_financial_arrangements": "Joint bank account with CIBC and shared lease.",
+        "joint_bank_statement_proof": "CIBC Joint Account #****3390",
+        "shared_utility_bills_proof": "Manitoba Hydro bill in both names",
+        "insurance_beneficiary_proof": "Great-West Life Policy #GW-11029",
+        "express_entry_personal_history_address": "1500 Main Street, Winnipeg, MB (2021-06-01 - Present)",
+        "express_entry_address_history": "789 Portage Ave, Winnipeg, MB (Listed as primary address in Express Entry Profile during 2022-2023)",
+        "cra_tax_marital_status": "Single (Filed CRA Income Tax Returns as Single for tax years 2021, 2022, and 2023)",
+        "drivers_license_address": "221 Baker Street, Brandon, MB R7A 1A1 (Driver's License address updated only in Feb 2024)",
+        "proof_of_cohabitation_dates": "Inconsistent: IMM 5409 states 2021-06-01 to Present; CRA taxes state Single; Driver's License reflects different address prior to Feb 2024",
+        "imm5409_cohabitation_dates": "2021-06-01 to Present",
+        "imm5409_deponent_signatures": "Signed by Ethan Wright and Hannah Taylor on 2024-03-12",
+        "imm5409_solemn_declaration_signature": "Commissioner for Oaths Signature Verified (ID #MB-COMM-12904)",
+        "imm5409_commissioner_stamp": "Official Notary Stamp - City of Winnipeg",
+        "imm5409_declaration_date": "2024-03-12"
+      },
+      "narrative_blocks": [
+        "We, Ethan Gabriel Wright and Hannah Isobel Taylor, declare cohabitation at 1500 Main Street, Winnipeg, MB since June 1, 2021.",
+        "Significant discrepancies exist across official records: CRA tax returns for 2021-2023 report marital status as 'Single', Express Entry address history lists 789 Portage Ave, and provincial driver's licenses register 221 Baker Street until February 2024.",
+        "Contradictory official representations raise material concerns regarding potential misrepresentation or inaccurate declaration of marital and cohabitation status."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-STATUTOR-04",
+        "category": "pfl_data_discrepancy_and_misrepresentation",
+        "severity": "warning",
+        "description": "Material discrepancy between IMM 5409 claimed cohabitation dates/address and official government records (CRA tax filings reported as Single, Express Entry profile address mismatch, and delayed driver's license address update).",
+        "affected_fields": [
+          "imm5409_cohabitation_dates",
+          "express_entry_address_history",
+          "cra_tax_marital_status",
+          "drivers_license_address"
+        ],
+        "mutation_details": {
+          "imm5409_claimed_start_date": "2021-06-01",
+          "cra_tax_reported_status": "Single (2021-2023)",
+          "express_entry_address_mismatch": "789 Portage Ave, Winnipeg, MB",
+          "drivers_license_address_mismatch": "221 Baker Street, Brandon, MB",
+          "discrepancy_type": "contradictory_government_records"
+        }
+      }
+    }
+  ]
+}

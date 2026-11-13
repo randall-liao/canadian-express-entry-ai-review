@@ -1,0 +1,176 @@
+{
+  "doc_type": "proof_of_other_name",
+  "case_evaluations": {
+    "378ead7a471b75091f478ffb48739dfa": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4dbe04ebe035b79589b4c16ac199d62e": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "828adaf90769e1eebb95183551aeb401": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "8d3ad7599ed52ad934b1acd144530744": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b3510812680619987e779dff9fa0a33e": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b3fb24ac039cee91b1fd3b938bfeaf64": {
+      "grounding_accuracy": 0.4,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b6204160a8aae6b7e26e698019dfce0d": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c3d9f81b44eed96d20fa4c090867787c": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "cada542ac1784d2af533c449bb43f055": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d89d1598b59f509015efe69f36cfee23": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "378ead7a471b75091f478ffb48739dfa",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-03. PDF explicitly states 'Unverified Discrepancy: Middle initial V. in ECA report unreferenced in proof of name' with three-way name variance (Rostova/Rostoff/V. Rostova), yet Worker reported only the generic requirement and flagged no defect. Its scanned sibling c3d9f81b caught this same defect — detection is non-deterministic across variants."
+    },
+    {
+      "case_id": "b3510812680619987e779dff9fa0a33e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-04. PDF shows Spanish 'Certificado de Cambio de Nombre' with 'Translation Certified: False', 'Translator Affidavit: N/A', and an informal self-translation, but Worker flagged no defect. Its scanned sibling 4dbe04eb correctly detected the identical uncertified-translation defect."
+    },
+    {
+      "case_id": "b3fb24ac039cee91b1fd3b938bfeaf64",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-01. PDF shows 'Proof Of Other Name: N/A', 'Document Status: Missing Certificate', and narrative admitting the applicant 'failed to attach the mandatory government-issued certificate', yet Worker flagged no defect. Its vector sibling b6204160 correctly detected the missing certificate."
+    },
+    {
+      "case_id": "b3fb24ac039cee91b1fd3b938bfeaf64",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Grounding contradiction: basis asserts the applicant 'submitted supporting documentation under slot proof_of_other_name', but the PDF fields state Proof Of Other Name is N/A and Document Status is 'Missing Certificate'. The claim of submitted documentation is not supported by the source."
+    },
+    {
+      "case_id": "4dbe04ebe035b79589b4c16ac199d62e",
+      "category": "defect_recall",
+      "severity": "minor",
+      "description": "Correctly detected PFL-POON_NAME-04 with accurate field-grounded basis (translation_certified: false, translator_affidavit: null). Positive control confirming taxonomy is available to the Worker; the sibling miss (b3510812) is a consistency failure, not a knowledge gap."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/proof_of_other_name.md",
+      "suggested_patch": "Add a mandatory pre-verdict checklist that must be evaluated on EVERY case regardless of PDF variant (scanned vs vector): (1) PFL-POON_NAME-01 — if 'Proof Of Other Name' is N/A/blank or 'Document Status' contains 'Missing', flag missing certificate and NEVER assert documentation was submitted; (2) PFL-POON_NAME-02 — if 'Seal Present'/'Court Clerk Signature Present' is False or seal is N/A, flag unsealed court order; (3) PFL-POON_NAME-03 — compare passport_full_name, eca_applicant_name, degree_certificate_name and any 'Unverified Discrepancy' field; flag unresolved variance; (4) PFL-POON_NAME-04 — if Primary Language is non-EN/FR and Translation Certified is False or Translator Affidavit is N/A, flag uncertified translation. Verdict must be 'defective' whenever any check trips."
+    },
+    {
+      "target_file": "skills/document-agents/proof_of_other_name.md",
+      "suggested_patch": "Require the Worker to derive its verdict strictly from explicit field values and narrative text before emitting the generic requirement claim. When a field literally reads 'False', 'N/A', or 'Missing Certificate', treat it as evidence of a defect, not as satisfied. Prohibit boilerplate basis statements like 'the applicant submitted documentation' unless a concrete document/certificate field is present and non-null."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add determinism guardrail: identical logical cases rendered as scanned vs vector PDFs must yield identical defect findings. Instruct Workers to extract the labeled key/value table first, then run the failure-mode checklist against extracted values, so OCR/rendering differences cannot cause a defect to be caught on one variant and missed on its sibling."
+    }
+  ],
+  "rationale": "Worker (gemini-3.6-flash) produced clean, PII-safe reports: all applicant facts stayed in basis[], claims/prose held only generic guideline text, and consistent citation to the completeness-check corpus (#064). Blind compliance is strong — the pattern of inconsistent detection confirms no ground-truth leakage. The dominant weakness is defect recall: 3 of 8 defective cases were missed (378ead7a POON-03, b3510812 POON-04, b3fb24ac POON-01), while their siblings were caught, indicating non-deterministic evaluation across scanned/vector variants rather than a knowledge gap. b3fb24ac additionally fabricated a 'submitted documentation' basis contradicting the 'Missing Certificate' PDF fields (grounding docked to 0.4). Both meets_requirements cases (828adaf9, 8d3ad759) and 5 defective cases were handled correctly. Recommended patches enforce a mandatory per-case failure-mode checklist and variant-invariant extraction to close the recall gaps.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "378ead7a471b75091f478ffb48739dfa.pdf",
+      "--attachment",
+      "4dbe04ebe035b79589b4c16ac199d62e.pdf",
+      "--attachment",
+      "828adaf90769e1eebb95183551aeb401.pdf",
+      "--attachment",
+      "8d3ad7599ed52ad934b1acd144530744.pdf",
+      "--attachment",
+      "b3510812680619987e779dff9fa0a33e.pdf",
+      "--attachment",
+      "b3fb24ac039cee91b1fd3b938bfeaf64.pdf",
+      "--attachment",
+      "b6204160a8aae6b7e26e698019dfce0d.pdf",
+      "--attachment",
+      "c3d9f81b44eed96d20fa4c090867787c.pdf",
+      "--attachment",
+      "cada542ac1784d2af533c449bb43f055.pdf",
+      "--attachment",
+      "d89d1598b59f509015efe69f36cfee23.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "f96f5e776db2ed512bdf65785fec18b6ef7aa59a8d2267599c333d029c37402c",
+    "research_hash": "be342af9df5adc6b0e523e82b7e157596b281168a51c546f3050eb943917a6a2",
+    "ground_truth_hash": "dd89497f6c0ef6d78e097ce6833caada90e6ca90302e5e0a1e1fcf3082ab86b5",
+    "output_hash": "0b2bc3198705fc2c98a3011c30013511334b2367eb6b1f7276b8a378ebc377fc",
+    "timestamp": "2026-07-24T23:37:44.197728+00:00",
+    "provenance_digest": "9eea148f4fab5d7c40790e8cf05950e6cb93baff34110722b4e46f45ac1e8d91"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide to claim a relative in Canada for points?",
+  "claims": [
+    {
+      "id": "relative-in-canada-requirements",
+      "text": "Proof of the relative's status in Canada, evidence that the relative currently resides in Canada, and proof of the relationship to the applicant or accompanying spouse.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "This documentation is required if the applicant indicates that they, or their accompanying spouse or common-law partner, have a family member in Canada who is a permanent resident or a Canadian citizen."
+    }
+  ],
+  "basis": [
+    "The applicant or their accompanying spouse or common-law partner indicates having a relative in Canada who is a Canadian citizen or permanent resident."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "c392aa8c3c5b73d34380cea976500aa8",
+  "doc_type": "relative_in_canada",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c392aa8c3c5b73d34380cea976500aa8.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "3d8fdcc0c56afc2217520d9dedc8d4b96d6666977fce5a8bcc70b19e0bbf49b0",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2f1f40f094cef106be7456e66355dedb2f4bfb3f04e122aa516f1b82e15a9223",
+    "prompt_hash": "e87a4961d28b229462124ba98541ffb77d8951ff8a62ab4dbf2ecc09e0ecb97e",
+    "output_hash": "339dc02a1574798c910c8985f0966b1a862654e700c88880f8508340eaefe81a",
+    "returncode": 0,
+    "timestamp": "2026-07-23T18:05:54.228677+00:00",
+    "provenance_digest": "533d0b5b53c234d46aafd4c0f82a352f5a7580ce8833ae41a4e90123b921d34e"
+  }
+}

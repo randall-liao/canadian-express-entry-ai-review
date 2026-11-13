@@ -1,0 +1,130 @@
+{
+  "doc_type": "proof_of_studies",
+  "timestamp": "2026-07-23T03:54:07.601394+00:00",
+  "summary": "Online research into Express Entry 'proof_of_studies' document processing reveals key failure modes and PFL triggers centered around missing official transcripts, unaccredited academic institutions, enrollment timeline discrepancies, and degree completion date mismatches between Express Entry profiles, ECA reports, and university transcripts.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:57:06.375358+00:00",
+    "duration_seconds": 188.65,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "d4bd11d0a318c1daa85097b50dddb10378b114eaf2a42e7e69d241a2b6a2de14",
+    "raw_output_sha256": "15cdc7d842be58f430f391a393a397cf9b93a6cf267f17230727654fa05acdc2",
+    "returncode": 0,
+    "provenance_token": "4c9d7883935e8e46fd680ca2bb1fac8ff9465d13dcaa5839b9ff1a3e6f1ab0f5",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 10,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-POS_STUD-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Missing or Incomplete Official Academic Transcripts",
+      "description": "Failure to upload official academic transcripts covering all completed semesters/years for each credential claimed in Express Entry, or submitting web portal screenshots rather than official institution-issued marksheets.",
+      "affected_fields": [
+        "education_history.transcripts",
+        "education_history.institution_name"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "To get points for foreign education, you must provide an Educational Credential Assessment (ECA) report and copies of your degree, diploma or certificate, along with official transcripts for all studies completed.",
+      "remediation_hypothesis": "Obtain official, sealed or electronically verifiable transcripts directly from the issuing university covering all program terms, accompanied by a letter of explanation if any marksheets are consolidated by the institution.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POS_STUD-02",
+      "category": "pfl_unaccredited_institution",
+      "severity": "critical",
+      "title": "Unaccredited or Unrecognized Educational Institution Claim",
+      "description": "Claiming CRS points for studies completed at an unaccredited or non-designated institution where the Educational Credential Assessment (ECA) body indicates the institution is not recognized by educational authorities.",
+      "affected_fields": [
+        "education_history.institution_name",
+        "education_history.eca_reference_number"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must have an ECA for immigration purposes from a designated organization showing that your foreign education is equal to a completed Canadian secondary or post-secondary certificate, diploma or degree.",
+      "remediation_hypothesis": "Verify institution accreditation with designated ECA bodies prior to application submission. If unaccredited, remove the credential claim from the profile to prevent misrepresentation findings.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POS_STUD-03",
+      "category": "pfl_timeline_discrepancy",
+      "severity": "high",
+      "title": "Unexplained Enrollment Gaps and Timeline Discrepancies",
+      "description": "Unexplained gaps in academic study history or overlapping full-time employment and full-time study dates, raising doubts regarding program completion authenticity or compliance.",
+      "affected_fields": [
+        "education_history.start_date",
+        "education_history.end_date",
+        "work_history.period_of_employment"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Officers must assess whether the applicant meets eligibility requirements based on verifiable documentary evidence. Inconsistencies in timeline or overlapping full-time employment and full-time study require clarification.",
+      "remediation_hypothesis": "Provide an official registrar letter clarifying term dates, approved leaves of absence, distance learning formats, along with a detailed timeline explanation.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POS_STUD-04",
+      "category": "pfl_data_mismatch",
+      "severity": "critical",
+      "title": "Degree Completion Date Mismatch Between Profile and Official Transcripts",
+      "description": "Discrepancy between the program completion date entered in the Express Entry profile and the actual completion date shown on university transcripts or completion letters, leading to potential eligibility reassessment under A11.2.",
+      "affected_fields": [
+        "education_history.completion_date",
+        "education_history.degree_conferral_date"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The completion date of studies is the date when official notification of program completion was issued by the institution. Information in the application must strictly align with official supporting documents.",
+      "remediation_hypothesis": "Ensure the profile completion date matches the official program completion date on official university transcripts or completion letters rather than convocation ceremony dates.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

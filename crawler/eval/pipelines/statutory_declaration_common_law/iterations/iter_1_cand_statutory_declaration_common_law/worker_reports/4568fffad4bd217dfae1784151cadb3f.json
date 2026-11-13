@@ -1,0 +1,65 @@
+{
+  "question": "What must an applicant provide to evidence a common-law union?",
+  "claims": [
+    {
+      "id": "common-law-declaration",
+      "text": "Statutory Declaration of Common-Law Union form (IMM 5409) and evidence of cohabitation for at least 12 continuous months",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#042"
+      ],
+      "quote": "The applicant must submit a Statutory Declaration of Common-Law Union form [[IMM 5409 (PDF, 636.51 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5409e.pdf)] and evidence of cohabitation for a period of at least 12 continuous months."
+    },
+    {
+      "id": "common-law-solemnization-defect",
+      "text": "The submitted Statutory Declaration of Common-Law Union (IMM 5409) is defective due to missing solemnization, lacking required deponent signatures, commissioner or notary signature, official seal or stamp, and declaration date",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#042"
+      ],
+      "quote": "The applicant must submit a Statutory Declaration of Common-Law Union form [[IMM 5409 (PDF, 636.51 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5409e.pdf)] and evidence of cohabitation for a period of at least 12 continuous months."
+    }
+  ],
+  "basis": [
+    "The applicant's marital status is common-law, requiring proof of a common-law union.",
+    "The uploaded document 4568fffad4bd217dfae1784151cadb3f.pdf was submitted under the statutory_declaration_common_law slot.",
+    "Field-level inspection of 4568fffad4bd217dfae1784151cadb3f.pdf shows that the Statutory Declaration of Common-Law Union (IMM 5409) lacks solemnization: solemn declaration signature, commissioner/notary stamp, deponent signatures, and declaration date are missing or listed as N/A.",
+    "The declaration was submitted without being executed or solemnized before a qualified official (Notary Public, Commissioner for Oaths, or Justice of the Peace)."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "4568fffad4bd217dfae1784151cadb3f",
+  "doc_type": "statutory_declaration_common_law",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4568fffad4bd217dfae1784151cadb3f.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a2683552a55cec8dfe46007eadfb32b3dbc3f5564b32b40c352d3115c78e6bc2",
+    "allowed_text_sha256": null,
+    "bundle_hash": "272bee292c2e650f3ab8852eb53065803f17de1a85fcd3a07641a11c5cb076d6",
+    "prompt_hash": "dad35f8887f8fd82ea6384e9b48f0615ed41bebcce7d2f4b4fcd5d49b0245c48",
+    "output_hash": "40e2d76ce06d72c1da50a0391b7ad5f736d3e46ebff7eee3b976692bb316dbf8",
+    "returncode": 0,
+    "timestamp": "2026-07-25T00:55:49.929181+00:00",
+    "provenance_digest": "7661ff3fbafea054680c830787dff237688c7180fa8b4f6db82b15f894d32c47"
+  }
+}

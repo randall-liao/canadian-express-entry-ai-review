@@ -1,0 +1,72 @@
+{
+  "question": "What must an applicant provide to claim a relative in Canada for points?",
+  "claims": [
+    {
+      "id": "relative-status-proof",
+      "text": "A copy of both sides of the relative's Canadian citizenship document, Canadian birth certificate, or permanent resident card must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "A copy of **both** sides of the family member's Canadian citizenship document, Canadian birth certificate and/or permanent resident card must be provided."
+    },
+    {
+      "id": "relative-residence-evidence",
+      "text": "Evidence that the relative currently resides in Canada must be provided, showing their address and dated within six months prior to submission.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Evidence that the family member currently resides in Canada must be provided (a residential lease, mortgage documents, utility bills, etc.)."
+    },
+    {
+      "id": "relationship-proof",
+      "text": "Proof of the relationship of the applicant or accompanying spouse or common-law partner to the relative must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Proof of the relationship of the applicant or the accompanying spouse or common-law partner to the family member must also be provided (e.g., a birth certificate, an official document naming the applicant as a relative, a copy of the inside back cover of the relative’s passport showing the relative’s parents’ marriage certificate, legal adoption documents and any other documents that prove or describe the relationship)."
+    }
+  ],
+  "basis": [
+    "Document upload slot type is relative_in_canada for case ID f308748019af244b8bb73b3a75683ec7.",
+    "The applicant indicates a relative in Canada who is a Canadian citizen or permanent resident.",
+    "The submitted document bundle f308748019af244b8bb73b3a75683ec7.pdf contains evidence for the relative in Canada requirement."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "f308748019af244b8bb73b3a75683ec7",
+  "doc_type": "relative_in_canada",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f308748019af244b8bb73b3a75683ec7.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9925de1375bd4aec90f00888ef9d8ec8cbe87dbf844b48735c8ede6c1f1f104f",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2f1f40f094cef106be7456e66355dedb2f4bfb3f04e122aa516f1b82e15a9223",
+    "prompt_hash": "8c6ee4cf5896e0dc5d49dd92e3f0e2399bccdf39162bde1c3a59f310dc13407c",
+    "output_hash": "6de5646c2ccf4c8a443f03d4ebcde7cc8c154c08e1c519fb3947f78f2867c411",
+    "returncode": 0,
+    "timestamp": "2026-07-23T17:41:16.235841+00:00",
+    "provenance_digest": "986ce62e052c9fe83305ff8dbbff78591c6078fee9f1ba6cce127231867211ed"
+  }
+}

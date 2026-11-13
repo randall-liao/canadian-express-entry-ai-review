@@ -1,0 +1,54 @@
+{
+  "question": "What birth document is required for an applicant's dependent children?",
+  "claims": [
+    {
+      "id": "birth-cert-options",
+      "text": "A birth certificate, an equivalent document from the birth country, or a letter of explanation (where no birth certificate is available in the country).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024"
+      ],
+      "quote": "equivalent document from the birth country"
+    }
+  ],
+  "basis": [
+    "The applicant declared dependent children in application case ad9e9d39b2c7ae1d67091d5a214d450d and uploaded a document under the birth_certificate slot."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "ad9e9d39b2c7ae1d67091d5a214d450d",
+  "doc_type": "birth_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ad9e9d39b2c7ae1d67091d5a214d450d.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "8a0ff88d14a2633f93d179437793e33e7b67e61b194b86147e56a72a149fa929",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c6fb3ed46c3c9f1c6e75316462cae682d3647ca04da25bdfdc64b5b62b58cc5d",
+    "prompt_hash": "02d2a89441081daea9161e8c3e9254162338f6eafbda0e1ac4a2fd7d6973d297",
+    "output_hash": "1297e3f422cc8f3f3634b2aaacf1b9d3972f6de37b71f97bcf208c8dd307a5a1",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:50:06.647063+00:00",
+    "provenance_digest": "e1976d0a44146ca9c4c9eebcf49ad53f7e012a9d7f77ddfa00c95ae47bc76f5e"
+  }
+}

@@ -1,0 +1,510 @@
+[
+  {
+    "opaque_case_id": "b2bef3258d3d169c00720c5186330554",
+    "sibling_case_id": "fbd266f1c8493eedab7365af9d02f430",
+    "doc_type": "proof_of_studies",
+    "variant": "vector",
+    "blind_filename": "b2bef3258d3d169c00720c5186330554.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "applicant_name": "Jane Doe",
+      "student_id": "STU-9840215",
+      "credential_title": "Bachelor of Science in Computer Science",
+      "education_history": {
+        "institution_name": "University of Toronto",
+        "program_name": "Computer Science Specialist Program",
+        "start_date": "2018-09-01",
+        "end_date": "2022-05-15",
+        "completion_date": "2022-05-15",
+        "degree_conferral_date": "2022-06-10",
+        "eca_reference_number": "ECA-2022-894102",
+        "transcripts": [
+          {
+            "term": "Fall 2018",
+            "courses": [
+              {
+                "code": "CSC108H1",
+                "title": "Introduction to Computer Programming",
+                "grade": "A",
+                "credits": 0.5
+              },
+              {
+                "code": "MAT137Y1",
+                "title": "Calculus with Proofs",
+                "grade": "A-",
+                "credits": 1.0
+              }
+            ]
+          },
+          {
+            "term": "Winter 2022",
+            "courses": [
+              {
+                "code": "CSC488H1",
+                "title": "Compilers and Interpreters",
+                "grade": "A",
+                "credits": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      "work_history": {
+        "period_of_employment": "2022-07-01 to 2025-01-01",
+        "employer_name": "Tech Corp Solutions",
+        "position": "Software Engineer"
+      }
+    },
+    "pdf_sha256": "01edcb0a9ce694e3521ea1aade118aac72e8a8aab68fe18a7c5e4f7addee944b",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:41.242024+00:00"
+  },
+  {
+    "opaque_case_id": "fbd266f1c8493eedab7365af9d02f430",
+    "sibling_case_id": "b2bef3258d3d169c00720c5186330554",
+    "doc_type": "proof_of_studies",
+    "variant": "scanned",
+    "blind_filename": "fbd266f1c8493eedab7365af9d02f430.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "applicant_name": "Jane Doe",
+      "student_id": "STU-9840215",
+      "credential_title": "Bachelor of Science in Computer Science",
+      "education_history": {
+        "institution_name": "University of Toronto",
+        "program_name": "Computer Science Specialist Program",
+        "start_date": "2018-09-01",
+        "end_date": "2022-05-15",
+        "completion_date": "2022-05-15",
+        "degree_conferral_date": "2022-06-10",
+        "eca_reference_number": "ECA-2022-894102",
+        "transcripts": [
+          {
+            "term": "Fall 2018",
+            "courses": [
+              {
+                "code": "CSC108H1",
+                "title": "Introduction to Computer Programming",
+                "grade": "A",
+                "credits": 0.5
+              },
+              {
+                "code": "MAT137Y1",
+                "title": "Calculus with Proofs",
+                "grade": "A-",
+                "credits": 1.0
+              }
+            ]
+          },
+          {
+            "term": "Winter 2022",
+            "courses": [
+              {
+                "code": "CSC488H1",
+                "title": "Compilers and Interpreters",
+                "grade": "A",
+                "credits": 0.5
+              }
+            ]
+          }
+        ]
+      },
+      "work_history": {
+        "period_of_employment": "2022-07-01 to 2025-01-01",
+        "employer_name": "Tech Corp Solutions",
+        "position": "Software Engineer"
+      }
+    },
+    "pdf_sha256": "e97200ec35ac410744c3e24bc605de132b116544b23885868fa3ec738858ff73",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:41.242024+00:00"
+  },
+  {
+    "opaque_case_id": "94e48d786f7bfe57750beeb5e4b447c0",
+    "sibling_case_id": "c36da93602d8c031f6e2d9ebb6a64a28",
+    "doc_type": "proof_of_studies",
+    "variant": "vector",
+    "blind_filename": "94e48d786f7bfe57750beeb5e4b447c0.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POS_STUD-01",
+    "affected_fields": [
+      "education_history.transcripts",
+      "education_history.institution_name"
+    ],
+    "fields": {
+      "applicant_name": "John Smith",
+      "student_id": "STU-1120492",
+      "credential_title": "Bachelor of Arts in Economics",
+      "education_history": {
+        "institution_name": "",
+        "program_name": "Economics Major",
+        "start_date": "2017-09-01",
+        "end_date": "2021-05-20",
+        "completion_date": "2021-05-20",
+        "degree_conferral_date": "2021-06-01",
+        "eca_reference_number": "ECA-2021-334190",
+        "transcripts": null
+      },
+      "work_history": {
+        "period_of_employment": "2021-07-01 to 2025-01-01",
+        "employer_name": "Global Analytics Inc.",
+        "position": "Financial Analyst"
+      }
+    },
+    "pdf_sha256": "0fccc45d9234a30e416a0b384ca7f6dd5dc8f163bc630805194fa0c1a432fc17",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:44.516467+00:00"
+  },
+  {
+    "opaque_case_id": "c36da93602d8c031f6e2d9ebb6a64a28",
+    "sibling_case_id": "94e48d786f7bfe57750beeb5e4b447c0",
+    "doc_type": "proof_of_studies",
+    "variant": "scanned",
+    "blind_filename": "c36da93602d8c031f6e2d9ebb6a64a28.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POS_STUD-01",
+    "affected_fields": [
+      "education_history.transcripts",
+      "education_history.institution_name"
+    ],
+    "fields": {
+      "applicant_name": "John Smith",
+      "student_id": "STU-1120492",
+      "credential_title": "Bachelor of Arts in Economics",
+      "education_history": {
+        "institution_name": "",
+        "program_name": "Economics Major",
+        "start_date": "2017-09-01",
+        "end_date": "2021-05-20",
+        "completion_date": "2021-05-20",
+        "degree_conferral_date": "2021-06-01",
+        "eca_reference_number": "ECA-2021-334190",
+        "transcripts": null
+      },
+      "work_history": {
+        "period_of_employment": "2021-07-01 to 2025-01-01",
+        "employer_name": "Global Analytics Inc.",
+        "position": "Financial Analyst"
+      }
+    },
+    "pdf_sha256": "256951c319534dfc2f6b15b9e2ef7d8e371231cc08c86ab39661efe1c5ca305f",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:44.516467+00:00"
+  },
+  {
+    "opaque_case_id": "7569807440a36824e792e6d4783f8a41",
+    "sibling_case_id": "f5a4b6612709aec0393de5a528a77531",
+    "doc_type": "proof_of_studies",
+    "variant": "vector",
+    "blind_filename": "7569807440a36824e792e6d4783f8a41.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POS_STUD-02",
+    "affected_fields": [
+      "education_history.institution_name",
+      "education_history.eca_reference_number"
+    ],
+    "fields": {
+      "applicant_name": "Alice Johnson",
+      "student_id": "GVA-773104",
+      "credential_title": "Master of Business Administration",
+      "education_history": {
+        "institution_name": "Global Virtual Apex University",
+        "program_name": "Executive MBA",
+        "start_date": "2020-01-10",
+        "end_date": "2020-07-15",
+        "completion_date": "2020-07-15",
+        "degree_conferral_date": "2020-07-20",
+        "eca_reference_number": "INVALID-ECA-UNACCREDITED-9999",
+        "transcripts": [
+          {
+            "term": "Spring 2020",
+            "courses": [
+              {
+                "code": "MBA601",
+                "title": "Rapid Business Leadership",
+                "grade": "A+",
+                "credits": 3.0
+              }
+            ]
+          }
+        ]
+      },
+      "work_history": {
+        "period_of_employment": "2020-08-01 to 2025-05-01",
+        "employer_name": "Apex Management Consulting",
+        "position": "Operations Manager"
+      }
+    },
+    "pdf_sha256": "7a3410f5e51b26a685c5adafa2a6cd180aae3c83faedde4e4b8340f667bf3c48",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:49.968717+00:00"
+  },
+  {
+    "opaque_case_id": "f5a4b6612709aec0393de5a528a77531",
+    "sibling_case_id": "7569807440a36824e792e6d4783f8a41",
+    "doc_type": "proof_of_studies",
+    "variant": "scanned",
+    "blind_filename": "f5a4b6612709aec0393de5a528a77531.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POS_STUD-02",
+    "affected_fields": [
+      "education_history.institution_name",
+      "education_history.eca_reference_number"
+    ],
+    "fields": {
+      "applicant_name": "Alice Johnson",
+      "student_id": "GVA-773104",
+      "credential_title": "Master of Business Administration",
+      "education_history": {
+        "institution_name": "Global Virtual Apex University",
+        "program_name": "Executive MBA",
+        "start_date": "2020-01-10",
+        "end_date": "2020-07-15",
+        "completion_date": "2020-07-15",
+        "degree_conferral_date": "2020-07-20",
+        "eca_reference_number": "INVALID-ECA-UNACCREDITED-9999",
+        "transcripts": [
+          {
+            "term": "Spring 2020",
+            "courses": [
+              {
+                "code": "MBA601",
+                "title": "Rapid Business Leadership",
+                "grade": "A+",
+                "credits": 3.0
+              }
+            ]
+          }
+        ]
+      },
+      "work_history": {
+        "period_of_employment": "2020-08-01 to 2025-05-01",
+        "employer_name": "Apex Management Consulting",
+        "position": "Operations Manager"
+      }
+    },
+    "pdf_sha256": "75fd87504c9e85a657c0d9ad5d7de3ecbe876e859d6ecee79aee151a7748f1cb",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:49.968717+00:00"
+  },
+  {
+    "opaque_case_id": "83f94eaa269e4ed1dfb2a0f665ebd2c3",
+    "sibling_case_id": "65ed60c24d64b3cbf0c07c3d92b38586",
+    "doc_type": "proof_of_studies",
+    "variant": "vector",
+    "blind_filename": "83f94eaa269e4ed1dfb2a0f665ebd2c3.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POS_STUD-03",
+    "affected_fields": [
+      "education_history.start_date",
+      "education_history.end_date",
+      "work_history.period_of_employment"
+    ],
+    "fields": {
+      "applicant_name": "Robert Brown",
+      "student_id": "STU-4401928",
+      "credential_title": "Bachelor of Engineering in Mechanical Engineering",
+      "education_history": {
+        "institution_name": "McGill University",
+        "program_name": "Mechanical Engineering",
+        "start_date": "2012-09-01",
+        "end_date": "2022-05-31",
+        "completion_date": "2022-05-31",
+        "degree_conferral_date": "2022-06-15",
+        "eca_reference_number": "ECA-2022-441092",
+        "transcripts": [
+          {
+            "term": "Fall 2012",
+            "courses": [
+              {
+                "code": "MECH200",
+                "title": "Solid Mechanics",
+                "grade": "B",
+                "credits": 3.0
+              }
+            ]
+          },
+          {
+            "term": "Winter 2022",
+            "courses": [
+              {
+                "code": "MECH490",
+                "title": "Capstone Design",
+                "grade": "A-",
+                "credits": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "work_history": {
+        "period_of_employment": "2014-01-01 to 2021-12-31",
+        "employer_name": "Overseas Engineering Ltd",
+        "position": "Lead Field Inspector"
+      }
+    },
+    "pdf_sha256": "6223155a200456cfaae68e71fc7a1b7f5b91cea12347dd571568419ec1f99bf5",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:55.504528+00:00"
+  },
+  {
+    "opaque_case_id": "65ed60c24d64b3cbf0c07c3d92b38586",
+    "sibling_case_id": "83f94eaa269e4ed1dfb2a0f665ebd2c3",
+    "doc_type": "proof_of_studies",
+    "variant": "scanned",
+    "blind_filename": "65ed60c24d64b3cbf0c07c3d92b38586.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POS_STUD-03",
+    "affected_fields": [
+      "education_history.start_date",
+      "education_history.end_date",
+      "work_history.period_of_employment"
+    ],
+    "fields": {
+      "applicant_name": "Robert Brown",
+      "student_id": "STU-4401928",
+      "credential_title": "Bachelor of Engineering in Mechanical Engineering",
+      "education_history": {
+        "institution_name": "McGill University",
+        "program_name": "Mechanical Engineering",
+        "start_date": "2012-09-01",
+        "end_date": "2022-05-31",
+        "completion_date": "2022-05-31",
+        "degree_conferral_date": "2022-06-15",
+        "eca_reference_number": "ECA-2022-441092",
+        "transcripts": [
+          {
+            "term": "Fall 2012",
+            "courses": [
+              {
+                "code": "MECH200",
+                "title": "Solid Mechanics",
+                "grade": "B",
+                "credits": 3.0
+              }
+            ]
+          },
+          {
+            "term": "Winter 2022",
+            "courses": [
+              {
+                "code": "MECH490",
+                "title": "Capstone Design",
+                "grade": "A-",
+                "credits": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "work_history": {
+        "period_of_employment": "2014-01-01 to 2021-12-31",
+        "employer_name": "Overseas Engineering Ltd",
+        "position": "Lead Field Inspector"
+      }
+    },
+    "pdf_sha256": "195816a458df1ae9151716efe256508b9bae34bec34f22e9a34c3a04677466e9",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:55.504528+00:00"
+  },
+  {
+    "opaque_case_id": "d51594714a01433fb19fce2139b04a59",
+    "sibling_case_id": "9b9ac159c726f3f5d59c98d72f67bbad",
+    "doc_type": "proof_of_studies",
+    "variant": "vector",
+    "blind_filename": "d51594714a01433fb19fce2139b04a59.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POS_STUD-04",
+    "affected_fields": [
+      "education_history.completion_date",
+      "education_history.degree_conferral_date"
+    ],
+    "fields": {
+      "applicant_name": "Emily Davis",
+      "student_id": "STU-8820194",
+      "credential_title": "Bachelor of Science in Nursing",
+      "education_history": {
+        "institution_name": "University of British Columbia",
+        "program_name": "Bachelor of Science in Nursing",
+        "start_date": "2017-09-01",
+        "end_date": "2021-05-15",
+        "completion_date": "2021-05-15",
+        "degree_conferral_date": "2023-11-20",
+        "eca_reference_number": "ECA-2023-908123",
+        "transcripts": [
+          {
+            "term": "Fall 2023",
+            "courses": [
+              {
+                "code": "NURS401",
+                "title": "Advanced Clinical Practice",
+                "grade": "P",
+                "credits": 6.0
+              }
+            ]
+          }
+        ]
+      },
+      "work_history": {
+        "period_of_employment": "2021-06-01 to 2025-01-01",
+        "employer_name": "Metro Health Network",
+        "position": "Registered Nurse"
+      }
+    },
+    "pdf_sha256": "c99b5b0021a04182114d57c975d82075da69633e738ce70b4183e7fc92d1c822",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:58.983122+00:00"
+  },
+  {
+    "opaque_case_id": "9b9ac159c726f3f5d59c98d72f67bbad",
+    "sibling_case_id": "d51594714a01433fb19fce2139b04a59",
+    "doc_type": "proof_of_studies",
+    "variant": "scanned",
+    "blind_filename": "9b9ac159c726f3f5d59c98d72f67bbad.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POS_STUD-04",
+    "affected_fields": [
+      "education_history.completion_date",
+      "education_history.degree_conferral_date"
+    ],
+    "fields": {
+      "applicant_name": "Emily Davis",
+      "student_id": "STU-8820194",
+      "credential_title": "Bachelor of Science in Nursing",
+      "education_history": {
+        "institution_name": "University of British Columbia",
+        "program_name": "Bachelor of Science in Nursing",
+        "start_date": "2017-09-01",
+        "end_date": "2021-05-15",
+        "completion_date": "2021-05-15",
+        "degree_conferral_date": "2023-11-20",
+        "eca_reference_number": "ECA-2023-908123",
+        "transcripts": [
+          {
+            "term": "Fall 2023",
+            "courses": [
+              {
+                "code": "NURS401",
+                "title": "Advanced Clinical Practice",
+                "grade": "P",
+                "credits": 6.0
+              }
+            ]
+          }
+        ]
+      },
+      "work_history": {
+        "period_of_employment": "2021-06-01 to 2025-01-01",
+        "employer_name": "Metro Health Network",
+        "position": "Registered Nurse"
+      }
+    },
+    "pdf_sha256": "269050e7f7d12427efef7ebc76cd81a25537058581c7a613b4d8377060c6f6cd",
+    "agent_spec_sha256": "11070ca9eb76158af878a6c18833b4d67c74ce5f252e1d842308cd976d5ea588",
+    "timestamp": "2026-07-23T07:04:58.983122+00:00"
+  }
+]

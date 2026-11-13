@@ -1,0 +1,264 @@
+{
+  "doc_type": "authority_to_release_info",
+  "timestamp": "2026-07-23T03:08:22.994-04:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "authority_to_release_info",
+      "title": "IMM 5475 Authority to Release Personal Information to a Designated Individual - Valid Submission",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2025-05-12",
+      "expiry_date": null,
+      "fields": {
+        "form_type": "IMM 5475",
+        "applicant_full_name": "Jane Eleanor Doe",
+        "applicant_date_of_birth": "1988-04-14",
+        "applicant_client_id_uci": "8472-9103",
+        "applicant_application_number": "E00293841",
+        "designated_individual_full_name": "Robert Mark Smith",
+        "designated_individual_organization": "Smith Consulting Services",
+        "designated_individual_relationship": "Family Friend",
+        "designated_individual_address": "123 Maple Street, Toronto, ON M5V 2T6",
+        "designated_individual_telephone": "+1-416-555-0198",
+        "designated_individual_email": "robert.smith@example.com",
+        "designated_individual_role": "Designated Individual (Status Information Only)",
+        "designated_individual_details": "Full contact details and mailing address provided",
+        "authorization_scope": "Release of personal information and application status updates",
+        "section_c_consent_checkbox": true,
+        "applicant_signature": "Jane Eleanor Doe",
+        "signature_date": "2025-05-12",
+        "section_c_date": "2025-05-12",
+        "representative_authorization": false,
+        "spouse_dependent_authorization": "N/A - Single Applicant",
+        "adult_dependant_signature": null,
+        "family_member_consent": true
+      },
+      "narrative_blocks": [
+        "I, Jane Eleanor Doe, authorize Immigration, Refugees and Citizenship Canada (IRCC) to release information from my application file to the designated individual named in Section B.",
+        "This authorization is limited to disclosing information regarding the processing status and documentation contained in application E00293841. The designated individual is not authorized to act as a legal representative or conduct business on my behalf.",
+        "I understand that personal information disclosed to the designated individual will be handled in accordance with the Privacy Act."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "authority_to_release_info",
+      "title": "IMM 5475 Authority to Release Personal Information - Missing Client Signature Date",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2025-05-12",
+      "expiry_date": null,
+      "fields": {
+        "form_type": "IMM 5475",
+        "applicant_full_name": "John Michael Taylor",
+        "applicant_date_of_birth": "1991-09-23",
+        "applicant_client_id_uci": "3920-1182",
+        "applicant_application_number": "W30491827",
+        "designated_individual_full_name": "Alice Margaret Vance",
+        "designated_individual_organization": "Vance Community Services",
+        "designated_individual_relationship": "Friend",
+        "designated_individual_address": "456 Oak Avenue, Vancouver, BC V6B 1A1",
+        "designated_individual_telephone": "+1-604-555-0144",
+        "designated_individual_email": "alice.vance@example.com",
+        "designated_individual_role": "Designated Individual (Status Information Only)",
+        "designated_individual_details": "Full contact details and mailing address provided",
+        "authorization_scope": "Release of personal information and application status updates",
+        "section_c_consent_checkbox": true,
+        "applicant_signature": "John Michael Taylor",
+        "signature_date": null,
+        "section_c_date": null,
+        "representative_authorization": false,
+        "spouse_dependent_authorization": "N/A",
+        "adult_dependant_signature": null,
+        "family_member_consent": true
+      },
+      "narrative_blocks": [
+        "I, John Michael Taylor, authorize IRCC to release personal information from my application file to Alice Margaret Vance.",
+        "Section C consent signed by applicant John Michael Taylor; signature date field remains blank and undated."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-AUTHORIT-01",
+        "category": "pfl_signature_defect",
+        "severity": "critical",
+        "description": "The Form IMM 5475 contains applicant signature but lacks the mandatory signature date in Section C, rendering the release authorization legally invalid.",
+        "affected_fields": [
+          "signature_date",
+          "applicant_signature",
+          "section_c_date"
+        ],
+        "mutation_details": {
+          "field_mutations": {
+            "signature_date": "Set to null",
+            "section_c_date": "Set to null"
+          },
+          "defect_type": "missing_signature_date"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "authority_to_release_info",
+      "title": "IMM 5475 Authority to Release Personal Information - Unchecked Consent Box in Section C",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2025-06-18",
+      "expiry_date": null,
+      "fields": {
+        "form_type": "IMM 5475",
+        "applicant_full_name": "Carlos Eduardo Gomez",
+        "applicant_date_of_birth": "1985-11-05",
+        "applicant_client_id_uci": "5109-2834",
+        "applicant_application_number": "F00192834",
+        "designated_individual_full_name": "Maria Fernanda Gomez",
+        "designated_individual_organization": "N/A",
+        "designated_individual_relationship": "Sister",
+        "designated_individual_address": "789 Pine Road, Montreal, QC H3B 2S2",
+        "designated_individual_telephone": "+1-514-555-0177",
+        "designated_individual_email": "maria.gomez@example.com",
+        "designated_individual_role": "Designated Individual",
+        "designated_individual_details": null,
+        "authorization_scope": null,
+        "section_c_consent_checkbox": false,
+        "applicant_signature": "Carlos Eduardo Gomez",
+        "signature_date": "2025-06-18",
+        "section_c_date": "2025-06-18",
+        "representative_authorization": false,
+        "spouse_dependent_authorization": "N/A",
+        "adult_dependant_signature": null,
+        "family_member_consent": true
+      },
+      "narrative_blocks": [
+        "I, Carlos Eduardo Gomez, submit Form IMM 5475 designating Maria Fernanda Gomez to receive information.",
+        "Section C consent declaration checkbox is left unchecked and explicit scope of authorized information disclosure is omitted."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-AUTHORIT-02",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The Section C consent checkbox was left unchecked and the explicit authorization scope is missing, failing to grant legal consent for releasing personal information.",
+        "affected_fields": [
+          "authorization_scope",
+          "section_c_consent_checkbox",
+          "designated_individual_details"
+        ],
+        "mutation_details": {
+          "field_mutations": {
+            "authorization_scope": "Set to null",
+            "section_c_consent_checkbox": "Set to false",
+            "designated_individual_details": "Set to null"
+          },
+          "defect_type": "missing_consent_and_scope"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "authority_to_release_info",
+      "title": "IMM 5475 Authority to Release Personal Information - Scope Mismatch for Legal Representation",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2025-07-01",
+      "expiry_date": null,
+      "fields": {
+        "form_type": "IMM 5475",
+        "applicant_full_name": "David Sun",
+        "applicant_date_of_birth": "1993-01-30",
+        "applicant_client_id_uci": "9012-4411",
+        "applicant_application_number": "V88291023",
+        "designated_individual_full_name": "Arthur Pendelton",
+        "designated_individual_organization": "Pendelton Legal Services PC",
+        "designated_individual_relationship": "Immigration Representative / Legal Agent",
+        "designated_individual_address": "101 Bay Street, Suite 400, Toronto, ON M5H 2Y2",
+        "designated_individual_telephone": "+1-416-555-0133",
+        "designated_individual_email": "arthur@pendeltonlegal.example.com",
+        "designated_individual_role": "Paid Legal Representative and Authorized Agent",
+        "designated_individual_details": "Authorized to act as representative, submit documents, and conduct business",
+        "authorization_scope": "Full legal representation, submitting applications, conducting business with IRCC, and receiving communications",
+        "section_c_consent_checkbox": true,
+        "applicant_signature": "David Sun",
+        "signature_date": "2025-07-01",
+        "section_c_date": "2025-07-01",
+        "representative_authorization": true,
+        "spouse_dependent_authorization": "N/A",
+        "adult_dependant_signature": null,
+        "family_member_consent": true
+      },
+      "narrative_blocks": [
+        "I, David Sun, submit Form IMM 5475 appointing Arthur Pendelton of Pendelton Legal Services PC to act as my legal representative and conduct business with IRCC on my behalf.",
+        "The form designates a paid legal representative to conduct business with IRCC using Form IMM 5475 instead of the required Use of a Representative form (IMM 5476)."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-AUTHORIT-03",
+        "category": "pfl_form_mismatch",
+        "severity": "critical",
+        "description": "Form IMM 5475 was improperly submitted to appoint a paid legal representative to conduct business and submit documents, which requires Form IMM 5476 (Use of a Representative).",
+        "affected_fields": [
+          "form_type",
+          "designated_individual_role",
+          "representative_authorization"
+        ],
+        "mutation_details": {
+          "field_mutations": {
+            "designated_individual_role": "Set to Paid Legal Representative and Authorized Agent",
+            "representative_authorization": "Set to true"
+          },
+          "defect_type": "improper_form_usage_for_representative"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "authority_to_release_info",
+      "title": "IMM 5475 Authority to Release Personal Information - Missing Accompanying Spouse Consent",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2025-08-14",
+      "expiry_date": null,
+      "fields": {
+        "form_type": "IMM 5475",
+        "applicant_full_name": "Priya Sharma",
+        "applicant_date_of_birth": "1987-12-11",
+        "applicant_client_id_uci": "6612-8830",
+        "applicant_application_number": "PR0928371",
+        "designated_individual_full_name": "Rajesh Sharma",
+        "designated_individual_organization": "N/A",
+        "designated_individual_relationship": "Brother",
+        "designated_individual_address": "22 Calgary Trail, Edmonton, AB T6J 4M6",
+        "designated_individual_telephone": "+1-780-555-0112",
+        "designated_individual_email": "rajesh.sharma@example.com",
+        "designated_individual_role": "Designated Individual",
+        "designated_individual_details": "Full contact details and mailing address provided",
+        "authorization_scope": "Release of personal and family application status information",
+        "section_c_consent_checkbox": true,
+        "applicant_signature": "Priya Sharma",
+        "signature_date": "2025-08-14",
+        "section_c_date": "2025-08-14",
+        "representative_authorization": false,
+        "spouse_dependent_authorization": null,
+        "adult_dependant_signature": null,
+        "family_member_consent": false,
+        "accompanying_spouse_full_name": "Amit Sharma",
+        "accompanying_spouse_dob": "1986-08-02"
+      },
+      "narrative_blocks": [
+        "I, Priya Sharma, authorize IRCC to release information regarding application PR0928371, which includes my accompanying spouse Amit Sharma (age 39), to Rajesh Sharma.",
+        "The application includes an accompanying adult spouse, but no separate Form IMM 5475 consent or Section C signature was provided for the accompanying spouse."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-AUTHORIT-04",
+        "category": "pfl_missing_dependant_consent",
+        "severity": "critical",
+        "description": "Accompanying spouse Amit Sharma is included on the application, but separate consent/signature on Form IMM 5475 was omitted for the adult family member.",
+        "affected_fields": [
+          "spouse_dependent_authorization",
+          "adult_dependant_signature",
+          "family_member_consent"
+        ],
+        "mutation_details": {
+          "field_mutations": {
+            "spouse_dependent_authorization": "Set to null",
+            "adult_dependant_signature": "Set to null",
+            "family_member_consent": "Set to false"
+          },
+          "defect_type": "omitted_dependant_consent"
+        }
+      }
+    }
+  ]
+}

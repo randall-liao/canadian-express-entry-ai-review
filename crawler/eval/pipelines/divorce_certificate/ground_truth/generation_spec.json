@@ -1,0 +1,253 @@
+{
+  "doc_type": "divorce_certificate",
+  "timestamp": "2026-07-23T03:05:02.031000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "divorce_certificate",
+      "title": "Certificate of Dissolution of Marriage",
+      "issuing_authority": "Superior Court of California, County of Los Angeles",
+      "issue_date": "2023-06-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "spouse_name": "John Smith",
+        "case_number": "FL-2023-089124",
+        "document_type": "Certificate of Dissolution of Marriage",
+        "decree_type": "Final Decree Absolute",
+        "marital_status": "Divorced",
+        "dissolution_date": "2023-05-20",
+        "issuing_authority": "Superior Court of California, County of Los Angeles",
+        "court_seal_present": true,
+        "judicial_signature": "Hon. Robert M. Vance",
+        "certified_copy_status": "Official Certified Copy",
+        "document_language": "English",
+        "translation_certified": true,
+        "translator_affidavit": "Not Applicable",
+        "translated_text": null,
+        "jurisdiction_country": "United States",
+        "spouse_residency_duration": "12 years",
+        "legal_basis": "Irreconcilable Differences",
+        "foreign_divorce_validity": "Valid Domestic Decree"
+      },
+      "narrative_blocks": [
+        "IN THE SUPERIOR COURT OF CALIFORNIA, COUNTY OF LOS ANGELES. In re the Marriage of Jane Doe, Petitioner, and John Smith, Respondent. Case No. FL-2023-089124.",
+        "FINAL JUDGMENT AND DECREE OF DISSOLUTION OF MARRIAGE: IT IS HEREBY ORDERED, ADJUDGED, AND DECREED that the marriage between Jane Doe and John Smith is dissolved and the parties are restored to the status of single persons as of May 20, 2023.",
+        "Certified true copy from the records of the Superior Court of California, County of Los Angeles, bearing the official seal of the court and judicial clerk signature."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "divorce_certificate",
+      "title": "Interlocutory Decree of Dissolution of Marriage",
+      "issuing_authority": "High Court of Justice, Family Division, London",
+      "issue_date": "2023-04-10",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "spouse_name": "John Smith",
+        "case_number": "FD-2023-004112",
+        "document_type": "Decree Nisi",
+        "decree_type": "Interlocutory Decree Nisi",
+        "marital_status": "Married (Decree Nisi Conditional)",
+        "dissolution_date": null,
+        "issuing_authority": "High Court of Justice, Family Division, London",
+        "court_seal_present": true,
+        "judicial_signature": "Hon. Sarah Jenkins",
+        "certified_copy_status": "Official Certified Copy",
+        "document_language": "English",
+        "translation_certified": true,
+        "translator_affidavit": "Not Applicable",
+        "translated_text": null,
+        "jurisdiction_country": "United Kingdom",
+        "spouse_residency_duration": "5 years",
+        "legal_basis": "Irretrievable Breakdown",
+        "foreign_divorce_validity": "Pending Final Decree Absolute"
+      },
+      "narrative_blocks": [
+        "IN THE HIGH COURT OF JUSTICE, FAMILY DIVISION. Case No. FD-2023-004112. Jane Doe vs. John Smith.",
+        "DECREE NISI: The Court decrees that the marriage solemnized on June 12, 2015, be dissolved unless sufficient cause be shown to the Court within six weeks why this Decree Nisi should not be made absolute.",
+        "Notice: This Decree Nisi does not finalize the dissolution or alter marital status until a Decree Absolute is formally granted by the court."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DIVORCE-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "Submitted document is an interlocutory decree (Decree Nisi) rather than a final Decree Absolute, leaving the dissolution legally incomplete and marital status unchanged.",
+        "affected_fields": [
+          "marital_status",
+          "document_type",
+          "dissolution_date",
+          "decree_type"
+        ],
+        "mutation_details": {
+          "original_document_type": "Certificate of Dissolution",
+          "mutated_document_type": "Decree Nisi",
+          "original_decree_type": "Final Decree Absolute",
+          "mutated_decree_type": "Interlocutory Decree Nisi",
+          "original_marital_status": "Divorced",
+          "mutated_marital_status": "Married (Decree Nisi Conditional)",
+          "original_dissolution_date": "2023-05-20",
+          "mutated_dissolution_date": null
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "divorce_certificate",
+      "title": "Uncertified Informational Copy of Divorce Record",
+      "issuing_authority": "Unverified Court Printout",
+      "issue_date": "2022-11-10",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "spouse_name": "John Smith",
+        "case_number": "DIV-2022-99120",
+        "document_type": "Certificate of Dissolution",
+        "decree_type": "Final Decree",
+        "marital_status": "Divorced",
+        "dissolution_date": "2022-10-15",
+        "issuing_authority": "Unverified Court Printout",
+        "court_seal_present": false,
+        "judicial_signature": null,
+        "certified_copy_status": "Uncertified Photocopy",
+        "document_language": "English",
+        "translation_certified": true,
+        "translator_affidavit": "Not Applicable",
+        "translated_text": null,
+        "jurisdiction_country": "United States",
+        "spouse_residency_duration": "8 years",
+        "legal_basis": "Irreconcilable Differences",
+        "foreign_divorce_validity": "Valid Domestic Decree"
+      },
+      "narrative_blocks": [
+        "RECORD OF DISSOLUTION OF MARRIAGE. In the Matter of Jane Doe and John Smith, Case No. DIV-2022-99120.",
+        "This copy is an uncertified reference printout reproduced without an official court seal, registrar signature, or clerk attestation stamp.",
+        "Notice: Uncertified copies are not valid legal proof of divorce for official or administrative representation."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DIVORCE-02",
+        "category": "pfl_authenticity_issue",
+        "severity": "warning",
+        "description": "Document is an uncertified photocopy missing the official court seal, authenticating judicial signature, and certified copy status.",
+        "affected_fields": [
+          "court_seal_present",
+          "issuing_authority",
+          "judicial_signature",
+          "certified_copy_status"
+        ],
+        "mutation_details": {
+          "court_seal_present": false,
+          "judicial_signature": null,
+          "certified_copy_status": "Uncertified Photocopy",
+          "issuing_authority": "Unverified Court Printout"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "divorce_certificate",
+      "title": "Untranslated Foreign Divorce Decree (Sentencia de Divorcio)",
+      "issuing_authority": "Juzgado de Primera Instancia de Madrid",
+      "issue_date": "2021-09-18",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "spouse_name": "John Smith",
+        "case_number": "JPI-2021-4401",
+        "document_type": "Sentencia de Divorcio",
+        "decree_type": "Sentencia Firme de Divorcio",
+        "marital_status": "Divorciado",
+        "dissolution_date": "2021-08-30",
+        "issuing_authority": "Juzgado de Primera Instancia de Madrid",
+        "court_seal_present": true,
+        "judicial_signature": "Juez Carlos Mendoza",
+        "certified_copy_status": "Copia Certificada",
+        "document_language": "Spanish",
+        "translation_certified": false,
+        "translator_affidavit": null,
+        "translated_text": null,
+        "jurisdiction_country": "Spain",
+        "spouse_residency_duration": "2 years",
+        "legal_basis": "Mutuo Acuerdo",
+        "foreign_divorce_validity": "Untranslated Foreign Decree"
+      },
+      "narrative_blocks": [
+        "JUZGADO DE PRIMERA INSTANCIA N° 12 DE MADRID. Procedimiento: Divorcio de Mutuo Acuerdo 0004401/2021. Demandante: Jane Doe. Demandado: John Smith.",
+        "FALLO: Se declara la disolución por divorcio del matrimonio formado por Jane Doe y John Smith, con todos los efectos legales correspondientes.",
+        "Submitted document is written entirely in Spanish without an accompanying certified English translation or translator affidavit."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DIVORCE-03",
+        "category": "pfl_translation_non_compliance",
+        "severity": "warning",
+        "description": "Foreign language divorce decree submitted without a certified English translation, missing translator affidavit, and certified translated text.",
+        "affected_fields": [
+          "document_language",
+          "translation_certified",
+          "translator_affidavit",
+          "translated_text"
+        ],
+        "mutation_details": {
+          "document_language": "Spanish",
+          "translation_certified": false,
+          "translator_affidavit": null,
+          "translated_text": null
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "divorce_certificate",
+      "title": "Foreign Ex Parte Divorce Decree Lacking Jurisdictional Residency",
+      "issuing_authority": "Civil Registry Court, Santo Domingo",
+      "issue_date": "2022-03-14",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "spouse_name": "John Smith",
+        "case_number": "DR-CIV-2022-0012",
+        "document_type": "Decree of Foreign Dissolution",
+        "decree_type": "Ex Parte Foreign Decree",
+        "marital_status": "Divorced (Unrecognized Foreign Jurisdiction)",
+        "dissolution_date": "2022-03-10",
+        "issuing_authority": "Civil Registry Court, Santo Domingo",
+        "court_seal_present": true,
+        "judicial_signature": "Hon. Manuel Gutierrez",
+        "certified_copy_status": "Certified Copy with Foreign Apostille",
+        "document_language": "English",
+        "translation_certified": true,
+        "translator_affidavit": "Attached",
+        "translated_text": "Certified Translation of Foreign Divorce Decree",
+        "jurisdiction_country": "Dominican Republic",
+        "spouse_residency_duration": "0 days (Neither spouse resided in jurisdiction)",
+        "legal_basis": "Ex Parte Mail-Order Fast Track",
+        "foreign_divorce_validity": "Invalid - Lacks Residency Nexus"
+      },
+      "narrative_blocks": [
+        "CIVIL REGISTRY COURT OF SANTO DOMINGO. Special Dissolution Proceeding Case No. DR-CIV-2022-0012.",
+        "DECREE OF DISSOLUTION: Decree rendered on ex parte petition. Official case record notes neither petitioner Jane Doe nor respondent John Smith established domicile or physical residency within the issuing jurisdiction.",
+        "JURISDICTIONAL DEFECT: Foreign divorce decree issued without either spouse establishing bona fide residency or domicile nexus in the foreign jurisdiction, rendering the dissolution legally invalid."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DIVORCE-04",
+        "category": "pfl_jurisdiction_validity",
+        "severity": "critical",
+        "description": "Foreign divorce decree rendered by a jurisdiction where neither spouse met statutory residency or domicile requirements, invalidating jurisdictional validity and legal recognition.",
+        "affected_fields": [
+          "jurisdiction_country",
+          "spouse_residency_duration",
+          "legal_basis",
+          "foreign_divorce_validity"
+        ],
+        "mutation_details": {
+          "jurisdiction_country": "Dominican Republic",
+          "spouse_residency_duration": "0 days",
+          "legal_basis": "Ex Parte Mail-Order Fast Track",
+          "foreign_divorce_validity": "Invalid - Lacks Residency Nexus"
+        }
+      }
+    }
+  ]
+}

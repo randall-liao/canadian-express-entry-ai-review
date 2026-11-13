@@ -1,0 +1,55 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-certificate-requirement",
+      "text": "A valid marriage certificate issued by the province, territory, country, or region where the marriage took place is required when marital status is listed as married.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant's declared marital status is married.",
+    "The submitted marriage certificate (case ID 9b6fdcf58ace208994d99a6b21d82453) was reviewed against civil registration, name consistency, physical presence, and translation certification standards."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "9b6fdcf58ace208994d99a6b21d82453",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "9b6fdcf58ace208994d99a6b21d82453.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "802afac6789f4d7d8bfb010a982e5d616be30ce984f53df3e4bf84fab3c2609c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70d5c9e6de1b058c0a06652945be079d07ca12b21cbeaa54c33b6cb451fc21bd",
+    "prompt_hash": "c6f139d5251cd8310b0ae5f0f318dc92e9314ef071758cd8760fe8dabaa237e3",
+    "output_hash": "60435b36b31c89296d14164b85f641290c71b79b863efcb3c99ff3a5229164c4",
+    "returncode": 0,
+    "timestamp": "2026-07-24T10:11:10.331916+00:00",
+    "provenance_digest": "a1958789e5a4e69b7dfc434d9b3ca414dfdbc9aa69ff646e75bbb9b26b8b7f62"
+  }
+}

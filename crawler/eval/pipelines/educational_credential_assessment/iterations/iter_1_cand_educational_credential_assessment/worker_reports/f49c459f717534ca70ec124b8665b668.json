@@ -1,0 +1,51 @@
+{
+  "question": "How must a foreign educational credential be assessed?",
+  "claims": [],
+  "basis": [
+    "Educational Credential Assessment document (case ID: f49c459f717534ca70ec124b8665b668) submitted under upload-slot type educational_credential_assessment: ECA report failed automated verification and contains an applicant identity or reference number mismatch.",
+    "affected_fields: reference_number, applicant_name"
+  ],
+  "abstentions": [
+    {
+      "text": "Educational Credential Assessment document defect: ECA reference failed automated verification or applicant identity mismatch.",
+      "reason": "defective_document"
+    }
+  ],
+  "prose": "",
+  "case_id": "f49c459f717534ca70ec124b8665b668",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f49c459f717534ca70ec124b8665b668.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "8f7c394b7ad9c2b87e753bb061a9ea20043e52c7c5fe9ecf9fc40a546aaa85fd",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e28d80dcf0f63f2981fd09c4f47946e9b1e830f1c429c5fc3d124e3b107720b1",
+    "prompt_hash": "39f97b9e94ab7db7f873d74a8165dab8cec4be93b0da8f9cba982dc32d2adde5",
+    "output_hash": "e58c1e66169f998e5a73664cb50020e1c0eba14f97140d49c529fa8361bd36ec",
+    "returncode": 0,
+    "timestamp": "2026-07-24T07:25:13.614951+00:00",
+    "provenance_digest": "4377f197efe1e96d042eeb554a4859db6bf6d9be68b8128d76fa5d903c7bd7be"
+  }
+}

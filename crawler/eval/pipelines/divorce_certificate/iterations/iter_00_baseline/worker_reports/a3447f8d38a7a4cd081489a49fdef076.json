@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "A copy of the divorce order or divorce certificate issued where the divorce took place, and a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant's marital status is declared as divorced for case a3447f8d38a7a4cd081489a49fdef076, requiring proof of divorce and legal separation agreement if available."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "a3447f8d38a7a4cd081489a49fdef076",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "a3447f8d38a7a4cd081489a49fdef076.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "31d71dd5ab3baba3ccdcd05b4b20cbbef0a5eff4f0710e9e18ac3c627599707d",
+    "allowed_text_sha256": null,
+    "bundle_hash": "25386273fa5b9e25c9edc6cbcb170e74ded83a3898bee226c8e24f8fb31f9ba1",
+    "prompt_hash": "5bd8d4b23b2afb97823a70d7a04499b2891b97ac6a3dfbaf59f133bd7d00e72b",
+    "output_hash": "545fb2f2d15ffb6c7d2b07ce388dc8fb48652c4279b853dd4480a039ef6d597d",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:29:47.582064+00:00",
+    "provenance_digest": "76be2f0a86e7c2cd57db9439fe8d0e38360bf9cf0a8eb7c40732f8f8ef791bf2"
+  }
+}

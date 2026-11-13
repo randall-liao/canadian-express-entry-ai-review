@@ -1,0 +1,56 @@
+{
+  "question": "What passport or travel document copy must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "passport-bio-page",
+      "text": "Express Entry applicants must provide a clear and legible copy of the biographical data page of a passport or travel document.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#016"
+      ],
+      "quote": "A clear and legible copy of the biographical data page of a passport or travel document must be provided."
+    }
+  ],
+  "basis": [
+    "Evaluated passport document upload for case ID 8e873c54b4bb1de4cf8d37cd795d01f0.",
+    "Verified the uploaded document contains the biographical data page with readable document number, biographical details, and machine-readable zone (MRZ).",
+    "Field and defect verification passed: document meets R10 completeness, profile consistency, validity window, statutory alignment, and document capacity requirements."
+  ],
+  "abstentions": [],
+  "prose": "For an Express Entry electronic Application for Permanent Residence (e-APR), applicants must provide a clear and legible copy of the biographical data page of their passport or travel document.",
+  "case_id": "8e873c54b4bb1de4cf8d37cd795d01f0",
+  "doc_type": "passport",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "8e873c54b4bb1de4cf8d37cd795d01f0.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c8f9e5402dc989b5b3d0c4df14c50ce873cf3d09c5fe4e1219caf9d7e289d067",
+    "allowed_text_sha256": null,
+    "bundle_hash": "bc3bc5bb0bc01cc3915ba835b515833df93b2601b5bc3edd8a8906aec1db7832",
+    "prompt_hash": "52d19e8ae04ac6f9b75d067a4a38800576ce63197411ca687faa60adc23e7f9b",
+    "output_hash": "b71ce7a56a5f99156862093570e1652398de1e47bab05a9c2b360c35d5c0c672",
+    "returncode": 0,
+    "timestamp": "2026-07-24T11:44:24.316834+00:00",
+    "provenance_digest": "44d04bea355f929935864360e2d35516ef2821973c2d65a1ffd9cb2cfa7ab43c"
+  }
+}

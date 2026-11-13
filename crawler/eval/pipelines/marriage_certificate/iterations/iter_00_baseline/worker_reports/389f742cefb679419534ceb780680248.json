@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant's marital status is married?",
+  "claims": [
+    {
+      "id": "marriage-certificate-requirement",
+      "text": "A copy of a legal marriage certificate issued by the jurisdiction where the marriage took place must be provided for an applicant whose marital status is married.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a marriage certificate document for opaque case ID 389f742cefb679419534ceb780680248 under the marriage_certificate document slot."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "389f742cefb679419534ceb780680248",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "389f742cefb679419534ceb780680248.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "78b33b8b4d00b466dd4fcd80c973227fa33a976fecc2b9030f4a86ca7b515ba9",
+    "allowed_text_sha256": null,
+    "bundle_hash": "328c1537d7a24ab66576fb71af807091e040ae378f118d3952b32275e6f3c6d5",
+    "prompt_hash": "53bb37ba6a7e88f66d389a22cec2aff754ec95a3ee3b396c5fc22a7ced2289c4",
+    "output_hash": "6f29be90638a2f14afde8fd85e70feac27188d655075651766299b34262ddc80",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:55:44.846790+00:00",
+    "provenance_digest": "f69979f8391e2f71e9c53b9f36ff9fb22da3a89bf6f071e94213bbae0d524d8c"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain, and does the submitted document meet these requirements?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "An employment reference letter from an employer should be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "The employment reference letter must include the applicant's name, company contact information (address, telephone number, and email address), and the name, title, and signature of the immediate supervisor or personnel officer at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company"
+    },
+    {
+      "id": "positions-held",
+      "text": "The employment reference letter should indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "The employment reference letter must include job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    },
+    {
+      "id": "defect-missing-salary-benefits",
+      "text": "The submitted employment reference letter is defective because it omits annual salary and benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    }
+  ],
+  "basis": [
+    "Evaluated the submitted employment reference letter document for opaque case ID cb3efc9f53575ceb55cb6a6a2f84ab51 under upload slot type employment_reference_letter.",
+    "The applicant declares skilled work experience at <employer> starting <start-date>.",
+    "Audit of the submitted document shows that company letterhead, applicant name, company contact information (address, telephone, email), signatory details (supervisor name, title, signature), positions held, job title, duties and responsibilities, job status, dates worked, and work hours per week are present.",
+    "Audit of the submitted document reveals that annual salary and benefits are entirely missing from the employment details."
+  ],
+  "abstentions": [],
+  "prose": "Verdict: defective.\n\nThe submitted document was evaluated against Express Entry completeness-check requirements for an employment reference letter:\n\n1. Company Letterhead: Present.\n2. Applicant Name: Present.\n3. Company Contact Information (address, telephone, email): Present.\n4. Signatory (name, title, and signature of immediate supervisor or personnel officer): Present.\n5. Positions Held: Present.\n6. Employment Details (job title, duties, job status, dates worked, weekly work hours): Present.\n7. Compensation Details (annual salary plus benefits): DEFECTIVE / MISSING. The submitted reference letter completely omits annual salary and benefits.\n\nConclusion: The document is defective because it fails to satisfy the mandatory employment details requirement by omitting annual salary and benefits.",
+  "case_id": "cb3efc9f53575ceb55cb6a6a2f84ab51",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "cb3efc9f53575ceb55cb6a6a2f84ab51.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "7b645d21e622870da9a6d060cb3eccbf57ea31747f388886703d4531bec4a950",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70e3cfc57c53364513e772f06ffe625ca9a019fb5141008af4e62d59611e23bf",
+    "prompt_hash": "a9b4005e2e9e97f2a2e62c1ca12c8e724e67e859c5bd81f519f17abedad3c342",
+    "output_hash": "1d0f33b44ff5b61c4354dfbbdae4e9c26520c3fa6103856b1a10cb43bd758a89",
+    "returncode": 0,
+    "timestamp": "2026-07-24T08:18:22.731137+00:00",
+    "provenance_digest": "bb6af25f5131c7c6282e1fcd5370237f354fd919066971b44c88bd67c3f6122f"
+  }
+}

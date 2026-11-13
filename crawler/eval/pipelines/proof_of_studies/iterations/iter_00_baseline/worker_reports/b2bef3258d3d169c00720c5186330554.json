@@ -1,0 +1,54 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Proof of completed Canadian or foreign educational credentials can include copies of secondary or post-secondary education documents (certificates, diplomas or degrees) and transcripts.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of"
+    }
+  ],
+  "basis": [
+    "The applicant submitted educational credential documentation in upload slot proof_of_studies for Express Entry case b2bef3258d3d169c00720c5186330554."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b2bef3258d3d169c00720c5186330554",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b2bef3258d3d169c00720c5186330554.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "01edcb0a9ce694e3521ea1aade118aac72e8a8aab68fe18a7c5e4f7addee944b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8ee74fb34dd036795a103de06e3e1b1e478c36af309da4719bd79bf8d0dbc6c6",
+    "prompt_hash": "9c49d9fce742fd8046a0a145a5803afcfdf3bd57c94d487d80e5c9677e1c4705",
+    "output_hash": "1c9befaf6e555824d31f641155b3962051ce8fd0489ce8972c303855b6b626e3",
+    "returncode": 0,
+    "timestamp": "2026-07-23T17:25:37.145373+00:00",
+    "provenance_digest": "87eb18bf3fe8f1f37f98c11184d0501142b76169ceb0d867da53154c0c882b85"
+  }
+}

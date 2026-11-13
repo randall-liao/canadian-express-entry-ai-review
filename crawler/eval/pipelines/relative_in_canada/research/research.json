@@ -1,0 +1,137 @@
+{
+  "doc_type": "relative_in_canada",
+  "timestamp": "2026-07-23T03:47:21.137774+00:00",
+  "summary": "Live research into IRCC Express Entry requirements and operational instructions for claiming Comprehensive Ranking System (CRS) points for a relative in Canada (sibling) reveals four primary failure modes: incomplete birth certificate chains failing to establish shared parentage, missing or partial Canadian status documents (such as missing the back side of a PR card), outdated or insufficient evidence of current physical residence in Canada, and missing legal marriage/adoption documentation required to prove step-sibling or adoptive relationships.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:50:34.950076+00:00",
+    "duration_seconds": 205.394,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "45d62b1de2a500dbc3b64695296815cdde4b38a92fe132ea4e577d71d7dd452e",
+    "raw_output_sha256": "cbcc39cc3df3e52f6a6c83816cec8fbaf365838901fcbe1b1aa3905159656f27",
+    "returncode": 0,
+    "provenance_token": "b2b229080566dd61cb686c904934cc61919b5599916ae4fadb69c149cfba1e42",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_search"
+    ],
+    "tool_call_count": 10,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-RELATIVE-01",
+      "category": "pfl_insufficient_proof_relationship",
+      "severity": "critical",
+      "title": "Missing or Incomplete Birth Certificates Proving Shared Parentage",
+      "description": "The applicant claims CRS points for a sibling in Canada but submits short-form birth certificates that omit parental details or fails to provide birth certificates for both the applicant and the sibling. IRCC completeness guidelines require long-form birth certificates for both individuals that explicitly show at least one common parent.",
+      "affected_fields": [
+        "proof_of_relationship",
+        "applicant_birth_certificate",
+        "sibling_birth_certificate",
+        "crs_points_sibling_in_canada"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "To prove a relationship to a relative in Canada, birth certificates or legal documents showing common parents must be provided. Both the applicant's and the relative's long-form birth certificates indicating parent names are required.",
+      "remediation_hypothesis": "Obtain and submit official long-form birth certificates for both the applicant and the sibling showing common parent names. If official records are unavailable, submit a civil status non-availability certificate alongside secondary evidence (family registry, baptismal record) and a sworn affidavit.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-RELATIVE-02",
+      "category": "pfl_invalid_status_proof",
+      "severity": "critical",
+      "title": "Incomplete or Expired Proof of Relative's Canadian Citizenship or PR Status",
+      "description": "The applicant submits only the front side of the relative's Permanent Resident (PR) card, an expired PR card without evidence of renewal, or temporary resident documents (such as a study/work permit). IRCC requires conclusive proof of permanent resident or citizenship status.",
+      "affected_fields": [
+        "relative_status_proof",
+        "pr_card_copy",
+        "canadian_citizenship_proof",
+        "relative_status_in_canada"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "To prove status, submit a copy of the relative's Canadian citizenship certificate/card, Canadian passport, or permanent resident card (both front and back).",
+      "remediation_hypothesis": "Provide a complete scan of both sides of the relative's PR card, Canadian passport bio-page, or Canadian Citizenship Certificate. If PR card is expired, include IMM 5292/IMM 5688 Confirmation of Permanent Residence along with PR card renewal submission receipt.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-RELATIVE-03",
+      "category": "pfl_insufficient_proof_residence",
+      "severity": "high",
+      "title": "Insufficient or Outdated Evidence of Relative's Physical Residence in Canada",
+      "description": "The applicant provides outdated address documents (older than 6 months), driver's license only, or sole affidavits without primary objective proof that the Canadian relative is currently physically residing in Canada.",
+      "affected_fields": [
+        "relative_proof_of_residence",
+        "utility_bills",
+        "notice_of_assessment",
+        "residential_address_proof"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Proof of residency must demonstrate that the relative is currently living in Canada. Acceptable evidence includes recent utility bills, lease agreements, bank statements, or CRA Notice of Assessment showing the Canadian address.",
+      "remediation_hypothesis": "Submit multiple recent (within 6 months) proofs of Canadian residence, such as utility bills (electricity, water, gas), active residential lease agreement, current CRA Notice of Assessment, and bank statement showing active local transactions at the Canadian address.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-RELATIVE-04",
+      "category": "pfl_unverified_family_link",
+      "severity": "critical",
+      "title": "Unverified Step-Sibling or Adoptive Relationship Link Without Supporting Legal Records",
+      "description": "The applicant claims points for a step-sibling or adopted sibling but fails to provide parental marriage certificates, divorce records, or formal court adoption orders that establish the legal chain linking the applicant and relative.",
+      "affected_fields": [
+        "step_sibling_proof",
+        "adoption_certificate",
+        "parental_marriage_certificate",
+        "relationship_chain_docs"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/imm0802.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "For step-siblings or adoptive siblings, legal adoption papers or marriage certificates linking parents are required to demonstrate the biological or legal relationship chain.",
+      "remediation_hypothesis": "Provide the complete chain of legal documentation, including legal adoption certificates issued by recognized authorities or parents' marriage certificates and divorce decrees establishing the valid step-parent or adoptive relationship.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

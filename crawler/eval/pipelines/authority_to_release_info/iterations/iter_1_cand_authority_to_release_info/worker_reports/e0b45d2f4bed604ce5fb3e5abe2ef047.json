@@ -1,0 +1,54 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form (IMM 5475) and what compliance checks apply?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "The [IMM 5475 form (PDF, 593.57 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5475e.pdf) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "Document instance e0b45d2f4bed604ce5fb3e5abe2ef047 for slot authority_to_release_info was evaluated: signature_date and section_c_date are valid YYYY-MM-DD dates, section_c_consent_checkbox is true, authorization_scope is populated, form scope is compliant for designating an individual, and family_member_consent is true."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e0b45d2f4bed604ce5fb3e5abe2ef047",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e0b45d2f4bed604ce5fb3e5abe2ef047.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "b09836c3b7d05769f710eec89aef14bc60b826eeb421ca28bdaddcf24d673c62",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f951b805068342902119ce4352c5fd293ceba3f7d5d799ee9cfde2c99f700e59",
+    "prompt_hash": "d841f0ce99219075c07e4528a4eb14facbcdab4a4d3ddba909ea6d61664531a1",
+    "output_hash": "73d063d5b2bb5491d895350187d8ab20a8526886529f8ba378fee43690be30cf",
+    "returncode": 0,
+    "timestamp": "2026-07-24T16:44:57.335037+00:00",
+    "provenance_digest": "74438184d53c1f1dc5f7c850f4b44b949c9b8b541782a997c290e84a998620f4"
+  }
+}

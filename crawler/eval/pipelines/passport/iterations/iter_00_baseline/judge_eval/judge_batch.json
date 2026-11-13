@@ -1,0 +1,230 @@
+{
+  "doc_type": "passport",
+  "case_evaluations": {
+    "8e873c54b4bb1de4cf8d37cd795d01f0": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "9a810a55f57622a28c84ac5a9d69239e": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "76b15b7c453bb35d093d51e733fa3066": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d3918402b3a6309a43f56d234b9276a0": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "60039420b78d12c640a85a76edd3d17f": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "560448b57abc03dcc70c20802de6cde1": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6905c8726394082c7692d8a43533fed7": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ceac41e45361934fbcd82442291e566b": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "842289b995ee3edeca93476c08c72703": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "0e605283cf9741f8404ddbc238ab26b8": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "9976706c2233ca23187651dbf0e05da4": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "dd1b4cd65b0b780f8b0191aa68b4f392": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "76b15b7c453bb35d093d51e733fa3066",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-01 missed. Document narrative and fields show cropped MRZ with null passport_number and null expiry_date (R10 incompleteness); the PDF even states 'rejected as incomplete evidence.' Worker emitted only the generic bio-page requirement and flagged nothing."
+    },
+    {
+      "case_id": "d3918402b3a6309a43f56d234b9276a0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-01 missed (scanned sibling). Cropped MRZ, missing passport_number/expiry_date and explicit R10 rejection text present in the document. Worker produced identical boilerplate with no defect."
+    },
+    {
+      "case_id": "60039420b78d12c640a85a76edd3d17f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-02 missed. Passport vs Express Entry profile mismatch on name (PRIYA ARUN PATEL vs PRIYA PATEL SHARMA), DOB (1994-05-12 vs 1992-05-12) and passport number (Z9876543 vs X1234567) — a potential A40 misrepresentation stated in the narrative. Worker flagged nothing."
+    },
+    {
+      "case_id": "560448b57abc03dcc70c20802de6cde1",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-02 missed (scanned sibling). Same bio-data discrepancy between passport MRZ/physical page and profile. Worker returned generic requirement only."
+    },
+    {
+      "case_id": "6905c8726394082c7692d8a43533fed7",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-03 missed. Expiry 2026-09-15 vs 2026-07-23 assessment = under 6 months validity; narrative states PR visa cannot issue past expiry. Worker's prose/basis merely restated the bio-page requirement and even embellished ('contains passport page images formatted for biographical data page review')."
+    },
+    {
+      "case_id": "ceac41e45361934fbcd82442291e566b",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-03 missed (scanned sibling). Passport expiring in under 6 months of processing not detected; boilerplate output only."
+    },
+    {
+      "case_id": "842289b995ee3edeca93476c08c72703",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-04 missed. Page-8 US Embassy refusal stamp (2023-03-14) contradicts statutory 'No' to prior visa refusal — A40 misrepresentation stated in narrative. Worker flagged nothing."
+    },
+    {
+      "case_id": "0e605283cf9741f8404ddbc238ab26b8",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-04 missed (scanned sibling). Undeclared visa refusal vs statutory declaration not detected; identical generic claim emitted."
+    },
+    {
+      "case_id": "9976706c2233ca23187651dbf0e05da4",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-05 missed. Diplomatic passport (Type D) with 0 blank pages — non-compliant document type for economic streams per narrative. Worker returned generic requirement only."
+    },
+    {
+      "case_id": "dd1b4cd65b0b780f8b0191aa68b4f392",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-PASSPORT-05 missed (scanned sibling). Type-D diplomatic passport / zero blank pages ineligibility not detected."
+    },
+    {
+      "case_id": "6905c8726394082c7692d8a43533fed7",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Basis asserts 'The document contains passport page images formatted for biographical data page review,' an unsupported embellishment; the attachment is a text-rendered passport page, not multiple page images."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/passport.md",
+      "suggested_patch": "Require the agent to extract and evaluate passport fields (passport_type, issuing_country, passport_number, DOB, name, MRZ, issue/expiry dates, blank_pages_count, statutory_questions) against explicit rules, then emit a verdict. Add mandatory checks: (1) R10 completeness — reject if bio-page/MRZ cropped or passport_number/expiry missing; (2) MRZ/profile consistency — flag name/DOB/passport-number mismatches as possible A40 misrepresentation; (3) validity — flag expiry under 6 months from assessment date; (4) statutory vs stamp contradictions — flag undeclared refusal stamps; (5) document type — flag non-P (e.g., diplomatic Type D) passports and zero blank pages. Prohibit emitting only the generic bio-page requirement as a full answer."
+    },
+    {
+      "target_file": "skills/document-agents/passport.md",
+      "suggested_patch": "Add a defect-first output contract: every case must return either an explicit defect claim (with the offending field values placed in basis[], PII-free claims/prose) or an affirmative 'meets_requirements' assessment justified by verified field checks. Forbid identical boilerplate across cases; the report must vary with document content."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Instruct Worker agents to read the document's own narrative/notes and field values before answering; when the source text explicitly states a rejection, discrepancy, or ineligibility, the agent must surface it rather than defaulting to a generic requirement restatement. Treat failure to inspect provided content as a compliance error."
+    }
+  ],
+  "rationale": "The Worker (gemini-3.6-flash) returned near-identical boilerplate for all 12 cases, restating only the generic bio-page requirement with the same citation and never inspecting document content. It detected 0 of 10 injected defects (PFL-PASSPORT-01 through -05, across vector and scanned siblings), despite each defective PDF's own narrative explicitly describing the defect (cropped MRZ/R10, bio-data mismatch, sub-6-month validity, undeclared refusal stamp, diplomatic passport/zero blank pages). Defect_recall is therefore 0.0 for all defective cases and 1.0 for the two genuinely compliant cases (8e873c54, 9a810a55). Grounding is otherwise acceptable (the lone generic claim is accurate with no fabricated facts, minus one minor embellishment in 6905c8). Citations are consistent and plausible but unverified against corpus (0.9). PII containment is clean — no applicant identifiers leaked into claims/prose — and blind_input_compliance shows no ground-truth leakage (both 1.0). Core deficiency is a total absence of analytical defect detection; patches should force field-level rule evaluation and a defect-first output contract.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "0e605283cf9741f8404ddbc238ab26b8.pdf",
+      "--attachment",
+      "560448b57abc03dcc70c20802de6cde1.pdf",
+      "--attachment",
+      "60039420b78d12c640a85a76edd3d17f.pdf",
+      "--attachment",
+      "6905c8726394082c7692d8a43533fed7.pdf",
+      "--attachment",
+      "76b15b7c453bb35d093d51e733fa3066.pdf",
+      "--attachment",
+      "842289b995ee3edeca93476c08c72703.pdf",
+      "--attachment",
+      "8e873c54b4bb1de4cf8d37cd795d01f0.pdf",
+      "--attachment",
+      "9976706c2233ca23187651dbf0e05da4.pdf",
+      "--attachment",
+      "9a810a55f57622a28c84ac5a9d69239e.pdf",
+      "--attachment",
+      "ceac41e45361934fbcd82442291e566b.pdf",
+      "--attachment",
+      "d3918402b3a6309a43f56d234b9276a0.pdf",
+      "--attachment",
+      "dd1b4cd65b0b780f8b0191aa68b4f392.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "90446c4662dd6afdae130f8c4f292244d3c6c25f56ca26d1031ad1a9ed5e0bea",
+    "research_hash": "4cc3146b0fffb85c695e76224609d2564f40f76372ba8f73c2d586f5f93f87f9",
+    "ground_truth_hash": "211243963c82b3ccbe4ea1fb1ae3b4371b7c1cd32675ec94041ee57be6004ab5",
+    "output_hash": "6ef686980e1c0831c6f78d915cf80df091cb6a828c783d8cf98f5f5715d1599b",
+    "timestamp": "2026-07-23T23:16:47.520999+00:00",
+    "provenance_digest": "152a9cf0fb1cb6a87624cc8221a410b96ffa94a30afeae3a63d4143780cc2941"
+  }
+}

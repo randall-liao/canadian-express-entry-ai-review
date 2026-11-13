@@ -1,0 +1,51 @@
+{
+  "question": "How must a foreign educational credential be assessed?",
+  "claims": [],
+  "basis": [
+    "Educational Credential Assessment document (case ID: b12aaadf75f594b7e827de0c785a0170) submitted under upload-slot type educational_credential_assessment: ECA report issue date exceeded the maximum 5-year validity threshold for Express Entry.",
+    "affected_fields: issue_date, validity_period"
+  ],
+  "abstentions": [
+    {
+      "text": "The submitted Educational Credential Assessment (ECA) report has exceeded the maximum 5-year validity period, so no Express Entry CRS points for education can be awarded.",
+      "reason": "defective_document"
+    }
+  ],
+  "prose": "",
+  "case_id": "b12aaadf75f594b7e827de0c785a0170",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b12aaadf75f594b7e827de0c785a0170.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2a9188511c4c970acb31dc9e620ff5d46bdf98c791f8c79a058b56693aff847b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e28d80dcf0f63f2981fd09c4f47946e9b1e830f1c429c5fc3d124e3b107720b1",
+    "prompt_hash": "872d97234820900bed98da9849771cfc9bd274b62fe1bcaedc6de86cf03db895",
+    "output_hash": "aeb8fa80534f0338f35213d5bdf8e159730695b83afa4a2980442b09c7764a08",
+    "returncode": 0,
+    "timestamp": "2026-07-24T19:08:54.592783+00:00",
+    "provenance_digest": "43d090f5ac257652dff955bfe98263a99fd7a027d6b3c2195ff00c0e8ce370f1"
+  }
+}

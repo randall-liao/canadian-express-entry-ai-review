@@ -1,0 +1,64 @@
+# =============================================================================
+# Crawl profile TEMPLATE — copy me to target your own authoritative source.
+#
+# HOW TO USE:
+#   1. Copy this file:        cp crawler/profiles/template.yaml my-source.yaml
+#   2. Rename + edit it:      give it a `name` and fill in the rules below.
+#   3. Point the crawler:     --profile path/to/my-source.yaml
+#
+# This template is valid and loadable as-is (so you get immediate feedback),
+# with neutral placeholder rules. Replace the illustrative examples with rules
+# for your own site.
+#
+# FORMAT NOTES:
+#   * `*_url_patterns` entries are `fnmatch` GLOBS (e.g. '*login*', '*/fr/*').
+#   * `*_patterns` entries are Python `re` REGEXES — single-quote them so
+#     backslashes stay literal, and prefix with `(?i)` for case-insensitive
+#     matching (the inline equivalent of `re.I`).
+# =============================================================================
+
+# Short identifier for this profile (lowercase, no spaces).
+name: template
+
+# Domains the crawl may follow. Empty list -> derive the allowed domain from the
+# seed URL's netloc (recommended default for a single-site crawl).
+allowed_domains: []
+
+# Page families to NEVER record — `fnmatch` globs matched against the (lowercased,
+# slug-substituted) URL. List the URL fragments of sections you want to skip.
+# Examples below are illustrative; replace with your own.
+exclude_url_patterns:
+  - '*login*'          # auth/account pages
+  - '*search*'         # search-result pages
+
+# Lowercase [from, to] string replacements applied to the URL BEFORE exclusion
+# matching. Use this to neutralize a long department/site slug so your topic
+# globs above don't accidentally match it. Default: none.
+slug_substitutions: []
+
+# Query-string parameters to drop during URL normalization, so variants like
+# `?print=true` collapse to a single corpus entry. Default: none.
+strip_query_params: []
+
+# Footer markers — once a line matches, everything from there to end-of-page is
+# truncated (removes page footer chrome). Python regex; one example shown.
+footer_patterns:
+  - '(?i)^#{1,6}\s*Footer\b'
+
+# Heading-delimited navigation sections to drop entirely (the heading line plus
+# its body, until the next heading of the same-or-shallower level). Python regex.
+nav_section_patterns:
+  - '(?i)^#{1,6}\s*(See also|On this page)\s*:?\s*$'
+
+# Residual single-line artifacts to drop wherever they appear (stray chrome that
+# survives the section filters, e.g. date stamps). Python regex; one example shown.
+residual_line_patterns:
+  - '^\s*\d{4}-\d{2}-\d{2}\s*$'   # a bare ISO date line
+
+# Default `source_type` recorded in each page's front-matter (your label for the
+# kind of source, e.g. 'pdi', 'guide', 'regulation').
+default_source_type: guide
+
+# Default attribution/label recorded in each page's front-matter. Make this an
+# accurate citation/usage note for YOUR source.
+default_label: 'Source: <your authoritative source>; verify against the live page.'

@@ -1,0 +1,16 @@
+{
+  "schema_version": "phase75-release-manifest-v1",
+  "created_at": "2026-07-27T15:15:50.521936+00:00",
+  "status": "ready",
+  "phase74_run_id": "sdk-20260727T082623Z-539def5d2bd9",
+  "phase74_evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "release_evidence_hash": "298de720e1f1857751556d188f4f258bb5c9ffe3f89ffbb832eb806a8ecab54d",
+  "release_evidence_record_hash": "27ebd2f7d80584a2811141203fafb180d4eb45045cc007dffc2e5a03913ee959",
+  "assessment_hash": "bb2dc324acba5b5c4fd40a1c6057737f79b3eaa7341f98b58cefd9f10fdcc051",
+  "report_file": "TEST_REPORT.md",
+  "report_hash": "3ee148b8c5873a82931ea0b94b1ea28a69bc7b03c25509c8cc4d707d4e36ec19",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "context_tier": "long_context",
+  "manifest_hash": "7fd79ca1e8d48e134f2b539e8cbd4303ffa3f58263c50f5f8121a77ec1713355"
+}

@@ -1,0 +1,54 @@
+{
+  "question": "Does the applicant need an immigration medical examination?",
+  "claims": [
+    {
+      "id": "medical-exam",
+      "text": "An applicant must undergo an immigration medical examination, subject to a corpus-stated, time-limited public-policy exemption window.",
+      "citations": [
+        "medical/requirements-permanent-residents.md#000"
+      ],
+      "quote": "We’ve extended the temporary public policy to exempt certain foreign nationals in Canada from the immigration medical examination requirement **until October 5, 2029**."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a document under slot type medical_examination for opaque case ID 45b4e8926558b62da9b120f26903d826."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "45b4e8926558b62da9b120f26903d826",
+  "doc_type": "medical_examination",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "45b4e8926558b62da9b120f26903d826.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "96f5bddf9ef4c583173c9de122f015ac34ab125b60d107905d3a496be9cf84e6",
+    "allowed_text_sha256": null,
+    "bundle_hash": "46f5b4e4c9de0835a26929e9b4462b35956bdbd07aa3481c7ad7e25684bdda5b",
+    "prompt_hash": "c23320036fe7d2cd215db4a9df40d0ae696584ebf2fdd6c90c5235266d4c3bd0",
+    "output_hash": "ac5346d20147c08114988e6a3c2e27dbac8aab00093b10c09da6b48b6774a7c6",
+    "returncode": 0,
+    "timestamp": "2026-07-23T14:27:06.364856+00:00",
+    "provenance_digest": "68fb076cd47c1ac3a3c11f03a56044ca0be8a1722ec6fc2ae7ffe36cfaf13d48"
+  }
+}

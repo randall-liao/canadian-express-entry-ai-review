@@ -1,0 +1,54 @@
+{
+  "question": "What digital photos must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "digital-photos-spec",
+      "text": "Express Entry applicants must provide digital photos that meet IRCC permanent resident card photo specifications.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#061"
+      ],
+      "quote": "Digital photos meeting [IRCC’s permanent resident card photo specifications (PDF, 614.24 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/information/applications/guides/pdf/5445eb-e.pdf) must be provided."
+    }
+  ],
+  "basis": [
+    "The submitted document in slot type 'digital_photo' (opaque case ID: bd9e0ba88f82848fc083628283b223c4) was evaluated against IRCC permanent resident card photo specifications."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "bd9e0ba88f82848fc083628283b223c4",
+  "doc_type": "digital_photo",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "bd9e0ba88f82848fc083628283b223c4.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "776a72bdd8db6c61ce433ee30d82dc2e7b3dba2443e1ddbc54de475f6d4890b1",
+    "allowed_text_sha256": null,
+    "bundle_hash": "52fe2a617ece78ce90df802cc559f61f4dd05488aa67e934f752f89c23fee48f",
+    "prompt_hash": "0ef99dbdf6079d189eb82f7b486caa054c4a5a7e194edeaaaee2ef10daded4b0",
+    "output_hash": "e954506eb46dd91448a2ad8a5bd651b832a772cdd5bbf94e2dee75cda3b0c854",
+    "returncode": 0,
+    "timestamp": "2026-07-24T05:41:51.161902+00:00",
+    "provenance_digest": "16c9a9df467a325a93779d7f7b7bfbdfe15e447456627cf10bf83292679e1c2f"
+  }
+}

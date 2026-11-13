@@ -1,0 +1,55 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-cert-copy",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant's declared marital status is widowed.",
+    "Document upload slot death_certificate for case 142cafca554f10fc1521a2d97b364cf8 was reviewed for required fields including registration number, issuing authority seal, and registrar signature."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "142cafca554f10fc1521a2d97b364cf8",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "142cafca554f10fc1521a2d97b364cf8.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "481760e26f741bd591643bfc258e3ddad0b96e5f885db15b15ccf81306d6348c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f5dd7cb2d45c0135570f1d3733db8965b317ddc35c2e55734554615b82b27034",
+    "prompt_hash": "e00dd04c40608b162a86c21de3db46c5bf856bf061bba731c68a44d747a4b4cd",
+    "output_hash": "d8055c460eb2f39d46474c425bd98103e8d190dbccb2a0382c7eb1c44284ac29",
+    "returncode": 0,
+    "timestamp": "2026-07-24T04:44:19.007745+00:00",
+    "provenance_digest": "f9ac116ae0e4b850cc7a09a1d37591d17065e7f71c5b6c889b223c4214d1f186"
+  }
+}

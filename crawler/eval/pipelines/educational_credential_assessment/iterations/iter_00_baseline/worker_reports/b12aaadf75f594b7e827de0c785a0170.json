@@ -1,0 +1,54 @@
+{
+  "question": "How must a foreign educational credential be assessed for Canadian Express Entry?",
+  "claims": [
+    {
+      "id": "eca",
+      "text": "A foreign educational credential must be assessed by a designated organization to establish its Canadian equivalency and authenticity.",
+      "citations": [
+        "eca/educational-credential-assessment.md#014"
+      ],
+      "quote": "ECA reports include the designated organization’s assessment of the authenticity of the applicant’s completed foreign educational credentials."
+    }
+  ],
+  "basis": [
+    "Educational credential assessment document submitted for opaque case ID b12aaadf75f594b7e827de0c785a0170 under slot educational_credential_assessment."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b12aaadf75f594b7e827de0c785a0170",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b12aaadf75f594b7e827de0c785a0170.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2a9188511c4c970acb31dc9e620ff5d46bdf98c791f8c79a058b56693aff847b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "3fba09ee6cc737403cf7f5bc2b1bff4b78d04d92506e4eed3415347a3598173c",
+    "prompt_hash": "465eee404da91c3c7095fa2d7821ed52215d956ed2b9c409762a02900819915b",
+    "output_hash": "5df5b0cb78ae6e71c5de658c4cdd0ca88606e9dc2952c4ab8554d1fb659ec72e",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:38:33.079540+00:00",
+    "provenance_digest": "38e772283fb8fa6513cc7f3ba0a1da43e5065516662a11956f6a054d171c06a7"
+  }
+}

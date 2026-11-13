@@ -1,0 +1,32 @@
+[
+  {
+    "id": "medical-requirements",
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-requirements.html",
+    "raw_md": "# Medical requirements\n\nYou must complete an immigration medical examination before you come to Canada. This applies to all permanent residence applicants under Express Entry. A panel physician performs the exam and sends the results directly to IRCC. Do not send the results yourself. Your medical exam is valid for a limited period after which you may need to repeat it.\n\n## On this page\n\n- Overview\n- Who needs an exam\n- How to book\n\n## How to book\n\nBook your exam with a panel physician approved by IRCC. Bring valid identification and any prior medical records you have. The physician records the results electronically and transmits them securely.\n\n## See also\n\n- Other immigration topics\n- Contact us\n\n*[fr]: Fran\u00e7ais\n2026-06-09\nDate modified: 2026-06-09\n\n## Page details\n\nSome footer chrome here.\nAbout this site footer text.\n"
+  },
+  {
+    "id": "stub-note",
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/notice.html",
+    "raw_md": "# Notice\n\nShort.\n\n## Page details\n\nfooter junk that gets stripped\n"
+  },
+  {
+    "id": "express-entry-overview",
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html",
+    "raw_md": "# Express Entry overview\n\nExpress Entry is an application management system for skilled worker immigration to Canada. It covers three federal economic programs. Candidates create a profile and receive a score under the Comprehensive Ranking System. The highest ranked candidates receive an invitation to apply for permanent residence.\n"
+  },
+  {
+    "id": "express-entry-eligibility",
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility.html",
+    "raw_md": "# Express Entry overview\n\nExpress Entry is an application management system for skilled worker immigration to Canada. It covers three federal economic programs. Candidates create a profile and receive a score under the Comprehensive Ranking System. The highest ranked candidates receive an invitation to apply for permanent residence.\n\n## Page details\n\nduplicate-content footer chrome\n"
+  },
+  {
+    "id": "medical-requirements-mirror",
+    "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-requirements.html",
+    "raw_md": "# Medical requirements (mirror)\n\nThis is a duplicate route to the medical requirements page reached via a different navigation path during the breadth first crawl. The body text differs slightly but the canonical URL is identical, so it must be collapsed to a single corpus entry under the URL deduplication rule.\n"
+  },
+  {
+    "id": "citizenship-out-of-scope",
+    "url": "https://www.canada.ca/en/services/canadian-citizenship/become-canadian-citizen.html",
+    "raw_md": "# Become a Canadian citizen\n\nTo become a Canadian citizen most applicants must already be permanent residents, have lived in Canada for a required period, file their taxes, pass a citizenship test, and take the oath of citizenship. This page is out of scope for an Express Entry permanent residence applicant and must be skipped at the URL scope stage.\n"
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "The reference or experience letter from the employer should be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "The letter must include the applicant's name, company contact information (address, telephone number, and email address), and the name, title, and signature of the immediate supervisor or personnel officer.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company"
+    },
+    {
+      "id": "positions-held",
+      "text": "The letter should indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "The letter must include employment details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    }
+  ],
+  "basis": [
+    "Applicant declares skilled work experience at <employer> starting <start-date> earning <salary>."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "a38580ddaa3c103b3955871ba2a5c8d2",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "a38580ddaa3c103b3955871ba2a5c8d2.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c1b85a2e8c84c67b1799e18e7590b3f616fe4ef475c3072c5983c307b8eaa4fc",
+    "allowed_text_sha256": null,
+    "bundle_hash": "6728af7f41adec9652dcc49c622f081b591c295162c6e199c4a0c8796ca3d079",
+    "prompt_hash": "08972cbe8713bbe678ef9b96cd82e726c194d11bdd2053fc118dc9c322795285",
+    "output_hash": "d44643e36923ff8f4691e13c0eff46559adafcdc6599d2917da3912f28b1103a",
+    "returncode": 0,
+    "timestamp": "2026-07-23T12:48:14.479007+00:00",
+    "provenance_digest": "4e421976a04799894df327c7bcdd0518229578402fd347cdb470ac7f63261efc"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "doc_type": "death_certificate",
+  "timestamp": "2026-07-23T03:44:33.523550+00:00",
+  "summary": "Online research into IRCC operational guidelines and Express Entry procedural fairness letter (PFL) triggers indicates that death certificates submitted as proof of marital status (e.g., widowed status) or family composition changes are strictly evaluated. Key failure modes include untranslated foreign certificates lacking required certified translations/affidavits, missing official civil or medical registrar seals/signatures, name or personal detail discrepancies between civil records and application forms, and failure to formally disclose spousal/dependent death or submit proof of death during application processing.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:47:55.727146+00:00",
+    "duration_seconds": 211.957,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "f1220d8f513bc59010e1e3fb919098902c862b1fd5197d437322f24af88bbc87",
+    "raw_output_sha256": "c73686f28eda3ad955775c7e91b247b6a43864fe353c7e053a76b811537de041",
+    "returncode": 0,
+    "provenance_token": "45f8e50a438cc1e9ace14eb67dcb98adf77b8ee6a5805b076b5a8ddadfcee480",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 12,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-DEATH_CE-01",
+      "category": "pfl_translation_noncompliance",
+      "severity": "critical",
+      "title": "Missing Certified Translation or Translator Affidavit for Foreign Death Certificate",
+      "description": "Submitting a foreign death certificate in a language other than English or French without an accompanying certified translation, or using an uncertified translator without a notarized affidavit of accuracy and certified photocopy of the original document, leads to application rejection at completeness check or issuance of a PFL.",
+      "affected_fields": [
+        "language_of_document",
+        "translation_affidavit",
+        "certified_translator_stamp"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=018&top=4",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Unless we tell you otherwise, all supporting documents must be in English or French. If it is not in English or French, you must send it with: the English or French translation and an affidavit from the person who completed the translation and a certified photocopy of the original document.",
+      "remediation_hypothesis": "Obtain and submit a full translation package comprising (1) an complete translation by a certified translator with official stamp and credential details (or accompanied by a sworn affidavit before a notary), (2) a certified photocopy of the original foreign death certificate, and (3) a full translation of all seals, stamps, and marginalia.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DEATH_CE-02",
+      "category": "pfl_authenticity_validity",
+      "severity": "critical",
+      "title": "Absence of Official Medical or Civil Registrar Seal and Signature",
+      "description": "Submitting an informal hospital notice, death notification summary, or uncertified copy lacking the official civil status or medical registrar's stamp, seal, or authorized registration signature causes IRCC officers to reject the document as non-authoritative or raise authenticity concerns.",
+      "affected_fields": [
+        "issuing_authority_seal",
+        "registrar_signature",
+        "registration_number"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must provide clear, legible copies of official documents issued by the governing civil authority. Documents without required official stamps, seals, or official registrar signatures cannot be validated for completeness and authenticity.",
+      "remediation_hypothesis": "Request an official long-form extract or certified copy of the death registration directly from the official Vital Statistics or Civil Registry office in the jurisdiction of death, ensuring it bears the official government/registrar stamp, seal, and authorized signature.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DEATH_CE-03",
+      "category": "pfl_mismatch_discrepancy",
+      "severity": "critical",
+      "title": "Name or Identification Detail Mismatch with Express Entry Records",
+      "description": "Discrepancies between the deceased person's name or the applicant's name/relationship on the death certificate (e.g., maiden vs. married name variations, alias spelling) compared to e-APR profile records raise identity verification concerns and potential IRPA A40 misrepresentation flags.",
+      "affected_fields": [
+        "deceased_full_name",
+        "deceased_date_of_birth",
+        "applicant_relationship",
+        "marital_status_declaration"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5527-application-permanent-residence-temporary-resident-permit-holder.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must inform us immediately of any change in your marital status or your family composition... You must ensure all legal names and personal details match across all official documents submitted with your application.",
+      "remediation_hypothesis": "Provide linking civil documents (such as marriage certificates, birth certificates, or official national identity records showing legal name changes) accompanied by a sworn affidavit explaining cultural or administrative name variations.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DEATH_CE-04",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Failure to Disclose Change in Marital Status or Provide Death Certificate Post-ITA",
+      "description": "Failing to report the death of a spouse or dependent after submitting an Express Entry profile or receiving an ITA, or changing status to 'Widowed' without submitting the corresponding death certificate via Webform, results in rejection for incomplete documentation or a PFL for non-disclosure.",
+      "affected_fields": [
+        "marital_status_code",
+        "family_composition",
+        "proof_of_marital_status"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/change-family-information.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must notify IRCC immediately of any change in marital status or family composition. If a family member listed on your application dies, you must provide supporting documents such as a copy of the death certificate.",
+      "remediation_hypothesis": "Promptly submit a change of family composition notification to IRCC via the Webform, attach the official death certificate with certified translation, and update the IMM 5406 (Additional Family Information) form along with an explanatory letter.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

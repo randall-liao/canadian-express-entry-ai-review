@@ -1,0 +1,200 @@
+{
+  "doc_type": "proof_of_other_name",
+  "timestamp": "2026-07-23T03:07:24.298-04:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "proof_of_other_name",
+      "title": "Certificate of Legal Change of Name",
+      "issuing_authority": "Ontario Registrar General, Vital Statistics Branch",
+      "issue_date": "2022-04-18",
+      "expiry_date": null,
+      "fields": {
+        "proof_of_other_name": "Official Certificate of Legal Change of Name",
+        "personal_history_names": [
+          "Jane Smith",
+          "Jane Doe"
+        ],
+        "given_name": "Jane",
+        "family_name": "Doe",
+        "previous_given_name": "Jane",
+        "previous_family_name": "Smith",
+        "registration_number": "ON-2022-892104",
+        "issuing_jurisdiction": "Ontario, Canada",
+        "applicant_date_of_birth": "1990-05-12",
+        "applicant_place_of_birth": "Toronto, Ontario, Canada",
+        "issuing_official": "Registrar General of Ontario",
+        "official_seal_present": true
+      },
+      "narrative_blocks": [
+        "This is to certify that Jane Smith, born on May 12, 1990 in Toronto, Ontario, Canada, has officially registered a change of name under the Change of Name Act.",
+        "The legal name registered as of April 18, 2022 is Jane Doe. All prior records under the name Jane Smith refer to the same individual."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_other_name",
+      "title": "Name Change Application - Missing Official Government Certificate",
+      "issuing_authority": "Civil Status Registry",
+      "issue_date": "2023-08-10",
+      "expiry_date": null,
+      "fields": {
+        "given_name": "Robert",
+        "family_name": "Lin",
+        "previous_given_name": "Robert",
+        "previous_family_name": "Chen",
+        "personal_history_names": [
+          "Robert Chen",
+          "Robert Lin"
+        ],
+        "proof_of_other_name": null,
+        "document_status": "Missing Certificate",
+        "registration_number": null
+      },
+      "narrative_blocks": [
+        "The applicant listed a former legal name 'Robert Chen' in the personal history section but failed to attach the mandatory government-issued certificate of name change or legal deed poll.",
+        "Without official documentary evidence verifying the legal transition from 'Robert Chen' to 'Robert Lin', identity continuity cannot be established."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POON_NAME-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The applicant declared a name change in personal history from Robert Chen to Robert Lin but failed to provide an official government legal name change certificate as proof of other name.",
+        "affected_fields": [
+          "proof_of_other_name",
+          "personal_history_names",
+          "given_name",
+          "family_name"
+        ],
+        "mutation_details": {
+          "mutation_type": "missing_required_document",
+          "missing_field": "proof_of_other_name",
+          "reason": "Official legal name change certificate was omitted despite declaring prior name history."
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_other_name",
+      "title": "Court Order for Name Change - Uncertified Copy Lacking Judicial Seal",
+      "issuing_authority": "Superior Court of Justice",
+      "issue_date": "2021-11-04",
+      "expiry_date": null,
+      "fields": {
+        "proof_of_other_name": "Unverified Copy of Court Petition",
+        "court_order_document": "Petition for Change of Name Docket #2021-CV-0492",
+        "issuing_court_seal": null,
+        "previous_name": "Alice Tremblay",
+        "new_name": "Alice Vane",
+        "seal_present": false,
+        "court_clerk_signature_present": false,
+        "judicial_district": "Central Judicial District"
+      },
+      "narrative_blocks": [
+        "In the Superior Court of Justice, Petition of Alice Tremblay for legal change of name to Alice Vane.",
+        "Notice is hereby given that an order was drafted on November 4, 2021. Note: This copy lacks an embossed judicial seal, official court stamp, or clerk verification certificate."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POON_NAME-02",
+        "category": "pfl_invalid_format",
+        "severity": "critical",
+        "description": "The submitted court order for legal name change lacks the official judicial seal, court stamp, or clerk validation required to verify document authenticity.",
+        "affected_fields": [
+          "proof_of_other_name",
+          "court_order_document",
+          "issuing_court_seal"
+        ],
+        "mutation_details": {
+          "mutation_type": "missing_seal_validation",
+          "field_omitted": "issuing_court_seal",
+          "reason": "Document provided is an unauthenticated copy without official court stamp or seal."
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_other_name",
+      "title": "Statutory Name Declaration - Discrepancy Across Educational and Identity Records",
+      "issuing_authority": "Civil Registry Office",
+      "issue_date": "2023-03-20",
+      "expiry_date": null,
+      "fields": {
+        "passport_full_name": "Elena Rostova",
+        "eca_applicant_name": "Elena V. Rostova",
+        "degree_certificate_name": "Elena Rostoff",
+        "proof_of_other_name": "Affidavit of Name Change (Rostoff to Rostova)",
+        "declared_aliases": [
+          "Elena Rostoff",
+          "Elena Rostova"
+        ],
+        "unverified_discrepancy": "Middle initial 'V.' in ECA report unreferenced in proof of name"
+      },
+      "narrative_blocks": [
+        "The applicant provided a statutory declaration connecting 'Elena Rostoff' (degree certificate) to 'Elena Rostova' (passport).",
+        "However, the Educational Credential Assessment (ECA) report lists the applicant as 'Elena V. Rostova'. No secondary proof or explanation is provided for the inclusion or omission of middle initial 'V.' across records."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POON_NAME-03",
+        "category": "pfl_identity_discrepancy",
+        "severity": "critical",
+        "description": "Name variation exists across applicant credentials (Passport: Elena Rostova, Degree: Elena Rostoff, ECA: Elena V. Rostova) and the provided proof of other name fails to resolve the middle initial discrepancy present on the ECA report.",
+        "affected_fields": [
+          "passport_full_name",
+          "eca_applicant_name",
+          "degree_certificate_name",
+          "proof_of_other_name"
+        ],
+        "mutation_details": {
+          "mutation_type": "unresolved_name_variation",
+          "discrepant_sources": [
+            "passport_full_name",
+            "eca_applicant_name",
+            "degree_certificate_name"
+          ],
+          "reason": "Proof of name document only addresses family name change and omits verification for middle initial 'V.' in ECA report."
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_other_name",
+      "title": "Foreign Name Change Certificate - Uncertified Translation",
+      "issuing_authority": "Registro Civil de Madrid",
+      "issue_date": "2020-09-14",
+      "expiry_date": null,
+      "fields": {
+        "proof_of_other_name": "Certificado de Cambio de Nombre - Registro Civil",
+        "document_translation": "Plain English summary without certified translator stamp",
+        "translator_affidavit": null,
+        "document_title_original": "Certificado de Cambio de Nombre",
+        "primary_language": "Spanish",
+        "certified_translator_name": null,
+        "translation_certified": false
+      },
+      "narrative_blocks": [
+        "Certificado expedido por el Registro Civil certificando la modificación de apellidos de María Santos a María Santos-Gómez.",
+        "Submission includes an informal self-translated printout. No affidavit from a certified translator or official translation agency seal is attached."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POON_NAME-04",
+        "category": "pfl_non_compliant_translation",
+        "severity": "critical",
+        "description": "The foreign language name change document (Spanish) was submitted without an official certified translation or accompanying translator affidavit of completeness and accuracy.",
+        "affected_fields": [
+          "proof_of_other_name",
+          "document_translation",
+          "translator_affidavit"
+        ],
+        "mutation_details": {
+          "mutation_type": "missing_certified_translation",
+          "missing_components": [
+            "translator_affidavit",
+            "certified_translation_seal"
+          ],
+          "reason": "Foreign language document provided with uncertified/informal translation only."
+        }
+      }
+    }
+  ]
+}

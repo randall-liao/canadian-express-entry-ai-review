@@ -1,0 +1,19 @@
+{
+  "case_id": "case_010_scan",
+  "doc_type": "educational_credential_assessment",
+  "variant": "scanned",
+  "dpi": 300,
+  "file_name": "case_010_scan.pdf",
+  "fields": {
+    "agency": "WES",
+    "ref_number": "WES-4920193",
+    "issue_date": "2023-11-20",
+    "degree_evaluated": "Bachelor of Science in Computer Science",
+    "canadian_equivalence": "Bachelor's degree (four years)"
+  },
+  "expected_verdict": "defective",
+  "injected_defects": [
+    "no_translation"
+  ],
+  "must_abstain": false
+}

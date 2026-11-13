@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant translate a supporting document that is not in English or French?",
+  "claims": [
+    {
+      "id": "translation-certified-requirements",
+      "text": "Supporting documents in a language other than English or French must be accompanied by an official translation and a copy of the original source document used by the translator, with both stamped by the translator or referred to in an affidavit.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French. Both the source document and the translation must either be stamped by the translator or referred to in the affidavit"
+    }
+  ],
+  "basis": [
+    "The applicant submitted a document under the certified_translation upload slot for case ID 7c2d425357da8cf81469fdde73ea98f6."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "7c2d425357da8cf81469fdde73ea98f6",
+  "doc_type": "certified_translation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "7c2d425357da8cf81469fdde73ea98f6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "3095f01522a9a5553204f1e0a79059c3572c06465ff19a73fcc0b008815657d6",
+    "allowed_text_sha256": null,
+    "bundle_hash": "4a37d63bb4b1ec8d3568c9d28d63373033f20464f6e70d6cc52d3ed8159fd14a",
+    "prompt_hash": "29c8dad139c7291a1ae0a05f7f9b4d87d92fa8e5178c42afcc128d6548e997f1",
+    "output_hash": "836f62b96fdf365f406b369e65a30d62a53ad90f536532fe7182b0161084bfe6",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:59:47.502030+00:00",
+    "provenance_digest": "f6a80a0ac4753062c6477b0837e283246d8fbcaeded7e5f14fb6941ac8eb5a2a"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant has declared a2327218691cc2) with a dependent child whose status is listed as adopted."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "62a2d308c5710bbc25a2327218691cc2",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "62a2d308c5710bbc25a2327218691cc2.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "6525987d93172001fb8fe90a2345cfb5bf2598466a4aa68898a32ad062547b38",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "4420209fc4f7d6ebdea8b9c0d0c9568948083be4dbf82d1d9f8127afcee82d7b",
+    "output_hash": "0aa730cd331e74ab940e1cd3bea62e84a34f58f6a6ede3070a9f3feb064653fd",
+    "returncode": 0,
+    "timestamp": "2026-07-24T01:17:42.332736+00:00",
+    "provenance_digest": "5e5c45b14d57ef80e5f5ee468f0f5f440babb65cc21f18515c94daf6bac622a0"
+  }
+}

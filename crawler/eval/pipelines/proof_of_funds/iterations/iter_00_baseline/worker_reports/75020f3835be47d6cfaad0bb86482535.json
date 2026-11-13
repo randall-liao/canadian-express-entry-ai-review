@@ -1,0 +1,56 @@
+{
+  "question": "What must the applicant's settlement funds satisfy?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "Settlement funds must be legally accessible and cannot be borrowed or derived from real-property equity.",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "you can't use equity on real property as proof of settlement funds"
+    }
+  ],
+  "basis": [
+    "Document upload slot: proof_of_funds (Opaque Case ID: 75020f3835be47d6cfaad0bb86482535).",
+    "Applicability and exemption rules: Applicants under FSWC and FSTC must meet settlement funds requirements unless authorized to work in Canada with a qualifying offer of arranged employment; CEC applicants are exempt from settlement funds requirements.",
+    "Applicant-specific profile details regarding program class, family size, and financial account balance are retained in basis only."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "75020f3835be47d6cfaad0bb86482535",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "75020f3835be47d6cfaad0bb86482535.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "12f90921fa13e1cf74d61f80933a4662788fdec566f44a5f031478bc7a62b88f",
+    "allowed_text_sha256": null,
+    "bundle_hash": "08401b80e3700210a5b3546e3c49ff29c36936bb0a3094fc5d8e23b18f1b5827",
+    "prompt_hash": "d6246068a8537bb9d56f28deeeb119ac5a72bc0b84cc7006b25bae4d16f2831f",
+    "output_hash": "e1c3f58de961b854285b4ed34c8444ccad8b518350ed832ef76d87d58d5cefcb",
+    "returncode": 0,
+    "timestamp": "2026-07-23T16:22:55.957858+00:00",
+    "provenance_digest": "4f5f00a4c99a9bacf476552c4f7ffab329fbd782f882b585e75137ef935757b5"
+  }
+}

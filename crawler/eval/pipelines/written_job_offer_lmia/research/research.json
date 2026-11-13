@@ -1,0 +1,137 @@
+{
+  "doc_type": "written_job_offer_lmia",
+  "timestamp": "2026-07-23T03:39:15.518840+00:00",
+  "summary": "Live research on official IRCC operational instructions and ESDC guidelines for Express Entry document type 'written_job_offer_lmia' identified four primary failure modes and PFL triggers under IRPR s. 82(1): submission with an expired LMIA or loss of valid work authorization, offer duration failing the 1-year continuous full-time post-PR requirement, NOC TEER code and duty misalignment, and offering wages below ESDC regional prevailing median rates.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:42:06.672405+00:00",
+    "duration_seconds": 180.767,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "0e198853ce704dca1d9cd658f2470b92e28693002856d2658a8ead2af6ef0199",
+    "raw_output_sha256": "adc04c41c8557a945b6578ccb82db534d18841f09fd5a7607332a75515e8e0ec",
+    "returncode": 0,
+    "provenance_token": "95f831df9f6dfa11cdc139c7d1e8c1fd344ec660878aa7d050f9030dfd07d665",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch"
+    ],
+    "tool_call_count": 10,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-WRITTEN-LMIA-01",
+      "category": "pfl_expired_lmia_validity",
+      "severity": "critical",
+      "title": "LMIA Expired Prior to Application Submission or Loss of Work Authorization",
+      "description": "The Labour Market Impact Assessment (LMIA) supporting the written job offer expired before the applicant submitted the electronic Application for Permanent Residence (e-APR), or the applicant ceased working under valid work permit authorization for the designated employer prior to PR visa issuance.",
+      "affected_fields": [
+        "lmia_number",
+        "lmia_expiry_date",
+        "job_offer_date",
+        "work_permit_status"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/job-offer.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "It must also be made: by an employer with a new positive LMIA that approves the offer and names you and your position... you're authorized to work in Canada on the day you apply for a permanent resident visa, and when the visa is issued",
+      "remediation_hypothesis": "Provide a newly issued positive LMIA decision letter from ESDC naming the applicant and position, or submit proof that the candidate remains authorized and actively employed with the specified employer under an unexpired LMIA-based work permit.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-WRITTEN-LMIA-02",
+      "category": "pfl_non_permanent_duration",
+      "severity": "critical",
+      "title": "Job Offer Duration Less Than 1 Year Post-PR Issuance, Part-Time, or Seasonal",
+      "description": "The written job offer letter states a fixed-term contract expiring in less than 1 year following permanent resident status grant, indicates part-time employment (<30 hours per week), or classifies the job as seasonal, violating IRPR section 82(1) eligibility criteria.",
+      "affected_fields": [
+        "employment_type",
+        "hours_per_week",
+        "job_duration",
+        "job_end_date"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/job-offer.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "A valid job offer has to be: from 1 employer, continuous, paid, full-time (at least 30 hours a week), not seasonal, for at least 1 year if you're accepted as a permanent resident",
+      "remediation_hypothesis": "Obtain an updated and signed job offer letter from the employer explicitly stating that the position is for full-time work (at least 30 hours per week), continuous, non-seasonal, and for an indeterminate period or at least 1 year after PR visa issuance.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-WRITTEN-LMIA-03",
+      "category": "pfl_noc_teer_mismatch",
+      "severity": "critical",
+      "title": "NOC TEER Ineligibility or Duty Discrepancy Between Job Offer Letter and LMIA",
+      "description": "The duties and responsibilities detailed in the written job offer letter do not match the lead duties of the approved LMIA or represent a non-qualifying NOC TEER category (TEER 4 or 5 instead of TEER 0, 1, 2, or 3), triggering a Procedural Fairness Letter due to job offer invalidity.",
+      "affected_fields": [
+        "noc_code",
+        "teer_category",
+        "job_title",
+        "duties_and_responsibilities"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/job-offer.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "in a NOC TEER category 0, 1, 2 or 3... set out details of the job they're offering you, such as: your pay and deductions, your duties, the conditions of employment",
+      "remediation_hypothesis": "Submit an official supplemental job description letter signed by the employer clarifying the position's core duties and demonstrating full alignment with the approved NOC TEER 0, 1, 2, or 3 occupation specified on the LMIA.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-WRITTEN-LMIA-04",
+      "category": "pfl_wage_below_prevailing_rate",
+      "severity": "high",
+      "title": "Offered Wage Rate Below Regional ESDC Prevailing Wage or Approved LMIA Rate",
+      "description": "The wage rate listed in the written offer letter is below the median prevailing wage for the NOC and geographic location published by ESDC/Job Bank, or is lower than the wage approved in the positive LMIA decision letter, violating LMIA conditions.",
+      "affected_fields": [
+        "wage_rate",
+        "pay_frequency",
+        "lmia_wage_offered",
+        "prevailing_wage_rate"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/hire-temporary-foreign/find-need-labour-market-impact-assessment.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The employer must pay at least the prevailing wage for the occupation in the location where the work will be performed.",
+      "remediation_hypothesis": "Provide a wage adjustment letter from the employer confirming an updated pay rate that meets or exceeds the current ESDC regional median prevailing wage for the designated NOC, supported by recent pay stubs if the applicant is actively working.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

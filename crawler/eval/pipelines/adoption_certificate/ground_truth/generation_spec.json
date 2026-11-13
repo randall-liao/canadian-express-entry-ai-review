@@ -1,0 +1,211 @@
+{
+  "doc_type": "adoption_certificate",
+  "timestamp": "2026-07-23T03:06:14.534000-04:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "adoption_certificate",
+      "title": "Certificate of Final Adoption Order",
+      "issuing_authority": "Ontario Superior Court of Justice - Family Court Division",
+      "issue_date": "2023-05-18",
+      "expiry_date": null,
+      "fields": {
+        "adoption_certificate_document": "CERT-2023-ADOP-88419",
+        "court_adoption_order": "ORD-2023-FC-44921",
+        "issuing_court_jurisdiction": "Ontario Superior Court of Justice, Toronto, Ontario, Canada",
+        "proof_of_relationship": "Legal Adoption Certificate and Final Court Order",
+        "legal_guardianship_status": "Full Legal Adoption (Parental Rights Fully Transferred)",
+        "provincial_letter_of_no_objection": "LNO-ON-2023-00912",
+        "issuing_jurisdiction_accreditation": "Accredited Hague Adoption Convention Jurisdiction & Ministry Approved",
+        "biological_parent_consent_document": "BPC-2023-01948 - Irrevocable Voluntary Consent",
+        "home_study_report": "HSR-2023-ON-00412 - Approved",
+        "adopted_child_full_name": "Liam Doe",
+        "adopted_child_dob": "2020-04-12",
+        "adoptive_parent_1_full_name": "Jane Doe",
+        "adoptive_parent_2_full_name": "John Smith",
+        "adoption_order_date": "2023-05-10"
+      },
+      "narrative_blocks": [
+        "This Certificate of Final Adoption Order confirms that Liam Doe was legally adopted by Jane Doe and John Smith pursuant to the Order of the Ontario Superior Court of Justice dated May 10, 2023.",
+        "All statutory requirements under the Child, Youth and Family Services Act, including approved home study assessments, valid biological parent consent, and Ministry clearance, have been fully satisfied."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "adoption_certificate",
+      "title": "Civil Status Registry Birth Extract",
+      "issuing_authority": "Metropolitan Civil Status Registry Office",
+      "issue_date": "2023-06-12",
+      "expiry_date": null,
+      "fields": {
+        "adoption_certificate_document": "CIVIL-REG-EXTRACT-2023-9910",
+        "court_adoption_order": null,
+        "issuing_court_jurisdiction": "Civil Status Registry Office, District 4",
+        "proof_of_relationship": "Civil Status Extract",
+        "legal_guardianship_status": "Unspecified Registration Record",
+        "provincial_letter_of_no_objection": "LNO-ON-2023-00912",
+        "issuing_jurisdiction_accreditation": "Accredited Hague Adoption Convention Jurisdiction & Ministry Approved",
+        "biological_parent_consent_document": "BPC-2023-01948 - Irrevocable Voluntary Consent",
+        "home_study_report": "HSR-2023-ON-00412 - Approved",
+        "adopted_child_full_name": "Alex Doe",
+        "adopted_child_dob": "2019-08-22",
+        "adoptive_parent_1_full_name": "Jane Doe",
+        "adoptive_parent_2_full_name": "John Smith",
+        "adoption_order_date": null
+      },
+      "narrative_blocks": [
+        "This extract from the Civil Status Registry certifies the birth registration entry for Alex Doe naming Jane Doe and John Smith.",
+        "Note: This document represents an administrative registration record from the civil registry and does not constitute a judicial court adoption order."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-ADOPTION-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The submission contains a civil registration extract instead of the required complete final court adoption order issued by a judicial authority.",
+        "affected_fields": [
+          "adoption_certificate_document",
+          "court_adoption_order",
+          "issuing_court_jurisdiction"
+        ],
+        "mutation_details": {
+          "mutation_type": "incomplete_evidence_missing_judicial_order",
+          "provided_document_type": "Civil Status Registration Extract",
+          "missing_required_document": "Judicial Court Adoption Order"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "adoption_certificate",
+      "title": "Temporary Legal Guardianship Order",
+      "issuing_authority": "Family Court of the First Instance",
+      "issue_date": "2023-03-20",
+      "expiry_date": "2025-03-20",
+      "fields": {
+        "adoption_certificate_document": "GUARDIANSHIP-ORD-2023-3321",
+        "court_adoption_order": "ORD-2023-GUARD-1102",
+        "issuing_court_jurisdiction": "Family Court of the First Instance, Region 2",
+        "proof_of_relationship": "Temporary Custody Designation and Legal Guardianship Order",
+        "legal_guardianship_status": "Temporary Legal Guardianship (Biological Rights Retained)",
+        "provincial_letter_of_no_objection": "LNO-ON-2023-00912",
+        "issuing_jurisdiction_accreditation": "Accredited Hague Adoption Convention Jurisdiction & Ministry Approved",
+        "biological_parent_consent_document": "BPC-2023-01948 - Temporary Guardianship Consent",
+        "home_study_report": "HSR-2023-ON-00412 - Approved",
+        "adopted_child_full_name": "Morgan Doe",
+        "adopted_child_dob": "2021-01-15",
+        "adoptive_parent_1_full_name": "Jane Doe",
+        "adoptive_parent_2_full_name": "John Smith",
+        "adoption_order_date": "2023-03-15"
+      },
+      "narrative_blocks": [
+        "This order grants temporary legal custody and guardianship of Morgan Doe to Jane Doe and John Smith for a period of two years.",
+        "The biological parents retain ultimate legal parental rights and obligations. This document does not constitute a decree of final legal adoption."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-ADOPTION-02",
+        "category": "pfl_eligibility_misrepresentation",
+        "severity": "critical",
+        "description": "A temporary legal guardianship or custody order was submitted in place of a full legal adoption order, failing to establish full and permanent legal adoption status.",
+        "affected_fields": [
+          "proof_of_relationship",
+          "adoption_certificate_document",
+          "legal_guardianship_status"
+        ],
+        "mutation_details": {
+          "mutation_type": "misrepresented_legal_status",
+          "claimed_status": "Full Legal Adoption",
+          "actual_status": "Temporary Legal Guardianship"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "adoption_certificate",
+      "title": "Foreign Local Adoption Certificate",
+      "issuing_authority": "District Civil Tribunal of Foreign Region",
+      "issue_date": "2023-09-10",
+      "expiry_date": null,
+      "fields": {
+        "adoption_certificate_document": "FOREIGN-ADOP-2023-7712",
+        "court_adoption_order": "ORD-2023-FLA-8819",
+        "issuing_court_jurisdiction": "District Civil Tribunal, Foreign Region",
+        "proof_of_relationship": "Foreign Local Adoption Order",
+        "legal_guardianship_status": "Full Legal Adoption (Foreign Jurisdiction)",
+        "provincial_letter_of_no_objection": null,
+        "issuing_jurisdiction_accreditation": "Non-Accredited Foreign Local Jurisdiction (No Provincial Endorsement)",
+        "biological_parent_consent_document": "BPC-2023-01948 - Foreign Consent",
+        "home_study_report": "HSR-2023-ON-00412 - Approved",
+        "adopted_child_full_name": "Taylor Doe",
+        "adopted_child_dob": "2018-11-05",
+        "adoptive_parent_1_full_name": "Jane Doe",
+        "adoptive_parent_2_full_name": "John Smith",
+        "adoption_order_date": "2023-09-01"
+      },
+      "narrative_blocks": [
+        "This foreign local adoption certificate records the adoption of Taylor Doe by Jane Doe and John Smith under local municipal laws.",
+        "The adoption was finalized in a non-accredited jurisdiction without obtaining a Letter of No Objection or clearance from the provincial adoption authority."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-ADOPTION-03",
+        "category": "pfl_procedural_non_compliance",
+        "severity": "critical",
+        "description": "The adoption took place in a non-accredited foreign jurisdiction without obtaining the mandatory Letter of No Objection or clearance from the provincial adoption authority.",
+        "affected_fields": [
+          "adoption_certificate_document",
+          "provincial_letter_of_no_objection",
+          "issuing_jurisdiction_accreditation"
+        ],
+        "mutation_details": {
+          "mutation_type": "missing_provincial_endorsement",
+          "accreditation_status": "Non-Accredited Jurisdiction",
+          "missing_clearance": "Provincial Letter of No Objection"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "adoption_certificate",
+      "title": "Certificate of Private Adoption Decree",
+      "issuing_authority": "Municipal Family Court",
+      "issue_date": "2023-11-04",
+      "expiry_date": null,
+      "fields": {
+        "adoption_certificate_document": "PRIVATE-ADOP-2023-5501",
+        "court_adoption_order": "ORD-2023-PAD-3301",
+        "issuing_court_jurisdiction": "Municipal Family Court",
+        "proof_of_relationship": "Private Adoption Decree",
+        "legal_guardianship_status": "Full Legal Adoption",
+        "provincial_letter_of_no_objection": "LNO-ON-2023-00912",
+        "issuing_jurisdiction_accreditation": "Accredited Hague Adoption Convention Jurisdiction & Ministry Approved",
+        "biological_parent_consent_document": "Unverified Private Affidavit",
+        "home_study_report": null,
+        "adopted_child_full_name": "Jordan Doe",
+        "adopted_child_dob": "2017-03-30",
+        "adoptive_parent_1_full_name": "Jane Doe",
+        "adoptive_parent_2_full_name": "John Smith",
+        "adoption_order_date": "2023-10-28"
+      },
+      "narrative_blocks": [
+        "This decree records a private arrangement for the adoption of Jordan Doe by Jane Doe and John Smith.",
+        "The record lacks verifiable biological parent consent documentation and an independent home study report or best-interests determination."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-ADOPTION-04",
+        "category": "pfl_authenticity_doubt",
+        "severity": "critical",
+        "description": "The adoption record lacks verified biological parent consent and an independent home study evaluation, giving rise to doubts regarding authenticity and best-interests compliance.",
+        "affected_fields": [
+          "biological_parent_consent_document",
+          "adoption_certificate_document",
+          "home_study_report"
+        ],
+        "mutation_details": {
+          "mutation_type": "unsubstantiated_consent_and_best_interests",
+          "consent_verification": "Unverified Private Affidavit",
+          "home_study_status": "Missing Assessment Report"
+        }
+      }
+    }
+  ]
+}

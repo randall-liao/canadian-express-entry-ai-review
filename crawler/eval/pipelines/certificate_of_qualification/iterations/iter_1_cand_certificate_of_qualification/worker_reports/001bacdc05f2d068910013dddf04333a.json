@@ -1,0 +1,50 @@
+{
+  "question": "What must an applicant provide for a provincial or territorial certificate of qualification?",
+  "claims": [],
+  "basis": [
+    "The applicant submitted a certificate of qualification document under upload slot certificate_of_qualification (case ID: 001bacdc05f2d068910013dddf04333a). Field-level verification could not confirm a recognized trade regulator issuer, NOC match, active registration status, or CLB 7 language threshold."
+  ],
+  "abstentions": [
+    {
+      "reason": "not_in_corpus",
+      "text": "Field-level validation for the certificate of qualification could not be verified against mandatory requirements."
+    }
+  ],
+  "prose": "",
+  "case_id": "001bacdc05f2d068910013dddf04333a",
+  "doc_type": "certificate_of_qualification",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "001bacdc05f2d068910013dddf04333a.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "bedc7576687ab29248d344a49bf36064c1fb283642dc1c08a994bbbc9b3ae6a8",
+    "allowed_text_sha256": null,
+    "bundle_hash": "d3aeb3b7c20bae1d63db393270641bb90b21201f6e94f38481a73e145adb8b14",
+    "prompt_hash": "298ea90b166e85dcdf805f0a5bbb0b25335a3b3306a94a97764a7b51b8a04e8b",
+    "output_hash": "be77dca6fd749abd12ecc288e6124cf91487e8ab6372094aee6735fe69c9cb14",
+    "returncode": 0,
+    "timestamp": "2026-07-24T03:26:48.006296+00:00",
+    "provenance_digest": "14639c311b74d113d62bf837df97ba83e4276eb94a03e016ebf1f988ed55f6d1"
+  }
+}

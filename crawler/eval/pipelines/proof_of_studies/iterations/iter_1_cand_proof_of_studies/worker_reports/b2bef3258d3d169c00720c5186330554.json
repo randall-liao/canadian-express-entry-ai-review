@@ -1,0 +1,55 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Proof of completed Canadian or foreign educational credentials can include copies of secondary or post-secondary education documents (certificates, diplomas or degrees) and transcripts for successfully completed studies.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of      * secondary or post-secondary education documents (certificates, diplomas or degrees); and     * transcripts for successfully completed secondary or post-secondary studies, if available."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a document for slot proof_of_studies under case b2bef3258d3d169c00720c5186330554.",
+    "Mandatory defect verification: The provided file b2bef3258d3d169c00720c5186330554.pdf lacks required educational credential documents (certificates, diplomas, or degrees) and official transcripts."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b2bef3258d3d169c00720c5186330554",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b2bef3258d3d169c00720c5186330554.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "01edcb0a9ce694e3521ea1aade118aac72e8a8aab68fe18a7c5e4f7addee944b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2b2d40a170ad72815969c52b906db214cdf801c0459d35fb3d319be3c30d5fbe",
+    "prompt_hash": "6a4c75699f07e861b003eef3f1b185e7496d4c619bbdf081a5d3210abbfab013",
+    "output_hash": "842f8a79bfb944284393a2bfbb3dfca364f33c308639713ab92c32886c24b054",
+    "returncode": 0,
+    "timestamp": "2026-07-24T23:44:29.013223+00:00",
+    "provenance_digest": "46e8cca7585ce84e93f8e0d7e7585207bc2e1ffcd12fb280b5e0b48b6ade01de"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "question": "When may an applicant submit a Letter of Explanation in an Express Entry application?",
+  "claims": [],
+  "basis": [
+    "The applicant submitted a Letter of Explanation in support of their Express Entry e-APR application (case 0d6b65e8291756ef8e83f31caeeddfeb)."
+  ],
+  "abstentions": [
+    {
+      "reason": "not_in_corpus",
+      "context": "The generic requirement chunk for submitting a Letter of Explanation in Express Entry e-APR applications is not present in the authoritative corpus."
+    }
+  ],
+  "prose": "",
+  "case_id": "0d6b65e8291756ef8e83f31caeeddfeb",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "0d6b65e8291756ef8e83f31caeeddfeb.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e976c5dbcbbd18472a2183b05e4767c460fd9a0f9f531b94bc078e4109cd89dd",
+    "allowed_text_sha256": null,
+    "bundle_hash": "14fa852af814d2404ab92386699b5caef3ad1fc99505dcb0bfeeb94713c4dc69",
+    "prompt_hash": "312267644cc5c2864d99d7ac289fb186643428b436ca14b3a1469e25bfd1bdd4",
+    "output_hash": "1fd5ebf8c012eebc06cbac4c352fe4d78315192667564f7af307aafe9ab91b00",
+    "returncode": 0,
+    "timestamp": "2026-07-24T20:40:32.016336+00:00",
+    "provenance_digest": "ca57b0893e70797e5e25db5f5f8b4fbe7420299e03cd7a4a998e8422925dfbc4"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-certificate-requirement",
+      "text": "A marriage certificate is requested only when the applicant's marital status is listed as married. The marriage must be valid under the law of the country where it took place and under Canadian law, with a legal certificate provided from the jurisdiction where the marriage took place.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a document in the marriage_certificate slot for opaque case ID 62047462224a7c79cb71a0147b60dbf2."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "62047462224a7c79cb71a0147b60dbf2",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "62047462224a7c79cb71a0147b60dbf2.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "bdd1d6df97e7bf2031f81dcf769190479d038f4baaf42ed920eeefd1fc53bb36",
+    "allowed_text_sha256": null,
+    "bundle_hash": "328c1537d7a24ab66576fb71af807091e040ae378f118d3952b32275e6f3c6d5",
+    "prompt_hash": "0fbeae0a01204fc9f2d65c496b38cda181cf6bb70506d5f6f48d7aadbe8db30d",
+    "output_hash": "cbac8f9b638043578077a8627d356906244d3e159f97a9f2da62179dc82c9b10",
+    "returncode": 0,
+    "timestamp": "2026-07-23T14:14:40.405572+00:00",
+    "provenance_digest": "8ada1550188f39e55c5fc4eb1e11829df2d8098fa17a48279b49fc5b41cf9a76"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide for a provincial or territorial certificate of qualification?",
+  "claims": [
+    {
+      "id": "cert-qualification-copy",
+      "text": "A copy of the certificate of qualification is required.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#031"
+      ],
+      "quote": "A copy of the certificate of qualification is required."
+    }
+  ],
+  "basis": [
+    "The applicant indicated having a provincial or territorial certificate of qualification and submitted a 2-page PDF document (17f35d6a19477a1e785fca5f6fbe23eb.pdf) for the certificate_of_qualification slot."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "17f35d6a19477a1e785fca5f6fbe23eb",
+  "doc_type": "certificate_of_qualification",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "17f35d6a19477a1e785fca5f6fbe23eb.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "1b1fcd561397c11f37ef17ee1f17c7e63c26cdf04cea8cfd260c39d6a0012897",
+    "allowed_text_sha256": null,
+    "bundle_hash": "78a10b468539e1c5308673e827501f432d8f0a73838f9369016b5760365f1a58",
+    "prompt_hash": "62bfd1bf6eef4ccc6a58189abc72a2d0a16bbaf4f0ccba82163d44c975304524",
+    "output_hash": "8cc6a39939b560dc36fcb5932db311b3995c1242b9ed6bb6e32f46268ce586f8",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:25:03.416604+00:00",
+    "provenance_digest": "869205c234b681419dce7b13739a274677ea8d3e9c19355771b83500bfc07744"
+  }
+}

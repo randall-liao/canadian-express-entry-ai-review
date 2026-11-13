@@ -1,0 +1,54 @@
+{
+  "question": "How must a foreign educational credential be assessed?",
+  "claims": [
+    {
+      "id": "eca",
+      "text": "A foreign educational credential must be assessed by a designated organization or institution to establish its Canadian equivalency.",
+      "citations": [
+        "pr-pdi/express-entry-assessing-electronic-application-on-section-a11-2.md#015"
+      ],
+      "quote": "submit their completed foreign educational credential and the equivalency assessment (educational credential assessment [ECA] report) issued by a [designated organization or institution](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/partners-service-providers/foreign-educational-credential-assessment.html)"
+    }
+  ],
+  "basis": [
+    "Evaluated document 4f0d8388867b622426e1959578b5f9d7.pdf submitted under upload slot educational_credential_assessment."
+  ],
+  "abstentions": [],
+  "prose": "To receive points for foreign education in Express Entry, applicants must provide an Educational Credential Assessment (ECA) report from a designated organization or institution.",
+  "case_id": "4f0d8388867b622426e1959578b5f9d7",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4f0d8388867b622426e1959578b5f9d7.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a85cb2d57257e1a9587718d6a1e67f4fbb56d8b3fb1eb797baf568a698df7a70",
+    "allowed_text_sha256": null,
+    "bundle_hash": "3fba09ee6cc737403cf7f5bc2b1bff4b78d04d92506e4eed3415347a3598173c",
+    "prompt_hash": "36ff9d09374cea8c383830168344ffa9f8d116d9666550bf956135cc2270eab3",
+    "output_hash": "06df50e8a301e0c6ec546ebce067313075410712617756d9fbaa79b8022aa23d",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:42:58.473285+00:00",
+    "provenance_digest": "0318146975af61d4904d51b7e0ef0ae0de0d982be05a5acf8ae194eb69900f97"
+  }
+}

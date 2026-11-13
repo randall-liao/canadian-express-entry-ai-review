@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-validity",
+      "text": "A marriage certificate issued by the governing authority where the marriage took place is required when marital status is listed as married.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a two-page document to the marriage_certificate upload slot for case 9554c0f14517c28067bab42ef2c48589."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "9554c0f14517c28067bab42ef2c48589",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "9554c0f14517c28067bab42ef2c48589.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "7faf228f4165d12f14d7eda8864d80a93d8a56ccef15555983ddf09d6dca43f7",
+    "allowed_text_sha256": null,
+    "bundle_hash": "328c1537d7a24ab66576fb71af807091e040ae378f118d3952b32275e6f3c6d5",
+    "prompt_hash": "18962bce4f6aa38c364fb2b8464d8c7ef4f3b3ee017bdb6461e071d466c94d82",
+    "output_hash": "4a24eada24b33cec454b1ad20b396bc4873c86052a544ba85dbca212ead4aa92",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:52:56.352878+00:00",
+    "provenance_digest": "e775412c4b6e9e487157f25079c10896a3ecc998981f8cbdb054d2057ccd223f"
+  }
+}

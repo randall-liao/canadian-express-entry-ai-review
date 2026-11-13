@@ -1,0 +1,54 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Proof of completed Canadian or foreign educational credentials",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of      * secondary or post-secondary education documents (certificates, diplomas or degrees); and     * transcripts for successfully completed secondary or post-secondary studies, if available."
+    }
+  ],
+  "basis": [
+    "Document provided in upload slot 'proof_of_studies' for case f5a4b6612709aec0393de5a528a77531 is evaluated for proof of completed education."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "f5a4b6612709aec0393de5a528a77531",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f5a4b6612709aec0393de5a528a77531.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "75fd87504c9e85a657c0d9ad5d7de3ecbe876e859d6ecee79aee151a7748f1cb",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2b2d40a170ad72815969c52b906db214cdf801c0459d35fb3d319be3c30d5fbe",
+    "prompt_hash": "cbb7285359cf0e402a23f67a08189252ef6a1109ffd72d99dc8d19a0449c9e6a",
+    "output_hash": "a21826684616d22664898c731d57a7218bb1b63edc2ea95491bf980eeda4bf6d",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:57:22.908137+00:00",
+    "provenance_digest": "4ffa7ab0ddfbc11228a1c612c18e193d6b9bee44d3aac11f8ad183e9e8182de8"
+  }
+}

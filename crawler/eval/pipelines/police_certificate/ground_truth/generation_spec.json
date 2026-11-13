@@ -1,0 +1,239 @@
+{
+  "doc_type": "police_certificate",
+  "timestamp": "2026-07-23T03:00:12.949-04:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "police_certificate",
+      "title": "Certificate of Clearance / Police Record Check",
+      "issuing_authority": "Federal Criminal Police Office (Bundeskriminalamt)",
+      "issue_date": "2026-05-10",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "date_of_birth": "1992-04-12",
+        "country_of_residence": "Germany",
+        "issuing_authority": "Federal Criminal Police Office (Bundeskriminalamt)",
+        "jurisdiction_level": "national",
+        "issue_date": "2026-05-10",
+        "eapr_submission_date": "2026-07-20",
+        "document_language": "English",
+        "translation_certificate": "Not Applicable",
+        "translator_qualification": null,
+        "residence_history_start_date": "2021-01-01",
+        "residence_history_end_date": "2026-05-01",
+        "police_certificate_uploaded": true,
+        "clearance_status": "No Criminal Record",
+        "document_reference_number": "PCC-2026-88392011"
+      },
+      "narrative_blocks": [
+        "This is to certify that a comprehensive check of the national criminal records database maintained by the Federal Criminal Police Office was conducted for Jane Doe, born April 12, 1992.",
+        "The search revealed no criminal convictions, outstanding charges, or disqualifying police records for the subject during their residence period."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "police_certificate",
+      "title": "Police Clearance Certificate",
+      "issuing_authority": "National Police Agency of Japan",
+      "issue_date": "2024-06-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "John Smith",
+        "date_of_birth": "1988-09-23",
+        "country_of_residence": "Japan",
+        "issuing_authority": "National Police Agency of Japan",
+        "jurisdiction_level": "national",
+        "issue_date": "2024-06-15",
+        "residence_history_start_date": "2022-01-10",
+        "residence_history_end_date": "2024-12-31",
+        "police_certificate_uploaded": true,
+        "clearance_status": "No Record Found"
+      },
+      "narrative_blocks": [
+        "This document confirms that national police records were queried on June 15, 2024 for John Smith.",
+        "The certificate covers the subject's record up to the date of issue on June 15, 2024."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POLICE_C-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The police certificate for Japan was issued on June 15, 2024, prior to the applicant's departure and end of residence on December 31, 2024, leaving the final six and a half months of stay unverified.",
+        "affected_fields": [
+          "issue_date",
+          "country_of_residence",
+          "residence_history_end_date"
+        ],
+        "mutation_details": {
+          "issue_date": "2024-06-15",
+          "residence_history_end_date": "2024-12-31",
+          "uncertified_gap_days": 199
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "police_certificate",
+      "title": "ACRO Police Certificate",
+      "issuing_authority": "ACRO Criminal Records Office",
+      "issue_date": "2025-01-10",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Alice Tremblay",
+        "date_of_birth": "1995-11-05",
+        "current_country_of_residence": "United Kingdom",
+        "issuing_authority": "ACRO Criminal Records Office",
+        "issue_date": "2025-01-10",
+        "eapr_submission_date": "2026-07-20",
+        "police_certificate_uploaded": true,
+        "clearance_status": "No Convictions Recorded"
+      },
+      "narrative_blocks": [
+        "ACRO Criminal Records Office certifies that there are no convictions registered against Alice Tremblay in the United Kingdom central record system as of January 10, 2025."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POLICE_C-02",
+        "category": "pfl_validity_period_exceeded",
+        "severity": "critical",
+        "description": "The police certificate for the current country of residence (United Kingdom) was issued on January 10, 2025, which exceeds the mandatory 6-month limit prior to the e-APR submission date of July 20, 2026.",
+        "affected_fields": [
+          "issue_date",
+          "eapr_submission_date",
+          "current_country_of_residence"
+        ],
+        "mutation_details": {
+          "issue_date": "2025-01-10",
+          "eapr_submission_date": "2026-07-20",
+          "age_in_months": 18
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "police_certificate",
+      "title": "Certificado de Antecedentes Penales",
+      "issuing_authority": "Ministerio de Justicia de España",
+      "issue_date": "2026-03-01",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Carlos Silva",
+        "date_of_birth": "1990-07-18",
+        "country_of_residence": "Spain",
+        "document_language": "Spanish",
+        "translation_certificate": null,
+        "translator_qualification": null,
+        "issuing_authority": "Ministerio de Justicia de España",
+        "issue_date": "2026-03-01",
+        "police_certificate_uploaded": true
+      },
+      "narrative_blocks": [
+        "El Registro Central de Penados certifica que en las bases de datos no constan antecedentes penales para Carlos Silva a la fecha de expedición del presente documento."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POLICE_C-03",
+        "category": "pfl_translation_defect",
+        "severity": "critical",
+        "description": "The police certificate was issued in Spanish and submitted without an accompanying certified translation into English or French, nor a translator affidavit.",
+        "affected_fields": [
+          "document_language",
+          "translation_certificate",
+          "translator_qualification"
+        ],
+        "mutation_details": {
+          "document_language": "Spanish",
+          "translation_provided": false,
+          "affidavit_provided": false
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "police_certificate",
+      "title": "Local Criminal History Information Check",
+      "issuing_authority": "Austin Police Department",
+      "issue_date": "2026-04-12",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "David Miller",
+        "date_of_birth": "1985-03-30",
+        "country_of_issuance": "United States",
+        "issuing_authority": "Austin Police Department",
+        "jurisdiction_level": "municipal",
+        "issue_date": "2026-04-12",
+        "police_certificate_uploaded": true,
+        "record_type": "City Police Department Background Check"
+      },
+      "narrative_blocks": [
+        "A search of municipal police records conducted by the Austin Police Department shows no arrest records or convictions registered within city jurisdiction for David Miller."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POLICE_C-04",
+        "category": "pfl_incorrect_document_type",
+        "severity": "critical",
+        "description": "Submitted a municipal city police record check instead of the required federal FBI Identity History Summary check for United States residence.",
+        "affected_fields": [
+          "issuing_authority",
+          "jurisdiction_level",
+          "country_of_issuance"
+        ],
+        "mutation_details": {
+          "provided_jurisdiction": "municipal",
+          "required_jurisdiction": "federal",
+          "provided_authority": "Austin Police Department"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "police_certificate",
+      "title": "Foreign Residence & Document Checklist Statement",
+      "issuing_authority": "Immigration Assessment Bureau",
+      "issue_date": "2026-07-01",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Elena Rostova",
+        "date_of_birth": "1993-08-14",
+        "residence_history": [
+          {
+            "country": "Canada",
+            "start_date": "2024-09-01",
+            "end_date": "2026-07-01",
+            "duration_months": 22
+          },
+          {
+            "country": "France",
+            "start_date": "2023-10-01",
+            "end_date": "2024-06-01",
+            "duration_months": 8
+          }
+        ],
+        "country_list": [
+          "Canada",
+          "France"
+        ],
+        "police_certificate_uploaded": false
+      },
+      "narrative_blocks": [
+        "Applicant declaration confirms continuous foreign residence in France from October 2023 to June 2024 (8 consecutive months).",
+        "No police certificate or clearance document was submitted for France."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POLICE_C-05",
+        "category": "pfl_missing_mandatory_document",
+        "severity": "critical",
+        "description": "Complete omission of the mandatory police certificate for France, where the applicant resided continuously for 8 months (exceeding the 6-month threshold).",
+        "affected_fields": [
+          "residence_history",
+          "country_list",
+          "police_certificate_uploaded"
+        ],
+        "mutation_details": {
+          "omitted_country": "France",
+          "residence_duration_months": 8,
+          "police_certificate_uploaded": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-cert-copy",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "This document is requested only when the marital status is listed as widowed."
+    }
+  ],
+  "basis": [
+    "The applicant has submitted a document for the death_certificate upload slot under case ID 2efcf44a387b51aab4bf72eaed4b8953 to support the widowed marital status declaration."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "2efcf44a387b51aab4bf72eaed4b8953",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "2efcf44a387b51aab4bf72eaed4b8953.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "aa24542b88214161cdad6ade5f6b7d57db08ed527d6ea99f2f40b7bdd23b3330",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f5dd7cb2d45c0135570f1d3733db8965b317ddc35c2e55734554615b82b27034",
+    "prompt_hash": "37a2c0b1edae77deff58add1605219ace9b218b71a7616c73871b85e0762a417",
+    "output_hash": "27a1a062570ac21d42c94d15af5433ab8e4065cac39991727dd606e8a185324a",
+    "returncode": 0,
+    "timestamp": "2026-07-24T04:45:54.995510+00:00",
+    "provenance_digest": "e7c8a83008d7ec54ffffe170551a2027619a1ddb34234fdf43aaa4a6774d1b0b"
+  }
+}

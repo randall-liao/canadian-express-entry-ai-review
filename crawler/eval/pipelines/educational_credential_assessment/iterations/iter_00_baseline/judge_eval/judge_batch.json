@@ -1,0 +1,200 @@
+{
+  "doc_type": "educational_credential_assessment",
+  "case_evaluations": {
+    "7c618b02e4899811caf7e22a9e420a70": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3ae82acc1b3cf1589d70a7579dbff92a": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6600061de2dad8889f22ebee61109015": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b12aaadf75f594b7e827de0c785a0170": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c84a98765ddd8a869194b1bc2a3bd14f": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "247b21f5e0e8e32e24f9a488989ffc60": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4f0d8388867b622426e1959578b5f9d7": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d7b3a166716dbd585a0efce91515ff3e": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "1e9c3ffe63967d95f8382b7d957a0132": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f49c459f717534ca70ec124b8665b668": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "6600061de2dad8889f22ebee61109015",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EDUCATIO-01 (expired ECA) missed. PDF narrative explicitly states report 'exceeded the maximum 5-year validity threshold' and '0 Express Entry ... CRS points can be awarded'. Worker emitted only a generic ECA requirement claim; abstentions empty, no defective verdict."
+    },
+    {
+      "case_id": "b12aaadf75f594b7e827de0c785a0170",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EDUCATIO-01 (expired ECA, scanned variant) missed. Same explicit expiry/0-points language present in narrative; Worker produced identical boilerplate claim with no defect flag."
+    },
+    {
+      "case_id": "c84a98765ddd8a869194b1bc2a3bd14f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EDUCATIO-02 (unaccredited institution) missed. PDF states credential from 'Global Online Unaccredited Institute', 'not accredited or recognized', 'Unable to establish Canadian educational equivalency'. Worker gave generic claim, no defect."
+    },
+    {
+      "case_id": "247b21f5e0e8e32e24f9a488989ffc60",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EDUCATIO-02 (unaccredited institution, scanned variant) missed despite explicit 'no educational points ... can be claimed' language in narrative."
+    },
+    {
+      "case_id": "4f0d8388867b622426e1959578b5f9d7",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EDUCATIO-03 (non-designated issuer / wrong assessment type) missed. PDF states issuer 'is NOT an IRCC-designated organization' and 'cannot be accepted for Canadian economic immigration programs'. Worker cited the designated-org rule but failed to apply it to flag the violation."
+    },
+    {
+      "case_id": "d7b3a166716dbd585a0efce91515ff3e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EDUCATIO-03 (non-designated issuer, scanned variant) missed; identical explicit disqualifying language present, no defect surfaced."
+    },
+    {
+      "case_id": "1e9c3ffe63967d95f8382b7d957a0132",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EDUCATIO-04 (identity mismatch / invalid reference) missed. PDF narrative shows applicant identity 'Michael Brown' vs PR applicant 'David Wilson' and 'CES-7719204-INVALID failed automated verification'. Worker gave generic claim, no defect flagged."
+    },
+    {
+      "case_id": "f49c459f717534ca70ec124b8665b668",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EDUCATIO-04 (identity mismatch / invalid reference, scanned variant) missed despite explicit verification-failure and name-mismatch text in narrative."
+    },
+    {
+      "case_id": "4f0d8388867b622426e1959578b5f9d7",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Reports are near-identical boilerplate ('ECA must be assessed by a designated organization') across all 10 cases regardless of document content, indicating the Worker answered the abstract policy question instead of grounding analysis in the attached PDF's narrative. Claims contain no invented facts but ignore document-specific disqualifying signals, so grounding is incomplete for defective cases."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/educational_credential_assessment.md",
+      "suggested_patch": "Require the agent to parse the 'Narrative Statements / Detailed Notes' block and scan for disqualifying signals before emitting a verdict: (a) issue date >5 years before submission or phrases like 'exceeded ... validity', 'expired', '0 CRS points'; (b) 'not accredited', 'unaccredited', 'Unable to establish Canadian ... equivalency'; (c) 'NOT an IRCC-designated organization', 'general employment', 'cannot be accepted'; (d) applicant identity/reference mismatch, 'failed automated verification', 'INVALID'. On any hit, emit a defective verdict with affected_fields instead of a generic requirement claim."
+    },
+    {
+      "target_file": "skills/document-agents/educational_credential_assessment.md",
+      "suggested_patch": "Mandate cross-checking header table fields (issue date, issuing organization, credential level, Canadian equivalency, reference number) against the narrative and against the primary applicant of record; require an explicit per-field validity decision and populate abstentions when a field cannot be verified, rather than returning empty abstentions by default."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a global directive for document-review Workers: never return only a generic policy/requirement claim. Every report must include a document-specific verdict (meets_requirements vs defective) derived from the attached artifact, with the triggering evidence quoted from the document (kept in basis[], PII-free) and mapped to affected_fields."
+    }
+  ],
+  "rationale": "The Worker (Gemini 3.6 Flash) was PII-safe (no applicant names/DOBs in claims/prose/basis), blind-compliant (only case IDs and slot type referenced, no ground-truth leakage), and used well-formed corpus citations with matching quotes, so citation_exactness, pii_containment, and blind_input_compliance score 1.0 throughout. Grounding is clean of fabrication. However, the Worker emitted near-identical boilerplate ('an ECA must be assessed by a designated organization') for all 10 cases and never inspected the PDF narrative, catastrophically failing defect detection: all 8 injected defects (PFL-01 expiry, PFL-02 unaccredited institution, PFL-03 non-designated issuer, PFL-04 identity/reference mismatch) were stated in plain text in the narratives yet none were flagged, yielding defect_recall 0.0 on every defective case. The two clean cases (7c618b02, 3ae82acc) pass by default. Grounding is lightly penalized (0.9) on defective cases for generic, document-agnostic reasoning. Primary remediation: force narrative parsing and a document-specific verdict.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "1e9c3ffe63967d95f8382b7d957a0132.pdf",
+      "--attachment",
+      "247b21f5e0e8e32e24f9a488989ffc60.pdf",
+      "--attachment",
+      "3ae82acc1b3cf1589d70a7579dbff92a.pdf",
+      "--attachment",
+      "4f0d8388867b622426e1959578b5f9d7.pdf",
+      "--attachment",
+      "6600061de2dad8889f22ebee61109015.pdf",
+      "--attachment",
+      "7c618b02e4899811caf7e22a9e420a70.pdf",
+      "--attachment",
+      "b12aaadf75f594b7e827de0c785a0170.pdf",
+      "--attachment",
+      "c84a98765ddd8a869194b1bc2a3bd14f.pdf",
+      "--attachment",
+      "d7b3a166716dbd585a0efce91515ff3e.pdf",
+      "--attachment",
+      "f49c459f717534ca70ec124b8665b668.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "b64e5c58c84a7373d7886ad773bcd9fc431bf53a9e617f834ee38f48be699196",
+    "research_hash": "1ae3e230e2dd07ecc13f070e04e6c17a217f40245861bf55564d6c951aa6b7a1",
+    "ground_truth_hash": "055e8c31f1f796465598974eb57db2d63d7a39af95d5110372982c40b83825d4",
+    "output_hash": "fe6fcc9746cd548de3f1943ccc4d1143a90a3192d07af59e39f607caebc8707a",
+    "timestamp": "2026-07-23T23:04:48.100906+00:00",
+    "provenance_digest": "97d4b26a4dab29185aff0efa9bc8762f2762315d175b54955134ccb164c5b544"
+  }
+}

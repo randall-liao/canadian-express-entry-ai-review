@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "When an applicant's marital status is listed as divorced, a copy of the divorce order or certificate of divorce issued where the divorce took place must be provided, along with a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant provided a divorce certificate document for case ID 88f49a6ec80395e9d4f0095a76ed1d63 under document slot divorce_certificate."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "88f49a6ec80395e9d4f0095a76ed1d63",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "88f49a6ec80395e9d4f0095a76ed1d63.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2a2f7e2891bc414192a275b3301ae38e18c1d108ef0eea332078b4264740eeea",
+    "allowed_text_sha256": null,
+    "bundle_hash": "96adfcfc94df22d419234f5a4c06d54f1588f3bdd17b3529f840f869e8cf6da9",
+    "prompt_hash": "1a1e2e2bf2266c1650645275c11a475787c488d0b33c9f0e3be0e30a00956c71",
+    "output_hash": "1fe4cf068515e5e46e38248ebdfa423a126f6d35cf81b0ca06e47a89f5e6d52f",
+    "returncode": 0,
+    "timestamp": "2026-07-24T06:11:03.132850+00:00",
+    "provenance_digest": "cc7566cf3dcf0840e9b306b3a695d73d99a5f604d0a15462aacddf5a6cf5ab28"
+  }
+}

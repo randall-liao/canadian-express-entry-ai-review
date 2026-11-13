@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "When an applicant's marital status is divorced, a copy of the divorce order or certificate of divorce issued where the divorce took place must be provided, along with a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant's document slot is divorce_certificate for opaque case 4b106252dcc76348742dcf5c78a492e9."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "4b106252dcc76348742dcf5c78a492e9",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4b106252dcc76348742dcf5c78a492e9.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "50644fa1d48c78fc57d3148bf2c17c06f1b9cd8b48d5e97922b261095bc794c8",
+    "allowed_text_sha256": null,
+    "bundle_hash": "25386273fa5b9e25c9edc6cbcb170e74ded83a3898bee226c8e24f8fb31f9ba1",
+    "prompt_hash": "b3e233a8971967cdcbb1f865393a04a52646cf9b56a690b1ce2168a9764b93d4",
+    "output_hash": "f9f28538c0e8cbbfbc2bbac78257a5cea6123f9f61b70d7f81973a44d94c8139",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:36:46.051707+00:00",
+    "provenance_digest": "30c6eee6f058cd6e80a421c3154f091be911cef254e23d986fce784e0377aa3d"
+  }
+}

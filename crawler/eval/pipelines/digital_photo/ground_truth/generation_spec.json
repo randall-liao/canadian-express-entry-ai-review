@@ -1,0 +1,216 @@
+{
+  "doc_type": "digital_photo",
+  "timestamp": "2026-07-23T07:00:25.277000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "digital_photo",
+      "title": "Digital Passport Photo Compliance Verification",
+      "issuing_authority": "HM Passport Office Digital Verification Service",
+      "issue_date": "2026-06-15",
+      "expiry_date": "2026-12-15",
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "photo_reference_code": "DP-2026-8849201",
+        "photo_dimensions": "50mm x 70mm",
+        "pixel_resolution": "1200 x 1680 px",
+        "file_size": "1.8 MB",
+        "file_format": "JPEG",
+        "photo_date_taken": "2026-06-10",
+        "applicant_appearance_recency": "Taken within last 6 months (1 month prior)",
+        "photographer_receipt": "REC-2026-0610-884",
+        "chin_to_crown_height": "34mm",
+        "face_framing_position": "Centered, directly facing camera with eye level at 60% vertical height",
+        "facial_expression": "Neutral expression, eyes wide open, mouth closed",
+        "background_color": "Plain off-white (Hex #F8F9FA)",
+        "lighting_quality": "Evenly balanced, 5500K color temperature, shadow-free",
+        "glare_shadows": "Absence of flash reflections, facial hot spots, or background shadows"
+      },
+      "narrative_blocks": [
+        "This certificate confirms that the digital photograph submitted by Jane Doe meets all official technical and biometric standards for passport and official identity documents.",
+        "The submitted digital image has been verified for dimensions, aspect ratio, recency, framing position, and lighting uniformity by automated image quality assurance."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "digital_photo",
+      "title": "Digital Passport Photo Compliance Verification",
+      "issuing_authority": "HM Passport Office Digital Verification Service",
+      "issue_date": "2026-06-15",
+      "expiry_date": "2026-12-15",
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "photo_reference_code": "DP-2026-8849202",
+        "photo_dimensions": "30mm x 40mm",
+        "pixel_resolution": "240 x 320 px",
+        "file_size": "42 KB",
+        "file_format": "JPEG",
+        "photo_date_taken": "2026-06-10",
+        "applicant_appearance_recency": "Taken within last 6 months",
+        "photographer_receipt": "REC-2026-0610-885",
+        "chin_to_crown_height": "34mm",
+        "face_framing_position": "Centered",
+        "facial_expression": "Neutral expression",
+        "background_color": "Plain off-white",
+        "lighting_quality": "Evenly balanced",
+        "glare_shadows": "None"
+      },
+      "narrative_blocks": [
+        "Digital photo validation report generated for submission reference DP-2026-8849202.",
+        "CRITICAL SPECIFICATION FAILURE: The submitted image file failed mandatory dimensions and resolution validation checks."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DIGITAL_-01",
+        "category": "pfl_spec_non_compliance",
+        "severity": "critical",
+        "description": "The submitted digital photo failed physical and digital file requirements. Image dimensions are 30x40mm (below required 50x70mm standard), pixel resolution is 240x320 px (below minimum required threshold), and file size is 42 KB (below minimum 200 KB requirement).",
+        "affected_fields": [
+          "photo_dimensions",
+          "pixel_resolution",
+          "file_size"
+        ],
+        "mutation_details": {
+          "photo_dimensions": "Mutated from '50mm x 70mm' to '30mm x 40mm'",
+          "pixel_resolution": "Mutated from '1200 x 1680 px' to '240 x 320 px'",
+          "file_size": "Mutated from '1.8 MB' to '42 KB'"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "digital_photo",
+      "title": "Digital Passport Photo Compliance Verification",
+      "issuing_authority": "HM Passport Office Digital Verification Service",
+      "issue_date": "2026-06-15",
+      "expiry_date": "2026-12-15",
+      "fields": {
+        "applicant_name": "John Smith",
+        "photo_reference_code": "DP-2026-8849203",
+        "photo_dimensions": "50mm x 70mm",
+        "pixel_resolution": "1200 x 1680 px",
+        "file_size": "1.8 MB",
+        "file_format": "JPEG",
+        "photo_date_taken": "2024-11-12",
+        "applicant_appearance_recency": "Photo captured 20 months ago (exceeds 6-month limit)",
+        "photographer_receipt": "REC-2024-1112-102",
+        "chin_to_crown_height": "34mm",
+        "face_framing_position": "Centered",
+        "facial_expression": "Neutral expression",
+        "background_color": "Plain off-white",
+        "lighting_quality": "Evenly balanced",
+        "glare_shadows": "None"
+      },
+      "narrative_blocks": [
+        "Digital photo validation report generated for submission reference DP-2026-8849203.",
+        "CRITICAL RECENCY FAILURE: The submitted photograph was taken more than 6 months prior to application submission."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DIGITAL_-02",
+        "category": "pfl_outdated_document",
+        "severity": "critical",
+        "description": "The digital photo submitted by the applicant was taken on 2024-11-12, exceeding the maximum allowable age limit of 6 months. Verification against photographer receipt REC-2024-1112-102 confirms the capture date is non-compliant with recency guidelines.",
+        "affected_fields": [
+          "photo_date_taken",
+          "applicant_appearance_recency",
+          "photographer_receipt"
+        ],
+        "mutation_details": {
+          "photo_date_taken": "Mutated from recent date within 6 months to '2024-11-12' (20 months old)",
+          "applicant_appearance_recency": "Mutated to reflect capture date older than 6 months",
+          "photographer_receipt": "Mutated to outdated receipt code REC-2024-1112-102"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "digital_photo",
+      "title": "Digital Passport Photo Compliance Verification",
+      "issuing_authority": "HM Passport Office Digital Verification Service",
+      "issue_date": "2026-06-15",
+      "expiry_date": "2026-12-15",
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "photo_reference_code": "DP-2026-8849204",
+        "photo_dimensions": "50mm x 70mm",
+        "pixel_resolution": "1200 x 1680 px",
+        "file_size": "1.8 MB",
+        "file_format": "JPEG",
+        "photo_date_taken": "2026-06-10",
+        "applicant_appearance_recency": "Taken within last 6 months",
+        "photographer_receipt": "REC-2026-0610-886",
+        "chin_to_crown_height": "20mm",
+        "face_framing_position": "Off-center to upper right, head tilted 15 degrees",
+        "facial_expression": "Broad smile showing teeth with eyes half-closed",
+        "background_color": "Plain off-white",
+        "lighting_quality": "Evenly balanced",
+        "glare_shadows": "None"
+      },
+      "narrative_blocks": [
+        "Digital photo validation report generated for submission reference DP-2026-8849204.",
+        "FRAMING AND COMPOSITION FAILURE: Facial measurements and positioning fail biometric compliance rules."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DIGITAL_-03",
+        "category": "pfl_incorrect_framing",
+        "severity": "warning",
+        "description": "The face composition fails compliance standards: chin-to-crown measurement is 20mm (required range is 31mm–36mm), face position is tilted off-center toward upper right, and applicant has an unacceptable smiling facial expression showing teeth.",
+        "affected_fields": [
+          "chin_to_crown_height",
+          "face_framing_position",
+          "facial_expression"
+        ],
+        "mutation_details": {
+          "chin_to_crown_height": "Mutated from compliant '34mm' to '20mm' (undersized face height)",
+          "face_framing_position": "Mutated from 'Centered' to 'Off-center to upper right, head tilted 15 degrees'",
+          "facial_expression": "Mutated from 'Neutral expression' to 'Broad smile showing teeth with eyes half-closed'"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "digital_photo",
+      "title": "Digital Passport Photo Compliance Verification",
+      "issuing_authority": "HM Passport Office Digital Verification Service",
+      "issue_date": "2026-06-15",
+      "expiry_date": "2026-12-15",
+      "fields": {
+        "applicant_name": "John Smith",
+        "photo_reference_code": "DP-2026-8849205",
+        "photo_dimensions": "50mm x 70mm",
+        "pixel_resolution": "1200 x 1680 px",
+        "file_size": "1.8 MB",
+        "file_format": "JPEG",
+        "photo_date_taken": "2026-06-10",
+        "applicant_appearance_recency": "Taken within last 6 months",
+        "photographer_receipt": "REC-2026-0610-887",
+        "chin_to_crown_height": "34mm",
+        "face_framing_position": "Centered",
+        "facial_expression": "Neutral expression",
+        "background_color": "Dark patterned blue wallpaper (Hex #1A2B4C)",
+        "lighting_quality": "Uneven directional lighting with harsh hot spot on cheek",
+        "glare_shadows": "Heavy dark shadow cast on right background and severe specular glare on eyeglasses"
+      },
+      "narrative_blocks": [
+        "Digital photo validation report generated for submission reference DP-2026-8849205.",
+        "LIGHTING AND BACKGROUND FAILURE: Background pattern and lighting artifacts fail passport image quality standards."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DIGITAL_-04",
+        "category": "pfl_lighting_background_defect",
+        "severity": "warning",
+        "description": "The digital photo failed lighting and background checks: background is dark patterned blue wallpaper instead of plain white/light gray, direct lighting creates uneven illumination with hot spots, and pronounced shadows and glare on glasses are present.",
+        "affected_fields": [
+          "background_color",
+          "lighting_quality",
+          "glare_shadows"
+        ],
+        "mutation_details": {
+          "background_color": "Mutated from plain off-white to 'Dark patterned blue wallpaper (Hex #1A2B4C)'",
+          "lighting_quality": "Mutated from uniform illumination to 'Uneven directional lighting with harsh hot spot on cheek'",
+          "glare_shadows": "Mutated from none to 'Heavy dark shadow cast on right background and severe specular glare on eyeglasses'"
+        }
+      }
+    }
+  ]
+}

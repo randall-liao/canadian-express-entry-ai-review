@@ -1,0 +1,54 @@
+{
+  "question": "When must an applicant provide a Use of a Representative form?",
+  "claims": [
+    {
+      "id": "representative-form",
+      "text": "Use of a Representative form (IMM 5476)",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#039"
+      ],
+      "quote": "The document is requested only if the applicant indicates they are using a representative or if a consultant completes an application on behalf of the applicant through the consultant portal."
+    }
+  ],
+  "basis": [
+    "The applicant indicates they are using a representative or a consultant completes the application on their behalf."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "ad6e15df8e933cb251d417913e205757",
+  "doc_type": "use_of_representative",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ad6e15df8e933cb251d417913e205757.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "298a221970afbdafd5f95758e4ed69df32bff9eb0091beed38ac60f21a8e7263",
+    "allowed_text_sha256": null,
+    "bundle_hash": "a95acd55399cd66bce75637140f17d2e17df7ab2af54a46853278ac5f0cb1145",
+    "prompt_hash": "b08a98c987d9fe1b47e3cfdb84cd9345c62b2290593121cc7167e18ec6f8824b",
+    "output_hash": "5a9e123ee36aa52e18b4265eca72fb500c642ceb6ee2955a5d3a592c3f7d46d4",
+    "returncode": 0,
+    "timestamp": "2026-07-25T01:23:18.784626+00:00",
+    "provenance_digest": "d7ca575787c4138c723d5f6918974eb97bfa85e3ab433bb4a583cdf6b38a5819"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Proof of completed Canadian or foreign educational credentials can include copies of secondary or post-secondary education documents (certificates, diplomas or degrees) and transcripts for successfully completed studies.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of      * secondary or post-secondary education documents (certificates, diplomas or degrees); and     * transcripts for successfully completed secondary or post-secondary studies, if available."
+    }
+  ],
+  "basis": [
+    "The applicant submitted educational credential documents and transcripts for review under the proof_of_studies upload slot (opaque case ID: c36da93602d8c031f6e2d9ebb6a64a28)."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "c36da93602d8c031f6e2d9ebb6a64a28",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c36da93602d8c031f6e2d9ebb6a64a28.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "256951c319534dfc2f6b15b9e2ef7d8e371231cc08c86ab39661efe1c5ca305f",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2b2d40a170ad72815969c52b906db214cdf801c0459d35fb3d319be3c30d5fbe",
+    "prompt_hash": "1e1cd268a07fe6a0e8abc4acd56b6e63164f67a22e0ff13e331722ecb83dc374",
+    "output_hash": "1539c933e0fc40e172bb1d956cf73091cd99d4c1f480c3e95fc6ec2634a37585",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:45:52.279429+00:00",
+    "provenance_digest": "ae55c50ee03b4121958544001885c49b999e6f7a9110c3d4834b25842c7ca7d1"
+  }
+}

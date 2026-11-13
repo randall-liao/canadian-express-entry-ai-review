@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "letter_of_explanation",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/letter_of_explanation/judge.json": "66f58bac717c4d8175917f4be0fae8c24e3b87bcf5936113e886e31d694c86af",
+    "documents/letter_of_explanation/shared_evaluation.json": "6a2be839f86b27ed1c4fab08b979a5bf834ccee460eb15d2bcb09e011ac82bbb",
+    "documents/letter_of_explanation/workers/0d6b65e8291756ef8e83f31caeeddfeb.json": "fc3b5bfc7af10d2d31daa1bca92a2c63bdcec0d4e08ad5618d34fc647d212acc",
+    "documents/letter_of_explanation/workers/1f121f987b78c16a25b391c698098edd.json": "bc92bb64e551f51e8b5b7daa4d8a00b34957043ddabf4e4509604bc6a1c54b1f",
+    "documents/letter_of_explanation/workers/2a14f66215cc8f70c4cdaacab6d97efd.json": "e59bbf8a10d265d30eda5f09cef38d971bd0427f69d6df376d48586de3bd3270",
+    "documents/letter_of_explanation/workers/339df681bb5b1d873ef8920aa7941897.json": "d62690bda0bc4ff19e57edf209d4942118b8d5fd98a4785efa19aeca93d06bd4",
+    "documents/letter_of_explanation/workers/647090503f5fa3c971b1ddf4cfee6cef.json": "d537b234a58c9aac8de5992c9aff47bf0f2fb33b6eadcd5eb7f17988e993fddb",
+    "documents/letter_of_explanation/workers/830e9a3ccd2825171046e225f3a4ee8e.json": "fc63d87b6f2cd141508f702a1b4e132937cbb4a8f6082d162866147c7a574850",
+    "documents/letter_of_explanation/workers/939fc849afc556fa64096d9beda03ceb.json": "91e5d00aa785f716ceeac65f09c25d4b1f1a83dfe13bf9be81465d31704576cb",
+    "documents/letter_of_explanation/workers/94315e1c3dc58eb42a9fab23dced3f12.json": "f5469d7a080b02380925e0796ab41ea4b4fbf4ee585aacdb5d705962be3fe328",
+    "documents/letter_of_explanation/workers/c8c3343ab8ccedd87a9d1caf9cfbbf7e.json": "3c9a43b78449c309d64869183cb3ab3b59b9ae738ceb5b3d5b9e3b24ae58b53f",
+    "documents/letter_of_explanation/workers/fff0df94dc4f84d0db0d79147c910f20.json": "1fcfc73ea84c5f1bb1491ba76f201fe882724501cdfbb96da0e210a69c8992a1"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

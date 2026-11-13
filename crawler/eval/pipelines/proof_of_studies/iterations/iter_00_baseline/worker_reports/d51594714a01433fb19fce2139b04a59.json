@@ -1,0 +1,54 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Proof of completed Canadian or foreign educational credentials, including copies of education documents (certificates, diplomas, or degrees) and transcripts if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of"
+    }
+  ],
+  "basis": [
+    "The applicant provided educational documentation in the proof_of_studies slot (case ID d51594714a01433fb19fce2139b04a59) to support educational credential points under Express Entry."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "d51594714a01433fb19fce2139b04a59",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "d51594714a01433fb19fce2139b04a59.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c99b5b0021a04182114d57c975d82075da69633e738ce70b4183e7fc92d1c822",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8ee74fb34dd036795a103de06e3e1b1e478c36af309da4719bd79bf8d0dbc6c6",
+    "prompt_hash": "ef67147679a21d5f34bae1a2dbd5be78c41cf537c2f52a77acc1e0a8c86e3f9b",
+    "output_hash": "25e7d45ed16b19b3de40d4eea16919cea3e087382bfee528097fb9516ccfcb65",
+    "returncode": 0,
+    "timestamp": "2026-07-23T17:29:22.547466+00:00",
+    "provenance_digest": "b7993fed27935283aa4d14ba738872aabf98fa1974efa63a4242853ecee5c02c"
+  }
+}

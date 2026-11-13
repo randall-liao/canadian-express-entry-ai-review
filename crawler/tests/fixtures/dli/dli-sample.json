@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "Province": "Ontario",
+      "Institution": "University of Toronto",
+      "DLI #": "O19332746152",
+      "City": "Mississauga",
+      "Campus": "Mississauga",
+      "Grad Program": "Yes",
+      "PGWP": "Yes",
+      "HTML": "Yes",
+      "Public/Private": "Public institution"
+    },
+    {
+      "Province": "Ontario",
+      "Institution": "University of Toronto",
+      "DLI #": "O19332746152",
+      "City": "Toronto",
+      "Campus": "Main Campus, Scarborough Campus",
+      "Grad Program": "Yes",
+      "PGWP": "Yes",
+      "HTML": "Yes",
+      "Public/Private": "Public institution"
+    },
+    {
+      "Province": "Ontario",
+      "Institution": "Conrad Grebel University College",
+      "DLI #": "O19305471522",
+      "City": "Waterloo",
+      "Campus": "Affiliated with the University of Waterloo.",
+      "Grad Program": "Yes",
+      "PGWP": "Yes",
+      "HTML": "Yes",
+      "Public/Private": "Public institution"
+    },
+    {
+      "Province": "Ontario",
+      "Institution": "St. Jerome’s University (University of Waterloo)",
+      "DLI #": "O19305471522",
+      "City": "Waterloo",
+      "Campus": "Waterloo",
+      "Grad Program": "Yes",
+      "PGWP": "Yes",
+      "HTML": "Yes",
+      "Public/Private": "Public institution"
+    },
+    {
+      "Province": "Ontario",
+      "Institution": "University of Waterloo",
+      "DLI #": "O19305471522",
+      "City": "Waterloo",
+      "Campus": "Allen Square Campus, Balsillie School of International Affairs, Main Campus",
+      "Grad Program": "Yes",
+      "PGWP": "Yes",
+      "HTML": "Yes",
+      "Public/Private": "Public institution"
+    },
+    {
+      "Province": "Quebec",
+      "Institution": "Cestar Collège",
+      "DLI #": "O153601941355",
+      "City": "Longueuil",
+      "Campus": "Longueuil",
+      "Grad Program": "No",
+      "PGWP": "Details",
+      "HTML": "<a href='/content/canadasite/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list/details.html?q=O153601941355-1' target='_blank'>Details<span class='wb-inv'> forCestar Collège, opens in a new tab</span></a>",
+      "Public/Private": "Private institution"
+    },
+    {
+      "Province": "Quebec",
+      "Institution": "Cestar Collège",
+      "DLI #": "O153601941355",
+      "City": "LaSalle",
+      "Campus": "LaSalle",
+      "Grad Program": "No",
+      "PGWP": "No",
+      "HTML": "No",
+      "Public/Private": "Private institution"
+    },
+    {
+      "Province": "Alberta",
+      "Institution": "Solomon College",
+      "DLI #": "O110120953397 ",
+      "City": "Edmonton",
+      "Campus": "Edmonton (ESL Program only)",
+      "Grad Program": "No",
+      "PGWP": "No",
+      "HTML": "No",
+      "Public/Private": "Private institution"
+    },
+    {
+      "Province": "New Brunswick",
+      "Institution": "Eastern College",
+      "DLI #": "O112937696097",
+      "City": "Saint John",
+      "Campus": "Saint John Campus",
+      "Grad Program": "No",
+      "PGWP": "No",
+      "HTML": "No",
+      "Public/Private": "Private institution"
+    },
+    {
+      "Province": "New Brunswick",
+      "Institution": "Eastern College ",
+      "DLI #": "O112937696097",
+      "City": "Fredericton",
+      "Campus": "Fredericton Campus",
+      "Grad Program": "No",
+      "PGWP": "No",
+      "HTML": "No",
+      "Public/Private": "Private institution"
+    },
+    {
+      "Province": "New Brunswick",
+      "Institution": "Eastern College ",
+      "DLI #": "O112937696097",
+      "City": "Moncton",
+      "Campus": "Moncton Campus",
+      "Grad Program": "No",
+      "PGWP": "No",
+      "HTML": "No",
+      "Public/Private": "Private institution"
+    }
+  ]
+}

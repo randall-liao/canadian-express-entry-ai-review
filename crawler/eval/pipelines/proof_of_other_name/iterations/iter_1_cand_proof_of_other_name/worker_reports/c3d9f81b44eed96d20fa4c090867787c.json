@@ -1,0 +1,55 @@
+{
+  "question": "What must an applicant provide if they indicate having used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "information and/or documentation on the use of the other name",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "This documentation is requested if the applicant indicates having used another name (e.g., a maiden name).\n  * The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)."
+    }
+  ],
+  "basis": [
+    "The applicant indicated having used another name and submitted a document under the proof_of_other_name upload slot for case c3d9f81b44eed96d20fa4c090867787c.",
+    "Defect PFL-POON_NAME-03 flagged: The submitted documentation contains an unverified cross-document name discrepancy (middle initial V. in ECA report unreferenced in proof of name, alongside name variance across passport, ECA, and degree records)."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "c3d9f81b44eed96d20fa4c090867787c",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c3d9f81b44eed96d20fa4c090867787c.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9c0b6abe67b20171c6eb741aab6ea209f70ca2d4af779b7ef2ce0e5e310fd333",
+    "allowed_text_sha256": null,
+    "bundle_hash": "748b40f14cf988381632e9add00202e9c1a5ae2f047e07ca25d5ecd9f374c4d8",
+    "prompt_hash": "70a866db2aede9e0443bf5bf5ead98924c61505025726ed0ac637da47366a67b",
+    "output_hash": "94bf0b9fd5a682ef8887791e31b9a650bb34bab7be8b6ebd5c39ad94c33c370b",
+    "returncode": 0,
+    "timestamp": "2026-07-24T23:35:44.139872+00:00",
+    "provenance_digest": "0f7674bc12e0ed0ac6db77b1bca01baa4ea62a6c98b371622ecb4025e6cf2e4a"
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "doc_type": "death_certificate",
+  "case_evaluations": {
+    "142cafca554f10fc1521a2d97b364cf8": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "2efcf44a387b51aab4bf72eaed4b8953": {
+      "grounding_accuracy": 0.65,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "33d577bd1521d896ecbc6b63af055d8e": {
+      "grounding_accuracy": 0.65,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4532662d42f42c242130dedf908fe366": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4edb78278ebeb2fa6be52ea5c71e4c21": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c962ebca01cd59cc782888d9c3acceae": {
+      "grounding_accuracy": 0.75,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "da4fc991c2be8fdff4851ffbfc34bbc7": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "eb89d69f0be42ad0ef1169b92e3bbe17": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f6b01f82ff20d1f63cdb591fc46c66a8": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "fc56e629214694f8bdc1d7e70122721b": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "142cafca554f10fc1521a2d97b364cf8",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DEATH_CE-03 (identity mismatch) missed. Document and its own narrative page 2 state the deceased is 'Brother of Deceased' Carlos Eduardo Gomez Ruiz (DOB 1960-03-12) while the declared spouse is Carlos Gomez (DOB 1962-07-25), marital code MARRIED. Worker returned only a boilerplate policy statement and flagged nothing (empty abstentions)."
+    },
+    {
+      "case_id": "c962ebca01cd59cc782888d9c3acceae",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DEATH_CE-03 (identity/relationship mismatch, MARRIED code) missed. Basis vaguely claims fields were 'evaluated against ... widowed marital status alignment' but the document shows MARRIED with brother/spouse discrepancy; no defect claim emitted."
+    },
+    {
+      "case_id": "2efcf44a387b51aab4bf72eaed4b8953",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DEATH_CE-04 (undisclosed post-ITA spouse death; MARRIED maintained; proof omitted) missed. Worker emitted only policy text and no defect flag despite the narrative explicitly stating the applicant failed to disclose the change to Widowed."
+    },
+    {
+      "case_id": "2efcf44a387b51aab4bf72eaed4b8953",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis asserts the document supports a 'widowed marital status declaration,' but the document declares Marital Status Code MARRIED (non-disclosure case). Unsupported inference contradicts the source document."
+    },
+    {
+      "case_id": "33d577bd1521d896ecbc6b63af055d8e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DEATH_CE-04 missed (same content as sibling 2efcf44a, vector variant). Worker produced boilerplate and flagged nothing."
+    },
+    {
+      "case_id": "33d577bd1521d896ecbc6b63af055d8e",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis states 'declared a marital status of widowed,' but document shows MARRIED code with undisclosed spouse death. Assertion is unsupported by the document."
+    },
+    {
+      "case_id": "4532662d42f42c242130dedf908fe366",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DEATH_CE-01 (foreign Spanish certificate, no certified translation/affidavit) missed. Language Of Document = Spanish, Translation Affidavit/Certified Translator Stamp = N/A, narrative in Spanish; worker flagged nothing."
+    },
+    {
+      "case_id": "eb89d69f0be42ad0ef1169b92e3bbe17",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DEATH_CE-01 missed (Spanish sibling, scanned variant). No translation package present; worker emitted only boilerplate requirement text."
+    },
+    {
+      "case_id": "4edb78278ebeb2fa6be52ea5c71e4c21",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DEATH_CE-02 missed. Registration Number, Issuing Authority Seal, and Registrar Signature all N/A; narrative states the document is 'legally unverified.' Worker did not flag missing authenticity fields."
+    },
+    {
+      "case_id": "da4fc991c2be8fdff4851ffbfc34bbc7",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DEATH_CE-02 missed (unsealed record, vector sibling). Missing seal/signature/registration number not detected; no defect claim produced."
+    },
+    {
+      "case_id": "f6b01f82ff20d1f63cdb591fc46c66a8",
+      "category": "defect_recall",
+      "severity": "minor",
+      "description": "Clean case (meets_requirements). No injected defect exists, so recall is satisfied, but the worker output is identical boilerplate to defective cases and issues no explicit acceptance verdict — indicating it does not actually inspect field validity."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/death_certificate.md",
+      "suggested_patch": "Require the agent to actively validate each certificate rather than returning the widowed-document policy lookup. Mandatory checks with a defect claim per failure: (1) Language Of Document not English/French must have Translation Affidavit + Certified Translator Stamp present (PFL-DEATH_CE-01); (2) Registration Number, Issuing Authority Seal, and Registrar Signature must be non-null/non-N/A (PFL-DEATH_CE-02); (3) Deceased Full Name/DOB and Applicant Relationship must match the declared spouse — flag brother/sibling or name/DOB mismatches (PFL-DEATH_CE-03); (4) Marital Status Code must be consistent with a disclosed death — flag MARRIED-with-omitted/undisclosed spouse death (PFL-DEATH_CE-04). Read the page-2 narrative as evidence."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Instruct workers to emit an explicit per-document verdict (meets_requirements vs defective) with defect claims citing affected fields, and to populate abstentions[] when evidence is insufficient. Prohibit returning generic policy-requirement boilerplate as the sole claim when a document is attached for review."
+    }
+  ],
+  "rationale": "The worker treated every case as a static policy-lookup ('what document is required when widowed?') and returned near-identical boilerplate citing the completeness-check requirement, regardless of document content. Consequently it detected 0 of 8 injected defects (identity mismatch, non-disclosure/MARRIED code, untranslated Spanish certificate, missing seal/signature/registration) — a critical, systemic defect_recall failure. Claims stayed PII-free and correctly placed applicant facts in basis[] (pii_containment 1.0), and operated on opaque case IDs with no ground-truth leakage (blind_input_compliance 1.0). Citations resolve to a single plausible official completeness-check anchor, though several quotes cite the trigger condition rather than the requirement text they support. Grounding is generally acceptable for the policy claim but drops on the two PFL-DEATH_CE-04 cases (2efcf44a, 33d577bd) where the basis asserts 'widowed' despite the documents declaring MARRIED. The two clean cases (f6b01f82, fc56e629) pass by default but reveal the same content-blind behavior.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "142cafca554f10fc1521a2d97b364cf8.pdf",
+      "--attachment",
+      "2efcf44a387b51aab4bf72eaed4b8953.pdf",
+      "--attachment",
+      "33d577bd1521d896ecbc6b63af055d8e.pdf",
+      "--attachment",
+      "4532662d42f42c242130dedf908fe366.pdf",
+      "--attachment",
+      "4edb78278ebeb2fa6be52ea5c71e4c21.pdf",
+      "--attachment",
+      "c962ebca01cd59cc782888d9c3acceae.pdf",
+      "--attachment",
+      "da4fc991c2be8fdff4851ffbfc34bbc7.pdf",
+      "--attachment",
+      "eb89d69f0be42ad0ef1169b92e3bbe17.pdf",
+      "--attachment",
+      "f6b01f82ff20d1f63cdb591fc46c66a8.pdf",
+      "--attachment",
+      "fc56e629214694f8bdc1d7e70122721b.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "b73d4b53c6d8cd31e430b3d59b4a63a25e395f84cf5734848f4f0ed720d791d2",
+    "research_hash": "bc28f2637a21f2d6d2dfb0646a4e5a4a111bbc5a902211f60946e06e30fa766b",
+    "ground_truth_hash": "9cf0249e8f062b052d5afff50069a3b9eb328f31dc63dd84406add9ee0847605",
+    "output_hash": "94b6b02c274fac97e105243b9e9b7ab93ef7f20c62260162153e5237901c4ef9",
+    "timestamp": "2026-07-24T18:22:43.084231+00:00",
+    "provenance_digest": "a4eb5c863125aff3f7b9767f8e8316d5bd916879b49f6fcb884ec94c192e5148"
+  }
+}

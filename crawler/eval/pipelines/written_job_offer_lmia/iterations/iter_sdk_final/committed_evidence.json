@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "written_job_offer_lmia",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/written_job_offer_lmia/judge.json": "05b9d9f55a960e3ccf920e6172f63208fe2b3510c23615075d02984925bf8869",
+    "documents/written_job_offer_lmia/shared_evaluation.json": "95a5f15dfdf8b03b0c13d4f9dabbad809abed018e31e53477bd9bfb9031e8048",
+    "documents/written_job_offer_lmia/workers/440c4e52222f5864f8a9b2ea092f4e53.json": "0da1feb961b04989b2429f29668155e183e15e6cdcf73757dabd151497f44f4c",
+    "documents/written_job_offer_lmia/workers/5ef2ea9721515c97ebb4b2fba32dc636.json": "7db6f799b7e6640312a615f18d757349940bb157a0eac850ba371dde71ee4ca1",
+    "documents/written_job_offer_lmia/workers/6a85334ea8ee238d4b41ea791d677e78.json": "8f1284cfd36e1881974c382aff62aa407ed18ba2349c4c4248fce0663eb424c2",
+    "documents/written_job_offer_lmia/workers/82946cdcf5fe36b30cf82ea9fd71c5da.json": "99bc9ce7de4148a0e5608a3fa2cc5fe1cf0c9a5cc9611c50bc1bd4870178c443",
+    "documents/written_job_offer_lmia/workers/af18b112d998b1433eb96ad2f0a1b70d.json": "e72d78c7e73d1b1c62b1ba3fbebd7f1aa3cce92fa0e290b7c3c9ac381ed7e8ea",
+    "documents/written_job_offer_lmia/workers/afc3c6ff93b0e2dd7bccd01ece586a25.json": "7e1df73f901b613468800f2ad4391658405d6611b34cabd9ffa9c4d0cc827f81",
+    "documents/written_job_offer_lmia/workers/b4b2695cdf784a8c69fe3f3ac27b4299.json": "1ca01008fb9b85a0c6295c43ae60bac2a52c848fff3efbb955ca11d0956c87c6",
+    "documents/written_job_offer_lmia/workers/dd6c7bada82b2f60cc1183535d543678.json": "37811f7b63491fc93db8db22e6b47af0a5546a87ded114e35b44e1c21df4f2f9",
+    "documents/written_job_offer_lmia/workers/e891fe38c1b6ace7fd5b685a8901f9a9.json": "d4558e60298b805f34ab24d425c5b1d43f8d8253463214c62e2e70158306a094",
+    "documents/written_job_offer_lmia/workers/f83db12a2941d7d1888e582e7d6ac548.json": "0b14932ab6e12c9fa551d1acbd465da3f09f8538712b9824a108b7125e3332b9"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

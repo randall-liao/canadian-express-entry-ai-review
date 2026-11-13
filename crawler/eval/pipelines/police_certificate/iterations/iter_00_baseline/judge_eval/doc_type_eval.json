@@ -1,0 +1,230 @@
+{
+  "doc_type": "police_certificate",
+  "case_evaluations": {
+    "00195703b570ce064add36cf1f9f2e73": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e61ac121842319c5790f1d465cf894a8": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "45955a9e84cd0c3dddd8f9f36bdb0c42": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f1172b9588913c916aaf068448e3350c": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "7274354eeb6a02e9118d5cc6da637a10": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "90aee43f4fe4814560fc96a0cd48ed8e": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e2e11d1542e49ce9727409292c6c5e50": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "5b9c88842ae98195505a86f1a846271d": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "2ba60f34da8c27a2749030008ce1455e": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f5feb507bfa2b32e70ad8385aded7626": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "0b687fadca0d1150a50e3b7b7a559f44": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "8724cfb1cbb69a3527f94b3a3d770654": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "45955a9e84cd0c3dddd8f9f36bdb0c42",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-01 missed. Certificate issue date 2024-06-15 predates the end of the applicant's stay (residence_history_end_date 2024-12-31); IRCC requires past-residence certificates be issued after the last 6-month stay ended. Worker returned only the generic eligibility rule, no defect claim or abstention."
+    },
+    {
+      "case_id": "f1172b9588913c916aaf068448e3350c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-01 missed (scanned sibling). Same premature-issuance defect (issue 2024-06-15 before stay ended 2024-12-31) undetected; identical boilerplate output."
+    },
+    {
+      "case_id": "7274354eeb6a02e9118d5cc6da637a10",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-02 missed. Current-residence (UK) certificate issued 2025-01-10 vs eAPR submission 2026-07-20 — far exceeds the 6-month currency window. Worker did not flag validity-period expiry."
+    },
+    {
+      "case_id": "90aee43f4fe4814560fc96a0cd48ed8e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-02 missed (scanned sibling). Stale current-residence certificate (issue 2025-01-10 vs eAPR 2026-07-20) undetected."
+    },
+    {
+      "case_id": "e2e11d1542e49ce9727409292c6c5e50",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-03 missed. Narrative is in Spanish ('El Registro Central de Penados...') with no certified translation/affidavit. Worker did not detect the translation defect."
+    },
+    {
+      "case_id": "5b9c88842ae98195505a86f1a846271d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-03 missed (scanned sibling). Spanish-language certificate lacking certified translation undetected."
+    },
+    {
+      "case_id": "2ba60f34da8c27a2749030008ce1455e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-04 missed. Municipal Austin Police Department background check submitted where US requires a national FBI Identity History Summary. Worker did not flag wrong jurisdiction level."
+    },
+    {
+      "case_id": "f5feb507bfa2b32e70ad8385aded7626",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-04 missed (scanned sibling). Municipal-level US certificate instead of national FBI check undetected."
+    },
+    {
+      "case_id": "0b687fadca0d1150a50e3b7b7a559f44",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-05 missed. Document narrative states 8 consecutive months' residence in France with no France certificate submitted — a mandatory-document omission for a >6-month foreign stay. Worker did not flag the missing certificate."
+    },
+    {
+      "case_id": "8724cfb1cbb69a3527f94b3a3d770654",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-POLICE_C-05 missed (scanned sibling). Omitted France police certificate for the 8-month stay undetected."
+    },
+    {
+      "case_id": "00195703b570ce064add36cf1f9f2e73",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Worker emitted byte-identical boilerplate across all 12 cases — a single generic 'who needs a police certificate' rule claim with no document-level analysis. No claim references the attached certificate's issue date, jurisdiction, language, or residence coverage, so no report actually evaluates the document. The two clean cases pass only by default (no false positives), not by verification."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/police_certificate.md",
+      "suggested_patch": "Replace the generic eligibility answer with a mandatory per-document defect checklist that MUST be evaluated and reported as claims or abstentions: (1) issue_date >= residence_history_end_date for past-residence countries (PFL-01); (2) for current country of residence, issue_date within 6 months of eapr_submission_date (PFL-02); (3) if document_language is not English/French, require a certified translation/affidavit — flag Spanish/other narratives (PFL-03); (4) issuing_authority must be national/federal, not municipal/state (e.g., FBI for US, not city police) (PFL-04); (5) cross-check declared residence history for any >=6-month foreign stay lacking a submitted certificate (PFL-05). Require the agent to cite issuing authority, jurisdiction level, issue date, and language extracted from the document."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Prohibit returning identical boilerplate for every case. Each report must ground at least one claim in fields actually read from the attached PDF (issue date, issuing authority, jurisdiction, language, residence coverage) and must emit an explicit defective/meets_requirements determination or an abstention when a field is unreadable — never only a generic eligibility restatement."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "For scanned/image police-certificate variants, mandate OCR extraction of the narrative block and field table before answering, and require detecting non-Latin/non-English narrative text so translation defects (PFL-03) are not silently passed."
+    }
+  ],
+  "rationale": "The Worker (gemini-3.6-flash) produced 12 byte-identical boilerplate reports, each restating only the generic IRCC eligibility rule ('who needs a police certificate') with the same citation and quote, and performed zero document-level review. Grounding_accuracy is modestly high because the lone generic claim is accurate and non-fabricated, and citation_exactness is high because the quoted text matches official IRCC guidance (corroborated by privileged research). PII containment (1.0) and blind_input_compliance (1.0) are strong: claims/prose carry no applicant PII, prose is empty, and there is no ground-truth leakage. The catastrophic failure is defect_recall: all 10 injected defects (PFL-01 premature issuance, PFL-02 expired currency, PFL-03 untranslated Spanish, PFL-04 municipal-instead-of-national, PFL-05 omitted France certificate) went undetected. The two clean cases score 1.0 on defect_recall only because there is nothing to miss, not because the Worker verified them. Patches target the document-agent skill to enforce a per-field defect checklist and forbid boilerplate-only responses.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "00195703b570ce064add36cf1f9f2e73.pdf",
+      "--attachment",
+      "0b687fadca0d1150a50e3b7b7a559f44.pdf",
+      "--attachment",
+      "2ba60f34da8c27a2749030008ce1455e.pdf",
+      "--attachment",
+      "45955a9e84cd0c3dddd8f9f36bdb0c42.pdf",
+      "--attachment",
+      "5b9c88842ae98195505a86f1a846271d.pdf",
+      "--attachment",
+      "7274354eeb6a02e9118d5cc6da637a10.pdf",
+      "--attachment",
+      "8724cfb1cbb69a3527f94b3a3d770654.pdf",
+      "--attachment",
+      "90aee43f4fe4814560fc96a0cd48ed8e.pdf",
+      "--attachment",
+      "e2e11d1542e49ce9727409292c6c5e50.pdf",
+      "--attachment",
+      "e61ac121842319c5790f1d465cf894a8.pdf",
+      "--attachment",
+      "f1172b9588913c916aaf068448e3350c.pdf",
+      "--attachment",
+      "f5feb507bfa2b32e70ad8385aded7626.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "0b0efcc3419ae01552c5a991f59fdcdd9ffcaadd5fdc54d0945d148da2c0d712",
+    "research_hash": "736106e3307ad6dc85706c01ae7da952dde5cc27c3f11f1e80a96534f5a190b7",
+    "ground_truth_hash": "28e607a8945fc351b7f25a7d74172d72a551d960876e7576c438cf8c9d3381e7",
+    "output_hash": "823a6f95f3b44f46b2692ad625be0ce0748a925042747f9331545a8fc10a12cf",
+    "timestamp": "2026-07-23T23:18:52.227178+00:00",
+    "provenance_digest": "ce11411f7b0065436586b0cc4e9406841ee091bd46108fab0162cd67b12413aa"
+  }
+}

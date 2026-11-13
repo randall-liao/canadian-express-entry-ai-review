@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant prove their language ability?",
+  "claims": [
+    {
+      "id": "language-test",
+      "text": "An applicant must prove their language ability by taking an approved language test.",
+      "citations": [
+        "guidance/language-test.md#001"
+      ],
+      "quote": "You must prove your language skills by taking an approved language test."
+    }
+  ],
+  "basis": [
+    "Document upload-slot type: language_test. Opaque Case ID: bb591d2d1c871f262baf0440fcf1f3b6. Document inspected for Express Entry language test review."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "bb591d2d1c871f262baf0440fcf1f3b6",
+  "doc_type": "language_test",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "bb591d2d1c871f262baf0440fcf1f3b6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "aeedbf46c61d2bcc2da857c5fc79e49f66253695e90561352487988581449d2c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e8c9a43c1f2795f2e0feaaaab9532807127f3e278329c2e080bad51297b842f2",
+    "prompt_hash": "2879c793d93b073eab4fb450801a9b398e93650cd6a62767e9c4607d91e387da",
+    "output_hash": "4952b7bf06baf5d638e096c7fb4708f983395865a1114ebf3c5b4c98cb3a1750",
+    "returncode": 0,
+    "timestamp": "2026-07-24T08:35:52.962165+00:00",
+    "provenance_digest": "758a4eabe8acfe6d20806701ff89351c4788c38a96483c1a7eb64e611f80ff77"
+  }
+}

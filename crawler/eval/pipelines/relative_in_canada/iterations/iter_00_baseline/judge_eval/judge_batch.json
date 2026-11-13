@@ -1,0 +1,212 @@
+{
+  "doc_type": "relative_in_canada",
+  "case_evaluations": {
+    "160e4bbea1a353352f1275f8646bfef3": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "30ed110465efad8a0e363567815ccbe9": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "43804fbfe7bde621065846b69913118c": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4afd1b4ef4c579ef2aad992926cc98d4": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "5c3713e834776dec91df152cdd87d694": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "70135fcbad47943aa859d21553cd5844": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "8b61310c41fef19cc58e974cb673701c": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c392aa8c3c5b73d34380cea976500aa8": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e06da6c6b8a306d6620755a9e39e68bc": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f308748019af244b8bb73b3a75683ec7": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "160e4bbea1a353352f1275f8646bfef3",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-RELATIVE-01 defect (Sibling Birth Certificate: MISSING, applicant short-form BC with no parents listed, Proof Of Relationship: INCOMPLETE_MISSING_PARENTAL_DETAILS, CRS points 0) is stated plainly in the PDF and narrative, yet the Worker flagged nothing. abstentions[] and prose empty; only generic requirement restatements produced. Zero defect recall."
+    },
+    {
+      "case_id": "8b61310c41fef19cc58e974cb673701c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-RELATIVE-01 (missing sibling birth certificate / incomplete parentage) not detected. Worker gave a single generic combined claim and no defect callout despite the PDF narrative explicitly stating shared parentage cannot be verified."
+    },
+    {
+      "case_id": "4afd1b4ef4c579ef2aad992926cc98d4",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-RELATIVE-02 (Relative Status Proof: EXPIRED_PR_CARD_NO_RENEWAL_PROOF, expired 2023-11-15, canadian_citizenship_proof EXPIRED_OR_MISSING, status Unverified) went unflagged. Worker restated generic status-proof requirement but did not identify the expired/unverified status defect."
+    },
+    {
+      "case_id": "5c3713e834776dec91df152cdd87d694",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-RELATIVE-02 (expired PR card, no renewal, unverified status) not detected in the scanned variant. No abstention or defect note despite explicit narrative that statutory status criteria are not met."
+    },
+    {
+      "case_id": "43804fbfe7bde621065846b69913118c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-RELATIVE-03 (Relative Proof Of Residence: OUTDATED_OVER_2_YEARS_OLD, utility bill May 2021, NOA tax year 2021, address flagged Outdated) not detected. Worker never noted residence evidence is stale/insufficient."
+    },
+    {
+      "case_id": "e06da6c6b8a306d6620755a9e39e68bc",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-RELATIVE-03 (outdated residence evidence) not detected in scanned variant. Only a generic combined requirements claim; no defect flag despite narrative stating current residence cannot be verified."
+    },
+    {
+      "case_id": "c392aa8c3c5b73d34380cea976500aa8",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-RELATIVE-04 (Step-Brother; Step Sibling Proof: MISSING_LEGAL_MARRIAGE_AND_CUSTODY_RECORDS, parental marriage certificate MISSING, relationship chain UNSUBSTANTIATED) not detected. Worker did not flag the unverified step-relationship chain."
+    },
+    {
+      "case_id": "70135fcbad47943aa859d21553cd5844",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-RELATIVE-04 (unverified step-sibling link, missing parental marriage/adoption records) not detected in scanned variant. No abstention or defect note despite explicit narrative that the family link remains unverified."
+    },
+    {
+      "case_id": "f308748019af244b8bb73b3a75683ec7",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Claim relative-residence-evidence text adds 'dated within six months prior to submission,' a specificity absent from the cited quote and the source excerpt (which only lists lease/mortgage/utility bills). Invented precision not grounded in the citation."
+    },
+    {
+      "case_id": "70135fcbad47943aa859d21553cd5844",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Claim relative-residence-evidence introduces 'dated within six months prior to submission,' not supported by the cited quote/source. Same unsupported temporal specificity recurs across reports."
+    },
+    {
+      "case_id": "8b61310c41fef19cc58e974cb673701c",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Single combined claim's quote ('This documentation is required if the applicant indicates...') establishes applicability, not the three substantive requirements asserted in the claim text; the quote does not support the claim, and basis adds an unsupported 'within six months' detail."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/relative_in_canada.md",
+      "suggested_patch": "Require the agent to render a per-field verdict against the SPECIFIC submitted bundle, not restate generic requirements. Mandate scanning field values for defect tokens (MISSING, INCOMPLETE, EXPIRED, OUTDATED, UNVERIFIED, NOT_PROVIDED, 'Status Unverified', '(Outdated)') and the narrative notes, and emit an abstention or defect claim naming the affected field(s) whenever any appear. Enumerate the 4 mandatory checks: (1) shared-parentage via long-form birth certificates for BOTH applicant and relative, (2) valid unexpired citizenship/PR status incl. both sides of PR card, (3) current residence evidence, (4) legal chain for step/adoptive siblings (parental marriage/adoption records)."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Instruct document-review agents to treat every field/narrative value that signals absence, expiry, staleness, or non-verification (e.g., MISSING, EXPIRED_*, OUTDATED_*, UNVERIFIED_*, NOT_PROVIDED, INCOMPLETE_*) as a defect that MUST be surfaced in claims/abstentions with the field cited; empty abstentions[] and prose are not acceptable when such tokens are present."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Do not invent specificity absent from the cited corpus (e.g., 'dated within six months prior to submission'). Claim text and basis must not exceed what the quoted source states; when quoting an applicability sentence, do not use it to support unrelated requirement enumerations."
+    }
+  ],
+  "rationale": "The Worker treated a document-review task as generic Q&A: across all 10 cases it emitted only boilerplate 'what must be provided' claims with empty abstentions[] and prose, and never inspected the specific bundle. As a result it missed 100% of injected defects in the 8 defective cases (PFL-RELATIVE-01 through -04: missing sibling birth certificate, expired PR card, outdated residence evidence, unverified step-relationship), despite each defect being explicitly labeled in the PDF fields and narrative — a critical, systemic defect_recall failure. The 2 clean cases score full defect_recall (nothing to miss). Grounding is mostly solid but repeatedly fabricates a 'within six months' recency rule not present in the cited IRCC completeness-check excerpt (f308748019, 70135fcb, 8b61310c, e06da6c6), and the three single-combined-claim reports pair an applicability quote with a requirement-enumeration claim it doesn't support, lightly denting citation_exactness. PII containment and blind_input_compliance are excellent throughout: no applicant names, DOBs, or addresses leaked into claims/prose, and no ground-truth verdict/failure-ID leakage appears. Highest-priority fix is forcing per-bundle defect detection over generic requirement restatement.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "160e4bbea1a353352f1275f8646bfef3.pdf",
+      "--attachment",
+      "30ed110465efad8a0e363567815ccbe9.pdf",
+      "--attachment",
+      "43804fbfe7bde621065846b69913118c.pdf",
+      "--attachment",
+      "4afd1b4ef4c579ef2aad992926cc98d4.pdf",
+      "--attachment",
+      "5c3713e834776dec91df152cdd87d694.pdf",
+      "--attachment",
+      "70135fcbad47943aa859d21553cd5844.pdf",
+      "--attachment",
+      "8b61310c41fef19cc58e974cb673701c.pdf",
+      "--attachment",
+      "c392aa8c3c5b73d34380cea976500aa8.pdf",
+      "--attachment",
+      "e06da6c6b8a306d6620755a9e39e68bc.pdf",
+      "--attachment",
+      "f308748019af244b8bb73b3a75683ec7.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "0db68193c039ef2a6f7825e500558fa4e4100402e9e960113c7ff55a657c15ca",
+    "research_hash": "e40fde9b6f6d2a04489820554001492b15a0a605128fcd22576dec9e07b7b8db",
+    "ground_truth_hash": "4eed56c265f7d21d0898d614bf9443fbd4bf4ad3634fb96ffc8e2e01d2fa03f6",
+    "output_hash": "a954e674629515df23a786eeab59ca347b1c1ae4a858d029b1793f119086c88c",
+    "timestamp": "2026-07-23T23:26:41.484129+00:00",
+    "provenance_digest": "cd2893ce74888447a5d234a936273f7f77cd599c4c5a9e1d764353f49b44edac"
+  }
+}

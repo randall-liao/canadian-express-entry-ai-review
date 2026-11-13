@@ -1,0 +1,54 @@
+{
+  "question": "What digital photos must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "digital-photos-spec",
+      "text": "Digital photos meeting IRCC’s permanent resident card photo specifications must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#061"
+      ],
+      "quote": "Digital photos meeting [IRCC’s permanent resident card photo specifications (PDF, 614.24 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/information/applications/guides/pdf/5445eb-e.pdf) must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a digital photo document (case ID 168fdffa85e7d011360ab2b4cd6c5449) as part of the e-APR application process."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "168fdffa85e7d011360ab2b4cd6c5449",
+  "doc_type": "digital_photo",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "168fdffa85e7d011360ab2b4cd6c5449.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "dcdf2353141f62e7eb79064af044a44d992df1252f785bdfcd1bcdc3ec413160",
+    "allowed_text_sha256": null,
+    "bundle_hash": "6cfcef53b5c2c79bb3d4aeacc136df21882a4974409ec1324f9ca311ae87c909",
+    "prompt_hash": "699ce32e62866c64ee3db0631b1c6d9f322125896087ae18ab260cdc613ebd73",
+    "output_hash": "ab631b7c2e922635610f7c51d01e00cd4efe2120d4c12ba572870f0d5addc074",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:07:36.172522+00:00",
+    "provenance_digest": "394b165a6bdf41ffcec91667e4f3ba507ac737a2c7b426058478597afc0903a7"
+  }
+}

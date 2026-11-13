@@ -1,0 +1,69 @@
+{
+  "question": "What must the applicant's settlement funds satisfy, and does the provided document meet the requirement?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "Settlement funds must be legally accessible, cannot be borrowed, and cannot be derived from real-property equity.",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "you can't use equity on real property as proof of settlement funds"
+    },
+    {
+      "id": "pfl-02-insufficient-funds",
+      "text": "The proof of funds document is defective under PFL-02 (Insufficient funds) because the liquid account balance falls below the minimum required settlement funds or low-income cutoff (LICO) threshold for the declared family size. Affected fields: current_balance, family_size, minimum_required_funds.",
+      "citations": [
+        "pr-pdi/economic-classes-federal-skilled-workers-making-selection-decision.md#002"
+      ],
+      "quote": "If the applicant is unable to demonstrate that they have sufficient funds to meet the requirements, the application is refused."
+    }
+  ],
+  "basis": [
+    "Opaque Case ID: 1539c5ec76f1aa910e0113344cf1896f. Document type: proof_of_funds. Declared family size: 4. Current liquid account balance: $12,000 CAD. Minimum required funds threshold for family size of 4: $25,000 CAD.",
+    "Defect finding (PFL-02: Insufficient funds): The current liquid balance ($12,000 CAD) is below the minimum required threshold ($25,000 CAD) for a family size of 4. Affected fields: current_balance, family_size, minimum_required_funds.",
+    "Program applicability: Federal Skilled Worker Class (FSWC) and Federal Skilled Trades Class (FSTC) applicants must demonstrate sufficient settlement funds unless authorized to work in Canada with a qualifying offer of arranged employment. Canadian Experience Class (CEC) candidates are exempt."
+  ],
+  "abstentions": [
+    {
+      "text": "PFL-02 (Insufficient funds): Liquid account balance falls below the minimum required settlement funds or LICO threshold for the declared family size. Affected fields: current_balance, family_size, minimum_required_funds.",
+      "reason": "document_defect"
+    }
+  ],
+  "prose": "",
+  "case_id": "1539c5ec76f1aa910e0113344cf1896f",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "1539c5ec76f1aa910e0113344cf1896f.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "3452ff6ccafac277b51d97361a399a6d1c876250daf85667bf40ddd662f35a90",
+    "allowed_text_sha256": null,
+    "bundle_hash": "19d31602f6addcce52eb3db77bc26febb8b1ad858256dbe1c2cfa1d82a3ed8f1",
+    "prompt_hash": "a8548fbf7a71519c2e8e7b6995c4245d0d1575444b37fc3f0a4df72c146604cc",
+    "output_hash": "6bd07adb24497d97c02bf4ec16474f696042fb6f3370eeedd5329de10a2f3ec8",
+    "returncode": 0,
+    "timestamp": "2026-07-24T13:02:17.062083+00:00",
+    "provenance_digest": "575fe8c127107876d190e592d880eff09b507bcb6bc996a0f22148c5bad5a065"
+  }
+}

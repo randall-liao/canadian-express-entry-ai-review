@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide to evidence a common-law union?",
+  "claims": [
+    {
+      "id": "common-law-declaration",
+      "text": "The applicant must submit a Statutory Declaration of Common-Law Union form (IMM 5409) and evidence of cohabitation for a period of at least 12 continuous months.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#042"
+      ],
+      "quote": "The applicant must submit a Statutory Declaration of Common-Law Union form [[IMM 5409 (PDF, 636.51 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5409e.pdf)] and evidence of cohabitation for a period of at least 12 continuous months."
+    }
+  ],
+  "basis": [
+    "The statutory declaration of common-law union document for case aabab0e3988a4c663661d6b6f284bac6 was reviewed against Express Entry completeness requirements."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "aabab0e3988a4c663661d6b6f284bac6",
+  "doc_type": "statutory_declaration_common_law",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "aabab0e3988a4c663661d6b6f284bac6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "3dcd079c4df7be475254533151203734e050d5b143ed222494963a6265d5b7e1",
+    "allowed_text_sha256": null,
+    "bundle_hash": "272bee292c2e650f3ab8852eb53065803f17de1a85fcd3a07641a11c5cb076d6",
+    "prompt_hash": "47ccbeb215f0f63772ef983015b4a7b335d62fb7868a2ce075f616d6e045a689",
+    "output_hash": "106486c1d758b23b6fa35f8170a8e35cfdda95b033f3cfb44811a7fa0a2d14d8",
+    "returncode": 0,
+    "timestamp": "2026-07-25T00:39:51.037311+00:00",
+    "provenance_digest": "67dcb140f840a6d4dc622a0b1265e0c3bcc6fb80f6e3da93e0695b11bd64f718"
+  }
+}

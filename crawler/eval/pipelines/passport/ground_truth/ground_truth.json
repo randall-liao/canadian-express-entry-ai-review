@@ -1,0 +1,498 @@
+[
+  {
+    "opaque_case_id": "8e873c54b4bb1de4cf8d37cd795d01f0",
+    "sibling_case_id": "9a810a55f57622a28c84ac5a9d69239e",
+    "doc_type": "passport",
+    "variant": "vector",
+    "blind_filename": "8e873c54b4bb1de4cf8d37cd795d01f0.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "CAN",
+      "passport_number": "ZE123456",
+      "surname": "DOE",
+      "given_names": "JANE MARY",
+      "full_name": "JANE MARY DOE",
+      "nationality": "CANADIAN",
+      "date_of_birth": "1990-08-14",
+      "place_of_birth": "TORONTO CAN",
+      "sex": "F",
+      "issue_date": "2023-01-15",
+      "expiry_date": "2033-01-14",
+      "issuing_authority": "PASSPORT OFFICE TORONTO",
+      "mrz_code": "P<CANDOE<<JANE<MARY<<<<<<<<<<<<<<<<<<<<<<<<<\nZE123456<8CAN9008144F3301147<<<<<<<<<<<<<<<04",
+      "bio_page_scan": "passport_bio_page_clear_full.pdf",
+      "blank_pages_count": 24,
+      "travel_history": [],
+      "visa_stamps": [],
+      "statutory_questions": {
+        "refused_visa": false,
+        "refused_entry": false
+      }
+    },
+    "pdf_sha256": "c8f9e5402dc989b5b3d0c4df14c50ce873cf3d09c5fe4e1219caf9d7e289d067",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:16.413269+00:00"
+  },
+  {
+    "opaque_case_id": "9a810a55f57622a28c84ac5a9d69239e",
+    "sibling_case_id": "8e873c54b4bb1de4cf8d37cd795d01f0",
+    "doc_type": "passport",
+    "variant": "scanned",
+    "blind_filename": "9a810a55f57622a28c84ac5a9d69239e.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "CAN",
+      "passport_number": "ZE123456",
+      "surname": "DOE",
+      "given_names": "JANE MARY",
+      "full_name": "JANE MARY DOE",
+      "nationality": "CANADIAN",
+      "date_of_birth": "1990-08-14",
+      "place_of_birth": "TORONTO CAN",
+      "sex": "F",
+      "issue_date": "2023-01-15",
+      "expiry_date": "2033-01-14",
+      "issuing_authority": "PASSPORT OFFICE TORONTO",
+      "mrz_code": "P<CANDOE<<JANE<MARY<<<<<<<<<<<<<<<<<<<<<<<<<\nZE123456<8CAN9008144F3301147<<<<<<<<<<<<<<<04",
+      "bio_page_scan": "passport_bio_page_clear_full.pdf",
+      "blank_pages_count": 24,
+      "travel_history": [],
+      "visa_stamps": [],
+      "statutory_questions": {
+        "refused_visa": false,
+        "refused_entry": false
+      }
+    },
+    "pdf_sha256": "8a326d159d62b40ef35c08a9f0b1e2e38f92c160b435248527d41ad046130497",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:16.413269+00:00"
+  },
+  {
+    "opaque_case_id": "76b15b7c453bb35d093d51e733fa3066",
+    "sibling_case_id": "d3918402b3a6309a43f56d234b9276a0",
+    "doc_type": "passport",
+    "variant": "vector",
+    "blind_filename": "76b15b7c453bb35d093d51e733fa3066.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-01",
+    "affected_fields": [
+      "passport_number",
+      "bio_page_scan",
+      "mrz_code",
+      "expiry_date"
+    ],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "AUS",
+      "passport_number": null,
+      "surname": "SMITH",
+      "given_names": "JOHN ALEXANDER",
+      "full_name": "JOHN ALEXANDER SMITH",
+      "nationality": "AUSTRALIAN",
+      "date_of_birth": "1988-11-20",
+      "place_of_birth": "SYDNEY AUS",
+      "sex": "M",
+      "issue_date": "2022-03-15",
+      "expiry_date": null,
+      "issuing_authority": "SYDNEY PASSPORT OFFICE",
+      "mrz_code": null,
+      "bio_page_scan": "passport_bio_page_cropped_mrz.pdf",
+      "blank_pages_count": 18,
+      "travel_history": [],
+      "visa_stamps": [],
+      "statutory_questions": {
+        "refused_visa": false,
+        "refused_entry": false
+      }
+    },
+    "pdf_sha256": "cd53fdd7d8a2064c81804d277775d9f4b6b6bffecec39eac14dde9c7e3a29945",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:17.584296+00:00"
+  },
+  {
+    "opaque_case_id": "d3918402b3a6309a43f56d234b9276a0",
+    "sibling_case_id": "76b15b7c453bb35d093d51e733fa3066",
+    "doc_type": "passport",
+    "variant": "scanned",
+    "blind_filename": "d3918402b3a6309a43f56d234b9276a0.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-01",
+    "affected_fields": [
+      "passport_number",
+      "bio_page_scan",
+      "mrz_code",
+      "expiry_date"
+    ],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "AUS",
+      "passport_number": null,
+      "surname": "SMITH",
+      "given_names": "JOHN ALEXANDER",
+      "full_name": "JOHN ALEXANDER SMITH",
+      "nationality": "AUSTRALIAN",
+      "date_of_birth": "1988-11-20",
+      "place_of_birth": "SYDNEY AUS",
+      "sex": "M",
+      "issue_date": "2022-03-15",
+      "expiry_date": null,
+      "issuing_authority": "SYDNEY PASSPORT OFFICE",
+      "mrz_code": null,
+      "bio_page_scan": "passport_bio_page_cropped_mrz.pdf",
+      "blank_pages_count": 18,
+      "travel_history": [],
+      "visa_stamps": [],
+      "statutory_questions": {
+        "refused_visa": false,
+        "refused_entry": false
+      }
+    },
+    "pdf_sha256": "b191a305f1a45fea823b45df82de4a98282eb088c6ec0fcb675d8515c8b7597d",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:17.584296+00:00"
+  },
+  {
+    "opaque_case_id": "60039420b78d12c640a85a76edd3d17f",
+    "sibling_case_id": "560448b57abc03dcc70c20802de6cde1",
+    "doc_type": "passport",
+    "variant": "vector",
+    "blind_filename": "60039420b78d12c640a85a76edd3d17f.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-02",
+    "affected_fields": [
+      "full_name",
+      "date_of_birth",
+      "place_of_birth",
+      "passport_number",
+      "mrz_code"
+    ],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "IND",
+      "passport_number": "Z9876543",
+      "surname": "PATEL",
+      "given_names": "PRIYA ARUN",
+      "full_name": "PRIYA ARUN PATEL",
+      "nationality": "INDIAN",
+      "date_of_birth": "1994-05-12",
+      "place_of_birth": "MUMBAI IND",
+      "sex": "F",
+      "issue_date": "2021-09-10",
+      "expiry_date": "2031-09-09",
+      "issuing_authority": "RPO MUMBAI",
+      "mrz_code": "P<INDPATEL<<PRIYA<ARUN<<<<<<<<<<<<<<<<<<<<<<<\nZ9876543<8IND9405124F3109099<<<<<<<<<<<<<<<02",
+      "bio_page_scan": "passport_bio_page_patel_priya.pdf",
+      "blank_pages_count": 20,
+      "express_entry_profile": {
+        "full_name": "PRIYA PATEL SHARMA",
+        "date_of_birth": "1992-05-12",
+        "place_of_birth": "DELHI IND",
+        "passport_number": "X1234567"
+      }
+    },
+    "pdf_sha256": "b61857508bb97555ee395bc591520475cd299af25461b17689874e643cffe839",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:18.678827+00:00"
+  },
+  {
+    "opaque_case_id": "560448b57abc03dcc70c20802de6cde1",
+    "sibling_case_id": "60039420b78d12c640a85a76edd3d17f",
+    "doc_type": "passport",
+    "variant": "scanned",
+    "blind_filename": "560448b57abc03dcc70c20802de6cde1.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-02",
+    "affected_fields": [
+      "full_name",
+      "date_of_birth",
+      "place_of_birth",
+      "passport_number",
+      "mrz_code"
+    ],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "IND",
+      "passport_number": "Z9876543",
+      "surname": "PATEL",
+      "given_names": "PRIYA ARUN",
+      "full_name": "PRIYA ARUN PATEL",
+      "nationality": "INDIAN",
+      "date_of_birth": "1994-05-12",
+      "place_of_birth": "MUMBAI IND",
+      "sex": "F",
+      "issue_date": "2021-09-10",
+      "expiry_date": "2031-09-09",
+      "issuing_authority": "RPO MUMBAI",
+      "mrz_code": "P<INDPATEL<<PRIYA<ARUN<<<<<<<<<<<<<<<<<<<<<<<\nZ9876543<8IND9405124F3109099<<<<<<<<<<<<<<<02",
+      "bio_page_scan": "passport_bio_page_patel_priya.pdf",
+      "blank_pages_count": 20,
+      "express_entry_profile": {
+        "full_name": "PRIYA PATEL SHARMA",
+        "date_of_birth": "1992-05-12",
+        "place_of_birth": "DELHI IND",
+        "passport_number": "X1234567"
+      }
+    },
+    "pdf_sha256": "e4fdc564f416ef72969dd7bc33f4e756de730324f805fd67448dbd3e923a6c0d",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:18.678827+00:00"
+  },
+  {
+    "opaque_case_id": "6905c8726394082c7692d8a43533fed7",
+    "sibling_case_id": "ceac41e45361934fbcd82442291e566b",
+    "doc_type": "passport",
+    "variant": "vector",
+    "blind_filename": "6905c8726394082c7692d8a43533fed7.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-03",
+    "affected_fields": [
+      "expiry_date",
+      "passport_number",
+      "issue_date"
+    ],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "GBR",
+      "passport_number": "918273645",
+      "surname": "TAYLOR",
+      "given_names": "ROBERT",
+      "full_name": "ROBERT TAYLOR",
+      "nationality": "BRITISH CITIZEN",
+      "date_of_birth": "1985-03-30",
+      "place_of_birth": "LONDON GBR",
+      "sex": "M",
+      "issue_date": "2016-10-01",
+      "expiry_date": "2026-09-15",
+      "issuing_authority": "IPS",
+      "mrz_code": "P<GBRTAYLOR<<ROBERT<<<<<<<<<<<<<<<<<<<<<<<<<\n9182736458GBR8503301M2609154<<<<<<<<<<<<<<<08",
+      "bio_page_scan": "passport_bio_page_taylor_robert.pdf",
+      "blank_pages_count": 14
+    },
+    "pdf_sha256": "2fc9e1131c29f880e4c1971dd640ecb0072e86d1f55358b40a170af96af4f46a",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:19.798422+00:00"
+  },
+  {
+    "opaque_case_id": "ceac41e45361934fbcd82442291e566b",
+    "sibling_case_id": "6905c8726394082c7692d8a43533fed7",
+    "doc_type": "passport",
+    "variant": "scanned",
+    "blind_filename": "ceac41e45361934fbcd82442291e566b.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-03",
+    "affected_fields": [
+      "expiry_date",
+      "passport_number",
+      "issue_date"
+    ],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "GBR",
+      "passport_number": "918273645",
+      "surname": "TAYLOR",
+      "given_names": "ROBERT",
+      "full_name": "ROBERT TAYLOR",
+      "nationality": "BRITISH CITIZEN",
+      "date_of_birth": "1985-03-30",
+      "place_of_birth": "LONDON GBR",
+      "sex": "M",
+      "issue_date": "2016-10-01",
+      "expiry_date": "2026-09-15",
+      "issuing_authority": "IPS",
+      "mrz_code": "P<GBRTAYLOR<<ROBERT<<<<<<<<<<<<<<<<<<<<<<<<<\n9182736458GBR8503301M2609154<<<<<<<<<<<<<<<08",
+      "bio_page_scan": "passport_bio_page_taylor_robert.pdf",
+      "blank_pages_count": 14
+    },
+    "pdf_sha256": "01e0426933e1e81175653c0000ba54a7a973c3b7750f4f66ccbfed0ff54c775b",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:19.798422+00:00"
+  },
+  {
+    "opaque_case_id": "842289b995ee3edeca93476c08c72703",
+    "sibling_case_id": "0e605283cf9741f8404ddbc238ab26b8",
+    "doc_type": "passport",
+    "variant": "vector",
+    "blind_filename": "842289b995ee3edeca93476c08c72703.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-04",
+    "affected_fields": [
+      "statutory_questions",
+      "travel_history",
+      "visa_stamps",
+      "passport_pages"
+    ],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "PHL",
+      "passport_number": "P5432109A",
+      "surname": "SANTOS",
+      "given_names": "MARIA LUZ",
+      "full_name": "MARIA LUZ SANTOS",
+      "nationality": "FILIPINO",
+      "date_of_birth": "1991-12-05",
+      "place_of_birth": "MANILA PHL",
+      "sex": "F",
+      "issue_date": "2021-04-12",
+      "expiry_date": "2031-04-11",
+      "issuing_authority": "DFA MANILA",
+      "mrz_code": "P<PHLSANTOS<<MARIA<LUZ<<<<<<<<<<<<<<<<<<<<<<\nP5432109A5PHL9112053F3104118<<<<<<<<<<<<<<<06",
+      "statutory_questions": {
+        "refused_visa": false,
+        "refused_entry": false,
+        "details": "Applicant answered No to statutory questions regarding prior visa refusals."
+      },
+      "travel_history": [
+        {
+          "country": "SGP",
+          "entry": "2022-01-10",
+          "exit": "2022-01-20"
+        }
+      ],
+      "visa_stamps": [
+        {
+          "page": 8,
+          "type": "Refusal Stamp",
+          "issuing_country": "USA",
+          "date": "2023-03-14",
+          "annotation": "Application Refused Under INA Section 214(b)"
+        }
+      ],
+      "passport_pages": "passport_all_pages_complete.pdf"
+    },
+    "pdf_sha256": "a7c741ed9f36a7cc04d4ed6d1c058b7e2a2c250bc0810e5dbe14dd5f532a2821",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:20.888249+00:00"
+  },
+  {
+    "opaque_case_id": "0e605283cf9741f8404ddbc238ab26b8",
+    "sibling_case_id": "842289b995ee3edeca93476c08c72703",
+    "doc_type": "passport",
+    "variant": "scanned",
+    "blind_filename": "0e605283cf9741f8404ddbc238ab26b8.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-04",
+    "affected_fields": [
+      "statutory_questions",
+      "travel_history",
+      "visa_stamps",
+      "passport_pages"
+    ],
+    "fields": {
+      "passport_type": "P",
+      "issuing_country": "PHL",
+      "passport_number": "P5432109A",
+      "surname": "SANTOS",
+      "given_names": "MARIA LUZ",
+      "full_name": "MARIA LUZ SANTOS",
+      "nationality": "FILIPINO",
+      "date_of_birth": "1991-12-05",
+      "place_of_birth": "MANILA PHL",
+      "sex": "F",
+      "issue_date": "2021-04-12",
+      "expiry_date": "2031-04-11",
+      "issuing_authority": "DFA MANILA",
+      "mrz_code": "P<PHLSANTOS<<MARIA<LUZ<<<<<<<<<<<<<<<<<<<<<<\nP5432109A5PHL9112053F3104118<<<<<<<<<<<<<<<06",
+      "statutory_questions": {
+        "refused_visa": false,
+        "refused_entry": false,
+        "details": "Applicant answered No to statutory questions regarding prior visa refusals."
+      },
+      "travel_history": [
+        {
+          "country": "SGP",
+          "entry": "2022-01-10",
+          "exit": "2022-01-20"
+        }
+      ],
+      "visa_stamps": [
+        {
+          "page": 8,
+          "type": "Refusal Stamp",
+          "issuing_country": "USA",
+          "date": "2023-03-14",
+          "annotation": "Application Refused Under INA Section 214(b)"
+        }
+      ],
+      "passport_pages": "passport_all_pages_complete.pdf"
+    },
+    "pdf_sha256": "5c8445c008b515bd327e476b73a657df07d041f153b989e18106a443a0991506",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:20.888249+00:00"
+  },
+  {
+    "opaque_case_id": "9976706c2233ca23187651dbf0e05da4",
+    "sibling_case_id": "dd1b4cd65b0b780f8b0191aa68b4f392",
+    "doc_type": "passport",
+    "variant": "vector",
+    "blind_filename": "9976706c2233ca23187651dbf0e05da4.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-05",
+    "affected_fields": [
+      "passport_type",
+      "issuing_country",
+      "blank_pages_count"
+    ],
+    "fields": {
+      "passport_type": "D",
+      "issuing_country": "DEU",
+      "passport_number": "D99887766",
+      "surname": "MUELLER",
+      "given_names": "HANS",
+      "full_name": "HANS MUELLER",
+      "nationality": "GERMAN",
+      "date_of_birth": "1980-06-25",
+      "place_of_birth": "BERLIN DEU",
+      "sex": "M",
+      "issue_date": "2024-01-10",
+      "expiry_date": "2029-01-09",
+      "issuing_authority": "AUSWAERTIGES AMT",
+      "mrz_code": "PDDEUMUELLER<<HANS<<<<<<<<<<<<<<<<<<<<<<<<<<\nD998877662DEU8006259M2901095<<<<<<<<<<<<<<<00",
+      "blank_pages_count": 0,
+      "bio_page_scan": "passport_bio_page_diplomatic.pdf"
+    },
+    "pdf_sha256": "8644cdd146fe6e0c8919e9d6e3e7ffc682d1b7f37c55d3cb65d7919e50099aa6",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:22.003213+00:00"
+  },
+  {
+    "opaque_case_id": "dd1b4cd65b0b780f8b0191aa68b4f392",
+    "sibling_case_id": "9976706c2233ca23187651dbf0e05da4",
+    "doc_type": "passport",
+    "variant": "scanned",
+    "blind_filename": "dd1b4cd65b0b780f8b0191aa68b4f392.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-PASSPORT-05",
+    "affected_fields": [
+      "passport_type",
+      "issuing_country",
+      "blank_pages_count"
+    ],
+    "fields": {
+      "passport_type": "D",
+      "issuing_country": "DEU",
+      "passport_number": "D99887766",
+      "surname": "MUELLER",
+      "given_names": "HANS",
+      "full_name": "HANS MUELLER",
+      "nationality": "GERMAN",
+      "date_of_birth": "1980-06-25",
+      "place_of_birth": "BERLIN DEU",
+      "sex": "M",
+      "issue_date": "2024-01-10",
+      "expiry_date": "2029-01-09",
+      "issuing_authority": "AUSWAERTIGES AMT",
+      "mrz_code": "PDDEUMUELLER<<HANS<<<<<<<<<<<<<<<<<<<<<<<<<<\nD998877662DEU8006259M2901095<<<<<<<<<<<<<<<00",
+      "blank_pages_count": 0,
+      "bio_page_scan": "passport_bio_page_diplomatic.pdf"
+    },
+    "pdf_sha256": "4528b8ef9acbaaa984d442e232731097589c6c5515a3bf79d5e8d2065025f1a3",
+    "agent_spec_sha256": "9169eb51b0a453ccf20b1594af1639887d98aa67a7edbf623c730b290bc2e098",
+    "timestamp": "2026-07-23T07:00:22.003213+00:00"
+  }
+]

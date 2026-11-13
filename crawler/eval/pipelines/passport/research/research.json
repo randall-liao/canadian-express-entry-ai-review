@@ -1,0 +1,156 @@
+{
+  "doc_type": "passport",
+  "timestamp": "2026-07-23T03:34:31.752650+00:00",
+  "summary": "IRCC requirements for Express Entry passports mandate a valid, machine-readable travel document with an unexpired biographical page and sufficient validity. Analysis of operational guidance and IRCC failure cases indicates that common refusal and Procedural Fairness Letter (PFL) triggers include incomplete or illegible bio-page scans failing R10 completeness checks, bio-data discrepancies between passport MRZ data and profile records (A40 misrepresentation), passport validity under 6 months during application processing, undeclared prior visa refusals revealed by passport stamps, and submission of non-accepted travel document types or passports lacking required blank counterfoil pages.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:37:21.206031+00:00",
+    "duration_seconds": 179.194,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "0032194d97aed4b8d1929389eb6a89eedc8c97e31fd91a38292bd8d8caeb8cff",
+    "raw_output_sha256": "cb3663c20500f39521567c52941de237d1b9346ab1b634b3960563cef4802f6e",
+    "returncode": 0,
+    "provenance_token": "841114c0e3b78f120363f4ca0fba3bbb82b5bf61a4423fa2bf92c85626fd520f",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 9,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-PASSPORT-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Incomplete or Missing Passport Biographical Page Scan (R10 Completeness Rejection)",
+      "description": "Application rejected as incomplete under Section 10 of the Immigration and Refugee Protection Regulations (R10) because the applicant failed to upload a complete, clear, and fully legible copy of the passport biographical page including the photo, personal details, signature, and Machine Readable Zone (MRZ).",
+      "affected_fields": [
+        "passport_number",
+        "bio_page_scan",
+        "mrz_code",
+        "expiry_date"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must provide a clear copy of the biographical page of your valid passport or travel document. If you do not provide all required documents, your application will be returned as incomplete.",
+      "remediation_hypothesis": "Re-scan the original passport bio-page in high resolution, ensuring all four borders, photo, text, signature, and the complete two-line MRZ area are unobstructed and legible, and re-submit via new application or IRCC document request.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-PASSPORT-02",
+      "category": "pfl_misrepresentation",
+      "severity": "critical",
+      "title": "Bio-Data Mismatch Between Passport MRZ and Express Entry Profile",
+      "description": "Discrepancy between biographical information (e.g., spelling of full legal name, date of birth, place of birth, gender) on the passport bio page / MRZ and the Express Entry profile / e-APR fields, triggering identity verification concerns or a Procedural Fairness Letter (PFL) under IRPA Section 40(1)(a) for potential misrepresentation.",
+      "affected_fields": [
+        "full_name",
+        "date_of_birth",
+        "place_of_birth",
+        "passport_number",
+        "mrz_code"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/protect-fraud/consequences.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Submitting false or inconsistent information on an application is misrepresentation under section 40(1)(a) of the Immigration and Refugee Protection Act. Inconsistencies in identity documents may result in a Procedural Fairness Letter and a 5-year ban from Canada.",
+      "remediation_hypothesis": "Provide an official name change document, court order, or formal clarification letter from the passport issuing authority explaining name transliteration/order conventions, along with supporting civil status documents (e.g., birth certificate, national ID).",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-PASSPORT-03",
+      "category": "pfl_validity_defect",
+      "severity": "high",
+      "title": "Passport Validity Under 6 Months or Expiring During Application Processing",
+      "description": "The submitted passport has less than 6 months remaining validity or expires before anticipated PR visa / COPR issuance. IRCC operational policy prohibits issuing a Permanent Resident visa beyond the passport's expiry date, causing processing delays or document re-issuance demands.",
+      "affected_fields": [
+        "expiry_date",
+        "passport_number",
+        "issue_date"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/valid-passport.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If your passport will expire in less than 6 months from the day you apply, you should renew it before submitting your application for permanent residence. Your permanent resident visa cannot be issued past the expiry date of your passport.",
+      "remediation_hypothesis": "Renew the passport immediately with the home nation issuing authority, submit high-resolution scans of the renewed passport bio page via IRCC Webform, and provide a detailed Letter of Explanation referencing the updated document.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-PASSPORT-04",
+      "category": "pfl_misrepresentation",
+      "severity": "critical",
+      "title": "Undeclared Visa Refusals or Travel History Inconsistencies Revealed by Passport Stamps",
+      "description": "Passport stamps, visa counters, or entry/exit markings disclose past immigration refusals, overstays, or third-country entry denials not declared in statutory background declarations (Form IMM 5669 / e-APR), generating a PFL for misrepresentation under IRPA A40(1)(a).",
+      "affected_fields": [
+        "statutory_questions",
+        "travel_history",
+        "visa_stamps",
+        "passport_pages"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Withholding information about prior visa refusals, removals, or unauthorized stays discovered through passport stamps or international data sharing triggers misrepresentation under IRPA A40.",
+      "remediation_hypothesis": "Submit a sworn affidavit acknowledging and explaining any inadvertent omission, attach original refusal notifications or third-country immigration records, submit an updated IMM 5669 form, and demonstrate lack of intent to deceive.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-PASSPORT-05",
+      "category": "pfl_ineligible_document",
+      "severity": "high",
+      "title": "Non-Compliant Travel Document Type or Insufficient Blank Visa Pages",
+      "description": "Submission of an unacceptable travel document type (e.g. non-machine readable passport, temporary/provisional passport excluded by IRCC policy) or lacking at least one completely blank page required for visa counterfoil placement for visa-required nationals.",
+      "affected_fields": [
+        "passport_type",
+        "issuing_country",
+        "blank_pages_count"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/passport-travel-document.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Certain passports are not accepted by IRCC as valid travel documents (such as non-machine readable passports or temporary passports). Visa-required applicants must also have at least one blank page for visa placement.",
+      "remediation_hypothesis": "Obtain an official regular machine-readable passport containing requisite blank counterfoil pages from the national passport issuing authority and transmit updated bio-page copies to IRCC.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

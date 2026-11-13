@@ -1,0 +1,79 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "The reference or experience letter from the employer should be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "The reference letter must include the applicant's name, company contact information (address, telephone number, and email address), and the name, title, and signature of the immediate supervisor or personnel officer at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company"
+    },
+    {
+      "id": "positions-held",
+      "text": "The reference letter should indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "The reference letter must include job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    }
+  ],
+  "basis": [
+    "Document uploaded under employment_reference_letter slot for case a9872c8ef442169e6fd44175c86eaf3e.",
+    "Document is a 2-page PDF file submitted as proof of declared skilled work experience."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "a9872c8ef442169e6fd44175c86eaf3e",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "a9872c8ef442169e6fd44175c86eaf3e.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a7a48237fade87817c617dc31077f73144f8a0b3f5632853e1fed8a20ba20dde",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70e3cfc57c53364513e772f06ffe625ca9a019fb5141008af4e62d59611e23bf",
+    "prompt_hash": "940a8b2dfb42d00bbd3ac12281544303e9a297844cbbbf20408f924792e76636",
+    "output_hash": "21ccfefe8a1eb2df01ffd942858e44717c63009f43d0b5c85e40f8cd90e49152",
+    "returncode": 0,
+    "timestamp": "2026-07-24T08:17:31.100381+00:00",
+    "provenance_digest": "aabdbbacc9164ee3525ae3559be6b214b2e4d36d7c52bd22fa5c81e758c151e4"
+  }
+}

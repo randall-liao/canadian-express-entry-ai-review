@@ -1,0 +1,146 @@
+{
+  "doc_type": "employment_reference_letter",
+  "timestamp": "2026-07-23T03:34:31.760491+00:00",
+  "summary": "IRCC Express Entry operational guidelines for completeness checks require employment reference letters to contain mandatory details: company letterhead, full contact details, supervisor signature and title, exact dates, weekly working hours, annual salary plus benefits, and detailed duties matching the target NOC. Omission of hours, salary, supervisor signatures, or official letterhead can lead to upfront application rejection under R10 or refusal under A11.2 / C34 for lack of proof.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:35:38.731887+00:00",
+    "duration_seconds": 69.832,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "83284abe3ac372db45cd7882d191369b209be95c3bf45eac06c1d0acebf9e332",
+    "raw_output_sha256": "dee532a1ee0d97bd79b7ae1f2466c961b11fc86384372143e584c8d7ac562ce1",
+    "returncode": 0,
+    "provenance_token": "1a3e8febbfd0d759039f103dade42cc7b2a6daa62dc2865d811ed8602b3926af",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_fetch",
+      "web_fetch",
+      "web_fetch"
+    ],
+    "tool_call_count": 4,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-EMPLOYME-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Missing Weekly Working Hours",
+      "description": "IRCC operational instructions explicitly require reference letters to state the exact number of hours worked per week. Omission prevents officers from determining whether work experience meets the full-time threshold (30+ hours/week) or calculating equivalent part-time hours, triggering R10 completeness rejection or loss of points.",
+      "affected_fields": [
+        "work_hours_per_week",
+        "employment_status"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2016-completeness-check.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "should indicate all positions held while employed at the company and must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits;",
+      "remediation_hypothesis": "Obtain a revised letter from employer specifying average weekly hours worked. If unattainable, submit detailed pay stubs showing hours worked alongside an employment contract and Letter of Explanation (LoE).",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-EMPLOYME-02",
+      "category": "pfl_duties_mismatch",
+      "severity": "critical",
+      "title": "NOC Lead Duty Mismatch or Verbatim Copying",
+      "description": "If job duties listed on the reference letter fail to demonstrate that the applicant performed the main duties and lead statement of the declared NOC code, or if the duties are copy-pasted verbatim from the NOC description, IRCC officers will refuse the work experience points or issue a PFL for non-genuine duties.",
+      "affected_fields": [
+        "duties_and_responsibilities",
+        "noc_code"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2016-completeness-check.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "should indicate all positions held while employed at the company and must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company...",
+      "remediation_hypothesis": "Provide a supplemental letter from the employer detailing authentic company-specific tasks performed daily. Provide supporting evidence such as project documentation, performance evaluations, and an LoE mapping duties to NOC main duties.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-EMPLOYME-03",
+      "category": "pfl_validity_authenticity",
+      "severity": "critical",
+      "title": "Non-Official Company Letterhead or Missing Contact Information",
+      "description": "Reference letters submitted on plain paper or lacking full corporate contact information (address, telephone number, email) fail IRCC completeness checks and raise authenticity concerns, leading to upfront cancellation or procedural fairness letters.",
+      "affected_fields": [
+        "company_letterhead",
+        "company_address",
+        "company_telephone",
+        "company_email"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2016-completeness-check.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "should be an official document printed on company letterhead (must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company),",
+      "remediation_hypothesis": "Re-issue the reference letter on official corporate letterhead featuring complete address, telephone number, and official domain email. If company is defunct, supply business registration records, tax filings (T4/NOA), and a sworn affidavit.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-EMPLOYME-04",
+      "category": "pfl_incomplete_evidence",
+      "severity": "high",
+      "title": "Missing Supervisor Signature and Contact Details",
+      "description": "Letters that lack the signature, printed name, or job title of an immediate supervisor or HR personnel officer fail mandatory IRCC document requirements, leading to verification failure or rejection for completeness.",
+      "affected_fields": [
+        "supervisor_name",
+        "supervisor_title",
+        "supervisor_signature",
+        "supervisor_contact_info"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2016-completeness-check.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company",
+      "remediation_hypothesis": "Obtain a signed letter specifying supervisor's title and direct contact information, accompanied by their business card or employee directory listing.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-EMPLOYME-05",
+      "category": "pfl_incomplete_evidence",
+      "severity": "medium",
+      "title": "Missing Salary and Compensation Details",
+      "description": "Omitting annual salary and benefits information violates explicit IRCC proof of work experience requirements and creates ambiguity regarding whether the work was paid full-time employment or unpaid/volunteer work.",
+      "affected_fields": [
+        "annual_salary",
+        "benefits"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2016-completeness-check.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits;",
+      "remediation_hypothesis": "Request an updated letter stating annual salary and benefits, or supplement with CRA T4 statements, pay slips, and employment contracts confirming remuneration.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

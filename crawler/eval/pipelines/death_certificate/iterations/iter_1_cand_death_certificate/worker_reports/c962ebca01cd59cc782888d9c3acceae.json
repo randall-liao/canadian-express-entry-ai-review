@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-certificate-requirement",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided when the marital status is listed as widowed.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "This document is requested only when the marital status is listed as widowed.\n  * A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided."
+    }
+  ],
+  "basis": [
+    "The document uploaded under slot death_certificate for case c962ebca01cd59cc782888d9c3acceae was evaluated against completeness and field validation criteria including translation, registration/seals, and widowed marital status alignment."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "c962ebca01cd59cc782888d9c3acceae",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c962ebca01cd59cc782888d9c3acceae.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c2cbd9e2da2bc1cbe7ed8ddf7467e9f8e5d622fdf50c49fc41575276175a0e6b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f5dd7cb2d45c0135570f1d3733db8965b317ddc35c2e55734554615b82b27034",
+    "prompt_hash": "fdb52944bd9c0b5d37aa8c37c9960a73eb891a8ec5c4942445d815d17bfdf5a3",
+    "output_hash": "3b0c45f931dae834f41261e9afb7e4d4cc3776a9f2fc536437c4635e449c8d5b",
+    "returncode": 0,
+    "timestamp": "2026-07-24T18:01:37.434317+00:00",
+    "provenance_digest": "fc849ffec998f7b64fe08657caf914e511ef4487add07713ed10cd56f25d7204"
+  }
+}

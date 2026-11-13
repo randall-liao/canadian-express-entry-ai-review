@@ -1,0 +1,32 @@
+{
+  "status": "success",
+  "engine": "copilot-cli",
+  "is_live": true,
+  "model": "gemini-3.6-flash",
+  "timestamp": "2026-07-23T07:01:17.062301+00:00",
+  "duration_seconds": 104.852,
+  "command": [
+    "copilot",
+    "--model",
+    "gemini-3.6-flash",
+    "--context",
+    "long_context",
+    "--available-tools",
+    "web_search,web_fetch",
+    "--allow-all-tools",
+    "--allow-all-urls",
+    "--disallow-temp-dir",
+    "--no-ask-user",
+    "--no-custom-instructions",
+    "--output-format",
+    "json",
+    "--stream",
+    "off"
+  ],
+  "prompt_sha256": "ac469b35e463c749fe4a3dd40703e2201721fc0324dd00033b6d2ff151ae43dd",
+  "raw_output_sha256": "b3b5065a61ae281357d1a48c7de39d9755c166ae79093be92d70fab8d988eee3",
+  "returncode": 0,
+  "provenance_token": "aba68d254d6f7ed77def627e1137dc12c0abc615677addfd8f63789e2251b0b5",
+  "case_count": 5,
+  "total_fixtures": 10
+}

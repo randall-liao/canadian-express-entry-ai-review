@@ -1,0 +1,55 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)."
+    }
+  ],
+  "basis": [
+    "The applicant submitted document file 4dbe04ebe035b79589b4c16ac199d62e.pdf under the proof_of_other_name document upload slot.",
+    "The document provided is a foreign language (Spanish) name change certificate submitted with an uncertified translation and lacking an accompanying certified translator affidavit (translation_certified: false, translator_affidavit: null), triggering defect PFL-POON_NAME-04."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "4dbe04ebe035b79589b4c16ac199d62e",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4dbe04ebe035b79589b4c16ac199d62e.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "28139f3aa0cbf965264c18574b8a4260c2c3fc78330bb7df6096878eb2b27825",
+    "allowed_text_sha256": null,
+    "bundle_hash": "748b40f14cf988381632e9add00202e9c1a5ae2f047e07ca25d5ecd9f374c4d8",
+    "prompt_hash": "57f3807c519185bf145404958b100070311ffaf37d723af29de1fb879d014339",
+    "output_hash": "32c721c4057a8413074beee6b4e5b9e572ea44fdc8f9345942577eec60242e4b",
+    "returncode": 0,
+    "timestamp": "2026-07-24T13:57:13.322621+00:00",
+    "provenance_digest": "4726620859e133b58f7ccc444d37c9ccb32cd9bfb2602c7c9f8581be477ba7f6"
+  }
+}

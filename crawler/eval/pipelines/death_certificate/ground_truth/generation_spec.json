@@ -1,0 +1,237 @@
+{
+  "doc_type": "death_certificate",
+  "timestamp": "2026-07-23T03:05:06.653000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "death_certificate",
+      "title": "Official Certificate of Death - Province of Ontario",
+      "issuing_authority": "Office of the Registrar General, Ontario, Canada",
+      "issue_date": "2022-11-10",
+      "expiry_date": null,
+      "fields": {
+        "deceased_full_name": "Arthur Pendelton",
+        "deceased_date_of_birth": "1954-08-12",
+        "deceased_date_of_death": "2022-11-04",
+        "deceased_gender": "Male",
+        "place_of_death": "Metro General Hospital, Toronto, Ontario",
+        "cause_of_death": "Cardiopulmonary arrest secondary to acute myocardial infarction",
+        "registration_number": "DC-2022-883921",
+        "registration_date": "2022-11-07",
+        "issuing_authority_seal": "Official Embossed Seal of the Registrar General of Ontario",
+        "registrar_signature": "Signed by Registrar General M. Vance",
+        "language_of_document": "English",
+        "translation_affidavit": "Not Applicable (Original issued in English)",
+        "certified_translator_stamp": "Not Applicable",
+        "applicant_relationship": "Spouse of Deceased (Applicant: Eleanor Pendelton)",
+        "marital_status_declaration": "Widowed following spouse passing on November 4, 2022",
+        "marital_status_code": "WIDOWED",
+        "family_composition": "Primary Applicant (Eleanor Pendelton), Spouse Deceased (Arthur Pendelton), 1 Dependent Child",
+        "proof_of_marital_status": "Official Certified Death Certificate DC-2022-883921"
+      },
+      "narrative_blocks": [
+        "This official document certifies that the death of Arthur Pendelton occurred on November 4, 2022, in Toronto, Ontario. The death was registered under registration number DC-2022-883921 on November 7, 2022.",
+        "Issued under the authority of the Vital Statistics Act by the Office of the Registrar General of Ontario. The document bears the official seal and authorized signature of the Registrar General."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "death_certificate",
+      "title": "Certificado de Defunción - Registro Civil de Santiago",
+      "issuing_authority": "Servicio de Registro Civil e Identificación, Chile",
+      "issue_date": "2023-03-15",
+      "expiry_date": null,
+      "fields": {
+        "deceased_full_name": "Mateo Silva",
+        "deceased_date_of_birth": "1958-04-20",
+        "deceased_date_of_death": "2023-03-12",
+        "deceased_gender": "Male",
+        "place_of_death": "Hospital Salvador, Santiago",
+        "cause_of_death": "Falla multiorgánica",
+        "registration_number": "CL-2023-44910",
+        "registration_date": "2023-03-14",
+        "issuing_authority_seal": "Sello Oficial del Registro Civil de Santiago",
+        "registrar_signature": "Firma del Oficial Civil Registrar",
+        "language_of_document": "Spanish",
+        "translation_affidavit": null,
+        "certified_translator_stamp": null,
+        "applicant_relationship": "Spouse of Deceased",
+        "marital_status_declaration": "Widowed",
+        "marital_status_code": "WIDOWED",
+        "family_composition": "Primary Applicant and Dependent Children",
+        "proof_of_marital_status": "Foreign Death Certificate submitted in Spanish without translation"
+      },
+      "narrative_blocks": [
+        "Certificado de Defunción emitido por el Registro Civil de Santiago. Se certifica el fallecimiento de Mateo Silva ocurrido el 12 de marzo de 2023.",
+        "El documento fue expedido en idioma español y entregado a la autoridad migratoria en su versión original sin adjuntar traducción al inglés o francés ni la correspondiente declaración jurada del traductor."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DEATH_CE-01",
+        "category": "pfl_translation_noncompliance",
+        "severity": "critical",
+        "description": "The foreign language death certificate was submitted without a certified English or French translation, missing the required translator affidavit and official translator credentials or seal.",
+        "affected_fields": [
+          "language_of_document",
+          "translation_affidavit",
+          "certified_translator_stamp"
+        ],
+        "mutation_details": {
+          "original_language": "Spanish",
+          "translation_provided": false,
+          "affidavit_status": "absent",
+          "translator_stamp_status": "absent"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "death_certificate",
+      "title": "Unverified Record of Death",
+      "issuing_authority": "Department of Health & Civil Records",
+      "issue_date": "2023-01-20",
+      "expiry_date": null,
+      "fields": {
+        "deceased_full_name": "Robert Vance",
+        "deceased_date_of_birth": "1962-11-03",
+        "deceased_date_of_death": "2023-01-14",
+        "deceased_gender": "Male",
+        "place_of_death": "St. Jude Medical Center",
+        "cause_of_death": "Respiratory Failure",
+        "registration_number": null,
+        "registration_date": "2023-01-18",
+        "issuing_authority_seal": null,
+        "registrar_signature": null,
+        "language_of_document": "English",
+        "translation_affidavit": "Not Applicable",
+        "certified_translator_stamp": "Not Applicable",
+        "applicant_relationship": "Spouse of Deceased",
+        "marital_status_declaration": "Widowed",
+        "marital_status_code": "WIDOWED",
+        "family_composition": "Primary Applicant",
+        "proof_of_marital_status": "Unsealed Death Record Form"
+      },
+      "narrative_blocks": [
+        "This record states that Robert Vance passed away on January 14, 2023. However, the document lacks an official registration tracking or reference number.",
+        "The space designated for the official seal of the issuing authority and the signature of the civil registrar remains completely blank, rendering the document legally unverified."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DEATH_CE-02",
+        "category": "pfl_authenticity_validity",
+        "severity": "critical",
+        "description": "The submitted death certificate lacks mandatory authenticity markers, specifically missing the official civil registrar seal, authorized signature, and official registration entry number.",
+        "affected_fields": [
+          "issuing_authority_seal",
+          "registrar_signature",
+          "registration_number"
+        ],
+        "mutation_details": {
+          "seal_present": false,
+          "signature_present": false,
+          "registration_number_status": "missing"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "death_certificate",
+      "title": "Death Registration Extract - Civil Status Office",
+      "issuing_authority": "General Civil Status Bureau",
+      "issue_date": "2023-04-05",
+      "expiry_date": null,
+      "fields": {
+        "deceased_full_name": "Carlos Eduardo Gomez Ruiz",
+        "deceased_date_of_birth": "1960-03-12",
+        "deceased_date_of_death": "2023-03-28",
+        "deceased_gender": "Male",
+        "place_of_death": "Central Municipal Hospital",
+        "cause_of_death": "Cerebrovascular Accident",
+        "registration_number": "DR-2023-90182",
+        "registration_date": "2023-04-01",
+        "issuing_authority_seal": "Official Bureau Seal",
+        "registrar_signature": "Registrar Administrator Stamp & Signature",
+        "language_of_document": "English",
+        "translation_affidavit": "Not Applicable",
+        "certified_translator_stamp": "Not Applicable",
+        "applicant_relationship": "Brother of Deceased",
+        "marital_status_declaration": "Applicant declared spouse Carlos Gomez (DOB 1962-07-25) in Express Entry, but submitted certificate for brother Carlos Eduardo Gomez Ruiz (DOB 1960-03-12)",
+        "marital_status_code": "MARRIED",
+        "family_composition": "Primary Applicant and Spouse",
+        "proof_of_marital_status": "Death Certificate with mismatched identity details"
+      },
+      "narrative_blocks": [
+        "Death certificate issued for Carlos Eduardo Gomez Ruiz, born March 12, 1960. The document indicates the applicant's relationship to the deceased as sibling.",
+        "Express Entry profile records list the applicant's spouse as Carlos Gomez born July 25, 1962, introducing critical discrepancies in full legal name, date of birth, and declared familial relationship."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DEATH_CE-03",
+        "category": "pfl_mismatch_discrepancy",
+        "severity": "critical",
+        "description": "Significant identity discrepancies exist between the submitted death certificate and Express Entry profile data regarding the deceased's full name, date of birth, and declared relationship to the applicant.",
+        "affected_fields": [
+          "deceased_full_name",
+          "deceased_date_of_birth",
+          "applicant_relationship",
+          "marital_status_declaration"
+        ],
+        "mutation_details": {
+          "profile_name": "Carlos Gomez",
+          "document_name": "Carlos Eduardo Gomez Ruiz",
+          "profile_dob": "1962-07-25",
+          "document_dob": "1960-03-12",
+          "profile_relationship": "Spouse",
+          "document_relationship": "Brother"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "death_certificate",
+      "title": "Undisclosed Marital Status Change Evidence File",
+      "issuing_authority": "Department of Vital Statistics",
+      "issue_date": "2023-06-10",
+      "expiry_date": null,
+      "fields": {
+        "deceased_full_name": "David Miller",
+        "deceased_date_of_birth": "1975-09-18",
+        "deceased_date_of_death": "2023-05-15",
+        "deceased_gender": "Male",
+        "place_of_death": "Grace Hospital",
+        "cause_of_death": "Cardiac Failure",
+        "registration_number": "DC-2023-11204",
+        "registration_date": "2023-05-19",
+        "issuing_authority_seal": "Department Seal",
+        "registrar_signature": "Registrar Signature",
+        "language_of_document": "English",
+        "translation_affidavit": "Not Applicable",
+        "certified_translator_stamp": "Not Applicable",
+        "applicant_relationship": "Spouse of Deceased",
+        "marital_status_declaration": "Declared Married in e-APR submission post-ITA despite spouse passing",
+        "marital_status_code": "MARRIED",
+        "family_composition": "Primary Applicant and Accompanying Spouse (Spouse deceased post-ITA but undisclosed)",
+        "proof_of_marital_status": "Omitted - Death certificate not provided post-ITA"
+      },
+      "narrative_blocks": [
+        "The applicant received an Invitation to Apply (ITA) as Married. Following the passing of spouse David Miller post-ITA, the applicant submitted the e-APR maintaining the 'MARRIED' status code.",
+        "The applicant failed to disclose the change in marital status to Widowed and omitted the mandatory death certificate from the post-ITA document submission package."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-DEATH_CE-04",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The applicant failed to declare a post-ITA change in marital status following the death of their spouse and omitted the required death certificate evidence, leaving family composition inaccurate.",
+        "affected_fields": [
+          "marital_status_code",
+          "family_composition",
+          "proof_of_marital_status"
+        ],
+        "mutation_details": {
+          "actual_status": "Widowed",
+          "declared_status": "Married",
+          "death_certificate_attached": false,
+          "post_ita_change_disclosed": false
+        }
+      }
+    }
+  ]
+}

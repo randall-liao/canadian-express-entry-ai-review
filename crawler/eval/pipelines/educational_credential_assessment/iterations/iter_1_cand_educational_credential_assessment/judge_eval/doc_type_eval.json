@@ -1,0 +1,176 @@
+{
+  "doc_type": "educational_credential_assessment",
+  "case_evaluations": {
+    "1e9c3ffe63967d95f8382b7d957a0132": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "247b21f5e0e8e32e24f9a488989ffc60": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3ae82acc1b3cf1589d70a7579dbff92a": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 0.95,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4f0d8388867b622426e1959578b5f9d7": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6600061de2dad8889f22ebee61109015": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "7c618b02e4899811caf7e22a9e420a70": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 0.95,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b12aaadf75f594b7e827de0c785a0170": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c84a98765ddd8a869194b1bc2a3bd14f": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d7b3a166716dbd585a0efce91515ff3e": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f49c459f717534ca70ec124b8665b668": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "4f0d8388867b622426e1959578b5f9d7",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-EDUCATIO-03. Document explicitly states 'Global Academic Evaluation Agency Corp. is NOT an IRCC-designated organization' and is a 'General Employment Evaluation Report' that 'cannot be accepted for Canadian economic immigration programs'. Worker emitted a generic compliant ECA claim with no abstention. Basis contained only the filename, indicating document content was not analyzed."
+    },
+    {
+      "case_id": "6600061de2dad8889f22ebee61109015",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-EDUCATIO-01. Document states the ECA 'exceeded the maximum 5-year validity threshold' (issued 2019-01-10) and '0 CRS points can be awarded'. Worker emitted a generic claim with no abstention. Sibling scanned case b12aaadf75f594b7e827de0c785a0170 (identical narrative) WAS correctly caught, exposing non-deterministic/inconsistent handling of the same defect."
+    },
+    {
+      "case_id": "d7b3a166716dbd585a0efce91515ff3e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-EDUCATIO-03 (scanned variant). Narrative flags the non-designated organization and general-employment report type, yet worker produced a generic compliant claim. Basis referenced only the case ID, confirming the disqualifying content was never read."
+    },
+    {
+      "case_id": "4f0d8388867b622426e1959578b5f9d7",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Cross-case pattern (also 6600061d, d7b3a166): for all three missed defects the basis[] contained only the case ID or filename with zero extracted document facts, while the single claim was boilerplate. The worker answered without reading document content, which is the root cause of the recall failures."
+    },
+    {
+      "case_id": "1e9c3ffe63967d95f8382b7d957a0132",
+      "category": "blind_input",
+      "severity": "minor",
+      "description": "On vector variants the worker surfaced field values absent from the visually rendered page but matching the spec exactly (foreign credential 'Licenciatura en Arquitectura', 'National Autonomous University of Mexico', issuing org suffix '- University of Toronto'; case 3ae82acc reported 'WES-4920183/ECA' vs the decoy header 'WES-4920193'). Consistent with an embedded full-spec text layer the worker legitimately extracted, not verdict leakage — but flags that rendered vs embedded content diverges and should be validated."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/educational_credential_assessment.md",
+      "suggested_patch": "Add a mandatory pre-verdict disqualifier checklist that MUST be scanned in the narrative/notes before any compliant claim is emitted: (1) issue date > 5 years before submission (expired ECA); (2) issuing organization not IRCC-designated OR report type contains 'General Employment'/'resume'/'not accepted for immigration'; (3) institution 'unaccredited'/'not recognized' or 'unable to establish Canadian equivalency'; (4) applicant name/reference 'mismatch' or 'failed automated verification'. If ANY disqualifying phrase is present, the worker MUST abstain with reason 'defective_document' and MUST NOT emit a generic compliant ECA claim."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Require populating basis[] with concrete extracted document facts (issuing organization, issue date, reference number, credential level, equivalency outcome) before forming a verdict. Treat a basis[] that contains only the case ID or filename as an incomplete document read and force a re-extraction pass; never finalize a verdict from a basis lacking document-derived fields."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Enforce determinism/consistency: identical defect narratives across vector and scanned variants must yield the same verdict. Add a rule that scanned (image) variants must run OCR extraction and be checked against the same disqualifier list as vector variants, so recall does not degrade by input modality."
+    }
+  ],
+  "rationale": "The worker showed uniformly excellent PII containment (all applicant names/DOBs kept out of claims/prose) and blind operation, with accurate, spec-consistent facts and plausible official corpus citations (eca/educational-credential-assessment.md#014, pr-pdi/...#015). It correctly passed both valid documents (3ae82acc, 7c618b02) and correctly abstained on 5 of 8 defective documents (identity/reference mismatch 1e9c3ffe & f49c459f, unaccredited 247b21f5 & c84a9876, expired b12aaadf). However it missed 3 injected defects — two non-designated-org cases (4f0d8388, d7b3a166 / PFL-03) and one expired case (6600061d / PFL-01) — by emitting generic boilerplate claims with basis[] containing only the case ID/filename, meaning the disqualifying document text was never analyzed. This is a critical gap for an eligibility/completeness gate, made worse by inconsistency: the sibling scanned expired case was caught while the vector one was not. Reported spec values not visible on the rendered page (e.g., 'Licenciatura en Arquitectura', 'WES-4920183/ECA') are consistent with an embedded full-spec text layer the worker legitimately read rather than ground-truth leakage. Remediation should enforce a mandatory disqualifier checklist and require document-fact extraction into basis[] before any compliant verdict.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "1e9c3ffe63967d95f8382b7d957a0132.pdf",
+      "--attachment",
+      "247b21f5e0e8e32e24f9a488989ffc60.pdf",
+      "--attachment",
+      "3ae82acc1b3cf1589d70a7579dbff92a.pdf",
+      "--attachment",
+      "4f0d8388867b622426e1959578b5f9d7.pdf",
+      "--attachment",
+      "6600061de2dad8889f22ebee61109015.pdf",
+      "--attachment",
+      "7c618b02e4899811caf7e22a9e420a70.pdf",
+      "--attachment",
+      "b12aaadf75f594b7e827de0c785a0170.pdf",
+      "--attachment",
+      "c84a98765ddd8a869194b1bc2a3bd14f.pdf",
+      "--attachment",
+      "d7b3a166716dbd585a0efce91515ff3e.pdf",
+      "--attachment",
+      "f49c459f717534ca70ec124b8665b668.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "1c4be4a2bf7f1622a0a183f2dc181dac46a3884c5a5216971ee31c2600fd46be",
+    "research_hash": "1ae3e230e2dd07ecc13f070e04e6c17a217f40245861bf55564d6c951aa6b7a1",
+    "ground_truth_hash": "055e8c31f1f796465598974eb57db2d63d7a39af95d5110372982c40b83825d4",
+    "output_hash": "6479b32341df888e1aabf84fef99a969f76d892381c8dcb11a9518d8b09e05f9",
+    "timestamp": "2026-07-25T02:51:31.492747+00:00",
+    "provenance_digest": "b40136eb68e1fbe7e6132135c909edcc8b468d254e194e66096c5e98c6325814"
+  }
+}

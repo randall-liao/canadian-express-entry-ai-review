@@ -1,0 +1,302 @@
+{
+  "doc_type": "proof_of_studies",
+  "timestamp": "2026-07-23T07:02:08.072638+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "proof_of_studies",
+      "title": "Official Academic Degree and Transcript Verification",
+      "issuing_authority": "Office of the Registrar, University of Toronto",
+      "issue_date": "2023-06-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "student_id": "STU-9840215",
+        "credential_title": "Bachelor of Science in Computer Science",
+        "education_history": {
+          "institution_name": "University of Toronto",
+          "program_name": "Computer Science Specialist Program",
+          "start_date": "2018-09-01",
+          "end_date": "2022-05-15",
+          "completion_date": "2022-05-15",
+          "degree_conferral_date": "2022-06-10",
+          "eca_reference_number": "ECA-2022-894102",
+          "transcripts": [
+            {
+              "term": "Fall 2018",
+              "courses": [
+                {
+                  "code": "CSC108H1",
+                  "title": "Introduction to Computer Programming",
+                  "grade": "A",
+                  "credits": 0.5
+                },
+                {
+                  "code": "MAT137Y1",
+                  "title": "Calculus with Proofs",
+                  "grade": "A-",
+                  "credits": 1.0
+                }
+              ]
+            },
+            {
+              "term": "Winter 2022",
+              "courses": [
+                {
+                  "code": "CSC488H1",
+                  "title": "Compilers and Interpreters",
+                  "grade": "A",
+                  "credits": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        "work_history": {
+          "period_of_employment": "2022-07-01 to 2025-01-01",
+          "employer_name": "Tech Corp Solutions",
+          "position": "Software Engineer"
+        }
+      },
+      "narrative_blocks": [
+        "This document certifies that Jane Doe has successfully completed all academic requirements for the Bachelor of Science in Computer Science degree at the University of Toronto.",
+        "Official academic transcripts have been transmitted directly from the Office of the Registrar to verify program completion, course credits, and cumulative grade point average."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_studies",
+      "title": "Incomplete Academic Evidence Record",
+      "issuing_authority": "Department of Higher Education Services",
+      "issue_date": "2023-08-20",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "John Smith",
+        "student_id": "STU-1120492",
+        "credential_title": "Bachelor of Arts in Economics",
+        "education_history": {
+          "institution_name": "",
+          "program_name": "Economics Major",
+          "start_date": "2017-09-01",
+          "end_date": "2021-05-20",
+          "completion_date": "2021-05-20",
+          "degree_conferral_date": "2021-06-01",
+          "eca_reference_number": "ECA-2021-334190",
+          "transcripts": null
+        },
+        "work_history": {
+          "period_of_employment": "2021-07-01 to 2025-01-01",
+          "employer_name": "Global Analytics Inc.",
+          "position": "Financial Analyst"
+        }
+      },
+      "narrative_blocks": [
+        "This document provides proof of studies for John Smith regarding enrollment in the Economics program.",
+        "Please note that complete official transcript schedules and verified institution credentials could not be retrieved from the applicant submission."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POS_STUD-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The submitted proof of studies lacks official academic transcripts and leaves the institution name blank, resulting in incomplete evidence for educational qualification assessment.",
+        "affected_fields": [
+          "education_history.transcripts",
+          "education_history.institution_name"
+        ],
+        "mutation_details": {
+          "transcripts_status": "missing_or_null",
+          "institution_name_status": "empty_string"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_studies",
+      "title": "Unaccredited Institution Educational Verification Record",
+      "issuing_authority": "Academic Credential Evaluation Services",
+      "issue_date": "2023-11-10",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Alice Johnson",
+        "student_id": "GVA-773104",
+        "credential_title": "Master of Business Administration",
+        "education_history": {
+          "institution_name": "Global Virtual Apex University",
+          "program_name": "Executive MBA",
+          "start_date": "2020-01-10",
+          "end_date": "2020-07-15",
+          "completion_date": "2020-07-15",
+          "degree_conferral_date": "2020-07-20",
+          "eca_reference_number": "INVALID-ECA-UNACCREDITED-9999",
+          "transcripts": [
+            {
+              "term": "Spring 2020",
+              "courses": [
+                {
+                  "code": "MBA601",
+                  "title": "Rapid Business Leadership",
+                  "grade": "A+",
+                  "credits": 3.0
+                }
+              ]
+            }
+          ]
+        },
+        "work_history": {
+          "period_of_employment": "2020-08-01 to 2025-05-01",
+          "employer_name": "Apex Management Consulting",
+          "position": "Operations Manager"
+        }
+      },
+      "narrative_blocks": [
+        "Alice Johnson presents credentials issued by Global Virtual Apex University for an Executive MBA degree.",
+        "Educational Credential Assessment (ECA) validation failed as the issuing authority is not recognized by accredited educational quality assurance bodies."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POS_STUD-02",
+        "category": "pfl_unaccredited_institution",
+        "severity": "critical",
+        "description": "The educational institution provided is unaccredited and unrecognized by regulatory bodies, leading to an invalid ECA reference status.",
+        "affected_fields": [
+          "education_history.institution_name",
+          "education_history.eca_reference_number"
+        ],
+        "mutation_details": {
+          "institution_accreditation_status": "unaccredited",
+          "eca_validation_result": "invalid_or_rejected"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_studies",
+      "title": "Academic Study Record with Unexplained Enrollment Gaps",
+      "issuing_authority": "Office of Academic Records, McGill University",
+      "issue_date": "2023-09-05",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Robert Brown",
+        "student_id": "STU-4401928",
+        "credential_title": "Bachelor of Engineering in Mechanical Engineering",
+        "education_history": {
+          "institution_name": "McGill University",
+          "program_name": "Mechanical Engineering",
+          "start_date": "2012-09-01",
+          "end_date": "2022-05-31",
+          "completion_date": "2022-05-31",
+          "degree_conferral_date": "2022-06-15",
+          "eca_reference_number": "ECA-2022-441092",
+          "transcripts": [
+            {
+              "term": "Fall 2012",
+              "courses": [
+                {
+                  "code": "MECH200",
+                  "title": "Solid Mechanics",
+                  "grade": "B",
+                  "credits": 3.0
+                }
+              ]
+            },
+            {
+              "term": "Winter 2022",
+              "courses": [
+                {
+                  "code": "MECH490",
+                  "title": "Capstone Design",
+                  "grade": "A-",
+                  "credits": 4.0
+                }
+              ]
+            }
+          ]
+        },
+        "work_history": {
+          "period_of_employment": "2014-01-01 to 2021-12-31",
+          "employer_name": "Overseas Engineering Ltd",
+          "position": "Lead Field Inspector"
+        }
+      },
+      "narrative_blocks": [
+        "Robert Brown submitted proof of studies for a Mechanical Engineering degree spanning 10 years from 2012 to 2022.",
+        "A significant timeline discrepancy exists due to overlapping full-time overseas employment from 2014 to 2021 without corresponding leave of absence or part-time study designation."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POS_STUD-03",
+        "category": "pfl_timeline_discrepancy",
+        "severity": "critical",
+        "description": "Unexplained timeline discrepancy and enrollment gaps between the decade-long study duration and simultaneous full-time overseas employment.",
+        "affected_fields": [
+          "education_history.start_date",
+          "education_history.end_date",
+          "work_history.period_of_employment"
+        ],
+        "mutation_details": {
+          "enrollment_duration_years": 10,
+          "overlapping_employment_period": "2014-01-01 to 2021-12-31",
+          "discrepancy_type": "unexplained_overlap_and_gaps"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_studies",
+      "title": "Degree Completion Date Verification Mismatch",
+      "issuing_authority": "Enrolment Services, University of British Columbia",
+      "issue_date": "2024-01-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Emily Davis",
+        "student_id": "STU-8820194",
+        "credential_title": "Bachelor of Science in Nursing",
+        "education_history": {
+          "institution_name": "University of British Columbia",
+          "program_name": "Bachelor of Science in Nursing",
+          "start_date": "2017-09-01",
+          "end_date": "2021-05-15",
+          "completion_date": "2021-05-15",
+          "degree_conferral_date": "2023-11-20",
+          "eca_reference_number": "ECA-2023-908123",
+          "transcripts": [
+            {
+              "term": "Fall 2023",
+              "courses": [
+                {
+                  "code": "NURS401",
+                  "title": "Advanced Clinical Practice",
+                  "grade": "P",
+                  "credits": 6.0
+                }
+              ]
+            }
+          ]
+        },
+        "work_history": {
+          "period_of_employment": "2021-06-01 to 2025-01-01",
+          "employer_name": "Metro Health Network",
+          "position": "Registered Nurse"
+        }
+      },
+      "narrative_blocks": [
+        "Emily Davis submitted proof of studies listing degree completion on May 15, 2021.",
+        "Official transcript records and degree conferral documentation state the actual degree completion and conferral date as November 20, 2023, revealing a multi-year mismatch."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-POS_STUD-04",
+        "category": "pfl_data_mismatch",
+        "severity": "critical",
+        "description": "Direct mismatch between the declared completion date in the applicant profile (2021-05-15) and the official degree conferral date on transcripts (2023-11-20).",
+        "affected_fields": [
+          "education_history.completion_date",
+          "education_history.degree_conferral_date"
+        ],
+        "mutation_details": {
+          "profile_completion_date": "2021-05-15",
+          "transcript_conferral_date": "2023-11-20",
+          "date_mismatch_months": 30
+        }
+      }
+    }
+  ]
+}

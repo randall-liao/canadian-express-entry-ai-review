@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "Divorce order or certificate of divorce issued where the divorce took place, along with a legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant has uploaded a divorce certificate corresponding to a declared marital status of divorced."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "360b466384206dbbdaa0738f02ecab34",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "360b466384206dbbdaa0738f02ecab34.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "1532faa0a9d5443bbb55d038e7ef4d1c83caa1bf89664d7bf36450b370252fc3",
+    "allowed_text_sha256": null,
+    "bundle_hash": "25386273fa5b9e25c9edc6cbcb170e74ded83a3898bee226c8e24f8fb31f9ba1",
+    "prompt_hash": "84e0599c53cd07398e7c902453f822de8f2d785cb41b12b546a996cf5cfe5f6c",
+    "output_hash": "fb58b06366357555e94856cb3565b55b7ddc212e77a496bf983704336a0882a2",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:11:11.734349+00:00",
+    "provenance_digest": "3e06633db7ede4843c555e3ac35b84692b66ac47e050c03c15b1293f5865e2ec"
+  }
+}

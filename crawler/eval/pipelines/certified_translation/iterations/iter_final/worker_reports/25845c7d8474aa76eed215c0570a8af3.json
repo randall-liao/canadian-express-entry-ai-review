@@ -1,0 +1,62 @@
+{
+  "question": "How must an applicant translate a supporting document that is not in English or French?",
+  "claims": [
+    {
+      "id": "translation-certified",
+      "text": "If a supporting document is in a language other than English or French, the applicant must provide IRCC with an English or French translation stamped by a certified translator or accompanied by an affidavit from the person who completed the translation.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French. Both the source document and the translation must either be stamped by the translator or referred to in the affidavit"
+    },
+    {
+      "id": "translation-defect-missing-stamp-and-credentials",
+      "text": "The submitted translation document is non-compliant because it is missing the required certified translator stamp, professional translation association name, and official membership registration number.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French. Both the source document and the translation must either be stamped by the translator or referred to in the affidavit"
+    }
+  ],
+  "basis": [
+    "The applicant submitted a certified_translation upload slot under case 25845c7d8474aa76eed215c0570a8af3. Document inspection reveals that the translator's professional certification stamp, association name, and membership number are missing or unverified."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "25845c7d8474aa76eed215c0570a8af3",
+  "doc_type": "certified_translation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "25845c7d8474aa76eed215c0570a8af3.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "1ab7163937c3168c7a2ac48dbf4ba9df6b6b36a06747963a77696badfe9e5b9d",
+    "allowed_text_sha256": null,
+    "bundle_hash": "4a37d63bb4b1ec8d3568c9d28d63373033f20464f6e70d6cc52d3ed8159fd14a",
+    "prompt_hash": "997ba11ad12bff4db4f840042d4a32bc088260905f7b2f7018d044c7b7209cac",
+    "output_hash": "083df67aa524f05f4c6f1f9ad291ff940d0f65fd692e34f947ead4d075e291a6",
+    "returncode": 0,
+    "timestamp": "2026-07-25T04:00:32.915997+00:00",
+    "provenance_digest": "401eda3a47f531a3509b440c0eacbdce8de8e5f3c510443eb2ea9865f26202dd"
+  }
+}

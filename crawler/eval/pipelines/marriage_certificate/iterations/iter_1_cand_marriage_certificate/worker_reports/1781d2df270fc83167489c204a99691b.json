@@ -1,0 +1,55 @@
+{
+  "question": "What marriage document is required when an applicant's marital status is married?",
+  "claims": [
+    {
+      "id": "marriage-certificate-requirement",
+      "text": "A copy of the legal marriage certificate issued by the country, territory, or province where the marriage took place must be provided when the applicant's marital status is listed as married.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant has declared a marital status of married for Express Entry.",
+    "The submitted document in slot marriage_certificate corresponds to case 1781d2df270fc83167489c204a99691b."
+  ],
+  "abstentions": [],
+  "prose": "When an applicant's marital status is listed as married, a legal marriage certificate issued by the country, territory, or region where the marriage took place must be provided.",
+  "case_id": "1781d2df270fc83167489c204a99691b",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "1781d2df270fc83167489c204a99691b.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "0cec76213ffacc640d7801b6913b042ac1119c4bcf2c28aebc88c19adb497511",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70d5c9e6de1b058c0a06652945be079d07ca12b21cbeaa54c33b6cb451fc21bd",
+    "prompt_hash": "f177add2b6701147735f1fdf709885de2b84da4272b849c7714cfbd188afba0b",
+    "output_hash": "f51dbaab0883f98e246ab7be29a61e71dc99f7300874ce40b0b8d717a4383f9a",
+    "returncode": 0,
+    "timestamp": "2026-07-24T09:58:04.843056+00:00",
+    "provenance_digest": "09174363489271e8e0c3fc2dcbfd45992bf208774fb108653aca6b3802275c62"
+  }
+}

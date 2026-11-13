@@ -1,0 +1,78 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "The reference or experience letter must be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "The reference or experience letter must include the applicant's name, company contact information, and signatory details.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "(must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company)"
+    },
+    {
+      "id": "positions-held",
+      "text": "The reference or experience letter must indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "The reference or experience letter must include job title, duties and responsibilities, job status, dates worked, work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    }
+  ],
+  "basis": [
+    "Evaluation of employment reference letter for opaque case ID 04597da96ea65edadb49ead722f7cf40 under document upload-slot type employment_reference_letter."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "04597da96ea65edadb49ead722f7cf40",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "04597da96ea65edadb49ead722f7cf40.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "035d6644583cd327df2a87e29612dfaf974e8da71188855292e33ff4b67d9728",
+    "allowed_text_sha256": null,
+    "bundle_hash": "6728af7f41adec9652dcc49c622f081b591c295162c6e199c4a0c8796ca3d079",
+    "prompt_hash": "91f3de8a37a13c79166613672d4a82428086946c4c325e27ddda4ebccf9f6857",
+    "output_hash": "5ac4466deaf5b4aafc267d5069140d31001e9f5641b6f92e5fc411744ab2b742",
+    "returncode": 0,
+    "timestamp": "2026-07-23T12:13:18.310880+00:00",
+    "provenance_digest": "6261ddd27e167b5f262c5dea75eaf210aef55aae487721f269494c8c7fc59cfa"
+  }
+}

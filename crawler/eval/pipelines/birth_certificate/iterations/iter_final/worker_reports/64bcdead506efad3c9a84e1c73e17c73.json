@@ -1,0 +1,54 @@
+{
+  "question": "What birth document is required for an applicant's dependent children?",
+  "claims": [
+    {
+      "id": "birth-cert-options",
+      "text": "birth certificate, an equivalent document, or a letter of explanation",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024"
+      ],
+      "quote": "* This document is required only if the applicant identifies dependent children.\n  * The document must be one of the following: \n    * birth certificate;\n    * equivalent document from the birth country; or\n    * letter of explanation (where no birth certificate is available in the country)."
+    }
+  ],
+  "basis": [
+    "The applicant submitted document slot birth_certificate for opaque case ID 64bcdead506efad3c9a84e1c73e17c73 regarding dependent children."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "64bcdead506efad3c9a84e1c73e17c73",
+  "doc_type": "birth_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "64bcdead506efad3c9a84e1c73e17c73.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e332652eb43248214e22e51aa23c63b19dc0d999f4ca05191057b6dee5ea54a8",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c6fb3ed46c3c9f1c6e75316462cae682d3647ca04da25bdfdc64b5b62b58cc5d",
+    "prompt_hash": "1f520e78283eb6b9ac337b860d8245acc86ba8326ec03ec191a1f622e00b7b56",
+    "output_hash": "6d91b7ae5008517ee54409e17c21c856b11fa258490be035eba314b51ad99dc2",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:38:14.268558+00:00",
+    "provenance_digest": "3a38009d942937e67ca30094553d1e3d0562adfbfdf0a95c281c2476ad4cfe02"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "The reference or experience letter from the employer must be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "The reference letter must include the applicant's name, company contact information including address, telephone number and email address, and the name, title and signature of the immediate supervisor or personnel officer.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company"
+    },
+    {
+      "id": "positions-held",
+      "text": "The reference letter must indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "The reference letter must include specific employment details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    }
+  ],
+  "basis": [
+    "Applicant submitted an employment reference letter document (file 757014e2b6d8678e024e88d7db54d799.pdf) under the employment_reference_letter upload slot for case 757014e2b6d8678e024e88d7db54d799.",
+    "The completeness check assesses whether mandatory documents and required detail fields are present for declared work experience."
+  ],
+  "abstentions": [],
+  "prose": "Under Express Entry completeness check guidelines, an employer reference or experience letter is mandatory for each declared work experience. The letter must be an official document printed on company letterhead and must include the applicant's name, company contact details (address, phone number, email), and the supervisor or personnel officer's name, title, and signature. It must state all positions held at the company and provide full details including job title, duties and responsibilities, job status, dates worked, weekly work hours, and annual salary plus benefits.",
+  "case_id": "757014e2b6d8678e024e88d7db54d799",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "757014e2b6d8678e024e88d7db54d799.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "5763dd3e021ab3f06d6548cc28dd251d5b211d2e7ea72b76a4e4d119af3ab098",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70e3cfc57c53364513e772f06ffe625ca9a019fb5141008af4e62d59611e23bf",
+    "prompt_hash": "df1ff82543aaaab1839b8f9ec19aeeb9c8febfbf6d229f998cd70919616fc936",
+    "output_hash": "6fab5e3a216fb958636c3ab178ffb277447314abd4ef57ec3d3c268edf384df9",
+    "returncode": 0,
+    "timestamp": "2026-07-24T07:29:56.236691+00:00",
+    "provenance_digest": "291f9a30e063c7c585493429b56a726741df91b60f9e254a430b2c357062ae51"
+  }
+}

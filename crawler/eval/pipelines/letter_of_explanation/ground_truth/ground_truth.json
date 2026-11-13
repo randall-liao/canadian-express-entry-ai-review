@@ -1,0 +1,300 @@
+[
+  {
+    "opaque_case_id": "94315e1c3dc58eb42a9fab23dced3f12",
+    "sibling_case_id": "1f121f987b78c16a25b391c698098edd",
+    "doc_type": "letter_of_explanation",
+    "variant": "vector",
+    "blind_filename": "94315e1c3dc58eb42a9fab23dced3f12.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "applicant_name": "Jane Doe",
+      "application_number": "S304918274",
+      "uci": "11-9283-4019",
+      "subject": "Explanation of Unidentified Large Deposit and Employment Gap",
+      "submission_date": "2024-03-15",
+      "purpose_of_letter": "Clarification of financial source trail for CAD $25,000 deposit and gap in employment history between June 2022 and January 2023.",
+      "proof_of_funds": "CAD 45,000 held across TD Canada Trust Chequing Account #9823-112 and Scotia Investment Savings Account #4410-098. Includes notarized deed of gift from parent Arthur Doe with full source bank statements.",
+      "employment_history_explanation": "Employment gap from June 1, 2022, to January 15, 2023, was dedicated full-time to preparing for professional licensing examinations and academic language certification.",
+      "supporting_documents_attached": [
+        "Notarized_Gift_Deed_Arthur_Doe.pdf",
+        "Arthur_Doe_Bank_Statement_6Months.pdf",
+        "Examination_Registration_and_Completion_Certificate.pdf",
+        "Bank_Balance_Certificate_TD_Bank.pdf"
+      ],
+      "sworn_declaration_status": "Notarized Affidavit signed before Commissioner of Oaths",
+      "notary_details": "Notary Public Sarah Jenkins, License #ON-883912, Toronto, ON"
+    },
+    "pdf_sha256": "e5320a04e9349eb4ffdbffbf3d4df2697be838568d0fd98f6d889b92fa8a7b36",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:09.602235+00:00"
+  },
+  {
+    "opaque_case_id": "1f121f987b78c16a25b391c698098edd",
+    "sibling_case_id": "94315e1c3dc58eb42a9fab23dced3f12",
+    "doc_type": "letter_of_explanation",
+    "variant": "scanned",
+    "blind_filename": "1f121f987b78c16a25b391c698098edd.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "applicant_name": "Jane Doe",
+      "application_number": "S304918274",
+      "uci": "11-9283-4019",
+      "subject": "Explanation of Unidentified Large Deposit and Employment Gap",
+      "submission_date": "2024-03-15",
+      "purpose_of_letter": "Clarification of financial source trail for CAD $25,000 deposit and gap in employment history between June 2022 and January 2023.",
+      "proof_of_funds": "CAD 45,000 held across TD Canada Trust Chequing Account #9823-112 and Scotia Investment Savings Account #4410-098. Includes notarized deed of gift from parent Arthur Doe with full source bank statements.",
+      "employment_history_explanation": "Employment gap from June 1, 2022, to January 15, 2023, was dedicated full-time to preparing for professional licensing examinations and academic language certification.",
+      "supporting_documents_attached": [
+        "Notarized_Gift_Deed_Arthur_Doe.pdf",
+        "Arthur_Doe_Bank_Statement_6Months.pdf",
+        "Examination_Registration_and_Completion_Certificate.pdf",
+        "Bank_Balance_Certificate_TD_Bank.pdf"
+      ],
+      "sworn_declaration_status": "Notarized Affidavit signed before Commissioner of Oaths",
+      "notary_details": "Notary Public Sarah Jenkins, License #ON-883912, Toronto, ON"
+    },
+    "pdf_sha256": "2ae752b3b1795d6e3acd37b111e82dd54bf82c100b749b3d2a099c415859083a",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:09.602235+00:00"
+  },
+  {
+    "opaque_case_id": "939fc849afc556fa64096d9beda03ceb",
+    "sibling_case_id": "339df681bb5b1d873ef8920aa7941897",
+    "doc_type": "letter_of_explanation",
+    "variant": "vector",
+    "blind_filename": "939fc849afc556fa64096d9beda03ceb.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-LETTER_O-01",
+    "affected_fields": [
+      "proof_of_funds",
+      "bank_statements",
+      "letter_of_explanation"
+    ],
+    "fields": {
+      "applicant_name": "John Smith",
+      "application_number": "W309812739",
+      "uci": "88-1204-9918",
+      "subject": "Explanation of Financial Funds - Lump Sum Deposit",
+      "submission_date": "2024-04-10",
+      "proof_of_funds": "Lump sum deposit of CAD 50,000 deposited into personal account on March 28, 2024, claimed as personal gift from uncle.",
+      "bank_statements": "Personal account statement showing single CAD 50,000 wire deposit without originating bank records or supporting donor documentation.",
+      "letter_of_explanation": "Unsubstantiated claim that funds were gifted by family member without deed of gift, tax records, or donor bank statements.",
+      "supporting_documents_attached": [
+        "Personal_Bank_Statement_March_2024.pdf"
+      ]
+    },
+    "pdf_sha256": "1fc67da0b484a150187f7acf93f4963b674515b507ff25144b77a319326bff69",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:10.725985+00:00"
+  },
+  {
+    "opaque_case_id": "339df681bb5b1d873ef8920aa7941897",
+    "sibling_case_id": "939fc849afc556fa64096d9beda03ceb",
+    "doc_type": "letter_of_explanation",
+    "variant": "scanned",
+    "blind_filename": "339df681bb5b1d873ef8920aa7941897.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-LETTER_O-01",
+    "affected_fields": [
+      "proof_of_funds",
+      "bank_statements",
+      "letter_of_explanation"
+    ],
+    "fields": {
+      "applicant_name": "John Smith",
+      "application_number": "W309812739",
+      "uci": "88-1204-9918",
+      "subject": "Explanation of Financial Funds - Lump Sum Deposit",
+      "submission_date": "2024-04-10",
+      "proof_of_funds": "Lump sum deposit of CAD 50,000 deposited into personal account on March 28, 2024, claimed as personal gift from uncle.",
+      "bank_statements": "Personal account statement showing single CAD 50,000 wire deposit without originating bank records or supporting donor documentation.",
+      "letter_of_explanation": "Unsubstantiated claim that funds were gifted by family member without deed of gift, tax records, or donor bank statements.",
+      "supporting_documents_attached": [
+        "Personal_Bank_Statement_March_2024.pdf"
+      ]
+    },
+    "pdf_sha256": "83755b4b1313836b0040152754bae6eb338d6030e237dc9988a313c38f203039",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:10.725985+00:00"
+  },
+  {
+    "opaque_case_id": "0d6b65e8291756ef8e83f31caeeddfeb",
+    "sibling_case_id": "830e9a3ccd2825171046e225f3a4ee8e",
+    "doc_type": "letter_of_explanation",
+    "variant": "vector",
+    "blind_filename": "0d6b65e8291756ef8e83f31caeeddfeb.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-LETTER_O-02",
+    "affected_fields": [
+      "letter_of_explanation",
+      "common_law_declaration",
+      "name_change_documents",
+      "translated_documents"
+    ],
+    "fields": {
+      "applicant_name": "Eleanor Vance",
+      "application_number": "V310948210",
+      "uci": "44-9021-3381",
+      "subject": "Statutory Declaration of Common-Law Status and Name Variation Explanation",
+      "submission_date": "2024-05-02",
+      "letter_of_explanation": "Plain self-authored text document asserting common-law partnership and official name change without notarization or legal oath.",
+      "common_law_declaration": "Unsworn IMM 5409 form substitute lacking notarization, commissioner stamp, or legal witness signature.",
+      "name_change_documents": "Self-translated foreign birth certificate without certified translator affidavit or notarized name change deed.",
+      "translated_documents": "Informal English translation produced by applicant without official certified translator seal or sworn affidavit of accuracy.",
+      "sworn_declaration_status": "Unsworn / Unnotarized"
+    },
+    "pdf_sha256": "e976c5dbcbbd18472a2183b05e4767c460fd9a0f9f531b94bc078e4109cd89dd",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:11.869412+00:00"
+  },
+  {
+    "opaque_case_id": "830e9a3ccd2825171046e225f3a4ee8e",
+    "sibling_case_id": "0d6b65e8291756ef8e83f31caeeddfeb",
+    "doc_type": "letter_of_explanation",
+    "variant": "scanned",
+    "blind_filename": "830e9a3ccd2825171046e225f3a4ee8e.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-LETTER_O-02",
+    "affected_fields": [
+      "letter_of_explanation",
+      "common_law_declaration",
+      "name_change_documents",
+      "translated_documents"
+    ],
+    "fields": {
+      "applicant_name": "Eleanor Vance",
+      "application_number": "V310948210",
+      "uci": "44-9021-3381",
+      "subject": "Statutory Declaration of Common-Law Status and Name Variation Explanation",
+      "submission_date": "2024-05-02",
+      "letter_of_explanation": "Plain self-authored text document asserting common-law partnership and official name change without notarization or legal oath.",
+      "common_law_declaration": "Unsworn IMM 5409 form substitute lacking notarization, commissioner stamp, or legal witness signature.",
+      "name_change_documents": "Self-translated foreign birth certificate without certified translator affidavit or notarized name change deed.",
+      "translated_documents": "Informal English translation produced by applicant without official certified translator seal or sworn affidavit of accuracy.",
+      "sworn_declaration_status": "Unsworn / Unnotarized"
+    },
+    "pdf_sha256": "7d7eff6db64841847823360c20e1dc8836e886dcd7ace18b648509ffde7529d6",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:11.869412+00:00"
+  },
+  {
+    "opaque_case_id": "c8c3343ab8ccedd87a9d1caf9cfbbf7e",
+    "sibling_case_id": "647090503f5fa3c971b1ddf4cfee6cef",
+    "doc_type": "letter_of_explanation",
+    "variant": "vector",
+    "blind_filename": "c8c3343ab8ccedd87a9d1caf9cfbbf7e.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-LETTER_O-03",
+    "affected_fields": [
+      "letter_of_explanation",
+      "employment_reference_letters",
+      "tax_returns_and_pay_stubs",
+      "bank_statements"
+    ],
+    "fields": {
+      "applicant_name": "Marcus Brody",
+      "application_number": "E302910482",
+      "uci": "62-3819-0012",
+      "subject": "Clarification of Ongoing Employment and Annual Earnings",
+      "submission_date": "2024-02-18",
+      "letter_of_explanation": "Claims continuous full-time employment as Lead Systems Architect at Quantum Solutions Inc from Jan 2021 to Dec 2023 at annual salary of CAD 95,000.",
+      "employment_reference_letters": "Reference letter from Quantum Solutions Inc states employment was part-time contract role that ended in November 2021.",
+      "tax_returns_and_pay_stubs": "Notice of Assessment and T4 slips indicate total reported annual income of CAD 18,200 for 2022 and CAD 0 for 2023.",
+      "bank_statements": "Bank statements for 2022 and 2023 show zero direct payroll deposits from Quantum Solutions Inc."
+    },
+    "pdf_sha256": "612856cf2043f26d7471989f197e9c22c380fee82d48e108304119832fc9597c",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:12.966951+00:00"
+  },
+  {
+    "opaque_case_id": "647090503f5fa3c971b1ddf4cfee6cef",
+    "sibling_case_id": "c8c3343ab8ccedd87a9d1caf9cfbbf7e",
+    "doc_type": "letter_of_explanation",
+    "variant": "scanned",
+    "blind_filename": "647090503f5fa3c971b1ddf4cfee6cef.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-LETTER_O-03",
+    "affected_fields": [
+      "letter_of_explanation",
+      "employment_reference_letters",
+      "tax_returns_and_pay_stubs",
+      "bank_statements"
+    ],
+    "fields": {
+      "applicant_name": "Marcus Brody",
+      "application_number": "E302910482",
+      "uci": "62-3819-0012",
+      "subject": "Clarification of Ongoing Employment and Annual Earnings",
+      "submission_date": "2024-02-18",
+      "letter_of_explanation": "Claims continuous full-time employment as Lead Systems Architect at Quantum Solutions Inc from Jan 2021 to Dec 2023 at annual salary of CAD 95,000.",
+      "employment_reference_letters": "Reference letter from Quantum Solutions Inc states employment was part-time contract role that ended in November 2021.",
+      "tax_returns_and_pay_stubs": "Notice of Assessment and T4 slips indicate total reported annual income of CAD 18,200 for 2022 and CAD 0 for 2023.",
+      "bank_statements": "Bank statements for 2022 and 2023 show zero direct payroll deposits from Quantum Solutions Inc."
+    },
+    "pdf_sha256": "b73a28246d41e33dc0b797b38b629ea9802222c5444679176008de4bf2c051ee",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:12.966951+00:00"
+  },
+  {
+    "opaque_case_id": "fff0df94dc4f84d0db0d79147c910f20",
+    "sibling_case_id": "2a14f66215cc8f70c4cdaacab6d97efd",
+    "doc_type": "letter_of_explanation",
+    "variant": "vector",
+    "blind_filename": "fff0df94dc4f84d0db0d79147c910f20.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-LETTER_O-04",
+    "affected_fields": [
+      "letter_of_explanation",
+      "background_declaration_imm5669",
+      "work_history",
+      "visa_history"
+    ],
+    "fields": {
+      "applicant_name": "Arthur Pendelton",
+      "application_number": "V391827401",
+      "uci": "91-0029-4821",
+      "subject": "Clarification of Continuous Physical Residence and Prior Visa Declarations",
+      "submission_date": "2024-06-12",
+      "letter_of_explanation": "Asserts continuous residence in home country from 2019 to 2023 working as a marketing manager, and explicitly states no prior visa refusals or removal orders in any country.",
+      "background_declaration_imm5669": "IMM 5669 Question 6 answers 'No' to previous visa refusals, deportations, or unauthorized stay orders.",
+      "work_history": "Claims full-time physical employment in home country during 2020-2022.",
+      "visa_history": "Immigration database records indicate a UK student visa refusal in 2020 and a US overstay / voluntary departure order in August 2021."
+    },
+    "pdf_sha256": "41919d14bdaf46cd832f2d63d9c256951203b0b7afe9f6a53f38312a7c0ca18a",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:14.074799+00:00"
+  },
+  {
+    "opaque_case_id": "2a14f66215cc8f70c4cdaacab6d97efd",
+    "sibling_case_id": "fff0df94dc4f84d0db0d79147c910f20",
+    "doc_type": "letter_of_explanation",
+    "variant": "scanned",
+    "blind_filename": "2a14f66215cc8f70c4cdaacab6d97efd.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-LETTER_O-04",
+    "affected_fields": [
+      "letter_of_explanation",
+      "background_declaration_imm5669",
+      "work_history",
+      "visa_history"
+    ],
+    "fields": {
+      "applicant_name": "Arthur Pendelton",
+      "application_number": "V391827401",
+      "uci": "91-0029-4821",
+      "subject": "Clarification of Continuous Physical Residence and Prior Visa Declarations",
+      "submission_date": "2024-06-12",
+      "letter_of_explanation": "Asserts continuous residence in home country from 2019 to 2023 working as a marketing manager, and explicitly states no prior visa refusals or removal orders in any country.",
+      "background_declaration_imm5669": "IMM 5669 Question 6 answers 'No' to previous visa refusals, deportations, or unauthorized stay orders.",
+      "work_history": "Claims full-time physical employment in home country during 2020-2022.",
+      "visa_history": "Immigration database records indicate a UK student visa refusal in 2020 and a US overstay / voluntary departure order in August 2021."
+    },
+    "pdf_sha256": "f53e3986fcf49d77bc3bb9af25981696c5fcd59719dcad6ed73f36c40629723b",
+    "agent_spec_sha256": "b9c8d41ddb145e9e8ee4fbaf465772f2aa5868dd4d27c0babb6b7e9a16f3c0ab",
+    "timestamp": "2026-07-23T07:11:14.074799+00:00"
+  }
+]

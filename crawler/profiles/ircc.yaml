@@ -1,0 +1,80 @@
+# Built-in IRCC / canada.ca crawl profile.
+#
+# Reproduces the CURRENT engine's site-specific behavior (crawler/config.py +
+# crawler/deepcrawl.py) BYTE-FOR-BYTE. The parity test
+# (crawler/tests/test_parity_ircc.py) pins these rules to the frozen golden
+# baseline; do not tune them without re-proving parity.
+#
+# Regexes are Python `re` patterns (single-quoted so backslashes stay literal);
+# `(?i)` is the inline equivalent of the engine's `re.I`. Exclude entries are
+# `fnmatch` globs matched after slug neutralization.
+
+name: ircc
+
+# Empty -> derive the allowed domain from the seed URL's netloc (current behavior).
+allowed_domains: []
+
+# Page families to never record (out of scope for a post-ITA Express Entry PR
+# applicant). Verbatim from crawler.config.EXCLUDE_URL_PATTERNS. Matched against
+# the URL AFTER slug neutralization, so they target topic segments, not the
+# "immigration-refugees-citizenship" department name in every IRCC URL.
+exclude_url_patterns:
+  - '*refugee*'
+  - '*protected-person*'
+  - '*asylum*'
+  - '*temporary-resident*'
+  - '*super-visa*'
+  - '*visit-canada*'
+  - '*visitor*'
+  - '*work-permit*'
+  - '*study-permit*'
+  - '*student*'
+  - '*international-students*'
+  - '*provincial-nominees*'        # PNP
+  - '*citizenship*'
+  - '*enforcement*'
+  - '*removal*'
+  - '*detention*'
+  - '*deportation*'
+  - '*sponsor-family*'
+  - '*sponsorship*'
+  - '*come-canada-tool*'
+  - '*check-processing-times*'
+  - '*account*'
+  - '*contact-ircc*'
+  - '*news*'
+  - '*campaigns*'
+  - '*social-media*'
+  - '*/fr/*'                       # French mirror
+  - '*wbdisable*'                  # render-toggle duplicate variants
+
+# Lowercase [from, to] replacements applied before exclusion matching. Neutralize
+# the department slug so the topic globs above don't match the department name.
+slug_substitutions:
+  - [immigration-refugees-citizenship, ircc]
+
+# Query params dropped during URL normalization (collapse render-toggle variants).
+strip_query_params:
+  - wbdisable
+
+# Footer markers — truncate everything from the first match to EOF (page chrome).
+footer_patterns:
+  - '(?i)^#{1,6}\s*Page details\b'
+  - '(?i)^#{1,6}\s*About this site\b'
+
+# Heading-delimited nav sections to drop entirely (heading + body until the next
+# heading of the same-or-shallower level).
+nav_section_patterns:
+  - '(?i)^#{1,6}\s*(See also|On this page|In this section|Give feedback about this page|Report a problem( or mistake on this page)?)\s*:?\s*$'
+
+# Residual single-line artifacts to drop at write-time (chrome surviving the filter).
+residual_line_patterns:
+  - '^\s*xxyy\s*$'
+  - '^\s*\*\[[a-z]{2}\]:\s'                      # *[fr]: Français
+  - '^\s*\d{4}-\d{2}-\d{2}\s*$'                  # stray date stamp
+  - '(?i)^\s*This section contains policy, procedures and guidance used by IRCC staff.*stakeholders\.\s*$'
+  - '(?i)^\s*(Skip to|Language selection|You are here|Date modified|Report a problem)\b'
+
+# Defaults written into each recorded page's front-matter.
+default_source_type: pdi
+default_label: 'Source: IRCC (canada.ca), reproduced for personal non-commercial use; verify against the live page.'

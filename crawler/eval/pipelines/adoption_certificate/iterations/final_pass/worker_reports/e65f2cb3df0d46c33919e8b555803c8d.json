@@ -1,0 +1,56 @@
+{
+  "question": "What document is required when a dependent child's status is listed as adopted, and does the submitted document meet requirements?",
+  "claims": [
+    {
+      "id": "adoption-certificate-requirement",
+      "text": "When a dependent child's status is listed as adopted, a copy of the adoption certificate, legal adoption papers, or relevant documents formalizing the adoption must be provided. The submitted document is defective because it is a generic test document containing no final court adoption order, no proof of severance of biological parental ties, no Provincial Letter of No Objection, no verified biological parent consent, and no home study report.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "This document is requested only when the dependent child status is listed as adopted."
+    }
+  ],
+  "basis": [
+    "Document uploaded in slot adoption_certificate (file e65f2cb3df0d46c33919e8b555803c8d.pdf) is a 2-page ReportLab PDF Test Document generated for system verification.",
+    "The document contains sample system text ('ReportLab PDF Test Document', 'Section 1: Executive Summary', 'Section 2: System Status') rather than legal adoption documentation.",
+    "Verification against checklist criteria confirms defect: (1) Missing final judicial court adoption order/decree; (2) Missing evidence of full legal adoption severing biological parental ties; (3) Missing Provincial Letter of No Objection (LNO); (4) Missing verified biological parent consent and completed Home Study Report."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e65f2cb3df0d46c33919e8b555803c8d",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e65f2cb3df0d46c33919e8b555803c8d.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a85f1dc9f83174b8ae6c632786ee67157c2960e51cd4d3539dbeaed306bfb4e6",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "a4e9dc48893e4f406d0a057c5a0538f82af4b11c4aae1e902d3996735acada36",
+    "output_hash": "62aee49e5a17a5d99fa8ca08fdf503c5dc477a2be911de0072d69f49bf58db7f",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:04:02.429279+00:00",
+    "provenance_digest": "051ee24ec72f56162bac32cc928650d4c47e1986a621c4482655e8a7eb9a9da0"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What must an Express Entry arranged-employment job-offer letter contain?",
+  "claims": [
+    {
+      "id": "job-offer-letter",
+      "text": "An arranged-employment job-offer letter from an employer offering a job in Canada must be printed on company letterhead and include the applicant's name, company contact information, name, title and signature of the proposed immediate supervisor or personnel officer, expected start date, commitment of continuous, paid, full-time work for at least one year after issuance of a permanent resident visa, job title, duties and responsibilities, current job status, work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#034"
+      ],
+      "quote": "A letter from the employer(s) offering the job in Canada is required, and it must \n    * be printed on company letterhead and include the applicant’s name, the company’s contact information (address, telephone number and email address), and the name, title and signature of the applicant’s proposed immediate supervisor or personnel officer; and\n    * include the following details: expected start date, commitment that the applicant will be employed on a continuous, paid, full-time work, for work that is for at least one year after issuance of a permanent resident visa, job title, duties and responsibilities, current job status (if current job), number of work hours per week and annual salary plus benefits."
+    }
+  ],
+  "basis": [
+    "The applicant submitted document afc3c6ff93b0e2dd7bccd01ece586a25.pdf under document upload slot written_job_offer_lmia."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "afc3c6ff93b0e2dd7bccd01ece586a25",
+  "doc_type": "written_job_offer_lmia",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "afc3c6ff93b0e2dd7bccd01ece586a25.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "1e0b9b93e52bcdd408a6e0cad61b2904881324990bc3f4e1dcf7302981adc59d",
+    "allowed_text_sha256": null,
+    "bundle_hash": "385731eb510290f10b07c9c229675d720aa24dffc28e5fe50a2fe3f75e204533",
+    "prompt_hash": "2995255aaec3bdc60bd2b2b250d838de302e66f7864912e832d9e2f3f1c9a16e",
+    "output_hash": "29f53bf85e6753991e5a41d49ed6c7f8ea39f400f1df86c411a0a0412602a6a6",
+    "returncode": 0,
+    "timestamp": "2026-07-23T19:55:40.708369+00:00",
+    "provenance_digest": "366251d934933aa56bb80aa4e950037ede6343be9577fabdb63c9fd7f4c853af"
+  }
+}

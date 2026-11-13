@@ -1,0 +1,54 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual, while dependent children 18 years of age or older must complete their own form.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "The [IMM 5475 form (PDF, 593.57 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5475e.pdf) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant in case edf3986842346c296de58d08fb830371 submitted an Authority to Release Personal Information to a Designated Individual document."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "edf3986842346c296de58d08fb830371",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "edf3986842346c296de58d08fb830371.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "6d1d021bb9fb6b82406ed78bcbca054baf5e1d6ddc39fbbf3915f7b7cd4efa68",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8a6d76f09c87b792bdb054da74787bee3998b9ee3be9ce94d349840641933915",
+    "prompt_hash": "19e615ec43fb4b2d5c90076d7a9bf4867581ddbc9709462adb151e0fa7bca448",
+    "output_hash": "5370704e0dade7d726184c53cea92305b839be2130ba1b0a3335fb6e91d84b80",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:33:43.220937+00:00",
+    "provenance_digest": "f67b41f4f3bd7b7af3abc05056fc4b86c51621a78abbef37f9f83e52b91fa3d4"
+  }
+}

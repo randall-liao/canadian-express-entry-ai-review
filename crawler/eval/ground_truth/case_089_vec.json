@@ -1,0 +1,18 @@
+{
+  "case_id": "case_089_vec",
+  "doc_type": "letter_of_explanation",
+  "variant": "vector",
+  "file_name": "case_089_vec.pdf",
+  "fields": {
+    "topic": "bank_balance_fluctuation",
+    "explanation_text": "I am writing to explain a temporary fluctuation in my bank balance during March 2024. A deposit of $10,000 CAD was made from my personal savings investment liquidation. Attached please find official bank transaction records and liquidation receipts.",
+    "corroborating_docs_attached": [
+      "Investment Liquidation Confirmation Receipt",
+      "Official Bank Transfer Statement"
+    ],
+    "author_signature_date": "2024-08-01"
+  },
+  "expected_verdict": "meets_requirements",
+  "injected_defects": [],
+  "must_abstain": false
+}

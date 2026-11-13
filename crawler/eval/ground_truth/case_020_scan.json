@@ -1,0 +1,22 @@
+{
+  "case_id": "case_020_scan",
+  "doc_type": "proof_of_funds",
+  "variant": "scanned",
+  "dpi": 300,
+  "file_name": "case_020_scan.pdf",
+  "fields": {
+    "bank_name": "Global First Bank",
+    "account_number": "ACCT-981204",
+    "account_type": "Chequing",
+    "current_balance": 18500.0,
+    "average_balance_6mo": 17200.0,
+    "outstanding_debts": 0.0,
+    "issue_date": "2024-06-01",
+    "is_unencumbered": true
+  },
+  "expected_verdict": "defective",
+  "injected_defects": [
+    "expired_credential"
+  ],
+  "must_abstain": false
+}

@@ -1,0 +1,200 @@
+{
+  "doc_type": "birth_certificate",
+  "case_evaluations": {
+    "0d8e81145a14a0ecb6b3e3d948b4219a": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3de3f30b94ac06b4b06ac29ac826fb17": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "5c004ea72869aab6ee4d06f1a237bdf0": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "64bcdead506efad3c9a84e1c73e17c73": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6beea74242a6b7354048e196afaaac4f": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "70dbae49cf2c9a06af51ca5f0843648c": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "89896650f3aa2667822929e8cd9c40fc": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ad9e9d39b2c7ae1d67091d5a214d450d": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.6,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c2979af4f8a5638aa9235ad7d6ba1f3c": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.6,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 0.6
+    },
+    "d2464043f6863ef7ec0fc083928a03e1": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "0d8e81145a14a0ecb6b3e3d948b4219a",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-03. Document explicitly shows Official Seal/Signature/Stamp = N/A and narrative states 'UNOFFICIAL INFORMATIONAL COPY... does not bear the embossed official seal, authorized registrar signature, or stamp'. Worker only restated the generic dependent-child requirement and flagged no defect (expected verdict: defective)."
+    },
+    {
+      "case_id": "3de3f30b94ac06b4b06ac29ac826fb17",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-02. Registration date 2025-05-20 for a 2010-03-12 birth (15-yr delay), 'Pending Local Civil Registry Review', provisional/preliminary credentials, unassigned civil register number. Worker flagged no defect (expected: defective)."
+    },
+    {
+      "case_id": "5c004ea72869aab6ee4d06f1a237bdf0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-02 (scanned variant of the delayed-registration record). Same 15-year late registration and pending/provisional status; Worker produced only the generic requirement and no defect."
+    },
+    {
+      "case_id": "6beea74242a6b7354048e196afaaac4f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-01. Short-form abstract with Parent Names/Father/Mother/Proof Of Relationship = N/A and narrative 'SHORT-FORM CARD DOES NOT CONTAIN PARENTAL INFORMATION'. Worker flagged no defect (expected: defective)."
+    },
+    {
+      "case_id": "70dbae49cf2c9a06af51ca5f0843648c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-03 (scanned sibling of 0d8e...). Seal/signature/stamp N/A, unofficial unvalidated printout. Worker flagged no defect (expected: defective)."
+    },
+    {
+      "case_id": "89896650f3aa2667822929e8cd9c40fc",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-01 (vector sibling of 6bee...). Missing all parental fields; short-form abstract. Worker flagged no defect (expected: defective)."
+    },
+    {
+      "case_id": "ad9e9d39b2c7ae1d67091d5a214d450d",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Correctly detected the untranslated-Spanish defect, but the defect claim cites completeness-check.md#024 with a quote about the dependent-child document requirement, which does not substantiate a translation/certification requirement. Citation does not support the asserted defect."
+    },
+    {
+      "case_id": "c2979af4f8a5638aa9235ad7d6ba1f3c",
+      "category": "blind_input",
+      "severity": "major",
+      "description": "Basis references internal failure-mode identifier 'PFL-BIRTH_CE-04', a taxonomy code from privileged research not present in the public corpus or the document. This exact-match code suggests non-blind context; a blind Worker should describe the defect without citing internal failure IDs."
+    },
+    {
+      "case_id": "c2979af4f8a5638aa9235ad7d6ba1f3c",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Translation-defect claim cites completeness-check.md#024 whose quoted text concerns the dependent-child document requirement, not certified-translation rules; the citation does not resolve to support the specific defect asserted."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/birth_certificate.md",
+      "suggested_patch": "Require an explicit authenticity/completeness verification pass on the attached document, not just restating the generic requirement. Mandate emitting a defect claim when any of: (a) official_seal, issuing_authority_signature, or issuing_stamp is 'N/A'/'Preliminary'/'Provisional'/'Pending' or narrative says 'unofficial/unvalidated' (CE-03); (b) registration_date minus date_of_birth exceeds ~1 year or authority is 'Pending Review' (CE-02); (c) parent_names/father_full_name/mother_full_name/proof_of_relationship are null/N/A or narrative says 'short-form/abstract without parental information' (CE-01); (d) document_language is not English/French without certified translation + translator affidavit (CE-04)."
+    },
+    {
+      "target_file": "skills/document-agents/birth_certificate.md",
+      "suggested_patch": "For each defect claim, require a citation whose quoted text actually states the violated rule (e.g., translation/certification, official seal, late-registration corroboration). Do not reuse the generic dependent-child 'document required' quote to support authenticity or translation defects."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Prohibit emitting internal failure-mode taxonomy codes (e.g., 'PFL-BIRTH_CE-04') in Worker output; blind Workers must describe defects from document evidence and public corpus only. Emitting such codes indicates non-blind context leakage."
+    }
+  ],
+  "rationale": "Worker (gemini-3.6-flash) reliably restated the correct generic dependent-child birth-document requirement with a consistent, plausibly-official corpus citation and kept applicant PII inside basis[] (claims/prose clean, e.g., d2464043). However defect recall is the dominant failure: it detected only the two translation defects (ad9e/c2979) and missed 6 of 8 injected defects entirely — all CE-01 short-form (6bee/8989), CE-02 late-registration (3de3/5c00), and CE-03 missing-seal (0d8e/70db) cases — despite unambiguous document and narrative evidence. Both clean cases (64bc, d2464) were correctly not flagged (no false positives). The two detected-defect cases have citation mismatches (the #024 quote does not support a translation rule), and c2979 additionally leaked an internal failure-mode ID (PFL-BIRTH_CE-04), a blind-compliance concern. Net: strong grounding/PII hygiene but severe under-detection driven by treating the task as a knowledge lookup rather than a document verification.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "0d8e81145a14a0ecb6b3e3d948b4219a.pdf",
+      "--attachment",
+      "3de3f30b94ac06b4b06ac29ac826fb17.pdf",
+      "--attachment",
+      "5c004ea72869aab6ee4d06f1a237bdf0.pdf",
+      "--attachment",
+      "64bcdead506efad3c9a84e1c73e17c73.pdf",
+      "--attachment",
+      "6beea74242a6b7354048e196afaaac4f.pdf",
+      "--attachment",
+      "70dbae49cf2c9a06af51ca5f0843648c.pdf",
+      "--attachment",
+      "89896650f3aa2667822929e8cd9c40fc.pdf",
+      "--attachment",
+      "ad9e9d39b2c7ae1d67091d5a214d450d.pdf",
+      "--attachment",
+      "c2979af4f8a5638aa9235ad7d6ba1f3c.pdf",
+      "--attachment",
+      "d2464043f6863ef7ec0fc083928a03e1.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "d557cd6daf256fe608568163ab2fa4262a8a9baf814912f0bf5afaa88ac1152b",
+    "research_hash": "38815ad7a5276f04958cf966f0ddcc24594022a6ad06200f477d1aed745ea950",
+    "ground_truth_hash": "1acc8350832ff535ad297dc1fa0d6baf55b9ae236cecf71e0a0b8bfcd3898fc9",
+    "output_hash": "a14f8ef89846a60802458b6097c93d461cde6d310fa5552f592ea1d3e1eda142",
+    "timestamp": "2026-07-25T01:59:45.257100+00:00",
+    "provenance_digest": "9ce07a3a548f6b55654b6039d47d11276ffc19cef86e87ec874b9aafee113388"
+  }
+}

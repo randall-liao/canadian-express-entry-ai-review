@@ -1,0 +1,45 @@
+# NOTICE
+
+This file documents attribution and sourcing obligations for the **PR Review
+Agents** project. It supplements, but does not replace, the MIT license in
+[`LICENSE`](LICENSE). The MIT license covers **this software** (the crawler and
+related tooling code) — it does **not** grant any rights to the third-party
+content that the crawler fetches.
+
+## 1. Attribution of crawled content
+
+This tool reproduces content from third-party authoritative sources. The
+built-in IRCC profile targets Immigration, Refugees and Citizenship Canada
+content published on **canada.ca/IRCC**. That content remains the property of
+its original publisher (the Government of Canada / IRCC). Nothing in this
+repository transfers ownership of, or any license to, the crawled material. Any
+local corpus you build with this tool is a copy of someone else's content and
+must be attributed to its source publisher.
+
+## 2. robots.txt compliance
+
+The crawler is built to honor each site's `robots.txt` policy. Both
+`crawler/deepcrawl.py` and `crawler/completeness.py` (the re-fetch pass) set
+`check_robots_txt=True`, so fetches respect each site's robots directives and
+crawl-delay. Do not disable this behavior to crawl resources a site has
+disallowed.
+
+## 3. Source Terms of Service
+
+Users **must** review and comply with each source site's Terms of Service
+before crawling it. The shipped IRCC profile does **not** grant any right to
+canada.ca content beyond what canada.ca's own terms of use allow. You are
+responsible for ensuring your use of any source is permitted by that source's
+terms.
+
+## 4. Non-commercial / personal-use expectation
+
+Crawled corpora are intended for **personal, non-commercial reference** only.
+Immigration guidance changes; a local copy can become stale. You must verify
+any reproduced content against the **live authoritative source** before relying
+on it, and must not treat a stale local copy as authoritative.
+
+---
+
+These are honest sourcing notes, not legal advice and not a substitute for each
+source's own license or terms.

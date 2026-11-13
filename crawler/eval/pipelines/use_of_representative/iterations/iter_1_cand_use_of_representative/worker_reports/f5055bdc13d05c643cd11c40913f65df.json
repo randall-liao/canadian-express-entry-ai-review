@@ -1,0 +1,65 @@
+{
+  "question": "When must an applicant provide a Use of a Representative form?",
+  "claims": [
+    {
+      "id": "representative-form-request",
+      "text": "The Use of a Representative form is requested when an applicant indicates they are using a representative or when a consultant completes an application on their behalf.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#039"
+      ],
+      "quote": "The document is requested only if the applicant indicates they are using a representative or if a consultant completes an application on behalf of the applicant through the consultant portal."
+    },
+    {
+      "id": "representative-form-signature-requirement",
+      "text": "The IMM 5476 form must be signed by the principal applicant and, if applicable, their spouse or common-law partner.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#039"
+      ],
+      "quote": "The [IMM 5476 form (PDF, 648.31 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5476e.pdf) must be signed by the principal applicant and, if applicable, their spouse or common-law partner."
+    }
+  ],
+  "basis": [
+    "The applicant provided form IMM 5476 (09-2023) E, appointing a paid representative from Vance Immigration Law Professional Corporation.",
+    "Section B is signed and dated 2024-02-15 by representative Marcus Vance, declaring CICC license ID R512398.",
+    "Section E is signed and dated 2024-02-15 by principal applicant Jane Doe.",
+    "The document uses a current form edition, contains all required signatures and accreditation details, and shows no document verification defects."
+  ],
+  "abstentions": [],
+  "prose": "The submitted Use of a Representative document (IMM 5476) is current, properly executed, and meets all program completeness requirements.",
+  "case_id": "f5055bdc13d05c643cd11c40913f65df",
+  "doc_type": "use_of_representative",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f5055bdc13d05c643cd11c40913f65df.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "d5c3f92745bacf0a71542bb5f85f8c3b95a44b6db0ab4c76b120b7784c095b27",
+    "allowed_text_sha256": null,
+    "bundle_hash": "a95acd55399cd66bce75637140f17d2e17df7ab2af54a46853278ac5f0cb1145",
+    "prompt_hash": "af1ac3bbbe9f1f32e4625cc17f5c71c6ad33d64c2a34d1d87cb4b2ee6377635f",
+    "output_hash": "2559b5a48867a8b75c6f5c37ba6fc895a860316bad29ee2a5a9d2f40089796de",
+    "returncode": 0,
+    "timestamp": "2026-07-25T01:45:12.455593+00:00",
+    "provenance_digest": "56ed676830d2264a90921fe43e24b6419bb502f13cd4ff7794ab32bea01e64ba"
+  }
+}

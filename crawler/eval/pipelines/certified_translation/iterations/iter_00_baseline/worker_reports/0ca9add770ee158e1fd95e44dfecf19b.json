@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant translate a supporting document that is not in English or French?",
+  "claims": [
+    {
+      "id": "translation-certified",
+      "text": "An English or French translation stamped by a certified translator or accompanied by an affidavit, plus a scan of the original source document.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a certified translation document for case 0ca9add770ee158e1fd95e44dfecf19b."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "0ca9add770ee158e1fd95e44dfecf19b",
+  "doc_type": "certified_translation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "0ca9add770ee158e1fd95e44dfecf19b.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e79da0aeeccb0f58251fa5f7e672714f273ba60b0e14a95bc02605be7ecfa483",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e9f23f2d5cd4c65f1adfb34a08570cd935f71cacedf08fd7e62b6bb76ba90f1d",
+    "prompt_hash": "cdeb45bf8162049eeb69932d33544e8f1ad29364ea417c43603378cf25ddc506",
+    "output_hash": "5f00356fe16ce4daef1e0aae844c025f374bb9e740900ed607d29a9f83f3e943",
+    "returncode": 0,
+    "timestamp": "2026-07-23T10:29:43.787933+00:00",
+    "provenance_digest": "8e510296088d7282487edaceb61f17f355620cc22d49c6bdaaa57a2869230249"
+  }
+}

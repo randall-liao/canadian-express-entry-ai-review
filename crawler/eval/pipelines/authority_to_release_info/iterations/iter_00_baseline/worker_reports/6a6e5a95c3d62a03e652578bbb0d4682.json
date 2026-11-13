@@ -1,0 +1,54 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant submitted an Authority to Release Personal Information form (IMM 5475) under case 6a6e5a95c3d62a03e652578bbb0d4682 to authorize a designated individual."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "6a6e5a95c3d62a03e652578bbb0d4682",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "6a6e5a95c3d62a03e652578bbb0d4682.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "df61c115a03fcb62c754e37fef6f36cb792e6be700cbd9e44c291a2837f3a1bf",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8a6d76f09c87b792bdb054da74787bee3998b9ee3be9ce94d349840641933915",
+    "prompt_hash": "1973d821d5ab4f596fa2261ee4b519f1135afaab44187bf3d231aa280fac9bcb",
+    "output_hash": "ff40474092bdeb08518d9f4d62d9a98c56773d9321c04c52129a1573121b0014",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:30:28.037775+00:00",
+    "provenance_digest": "1e2baf73261487abc10067e08b8db6914e2f296bd939ac7b24187d14a9b83b9f"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "case_id": "case_074_vec",
+  "doc_type": "use_of_representative",
+  "variant": "vector",
+  "file_name": "case_074_vec.pdf",
+  "fields": {
+    "full_name": "Jane Doe",
+    "dob": "1992-05-14",
+    "issuing_authority": "Official Government Registry of Canada",
+    "registration_number": "REG-88301928",
+    "issue_date": "2024-01-15"
+  },
+  "expected_verdict": "defective",
+  "injected_defects": [
+    "no_translation"
+  ],
+  "must_abstain": false
+}

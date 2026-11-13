@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided. Document verification verdict: defective — a Civil Status Registry extract was provided with no final judicial court adoption order.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "Opaque case ID 98179028ceff0e0c88ec5a87aee8dbd5 includes a 2-page document submitted under the adoption_certificate upload slot. Evaluation against the document verification checklist confirms the submission is a Civil Status Registry extract rather than a final judicial court adoption order or decree, failing Criterion 1 (Full Court Adoption Order) and rendering the submission defective under PFL-ADOPTION-01."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "98179028ceff0e0c88ec5a87aee8dbd5",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "98179028ceff0e0c88ec5a87aee8dbd5.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c39f29e1f0d45ae65a6a3bafa3b61d9319fb119b99d2d67682bc39216a081199",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "7933962dd5af2994de95b1df6d823eaa66a4893a2933c4295c98214d149dcc33",
+    "output_hash": "213a544ef5bf5ea02e2a2d4dd2501b8414b342f3393053db0e1dfa87abcff964",
+    "returncode": 0,
+    "timestamp": "2026-07-24T01:29:23.797741+00:00",
+    "provenance_digest": "772afcaff1e949d44593ff1aae72e3d46dc93ada2de0ee5d9661f6a0ed67ff3b"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "The reference or experience letter must be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "The letter must include the applicant's name, company contact information (address, telephone number, and email address), and the supervisor or personnel officer's name, title, and signature.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company"
+    },
+    {
+      "id": "positions-held",
+      "text": "The letter should indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "The letter must include employment details including job title, duties and responsibilities, job status, dates worked for the company, work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    }
+  ],
+  "basis": [
+    "Declared work experience reference letter for case f7cfc508c3755958610fe9872263332c evaluated against mandatory completeness check requirements."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "f7cfc508c3755958610fe9872263332c",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f7cfc508c3755958610fe9872263332c.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "207529436cd0ba08944c16c9b9869888c4df576b6c2a4a8f6405331ce00a285c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "6728af7f41adec9652dcc49c622f081b591c295162c6e199c4a0c8796ca3d079",
+    "prompt_hash": "e04f0b400ac70396b551b12a85fd34072d59de70a419a434a1a0776edfb30c66",
+    "output_hash": "cb95d229b4afa1d8e06047c4d0c7472bfc6665fda19f14c274925bcd3f9082c4",
+    "returncode": 0,
+    "timestamp": "2026-07-23T12:00:23.980571+00:00",
+    "provenance_digest": "4521b73917786500531d97dd65e20843b3370c5f8f00944c6bb20cc42c1ebac7"
+  }
+}

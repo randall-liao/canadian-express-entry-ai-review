@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-cert-copy",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "This document is requested only when the marital status is listed as widowed."
+    }
+  ],
+  "basis": [
+    "The applicant's declared marital status is widowed for opaque case ID fc56e629214694f8bdc1d7e70122721b."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "fc56e629214694f8bdc1d7e70122721b",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "fc56e629214694f8bdc1d7e70122721b.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e2f4a4d81f5e5c505269b117519b41eff7fa0a207f9b187c48fa8207306eac42",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f5dd7cb2d45c0135570f1d3733db8965b317ddc35c2e55734554615b82b27034",
+    "prompt_hash": "e7eaaa5619d60a80ed6525103d05c8ffdf28721dee71fd2e69794e91e21a11de",
+    "output_hash": "1a3a70920cbd02902daa903e134606e35354719441195409670c662a690f9dac",
+    "returncode": 0,
+    "timestamp": "2026-07-24T04:58:20.823263+00:00",
+    "provenance_digest": "b42cc80c819a0905a71713ce0b47e46acf78ac3ed9d67061b3c127a56775cf72"
+  }
+}

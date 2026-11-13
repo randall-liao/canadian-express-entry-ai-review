@@ -1,0 +1,49 @@
+{
+  "question": "When may an applicant submit a Letter of Explanation?",
+  "claims": [],
+  "basis": [
+    "The applicant submitted a Letter of Explanation under case ID 647090503f5fa3c971b1ddf4cfee6cef to clarify application circumstances."
+  ],
+  "abstentions": [
+    {
+      "reason": "not_in_corpus"
+    }
+  ],
+  "prose": "",
+  "case_id": "647090503f5fa3c971b1ddf4cfee6cef",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "647090503f5fa3c971b1ddf4cfee6cef.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "b73a28246d41e33dc0b797b38b629ea9802222c5444679176008de4bf2c051ee",
+    "allowed_text_sha256": null,
+    "bundle_hash": "14fa852af814d2404ab92386699b5caef3ad1fc99505dcb0bfeeb94713c4dc69",
+    "prompt_hash": "a01e24500d5056b86b25a52facbdcf1708042123948a8630275859135b436703",
+    "output_hash": "b225aa3e3394d76ab8768e18b9dce8ddd6c41b68e1f9487ac25d37bdd4b7baf6",
+    "returncode": 0,
+    "timestamp": "2026-07-24T09:05:04.011749+00:00",
+    "provenance_digest": "8660516a277932a738e53121e98b0489be9182155ee9e8afa347df06fdd8f499"
+  }
+}

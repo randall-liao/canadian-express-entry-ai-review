@@ -1,0 +1,54 @@
+{
+  "question": "What birth document is required for an applicant's dependent children?",
+  "claims": [
+    {
+      "id": "birth-cert-options",
+      "text": "birth certificate, an equivalent document from the birth country, or a letter of explanation (where no birth certificate is available in the country)",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024"
+      ],
+      "quote": "* This document is required only if the applicant identifies dependent children.\n  * The document must be one of the following: \n    * birth certificate;\n    * equivalent document from the birth country; or\n    * letter of explanation (where no birth certificate is available in the country)."
+    }
+  ],
+  "basis": [
+    "The birth certificate requirement applies when an applicant identifies dependent children in their Express Entry application."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "64bcdead506efad3c9a84e1c73e17c73",
+  "doc_type": "birth_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "64bcdead506efad3c9a84e1c73e17c73.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e332652eb43248214e22e51aa23c63b19dc0d999f4ca05191057b6dee5ea54a8",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c6fb3ed46c3c9f1c6e75316462cae682d3647ca04da25bdfdc64b5b62b58cc5d",
+    "prompt_hash": "1f520e78283eb6b9ac337b860d8245acc86ba8326ec03ec191a1f622e00b7b56",
+    "output_hash": "2a0a24d85543c3cc348cd892129244dcd807a26ad6d3354039dca5cc54db2c03",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:46:52.027205+00:00",
+    "provenance_digest": "97f9fed82a7a81a0d0296a1385499e9b7fa92f1b96ccfcda30a1267e3835bcf9"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "A copy of the divorce order or certificate of divorce issued where the divorce took place, along with a legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant declared marital status as divorced and provided an official certified copy of a Certificate of Dissolution of Marriage (Final Decree Absolute) issued by the Superior Court of California, County of Los Angeles, dated May 20, 2023."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "360b466384206dbbdaa0738f02ecab34",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "360b466384206dbbdaa0738f02ecab34.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "1532faa0a9d5443bbb55d038e7ef4d1c83caa1bf89664d7bf36450b370252fc3",
+    "allowed_text_sha256": null,
+    "bundle_hash": "96adfcfc94df22d419234f5a4c06d54f1588f3bdd17b3529f840f869e8cf6da9",
+    "prompt_hash": "67a4bf8b54cf53d75988ee89e96f3e2eb7c0858c11fd3b3000018d99bbe7884d",
+    "output_hash": "24da0f156d155e2f56a8fb659dacb3fd177c9ed0154bad059fa3b4a261798530",
+    "returncode": 0,
+    "timestamp": "2026-07-24T06:17:24.022711+00:00",
+    "provenance_digest": "5457e0c5cd62411460e821d0cbb417dc5c48179526e7803afb8325a765108c2f"
+  }
+}

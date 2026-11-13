@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "statutory_declaration_common_law",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/statutory_declaration_common_law/judge.json": "10ead8e3a91c74d9296a02843dcf8db36bda806d27f8a97f685feceae45c9704",
+    "documents/statutory_declaration_common_law/shared_evaluation.json": "2a0b41275f36b64d43ef4c9b04f62471c70538b9454be37c53f861bf4d40643a",
+    "documents/statutory_declaration_common_law/workers/392bbc629edd5900ff817cd97c34fcfc.json": "f14d8dc88c1bf608893ed6181715d6b7971aab05bb57a05950977e013b129c8c",
+    "documents/statutory_declaration_common_law/workers/4568fffad4bd217dfae1784151cadb3f.json": "925fe446e60d98b6622b88777bc5b549e936bb75e10d322eb5b7f1a1e8810a1a",
+    "documents/statutory_declaration_common_law/workers/531796afc9517613c611f6987f25dab4.json": "5036df7584ca4dcbd590512f9ab725fe23d98aa5c54f9fae262cc98a613de3f6",
+    "documents/statutory_declaration_common_law/workers/861dd16bc003a0e0b3443c506c8d306d.json": "4e107349e63e0ac021d96cca1c9b3d507b57e8e420eb61b843321ba3435d0ae1",
+    "documents/statutory_declaration_common_law/workers/aabab0e3988a4c663661d6b6f284bac6.json": "2625603ca6c60ade4e7dabe27ba6154773164a76ebe492af1d4e00351ca2efe2",
+    "documents/statutory_declaration_common_law/workers/ac818e742e2f4972c663179deb96b26d.json": "ed623742832b9e1f20ab1e4641a9692d48b50a20e6cdf058ef73d279524c172d",
+    "documents/statutory_declaration_common_law/workers/b9bcac8b1a6d22563f8d98394697af56.json": "8677ee2e183fd79121d2e9a25d080905d2236b54f8f3589256d62f8b53fcc2b3",
+    "documents/statutory_declaration_common_law/workers/c2fefdb03eb7232907ded8013c85cdbf.json": "bebaf49753e553aab4bb3ce9821604f27239335bba271097d88d7ad57aacf407",
+    "documents/statutory_declaration_common_law/workers/fa14b8f8e895915eb64b8d3adf6e06a5.json": "6900add627c788fd20ebe3f753236615869dbd714176c08f7b631dace80f7bbf",
+    "documents/statutory_declaration_common_law/workers/fe518795975250588461a0cff81741f1.json": "cf5ea72a3156dacc816cc17d7634bfa8b7778cb214e04f9c215bb9695bb53878"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

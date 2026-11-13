@@ -1,0 +1,138 @@
+{
+  "doc_type": "letter_of_explanation",
+  "timestamp": "2026-07-23T03:50:30.562580+00:00",
+  "summary": "Live online research of IRCC operational manuals, completeness directives (R10), and procedural fairness guidelines for Express Entry 'letter_of_explanation' (LOE) submissions reveals four primary failure modes. These center around unsubstantiated settlement fund claims (claiming gift deposits without gift deeds or donor bank trails), unsworn personal declarations attempting to replace mandatory affidavits or certified documents, direct contradictions between claims in the LOE and uploaded financial/employment records, and inconsistencies triggering IRPA Section 40 misrepresentation procedural fairness letters (PFLs).",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:53:42.442214+00:00",
+    "duration_seconds": 203.514,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "0b6e99c4941a832ea9b05bc518a3afdc4d7fe6f0afa143126f50ff349b894fb4",
+    "raw_output_sha256": "03b3448f7a98280719217f2f363798b09858f519d971fddaca23998e81134278",
+    "returncode": 0,
+    "provenance_token": "2189ad7786ff3aab1839fe637d48b68de965b79b1c8dfc9d693d52242d7e4c7a",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_fetch",
+      "web_fetch",
+      "web_fetch",
+      "web_fetch",
+      "web_search"
+    ],
+    "tool_call_count": 12,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-LETTER_O-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Unsubstantiated Financial Gift Claim in LOE Without Gift Deed or Source Trail",
+      "description": "The applicant uses a Letter of Explanation to assert that a recent large cash deposit is a non-repayable gift from a family member or third party, but fails to provide corroborating documentary evidence such as a notarized gift deed, the donor's bank statements proving the source of funds, or official transfer receipts.",
+      "affected_fields": [
+        "proof_of_funds",
+        "bank_statements",
+        "letter_of_explanation"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must show that the money is readily available to you... You cannot borrow this money from another person. The letter must list all current bank and investment accounts... Funds must be liquid and unencumbered.",
+      "remediation_hypothesis": "Submit a fully executed, notarized gift deed signed by the donor affirming that the funds are a genuine non-repayable gift, alongside the donor's official 6-month bank statement showing the origin of the funds and bank transaction slips showing the direct transfer to the applicant's account.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-LETTER_O-02",
+      "category": "pfl_unsworn_statement",
+      "severity": "high",
+      "title": "Unsworn or Unnotarized Statement Used in Place of Mandatory Legal Affidavit",
+      "description": "The applicant provides an unsworn, plain-text Letter of Explanation to address missing civil records, untranslated document verifications, name discrepancies, or self-employment claims, failing to execute a formal sworn statutory declaration or notarized affidavit as required by IRCC processing guidelines.",
+      "affected_fields": [
+        "letter_of_explanation",
+        "common_law_declaration",
+        "name_change_documents",
+        "translated_documents"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2016-completeness-check.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If a supporting document is in a language other than English or French, the applicant must provide IRCC with an English or French translation stamped by a certified translator or accompanied by an affidavit... self-declared main duties or affidavits are not acceptable proof of self-employed work experience.",
+      "remediation_hypothesis": "Replace unsworn plain-text statements with a formal Statutory Declaration or Affidavit executed before a Notary Public, Commissioner for Oaths, or authorized legal official, accompanied by objective third-party supporting documentation.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-LETTER_O-03",
+      "category": "pfl_contradictory_records",
+      "severity": "critical",
+      "title": "Direct Contradiction Between LOE Assertions and Primary Financial or Employment Evidence",
+      "description": "Explanations provided in the LOE directly contradict data shown in uploaded third-party primary documents, such as claiming full-time continuous work in the LOE while submitted CRA tax records/pay stubs show part-time hours, or claiming sole ownership of account funds in the LOE while bank letters show restricted joint access.",
+      "affected_fields": [
+        "letter_of_explanation",
+        "employment_reference_letters",
+        "tax_returns_and_pay_stubs",
+        "bank_statements"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/service-delivery/procedural-fairness.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The 'right to be heard' requires that the applicant is advised of significant facts that are likely to affect the outcome of the application... decision-makers should tell applicants which documents may be required in order to address concerns.",
+      "remediation_hypothesis": "Provide a detailed response letter that explicitly reconciles the discrepancy, supported by primary objective records such as employer HR attendance logs, CRA Notice of Assessment copies, or bank letters confirming unencumbered individual account withdrawal rights.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-LETTER_O-04",
+      "category": "pfl_misrepresentation_risk",
+      "severity": "critical",
+      "title": "Inconsistent Claims in LOE Triggering IRPA Section 40 Misrepresentation Concerns",
+      "description": "Assertions in the LOE regarding work history, job responsibilities, prior temporary visa refusals, or fund origins conflict with official IRCC GCMS record history or verified third-party agency data, causing officers to issue a Procedural Fairness Letter regarding potential inadmissibility under A40.",
+      "affected_fields": [
+        "letter_of_explanation",
+        "background_declaration_imm5669",
+        "work_history",
+        "visa_history"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/enforcement/inadmissibility.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "A person is inadmissible for directly or indirectly misrepresenting or withholding material facts relating to a relevant matter that induces or could induce an error in the administration of this Act (IRPA s. 40(1)(a)).",
+      "remediation_hypothesis": "Respond comprehensively within the PFL deadline with an exhaustive factual timeline, sworn statements, and verifiable third-party documentation demonstrating complete honesty, lack of intent to deceive, and full alignment with official records.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual, while dependent children 18 years of age or older must complete their own form.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a document under the Authority to Release Personal Information (IMM 5475) slot for case 4c56c2c964dfba94392d1618b13a0c2f."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "4c56c2c964dfba94392d1618b13a0c2f",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4c56c2c964dfba94392d1618b13a0c2f.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "4ea3d15a5851c88900e163a97d3c49fc429c60296b5b1e646d71ccbf1e477858",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8a6d76f09c87b792bdb054da74787bee3998b9ee3be9ce94d349840641933915",
+    "prompt_hash": "82f7e12f1c75bf2b3d0efb4a2c0d959b01003d545652b98757e30297c72245f0",
+    "output_hash": "314aeaed06bcb7bc82c6d0a36427f0d27eae09dd768e010e093f92d61308065a",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:12:39.177408+00:00",
+    "provenance_digest": "02c54d19d3999c5c21de8bdae4174ea8573c022766aa1dc45f381b61781e7bdd"
+  }
+}

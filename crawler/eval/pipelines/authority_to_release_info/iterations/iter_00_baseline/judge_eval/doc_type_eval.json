@@ -1,0 +1,206 @@
+{
+  "doc_type": "authority_to_release_info",
+  "case_evaluations": {
+    "856740ac739ace81aa940753804e8179": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e0b45d2f4bed604ce5fb3e5abe2ef047": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3dac93470c38cd92756a9ed787f164f6": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6a6e5a95c3d62a03e652578bbb0d4682": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ae84248b5d47a4077a47a1ae22b7239b": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4c56c2c964dfba94392d1618b13a0c2f": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e5640785a8c957a693d4da097babd255": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "a70d7f47c21039f6b8d51584d2291835": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "edf3986842346c296de58d08fb830371": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.7,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "77c80029756ad10ac323c20d71dbdc25": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "3dac93470c38cd92756a9ed787f164f6",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-AUTHORIT-01 missed. PDF shows Signature Date = N/A and Section C Date = N/A (narrative: 'signature date field remains blank and undated'), yet the worker returned only a generic 'who must sign' policy claim with no defect flagged and no abstention."
+    },
+    {
+      "case_id": "6a6e5a95c3d62a03e652578bbb0d4682",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-AUTHORIT-01 missed (scanned sibling of 3dac9347). Missing/blank Signature Date and Section C Date not detected; identical boilerplate output to all other cases."
+    },
+    {
+      "case_id": "ae84248b5d47a4077a47a1ae22b7239b",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-AUTHORIT-02 missed. PDF shows Section C Consent Checkbox = False and Authorization Scope = N/A (narrative confirms unchecked consent and omitted scope), yet no defect was flagged."
+    },
+    {
+      "case_id": "4c56c2c964dfba94392d1618b13a0c2f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-AUTHORIT-02 missed (scanned sibling of ae84248b). Unchecked Section C consent box and null authorization scope not detected."
+    },
+    {
+      "case_id": "e5640785a8c957a693d4da097babd255",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-AUTHORIT-03 missed. PDF shows Representative Authorization = True and IMM 5475 used to appoint a paid legal representative (narrative explicitly notes IMM 5476 was required instead), yet no form-scope-mismatch defect was flagged."
+    },
+    {
+      "case_id": "a70d7f47c21039f6b8d51584d2291835",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-AUTHORIT-03 missed (scanned sibling of e5640785). Misuse of IMM 5475 for legal representation (representative_authorization True) not detected."
+    },
+    {
+      "case_id": "edf3986842346c296de58d08fb830371",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-AUTHORIT-04 missed. PDF shows Family Member Consent = False with accompanying adult spouse Amit Sharma and narrative stating no separate IMM 5475/Section C consent was provided. The worker's own claim cites the exact spouse-consent rule but fails to apply it to flag the defect."
+    },
+    {
+      "case_id": "77c80029756ad10ac323c20d71dbdc25",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-AUTHORIT-04 missed (scanned sibling of edf3986842). Missing separate consent for accompanying adult spouse not detected."
+    },
+    {
+      "case_id": "edf3986842346c296de58d08fb830371",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Claim extends to 'dependent children 18 years of age or older must complete their own form,' but the provided quote only covers the applicant and spouse/common-law partner; the extension is factually consistent with IRCC policy but is not supported by the cited quote."
+    },
+    {
+      "case_id": "856740ac739ace81aa940753804e8179",
+      "category": "blind_input",
+      "severity": "major",
+      "description": "Model non-compliance across all 10 cases: requirement is claude-opus-4.8 (--effort xhigh, --context long_context), but _provenance.model shows gemini-3.6-flash. No ground-truth leakage occurred (blind operation intact), but the mandated privileged model was not used, likely contributing to the systemic shallow, non-responsive review."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/authority_to_release_info.md",
+      "suggested_patch": "Replace the generic 'who must sign' policy answer with a mandatory per-document compliance checklist that must be evaluated and reported: (1) signature_date AND section_c_date are non-null/valid YYYY-MM-DD [PFL-01]; (2) section_c_consent_checkbox == true AND authorization_scope is populated [PFL-02]; (3) representative_authorization/role does NOT indicate legal representation or conducting business — if it does, flag IMM 5475/IMM 5476 scope mismatch [PFL-03]; (4) when an accompanying spouse or adult dependant (18+) is present, a separate signed IMM 5475/consent exists (family_member_consent true) [PFL-04]. Require the worker to emit an explicit defect flag or abstention per field, not a single boilerplate claim."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Enforce the model requirement at dispatch and verification time: reject or re-run any authority_to_release_info worker whose _provenance.model is not claude-opus-4.8 with --effort xhigh and --context long_context. Add a preflight gate that fails the case if the provenance model/effort does not match the doc-type spec."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Instruct document-review workers to bind every verdict to fields actually read from the attached PDF (signature/date fields, consent checkbox, representative flags, page-2 accompanying-family and narrative sections) and to produce a document-specific verdict (meets_requirements vs defective + failure_id). Prohibit returning a purely generic policy answer that ignores the instance's field values and page-2 narrative."
+    }
+  ],
+  "rationale": "All 10 workers returned near-identical boilerplate answering the generic policy question 'who must sign IMM 5475' and performed no instance-level compliance review. Grounding and PII handling are solid: the cited spouse-consent rule is accurate, claims/prose contain no applicant PII, prose is empty, and basis[] carries only case-id references with no names/DOBs — so grounding_accuracy (~0.9), pii_containment (1.0), and blind_input_compliance (1.0, no ground-truth leakage) score high. Citation_exactness is moderate (0.85) because the corpus anchor #067 is well-formed and embeds an official canada.ca IMM 5475 URL but could not be fully resolved; edf3986842 is lower (0.7) because its dependent-children extension is not supported by the quote. The critical failure is defect_recall: 8 of 10 cases are defective and the workers detected zero defects (0.0 each), including PFL-01 blank signature dates, PFL-02 unchecked consent box, PFL-03 IMM 5475-for-legal-rep misuse, and PFL-04 missing accompanying-spouse consent — all directly visible in the PDFs and even referenced by the workers' own cited rule. The two clean cases correctly produced no false defects (defect_recall 1.0). A cross-cutting compliance issue: provenance shows gemini-3.6-flash rather than the mandated claude-opus-4.8 --effort xhigh, which plausibly drove the shallow, non-responsive outputs.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "3dac93470c38cd92756a9ed787f164f6.pdf",
+      "--attachment",
+      "4c56c2c964dfba94392d1618b13a0c2f.pdf",
+      "--attachment",
+      "6a6e5a95c3d62a03e652578bbb0d4682.pdf",
+      "--attachment",
+      "77c80029756ad10ac323c20d71dbdc25.pdf",
+      "--attachment",
+      "856740ac739ace81aa940753804e8179.pdf",
+      "--attachment",
+      "a70d7f47c21039f6b8d51584d2291835.pdf",
+      "--attachment",
+      "ae84248b5d47a4077a47a1ae22b7239b.pdf",
+      "--attachment",
+      "e0b45d2f4bed604ce5fb3e5abe2ef047.pdf",
+      "--attachment",
+      "e5640785a8c957a693d4da097babd255.pdf",
+      "--attachment",
+      "edf3986842346c296de58d08fb830371.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "fef9dc310ae61e417fd8b0d3c1dc681716e4858ea4079f8e15e115ff4d8543ed",
+    "research_hash": "011c117bb76b6d7268f76e31b02654a37b3d25b46b8d79bba8fbe351a26fb364",
+    "ground_truth_hash": "95759ed8bd6080b1760db4f19c47ac677903abfb0c6ea724fa1e27fe55aef9a5",
+    "output_hash": "55f352fb4fd9ac17c9c2ea1f38f315bb604e75ed24954967cf517a092bcec09d",
+    "timestamp": "2026-07-23T21:11:24.085367+00:00",
+    "provenance_digest": "ee1bece28e29516fd940b83118eec5e8aa26948c272bbf6e73258b4ab43318b6"
+  }
+}

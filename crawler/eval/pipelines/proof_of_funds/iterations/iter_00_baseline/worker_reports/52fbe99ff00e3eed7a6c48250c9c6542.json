@@ -1,0 +1,56 @@
+{
+  "question": "What must the applicant's settlement funds satisfy?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "Settlement funds must be legally accessible and cannot be derived from real-property equity or borrowed from another person.",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "you can't use equity on real property as proof of settlement funds"
+    }
+  ],
+  "basis": [
+    "Opaque case ID: 52fbe99ff00e3eed7a6c48250c9c6542",
+    "Document upload-slot type: proof_of_funds",
+    "Program applicability: Candidates under Federal Skilled Worker Program (FSWC) or Federal Skilled Trades Class (FSTC) must demonstrate settlement funds unless authorized to work in Canada with a qualifying job offer; Canadian Experience Class (CEC) candidates are exempt."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "52fbe99ff00e3eed7a6c48250c9c6542",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "52fbe99ff00e3eed7a6c48250c9c6542.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "96b094c2c714e752c96ca99a31d1ab5afdf46bc8854b00fabe866b943965c47b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "08401b80e3700210a5b3546e3c49ff29c36936bb0a3094fc5d8e23b18f1b5827",
+    "prompt_hash": "c0e24e580af89ba7313c7c4819ec0370bda1cead15e64d70ab24a05e5b9bcff5",
+    "output_hash": "4c51bc57fdc7aa5a8ad410cea49f5bf8fc7276e149690ba0c831c3551ee07b53",
+    "returncode": 0,
+    "timestamp": "2026-07-23T15:51:19.972473+00:00",
+    "provenance_digest": "85931a388b874b9f538bbd292685691e44e2f889683351a31aa0b8ddb4c1ad01"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "doc_type": "proof_of_funds",
+  "timestamp": "2026-07-23T02:59:29.723-04:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "proof_of_funds",
+      "title": "Official Bank Confirmation of Settlement Funds",
+      "issuing_authority": "Royal Bank of Canada",
+      "issue_date": "2026-06-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "account_number": "1002-3948-5821",
+        "account_type": "Savings Account",
+        "account_opening_date": "2019-03-10",
+        "current_balance": 28500.0,
+        "average_balance_for_past_6_months": 27200.0,
+        "currency": "CAD",
+        "family_size": 2,
+        "minimum_required_funds": 17835.0,
+        "source_of_funds": "Personal employment income and regular savings",
+        "gift_deed_documentation": "Not Applicable",
+        "outstanding_debts": "Nil",
+        "loans_and_credit_lines": "None",
+        "liquid_account_balances": 28500.0,
+        "official_letterhead": "Royal Bank of Canada, Main Branch, 200 Bay Street, Toronto, ON M5J 2J5"
+      },
+      "narrative_blocks": [
+        "This letter confirms that Jane Doe maintains a Savings Account (Account Number 1002-3948-5821) with Royal Bank of Canada in good standing since March 10, 2019.",
+        "As of June 15, 2026, the current balance in this account is 28,500.00 CAD, and the average balance over the preceding six months was 27,200.00 CAD. There are no outstanding debts, loans, or encumbrances associated with this account."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_funds",
+      "title": "Bank Letter - Unexplained Large Deposit",
+      "issuing_authority": "Toronto-Dominion Bank",
+      "issue_date": "2026-06-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "John Smith",
+        "account_number": "4019-8823-1102",
+        "account_type": "Chequing Account",
+        "account_opening_date": "2021-08-14",
+        "current_balance": 30000.0,
+        "average_balance_for_past_6_months": 2500.0,
+        "currency": "CAD",
+        "family_size": 1,
+        "minimum_required_funds": 14690.0,
+        "source_of_funds": "Unverified external transfer",
+        "gift_deed_documentation": null,
+        "outstanding_debts": "Nil",
+        "loans_and_credit_lines": "None",
+        "liquid_account_balances": 30000.0,
+        "official_letterhead": "Toronto-Dominion Bank, 66 Wellington St W, Toronto, ON M5K 1A2"
+      },
+      "narrative_blocks": [
+        "This letter certifies that John Smith holds a Chequing Account (Account Number 4019-8823-1102) with Toronto-Dominion Bank.",
+        "The current balance as of June 15, 2026 is 30,000.00 CAD. The average balance over the past six months was 2,500.00 CAD, reflecting a recent single deposit of 27,500.00 CAD on June 10, 2026 without accompanying transfer records or gift deed documentation."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PROOF_OF-01",
+        "category": "pfl_unexplained_lump_sum",
+        "severity": "critical",
+        "description": "Unexplained large lump sum deposit made shortly before letter issuance without supporting gift deed or paper trail explaining the origin of funds.",
+        "affected_fields": [
+          "current_balance",
+          "average_balance_for_past_6_months",
+          "source_of_funds",
+          "gift_deed_documentation"
+        ],
+        "mutation_details": {
+          "lump_sum_amount": 27500.0,
+          "pre_deposit_average_balance": 2500.0,
+          "post_deposit_balance": 30000.0,
+          "gift_deed_provided": false
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_funds",
+      "title": "Bank Letter - Settlement Balance Below Minimum Threshold",
+      "issuing_authority": "Bank of Montreal",
+      "issue_date": "2026-06-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "account_number": "8832-1049-7721",
+        "account_type": "Savings Account",
+        "account_opening_date": "2020-01-20",
+        "current_balance": 12000.0,
+        "average_balance_for_past_6_months": 11800.0,
+        "currency": "CAD",
+        "family_size": 4,
+        "minimum_required_funds": 25000.0,
+        "source_of_funds": "Employment income",
+        "gift_deed_documentation": "Not Applicable",
+        "outstanding_debts": "Nil",
+        "loans_and_credit_lines": "None",
+        "liquid_account_balances": 12000.0,
+        "official_letterhead": "Bank of Montreal, 100 King St W, Toronto, ON M5X 1A1"
+      },
+      "narrative_blocks": [
+        "This letter certifies that Jane Doe holds a Savings Account (Account Number 8832-1049-7721) with Bank of Montreal.",
+        "As of June 15, 2026, the current balance is 12,000.00 CAD, with a six-month average balance of 11,800.00 CAD. For a declared family size of 4 members, the minimum required settlement fund requirement is 25,000.00 CAD."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PROOF_OF-02",
+        "category": "pfl_insufficient_funds",
+        "severity": "critical",
+        "description": "The current account balance falls short of the required settlement fund LICO threshold for the specified family size.",
+        "affected_fields": [
+          "current_balance",
+          "family_size",
+          "minimum_required_funds"
+        ],
+        "mutation_details": {
+          "declared_family_size": 4,
+          "required_lico_threshold": 25000.0,
+          "actual_balance": 12000.0,
+          "fund_shortfall": 13000.0
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_funds",
+      "title": "Bank Letter - Encumbered Borrowed Funds and Property Equity",
+      "issuing_authority": "Scotiabank",
+      "issue_date": "2026-06-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "John Smith",
+        "account_number": "5501-9923-4410",
+        "account_type": "Personal Line of Credit",
+        "account_opening_date": "2022-04-11",
+        "current_balance": 35000.0,
+        "average_balance_for_past_6_months": 35000.0,
+        "currency": "CAD",
+        "family_size": 2,
+        "minimum_required_funds": 17835.0,
+        "source_of_funds": "Borrowed funds from unsecured credit facility and property equity",
+        "gift_deed_documentation": "Not Applicable",
+        "outstanding_debts": "Personal loan liability of 35,000.00 CAD",
+        "loans_and_credit_lines": "Active Unsecured Personal Line of Credit #5501-9923-4410 with balance owed 35,000.00 CAD",
+        "liquid_account_balances": 0.0,
+        "official_letterhead": "Scotiabank, 44 King St W, Toronto, ON M5H 1H1"
+      },
+      "narrative_blocks": [
+        "This letter certifies that John Smith maintains a Personal Line of Credit account (Account Number 5501-9923-4410) with Scotiabank.",
+        "The balance of 35,000.00 CAD consists entirely of drawn funds from an active credit line encumbered by repayment obligations, leaving 0.00 CAD in unencumbered liquid funds."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PROOF_OF-03",
+        "category": "pfl_encumbered_funds",
+        "severity": "critical",
+        "description": "Proof of funds relies on encumbered borrowed capital from a credit line and real property equity rather than unencumbered liquid assets.",
+        "affected_fields": [
+          "outstanding_debts",
+          "loans_and_credit_lines",
+          "liquid_account_balances"
+        ],
+        "mutation_details": {
+          "encumbrance_type": "line_of_credit_and_property_equity",
+          "encumbered_amount": 35000.0,
+          "unencumbered_liquid_amount": 0.0
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "proof_of_funds",
+      "title": "Bank Letter - Missing Required Historical Balances and Letterhead",
+      "issuing_authority": "Canadian Imperial Bank of Commerce (CIBC)",
+      "issue_date": "2026-06-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "account_number": "7712-4091-3388",
+        "account_type": "Savings Account",
+        "account_opening_date": null,
+        "current_balance": 22000.0,
+        "average_balance_for_past_6_months": null,
+        "currency": "CAD",
+        "family_size": 1,
+        "minimum_required_funds": 14690.0,
+        "source_of_funds": "Savings",
+        "gift_deed_documentation": "Not Applicable",
+        "outstanding_debts": null,
+        "loans_and_credit_lines": null,
+        "liquid_account_balances": 22000.0,
+        "official_letterhead": null
+      },
+      "narrative_blocks": [
+        "This letter states that Jane Doe holds account #7712-4091-3388 with a present balance of 22,000.00 CAD.",
+        "The letter omits the mandatory six-month average account balance, account opening date, outstanding debt details, and official institutional letterhead."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PROOF_OF-04",
+        "category": "pfl_non_compliant_bank_letter",
+        "severity": "critical",
+        "description": "Bank letter omits essential required details including 6-month average balance, account opening date, outstanding debt statement, and official letterhead.",
+        "affected_fields": [
+          "average_balance_for_past_6_months",
+          "outstanding_debts",
+          "account_opening_date",
+          "official_letterhead"
+        ],
+        "mutation_details": {
+          "omitted_fields": [
+            "average_balance_for_past_6_months",
+            "outstanding_debts",
+            "account_opening_date",
+            "official_letterhead"
+          ],
+          "compliance_status": "non_compliant"
+        }
+      }
+    }
+  ]
+}

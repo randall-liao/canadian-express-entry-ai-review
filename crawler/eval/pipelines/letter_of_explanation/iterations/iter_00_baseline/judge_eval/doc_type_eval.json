@@ -1,0 +1,212 @@
+{
+  "doc_type": "letter_of_explanation",
+  "case_evaluations": {
+    "94315e1c3dc58eb42a9fab23dced3f12": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "1f121f987b78c16a25b391c698098edd": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "939fc849afc556fa64096d9beda03ceb": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "339df681bb5b1d873ef8920aa7941897": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "0d6b65e8291756ef8e83f31caeeddfeb": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "830e9a3ccd2825171046e225f3a4ee8e": {
+      "grounding_accuracy": 0.5,
+      "citation_exactness": 0.4,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c8c3343ab8ccedd87a9d1caf9cfbbf7e": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "647090503f5fa3c971b1ddf4cfee6cef": {
+      "grounding_accuracy": 0.5,
+      "citation_exactness": 0.4,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "fff0df94dc4f84d0db0d79147c910f20": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "2a14f66215cc8f70c4cdaacab6d97efd": {
+      "grounding_accuracy": 0.5,
+      "citation_exactness": 0.4,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "939fc849afc556fa64096d9beda03ceb",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-LETTER_O-01 missed. PDF asserts CAD $50,000 gift from uncle Robert Smith with 'I do not have additional financial records from my uncle available at this time' and no gift deed/donor bank trail. Worker abstained (not_in_corpus) with empty claims, failing to flag the unsubstantiated settlement-fund claim."
+    },
+    {
+      "case_id": "339df681bb5b1d873ef8920aa7941897",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-LETTER_O-01 missed (scanned sibling). Same unsubstantiated $50,000 uncle gift lacking donor documentation. Worker abstained and asserted in prose 'No general e-APR completeness requirement... was found,' ignoring the visible proof-of-funds defect in the attached letter."
+    },
+    {
+      "case_id": "0d6b65e8291756ef8e83f31caeeddfeb",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "PFL-LETTER_O-02 missed. PDF is an unsworn common-law/name-change declaration explicitly stating 'I was unable to visit a notary public before submission... submitting this signed statement directly,' with self-authored translation. Worker returned empty claims and abstained, failing to flag the missing notarization/affidavit."
+    },
+    {
+      "case_id": "830e9a3ccd2825171046e225f3a4ee8e",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "PFL-LETTER_O-02 missed (scanned sibling). Same unsworn/unnotarized declaration. Worker instead emitted a generic non-defect claim that an LOE 'may be submitted to clarify application details,' entirely missing the unnotarized-statement defect."
+    },
+    {
+      "case_id": "c8c3343ab8ccedd87a9d1caf9cfbbf7e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-LETTER_O-03 missed. LOE claims continuous full-time Lead Systems Architect employment at Quantum Solutions Inc (Jan 2021–Dec 2023, CAD 95,000) which contradicts ground-truth reference letter, T4/NOA, and payroll records. Worker abstained with empty claims, missing the contradictory-records defect."
+    },
+    {
+      "case_id": "647090503f5fa3c971b1ddf4cfee6cef",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-LETTER_O-03 missed (scanned sibling). Same Quantum Solutions employment contradiction. Worker emitted only a generic LOE claim and failed to flag the direct conflict with primary financial/employment evidence."
+    },
+    {
+      "case_id": "fff0df94dc4f84d0db0d79147c910f20",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-LETTER_O-04 missed. LOE explicitly states 'I have never been refused a visa... nor... overstayed,' directly conflicting with recorded UK visa refusal (2020) and US overstay/voluntary departure (2021) — an A40 misrepresentation trigger. Worker abstained with empty claims, missing the inconsistency."
+    },
+    {
+      "case_id": "2a14f66215cc8f70c4cdaacab6d97efd",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-LETTER_O-04 missed (scanned sibling). Same false 'no prior refusals/overstays' assertion. Worker produced only a generic LOE claim and failed to surface the misrepresentation-risk defect."
+    },
+    {
+      "case_id": "830e9a3ccd2825171046e225f3a4ee8e",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Claim 'letter-explanation-doc' cites guidance/police-certificates.md#008 with fragment quote 'a letter of explanation, **and**' to support a generic assertion about when an LOE may be submitted. The police-certificate guidance lists LOE only as an alternative when a police certificate is unobtainable; citation is misapplied/out-of-context."
+    },
+    {
+      "case_id": "647090503f5fa3c971b1ddf4cfee6cef",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Same misapplied citation: guidance/police-certificates.md#008 quote 'a letter of explanation,' used to ground a generic LOE-submission claim rather than an authoritative e-APR LOE completeness requirement."
+    },
+    {
+      "case_id": "2a14f66215cc8f70c4cdaacab6d97efd",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Same misapplied citation: police-certificates.md#008 quote 'a letter of explanation' cited for a generic submission claim, while the actual visible defect (false visa-history declaration) went uncited and undetected."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/letter_of_explanation.md",
+      "suggested_patch": "Add mandatory defect checks the Worker must evaluate from the LOE narrative itself (not the corpus): (1) financial-gift claims lacking a notarized gift deed AND donor 6-month bank/source trail — flag phrases like 'gifted by my uncle/family' with 'no additional financial records available'; (2) unsworn/unnotarized statements substituting for required affidavits — flag 'unable to visit a notary', 'signed statement directly', self-authored translations; (3) internal or cross-document contradictions in employment/income/dates; (4) categorical denials of prior refusals/overstays that can trigger IRPA s.40. Each triggered check must yield a defect claim, not an abstention."
+    },
+    {
+      "target_file": "skills/document-agents/letter_of_explanation.md",
+      "suggested_patch": "Prohibit abstaining with reason 'not_in_corpus' when the attached document contains observable completeness/consistency defects. The absence of a corpus chunk is not grounds to skip content-level review; the Worker must still assess the letter body and emit defect findings with a verdict of defective when applicable."
+    },
+    {
+      "target_file": "skills/document-agents/letter_of_explanation.md",
+      "suggested_patch": "Ban using guidance/police-certificates.md as a citation for generic 'when may an LOE be submitted' claims. That file references an LOE only as a police-certificate substitute. Generic capability statements must be dropped or cited to the e-APR document-requirements source; do not emit boilerplate LOE-purpose claims in place of defect analysis."
+    }
+  ],
+  "rationale": "The Worker (gemini-3.6-flash) kept PII fully contained (all applicant names, application numbers, and financials stayed out of claims/prose/basis) and operated blindly with no ground-truth leakage across all 10 cases — those two dimensions score 1.0 everywhere. It correctly produced no false defect on the two meets_requirements cases (94315e1c, 1f121f987). However, it failed catastrophically on defect recall: all 8 injected defects (PFL-LETTER_O-01 through -04, across vector and scanned siblings) went undetected. In 5 defective cases it abstained with empty claims citing 'not_in_corpus'; in 3 (830e9a3, 647090503, 2a14f66) it emitted only a generic LOE-purpose claim citing guidance/police-certificates.md#008 out of context, which also depresses grounding and citation scores for those three. The core failure is treating a missing corpus chunk as license to skip content-level review, so clear defects — unsubstantiated gifts, unsworn declarations, employment contradictions, and false visa-history denials visible in the letter bodies — were all missed.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "0d6b65e8291756ef8e83f31caeeddfeb.pdf",
+      "--attachment",
+      "1f121f987b78c16a25b391c698098edd.pdf",
+      "--attachment",
+      "2a14f66215cc8f70c4cdaacab6d97efd.pdf",
+      "--attachment",
+      "339df681bb5b1d873ef8920aa7941897.pdf",
+      "--attachment",
+      "647090503f5fa3c971b1ddf4cfee6cef.pdf",
+      "--attachment",
+      "830e9a3ccd2825171046e225f3a4ee8e.pdf",
+      "--attachment",
+      "939fc849afc556fa64096d9beda03ceb.pdf",
+      "--attachment",
+      "94315e1c3dc58eb42a9fab23dced3f12.pdf",
+      "--attachment",
+      "c8c3343ab8ccedd87a9d1caf9cfbbf7e.pdf",
+      "--attachment",
+      "fff0df94dc4f84d0db0d79147c910f20.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "79550638f1e2aa5ea88a2489e97f97c9f32012334a897b5199c3d1eae8e865fe",
+    "research_hash": "4042b2574c1d437edf6f22aa7734d3c55bfc354428af1e8069d44fe8e23b157c",
+    "ground_truth_hash": "f62b036b569391d13224bcba228411d8eece5b1d551c48e42d87d8893ca5ebcd",
+    "output_hash": "4759a0a1b27c6ad0f85c165cd875116bc952db8e948471dbf045ec7a79022ac6",
+    "timestamp": "2026-07-23T23:11:26.985874+00:00",
+    "provenance_digest": "066f940417bbbfa786ee6d19967c799d9f1f5c9bad9036665c99a6c11ef4d049"
+  }
+}

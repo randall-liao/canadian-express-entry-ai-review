@@ -1,0 +1,62 @@
+{
+  "question": "How must an applicant translate a supporting document that is not in English or French?",
+  "claims": [
+    {
+      "id": "translation-certified",
+      "text": "Supporting documents in a language other than English or French must be accompanied by an English or French translation stamped by a certified translator or accompanied by an affidavit if a certified translator is not available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "an English or French translation stamped by a [certified translator](https://www.canada.ca/en/services/immigration-citizenship/helpcentre/glossary.html#certified_translator) or accompanied by an [affidavit](https://www.canada.ca/en/services/immigration-citizenship/helpcentre/glossary.html#affidavit) from the person who completed the translation, if it is not possible to have the translation done by a certified translator"
+    },
+    {
+      "id": "translation-package-contents",
+      "text": "The translation package must include a copy of the original source document used by the translator and the translation of all contents of the original document.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a certified translation document under case 25845c7d8474aa76eed215c0570a8af3 for Canadian Express Entry review."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "25845c7d8474aa76eed215c0570a8af3",
+  "doc_type": "certified_translation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "25845c7d8474aa76eed215c0570a8af3.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "1ab7163937c3168c7a2ac48dbf4ba9df6b6b36a06747963a77696badfe9e5b9d",
+    "allowed_text_sha256": null,
+    "bundle_hash": "4a37d63bb4b1ec8d3568c9d28d63373033f20464f6e70d6cc52d3ed8159fd14a",
+    "prompt_hash": "997ba11ad12bff4db4f840042d4a32bc088260905f7b2f7018d044c7b7209cac",
+    "output_hash": "26906d25ad52f5496c73959488c76febe3aa55d851526ec325bd6e1f229024ce",
+    "returncode": 0,
+    "timestamp": "2026-07-24T04:03:22.730829+00:00",
+    "provenance_digest": "4f214b12158b3e279b52708817f20950f26ae0893335477725d149a0f052654b"
+  }
+}

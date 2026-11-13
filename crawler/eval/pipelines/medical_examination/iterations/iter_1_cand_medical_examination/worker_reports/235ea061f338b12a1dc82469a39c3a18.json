@@ -1,0 +1,55 @@
+{
+  "question": "Does the applicant need an immigration medical examination?",
+  "claims": [
+    {
+      "id": "non-designated-physician-defect",
+      "text": "The submitted medical examination was conducted by an unregistered physician at an unauthorized facility, failing the requirement that applicants undergo an examination by a designated panel physician and hold a valid medical certificate.",
+      "citations": [
+        "medical/who-must-submit-immigration-medical-examination.md#000"
+      ],
+      "quote": "Every foreign national who must submit to an IME **must hold a valid medical certificate before a final decision can be made on their application**."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a document under slot type medical_examination for opaque case ID 235ea061f338b12a1dc82469a39c3a18.",
+    "The document narrative states that the examination was performed by Dr. Alan Miller (UNREGISTERED-999) at Sunrise Family General Practice, who is an unregistered physician at an unauthorized clinic."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "235ea061f338b12a1dc82469a39c3a18",
+  "doc_type": "medical_examination",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "235ea061f338b12a1dc82469a39c3a18.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e3f52a678826eef88f663dbe89d7f20bc90c2097c47d33b68d44274dd61caf77",
+    "allowed_text_sha256": null,
+    "bundle_hash": "59f5b302d2be7e7ccaef4e74931512afed25631d3e574278e2580d2dcbf5892d",
+    "prompt_hash": "b2332ccc93bb41fe2a98de138bad36c7516e71f620f76616a4b417aa39469daf",
+    "output_hash": "079379c4ad8c72f0cca17cdad1426c6fb8e34e38379581da500fea035657133b",
+    "returncode": 0,
+    "timestamp": "2026-07-24T10:40:06.161801+00:00",
+    "provenance_digest": "7ea4fc78895cbb38538b8cd89c45e2d0a7f4e8556997a9d849e53eccd2107e51"
+  }
+}

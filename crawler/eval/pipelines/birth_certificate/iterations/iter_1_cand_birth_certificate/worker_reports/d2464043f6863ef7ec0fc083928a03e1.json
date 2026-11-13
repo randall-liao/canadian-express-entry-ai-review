@@ -1,0 +1,58 @@
+{
+  "question": "What birth document is required for an applicant's dependent children?",
+  "claims": [
+    {
+      "id": "birth-cert-options",
+      "text": "For dependent children, the applicant must provide a birth certificate, an equivalent document from the birth country, or a letter of explanation if no birth certificate is available in the country.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024"
+      ],
+      "quote": "* This document is required only if the applicant identifies dependent children.\n  * The document must be one of the following: \n    * birth certificate;\n    * equivalent document from the birth country; or\n    * letter of explanation (where no birth certificate is available in the country)."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a birth certificate for dependent child Jane Alice Smith (born May 14, 2022).",
+    "The document is a long-form birth certificate issued by the California Department of Public Health - Vital Records, identifying mother Mary Elizabeth Smith and father John Robert Smith.",
+    "The registration date is May 18, 2022, which is 4 days after the date of birth.",
+    "The document features an official state seal, certified registrar signature, and security watermark.",
+    "The document is in English."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "d2464043f6863ef7ec0fc083928a03e1",
+  "doc_type": "birth_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "d2464043f6863ef7ec0fc083928a03e1.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9ee624c1326a48335aa577f73ec11ceb0e09aa3e1b1075dca65a6e4f0539a34b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "4dd7349c189f49d36a24d6a0cdcdeca9345491cc49c85f9d2e054bf2f9ac6513",
+    "prompt_hash": "8749a0fab0d67000dcaf78f35f460ac91a15d24b842e595cdd2eda161674e5fa",
+    "output_hash": "739b4659dee1e8abb244a8687567f220e1af5893343c2ee7481616238f065053",
+    "returncode": 0,
+    "timestamp": "2026-07-24T03:05:17.809045+00:00",
+    "provenance_digest": "19dee04b42516cc23ed9f4765cc333f0b493cf03cda15e789801d07df5fc8b74"
+  }
+}

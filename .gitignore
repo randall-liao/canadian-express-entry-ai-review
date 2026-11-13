@@ -1,0 +1,79 @@
+# PII boundary: the user's real personal data NEVER enters the repo.
+# Everything under personal/ is runtime-only and git-ignored.
+personal/
+!personal.example/
+
+# Crawled corpus + derived artifacts are regenerated locally (see CRWL/index phases).
+raw/
+corpus
+index/
+*.db
+*.db-shm
+*.db-wal
+
+# Candidate vault DB + sidecars (defense in depth — the real vault lives under
+# the git-ignored personal/ boundary; these also catch a stray copy anywhere).
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Local trial corpus + crawl outputs (never tracked)
+trial/
+corpus_new/
+crawler/eval/test_data/
+crawler/eval/synthetic_fixtures/rendered/
+
+# Python
+.venv/
+.worktrees/
+.superpowers/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.local/
+dist/
+build/
+
+# Coverage & test execution
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Evaluation results & runtime trackers
+benchmark_results.json
+crawler/eval/benchmark_results.json
+optimization_report.json
+crawler/eval/optimization_report.json
+.pii_review_tracker.json
+crawler/eval/rendered/
+crawler/synthetic/output/
+reports/
+
+# Caches & Logs
+*.log
+.cache/
+.planning/research/.cache/
+
+# Secrets / env
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

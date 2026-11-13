@@ -1,0 +1,138 @@
+{
+  "doc_type": "proof_of_other_name",
+  "timestamp": "2026-07-23T03:57:09.293097+00:00",
+  "summary": "Online research into IRCC Express Entry operational guidelines and real-world failure cases reveals that 'proof_of_other_name' issues primarily stem from missing legal name change certificates, unauthenticated or unsealed court orders, name discrepancies between passports and educational/ECA records, and uncertified foreign language translations. When identity documents show variations or missing legal proofs, IRCC officers issue Procedural Fairness Letters (PFL) or reject applications under IRPR Section 10 completeness check.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T04:01:22.347408+00:00",
+    "duration_seconds": 267.857,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "4067b1ba61fdd6c11e24bca298978d4dbeff2ab3cc19914a09523aeacec5470f",
+    "raw_output_sha256": "a4fdf0f1f8ed6f0ff303a642bfbc6efa3a2bb0bd57d83d96a158234cd821574d",
+    "returncode": 0,
+    "provenance_token": "20bcbd7077b5cc5fcd7b049701c2c1bec79ae4a7f13a70ba4d5da12df36bfe94",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 13,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-POON_NAME-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Missing Official Government Legal Name Change Certificate",
+      "description": "The applicant declared a former name or legal name change in Express Entry personal history but uploaded only an informal self-declaration or marriage certificate without the mandatory government-issued legal name change certificate or official deed poll. IRCC requires official vital statistics or government-issued documentation to establish legal identity changes outside standard marriage registration.",
+      "affected_fields": [
+        "proof_of_other_name",
+        "personal_history_names",
+        "given_name",
+        "family_name"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If your current name is different from the name showing in other supporting documents... you must provide documentary proof of the name change (e.g., marriage certificate, legal name change certificate).",
+      "remediation_hypothesis": "Obtain an official legal name change certificate or government deed poll from the issuing provincial/state vital statistics agency, and submit it with a detailed Letter of Explanation mapping all legal name transitions.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POON_NAME-02",
+      "category": "pfl_invalid_format",
+      "severity": "critical",
+      "title": "Court Order for Name Change Lacking Official Judicial Seal or Stamp",
+      "description": "The applicant submitted a plain, uncertified copy or photocopy of a court decree authorizing a name change that lacks an official raised court seal, registrar signature, or wet-ink verification stamp. IRCC officers verify document authenticity and reject unsealed court orders as unverified legal evidence during completeness assessment.",
+      "affected_fields": [
+        "proof_of_other_name",
+        "court_order_document",
+        "issuing_court_seal"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must submit official, clear, and legible copies of required documents... Documents confirming legal name change (if applicable) must be issued by a recognized authority.",
+      "remediation_hypothesis": "Request a certified true copy bearing the raised official court seal or red/wet-ink stamp directly from the clerk of the issuing court, and submit it along with an official registry verification letter.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POON_NAME-03",
+      "category": "pfl_identity_discrepancy",
+      "severity": "high",
+      "title": "Name Discrepancy Across Passport, ECA Report, and Educational Degrees",
+      "description": "There is an unresolved variance between the name on the applicant's passport and their ECA report or university degree certificates (e.g., expanded initials, inverted surname/given name, or omitted middle names) without cross-linking proof in the 'proof_of_other_name' section. IRCC flags this as an unverified identity link, triggering a PFL or R10 rejection.",
+      "affected_fields": [
+        "passport_full_name",
+        "eca_applicant_name",
+        "degree_certificate_name",
+        "proof_of_other_name"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=1535",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The aim is to provide enough evidence for IRCC to see that all your documents, regardless of name variation, refer to the same person... Include a letter of explanation outlining the reason for the name change and the supporting documents you have included.",
+      "remediation_hypothesis": "Execute a sworn 'One and the Same Person' affidavit before a Notary Public, obtain an official letter from the university registrar confirming applicant identity, and upload a comprehensive Letter of Explanation.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POON_NAME-04",
+      "category": "pfl_non_compliant_translation",
+      "severity": "high",
+      "title": "Foreign Name Change Document Lacking Certified Translation or Translator Affidavit",
+      "description": "The applicant uploaded a foreign legal name change certificate or municipal decree in a non-English/non-French language without an official certified translation or sworn translator affidavit as required under IRPR Section 10/11. Uncertified translations or plain self-translations result in application rejection for incompleteness.",
+      "affected_fields": [
+        "proof_of_other_name",
+        "document_translation",
+        "translator_affidavit"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Any document that is not in English or French must be accompanied by the official translation and an affidavit from the person who completed the translation (if they are not a certified translator).",
+      "remediation_hypothesis": "Obtain a certified translation performed by an accredited certified translator (or accompanied by a sworn translator affidavit) along with certified copies of the original foreign document.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

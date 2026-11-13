@@ -1,0 +1,24 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "employment_reference_letter",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/employment_reference_letter/judge.json": "743378da086ee40de503281b5b3ca2fa26ce2de1310bed8e2b2063156bd6dbfc",
+    "documents/employment_reference_letter/shared_evaluation.json": "5149d716918c469ade9fb56ab6599329a69b6071f8cf6a87f8c148a868fdc6fa",
+    "documents/employment_reference_letter/workers/04597da96ea65edadb49ead722f7cf40.json": "40e2a529f00399860d455a71012da5f5a18197f1f1c60b56c34503226b999053",
+    "documents/employment_reference_letter/workers/53cd21daf759f2e2a12a90911556b337.json": "c5031c3232957d6b5343ffa22f9483740ad1b475af4b1ac8f35719d3df83b5db",
+    "documents/employment_reference_letter/workers/5b8ba60114e7cfe90e183bdf35f12eb5.json": "9ff0d47533ac2ce93b476a810d6a3e1209f1a850ccce092dec71dd4c23dcfb03",
+    "documents/employment_reference_letter/workers/757014e2b6d8678e024e88d7db54d799.json": "4a8d627455ea8b1ea7c8fe166fca365cf330fcc388e7ff44fb18921679024c1a",
+    "documents/employment_reference_letter/workers/80fd968c0e20ec53c6c07558e63d66a3.json": "9a1ccc181245d7dbb82323552f51065800c4c6fde5a4874ac67aad143e358e51",
+    "documents/employment_reference_letter/workers/8278613d9848aace105e5158c21b4653.json": "fcee40d6bf63c9eb9add365e5099eef3969882d19589318ab3c601f678a1713a",
+    "documents/employment_reference_letter/workers/90d380882f66329f233e9589c354f18e.json": "a583d71134fa21c4110bc79dfe0bfe1e96a7817617163eecfbb34c2121e9c903",
+    "documents/employment_reference_letter/workers/90ee0a32c3d8d39c6a6db2147bc1b42c.json": "6ffbf589f0f4ef4aff7461fd5dc43e664866be3c32f595ec5430c74dd55a4e50",
+    "documents/employment_reference_letter/workers/a38580ddaa3c103b3955871ba2a5c8d2.json": "4aba3dd7d0ad0a7ea1ac60c15b171a51d2bcb1024f4672ecf2f1b73010f1bc33",
+    "documents/employment_reference_letter/workers/a9872c8ef442169e6fd44175c86eaf3e.json": "76526116dddf10d16c531355ea90d1b4a611b59f38a8aad6f5e52a01b1e70d33",
+    "documents/employment_reference_letter/workers/cb3efc9f53575ceb55cb6a6a2f84ab51.json": "72715f81e387e666cbf24dfbee34ae5f48fc0e9ef3329b4e1d7348998fca649e",
+    "documents/employment_reference_letter/workers/f7cfc508c3755958610fe9872263332c.json": "6b45908c08ff7dafa748b6b553b2cce6ac63c3dd3a79edd6a03d69d23d8d1fde"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

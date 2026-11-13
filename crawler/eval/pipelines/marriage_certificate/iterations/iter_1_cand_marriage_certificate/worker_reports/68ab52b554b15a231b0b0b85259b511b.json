@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant's marital status is married?",
+  "claims": [
+    {
+      "id": "marriage-validity",
+      "text": "A copy of a legal marriage certificate issued by the province, territory, country, or region where the marriage took place must be provided when marital status is listed as married.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant declared marital status as married and submitted a document in the marriage_certificate upload slot for opaque case ID 68ab52b554b15a231b0b0b85259b511b."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "68ab52b554b15a231b0b0b85259b511b",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "68ab52b554b15a231b0b0b85259b511b.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "dc52af9dbcbb2d5996bb437956c5dd65ab8f28a0fd5a2019b761f212b6a3fddf",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70d5c9e6de1b058c0a06652945be079d07ca12b21cbeaa54c33b6cb451fc21bd",
+    "prompt_hash": "cd013185aa6729d581e3c07309ae11600e1fd9a84822d24da1f2d0e5916f0aff",
+    "output_hash": "351f1d0602e33140f2bb0aba639b90cba8bb90f5ddd6af2ffb07b11d8ab3dfce",
+    "returncode": 0,
+    "timestamp": "2026-07-24T21:10:03.795129+00:00",
+    "provenance_digest": "57fa05289d2c2c9b94a20a87e97093c25a0b686bd1ee9e134f81dbb64299a96a"
+  }
+}

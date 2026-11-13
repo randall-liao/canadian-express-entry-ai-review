@@ -1,0 +1,137 @@
+{
+  "doc_type": "medical_examination",
+  "timestamp": "2026-07-23T03:36:30.418731+00:00",
+  "summary": "Live research into IRCC operational instructions and permanent residence application guidelines reveals key failure modes for Express Entry medical examinations: submission of expired medical exam results (>12 months), examinations conducted by non-designated doctors/panel physicians, unresolved medical furtherance requests/incomplete follow-up testing, and missing upfront eMedical receipts during initial completeness checks.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:39:15.515616+00:00",
+    "duration_seconds": 173.078,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "a97901966c343d0cabbfa987b26506a27b607c6de35d7485f75a3d0c81455593",
+    "raw_output_sha256": "cfdcfd334a01f1afc25a1b507635e49dda1841020e7a827dddc2d9766110f5b6",
+    "returncode": 0,
+    "provenance_token": "51a4ee40fe0e2a9f3ff8c3ff9cde1745db3e1555f600347bc0f8c24d797e383b",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_fetch",
+      "web_fetch"
+    ],
+    "tool_call_count": 12,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-MEDICAL_-01",
+      "category": "pfl_expired_document",
+      "severity": "critical",
+      "title": "Expired Immigration Medical Examination Results Exceeding 12-Month Validity Period",
+      "description": "Immigration medical examination (IME) results are valid for exactly 12 months from the date of assessment. When application processing extends beyond 12 months, or when an applicant submits an eMedical receipt from an exam taken over a year prior, IRCC flags the assessment as expired. IRCC will issue a Procedural Fairness Letter or Re-medical Instruction Form (IMM 1017) requiring a updated IME or valid exemption proof.",
+      "affected_fields": [
+        "ime_number",
+        "examination_date",
+        "emedical_receipt"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/requirements-permanent-residents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Immigration medical exam (IME) results are valid for 12 months from the date of the examination. If your medical exam has expired, you may be required to undergo a new one if a decision has not been made on your application within that period.",
+      "remediation_hypothesis": "The applicant should await formal instruction before completing a new exam unless qualifying for an in-Canada 5-year IME public policy exemption (and providing their prior IME number). If requested via PFL/IMM 1017, complete a new IME with an authorized panel physician within 30 days and submit updated eMedical proof via IRCC Web Form.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-MEDICAL_-02",
+      "category": "pfl_invalid_issuer",
+      "severity": "critical",
+      "title": "Medical Examination Administered by Non-Designated / Unassigned Panel Physician",
+      "description": "IRCC regulations require all immigration medical examinations to be conducted strictly by an IRCC-approved Panel Physician listed in the official physician registry. Submitting medical certificates or evaluation reports issued by a personal primary physician or non-panel clinic results in rejection at completeness check or issuance of a PFL due to lack of medical assessment authority.",
+      "affected_fields": [
+        "panel_physician_id",
+        "clinic_name",
+        "physician_signature",
+        "emedical_receipt"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/medical-exams/required/medical-exam-doctor.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must see a doctor on the list of panel physicians. Your own doctor can’t do the medical exam. The panel physician doesn’t make the final decision about your medical exam. We make that decision.",
+      "remediation_hypothesis": "Schedule an immediate examination with an officially authorized IRCC Panel Physician from the official directory. Complete the full IME and submit the resulting IMM 1017B Upfront Medical Report form or eMedical Information Printout Sheet along with a Letter of Explanation in response to the PFL.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-MEDICAL_-03",
+      "category": "pfl_incomplete_evidence",
+      "severity": "high",
+      "title": "Incomplete Medical Condition Follow-up and Unresolved Furtherance Requirements",
+      "description": "When initial medical screening uncovers health concerns or abnormal findings (e.g., chest X-ray findings or chronic illnesses), the IRCC Medical Officer requests additional tests or specialist reports (furtherance). Failing to complete requested follow-up evaluations or failing to submit specialist reports within the specified timeframe triggers a Procedural Fairness Letter for potential medical inadmissibility or non-compliance.",
+      "affected_fields": [
+        "furtherance_status",
+        "specialist_report",
+        "laboratory_results",
+        "medical_history_questionnaire"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/inadmissibility/reasons/medical-inadmissibility.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If we believe you may be medically inadmissible, we’ll send you a letter which explains the reason why. This letter is called a procedural fairness letter. You’ll receive this letter before a final decision is made on your application. You’ll have the opportunity to submit information to respond.",
+      "remediation_hypothesis": "Attend required specialist appointments without delay, obtain complete diagnostic reports addressing the specific health concerns raised by IRCC, and submit all documentation within the PFL deadline (or request an official extension with appointment booking confirmations if clinic delays occur).",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-MEDICAL_-04",
+      "category": "pfl_missing_required_document",
+      "severity": "critical",
+      "title": "Missing Upfront Medical Examination Proof at Completeness Check",
+      "description": "Express Entry applications require proof of an upfront immigration medical examination (IMM 1017B form or eMedical Information Sheet) uploaded at initial submission. Uploading an administrative payment receipt only, an unreadable document, or omitting proof entirely causes application rejection and return as incomplete during completeness screening.",
+      "affected_fields": [
+        "emedical_receipt",
+        "imm1017b_form",
+        "document_attachment"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If you complete an upfront medical examination before submitting your Express Entry application, you should include the proof of your medical exam (such as the document or receipt given to you by the panel physician) with your application.",
+      "remediation_hypothesis": "Ensure that the document uploaded is the official IMM 1017B Upfront Medical Report Form or eMedical Information Sheet provided by the panel physician showing the applicant's photo, IME/UMI number, and panel physician credentials, rather than a generic billing/appointment receipt.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

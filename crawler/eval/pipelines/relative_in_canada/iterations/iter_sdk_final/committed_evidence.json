@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "relative_in_canada",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/relative_in_canada/judge.json": "140979773eed278f0d2b9c3e0d2515f6238bd983edc4b05af5113af2f34c9c19",
+    "documents/relative_in_canada/shared_evaluation.json": "df18fa766a632fef498863318c80deca68a11271a8bbf75f0425dd053aac3a10",
+    "documents/relative_in_canada/workers/160e4bbea1a353352f1275f8646bfef3.json": "29ef382c1f6c6ae1e7c9190961653d37af0021f03ed022b6d3e09180f7e3be7a",
+    "documents/relative_in_canada/workers/30ed110465efad8a0e363567815ccbe9.json": "54abbf47b6275c37dd0ff40db89261c4235357477e1410f5bf50bd1424edc84d",
+    "documents/relative_in_canada/workers/43804fbfe7bde621065846b69913118c.json": "5f1ac237a05bdd1694fcaf5943b38a2c574ce0c7ece1ccbd93c3945dc9694052",
+    "documents/relative_in_canada/workers/4afd1b4ef4c579ef2aad992926cc98d4.json": "c17fb6e1e7aab454782d723d2fbde1e76f44a5e89433d0e04afa977bb0d4f243",
+    "documents/relative_in_canada/workers/5c3713e834776dec91df152cdd87d694.json": "717d332a1a1fa3cbdd61b398e7faa2c73a050c1caadf53faf31dcac87469e8a0",
+    "documents/relative_in_canada/workers/70135fcbad47943aa859d21553cd5844.json": "eadf297cb8b766b87049bdfd6329095ed7ed842cc9c8e0ef90282e39d0757e6c",
+    "documents/relative_in_canada/workers/8b61310c41fef19cc58e974cb673701c.json": "33cdfb9b97984257bb89c99f2c3ae01e7f67aa5ef3e910940bfc57d42d0deaea",
+    "documents/relative_in_canada/workers/c392aa8c3c5b73d34380cea976500aa8.json": "f5e001ebf07eca2323ba302d746a1803c33cc05a3b52801e852aee9d6d2df7fa",
+    "documents/relative_in_canada/workers/e06da6c6b8a306d6620755a9e39e68bc.json": "41df6cb60a860152fd8c3944dc42dafa694f7ca2357e6b47db412c38e62a5527",
+    "documents/relative_in_canada/workers/f308748019af244b8bb73b3a75683ec7.json": "5e8df15fdb7a34428522973fe440c432e8aa9601112598b2847d0b90799d58b0"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

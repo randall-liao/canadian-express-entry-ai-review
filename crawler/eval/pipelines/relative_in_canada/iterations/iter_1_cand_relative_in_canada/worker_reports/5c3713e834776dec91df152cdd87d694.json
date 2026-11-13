@@ -1,0 +1,71 @@
+{
+  "question": "What documentation must an applicant provide to claim a relative in Canada for adaptability or additional CRS points?",
+  "claims": [
+    {
+      "id": "status-proof",
+      "text": "A copy of both sides of the family member's Canadian citizenship document, Canadian birth certificate and/or permanent resident card must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "A copy of **both** sides of the family member's Canadian citizenship document, Canadian birth certificate and/or permanent resident card must be provided."
+    },
+    {
+      "id": "residence-proof",
+      "text": "Evidence that the family member currently resides in Canada must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Evidence that the family member currently resides in Canada must be provided (a residential lease, mortgage documents, utility bills, etc.)."
+    },
+    {
+      "id": "relationship-proof",
+      "text": "Proof of the relationship of the applicant or the accompanying spouse or common-law partner to the family member must also be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Proof of the relationship of the applicant or the accompanying spouse or common-law partner to the family member must also be provided (e.g., a birth certificate, an official document naming the applicant as a relative, a copy of the inside back cover of the relative’s passport showing the relative’s parents’ marriage certificate, legal adoption documents and any other documents that prove or describe the relationship)."
+    }
+  ],
+  "basis": [
+    "The applicant or accompanying spouse indicates a relative in Canada who is a Canadian citizen or permanent resident.",
+    "Case 5c3713e834776dec91df152cdd87d694 was evaluated under the relative_in_canada document slot requirements."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "5c3713e834776dec91df152cdd87d694",
+  "doc_type": "relative_in_canada",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "5c3713e834776dec91df152cdd87d694.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "5b04c51f95f31f28543f1e1ad667023fbfb193fed60ae93f8f36cc64305378d3",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e2a890b6b55bd9997e8664f764878e3d9515c5138137a5da60f5a1255317c38a",
+    "prompt_hash": "e8d64338c1e9e19220ba1a6d658907af296a2429eaa57386421701253e0bdba2",
+    "output_hash": "eb08e1227ec4ab62b37f7593535f0c012d40967bf379772a3ce88198f95403e9",
+    "returncode": 0,
+    "timestamp": "2026-07-24T15:09:45.118459+00:00",
+    "provenance_digest": "ed760876af1d0da458afed09d379218f2a160331bea81005c1a2f381da9073ed"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What digital photos must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "digital-photos-spec",
+      "text": "Digital photos meeting IRCC’s permanent resident card photo specifications must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#061"
+      ],
+      "quote": "Digital photos meeting [IRCC’s permanent resident card photo specifications (PDF, 614.24 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/information/applications/guides/pdf/5445eb-e.pdf) must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a 2-page document (b0da7b46beb2e138560acd53eca0b245.pdf) for the digital_photo upload slot containing scanned digital photos."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b0da7b46beb2e138560acd53eca0b245",
+  "doc_type": "digital_photo",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b0da7b46beb2e138560acd53eca0b245.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "afb5492392e9d3a0570dcd8a535d841fd531c06b47664f9770cccfa436eafdc0",
+    "allowed_text_sha256": null,
+    "bundle_hash": "6cfcef53b5c2c79bb3d4aeacc136df21882a4974409ec1324f9ca311ae87c909",
+    "prompt_hash": "01caa3966d7b6046f4476e1488015105524b7f756b882834c3c52651c78d8e29",
+    "output_hash": "a2573703fe2594589721efa6f92a8682052d887629496594a48c403fd4e68b9f",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:03:27.129420+00:00",
+    "provenance_digest": "191e31c7593e49b804674e217cb958a2abccaad4128f16743a201e246912bf03"
+  }
+}

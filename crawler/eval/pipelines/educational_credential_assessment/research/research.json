@@ -1,0 +1,130 @@
+{
+  "doc_type": "educational_credential_assessment",
+  "timestamp": "2026-07-23T03:34:31.758381+00:00",
+  "summary": "Online research on IRCC Express Entry requirements for Educational Credential Assessments (ECA) reveals key failure modes leading to section R10 completeness rejections, section 11.2 eligibility refusals, or Procedural Fairness Letters (PFL). Major triggers include expired ECA reports older than 5 years, foreign credentials from non-accredited or non-recognized institutions, assessments conducted by non-designated bodies or issued for general employment rather than IRCC immigration purposes, and name/reference number discrepancies that prevent electronic verification.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:36:30.415020+00:00",
+    "duration_seconds": 125.09,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "458626c1c973c7755f698feb462ce266c1d8f7c3219ad661bd5f87c8ef99af27",
+    "raw_output_sha256": "f79eb12c8aae9251e2f2b80175a937584e9b2433257943fab90f4cb4ba3b08c6",
+    "returncode": 0,
+    "provenance_token": "8e139cd8270b5ef78c37d1c6ceb6475fb67333bfbb9b10546265251394acbce3",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 7,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-EDUCATIO-01",
+      "category": "pfl_validity_expired",
+      "severity": "critical",
+      "title": "ECA Report Expired Beyond 5-Year Validity Period",
+      "description": "IRCC requires that an Educational Credential Assessment (ECA) report be less than 5 years old on both the date the Express Entry profile is submitted and the date the permanent residence application (eAPR) is submitted. Submitting an application with an ECA report older than 5 years results in immediate rejection under Section R10 or refusal under Section 11.2 for loss of CRS points.",
+      "affected_fields": [
+        "eca_issue_date",
+        "eca_reference_number",
+        "crs_education_points"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessment.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Your ECA report must be less than 5 years old on the date you submit your profile and your application for permanent residence. If your ECA expires before you apply, IRCC will refuse your application.",
+      "remediation_hypothesis": "Obtain a re-issued or updated ECA report from the original designated assessing agency (e.g., WES, ICAS, CES) prior to submitting the eAPR, ensuring the issue date on the new report is within the 5-year window.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-EDUCATIO-02",
+      "category": "pfl_credential_unrecognized",
+      "severity": "critical",
+      "title": "Foreign Credential From Non-Accredited Institution or Lacks Canadian Equivalency",
+      "description": "If the designated assessing body determines that the applicant's foreign degree, diploma, or certificate was awarded by an unaccredited institution or does not equal at least a completed Canadian secondary or post-secondary educational credential, IRCC will disallow CRS points for education, leading to profile ineligible determination or application refusal.",
+      "affected_fields": [
+        "foreign_institution_name",
+        "credential_level",
+        "canadian_equivalency_summary"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessment.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "To receive points, your ECA report must show that your completed foreign credential is equal to a completed Canadian secondary school (high school) or post-secondary credential. If your assessment says your credential isn't equivalent to a Canadian credential, you won't get any points.",
+      "remediation_hypothesis": "The applicant must claim CRS education points only for completed credentials that hold explicit Canadian equivalency. If a secondary higher education credential is unaccredited, submit an alternative ECA for another eligible, recognized qualification or higher completed degree.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-EDUCATIO-03",
+      "category": "pfl_invalid_issuing_body",
+      "severity": "critical",
+      "title": "ECA Report Issued by Non-Designated Organization or Wrong Assessment Type",
+      "description": "IRCC accepts ECAs only from specific designated organizations (such as WES, ICAS, CES, IQAS, ICES, or medical/pharmacy professional boards). Submitting an evaluation from an unapproved agency, or submitting a general evaluation intended for employment/academic admission rather than IRCC immigration purposes, fails the R10 completeness check.",
+      "affected_fields": [
+        "issuing_organization",
+        "eca_report_type",
+        "eca_reference_number"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessment.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must get your ECA from an organization or professional body designated by IRCC. Assessments by non-designated organizations will not be accepted. You must make sure you order an ECA report specifically for immigration purposes.",
+      "remediation_hypothesis": "Request an upgrade or re-issuance from a designated assessment agency explicitly specifying IRCC/immigration purposes, or re-apply through an authorized body (e.g., Medical Council of Canada for physicians) before eAPR submission.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-EDUCATIO-04",
+      "category": "pfl_identity_mismatch",
+      "severity": "high",
+      "title": "Applicant Name Mismatch or Incorrect Reference Number Preventing Verification",
+      "description": "Discrepancies between the applicant's name on their passport/Express Entry profile and the name on the ECA report (e.g., maiden name vs. married name, missing middle names), or entering an incorrect ECA reference number, prevents automated electronic validation with the evaluation agency and triggers a Procedural Fairness Letter (PFL) or application rejection.",
+      "affected_fields": [
+        "applicant_given_names",
+        "applicant_family_name",
+        "eca_reference_number"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessment.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The name on your ECA report must match the name on your Express Entry profile and application. You must enter the exact ECA reference number into your profile so IRCC can verify the assessment online directly with the issuing agency.",
+      "remediation_hypothesis": "Ensure the ECA reference number is transcribed exactly. If the ECA reflects a maiden or previous legal name, provide official supporting evidence (e.g., marriage certificate, legal name change certificate, sworn affidavit) along with a cover letter explaining the name variation.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

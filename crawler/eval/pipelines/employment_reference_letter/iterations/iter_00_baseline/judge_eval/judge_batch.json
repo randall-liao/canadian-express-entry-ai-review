@@ -1,0 +1,236 @@
+{
+  "doc_type": "employment_reference_letter",
+  "case_evaluations": {
+    "04597da96ea65edadb49ead722f7cf40": {
+      "grounding_accuracy": 0.88,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "53cd21daf759f2e2a12a90911556b337": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "5b8ba60114e7cfe90e183bdf35f12eb5": {
+      "grounding_accuracy": 0.88,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "757014e2b6d8678e024e88d7db54d799": {
+      "grounding_accuracy": 0.92,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "80fd968c0e20ec53c6c07558e63d66a3": {
+      "grounding_accuracy": 0.88,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "8278613d9848aace105e5158c21b4653": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "90d380882f66329f233e9589c354f18e": {
+      "grounding_accuracy": 0.88,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "90ee0a32c3d8d39c6a6db2147bc1b42c": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "a38580ddaa3c103b3955871ba2a5c8d2": {
+      "grounding_accuracy": 0.92,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "a9872c8ef442169e6fd44175c86eaf3e": {
+      "grounding_accuracy": 0.92,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "cb3efc9f53575ceb55cb6a6a2f84ab51": {
+      "grounding_accuracy": 0.88,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f7cfc508c3755958610fe9872263332c": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "a9872c8ef442169e6fd44175c86eaf3e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-01 missed. The narrative for John Smith (Nova Systems Ltd.) omits weekly working hours and employment status (ground truth work_hours_per_week=null, employment_status=null). Worker only recited generic requirements and rendered no defect finding or verdict."
+    },
+    {
+      "case_id": "f7cfc508c3755958610fe9872263332c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-01 missed (scanned sibling). John Smith narrative gives salary/benefits but no weekly hours or job status; Worker produced only generic requirement recitation with no defect detection."
+    },
+    {
+      "case_id": "757014e2b6d8678e024e88d7db54d799",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-02 missed. Alex Taylor (Systems Analyst) duties are verbatim NOC boilerplate ('Write, modify, integrate and test software code...') and NOC/title mismatch; Worker did not flag duty/NOC mismatch or verbatim copying."
+    },
+    {
+      "case_id": "80fd968c0e20ec53c6c07558e63d66a3",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-02 missed (scanned sibling). Same verbatim-NOC duty defect for Alex Taylor; Worker recited requirements only and detected nothing."
+    },
+    {
+      "case_id": "90ee0a32c3d8d39c6a6db2147bc1b42c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-03 missed. Emily Chen (Vanguard Data Labs) narrative lacks company letterhead, address, telephone and email (ground truth company_letterhead=false, contact fields null). Worker flagged no authenticity/completeness defect."
+    },
+    {
+      "case_id": "5b8ba60114e7cfe90e183bdf35f12eb5",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-03 missed (scanned sibling). Missing real-employer letterhead and contact info for Vanguard Data Labs; Worker produced only generic requirement claims."
+    },
+    {
+      "case_id": "8278613d9848aace105e5158c21b4653",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-04 missed. David Miller (Pinnacle Cloud) narrative is signed 'Regards, Pinnacle Cloud Solutions Team' with no supervisor name, title, or signature (ground truth all supervisor fields null). Worker detected no signatory defect."
+    },
+    {
+      "case_id": "a38580ddaa3c103b3955871ba2a5c8d2",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-04 missed (scanned sibling). Missing supervisor name/title/signature/contact for Pinnacle Cloud; Worker recited requirements only with no defect finding."
+    },
+    {
+      "case_id": "90d380882f66329f233e9589c354f18e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-05 missed. Sarah Connor (Summit Enterprise Tech) narrative omits annual salary and benefits (ground truth annual_salary=null, benefits=null). Worker flagged no compensation-completeness defect."
+    },
+    {
+      "case_id": "cb3efc9f53575ceb55cb6a6a2f84ab51",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-EMPLOYME-05 missed (scanned sibling). Missing salary and benefits in Summit narrative; Worker produced only generic requirement recitation and no verdict."
+    },
+    {
+      "case_id": "04597da96ea65edadb49ead722f7cf40",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Systemic across all 12 reports: Worker returned only a generic recitation of IRCC letter requirements and never assessed the attached document, extracted its fields, or issued a meets_requirements/defective verdict. No invented facts, but no document-grounded analysis. Also strengthens source 'should' to 'must' on letterhead and positions-held claims."
+    },
+    {
+      "case_id": "53cd21daf759f2e2a12a90911556b337",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Citations quote the IRCC completeness-check source verbatim, but the local anchor 'pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019' is unverified against the local corpus (privileged research: local_corpus_verified=false)."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/employment_reference_letter.md",
+      "suggested_patch": "Require the Worker to OUTPUT a per-document verdict (meets_requirements | defective) plus a field-level checklist. For each mandatory field (company letterhead, company address/telephone/email, supervisor name+title+signature, employment start/end dates, weekly working hours, employment status, annual salary, benefits, duties) mark present/missing based on the actual document text, and list affected_fields for every missing item. Reciting generic requirements without a verdict must be treated as a failed evaluation."
+    },
+    {
+      "target_file": "skills/document-agents/employment_reference_letter.md",
+      "suggested_patch": "Instruct the Worker that when a letter contains a boilerplate/header block plus a 'Narrative Statements / Detailed Notes' section, the narrative describing the real applicant/employer is authoritative; verify each mandatory field against the narrative and flag mismatches (e.g., header shows hours/salary but narrative omits them). Explicitly detect: missing weekly hours (PFL-01), verbatim-NOC or NOC/title mismatch duties (PFL-02), absent letterhead/contact info (PFL-03), missing supervisor signature block (PFL-04), and missing salary/benefits (PFL-05)."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a hard gate: a document-review report is invalid if it contains zero document-specific findings and no verdict. Emit defects into claims (PII-free, with affected_fields) and keep applicant identifiers only in basis[]. Add a rule to flag job duties copied verbatim from NOC lead-statement/main-duties text."
+    }
+  ],
+  "rationale": "All 12 Worker reports are near-identical generic recitations of IRCC employment-letter requirements; the Worker never extracted document fields, never issued a meets_requirements/defective verdict, and detected none of the 5 injected defect families. Defect_recall is therefore 0.0 for all 10 defective cases and 1.0 for the 2 clean cases (nothing to miss). Grounding is otherwise reasonable (0.88–0.92): claims are supported by the cited IRCC completeness-check source with no fabricated facts, docked slightly for strengthening 'should'→'must'. Citation_exactness (0.9) reflects verbatim-correct quotes to the correct authoritative document, minus an unverified local anchor (#019). PII containment is clean (1.0): claims/prose are generic and basis[] uses placeholders, no applicant PII leaked. Blind_input_compliance is 1.0: the uniformly generic output shows no ground-truth leakage. The dominant, critical failure is total absence of defect detection.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "04597da96ea65edadb49ead722f7cf40.pdf",
+      "--attachment",
+      "53cd21daf759f2e2a12a90911556b337.pdf",
+      "--attachment",
+      "5b8ba60114e7cfe90e183bdf35f12eb5.pdf",
+      "--attachment",
+      "757014e2b6d8678e024e88d7db54d799.pdf",
+      "--attachment",
+      "80fd968c0e20ec53c6c07558e63d66a3.pdf",
+      "--attachment",
+      "8278613d9848aace105e5158c21b4653.pdf",
+      "--attachment",
+      "90d380882f66329f233e9589c354f18e.pdf",
+      "--attachment",
+      "90ee0a32c3d8d39c6a6db2147bc1b42c.pdf",
+      "--attachment",
+      "a38580ddaa3c103b3955871ba2a5c8d2.pdf",
+      "--attachment",
+      "a9872c8ef442169e6fd44175c86eaf3e.pdf",
+      "--attachment",
+      "cb3efc9f53575ceb55cb6a6a2f84ab51.pdf",
+      "--attachment",
+      "f7cfc508c3755958610fe9872263332c.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "064d704f44695b89e429c2729c3e88c1c170afad894632e0485f8d9f0e1d26be",
+    "research_hash": "859a66591adaa97ca38215dce26651638a392c157158f4aad15a8c93bb92c470",
+    "ground_truth_hash": "4b68ec9eae2055d005d7e5b857a5085dcf8284906493ab3a815ba8e0e140c5cb",
+    "output_hash": "c96799d60aed41646fd1cb1556bfcffa51b092d4f018ec3ed0397c4dd4252a3a",
+    "timestamp": "2026-07-23T23:07:46.086102+00:00",
+    "provenance_digest": "3744e65993c264634fca94f20310adc289e54551d3e61a89db673a6f504a03a2"
+  }
+}

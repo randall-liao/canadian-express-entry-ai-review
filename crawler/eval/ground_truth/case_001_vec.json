@@ -1,0 +1,17 @@
+{
+  "case_id": "case_001_vec",
+  "doc_type": "passport",
+  "variant": "vector",
+  "file_name": "case_001_vec.pdf",
+  "fields": {
+    "passport_number": "N9823411",
+    "issuing_country": "Canada",
+    "full_name": "Jane Doe",
+    "dob": "1992-05-14",
+    "issue_date": "2020-01-15",
+    "expiry_date": "2030-01-15"
+  },
+  "expected_verdict": "meets_requirements",
+  "injected_defects": [],
+  "must_abstain": false
+}

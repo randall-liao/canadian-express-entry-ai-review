@@ -1,0 +1,54 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Copies of secondary or post-secondary education documents (certificates, diplomas, or degrees) and transcripts for successfully completed studies",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of"
+    }
+  ],
+  "basis": [
+    "The applicant submitted educational documents and transcripts to demonstrate completed studies for program-specific education points under Express Entry."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "83f94eaa269e4ed1dfb2a0f665ebd2c3",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "83f94eaa269e4ed1dfb2a0f665ebd2c3.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "6223155a200456cfaae68e71fc7a1b7f5b91cea12347dd571568419ec1f99bf5",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2b2d40a170ad72815969c52b906db214cdf801c0459d35fb3d319be3c30d5fbe",
+    "prompt_hash": "c05871029ce362c55b8f259578b50b4263279409cfe426f8d5156305b427cc10",
+    "output_hash": "2db5302f28adf5a15959ef8e5daa33f2fc43bf1d7f3fcb71622a2a3549907a90",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:31:19.935603+00:00",
+    "provenance_digest": "2da582e4dec3c6061b87f30cc27af1a4becc6ab6d8bb979f2d4793d4a95cec3b"
+  }
+}

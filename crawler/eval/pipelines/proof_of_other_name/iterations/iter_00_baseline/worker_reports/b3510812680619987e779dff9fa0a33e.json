@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)."
+    }
+  ],
+  "basis": [
+    "Applicant indicates having used another name and submitted documentation for document upload-slot proof_of_other_name (case ID: b3510812680619987e779dff9fa0a33e)."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b3510812680619987e779dff9fa0a33e",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b3510812680619987e779dff9fa0a33e.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "351a325064ee797c83bb4d33df3f199ae07b118f1c06cc995776836afc828ad9",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2a1ea05a7d87f67391e31f1c27fe234320822f6f65215f1b49f946e67b8eb337",
+    "prompt_hash": "d8f6c51844b12df441e7b1705fd77c1b67d773730a40bb2fa1cae3784f49cc6b",
+    "output_hash": "057edc1fa56507e5861336965572a7d58894d004b7b6bf23569f20325d1951a2",
+    "returncode": 0,
+    "timestamp": "2026-07-23T16:51:45.421636+00:00",
+    "provenance_digest": "3d9e2e456096003f722415e941ed00a5c73f01d8e28da08b8c54526e38d96c5c"
+  }
+}

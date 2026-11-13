@@ -1,0 +1,28 @@
+{
+  "question": "What copy of a passport or travel document must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "passport-bio-page",
+      "text": "A clear and legible copy of the biographical data page of a passport or travel document must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#016"
+      ],
+      "quote": "A clear and legible copy of the biographical data page of a passport or travel document must be provided."
+    }
+  ],
+  "basis": [
+    "Evaluated blind document evidence for case doc_001_vec.",
+    "Document submitted is a Canadian passport (Number: N9823411) for Jane Doe, born 1992-05-14, issued 2020-01-15, expiry 2030-01-15.",
+    "The document includes biographical fields and MRZ code PN9823411<8CAN9205140M3001153<<<<<<<<<<<<<<02."
+  ],
+  "abstentions": [],
+  "prose": "Express Entry e-APR completeness rules mandate a clear and legible copy of the biographical data page of a passport or travel document. The submitted document provides the biographical data page containing identity fields and MRZ.",
+  "case_id": "doc_001_vec",
+  "doc_type": "passport",
+  "_execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T02:29:53.302880+00:00"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "doc_type": "marriage_certificate",
+  "timestamp": "2026-07-23T03:04:12.029000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "marriage_certificate",
+      "title": "Official Certificate of Marriage",
+      "issuing_authority": "Office of the Registrar General, Department of Civil Registration",
+      "issue_date": "2023-06-20",
+      "expiry_date": null,
+      "fields": {
+        "certificate_number": "MC-2023-8849201",
+        "primary_spouse_given_names": "Alexander",
+        "primary_spouse_family_name": "Taylor",
+        "spouse_given_names": "Elena",
+        "spouse_family_name": "Rostova",
+        "marriage_date": "2023-06-10",
+        "marriage_location": "Toronto, Ontario, Canada",
+        "marital_status": "married",
+        "spouse_accompanying": true,
+        "officiant_name": "Rev. Michael H. Vance",
+        "registration_date": "2023-06-15",
+        "registration_number": "REG-2023-009412",
+        "document_translation": null,
+        "passport_details": "Pass # A9841023, Name: Elena Rostova"
+      },
+      "narrative_blocks": [
+        "This is to certify that Alexander Taylor and Elena Rostova were lawfully joined in marriage at Toronto, Ontario, Canada on the 10th day of June in the year 2023.",
+        "The marriage was solemnized under authority of License No. M-5891234 issued by the Registrar General, and officially registered on June 15, 2023 under Registration Number REG-2023-009412."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "marriage_certificate",
+      "title": "Religious Solemnization Certificate",
+      "issuing_authority": "Community Religious Council of St. Jude",
+      "issue_date": "2022-11-12",
+      "expiry_date": null,
+      "fields": {
+        "certificate_number": "REL-CEREMONY-4412",
+        "primary_spouse_given_names": "Julian",
+        "primary_spouse_family_name": "Vance",
+        "spouse_given_names": "Sophia",
+        "spouse_family_name": "Martinez",
+        "marriage_date": "2022-11-10",
+        "marriage_location": "Community Chapel, Local District",
+        "marital_status": "single",
+        "spouse_accompanying": true,
+        "marriage_certificate": "Unregistered religious ceremony certificate without civil registry record",
+        "civil_registration_status": "unregistered"
+      },
+      "narrative_blocks": [
+        "This document certifies that Julian Vance and Sophia Martinez solemnized a traditional religious ceremony at the Community Chapel on November 10, 2022.",
+        "Notice: This document is a religious ceremonial certificate and has not been registered with the Civil Registry of Marriages. Spousal status remains legally single under civil jurisdiction."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-MARRIAGE-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The provided marriage certificate represents a purely customary/religious ceremony that was never registered with the official civil registry, leaving the legal marital status as single/unregistered.",
+        "affected_fields": [
+          "marriage_certificate",
+          "marital_status",
+          "spouse_accompanying"
+        ],
+        "mutation_details": {
+          "mutation_type": "unregistered_ceremony",
+          "defect_reason": "Lack of civil registry registration renders the religious ceremony legally unacknowledged for spousal immigration claims.",
+          "target_fields": {
+            "marital_status": "single",
+            "marriage_certificate": "unregistered_religious_attestation"
+          }
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "marriage_certificate",
+      "title": "Certificate of Marriage with Discrepant Name Records",
+      "issuing_authority": "Metropolitan Civil Registry Office",
+      "issue_date": "2021-08-14",
+      "expiry_date": null,
+      "fields": {
+        "certificate_number": "MC-2021-99201",
+        "primary_spouse_given_names": "David",
+        "primary_spouse_family_name": "Miller",
+        "spouse_given_names": "Sora",
+        "spouse_family_name": "Takahashi",
+        "passport_details": "Pass # J88219401, Name: Sora Kim",
+        "marriage_certificate": "MC-2021-99201 issued to Sora Takahashi",
+        "marriage_date": "2021-08-01",
+        "marriage_location": "Civil Registry Hall, Metro City"
+      },
+      "narrative_blocks": [
+        "This is to certify that David Miller and Sora Takahashi were legally married on August 1, 2021 at the Metropolitan Civil Registry Office.",
+        "Official records show spouse family name as Takahashi, whereas accompanying passport identity documents list the holder under the name Sora Kim without legal name change documentation."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-MARRIAGE-02",
+        "category": "pfl_identity_mismatch",
+        "severity": "critical",
+        "description": "Discrepancy in spouse family name between the marriage certificate (Sora Takahashi) and official passport details (Sora Kim) without connecting legal name change evidence.",
+        "affected_fields": [
+          "spouse_given_names",
+          "spouse_family_name",
+          "marriage_certificate",
+          "passport_details"
+        ],
+        "mutation_details": {
+          "mutation_type": "name_mismatch",
+          "defect_reason": "Spouse family name on marriage certificate does not match name on passport and primary identification records.",
+          "target_fields": {
+            "spouse_family_name": "Takahashi",
+            "passport_name": "Sora Kim"
+          }
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "marriage_certificate",
+      "title": "Remote Proxy Marriage Certificate",
+      "issuing_authority": "District Registrar of Tele-Marriages",
+      "issue_date": "2023-03-20",
+      "expiry_date": null,
+      "fields": {
+        "certificate_number": "PROXY-2023-0104",
+        "primary_spouse_given_names": "Lucas",
+        "primary_spouse_family_name": "Bennett",
+        "spouse_given_names": "Amara",
+        "spouse_family_name": "Okonkwo",
+        "marriage_date": "2023-03-15",
+        "marriage_location": "Virtual Videoconference / Online Portal",
+        "physical_presence": false,
+        "marriage_certificate": "PROXY-2023-0104 (Virtual Proxy Marriage)"
+      },
+      "narrative_blocks": [
+        "This certificate verifies that Lucas Bennett (located in Toronto, Canada) and Amara Okonkwo (located in Lagos, Nigeria) were solemnized in marriage via proxy videoconference on March 15, 2023.",
+        "Neither party was physically present together during or after the telecommunication ceremony, nor has physical cohabitation occurred post-solemnization."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-MARRIAGE-03",
+        "category": "pfl_ineligibility",
+        "severity": "critical",
+        "description": "The marriage was conducted remotely via proxy without physical presence of both parties together at the ceremony or subsequent physical cohabitation/consummation.",
+        "affected_fields": [
+          "marriage_certificate",
+          "marriage_date",
+          "marriage_location"
+        ],
+        "mutation_details": {
+          "mutation_type": "proxy_virtual_marriage_without_presence",
+          "defect_reason": "Proxy or remote marriages where parties were not physically present together are legally invalid for immigration purposes unless consummated.",
+          "target_fields": {
+            "marriage_location": "Virtual Videoconference / Online Portal",
+            "physical_presence": false
+          }
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "marriage_certificate",
+      "title": "Foreign Marriage Certificate with Uncertified Translation",
+      "issuing_authority": "Oficina del Registro Civil, Ciudad de México",
+      "issue_date": "2022-05-18",
+      "expiry_date": null,
+      "fields": {
+        "certificate_number": "MX-RC-2022-77182",
+        "primary_spouse_given_names": "Carlos",
+        "primary_spouse_family_name": "Gomez",
+        "spouse_given_names": "Maria",
+        "spouse_family_name": "Hernandez",
+        "marriage_date": "2022-05-10",
+        "marriage_location": "Ciudad de México, México",
+        "marriage_certificate": "Acta de Matrimonio Original (Spanish)",
+        "document_translation": "Informal machine translation without translator affidavit, certification stamp, or credentials"
+      },
+      "narrative_blocks": [
+        "Certificado de Matrimonio expedido por la Oficina del Registro Civil de Ciudad de México.",
+        "An uncertified English translation generated via web translator was attached without a certified translator affidavit, oath, or contact information."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-MARRIAGE-04",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "Foreign language marriage certificate provided with an informal uncertified translation lacking official translator affidavit and certification.",
+        "affected_fields": [
+          "marriage_certificate",
+          "document_translation"
+        ],
+        "mutation_details": {
+          "mutation_type": "uncertified_translation",
+          "defect_reason": "Foreign language documents must be accompanied by a certified translation and sworn affidavit from a qualified translator.",
+          "target_fields": {
+            "document_translation": "uncertified_plain_text_translation"
+          }
+        }
+      }
+    }
+  ]
+}

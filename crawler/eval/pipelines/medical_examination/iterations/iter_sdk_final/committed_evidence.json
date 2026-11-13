@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "medical_examination",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/medical_examination/judge.json": "4fdd4ca19bcd14f404cd09c7c823e1dad8bc759e567d4cd58fa4bde1e35215d5",
+    "documents/medical_examination/shared_evaluation.json": "bba0e90b0813f3891d9b5494bf6dcaaa4693e1f1893ab138fb57a0ad4f61fb55",
+    "documents/medical_examination/workers/02eaaaaa9fa8f8505e9dd51000b22bc2.json": "048391d6cd071369fac8f4db934415a2dd24858351aa75935c290f6e9b6fd57d",
+    "documents/medical_examination/workers/226547037651a7f9cba75f96a46d98d6.json": "a139009ca2cbd95954171b293fe590ab5d266424de77ac3f56dc55e6ab619787",
+    "documents/medical_examination/workers/235ea061f338b12a1dc82469a39c3a18.json": "a86763025c3f049e4e9a76bdcea7908ec76ba390aaef513f238cbc6ed6f19590",
+    "documents/medical_examination/workers/45b4e8926558b62da9b120f26903d826.json": "2ab11846848d6d3e7a9ba3a211a5f9c12d3e108c60db3451eb6ab36af7fd4f9f",
+    "documents/medical_examination/workers/879b80be8f913a574e5744fb045ff384.json": "135e8f0fd81fffee08f09a45f6f0b0ddb7c424173c1ab39ed8b691fd7d91e94b",
+    "documents/medical_examination/workers/8dea2c3807b07b17487e2209b1e77ca0.json": "ab2e416eed1e3dcda4fcd4068cc5dfe72a549b27e00616cff32033c53a0db335",
+    "documents/medical_examination/workers/b1f4d2b707d6d50ecd9525cb712a2017.json": "d697333de81f80cc86e8b658e1c382947d8f26898f7e2577c8b5b04d06063736",
+    "documents/medical_examination/workers/c6429f65f2aaa4756dffe0fa5da7399d.json": "0602d59b522ba34e5a4c5926dfd57102d31fc0e10c96420536f43772a09b1709",
+    "documents/medical_examination/workers/f8762afb20372ea557bb9118b672a65b.json": "2f66ac4f1ba5880def87bdc1fa34db071a61d85117717955c13602911bc06a65",
+    "documents/medical_examination/workers/ff8b28fdc2b030a2f13037b4a69c05e5.json": "a7a86153acb364cdfb744d161a99694bd5855f8d9182835af9887e83376b10b6"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

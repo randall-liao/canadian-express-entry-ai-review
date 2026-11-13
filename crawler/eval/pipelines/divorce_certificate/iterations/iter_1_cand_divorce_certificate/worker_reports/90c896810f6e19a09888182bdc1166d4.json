@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "When an applicant's marital status is declared as divorced, a copy of the divorce order or certificate of divorce issued by the jurisdiction where the divorce took place must be provided, along with a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant provided a divorce certificate document for opaque case ID 90c896810f6e19a09888182bdc1166d4 corresponding to a declared marital status of divorced."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "90c896810f6e19a09888182bdc1166d4",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "90c896810f6e19a09888182bdc1166d4.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2016406b94d487b9b10078de4bff499a19bfc99dc63a84872a3a8e01c9485d19",
+    "allowed_text_sha256": null,
+    "bundle_hash": "96adfcfc94df22d419234f5a4c06d54f1588f3bdd17b3529f840f869e8cf6da9",
+    "prompt_hash": "3cbfa10e42c374a525a25503b4e209a8de6ec1657d0a7f37499055b568d1edef",
+    "output_hash": "7e129bf46370a3122fca34a279c2daa76c5ec9dcf8dfa7b9d34b3dcf3e87dd91",
+    "returncode": 0,
+    "timestamp": "2026-07-24T06:28:17.648733+00:00",
+    "provenance_digest": "535c1a50867756c031058458c4009f98a8e35dbe253ba21da7c5fe0856918141"
+  }
+}

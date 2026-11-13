@@ -1,0 +1,54 @@
+{
+  "question": "What passport or travel document copy must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "passport-bio-page",
+      "text": "A clear and legible copy of the biographical data page of a passport or travel document must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#016"
+      ],
+      "quote": "A clear and legible copy of the biographical data page of a passport or travel document must be provided."
+    }
+  ],
+  "basis": [
+    "Case 560448b57abc03dcc70c20802de6cde1 contains a document uploaded to the passport slot."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "560448b57abc03dcc70c20802de6cde1",
+  "doc_type": "passport",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "560448b57abc03dcc70c20802de6cde1.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e4fdc564f416ef72969dd7bc33f4e756de730324f805fd67448dbd3e923a6c0d",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c726e0e3d37a597de0dda5fd0dd1b96e152539ecd72e738cd5fd2096833190a7",
+    "prompt_hash": "e57f351463c50fca8930fd0a283d245c57608ed3754583d20cc2dbe5c5ce936c",
+    "output_hash": "0c6dc6ac744f79d229db609a8fe5e77232c56ee080171ad41f6ffc104452571e",
+    "returncode": 0,
+    "timestamp": "2026-07-23T14:45:18.675231+00:00",
+    "provenance_digest": "2cda5d3fb6fbd4d3fa83babcfd7db409a656e18d82d69022813c5ff7fe97d4fc"
+  }
+}

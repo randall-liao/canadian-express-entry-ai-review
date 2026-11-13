@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-certificate-widowed-requirement",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, territory or region where the death occurred must be provided when the applicant's marital status is listed as widowed.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "This document is requested only when the marital status is listed as widowed."
+    }
+  ],
+  "basis": [
+    "The applicant declared marital status as widowed, making the death certificate upload slot applicable for case 4edb78278ebeb2fa6be52ea5c71e4c21."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "4edb78278ebeb2fa6be52ea5c71e4c21",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4edb78278ebeb2fa6be52ea5c71e4c21.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "413eb31d8005fa945c7acb1b14fc30a7cfb1c914f394bf774ead7a18e381c89e",
+    "allowed_text_sha256": null,
+    "bundle_hash": "51fce1863792a81354afdd824aed615df113966c691902f31c45d9c82b1979e7",
+    "prompt_hash": "d1ae701fca013170c201757ec6b5c4adef83dc7d76b42eb4a0d82c85d8b9dd74",
+    "output_hash": "f237aac5ff706544a5e7dc8ae7068b6b7a58281327bb1bd551c7bd34aec8a0ea",
+    "returncode": 0,
+    "timestamp": "2026-07-23T10:45:14.920009+00:00",
+    "provenance_digest": "fd863cb5c4244223428d168200902c812b5b964df9857bfcd84af9f55552adae"
+  }
+}

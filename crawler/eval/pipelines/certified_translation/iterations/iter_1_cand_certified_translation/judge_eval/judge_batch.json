@@ -1,0 +1,194 @@
+{
+  "doc_type": "certified_translation",
+  "case_evaluations": {
+    "0ca9add770ee158e1fd95e44dfecf19b": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.95,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "25845c7d8474aa76eed215c0570a8af3": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.95,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3c0acc6d11b5e97060c63519a7534614": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "7c2d425357da8cf81469fdde73ea98f6": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.95,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "9fd142f43a76e01584146263ed63f638": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.95,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b91951b85cdf5599e32d0446d9e423ac": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.95,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c8dbc0e66f41b7349212abe9247243b5": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.95,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ce0481ae881cf32f3f5158714ae09897": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 0.95,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "eafe4305fda93ec934b2bce0f488d357": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f7bb94f5620296d59eebed75d4917610": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 0.95,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "0ca9add770ee158e1fd95e44dfecf19b",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-CERTIFIE-01. Document fields explicitly state 'Uncertified / Freelance Translator', affidavit 'Not Provided', and 'Missing - No commissioner of oaths or notary seal present', with narrative confirming no certified association and no sworn affidavit. Worker returned only generic policy and raised no defect claim, verdict, or abstention."
+    },
+    {
+      "case_id": "25845c7d8474aa76eed215c0570a8af3",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Missed PFL-CERTIFIE-04. Fields show 'Missing - No professional association listed', 'Missing / Unverified' membership, and 'Missing - No official professional seal or stamp affixed'; narrative confirms seal/credentials not affixed. Worker only restated policy and flagged no non-compliance."
+    },
+    {
+      "case_id": "3c0acc6d11b5e97060c63519a7534614",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-CERTIFIE-02. Vector (readable) PDF explicitly states 'Spouse of Applicant (Jane Doe)' and 'Non-Professional / Family Member'; IRCC prohibits family-member translation. Worker produced only generic requirement text with no defect detection."
+    },
+    {
+      "case_id": "7c2d425357da8cf81469fdde73ea98f6",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Missed PFL-CERTIFIE-03. Fields show 'Incomplete - Page 2 back stamps and legal marginalia omitted', 'Omitted - Official apostille stamp...', and 'Mismatch - Original 2 pages / Translation 1 page'. Notably the sibling vector case eafe4305 (same defect) WAS caught; the scanned variant here was not read/evaluated."
+    },
+    {
+      "case_id": "9fd142f43a76e01584146263ed63f638",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-CERTIFIE-02. Fields state 'Spouse of Applicant (Jane Doe)' and 'Non-Professional / Family Member' with self-declared affidavit. Worker returned generic policy only and did not flag the prohibited family-member translation."
+    },
+    {
+      "case_id": "b91951b85cdf5599e32d0446d9e423ac",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-CERTIFIE-01 on a vector (fully readable) PDF. Fields show 'Uncertified / Freelance Translator', affidavit 'Not Provided', and missing commissioner seal. No defect claim emitted despite clear, machine-readable non-compliance."
+    },
+    {
+      "case_id": "c8dbc0e66f41b7349212abe9247243b5",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Missed PFL-CERTIFIE-04 on a vector (readable) PDF. Fields show 'Unverified' status, missing association, missing membership number, and 'Missing - No official professional seal or stamp affixed'. Worker only restated policy."
+    },
+    {
+      "case_id": "eafe4305fda93ec934b2bce0f488d357",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Defect correctly detected (PFL-CERTIFIE-03), but the incompleteness defect claim reuses the generic 'translation package should include a copy...all contents' quote rather than citing a completeness-specific policy passage; supporting quote only loosely underpins the page-count/back-stamp finding."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/certified_translation.md",
+      "suggested_patch": "Require a mandatory per-field compliance pass before answering the policy question: extract translator_certification_status, professional_association_name, translator_membership_number, certified_translator_stamp, translator_affidavit, commissioner_of_oaths_seal, relationship_to_applicant, translated_text_completeness, translated_stamps_and_seals, and page_count_match, then emit an explicit defect claim (or a 'meets_requirements' verdict) whenever any value contains 'Uncertified/Unverified/Non-Professional/Family Member', 'Spouse', 'Missing', 'None', 'Not Provided', 'Incomplete', 'Omitted', or 'Mismatch'. A generic restatement of translation policy must not be returned as the sole output for a submitted document."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Mandate OCR/text-extraction verification for scanned (image-only) PDFs before evaluation. In this batch every scanned-variant defect (0ca9add, 25845c7d, 7c2d425357, 9fd142) was missed while a readable vector sibling (eafe4305) with the identical defect was caught, indicating image pages were not read. Add a step that OCRs image pages and fails closed (abstain + flag) if field values cannot be recovered."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a defect-adjudication contract: for any doc_type with an expected verdict, the Worker must output either a defect claim referencing the specific violated field/quote or an explicit compliance verdict. Answering only the abstract 'how must an applicant translate' question without adjudicating the attached document counts as a non-response and must be blocked."
+    }
+  ],
+  "rationale": "The Worker's policy grounding, citations, PII containment, and blind operation are consistently strong: every report cites the same IRCC PR-PDI completeness-check passage, keeps applicant PII (Jane Doe, DOB) out of claims/prose, and confines document-specific facts to basis[] with no ground-truth leakage. The decisive failure is defect recall. Of 8 defective cases, only eafe4305 (vector, PFL-03) was correctly flagged; the other 7 defective documents—including clearly machine-readable vector variants (3c0acc6d spouse, b91951b8 uncertified, c8dbc0e6 missing stamp)—were returned with generic policy text and no defect claim, meaning uncertified, family-member, unstamped, and incomplete translations would pass review. The scanned-vs-vector sibling contrast (7c2d missed vs eafe4305 caught) further implicates unread image pages. Both meets_requirements cases (ce0481ae, f7bb94f5) were correctly not flagged. Scores reflect high grounding/citation/PII/blind marks but zeroed defect_recall on the seven missed defective cases.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "0ca9add770ee158e1fd95e44dfecf19b.pdf",
+      "--attachment",
+      "25845c7d8474aa76eed215c0570a8af3.pdf",
+      "--attachment",
+      "3c0acc6d11b5e97060c63519a7534614.pdf",
+      "--attachment",
+      "7c2d425357da8cf81469fdde73ea98f6.pdf",
+      "--attachment",
+      "9fd142f43a76e01584146263ed63f638.pdf",
+      "--attachment",
+      "b91951b85cdf5599e32d0446d9e423ac.pdf",
+      "--attachment",
+      "c8dbc0e66f41b7349212abe9247243b5.pdf",
+      "--attachment",
+      "ce0481ae881cf32f3f5158714ae09897.pdf",
+      "--attachment",
+      "eafe4305fda93ec934b2bce0f488d357.pdf",
+      "--attachment",
+      "f7bb94f5620296d59eebed75d4917610.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "80931f1b2f90053be22832139789a70a07e62137b8fe477b24048a37d40247cd",
+    "research_hash": "02ac48d391b510a4fa20522a1bd3a0fb9bed1c6f457b2c0f5efbe31e4f6b5a4e",
+    "ground_truth_hash": "a3863f2418d501ac87d487845d4db1066ee34ba9ecef295bd1c59a9b3e016413",
+    "output_hash": "b9fed081e29436b04978b75e393af3a2a46459914e85b8cd37414691a3a94481",
+    "timestamp": "2026-07-24T17:58:27.388208+00:00",
+    "provenance_digest": "299e9ab589bab6a4b042f41b1d540cc3fb91ff213838dbcde93661cc061c4a12"
+  }
+}

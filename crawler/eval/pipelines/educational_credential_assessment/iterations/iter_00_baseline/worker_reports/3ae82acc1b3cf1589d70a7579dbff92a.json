@@ -1,0 +1,54 @@
+{
+  "question": "How must a foreign educational credential be assessed?",
+  "claims": [
+    {
+      "id": "eca",
+      "text": "A foreign educational credential must be assessed by a designated organization so its Canadian equivalency and authenticity can be established.",
+      "citations": [
+        "eca/educational-credential-assessment.md#014"
+      ],
+      "quote": "ECA reports include the designated organization’s assessment of the authenticity of the applicant’s completed foreign educational credentials."
+    }
+  ],
+  "basis": [
+    "Educational Credential Assessment document (case ID: 3ae82acc1b3cf1589d70a7579dbff92a) submitted under upload-slot type educational_credential_assessment."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "3ae82acc1b3cf1589d70a7579dbff92a",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "3ae82acc1b3cf1589d70a7579dbff92a.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "f69524b659b1959233cf2662bfebdaaf17c738d0f6ca699ae73bb6392a9ef25b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "3fba09ee6cc737403cf7f5bc2b1bff4b78d04d92506e4eed3415347a3598173c",
+    "prompt_hash": "c0e6417ef140b141b6a37b283cf8636eda0795fc847943bcb0aeb8bc0b17de03",
+    "output_hash": "a0fb54ee32ea93f304b4696a885e7e2288c55115795f7199ab2e3052e7e498fd",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:38:57.663441+00:00",
+    "provenance_digest": "ed8f08b952a66afe175025e16d2d7555c8190d61982ae46d98bb3f07d1bc8c22"
+  }
+}

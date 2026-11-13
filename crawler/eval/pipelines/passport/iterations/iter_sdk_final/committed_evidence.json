@@ -1,0 +1,24 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "passport",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/passport/judge.json": "39b82883739a09312db7984be0f022b40785421fb1c5f6d1c63b3936ebfeb7df",
+    "documents/passport/shared_evaluation.json": "f3315ab8f8aa5b86908a3b9d26d7b9aec14b16a52614b45b14cd5ef9c00cf825",
+    "documents/passport/workers/0e605283cf9741f8404ddbc238ab26b8.json": "90220b9965c611e15c776586e9cfdf12447745581aaf92d0787e88b8dda7071f",
+    "documents/passport/workers/560448b57abc03dcc70c20802de6cde1.json": "a25bb50a2660b0e7a18cff13b62d3069f5e7ba03e0d0ea4b55c98d8000a7d2c8",
+    "documents/passport/workers/60039420b78d12c640a85a76edd3d17f.json": "246926dc26fe7712ff68496e3affc0a3a09abf150c47f74fe01dce1014d13eb1",
+    "documents/passport/workers/6905c8726394082c7692d8a43533fed7.json": "15c2c597bfa3077bdd732ab57b2dbad2d659900752f5083d36abec228a7f6d5a",
+    "documents/passport/workers/76b15b7c453bb35d093d51e733fa3066.json": "2162d4c0d183c6eb3807b4b16e6075096f897c0fa78bf3759a4cefa74008089b",
+    "documents/passport/workers/842289b995ee3edeca93476c08c72703.json": "8a2b3d655a2a101948378ccf86000f9bbb22e97303a30865b650d5db5d5f85e2",
+    "documents/passport/workers/8e873c54b4bb1de4cf8d37cd795d01f0.json": "b73c87488ab538b749113fd6fcc47ed20856d1dd42310d3a40cba661333f9b0d",
+    "documents/passport/workers/9976706c2233ca23187651dbf0e05da4.json": "fa5b420734cbb19865e912f4519db7b388032daa3efb7b5a148e8839ac5827a0",
+    "documents/passport/workers/9a810a55f57622a28c84ac5a9d69239e.json": "3d282e5c1870081ba4b96e053d086c45c927c148a3a67041422e9e21b6252765",
+    "documents/passport/workers/ceac41e45361934fbcd82442291e566b.json": "d8c79fe84f34ffee7fd7de74c39ec3c91002084b13906e7f4cb3e774379ecc33",
+    "documents/passport/workers/d3918402b3a6309a43f56d234b9276a0.json": "cd52108e4a22b0bec68836f5939b975ad0bb8e76a71fdd399d47c105ce492ab2",
+    "documents/passport/workers/dd1b4cd65b0b780f8b0191aa68b4f392.json": "f03148637993f3a18c9052cdfe4036d1d89860c7fbeaf12e5718dfcb581233a2"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

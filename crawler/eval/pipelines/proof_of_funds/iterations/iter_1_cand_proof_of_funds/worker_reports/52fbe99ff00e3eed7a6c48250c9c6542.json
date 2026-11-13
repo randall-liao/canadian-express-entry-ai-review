@@ -1,0 +1,55 @@
+{
+  "question": "What must the applicant's settlement funds satisfy?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "Settlement funds must be legally accessible, unencumbered, and cannot be derived from real-property equity or borrowed money.",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "you can't use equity on real property as proof of settlement funds"
+    }
+  ],
+  "basis": [
+    "Applicant program: Federal Skilled Worker Program (FSWC); family size: 1.",
+    "Document evaluation (52fbe99ff00e3eed7a6c48250c9c6542.pdf): Non-compliant document (PFL-04) - missing required bank letter metadata including 6-month average balance, account opening date, outstanding debt details, and official letterhead."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "52fbe99ff00e3eed7a6c48250c9c6542",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "52fbe99ff00e3eed7a6c48250c9c6542.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "96b094c2c714e752c96ca99a31d1ab5afdf46bc8854b00fabe866b943965c47b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "19d31602f6addcce52eb3db77bc26febb8b1ad858256dbe1c2cfa1d82a3ed8f1",
+    "prompt_hash": "e98be55167a549a6a912f2570b4fb2866f86fb2b874484d09e8b640859fd5d46",
+    "output_hash": "c909124f227c8f096c988118cc70a39224c86ae1b0a8202fba2f0309be278982",
+    "returncode": 0,
+    "timestamp": "2026-07-24T22:42:14.710259+00:00",
+    "provenance_digest": "792783f8cdc31830e9a785f0b393c6a2b31c85ac068b26afee4647e1590b70e4"
+  }
+}

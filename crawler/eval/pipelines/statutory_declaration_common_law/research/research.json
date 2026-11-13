@@ -1,0 +1,142 @@
+{
+  "doc_type": "statutory_declaration_common_law",
+  "timestamp": "2026-07-23T03:43:02.299764+00:00",
+  "summary": "Online research findings reveal that failure modes for Express Entry 'statutory_declaration_common_law' (IMM 5409) center on lack of proper notarization/solemnization, cohabitation periods falling short of 12 continuous months or containing unexplained gaps, insufficient documentary evidence proving joint financial interdependence, and cross-form address/date discrepancies between IMM 5409, Express Entry personal history, and CRA/identity records.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:46:52.721056+00:00",
+    "duration_seconds": 241.913,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "ff91895da596864e23bd5d2d41c297b8092f86b753bb3cd9a0c22d9b2f7d3be8",
+    "raw_output_sha256": "13bccbcbe9ba0569ae0bd77c58c780ce5f849ca444b12c8e674c80b042765644",
+    "returncode": 0,
+    "provenance_token": "155ae31947bdafc949318f424dc93ad42f15699c0e6de7c6d4e921e3c7297eba",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 15,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-STATUTOR-01",
+      "category": "pfl_invalid_legal_declaration",
+      "severity": "critical",
+      "title": "IMM 5409 Statutory Declaration Missing Notarization, Official Stamp, or Valid Solemnization Signature",
+      "description": "The submitted IMM 5409 form lacks solemn declaration before a qualified official (Notary Public, Commissioner for Oaths, or Justice of the Peace), relies solely on unverified electronic signatures, or fails to include the commissioner's official seal and jurisdiction details. Under IRCC completeness guidelines, an un-notarized or improperly solemnized IMM 5409 renders the common-law declaration legally invalid, leading to application rejection at the completeness check or issuance of a Procedural Fairness Letter (PFL).",
+      "affected_fields": [
+        "imm5409_solemn_declaration_signature",
+        "imm5409_commissioner_stamp",
+        "imm5409_declaration_date",
+        "imm5409_deponent_signatures"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/statutory-declaration-common-law-union.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The form IMM 5409 must be completed and signed by both partners and solemnized (signed and stamped) in front of a Commissioner for Oaths, Notary Public, or Justice of the Peace. Handwritten signatures and original official commission stamps/seals are required.",
+      "remediation_hypothesis": "Re-execute IMM 5409 in the presence of an authorized Notary Public or Commissioner for Oaths who must affix their official seal, commission expiration date, and signature. Submit a letter of explanation and sworn affidavit confirming proper execution.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-STATUTOR-02",
+      "category": "pfl_cohabitation_duration_gap",
+      "severity": "critical",
+      "title": "Failure to Demonstrate 12 Consecutive Months of Continuous Cohabitation Prior to Application Submission",
+      "description": "The applicant claims common-law status but supporting documentary evidence (leases, utility bills, address history) shows gaps in cohabitation, separate living arrangements, or a total continuous living duration of less than 12 months prior to submitting the e-APR. IRCC guidelines strictly enforce the requirement of 12 consecutive months of uninterrupted cohabitation in a conjugal relationship under IRPR section 1(1). Unexplained separations or premature submissions trigger a PFL or immediate refusal.",
+      "affected_fields": [
+        "imm5409_cohabitation_start_date",
+        "imm5409_cohabitation_end_date",
+        "express_entry_personal_history_address",
+        "proof_of_cohabitation_dates"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=346&top=14",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "A common-law partner has been living with you for at least 12 consecutive months, meaning you’ve been living together continuously for one year, without any long periods apart. If either of you left your home it was for family obligations or work travel.",
+      "remediation_hypothesis": "Submit a continuous month-by-month residential chronology covering the full 12-month period, including employer travel letters or travel itineraries to explain short temporary absences, along with additional concurrent evidence (e.g. government correspondence, rental receipts, joint utilities) proving unbroken shared living.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-STATUTOR-03",
+      "category": "pfl_insufficient_financial_interdependence",
+      "severity": "high",
+      "title": "Lack of Joint Financial Arrangements or Shared Financial Interdependence Evidence",
+      "description": "The application includes IMM 5409 and proof of a shared address but fails to provide documentary proof showing commingling of financial affairs, such as joint bank accounts, joint credit cards, shared utility bills, or designation as insurance/pension beneficiaries. IRCC officers evaluate financial interdependence to confirm a genuine conjugal relationship; absence of shared financial ties raises suspicion of a non-genuine relationship or convenience partnership under IRPR section 4.",
+      "affected_fields": [
+        "imm5409_section_2_financial_arrangements",
+        "joint_bank_statement_proof",
+        "shared_utility_bills_proof",
+        "insurance_beneficiary_proof"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=347&top=14",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Items that can be used as proof of a common-law relationship include: shared ownership of residential property, joint leases or rental agreements, bills for shared utility accounts (gas, electricity, telephone), and important documents for both showing the same address.",
+      "remediation_hypothesis": "Provide comprehensive documentary proof of financial integration over the full 12-month cohabitation period, such as joint bank statements showing regular shared household expense transfers, joint account transactions, shared tax filings, and insurance policies naming each other as primary beneficiary.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-STATUTOR-04",
+      "category": "pfl_data_discrepancy_and_misrepresentation",
+      "severity": "high",
+      "title": "Discrepancy in Cohabitation Dates or Addresses Between IMM 5409, Express Entry Profile, CRA Tax Returns, and Identity Documents",
+      "description": "Inconsistencies exist between the cohabitation start date listed on IMM 5409, the address history reported in the Express Entry personal history section, CRA marital/address status filings, and driver's licenses/official IDs. Divergent address histories or conflicting marital status declarations (e.g. reporting 'Single' on CRA tax returns during the claimed cohabitation period) trigger PFLs citing credibility concerns or potential misrepresentation under A40.",
+      "affected_fields": [
+        "imm5409_cohabitation_dates",
+        "express_entry_address_history",
+        "cra_tax_marital_status",
+        "drivers_license_address"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://laws-lois.justice.gc.ca/eng/regulations/SOR-2002-227/section-4.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "A foreign national shall not be considered a common-law partner if the relationship is not genuine or was entered into primarily for the purpose of acquiring any status or privilege under the Act.",
+      "remediation_hypothesis": "Submit a detailed, sworn affidavit clarifying all address/marital status timelines across CRA, provincial registries, and immigration forms; provide official CRA tax marital status adjustment notices or formal explanation of administrative delays in updating government IDs.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

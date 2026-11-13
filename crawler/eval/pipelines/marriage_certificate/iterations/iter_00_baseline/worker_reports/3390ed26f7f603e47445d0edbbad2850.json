@@ -1,0 +1,55 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-validity",
+      "text": "When an applicant's marital status is listed as married, a copy of a legal marriage certificate issued by the province, territory, or country where the marriage took place must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The document upload slot type is marriage_certificate for opaque case ID 3390ed26f7f603e47445d0edbbad2850.",
+    "The applicant provided a 2-page PDF document containing a scanned marriage certificate."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "3390ed26f7f603e47445d0edbbad2850",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "3390ed26f7f603e47445d0edbbad2850.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c119ee23530200b015d531cf74e4d53e6eba68cee182046c984cee242250cc71",
+    "allowed_text_sha256": null,
+    "bundle_hash": "328c1537d7a24ab66576fb71af807091e040ae378f118d3952b32275e6f3c6d5",
+    "prompt_hash": "703d184a0875f23006e70e41bab44969edf4e18a896a8be8afaeea4cfb47efbb",
+    "output_hash": "0297aff8ceb9a5cc204f26d4408f3de27da244241367af3fe3a838c0f4965a1f",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:45:03.924497+00:00",
+    "provenance_digest": "73511dda6279c7595621b37c6493ea29aac3b0730282cee3b51e8eef8ac6f8b0"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-certificate-requirement",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant's declared marital status is widowed, which requires uploading a death certificate or equivalent legal certificate for the deceased spouse or common-law partner."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "c962ebca01cd59cc782888d9c3acceae",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c962ebca01cd59cc782888d9c3acceae.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c2cbd9e2da2bc1cbe7ed8ddf7467e9f8e5d622fdf50c49fc41575276175a0e6b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "51fce1863792a81354afdd824aed615df113966c691902f31c45d9c82b1979e7",
+    "prompt_hash": "bad35836d1772d46bb3a1cf8a9327eab75f8b95a4a4fddbb4e395edf5538e0e0",
+    "output_hash": "ddd6e2a8494feace609615106a02d030387481c74e6e61fa04d66d467c2b2556",
+    "returncode": 0,
+    "timestamp": "2026-07-23T10:59:39.693927+00:00",
+    "provenance_digest": "dd9dd98939c0151934970fba55d00b6e5986fdce32611ee8c12f0b981fea77dd"
+  }
+}

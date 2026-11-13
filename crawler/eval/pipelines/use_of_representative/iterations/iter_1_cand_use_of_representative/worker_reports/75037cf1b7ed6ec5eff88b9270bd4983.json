@@ -1,0 +1,54 @@
+{
+  "question": "When must an applicant provide a Use of a Representative form?",
+  "claims": [
+    {
+      "id": "representative-form",
+      "text": "The Use of a Representative form (IMM 5476) is required if the applicant indicates they are using a representative or if a consultant completes an application on behalf of the applicant through the consultant portal.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#039"
+      ],
+      "quote": "The document is requested only if the applicant indicates they are using a representative or if a consultant completes an application on behalf of the applicant through the consultant portal."
+    }
+  ],
+  "basis": [
+    "The applicant indicates using a representative. Field-level verification of the submitted IMM 5476 form confirms that the form edition is current, Section B (representative signature and date) and Section E (applicant signature) are signed, and a valid CICC accreditation membership number is provided."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "75037cf1b7ed6ec5eff88b9270bd4983",
+  "doc_type": "use_of_representative",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "75037cf1b7ed6ec5eff88b9270bd4983.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "22ada0f98e7271d45a3c68f54f6f08b21a1db85125d7e719b41a0302ff513491",
+    "allowed_text_sha256": null,
+    "bundle_hash": "a95acd55399cd66bce75637140f17d2e17df7ab2af54a46853278ac5f0cb1145",
+    "prompt_hash": "802460973ae6cb93a656d324cb4920b19ab2b47f10e8db2b36bc93b0046ef0ab",
+    "output_hash": "3f2505b8f8e811f6e200fe500cfbf26d965904f6976f65a317ff5e468d58e871",
+    "returncode": 0,
+    "timestamp": "2026-07-25T01:36:44.819602+00:00",
+    "provenance_digest": "d8b3f5a700e54bc637df76086743f708aa0d2c0e52e571e7fd7b47b29d65a47a"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "question": "How must an applicant prove their language ability?",
+  "claims": [
+    {
+      "id": "language-test",
+      "text": "An applicant must prove their language ability by taking an approved language test.",
+      "citations": [
+        "guidance/language-test.md#001"
+      ],
+      "quote": "You must prove your language skills by taking an approved language test."
+    }
+  ],
+  "basis": [
+    "Applicant Alex Taylor (Candidate ID: 555123) submitted an IELTS General Training test dated 2025-11-01 (expiry 2027-11-01) with scores: Listening 8.0, Reading 8.0, Writing 8.0, Speaking 8.0 (Overall 8.0 / CLB 9).",
+    "Document defect flag: The test result form is marked defective and unverifiable under failure code PFL-LANGUAGE-02 (TRF Number Mismatch / Unverifiable Results). Registration Number (0000000000000000), TRF Number (00CA000000TAY000X), and Test PIN (00000000) contain invalid zeroed values, and official provider database verification returned no matching record, triggering an A40 misrepresentation flag."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "6a0d115a74ef3abc8ea910b979316fb0",
+  "doc_type": "language_test",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "6a0d115a74ef3abc8ea910b979316fb0.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c7c91c1314be2fb976bae6ada40d5e57d1f622f9be8f6d192187e54c469a8a16",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e8c9a43c1f2795f2e0feaaaab9532807127f3e278329c2e080bad51297b842f2",
+    "prompt_hash": "087f4982175d9a9596e9debae054943561665dfae42c261a5bcd7cf0c3de2c25",
+    "output_hash": "7ea0578180e9313c5be8d49a6d740194d3ada1b476dba252ac0c42895002a0f3",
+    "returncode": 0,
+    "timestamp": "2026-07-24T08:36:58.727594+00:00",
+    "provenance_digest": "47ec661a235569524f401e33fea5100399ddee4c3580d2b46ab39fd2e217b0b8"
+  }
+}

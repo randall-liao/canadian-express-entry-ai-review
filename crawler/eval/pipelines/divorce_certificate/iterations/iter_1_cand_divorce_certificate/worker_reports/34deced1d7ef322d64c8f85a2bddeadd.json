@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "When an applicant's marital status is divorced, a copy of the divorce certificate or order issued by the jurisdiction where the divorce took place and a copy of the legal separation agreement (if available) must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant declared marital status as divorced and submitted a 2-page scanned document for case 34deced1d7ef322d64c8f85a2bddeadd in the divorce_certificate upload slot."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "34deced1d7ef322d64c8f85a2bddeadd",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "34deced1d7ef322d64c8f85a2bddeadd.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "782e78f2d182ff47d3898867fbba730a2b8cc45414ebd0c385091cd84e141680",
+    "allowed_text_sha256": null,
+    "bundle_hash": "96adfcfc94df22d419234f5a4c06d54f1588f3bdd17b3529f840f869e8cf6da9",
+    "prompt_hash": "93f8630d9d09c14138b91aee6d67880b8af7c493bc76ae2aabdcc5312310236f",
+    "output_hash": "e1aefcc3c320912b6d350e1b8a176961c27e2a02e7a5a09c8b494c3e392e00a8",
+    "returncode": 0,
+    "timestamp": "2026-07-24T06:14:04.080598+00:00",
+    "provenance_digest": "6290de79998b92d3bd7d2ab2bb6a4f38cbf3cf24da7743aec2d3cc2c315c5c0e"
+  }
+}

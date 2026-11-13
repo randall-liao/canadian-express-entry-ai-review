@@ -1,0 +1,45 @@
+{
+  "extractions": [
+    {
+      "doc_type": "passport",
+      "extracted_fields": {
+        "full_name": "Jane Synthetic Doe",
+        "document_number": "X99999999",
+        "expiry_date": "2030-12-31",
+        "issuing_country": "CAN"
+      },
+      "status": "confirmed"
+    },
+    {
+      "doc_type": "language_test",
+      "extracted_fields": {
+        "test_name": "IELTS General Training",
+        "test_report_form": "21CAN000001DOE",
+        "test_date": "2025-06-01"
+      },
+      "status": "confirmed"
+    },
+    {
+      "doc_type": "eca",
+      "extracted_fields": {
+        "evaluating_agency": "WES",
+        "ref_number": "ECA-SYNTH-12345",
+        "canadian_equivalence": "Master's degree"
+      },
+      "status": "confirmed"
+    },
+    {
+      "doc_type": "employment_reference_letter",
+      "extracted_fields": {
+        "employer_name": "Acme Tech Inc",
+        "job_title": "Software Engineer",
+        "noc_2021": "21231",
+        "start_date": "2022-01-01",
+        "end_date": "2025-01-01",
+        "weekly_hours": 37.5,
+        "duties_listed": true
+      },
+      "status": "confirmed"
+    }
+  ]
+}

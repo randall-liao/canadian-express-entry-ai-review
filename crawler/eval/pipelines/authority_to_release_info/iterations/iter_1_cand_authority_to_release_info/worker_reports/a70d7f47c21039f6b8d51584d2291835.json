@@ -1,0 +1,55 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "The [IMM 5475 form (PDF, 593.57 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5475e.pdf) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant designated an individual to receive personal information regarding their Express Entry application, requiring submission of form IMM 5475.",
+    "The attached IMM 5475 document was evaluated against compliance rules: signature_date and section_c_date are valid YYYY-MM-DD dates, section_c_consent_checkbox is checked, authorization_scope is populated without IMM 5476 scope mismatch, and family member consent requirements are satisfied."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "a70d7f47c21039f6b8d51584d2291835",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "a70d7f47c21039f6b8d51584d2291835.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "521ee4a7d891996517690490cbfc93ad19c853aaad9ae8789bffd918650c0ab5",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f951b805068342902119ce4352c5fd293ceba3f7d5d799ee9cfde2c99f700e59",
+    "prompt_hash": "187b288a12c9f788d6c8441c99121e7ecb0b8c2a77f9c089066a72facd413fa3",
+    "output_hash": "e1719f93b632a1d96a07a6eb3adee944dd51fb8383d67d962b4b6fbb81524d52",
+    "returncode": 0,
+    "timestamp": "2026-07-24T02:27:28.588821+00:00",
+    "provenance_digest": "933a49207480a55dda17bff3951a55544a7823a2acbef8ef99be67a471b9a0e5"
+  }
+}

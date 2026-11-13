@@ -1,0 +1,247 @@
+{
+  "doc_type": "certificate_of_qualification",
+  "timestamp": "2026-07-23T07:02:49.386000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "certificate_of_qualification",
+      "title": "Valid Certificate of Qualification - Industrial Electrician",
+      "issuing_authority": "Skilled Trades Ontario",
+      "issue_date": "2023-05-15",
+      "expiry_date": "2028-05-15",
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "certificate_number": "COQ-7842109",
+        "issuing_authority": "Skilled Trades Ontario",
+        "certificate_type": "Certificate of Qualification - Journeyperson",
+        "trade_name": "Industrial Electrician",
+        "certified_occupation_title": "Industrial Electrician",
+        "noc_code": "NOC 72201",
+        "trade_scope": "Full scope industrial electrical installation, maintenance, and diagnostics",
+        "issue_date": "2023-05-15",
+        "expiry_date": "2028-05-15",
+        "registration_status": "Active",
+        "seal_validity": "Valid - Red Seal Endorsement Active",
+        "language_test_score": "IELTS General: Listening 7.5, Reading 7.0, Writing 7.0, Speaking 7.0",
+        "clb_level": "CLB 7",
+        "certificate_document": "Verified Official Copy",
+        "crs_points_claimed": 50,
+        "crs_qualification_points": 50,
+        "crs_transferability_points": 50
+      },
+      "narrative_blocks": [
+        "This Certificate of Qualification is officially issued by Skilled Trades Ontario, confirming that Jane Doe has met all theoretical examination and practical training requirements for the compulsory trade of Industrial Electrician (NOC 72201).",
+        "The holder maintains an active registration in good standing with valid Red Seal endorsement. Language proficiency assessment meets CLB 7 across all bands, supporting the maximum skill transferability points claim under Express Entry."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "certificate_of_qualification",
+      "title": "Unrecognized Trade Authority Certificate Submission",
+      "issuing_authority": "Ontario Private Trade Skills Academy Inc.",
+      "issue_date": "2023-06-10",
+      "expiry_date": "2028-06-10",
+      "fields": {
+        "applicant_name": "John Smith",
+        "certificate_number": "PTS-994821",
+        "issuing_authority": "Ontario Private Trade Skills Academy Inc.",
+        "certificate_type": "Course Completion Certificate",
+        "trade_name": "General Electrical Workshop",
+        "certified_occupation_title": "Industrial Electrician",
+        "noc_code": "NOC 72201",
+        "trade_scope": "Basic electrical safety training course",
+        "issue_date": "2023-06-10",
+        "expiry_date": "2028-06-10",
+        "registration_status": "Active",
+        "seal_validity": "None",
+        "language_test_score": "IELTS General: Listening 7.5, Reading 7.0, Writing 7.0, Speaking 7.0",
+        "clb_level": "CLB 7",
+        "certificate_document": "Verified Official Copy",
+        "crs_points_claimed": 50,
+        "crs_qualification_points": 50,
+        "crs_transferability_points": 50
+      },
+      "narrative_blocks": [
+        "This certificate is issued by Ontario Private Trade Skills Academy Inc., confirming completion of a short-term workshop program in General Electrical Workshop.",
+        "The document submitted is an unaccredited private training completion certificate and not an official Certificate of Qualification issued by a recognized provincial or territorial trade regulator."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-CERTIFIC-01",
+        "category": "pfl_unrecognized_authority",
+        "severity": "critical",
+        "description": "The applicant submitted a course completion diploma from an unaccredited private institution ('Ontario Private Trade Skills Academy Inc.') rather than an official Certificate of Qualification from a recognized provincial trade authority, invalidating the 50 CRS points claimed.",
+        "affected_fields": [
+          "issuing_authority",
+          "certificate_type",
+          "trade_name",
+          "crs_points_claimed"
+        ],
+        "mutation_details": {
+          "original_issuing_authority": "Skilled Trades Ontario",
+          "mutated_issuing_authority": "Ontario Private Trade Skills Academy Inc.",
+          "original_certificate_type": "Certificate of Qualification - Journeyperson",
+          "mutated_certificate_type": "Course Completion Certificate",
+          "original_trade_name": "Industrial Electrician",
+          "mutated_trade_name": "General Electrical Workshop",
+          "points_invalidated": 50
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "certificate_of_qualification",
+      "title": "Trade Qualification NOC Code Discrepancy",
+      "issuing_authority": "Skilled Trades Ontario",
+      "issue_date": "2022-09-20",
+      "expiry_date": "2027-09-20",
+      "fields": {
+        "applicant_name": "Robert Taylor",
+        "certificate_number": "COQ-449102",
+        "issuing_authority": "Skilled Trades Ontario",
+        "certificate_type": "Certificate of Qualification - Journeyperson",
+        "trade_name": "Residential Construction Carpenter",
+        "certified_occupation_title": "Residential Construction Carpenter",
+        "noc_code": "NOC 72310",
+        "trade_scope": "Residential framing, cabinetry, and residential carpentry operations",
+        "issue_date": "2022-09-20",
+        "expiry_date": "2027-09-20",
+        "registration_status": "Active",
+        "seal_validity": "Valid - Provincial Endorsement",
+        "language_test_score": "IELTS General: Listening 7.5, Reading 7.0, Writing 7.0, Speaking 7.0",
+        "clb_level": "CLB 7",
+        "certificate_document": "Verified Official Copy",
+        "crs_points_claimed": 50,
+        "crs_qualification_points": 50,
+        "crs_transferability_points": 50
+      },
+      "narrative_blocks": [
+        "This Certificate of Qualification issued by Skilled Trades Ontario verifies qualifications in Residential Construction Carpenter (NOC 72310).",
+        "The applicant's Express Entry primary profile claims 50 CRS qualification points based on primary occupation NOC 72201 (Industrial Electrician), creating a direct mismatch between certified trade credentials and claimed profile occupation."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-CERTIFIC-02",
+        "category": "pfl_noc_mismatch",
+        "severity": "critical",
+        "description": "The trade qualification certificate presented is for NOC 72310 (Residential Construction Carpenter), whereas the applicant's Express Entry profile claims trade qualification points under NOC 72201 (Industrial Electrician).",
+        "affected_fields": [
+          "noc_code",
+          "certified_occupation_title",
+          "trade_scope",
+          "crs_qualification_points"
+        ],
+        "mutation_details": {
+          "profile_noc_code": "NOC 72201",
+          "certificate_noc_code": "NOC 72310",
+          "profile_certified_occupation_title": "Industrial Electrician",
+          "certificate_certified_occupation_title": "Residential Construction Carpenter",
+          "trade_scope_mismatch": true,
+          "discrepancy_type": "mismatched_trade_noc"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "certificate_of_qualification",
+      "title": "Expired Trade Qualification and Inactive Seal",
+      "issuing_authority": "SkilledTradesBC",
+      "issue_date": "2015-03-10",
+      "expiry_date": "2021-03-10",
+      "fields": {
+        "applicant_name": "Sarah Jenkins",
+        "certificate_number": "BC-TQ-33921",
+        "issuing_authority": "SkilledTradesBC",
+        "certificate_type": "Certificate of Qualification",
+        "trade_name": "Plumber",
+        "certified_occupation_title": "Plumber",
+        "noc_code": "NOC 72300",
+        "trade_scope": "Commercial and residential plumbing installation and maintenance",
+        "issue_date": "2015-03-10",
+        "expiry_date": "2021-03-10",
+        "registration_status": "Lapsed / Inactive",
+        "seal_validity": "Expired - Renewal Required",
+        "language_test_score": "IELTS General: Listening 7.5, Reading 7.0, Writing 7.0, Speaking 7.0",
+        "clb_level": "CLB 7",
+        "certificate_document": "Expired Certificate Copy",
+        "crs_points_claimed": 50,
+        "crs_qualification_points": 50,
+        "crs_transferability_points": 50
+      },
+      "narrative_blocks": [
+        "This Trades Qualification Certificate was issued by SkilledTradesBC on March 10, 2015 with an expiry date of March 10, 2021.",
+        "Official registry search confirms that trade license registration lapsed on March 10, 2021 and annual maintenance seals were not renewed, rendering the credential inactive at the time of Express Entry profile submission."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-CERTIFIC-03",
+        "category": "pfl_expired_credential",
+        "severity": "critical",
+        "description": "The certificate expiry date (2021-03-10) precedes the profile submission date, and the provincial registry status is lapsed/inactive with expired seal validity.",
+        "affected_fields": [
+          "issue_date",
+          "expiry_date",
+          "registration_status",
+          "seal_validity"
+        ],
+        "mutation_details": {
+          "original_expiry_date": "2028-03-10",
+          "mutated_expiry_date": "2021-03-10",
+          "original_registration_status": "Active",
+          "mutated_registration_status": "Lapsed / Inactive",
+          "original_seal_validity": "Valid",
+          "mutated_seal_validity": "Expired - Renewal Required"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "certificate_of_qualification",
+      "title": "Ineligible Skill Transferability Point Claim Below CLB 7",
+      "issuing_authority": "Apprenticeship and Industry Training Alberta",
+      "issue_date": "2023-01-20",
+      "expiry_date": "2028-01-20",
+      "fields": {
+        "applicant_name": "David Miller",
+        "certificate_number": "AIT-551029",
+        "issuing_authority": "Apprenticeship and Industry Training Alberta",
+        "certificate_type": "Certificate of Qualification - Journeyperson",
+        "trade_name": "Welder",
+        "certified_occupation_title": "Welder",
+        "noc_code": "NOC 72106",
+        "trade_scope": "Pressure vessel and structural steel welding",
+        "issue_date": "2023-01-20",
+        "expiry_date": "2028-01-20",
+        "registration_status": "Active",
+        "seal_validity": "Valid - Red Seal Endorsed",
+        "language_test_score": "IELTS General: Listening 5.5, Reading 4.5, Writing 5.0, Speaking 5.0",
+        "clb_level": "CLB 5",
+        "certificate_document": "Verified Official Copy",
+        "crs_points_claimed": 50,
+        "crs_qualification_points": 50,
+        "crs_transferability_points": 50
+      },
+      "narrative_blocks": [
+        "The applicant holds a valid Alberta Certificate of Qualification as a Journeyperson Welder (NOC 72106).",
+        "However, the accompanying language test report reflects CLB 5 (Reading 4.5, Writing 5.0, Speaking 5.0, Listening 5.5). Claiming skill transferability points for a trade certificate requires CLB 7 or higher in all four abilities, rendering the 50 skill transferability points claim ineligible."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-CERTIFIC-04",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The applicant claimed 50 skill transferability points for holding a trade certificate, but language test results show CLB 5 overall (below the mandatory minimum threshold of CLB 7 across all four skills required to claim trade certificate skill transferability points).",
+        "affected_fields": [
+          "language_test_score",
+          "clb_level",
+          "certificate_document",
+          "crs_transferability_points"
+        ],
+        "mutation_details": {
+          "required_clb_threshold": "CLB 7 in all four abilities",
+          "actual_clb_level": "CLB 5",
+          "original_crs_transferability_points": 50,
+          "eligible_crs_transferability_points": 0,
+          "discrepancy_reason": "Language threshold not met for trade certificate skill transferability combination"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "case_id": "case_051_scan",
+  "doc_type": "birth_certificate",
+  "variant": "scanned",
+  "dpi": 300,
+  "file_name": "case_051_scan.pdf",
+  "fields": {
+    "full_name": "Jane Doe",
+    "dob": "1992-05-14",
+    "issuing_authority": "Official Government Registry of Canada",
+    "registration_number": "REG-88301928",
+    "issue_date": "2024-01-15"
+  },
+  "expected_verdict": "defective",
+  "injected_defects": [
+    "missing_mandatory_field"
+  ],
+  "must_abstain": false
+}

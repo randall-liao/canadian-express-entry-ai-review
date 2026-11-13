@@ -1,0 +1,208 @@
+{
+  "doc_type": "letter_of_explanation",
+  "timestamp": "2026-07-23T03:09:38.872000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "letter_of_explanation",
+      "title": "Letter of Explanation - Proof of Funds and Study Plan Justification",
+      "issuing_authority": "Applicant Personal Declaration",
+      "issue_date": "2024-03-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "application_number": "S304918274",
+        "uci": "11-9283-4019",
+        "subject": "Explanation of Unidentified Large Deposit and Employment Gap",
+        "submission_date": "2024-03-15",
+        "purpose_of_letter": "Clarification of financial source trail for CAD $25,000 deposit and gap in employment history between June 2022 and January 2023.",
+        "proof_of_funds": "CAD 45,000 held across TD Canada Trust Chequing Account #9823-112 and Scotia Investment Savings Account #4410-098. Includes notarized deed of gift from parent Arthur Doe with full source bank statements.",
+        "employment_history_explanation": "Employment gap from June 1, 2022, to January 15, 2023, was dedicated full-time to preparing for professional licensing examinations and academic language certification.",
+        "supporting_documents_attached": [
+          "Notarized_Gift_Deed_Arthur_Doe.pdf",
+          "Arthur_Doe_Bank_Statement_6Months.pdf",
+          "Examination_Registration_and_Completion_Certificate.pdf",
+          "Bank_Balance_Certificate_TD_Bank.pdf"
+        ],
+        "sworn_declaration_status": "Notarized Affidavit signed before Commissioner of Oaths",
+        "notary_details": "Notary Public Sarah Jenkins, License #ON-883912, Toronto, ON"
+      },
+      "narrative_blocks": [
+        "To the Attending Officer, I am submitting this Letter of Explanation to accompany my Study Permit application (Application #S304918274). The purpose of this letter is to provide full context regarding a lump-sum deposit of CAD $25,000 received into my TD Canada Trust account on February 10, 2024, as well as to clarify my career trajectory during 2022.",
+        "Regarding the lump-sum deposit, these funds represent an unconditional financial gift from my father, Arthur Doe, intended to cover my living expenses during my studies at the University of Toronto. Attached to this application is the official, legally binding Gift Deed executed on February 5, 2024, alongside six months of certified bank statements from Arthur Doe demonstrating the legitimate source of these accumulated savings.",
+        "Regarding my employment history, following the completion of my contract with Apex Tech Solutions in May 2022, I chose to take a planned break until January 2023 to prepare for my professional certifications. Official test registration records and certificates are enclosed for your review. I confirm all details provided herein are complete, truthful, and accurate."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "letter_of_explanation",
+      "title": "Letter of Explanation - Proof of Funds Gift Source",
+      "issuing_authority": "Applicant Personal Declaration",
+      "issue_date": "2024-04-10",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "John Smith",
+        "application_number": "W309812739",
+        "uci": "88-1204-9918",
+        "subject": "Explanation of Financial Funds - Lump Sum Deposit",
+        "submission_date": "2024-04-10",
+        "proof_of_funds": "Lump sum deposit of CAD 50,000 deposited into personal account on March 28, 2024, claimed as personal gift from uncle.",
+        "bank_statements": "Personal account statement showing single CAD 50,000 wire deposit without originating bank records or supporting donor documentation.",
+        "letter_of_explanation": "Unsubstantiated claim that funds were gifted by family member without deed of gift, tax records, or donor bank statements.",
+        "supporting_documents_attached": [
+          "Personal_Bank_Statement_March_2024.pdf"
+        ]
+      },
+      "narrative_blocks": [
+        "I am writing this letter to explain the origin of the CAD $50,000 balance currently reflecting in my account statement submitted for my work permit application.",
+        "The amount of CAD $50,000 was gifted to me in cash and wire transfer by my uncle, Robert Smith, to support my relocation and settlement expenses in Canada. My uncle generously provided this money to assist my career transition.",
+        "Please accept this explanation as confirmation of my financial sufficiency. I do not have additional financial records from my uncle available at this time, but assure the officer that the funds are available for my use."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-LETTER_O-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "Applicant asserts a substantial CAD $50,000 financial gift from an uncle in the Letter of Explanation to satisfy proof of funds, but fails to provide a legally executed gift deed, evidence of the donor's financial capacity, or a traceable bank audit trail for the funds.",
+        "affected_fields": [
+          "proof_of_funds",
+          "bank_statements",
+          "letter_of_explanation"
+        ],
+        "mutation_details": {
+          "missing_evidence": "Executed Gift Deed, Donor Bank Statements, Source of Wealth Verification",
+          "unsubstantiated_amount": "CAD 50,000",
+          "claimed_relationship": "Uncle (Robert Smith)"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "letter_of_explanation",
+      "title": "Letter of Explanation and Statement of Common-Law Union",
+      "issuing_authority": "Applicant Personal Declaration",
+      "issue_date": "2024-05-02",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Eleanor Vance",
+        "application_number": "V310948210",
+        "uci": "44-9021-3381",
+        "subject": "Statutory Declaration of Common-Law Status and Name Variation Explanation",
+        "submission_date": "2024-05-02",
+        "letter_of_explanation": "Plain self-authored text document asserting common-law partnership and official name change without notarization or legal oath.",
+        "common_law_declaration": "Unsworn IMM 5409 form substitute lacking notarization, commissioner stamp, or legal witness signature.",
+        "name_change_documents": "Self-translated foreign birth certificate without certified translator affidavit or notarized name change deed.",
+        "translated_documents": "Informal English translation produced by applicant without official certified translator seal or sworn affidavit of accuracy.",
+        "sworn_declaration_status": "Unsworn / Unnotarized"
+      },
+      "narrative_blocks": [
+        "I, Eleanor Vance, submit this document as my solemn statement explaining my cohabitation with my common-law partner Thomas Vance and my use of the alias Eleanor Vance-Wright on historical academic records.",
+        "We have lived together as a couple in a conjugal relationship since October 2021. Furthermore, my birth certificate issued in foreign language lists my surname as Vance-Wright, which I updated informally upon starting university.",
+        "I declare under penalty of perjury that the statements in this letter are true. Note that I was unable to visit a notary public before submission due to travel constraints, so I am submitting this signed statement directly."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-LETTER_O-02",
+        "category": "pfl_unsworn_statement",
+        "severity": "critical",
+        "description": "The applicant submits an unsworn, unnotarized personal letter to fulfill mandatory statutory requirements for common-law status, name discrepancy explanations, and foreign document translations, lacking the legally required notary/commissioner execution and certified translator affidavits.",
+        "affected_fields": [
+          "letter_of_explanation",
+          "common_law_declaration",
+          "name_change_documents",
+          "translated_documents"
+        ],
+        "mutation_details": {
+          "missing_notarization": true,
+          "missing_translator_affidavit": true,
+          "legal_instrument_type_required": "Statutory Declaration / Sworn Affidavit (IMM 5409)",
+          "provided_instrument_type": "Unsworn Self-Signed Letter"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "letter_of_explanation",
+      "title": "Letter of Explanation - Employment History and Income Clarification",
+      "issuing_authority": "Applicant Personal Declaration",
+      "issue_date": "2024-02-18",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Marcus Brody",
+        "application_number": "E302910482",
+        "uci": "62-3819-0012",
+        "subject": "Clarification of Ongoing Employment and Annual Earnings",
+        "submission_date": "2024-02-18",
+        "letter_of_explanation": "Claims continuous full-time employment as Lead Systems Architect at Quantum Solutions Inc from Jan 2021 to Dec 2023 at annual salary of CAD 95,000.",
+        "employment_reference_letters": "Reference letter from Quantum Solutions Inc states employment was part-time contract role that ended in November 2021.",
+        "tax_returns_and_pay_stubs": "Notice of Assessment and T4 slips indicate total reported annual income of CAD 18,200 for 2022 and CAD 0 for 2023.",
+        "bank_statements": "Bank statements for 2022 and 2023 show zero direct payroll deposits from Quantum Solutions Inc."
+      },
+      "narrative_blocks": [
+        "This letter is provided to clarify my employment record with Quantum Solutions Inc. I have been employed full-time continuously from January 15, 2021, through December 31, 2023, as a Lead Systems Architect, earning an annual salary of CAD 95,000.",
+        "My position involved leading software architecture projects, supervising junior engineers, and working 40 hours per week at our main office.",
+        "All financial compensation was paid regularly according to company payroll schedules, and this income forms the primary basis of my financial stability and accumulated savings for this application."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-LETTER_O-03",
+        "category": "pfl_contradictory_records",
+        "severity": "critical",
+        "description": "Direct and irreconcilable conflict between claims made in the Letter of Explanation (asserting full-time employment from 2021-2023 with CAD $95,000 salary) and primary documentary evidence (employer reference letter citing contract termination in Nov 2021, tax assessments showing $18,200/year, and bank statements showing no payroll transfers).",
+        "affected_fields": [
+          "letter_of_explanation",
+          "employment_reference_letters",
+          "tax_returns_and_pay_stubs",
+          "bank_statements"
+        ],
+        "mutation_details": {
+          "loe_claimed_employment": "Full-time Lead Systems Architect (2021-2023, CAD 95,000/yr)",
+          "reference_letter_fact": "Part-time contract terminated Nov 2021",
+          "tax_return_fact": "Annual income CAD 18,200 in 2022, CAD 0 in 2023",
+          "bank_statement_fact": "Zero payroll deposits from Quantum Solutions Inc during 2022-2023"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "letter_of_explanation",
+      "title": "Letter of Explanation - Travel and Residence History",
+      "issuing_authority": "Applicant Personal Declaration",
+      "issue_date": "2024-06-12",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Arthur Pendelton",
+        "application_number": "V391827401",
+        "uci": "91-0029-4821",
+        "subject": "Clarification of Continuous Physical Residence and Prior Visa Declarations",
+        "submission_date": "2024-06-12",
+        "letter_of_explanation": "Asserts continuous residence in home country from 2019 to 2023 working as a marketing manager, and explicitly states no prior visa refusals or removal orders in any country.",
+        "background_declaration_imm5669": "IMM 5669 Question 6 answers 'No' to previous visa refusals, deportations, or unauthorized stay orders.",
+        "work_history": "Claims full-time physical employment in home country during 2020-2022.",
+        "visa_history": "Immigration database records indicate a UK student visa refusal in 2020 and a US overstay / voluntary departure order in August 2021."
+      },
+      "narrative_blocks": [
+        "I am writing this letter to affirm my travel and background history submitted with my application. I have resided continuously in my home country from January 2019 through December 2023, working full-time at Apex Marketing Corp.",
+        "I wish to confirm that I have never been refused a visa, permit, or entry to any country, nor have I ever overstayed a authorized period of stay or been subject to removal proceedings.",
+        "My travel record is completely clear, and I have always complied fully with international immigration regulations during my occasional brief tourist trips abroad."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-LETTER_O-04",
+        "category": "pfl_misrepresentation_risk",
+        "severity": "critical",
+        "description": "The Letter of Explanation actively misrepresents the applicant's travel and immigration history by claiming uninterrupted physical residence in home country and zero visa refusals, contradicting official records showing a 2020 UK visa refusal and a 2021 US overstay/voluntary departure, raising material misrepresentation concerns under IRPA Section 40.",
+        "affected_fields": [
+          "letter_of_explanation",
+          "background_declaration_imm5669",
+          "work_history",
+          "visa_history"
+        ],
+        "mutation_details": {
+          "loe_claimed_residence": "Continuous home country residence (2019-2023)",
+          "loe_claimed_visa_refusals": "None",
+          "actual_visa_refusals": "UK Student Visa refusal (2020)",
+          "actual_immigration_status_violation": "US Overstay / Voluntary Departure Order (August 2021)",
+          "statutory_risk": "IRPA Section 40 (1)(a) Misrepresentation"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{"id": "core-language-substantiated", "module": "core", "factor": "core.language.first", "scenario": "confirmed IELTS with all four abilities at the grounded high benchmark, in-window, claim met", "expect_verdict": "SUBSTANTIATED"}
+{"id": "core-work-aggregate-gap", "module": "core", "factor": "core.work", "scenario": "two overlapping full-time letters whose union aggregates below the claimed years", "expect_verdict": "GAP"}
+{"id": "spouse-no-accompanying-na", "module": "spouse", "factor": "spouse.language", "scenario": "no accompanying spouse declared (no-spouse mode)", "expect_verdict": "N/A"}
+{"id": "spouse-ownership-gap", "module": "spouse", "factor": "spouse.language", "scenario": "accompanying spouse claimed but only principal-owned language evidence exists", "expect_verdict": "GAP"}
+{"id": "transfer-unmet-component-gap", "module": "transferability", "factor": "transfer.education_work", "scenario": "education substantiated but Canadian work component is a GAP", "expect_verdict": "GAP"}
+{"id": "additional-job-offer-at-risk", "module": "additional", "factor": "additional.job_offer", "scenario": "non-zero arranged-employment claim under current policy (repeal)", "expect_verdict": "AT-RISK"}
+{"id": "additional-nomination-substantiated", "module": "additional", "factor": "additional.nomination", "scenario": "verified, non-revoked, non-expired provincial nomination confirmed", "expect_verdict": "SUBSTANTIATED"}

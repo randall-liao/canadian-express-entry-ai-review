@@ -1,0 +1,206 @@
+{
+  "doc_type": "proof_of_other_name",
+  "case_evaluations": {
+    "828adaf90769e1eebb95183551aeb401": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "8d3ad7599ed52ad934b1acd144530744": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b6204160a8aae6b7e26e698019dfce0d": {
+      "grounding_accuracy": 0.6,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b3fb24ac039cee91b1fd3b938bfeaf64": {
+      "grounding_accuracy": 0.6,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d89d1598b59f509015efe69f36cfee23": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "cada542ac1784d2af533c449bb43f055": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "378ead7a471b75091f478ffb48739dfa": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c3d9f81b44eed96d20fa4c090867787c": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b3510812680619987e779dff9fa0a33e": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4dbe04ebe035b79589b4c16ac199d62e": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "b6204160a8aae6b7e26e698019dfce0d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-01. Document shows 'Proof Of Other Name: N/A', 'Document Status: Missing Certificate', and narrative states applicant 'failed to attach the mandatory government-issued certificate'. Worker gave only a generic requirement claim with no defect flag or abstention."
+    },
+    {
+      "case_id": "b6204160a8aae6b7e26e698019dfce0d",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis asserts applicant 'submitted document ... under the proof_of_other_name document slot' implying valid supporting documentation, contradicting the document's own 'Missing Certificate' status — an overstatement not supported by the evidence."
+    },
+    {
+      "case_id": "b3fb24ac039cee91b1fd3b938bfeaf64",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-01 (sibling of b6204160). Certificate is absent (N/A / Missing Certificate) yet worker reports no defect and does not abstain."
+    },
+    {
+      "case_id": "b3fb24ac039cee91b1fd3b938bfeaf64",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis states applicant 'uploaded supporting documentation under the proof_of_other_name slot', contradicting the document which shows the mandatory certificate was not attached."
+    },
+    {
+      "case_id": "d89d1598b59f509015efe69f36cfee23",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-02. Document is an 'Unverified Copy of Court Petition' with Seal Present: False and Court Clerk Signature Present: False, narrative explicitly notes lack of embossed seal/stamp/clerk verification. Worker flagged nothing — notably inconsistent with sibling cada542 which caught it."
+    },
+    {
+      "case_id": "cada542ac1784d2af533c449bb43f055",
+      "category": "defect_recall",
+      "severity": "minor",
+      "description": "Correctly detected PFL-POON_NAME-02: basis notes the submission is 'an unverified copy of a court petition without an official issuing court seal or court clerk signature'. Applicant-specific facts (names, docket, district) properly confined to basis[]."
+    },
+    {
+      "case_id": "378ead7a471b75091f478ffb48739dfa",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-03. Document explicitly states 'Unverified Discrepancy: Middle initial V. in ECA report unreferenced in proof of name' plus a passport/ECA/degree name variance (Rostova/Rostoff). Worker produced only a generic requirement claim with no discrepancy flag."
+    },
+    {
+      "case_id": "c3d9f81b44eed96d20fa4c090867787c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-03 (sibling). Same unresolved cross-document name discrepancy went unflagged."
+    },
+    {
+      "case_id": "b3510812680619987e779dff9fa0a33e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-04. Spanish-language certificate with 'Translation Certified: False', no translator affidavit, and 'informal self-translated printout' per narrative. Worker did not flag the uncertified translation defect."
+    },
+    {
+      "case_id": "4dbe04ebe035b79589b4c16ac199d62e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POON_NAME-04 (sibling). Uncertified Spanish translation lacking translator affidavit/stamp not detected."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/proof_of_other_name.md",
+      "suggested_patch": "Add a mandatory defect checklist the agent must evaluate before answering: (1) declared other name present in personal history but supporting certificate absent (fields like proof_of_other_name=N/A or document_status='Missing Certificate') → flag PFL-POON_NAME-01; (2) court order/petition with seal_present=false, court_clerk_signature_present=false, or 'Unverified Copy' → flag PFL-POON_NAME-02; (3) name variance across passport/ECA/degree or an 'Unverified Discrepancy' field → flag PFL-POON_NAME-03; (4) non-English/French document with translation_certified=false or missing translator_affidavit → flag PFL-POON_NAME-04. Require an explicit defect claim or abstention rather than defaulting to the generic requirement statement."
+    },
+    {
+      "target_file": "skills/document-agents/proof_of_other_name.md",
+      "suggested_patch": "Prohibit asserting that supporting documentation was 'submitted'/'uploaded' unless the document content substantiates a valid certificate. When fields indicate N/A or 'Missing Certificate', the basis must state the certificate is absent, not that documentation was provided."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "For document-review tasks, mandate that every case emit either a defect finding (with the specific missing/invalid field) or an explicit meets-requirements determination. Reciting a citation-backed generic requirement without adjudicating the specific document against defect criteria is non-compliant. Ensure sibling documents (same content, different render) are adjudicated consistently."
+    }
+  ],
+  "rationale": "Worker (gemini-3.6-flash) reliably reproduced a citation-backed generic requirement ('applicant must provide information/documentation on use of the other name') with exact citations to the completeness-check corpus and kept PII inside basis[], so citation_exactness, pii_containment, and blind_input_compliance score high across all cases. The two valid documents (828adaf9, 8d3ad759) were handled acceptably (no defect to miss). However, defect recall is the dominant failure: of 8 defective documents, only cada542 (missing court seal/signature) was detected — its sibling d89d1598 with identical defects was missed, revealing inconsistency. Missing-certificate cases (b6204160, b3fb24ac) also drew grounding penalties because the basis claimed documentation was submitted despite the document showing 'Missing Certificate'. Name-discrepancy (378ead7a, c3d9f81b) and uncertified-translation (b3510812, 4dbe04eb) defects were entirely missed despite being explicit on the face of each document. Net: strong provenance/citation discipline undermined by a systemic failure to adjudicate documents against defect criteria.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "378ead7a471b75091f478ffb48739dfa.pdf",
+      "--attachment",
+      "4dbe04ebe035b79589b4c16ac199d62e.pdf",
+      "--attachment",
+      "828adaf90769e1eebb95183551aeb401.pdf",
+      "--attachment",
+      "8d3ad7599ed52ad934b1acd144530744.pdf",
+      "--attachment",
+      "b3510812680619987e779dff9fa0a33e.pdf",
+      "--attachment",
+      "b3fb24ac039cee91b1fd3b938bfeaf64.pdf",
+      "--attachment",
+      "b6204160a8aae6b7e26e698019dfce0d.pdf",
+      "--attachment",
+      "c3d9f81b44eed96d20fa4c090867787c.pdf",
+      "--attachment",
+      "cada542ac1784d2af533c449bb43f055.pdf",
+      "--attachment",
+      "d89d1598b59f509015efe69f36cfee23.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "57cb71b5fccf2922628ebc0318ebdddd843a18a0d39a19d40ff6158226f9e1c4",
+    "research_hash": "be342af9df5adc6b0e523e82b7e157596b281168a51c546f3050eb943917a6a2",
+    "ground_truth_hash": "dd89497f6c0ef6d78e097ce6833caada90e6ca90302e5e0a1e1fcf3082ab86b5",
+    "output_hash": "0f8bd12cef8d2552a6831983d66dbef34cfb1ace0a4e2b8edbaa7d963bc05bb8",
+    "timestamp": "2026-07-23T23:23:01.822797+00:00",
+    "provenance_digest": "e93270df49f6d6c83e595d1d42f6fabafef63a4843b6beb267716bb951b5ef47"
+  }
+}

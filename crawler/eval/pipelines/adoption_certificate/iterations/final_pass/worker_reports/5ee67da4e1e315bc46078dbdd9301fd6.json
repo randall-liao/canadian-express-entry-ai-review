@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant has declared a dependent child whose status is listed as adopted for opaque case ID 5ee67da4e1e315bc46078dbdd9301fd6."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "5ee67da4e1e315bc46078dbdd9301fd6",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "5ee67da4e1e315bc46078dbdd9301fd6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "64bcbe02d19b6f4a3069d580bf09b3b192995e3142f97c43bf048167686f9c7e",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "72866dbc3fbf12ea2a91d08696ffd91661c4ebb0825ea608177f03a94089c096",
+    "output_hash": "4b68deb73002b7b4059e0dc9c7ee694d69d491c57931eddbacbdce2dd3f6c087",
+    "returncode": 0,
+    "timestamp": "2026-07-25T02:37:30.563143+00:00",
+    "provenance_digest": "d8a8362a1f031af84215877da401a7862473e2392854b509966ab2ff4566c532"
+  }
+}

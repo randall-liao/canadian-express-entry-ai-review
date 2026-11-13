@@ -1,0 +1,206 @@
+{
+  "doc_type": "certificate_of_qualification",
+  "case_evaluations": {
+    "001bacdc05f2d068910013dddf04333a": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "17f35d6a19477a1e785fca5f6fbe23eb": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "27322996ae15b25f223ab2524c7eba5c": {
+      "grounding_accuracy": 0.4,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "655ed10fb7da86ed839e1d50de270e81": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "7cb0de6fe959acb93f0676f232230218": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "8311eae852046d1463e32546e35d2e64": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "a28f9c3da567a294a5545f2ccbf92dd4": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "cc5546b67840d9f2611472cff3105d19": {
+      "grounding_accuracy": 0.4,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d2fd4b2b456d99a6420e45126f4fd8ca": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d70b01ced86a65ba740a2900791e8549": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "cc5546b67840d9f2611472cff3105d19",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-CERTIFIC-01: document is a 'Course Completion Certificate' from 'Ontario Private Trade Skills Academy Inc.' (unrecognized private issuer), explicitly flagged as non-official in narrative. Worker emitted generic boilerplate and no defect."
+    },
+    {
+      "case_id": "cc5546b67840d9f2611472cff3105d19",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis asserts 'applicant indicates they have a provincial or territorial certificate of qualification' — contradicted by the document, which is a private-academy course completion certificate. Ungrounded characterization."
+    },
+    {
+      "case_id": "27322996ae15b25f223ab2524c7eba5c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-CERTIFIC-01 (scanned sibling): unrecognized private issuer 'Ontario Private Trade Skills Academy Inc.' and 'Course Completion Certificate', seal validity None. No defect detected."
+    },
+    {
+      "case_id": "27322996ae15b25f223ab2524c7eba5c",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis mischaracterizes a private course-completion certificate as a provincial/territorial certificate of qualification; not supported by document fields (issuing_authority, certificate_type)."
+    },
+    {
+      "case_id": "a28f9c3da567a294a5545f2ccbf92dd4",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-CERTIFIC-02: cert trade Residential Construction Carpenter (NOC 72310) mismatches profile occupation NOC 72201 Industrial Electrician, stated explicitly in narrative. No mismatch flagged."
+    },
+    {
+      "case_id": "001bacdc05f2d068910013dddf04333a",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-CERTIFIC-02 (scanned sibling): NOC/occupation mismatch between certified trade (72310 Carpenter) and claimed profile occupation (72201 Electrician). No defect detected."
+    },
+    {
+      "case_id": "7cb0de6fe959acb93f0676f232230218",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Missed PFL-CERTIFIC-03: expiry_date 2021-03-10, registration_status 'Lapsed / Inactive', seal 'Expired - Renewal Required', document labeled 'Expired Certificate Copy'. Expired/inactive credential not flagged."
+    },
+    {
+      "case_id": "655ed10fb7da86ed839e1d50de270e81",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Missed PFL-CERTIFIC-03 (scanned sibling): lapsed registration and expired seal at time of submission. No validity defect detected."
+    },
+    {
+      "case_id": "d70b01ced86a65ba740a2900791e8549",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Missed PFL-CERTIFIC-04: CLB 5 language (Reading 4.5) below CLB 7 threshold required for 50 skill-transferability points; narrative states claim is ineligible. No defect flagged."
+    },
+    {
+      "case_id": "8311eae852046d1463e32546e35d2e64",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Missed PFL-CERTIFIC-04 (scanned sibling): language ability CLB 5 fails transferability threshold; ineligible 50-point claim not detected."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/certificate_of_qualification.md",
+      "suggested_patch": "Require field-level validation before returning any verdict. Mandatory checks: (1) issuing_authority MUST be a recognized provincial/territorial/federal trade regulator (e.g., Skilled Trades Ontario, SkilledTradesBC, Apprenticeship and Industry Training Alberta); REJECT private/academy issuers and certificate_type values like 'Course Completion Certificate'. (2) noc_code / certified_occupation_title on the certificate MUST match the Express Entry profile occupation; flag mismatches (PFL-CERTIFIC-02). (3) expiry_date, registration_status, and seal_validity MUST be active/valid at submission; flag Lapsed/Inactive/Expired (PFL-CERTIFIC-03). (4) clb_level MUST meet CLB 7 in all four abilities for 50 skill-transferability points; flag CLB<7 (PFL-CERTIFIC-04). Emit a 'defective' verdict with the specific failing field when any check fails."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Prohibit generic boilerplate reports. The Worker must extract and reason over the actual attached document fields and Narrative Statements page, not return an identical requirement-restatement claim for every case. Every report must record either concrete supporting evidence for 'meets_requirements' or an itemized defect tied to the offending field(s). Add a guard: if the output claim set is document-independent (identical across inputs), treat as a failed analysis and abstain."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "When a certificate PDF includes a 'Narrative Statements / Detailed Notes' section, parse and incorporate it: these narratives frequently state the disqualifying condition (unrecognized issuer, NOC mismatch, lapsed registration, sub-threshold CLB). Surface any narrative-declared ineligibility into the defect output rather than ignoring page 2."
+    }
+  ],
+  "rationale": "The Worker returned near-identical boilerplate for all 10 cases — a single generic claim ('A copy of the certificate of qualification is required') with the same completeness-check citation, zero abstentions, and no document-specific analysis. This yielded catastrophic defect recall: all 8 defective cases (PFL-CERTIFIC-01 through 04: private-academy issuer, NOC mismatch, expired/lapsed credential, sub-CLB7 language) were missed, including defects explicitly stated in the page-2 narratives. Grounding is otherwise mostly intact (no invented document facts), except cc5546/27322996 where the basis falsely characterizes a private course-completion certificate as a provincial/territorial certificate. Citations are consistent and quote-exact but unverifiable to a specific anchor (0.9). PII containment is clean (no names/DOB in claims/prose/basis) and blind compliance is intact (only opaque case IDs referenced, no ground-truth leakage). The two genuine meets_requirements cases score well only incidentally, since the Worker never performed real assessment. Primary remediation: enforce field-level validation and ban document-independent boilerplate output.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "001bacdc05f2d068910013dddf04333a.pdf",
+      "--attachment",
+      "17f35d6a19477a1e785fca5f6fbe23eb.pdf",
+      "--attachment",
+      "27322996ae15b25f223ab2524c7eba5c.pdf",
+      "--attachment",
+      "655ed10fb7da86ed839e1d50de270e81.pdf",
+      "--attachment",
+      "7cb0de6fe959acb93f0676f232230218.pdf",
+      "--attachment",
+      "8311eae852046d1463e32546e35d2e64.pdf",
+      "--attachment",
+      "a28f9c3da567a294a5545f2ccbf92dd4.pdf",
+      "--attachment",
+      "cc5546b67840d9f2611472cff3105d19.pdf",
+      "--attachment",
+      "d2fd4b2b456d99a6420e45126f4fd8ca.pdf",
+      "--attachment",
+      "d70b01ced86a65ba740a2900791e8549.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "3f1b0a4085d9e254ce04969a7f2305665c684923ab8ad1522c261b12b9032725",
+    "research_hash": "d3c8b6145abd8140141fe943af9d558482af1b54fa9b1bc954595dd4ed3f4d9f",
+    "ground_truth_hash": "34b1f25ba17a95f015fea2a0a7224c75f9e3e6aac38fd8c0b541b8255b4137d7",
+    "output_hash": "795670fa241ad87030de5c2046384c851054fb293d7e1da09665d2af264cc019",
+    "timestamp": "2026-07-23T22:54:31.493822+00:00",
+    "provenance_digest": "c63426e34ba3c47948d7485ed76762bd9af2c5dc7988c7c4755599012a9b4637"
+  }
+}

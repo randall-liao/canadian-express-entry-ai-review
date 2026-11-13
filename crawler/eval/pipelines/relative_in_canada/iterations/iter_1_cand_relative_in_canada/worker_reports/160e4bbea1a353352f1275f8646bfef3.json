@@ -1,0 +1,71 @@
+{
+  "question": "What must an applicant provide to claim a relative in Canada for Express Entry adaptability or CRS points?",
+  "claims": [
+    {
+      "id": "relative-status-proof",
+      "text": "The applicant must provide a copy of both sides of the family member's Canadian citizenship document, Canadian birth certificate, or permanent resident card.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "A copy of **both** sides of the family member's Canadian citizenship document, Canadian birth certificate and/or permanent resident card must be provided."
+    },
+    {
+      "id": "relative-residence-evidence",
+      "text": "The applicant must provide evidence that the family member currently resides in Canada showing their address in Canada.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Evidence that the family member currently resides in Canada must be provided (a residential lease, mortgage documents, utility bills, etc.)."
+    },
+    {
+      "id": "relationship-proof",
+      "text": "The applicant must provide proof of relationship between the applicant or accompanying spouse/common-law partner and the family member in Canada.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Proof of the relationship of the applicant or the accompanying spouse or common-law partner to the family member must also be provided (e.g., a birth certificate, an official document naming the applicant as a relative, a copy of the inside back cover of the relative’s passport showing the relative’s parents’ marriage certificate, legal adoption documents and any other documents that prove or describe the relationship)."
+    }
+  ],
+  "basis": [
+    "The application contains a relative_in_canada upload slot claim (opaque case ID 160e4bbea1a353352f1275f8646bfef3).",
+    "Requirements were evaluated against Express Entry completeness check guidelines for family members in Canada."
+  ],
+  "abstentions": [],
+  "prose": "To claim points for a relative in Canada, the applicant must submit proof of the relative's status (both sides of PR card, citizenship document, or birth certificate), evidence of current Canadian residence (such as lease, mortgage, or utility bills showing Canadian address), and official documents establishing the relationship.",
+  "case_id": "160e4bbea1a353352f1275f8646bfef3",
+  "doc_type": "relative_in_canada",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "160e4bbea1a353352f1275f8646bfef3.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "0d998f6e86280fd1c21904679e3aa06d883fc8ee265029955b220194f18a291c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e2a890b6b55bd9997e8664f764878e3d9515c5138137a5da60f5a1255317c38a",
+    "prompt_hash": "eeea22bb9f672768d702ec96969791ba1c0fa4650fbdb02feffd364d70faa2cf",
+    "output_hash": "b30f1953463272b61875b67618c51d3012b554199fe39a3aa809effd85f0fab8",
+    "returncode": 0,
+    "timestamp": "2026-07-24T15:30:29.751349+00:00",
+    "provenance_digest": "3a92f646a31fca2d0d16f7d919a6978c47d937281e2ec65904dd6c0ed321e5fd"
+  }
+}

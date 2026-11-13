@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "This document is requested only when the dependent child status is listed as adopted."
+    }
+  ],
+  "basis": [
+    "Document submitted for review under slot type adoption_certificate for case 77a32efa3649a30ca2508b8f9e1896c8."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "77a32efa3649a30ca2508b8f9e1896c8",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "77a32efa3649a30ca2508b8f9e1896c8.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "accd62922b467fbf695fae2c55de211b47e069f5332f42ab4291f0f75f9e27ff",
+    "allowed_text_sha256": null,
+    "bundle_hash": "129ef955fe8dac19cf9f98b704c507cd09fe2678d3dff76a6e07cd81e56a972f",
+    "prompt_hash": "d49e9895a2b3db55fc3b21fcb1bac4ba5e5badb5f18275b08172765cd26def81",
+    "output_hash": "ccd5c1a033e73d2b0da5b4db0161c2c7ee805d0d0143fbbf32029505ce498d68",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:21:36.771393+00:00",
+    "provenance_digest": "9157574e87b1b5f04b8be15a90ad678ab84e3d74c1e1521333c58ef9eb28a77a"
+  }
+}

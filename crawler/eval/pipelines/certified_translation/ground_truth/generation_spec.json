@@ -1,0 +1,232 @@
+{
+  "doc_type": "certified_translation",
+  "timestamp": "2026-07-23T03:01:20.214000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "certified_translation",
+      "title": "Official Certified Translation of Birth Certificate",
+      "issuing_authority": "Association of Translators and Interpreters of Ontario",
+      "issue_date": "2023-05-12",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "source_language": "Spanish",
+        "target_language": "English",
+        "original_document_title": "Certificado de Nacimiento",
+        "original_document_issuing_country": "Spain",
+        "translation_date": "2023-05-12",
+        "translator_identity": "Elena Rostova",
+        "relationship_to_applicant": "Independent Third-Party Professional Translator - No Relation",
+        "translator_certification_status": "Certified Member in Good Standing",
+        "professional_association_name": "Association of Translators and Interpreters of Ontario",
+        "translator_membership_number": "ATIO-78921",
+        "certified_translator_stamp": "Official Embossed Seal Affixed - ATIO Certification #78921",
+        "translator_affidavit": "Attached - Sworn before Commissioner of Oaths",
+        "commissioner_of_oaths_seal": "Affixed - Seal #ON-99482, Commission Expires 2027-11-30",
+        "translator_declaration": "I, Elena Rostova, Certified Translator, hereby certify that I am fluent in Spanish and English, and that the attached document is an accurate and complete translation of the original Birth Certificate.",
+        "translated_text_completeness": "Complete - 100% of body text, headers, footers, and marginalia translated",
+        "translated_stamps_and_seals": "Fully translated and transcribed: [Official Seal of Civil Registry of Madrid, Stamped 14 AUG 2012]",
+        "page_count_match": "Matches Original - 2 pages original / 2 pages translation"
+      },
+      "narrative_blocks": [
+        "CERTIFICATE OF ACCURACY: I, Elena Rostova, certified translator in good standing with the Association of Translators and Interpreters of Ontario (Member #78921), hereby declare that I have translated the attached document from Spanish into English.",
+        "I further certify that to the best of my knowledge and ability, the English text is a true, complete, and accurate representation of the original document titled 'Certificado de Nacimiento' issued by the Civil Registry of Madrid, Spain.",
+        "SWORN STATEMENT: Subscribed and sworn before me in the City of Toronto, Province of Ontario, this 12th day of May, 2023. [Signed & Sealed by Commissioner of Oaths, Reg #ON-99482]."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "certified_translation",
+      "title": "Certified Translation of Academic Transcript - Uncertified Translator",
+      "issuing_authority": "Global Language Solutions LLC",
+      "issue_date": "2023-08-20",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "source_language": "French",
+        "target_language": "English",
+        "original_document_title": "Relevé de Notes",
+        "original_document_issuing_country": "France",
+        "translation_date": "2023-08-20",
+        "translator_identity": "John Smith",
+        "relationship_to_applicant": "Independent Third-Party Professional Translator - No Relation",
+        "translator_certification_status": "Uncertified / Freelance Translator",
+        "professional_association_name": "None",
+        "translator_membership_number": "N/A",
+        "certified_translator_stamp": "None",
+        "translator_affidavit": "Not Provided - Plain statement submitted without notarization or sworn affidavit",
+        "commissioner_of_oaths_seal": "Missing - No commissioner of oaths or notary seal present",
+        "translator_declaration": "I declare that I translated this document from French to English to the best of my ability.",
+        "translated_text_completeness": "Complete",
+        "translated_stamps_and_seals": "Fully translated",
+        "page_count_match": "Matches Original - 3 pages original / 3 pages translation"
+      },
+      "narrative_blocks": [
+        "TRANSLATION STATEMENT: I, John Smith, freelance translator, state that I translated the attached French university transcript titled 'Relevé de Notes' into English.",
+        "This translation was prepared to the best of my personal capability. Note: The translator is not a member of a certified translation association and no official affidavit was sworn."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-CERTIFIE-01",
+        "category": "uncertified_translator_missing_affidavit",
+        "severity": "critical",
+        "description": "Translation was executed by an uncertified translator and lacks a sworn affidavit or notary/commissioner seal required for non-certified translations.",
+        "affected_fields": [
+          "translator_certification_status",
+          "translator_affidavit",
+          "commissioner_of_oaths_seal"
+        ],
+        "mutation_details": {
+          "translator_certification_status": "Set to Uncertified / Freelance Translator",
+          "translator_affidavit": "Set to Not Provided",
+          "commissioner_of_oaths_seal": "Set to Missing"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "certified_translation",
+      "title": "Certified Translation of Marriage Certificate - Family Translation",
+      "issuing_authority": "Private Translation",
+      "issue_date": "2023-09-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "source_language": "German",
+        "target_language": "English",
+        "original_document_title": "Heiratsurkunde",
+        "original_document_issuing_country": "Germany",
+        "translation_date": "2023-09-15",
+        "translator_identity": "John Smith",
+        "relationship_to_applicant": "Spouse of Applicant (Jane Doe)",
+        "translator_certification_status": "Non-Professional / Family Member",
+        "professional_association_name": "None",
+        "translator_membership_number": "N/A",
+        "certified_translator_stamp": "None",
+        "translator_affidavit": "Self-declared declaration without third-party authorization",
+        "commissioner_of_oaths_seal": "N/A",
+        "translator_declaration": "I, John Smith, spouse of the applicant Jane Doe, certify that I am fluent in German and English and translated this marriage certificate accurately.",
+        "translated_text_completeness": "Complete",
+        "translated_stamps_and_seals": "Fully translated",
+        "page_count_match": "Matches Original - 1 page"
+      },
+      "narrative_blocks": [
+        "DECLARATION OF TRANSLATOR: My name is John Smith, and I am the husband of Jane Doe. I have translated her German marriage certificate 'Heiratsurkunde' into English.",
+        "I certify that I understand both German and English fluently and that this translation is a true rendering of the original document."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-CERTIFIE-02",
+        "category": "prohibited_family_translation",
+        "severity": "critical",
+        "description": "Translation was prepared by the applicant's spouse, violating regulations that strictly prohibit family members from acting as translators.",
+        "affected_fields": [
+          "translator_identity",
+          "relationship_to_applicant",
+          "translator_declaration"
+        ],
+        "mutation_details": {
+          "translator_identity": "Set to spouse of applicant (John Smith)",
+          "relationship_to_applicant": "Set to Spouse of Applicant (Jane Doe)",
+          "translator_declaration": "Modified declaration to acknowledge spousal relationship"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "certified_translation",
+      "title": "Certified Translation of Police Certificate - Omitted Pages and Marginalia",
+      "issuing_authority": "Certified Legal Translations Ltd.",
+      "issue_date": "2023-10-05",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "source_language": "Arabic",
+        "target_language": "English",
+        "original_document_title": "Police Clearance Certificate",
+        "original_document_issuing_country": "Egypt",
+        "translation_date": "2023-10-05",
+        "translator_identity": "Robert Vance",
+        "relationship_to_applicant": "Independent Third-Party Professional Translator - No Relation",
+        "translator_certification_status": "Certified Member in Good Standing",
+        "professional_association_name": "Chartered Institute of Linguists",
+        "translator_membership_number": "CTIC-44091",
+        "certified_translator_stamp": "Affixed Stamp #44091",
+        "translator_affidavit": "Attached - Sworn before Notary Public",
+        "commissioner_of_oaths_seal": "Affixed",
+        "translator_declaration": "I, Robert Vance, certify that the translated text on page 1 is accurate.",
+        "translated_text_completeness": "Incomplete - Page 2 back stamps and legal marginalia omitted",
+        "translated_stamps_and_seals": "Omitted - Official apostille stamp and rear seal not translated",
+        "page_count_match": "Mismatch - Original 2 pages / Translation 1 page"
+      },
+      "narrative_blocks": [
+        "CERTIFICATE OF ACCURACY: I, Robert Vance, certified translator (CTIC-44091), hereby confirm that I translated the primary text of the Egyptian Police Clearance Certificate.",
+        "Note: Page 2 containing ministry endorsements, apostille stamp, and official verification seals was omitted from this translation package."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-CERTIFIE-03",
+        "category": "incomplete_page_translation",
+        "severity": "critical",
+        "description": "Translation is incomplete because it omits official stamps, marginalia, and the second page of the source document.",
+        "affected_fields": [
+          "translated_text_completeness",
+          "translated_stamps_and_seals",
+          "page_count_match"
+        ],
+        "mutation_details": {
+          "translated_text_completeness": "Set to Incomplete due to omitted back page and marginalia",
+          "translated_stamps_and_seals": "Set to Omitted for rear apostille stamp and seals",
+          "page_count_match": "Set to Mismatch (2 pages original vs 1 page translated)"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "certified_translation",
+      "title": "Certified Translation of Diploma - Missing Official Translator Seal",
+      "issuing_authority": "Apex Translation Services",
+      "issue_date": "2023-11-12",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "source_language": "Portuguese",
+        "target_language": "English",
+        "original_document_title": "Diploma de Licenciatura",
+        "original_document_issuing_country": "Brazil",
+        "translation_date": "2023-11-12",
+        "translator_identity": "John Smith",
+        "relationship_to_applicant": "Independent Third-Party Professional Translator - No Relation",
+        "translator_certification_status": "Unverified",
+        "professional_association_name": "Missing - No professional association listed",
+        "translator_membership_number": "Missing / Unverified",
+        "certified_translator_stamp": "Missing - No official professional seal or stamp affixed",
+        "translator_affidavit": "None",
+        "commissioner_of_oaths_seal": "None",
+        "translator_declaration": "I hereby certify that this translation of the Brazilian diploma is accurate.",
+        "translated_text_completeness": "Complete",
+        "translated_stamps_and_seals": "Fully translated",
+        "page_count_match": "Matches Original - 1 page"
+      },
+      "narrative_blocks": [
+        "TRANSLATION CERTIFICATE: Attached is the English translation of the document 'Diploma de Licenciatura'.",
+        "I certify the accuracy of the translated contents. Official certified translator seal and membership credentials are not affixed to this document."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-CERTIFIE-04",
+        "category": "missing_certified_seal_or_stamp",
+        "severity": "critical",
+        "description": "Document lacks the official certified translator seal/stamp, membership number, and professional association credentials.",
+        "affected_fields": [
+          "certified_translator_stamp",
+          "translator_membership_number",
+          "professional_association_name"
+        ],
+        "mutation_details": {
+          "certified_translator_stamp": "Removed official stamp/seal",
+          "translator_membership_number": "Set to Missing / Unverified",
+          "professional_association_name": "Set to Missing - No professional association listed"
+        }
+      }
+    }
+  ]
+}

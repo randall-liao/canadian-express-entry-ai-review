@@ -1,0 +1,56 @@
+{
+  "question": "Who needs a police certificate for this application?",
+  "claims": [
+    {
+      "id": "police-certificate",
+      "text": "A police certificate is required for the applicant and family members who are 18 years or older for every country stayed in during the last 10 years for 6 months in a row or longer.",
+      "citations": [
+        "guidance/police-certificates.md#002"
+      ],
+      "quote": "Our online system will ask for a police certificate for:\n  * you and your family members who are 18 years or older\n  * **and**\n  * every country you (or a family member) stayed in during the last 10 years for **6 months in a row or longer**"
+    }
+  ],
+  "basis": [
+    "Document upload slot: police_certificate",
+    "Opaque case ID: e2e11d1542e49ce9727409292c6c5e50",
+    "Evaluated document e2e11d1542e49ce9727409292c6c5e50.pdf for applicant residence history and police certificate requirements."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e2e11d1542e49ce9727409292c6c5e50",
+  "doc_type": "police_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e2e11d1542e49ce9727409292c6c5e50.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "03455e6d88b214d58f2b4c3c7a997b32acd072160b002a6888607603721f7c4a",
+    "allowed_text_sha256": null,
+    "bundle_hash": "033e7663f74420d5cd489034f2d478e685f9327e43a3b8cac0a7f94e139736d8",
+    "prompt_hash": "b7ff9d0519e9bb54a1ceb8814dab205e903ccc605a471eda6d41e346dc5091e6",
+    "output_hash": "adb45700099d4be133ff1898238b0c48009a21fbf3071207162b131d4dd50fe1",
+    "returncode": 0,
+    "timestamp": "2026-07-23T15:24:02.564678+00:00",
+    "provenance_digest": "bd352ce7d4302d36ad6ed694d19e930a3f4a6514452a9e7cc20897d1863c6084"
+  }
+}

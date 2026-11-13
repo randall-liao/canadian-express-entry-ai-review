@@ -1,0 +1,326 @@
+{
+  "doc_type": "passport",
+  "timestamp": "2026-07-23T02:57:51.691000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "passport",
+      "title": "Standard Issue Ordinary Passport - Fully Compliant Document",
+      "issuing_authority": "Passport Program, Immigration, Refugees and Citizenship Canada",
+      "issue_date": "2023-01-15",
+      "expiry_date": "2033-01-14",
+      "fields": {
+        "passport_type": "P",
+        "issuing_country": "CAN",
+        "passport_number": "ZE123456",
+        "surname": "DOE",
+        "given_names": "JANE MARY",
+        "full_name": "JANE MARY DOE",
+        "nationality": "CANADIAN",
+        "date_of_birth": "1990-08-14",
+        "place_of_birth": "TORONTO CAN",
+        "sex": "F",
+        "issue_date": "2023-01-15",
+        "expiry_date": "2033-01-14",
+        "issuing_authority": "PASSPORT OFFICE TORONTO",
+        "mrz_code": "P<CANDOE<<JANE<MARY<<<<<<<<<<<<<<<<<<<<<<<<<\nZE123456<8CAN9008144F3301147<<<<<<<<<<<<<<<04",
+        "bio_page_scan": "passport_bio_page_clear_full.pdf",
+        "blank_pages_count": 24,
+        "travel_history": [],
+        "visa_stamps": [],
+        "statutory_questions": {
+          "refused_visa": false,
+          "refused_entry": false
+        }
+      },
+      "narrative_blocks": [
+        "The applicant provided a clear, full-page color scan of their valid Canadian passport. All biographical data, including MRZ lines and facial photograph, are fully legible and unambiguous.",
+        "Cross-referencing against the application record confirms that all personal identifiers (full name, date of birth, passport number, and nationality) match perfectly across all submitted documentation."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "passport",
+      "title": "Incomplete Passport Scan Omitting Bottom MRZ Strip",
+      "issuing_authority": "Department of Home Affairs, Australia",
+      "issue_date": "2022-03-15",
+      "expiry_date": null,
+      "fields": {
+        "passport_type": "P",
+        "issuing_country": "AUS",
+        "passport_number": null,
+        "surname": "SMITH",
+        "given_names": "JOHN ALEXANDER",
+        "full_name": "JOHN ALEXANDER SMITH",
+        "nationality": "AUSTRALIAN",
+        "date_of_birth": "1988-11-20",
+        "place_of_birth": "SYDNEY AUS",
+        "sex": "M",
+        "issue_date": "2022-03-15",
+        "expiry_date": null,
+        "issuing_authority": "SYDNEY PASSPORT OFFICE",
+        "mrz_code": null,
+        "bio_page_scan": "passport_bio_page_cropped_mrz.pdf",
+        "blank_pages_count": 18,
+        "travel_history": [],
+        "visa_stamps": [],
+        "statutory_questions": {
+          "refused_visa": false,
+          "refused_entry": false
+        }
+      },
+      "narrative_blocks": [
+        "The submitted document image is severely cropped along the bottom border, truncating the entire Machine Readable Zone (MRZ) and cutting off the passport number and expiration date fields.",
+        "Pursuant to R10 completeness requirements, a complete scan showing all four corners of the biographical page including the MRZ is mandatory. The document is rejected as incomplete evidence."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PASSPORT-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The biographical page scan is cropped at the bottom, removing the Machine Readable Zone (MRZ), passport number, and expiration date.",
+        "affected_fields": [
+          "passport_number",
+          "bio_page_scan",
+          "mrz_code",
+          "expiry_date"
+        ],
+        "mutation_details": {
+          "mutation_type": "image_cropping_truncation",
+          "cropped_region": "bottom_mrz_strip",
+          "omitted_fields": [
+            "passport_number",
+            "mrz_code",
+            "expiry_date"
+          ]
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "passport",
+      "title": "Bio-Data Discrepancy Between Passport Document and Express Entry Profile",
+      "issuing_authority": "Ministry of External Affairs, India",
+      "issue_date": "2021-09-10",
+      "expiry_date": "2031-09-09",
+      "fields": {
+        "passport_type": "P",
+        "issuing_country": "IND",
+        "passport_number": "Z9876543",
+        "surname": "PATEL",
+        "given_names": "PRIYA ARUN",
+        "full_name": "PRIYA ARUN PATEL",
+        "nationality": "INDIAN",
+        "date_of_birth": "1994-05-12",
+        "place_of_birth": "MUMBAI IND",
+        "sex": "F",
+        "issue_date": "2021-09-10",
+        "expiry_date": "2031-09-09",
+        "issuing_authority": "RPO MUMBAI",
+        "mrz_code": "P<INDPATEL<<PRIYA<ARUN<<<<<<<<<<<<<<<<<<<<<<<\nZ9876543<8IND9405124F3109099<<<<<<<<<<<<<<<02",
+        "bio_page_scan": "passport_bio_page_patel_priya.pdf",
+        "blank_pages_count": 20,
+        "express_entry_profile": {
+          "full_name": "PRIYA PATEL SHARMA",
+          "date_of_birth": "1992-05-12",
+          "place_of_birth": "DELHI IND",
+          "passport_number": "X1234567"
+        }
+      },
+      "narrative_blocks": [
+        "A material discrepancy exists between the biographical data encoded in the passport MRZ / physical document and the biographical data submitted in the online Express Entry profile.",
+        "The profile lists the surname/given name as 'PRIYA PATEL SHARMA' with date of birth 1992-05-12 and passport number X1234567, whereas the uploaded passport document exhibits name 'PRIYA ARUN PATEL', date of birth 1994-05-12, and passport number Z9876543."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PASSPORT-02",
+        "category": "pfl_misrepresentation",
+        "severity": "critical",
+        "description": "Biographical details on the passport MRZ and scan mismatch the candidate profile entries for full name, date of birth, place of birth, and passport number.",
+        "affected_fields": [
+          "full_name",
+          "date_of_birth",
+          "place_of_birth",
+          "passport_number",
+          "mrz_code"
+        ],
+        "mutation_details": {
+          "discrepancy_type": "profile_versus_document_mismatch",
+          "document_values": {
+            "full_name": "PRIYA ARUN PATEL",
+            "date_of_birth": "1994-05-12",
+            "place_of_birth": "MUMBAI IND",
+            "passport_number": "Z9876543"
+          },
+          "profile_values": {
+            "full_name": "PRIYA PATEL SHARMA",
+            "date_of_birth": "1992-05-12",
+            "place_of_birth": "DELHI IND",
+            "passport_number": "X1234567"
+          }
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "passport",
+      "title": "Passport Validity Expiring in Less Than Six Months",
+      "issuing_authority": "HM Passport Office, United Kingdom",
+      "issue_date": "2016-10-01",
+      "expiry_date": "2026-09-15",
+      "fields": {
+        "passport_type": "P",
+        "issuing_country": "GBR",
+        "passport_number": "918273645",
+        "surname": "TAYLOR",
+        "given_names": "ROBERT",
+        "full_name": "ROBERT TAYLOR",
+        "nationality": "BRITISH CITIZEN",
+        "date_of_birth": "1985-03-30",
+        "place_of_birth": "LONDON GBR",
+        "sex": "M",
+        "issue_date": "2016-10-01",
+        "expiry_date": "2026-09-15",
+        "issuing_authority": "IPS",
+        "mrz_code": "P<GBRTAYLOR<<ROBERT<<<<<<<<<<<<<<<<<<<<<<<<<\n9182736458GBR8503301M2609154<<<<<<<<<<<<<<<08",
+        "bio_page_scan": "passport_bio_page_taylor_robert.pdf",
+        "blank_pages_count": 14
+      },
+      "narrative_blocks": [
+        "The passport submitted by the applicant expires on 2026-09-15, which provides less than two months of remaining validity relative to the application assessment date of 2026-07-23.",
+        "Immigration regulations require a passport to remain valid for at least six months from the application submission date and throughout anticipated processing to allow counterfoil issuance."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PASSPORT-03",
+        "category": "pfl_validity_defect",
+        "severity": "warning",
+        "description": "Passport validity period expires within 54 days of evaluation date (2026-07-23), falling short of the required 6-month validity threshold.",
+        "affected_fields": [
+          "expiry_date",
+          "passport_number",
+          "issue_date"
+        ],
+        "mutation_details": {
+          "assessment_date": "2026-07-23",
+          "expiry_date": "2026-09-15",
+          "remaining_validity_days": 54,
+          "required_validity_days": 180
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "passport",
+      "title": "Undeclared Foreign Visa Refusal Stamp Discovered on Passport Page",
+      "issuing_authority": "Department of Foreign Affairs, Philippines",
+      "issue_date": "2021-04-12",
+      "expiry_date": "2031-04-11",
+      "fields": {
+        "passport_type": "P",
+        "issuing_country": "PHL",
+        "passport_number": "P5432109A",
+        "surname": "SANTOS",
+        "given_names": "MARIA LUZ",
+        "full_name": "MARIA LUZ SANTOS",
+        "nationality": "FILIPINO",
+        "date_of_birth": "1991-12-05",
+        "place_of_birth": "MANILA PHL",
+        "sex": "F",
+        "issue_date": "2021-04-12",
+        "expiry_date": "2031-04-11",
+        "issuing_authority": "DFA MANILA",
+        "mrz_code": "P<PHLSANTOS<<MARIA<LUZ<<<<<<<<<<<<<<<<<<<<<<\nP5432109A5PHL9112053F3104118<<<<<<<<<<<<<<<06",
+        "statutory_questions": {
+          "refused_visa": false,
+          "refused_entry": false,
+          "details": "Applicant answered No to statutory questions regarding prior visa refusals."
+        },
+        "travel_history": [
+          {
+            "country": "SGP",
+            "entry": "2022-01-10",
+            "exit": "2022-01-20"
+          }
+        ],
+        "visa_stamps": [
+          {
+            "page": 8,
+            "type": "Refusal Stamp",
+            "issuing_country": "USA",
+            "date": "2023-03-14",
+            "annotation": "Application Refused Under INA Section 214(b)"
+          }
+        ],
+        "passport_pages": "passport_all_pages_complete.pdf"
+      },
+      "narrative_blocks": [
+        "Examination of page 8 of the passport scan revealed an official US Embassy refusal stamp dated March 14, 2023.",
+        "In the statutory questions section of the application, the applicant explicitly declared 'No' to having ever been refused a visa or permit for any country, representing a direct contradiction and potential misrepresentation under immigration laws."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PASSPORT-04",
+        "category": "pfl_misrepresentation",
+        "severity": "critical",
+        "description": "Passport page scan contains an official refusal stamp from the USA dated 2023-03-14, which contradicts the negative response provided in the application statutory declarations.",
+        "affected_fields": [
+          "statutory_questions",
+          "travel_history",
+          "visa_stamps",
+          "passport_pages"
+        ],
+        "mutation_details": {
+          "undeclared_refusal_country": "USA",
+          "refusal_date": "2023-03-14",
+          "stamp_location": "Page 8",
+          "statutory_declaration_answer": false
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "passport",
+      "title": "Ineligible Diplomatic Travel Document with Zero Blank Visa Pages",
+      "issuing_authority": "Auswaertiges Amt, Germany",
+      "issue_date": "2024-01-10",
+      "expiry_date": "2029-01-09",
+      "fields": {
+        "passport_type": "D",
+        "issuing_country": "DEU",
+        "passport_number": "D99887766",
+        "surname": "MUELLER",
+        "given_names": "HANS",
+        "full_name": "HANS MUELLER",
+        "nationality": "GERMAN",
+        "date_of_birth": "1980-06-25",
+        "place_of_birth": "BERLIN DEU",
+        "sex": "M",
+        "issue_date": "2024-01-10",
+        "expiry_date": "2029-01-09",
+        "issuing_authority": "AUSWAERTIGES AMT",
+        "mrz_code": "PDDEUMUELLER<<HANS<<<<<<<<<<<<<<<<<<<<<<<<<<\nD998877662DEU8006259M2901095<<<<<<<<<<<<<<<00",
+        "blank_pages_count": 0,
+        "bio_page_scan": "passport_bio_page_diplomatic.pdf"
+      },
+      "narrative_blocks": [
+        "The applicant submitted a Diplomatic Passport (Type D) with zero remaining blank visa pages.",
+        "Economic immigration streams require a standard regular/ordinary passport (Type P) with at least 1-2 blank visa pages available for visa counterfoil placement."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-PASSPORT-05",
+        "category": "pfl_ineligible_document",
+        "severity": "warning",
+        "description": "Travel document is a Diplomatic Passport (Type D) instead of an Ordinary Passport (Type P), and has 0 blank visa pages available.",
+        "affected_fields": [
+          "passport_type",
+          "issuing_country",
+          "blank_pages_count"
+        ],
+        "mutation_details": {
+          "submitted_passport_type": "D",
+          "required_passport_type": "P",
+          "submitted_blank_pages": 0,
+          "required_blank_pages_minimum": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "doc_type": "birth_certificate",
+  "case_evaluations": {
+    "0d8e81145a14a0ecb6b3e3d948b4219a": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.6,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3de3f30b94ac06b4b06ac29ac826fb17": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "5c004ea72869aab6ee4d06f1a237bdf0": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "64bcdead506efad3c9a84e1c73e17c73": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6beea74242a6b7354048e196afaaac4f": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "70dbae49cf2c9a06af51ca5f0843648c": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "89896650f3aa2667822929e8cd9c40fc": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ad9e9d39b2c7ae1d67091d5a214d450d": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.6,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c2979af4f8a5638aa9235ad7d6ba1f3c": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d2464043f6863ef7ec0fc083928a03e1": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "89896650f3aa2667822929e8cd9c40fc",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-01. Document is a short-form abstract with Parent Names/Father/Mother/Proof Of Relationship all 'N/A' and narrative stating 'does not contain parental information or proof of parental relationship'. Worker returned generic policy text and flagged no defect."
+    },
+    {
+      "case_id": "6beea74242a6b7354048e196afaaac4f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-01 (scanned sibling of 89896650). Short-form abstract lacks parental names; no defect or abstention raised."
+    },
+    {
+      "case_id": "3de3f30b94ac06b4b06ac29ac826fb17",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-02. Registration 2025-05-20 for a 2010-03-12 birth (delayed 15 years), civil register entry N/A, authority 'Pending Local Civil Registry Review', 'Provisional/Preliminary' seal. Worker gave generic answer with no credibility/late-registration flag."
+    },
+    {
+      "case_id": "5c004ea72869aab6ee4d06f1a237bdf0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-02 (scanned sibling). Delayed/late birth registration undetected."
+    },
+    {
+      "case_id": "0d8e81145a14a0ecb6b3e3d948b4219a",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-03. Official Seal/Signature/Stamp all 'N/A'; narrative declares 'UNOFFICIAL INFORMATIONAL COPY ... does not bear the embossed official seal, authorized registrar signature, or stamp'. Worker raised no authenticity defect."
+    },
+    {
+      "case_id": "70dbae49cf2c9a06af51ca5f0843648c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-03 (scanned sibling). Missing official seal/signature/stamp undetected."
+    },
+    {
+      "case_id": "c2979af4f8a5638aa9235ad7d6ba1f3c",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-04. Document language Spanish, Translation Certification/Translator Affidavit 'N/A', narrative states 'no incluye traduccion certificada ni declaracion jurada del traductor'. No translation-defect flag raised."
+    },
+    {
+      "case_id": "ad9e9d39b2c7ae1d67091d5a214d450d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-BIRTH_CE-04 (scanned sibling). Untranslated Spanish record without certified translation/affidavit undetected."
+    },
+    {
+      "case_id": "0d8e81145a14a0ecb6b3e3d948b4219a",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Quote field truncated to 'equivalent document from the birth country', which does not substantiate the full three-option claim text asserted in the claim."
+    },
+    {
+      "case_id": "ad9e9d39b2c7ae1d67091d5a214d450d",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Same truncated quote fragment as its sibling; citation does not fully support the claim text."
+    },
+    {
+      "case_id": "64bcdead506efad3c9a84e1c73e17c73",
+      "category": "blind_input",
+      "severity": "major",
+      "description": "Provenance shows model 'gemini-3.6-flash' while the required configuration is claude-opus-4.8 with --effort xhigh --context long_context. Model-requirement violation applies uniformly across all 10 reports and likely underlies the systemic non-analysis. No ground-truth leakage detected (blind operation intact)."
+    },
+    {
+      "case_id": "5c004ea72869aab6ee4d06f1a237bdf0",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "basis[] asserts unverified context ('The applicant uploaded a birth certificate document for a dependent child') without assessing the actual document; representative of all reports restating policy instead of grounding a verdict in observed fields."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/birth_certificate.md",
+      "suggested_patch": "Require a per-document adjudication step that emits an explicit verdict (meets_requirements | defective) with defect flags, not a generic policy restatement. Mandate checking these four failure modes against extracted fields/narrative: (1) short-form/abstract missing parent_names/father_full_name/mother_full_name/proof_of_relationship; (2) late/delayed registration where registration_date is years after date_of_birth or authority/seal is 'pending/provisional'; (3) missing official_seal/issuing_authority_signature/issuing_stamp or 'unofficial/unvalidated' narrative; (4) non-English/French document_language lacking translation_certification/translator_affidavit. If any triggers, output a defect claim citing the specific fields."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Instruct the agent to always read page 2 'Narrative Statements / Detailed Notes' and cross-check field values marked 'N/A'/'Not Applicable' against narrative disclaimers (e.g., 'UNOFFICIAL', 'does not bear ... seal', 'short-form ... no parental information', 'delayed registration', 'no incluye traduccion'). Treat 'N/A' on official_seal/signature/stamp or parent fields as a defect signal rather than neutral."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Enforce the mandated worker model/effort (claude-opus-4.8, --effort xhigh, --context long_context) for document review and reject/re-run reports whose provenance.model does not match. Add a guard requiring that reports contain either a defect claim or an explicit affirmative pass with per-field evidence; reject reports that only echo eligibility policy without evaluating the attached document."
+    }
+  ],
+  "rationale": "All 10 reports were produced on gemini-3.6-flash (violating the claude-opus-4.8/xhigh requirement) and answered the eligibility question with an identical generic policy restatement instead of adjudicating each attached document. Defect_recall is therefore 0.0 for all 8 defective cases—PFL-01 through PFL-04 were each unambiguously visible in the PDFs (N/A parent fields, 15-year delayed registration, N/A seal/signature/stamp, untranslated Spanish) yet none were flagged and no abstentions were emitted. The two clean cases (64bcdead, d2464043) contain no defects, so defect_recall is scored 1.0 for those. Citation_exactness is generally solid (consistent completeness-check reference with a matching verbatim quote), reduced to 0.6 for 0d8e8114 and ad9e9d39 whose quote fields are truncated to a fragment that does not support the full claim. Grounding_accuracy is moderate (~0.8): the policy claim itself is citation-supported and contains no fabricated facts, but basis[] asserts unverified assumptions and the reports never ground a verdict in observed document fields. PII containment is fully intact—no child/parent names, DOBs, or certificate numbers appear in claims or prose—and blind_input_compliance holds since there is no evidence of ground-truth leakage. The dominant, systemic failure is the complete absence of document-level defect detection, addressed by the patch recommendations.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "0d8e81145a14a0ecb6b3e3d948b4219a.pdf",
+      "--attachment",
+      "3de3f30b94ac06b4b06ac29ac826fb17.pdf",
+      "--attachment",
+      "5c004ea72869aab6ee4d06f1a237bdf0.pdf",
+      "--attachment",
+      "64bcdead506efad3c9a84e1c73e17c73.pdf",
+      "--attachment",
+      "6beea74242a6b7354048e196afaaac4f.pdf",
+      "--attachment",
+      "70dbae49cf2c9a06af51ca5f0843648c.pdf",
+      "--attachment",
+      "89896650f3aa2667822929e8cd9c40fc.pdf",
+      "--attachment",
+      "ad9e9d39b2c7ae1d67091d5a214d450d.pdf",
+      "--attachment",
+      "c2979af4f8a5638aa9235ad7d6ba1f3c.pdf",
+      "--attachment",
+      "d2464043f6863ef7ec0fc083928a03e1.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "da23e5459eff9a0e741a78cd9b82795626401d9a18b1b306eeb4e8500a258497",
+    "research_hash": "38815ad7a5276f04958cf966f0ddcc24594022a6ad06200f477d1aed745ea950",
+    "ground_truth_hash": "1acc8350832ff535ad297dc1fa0d6baf55b9ae236cecf71e0a0b8bfcd3898fc9",
+    "output_hash": "8e2a8369274d4828577771b2d07351cb0b18dac3fd2ae5cf3e9506af58178a59",
+    "timestamp": "2026-07-23T21:13:22.305059+00:00",
+    "provenance_digest": "edcae0f6e49dcce820ff9c3332f61c8647eaeebc6b0b0ae8bb85b31fa55211ad"
+  }
+}

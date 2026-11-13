@@ -1,0 +1,54 @@
+{
+  "question": "What digital photos must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "digital-photos-spec",
+      "text": "Express Entry applicants must provide digital photos that meet IRCC's permanent resident card photo specifications.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#061"
+      ],
+      "quote": "Digital photos meeting [IRCC’s permanent resident card photo specifications (PDF, 614.24 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/information/applications/guides/pdf/5445eb-e.pdf) must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a digital photo document for opaque case ID c3ab14c68d3930110ddcaacf939d3916 under upload-slot type digital_photo."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "c3ab14c68d3930110ddcaacf939d3916",
+  "doc_type": "digital_photo",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c3ab14c68d3930110ddcaacf939d3916.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "221b4199e78e6c75cbf85ae85fb9817f73e03a274c798b09878a17f0bfcf2378",
+    "allowed_text_sha256": null,
+    "bundle_hash": "52fe2a617ece78ce90df802cc559f61f4dd05488aa67e934f752f89c23fee48f",
+    "prompt_hash": "ad4040e371e20a1e1eba06076e003e6099e07fb8b89dfb1e4c962b3c40a69a76",
+    "output_hash": "cb78979690c9300265b0a2ac6006fa9e257e9d548b2ddd296aa98d39e6b6b7cf",
+    "returncode": 0,
+    "timestamp": "2026-07-24T05:49:36.562995+00:00",
+    "provenance_digest": "b8252d37329a89b7bc2a0113e220cedc425c01e91331db3cbc996c81ec6eff99"
+  }
+}

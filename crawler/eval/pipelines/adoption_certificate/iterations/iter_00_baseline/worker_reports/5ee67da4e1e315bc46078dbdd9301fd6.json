@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant has declared a dependent child whose status is listed as adopted."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "5ee67da4e1e315bc46078dbdd9301fd6",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "5ee67da4e1e315bc46078dbdd9301fd6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "64bcbe02d19b6f4a3069d580bf09b3b192995e3142f97c43bf048167686f9c7e",
+    "allowed_text_sha256": null,
+    "bundle_hash": "129ef955fe8dac19cf9f98b704c507cd09fe2678d3dff76a6e07cd81e56a972f",
+    "prompt_hash": "ca43621222fa41be7b3ac60c2f885fb1487ca14765858b907c0543783fcc203d",
+    "output_hash": "8f8dbad7441bb88706cbd60042f60b608eb3aabf8a8c012818667ace24a865d1",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:18:53.325306+00:00",
+    "provenance_digest": "4109ce3776ae39b587c151fd0d44e50247ae178a6930c9b0e2c8307f16797648"
+  }
+}

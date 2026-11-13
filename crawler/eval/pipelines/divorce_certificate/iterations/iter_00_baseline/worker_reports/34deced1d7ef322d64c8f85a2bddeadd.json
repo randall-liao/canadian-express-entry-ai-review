@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "When an applicant's marital status is listed as divorced, a copy of the divorce order or certificate of divorce issued by the jurisdiction where the divorce took place must be provided, as well as a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant's file for case 34deced1d7ef322d64c8f85a2bddeadd includes a 2-page document submitted under the divorce_certificate upload slot."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "34deced1d7ef322d64c8f85a2bddeadd",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "34deced1d7ef322d64c8f85a2bddeadd.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "782e78f2d182ff47d3898867fbba730a2b8cc45414ebd0c385091cd84e141680",
+    "allowed_text_sha256": null,
+    "bundle_hash": "25386273fa5b9e25c9edc6cbcb170e74ded83a3898bee226c8e24f8fb31f9ba1",
+    "prompt_hash": "0316bf909eb2b433ee583754f9af6f8739f4a06786cc843d4c92b55f1ec76f52",
+    "output_hash": "ec7aa3a92edd8ed16781f9af695b89c545044525eb1a108b24a4413dd0229685",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:12:40.302057+00:00",
+    "provenance_digest": "18a1c22dc4c0f780f72c77237d48c8d9dccbb8d5a2a5d01c7a15d15952caa8cb"
+  }
+}

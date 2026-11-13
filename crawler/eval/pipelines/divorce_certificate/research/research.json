@@ -1,0 +1,141 @@
+{
+  "doc_type": "divorce_certificate",
+  "timestamp": "2026-07-23T03:43:33.329046+00:00",
+  "summary": "Comprehensive analysis of IRCC operational guidelines, Canada Divorce Act provisions, and real-world Express Entry refusal/PFL patterns regarding divorce certificates. Primary risk factors include submitting interlocutory/provisional decrees (decree nisi) instead of final decrees absolute, uncertified documents missing official court seals or signatures, foreign divorce decrees lacking certified English/French translations or translator affidavits, and foreign divorces lacking valid jurisdictional residency nexus under Canadian law.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:47:21.133304+00:00",
+    "duration_seconds": 239.339,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "c05f09cdbdf4e3483fd1fe55e8a77eecc57eca037846d8cd492682626120a85d",
+    "raw_output_sha256": "bf70a0d7a11d383c015c72e789664e0292a0a29ac905d8599df90a671de71515",
+    "returncode": 0,
+    "provenance_token": "ad1b81a51794fd370942eb9e341d3ce5fa8971f357e42c94e7fdda80bfa82a33",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 14,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-DIVORCE-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Submission of Interlocutory Decree or Decree Nisi Instead of Final Decree Absolute",
+      "description": "The applicant submitted an interlocutory decree, decree nisi, or provisional court order rather than a final decree absolute or final divorce certificate. Under IRCC guidelines, provisional orders do not legally terminate the marriage, leaving the applicant's civil status ambiguous and failing Express Entry completeness checks.",
+      "affected_fields": [
+        "marital_status",
+        "document_type",
+        "dissolution_date",
+        "decree_type"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Identity and civil status documents prove that the identity and civil status you shared with us are accurate... Examples of identity and civil status documents: divorce or separation documents. If you don't include a document that is required for your application, your application could be delayed, returned to you, or refused.",
+      "remediation_hypothesis": "Obtain and upload the certified Decree Absolute or Final Judgment of Divorce issued by the court, along with an explanation letter confirming that the divorce decree is final, binding, and unappealable.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DIVORCE-02",
+      "category": "pfl_authenticity_issue",
+      "severity": "high",
+      "title": "Uncertified Divorce Copy Lacking Official Court Seal or Judicial Signature",
+      "description": "The divorce certificate uploaded is an uncertified copy, lawyer draft, or registry excerpt without an official court seal, stamp, or signature of the presiding judge/court officer. IRCC officers require authentic, certified copies issued directly by the court of jurisdiction to establish civil status.",
+      "affected_fields": [
+        "court_seal_present",
+        "issuing_authority",
+        "judicial_signature",
+        "certified_copy_status"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "These documents prove that the identity and civil status you shared with us are accurate... If you don't include a document that is required for your application, your application could be delayed, returned to you, or refused.",
+      "remediation_hypothesis": "Request an officially certified true copy of the divorce decree directly from the issuing court clerk, ensuring it contains an embossed or wet-ink court seal, stamp, and registrar signature prior to re-uploading.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DIVORCE-03",
+      "category": "pfl_translation_non_compliance",
+      "severity": "high",
+      "title": "Untranslated Foreign Divorce Decree or Non-Compliant Translation",
+      "description": "The foreign divorce decree is in a language other than English or French and was submitted without a certified translation, or translated by an uncertified person without a sworn translator affidavit, violating IRCC standard document translation instructions.",
+      "affected_fields": [
+        "document_language",
+        "translation_certified",
+        "translator_affidavit",
+        "translated_text"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/processing-claims-ap/refugee-claimants/crc-instructions/translation-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If your supporting documents are not in English or French, you must submit a certified translation along with a copy of the original document. Translations must be done by a certified translator or be accompanied by an affidavit from the person who completed the translation.",
+      "remediation_hypothesis": "Provide a complete certified translation executed by a member in good standing of a recognized Canadian translation association, or a sworn affidavit from the translator executed before a commissioner of oaths, accompanied by a clear copy of the original foreign document.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-DIVORCE-04",
+      "category": "pfl_jurisdiction_validity",
+      "severity": "critical",
+      "title": "Foreign Divorce Lacking Valid Jurisdictional Residency Nexus",
+      "description": "The foreign divorce decree was granted by a tribunal in a jurisdiction where neither spouse was ordinarily resident for at least 12 months preceding the application, or obtained via custom/religious practice without civil court recognition, rendering the divorce invalid under Section 22 of the Canadian Divorce Act.",
+      "affected_fields": [
+        "jurisdiction_country",
+        "spouse_residency_duration",
+        "legal_basis",
+        "foreign_divorce_validity"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.justice.gc.ca/eng/fl-df/divorce/app.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "To be able to divorce in Canada, you must meet criteria including residing in the jurisdiction... Under Canadian rules, a foreign divorce is recognized in Canada if at least one spouse was ordinarily resident in the foreign country for at least one year before applying for the divorce.",
+      "remediation_hypothesis": "Provide documentary evidence showing at least one spouse met the 12-month ordinary residence requirement in the issuing foreign country prior to the divorce filing (e.g., tax records, utility bills, residence permits), or submit a legal opinion letter from a qualified Canadian family law practitioner validating the foreign divorce under Canadian law.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What must an Express Entry arranged-employment job-offer letter contain?",
+  "claims": [
+    {
+      "id": "job-offer-letter",
+      "text": "A letter from the employer(s) offering the job in Canada is required.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#034"
+      ],
+      "quote": "A letter from the employer(s) offering the job in Canada is required"
+    }
+  ],
+  "basis": [
+    "The applicant has submitted a document under the written_job_offer_lmia upload slot claiming a qualifying offer of arranged employment from an employer in Canada."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "6a85334ea8ee238d4b41ea791d677e78",
+  "doc_type": "written_job_offer_lmia",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "6a85334ea8ee238d4b41ea791d677e78.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "19fbd1f8e706911e8d327bb8241bfd2cb28fcfd556e5f6a239d03855f1911208",
+    "allowed_text_sha256": null,
+    "bundle_hash": "385731eb510290f10b07c9c229675d720aa24dffc28e5fe50a2fe3f75e204533",
+    "prompt_hash": "19fb28336b80eb4eac80a5bb2661c89fe665dbbc52c38855cea39f9e0462e257",
+    "output_hash": "fb9c160907bc6d135cc9ddc5d9a85387c365e4b46edc295f8e80a2c2733747e2",
+    "returncode": 0,
+    "timestamp": "2026-07-23T19:47:27.336825+00:00",
+    "provenance_digest": "1d9bc606129c7ac756f6b7fafc237be57b314e89d68de4f55ce1b55df8db6f23"
+  }
+}

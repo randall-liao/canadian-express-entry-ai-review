@@ -1,0 +1,38 @@
+# personal.example/profile.yaml — SYNTHETIC example profile (Phase 26, CHK-01/CHK-02).
+#
+# THIS FILE IS TRACKED and contains ZERO real personal data. Every value below is a
+# deliberate, obvious SENTINEL fake (fictional countries "Wakanda"/"Latveria",
+# made-up counts/durations) so the Plan-02/03 publish-safety self-scan can assert
+# that no profile PII ever leaks into gated claim text, the corpus DB, or any other
+# tracked file.
+#
+# Your REAL profile lives in the git-ignored personal/profile.yaml (default
+# $PR_PERSONAL_DIR=./personal/). Copy this file there and fill in your true values;
+# .gitignore keeps personal/ out of the repo while keeping personal.example/ tracked.
+#
+# Schema: a post-ITA Express Entry applicant. Each field drives WHICH Layer-1
+# document items apply (claim SELECTION, never text mutation). The specific values
+# are PII and surface only in an item's `basis` reason — never its generic label.
+#
+# This example deliberately sets stream "CEC" (proof-of-funds EXEMPT) together with
+# claiming_foreign_education_points true (ECA INCLUDED) so it exercises both the
+# exemption and the inclusion paths of applicable_items().
+
+applicant:
+  citizenship: "Wakanda"            # SENTINEL country (fake) — passport applicability
+  family_members_18_plus: 1         # accompanying family members aged >=18 -> police certs
+
+program:
+  stream: "CEC"                     # CEC | FSW | FST | PNP — drives proof-of-funds applicability
+  has_job_offer: false              # written job-offer-letter applicability
+
+education:
+  claiming_foreign_education_points: true   # -> ECA (educational credential assessment) applicability
+
+residence_since_18:                 # countries lived in >=6 consecutive months in the last 10 yrs, since 18
+  - country: "Wakanda"              # SENTINEL (fake)
+    months: 240
+    current: true
+  - country: "Latveria"             # SENTINEL (fake)
+    months: 14
+    current: false

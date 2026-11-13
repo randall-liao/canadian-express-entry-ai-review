@@ -1,0 +1,62 @@
+{
+  "question": "What must an applicant provide for a provincial or territorial certificate of qualification?",
+  "claims": [
+    {
+      "id": "cert-qualification-copy",
+      "text": "A copy of the certificate of qualification is required.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#031"
+      ],
+      "quote": "A copy of the certificate of qualification is required."
+    },
+    {
+      "id": "competent-issuing-authority",
+      "text": "Self-regulatory and professional certification organizations, such as trade and manufacturer associations, would not be competent authorities for the purposes of recognizing a certificate of qualification, as they do not have a legislatively based delegation to certify the required standards of the trade occupation.",
+      "citations": [
+        "pr-pdi/express-entry-assessing-electronic-application-on-section-a11-2.md#021"
+      ],
+      "quote": "Self-regulatory and professional certification organizations, such as trade and manufacturer associations, would not be competent authorities for the purposes of recognizing a certificate of qualification, as they do not have a legislatively based delegation to certify the required standards of the trade occupation."
+    }
+  ],
+  "basis": [
+    "The document submitted for opaque case ID 27322996ae15b25f223ab2524c7eba5c is a course completion certificate issued by a private academy / non-governmental association, which is not a recognized provincial, territorial, or federal trade regulator with legislative delegation to certify trade standards."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "27322996ae15b25f223ab2524c7eba5c",
+  "doc_type": "certificate_of_qualification",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "27322996ae15b25f223ab2524c7eba5c.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "22933cb28c9589a830d061b8092e609f86cd4530a849365d0a782f68cb736c38",
+    "allowed_text_sha256": null,
+    "bundle_hash": "d3aeb3b7c20bae1d63db393270641bb90b21201f6e94f38481a73e145adb8b14",
+    "prompt_hash": "74f91b38bb2dcda94ae12f19497465f638211a37a407c4eaabe5e03bcd3c031d",
+    "output_hash": "02a9daf34914f3d46c523c899f317b5d77e0dc1de2b8a4638a54236b62337982",
+    "returncode": 0,
+    "timestamp": "2026-07-24T03:26:28.398726+00:00",
+    "provenance_digest": "d255b5c65c20ca9b7fbee1171b294d7b05960ad975bd366948ec88a8cec09185"
+  }
+}

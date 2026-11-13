@@ -1,0 +1,56 @@
+{
+  "question": "What must the applicant's settlement funds satisfy?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "Settlement funds must be legally accessible, cannot be borrowed, and cannot be derived from real-property equity.",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "You must prove to us that you can legally access the money here when you arrive.\nFor example, this means:\n  * you can't use equity on real property as proof of settlement funds\n  * you can’t borrow this money from another person"
+    }
+  ],
+  "basis": [
+    "Document ac9e5cb3c7409d47eb1035cb3d59e243.pdf provided in proof_of_funds slot for case ac9e5cb3c7409d47eb1035cb3d59e243.",
+    "Federal Skilled Worker Program (FSWC) and Federal Skilled Trades Class (FSTC) applicants must meet settlement funds requirements based on family size, unless authorized to work in Canada with a qualifying job offer. Canadian Experience Class (CEC) applicants are exempt.",
+    "Applicant-specific details including program, family size, account balances, 6-month average, and unencumbered status are evaluated against IRCC requirements."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "ac9e5cb3c7409d47eb1035cb3d59e243",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ac9e5cb3c7409d47eb1035cb3d59e243.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "051a3a4e5d9f9b6adc7687a894145d6198e61e7b3e4778cbc55b5fc27238f17c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "19d31602f6addcce52eb3db77bc26febb8b1ad858256dbe1c2cfa1d82a3ed8f1",
+    "prompt_hash": "3a3184a8cf7369845a2929d35e79b0133ddb830e4a35918b295c7980f047974b",
+    "output_hash": "6b8c40e66161b1740a81bec7038b28957d3c10a449179d7d8195942851bb9d59",
+    "returncode": 0,
+    "timestamp": "2026-07-24T13:44:06.508397+00:00",
+    "provenance_digest": "154572aeeb64a4441cc146860abef9bfef30aa0f54faa024d771d6cb8b1b39c4"
+  }
+}

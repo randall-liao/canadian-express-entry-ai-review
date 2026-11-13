@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "certificate_of_qualification",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/certificate_of_qualification/judge.json": "67c4bd590f585304ff5712b21b9161de56e33607627431dbfcb045f04f3be287",
+    "documents/certificate_of_qualification/shared_evaluation.json": "828f2eeb7ed65b8e08de2cbd5655939b6a96258dc07a8bfceb08f7a814b0e71c",
+    "documents/certificate_of_qualification/workers/001bacdc05f2d068910013dddf04333a.json": "4bb40c8a1bfe217cfc0bcb507ba39e5520c9268d284261e2d9306889737657ff",
+    "documents/certificate_of_qualification/workers/17f35d6a19477a1e785fca5f6fbe23eb.json": "5906ae69dea72fdeaa606284bda8bef03f7c503759967ea723784fec54a41d76",
+    "documents/certificate_of_qualification/workers/27322996ae15b25f223ab2524c7eba5c.json": "89dbb4cfe2d6b69afc3d4aff2605812d7b829d520c9ed140fc2c756642ee23e9",
+    "documents/certificate_of_qualification/workers/655ed10fb7da86ed839e1d50de270e81.json": "7d7585fc75ab5ee1dade85feacc7691c62cc4fe0b00e09b6213c97782dbe8b3d",
+    "documents/certificate_of_qualification/workers/7cb0de6fe959acb93f0676f232230218.json": "a6b5f6d2040dc6f146684b3ee6d6e32bc1d41b40ab4bb37bb54b9175a7c572b5",
+    "documents/certificate_of_qualification/workers/8311eae852046d1463e32546e35d2e64.json": "5b13adb63694c20b6965a0b527ce7789149e55897e9abf8844aac8aa04cdfa69",
+    "documents/certificate_of_qualification/workers/a28f9c3da567a294a5545f2ccbf92dd4.json": "5b58e1763ec29b74059665b47d1170083122c9d874cf7cb70a0d06475eb4ffdf",
+    "documents/certificate_of_qualification/workers/cc5546b67840d9f2611472cff3105d19.json": "3559ec50bd92008da62cb5cbdd10da6d82c58c48533a51e1160874bd9837d74f",
+    "documents/certificate_of_qualification/workers/d2fd4b2b456d99a6420e45126f4fd8ca.json": "b11fd7b3eadad95a23a183f8642762d9e9fd4a878ddb0818c535cdeab1d8eaa3",
+    "documents/certificate_of_qualification/workers/d70b01ced86a65ba740a2900791e8549.json": "33de9938386d70b28f0b3b8991a34e797f23f0bfc5bb12baf3eafcb27ac55c91"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

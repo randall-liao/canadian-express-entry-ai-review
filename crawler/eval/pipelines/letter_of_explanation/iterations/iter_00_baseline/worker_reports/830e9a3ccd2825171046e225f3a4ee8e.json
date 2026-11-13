@@ -1,0 +1,54 @@
+{
+  "question": "When may an applicant submit a Letter of Explanation?",
+  "claims": [
+    {
+      "id": "letter-explanation-doc",
+      "text": "An applicant may submit a letter of explanation to clarify application details, missing optional documentation, or special circumstances in Express Entry e-APR submissions.",
+      "citations": [
+        "guidance/police-certificates.md#008"
+      ],
+      "quote": "a letter of explanation, **and**"
+    }
+  ],
+  "basis": [
+    "The applicant submitted a Letter of Explanation for slot letter_of_explanation under opaque case ID 830e9a3ccd2825171046e225f3a4ee8e."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "830e9a3ccd2825171046e225f3a4ee8e",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "830e9a3ccd2825171046e225f3a4ee8e.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "7d7eff6db64841847823360c20e1dc8836e886dcd7ace18b648509ffde7529d6",
+    "allowed_text_sha256": null,
+    "bundle_hash": "d7a377868aba667471d45ab34cc55ae257326eb2adaf961952e773a671b3de7f",
+    "prompt_hash": "da6ce29891170bb2847968d8a0bed7cfdacf59fadcef8530cb27f5e81e3788b8",
+    "output_hash": "5f8c649d8c2d5d48636af18a2743ef1703376f5b6850e6e6e875ece1c4f82e28",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:23:45.836436+00:00",
+    "provenance_digest": "dba4abd416ff000d2970f200d4808f0f1e8a879b686ed3e2aa50bc470155c2cc"
+  }
+}

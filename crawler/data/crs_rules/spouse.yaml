@@ -1,0 +1,108 @@
+rows:
+  # ===================================================================== #
+  # B. SPOUSE / COMMON-LAW PARTNER  (factor group spouse_common_law)
+  # Applies ONLY when an accompanying spouse/common-law partner is not a
+  # Canadian citizen or PR. Evidence owner must be the spouse. Grounded from
+  # the current CRS criteria grid.
+  # ===================================================================== #
+
+  - rule_id: spouse.education
+    factor_group: spouse_common_law
+    factor_ids: [spouse.education]
+    check_type: points
+    query: spouse level of education
+    selector:
+      family: guidance
+      marker: "Doctoral level university degree (PhD)"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Spouse education points use the same ECA / Canadian-credential
+      admissibility as the principal, but the credential owner must be the
+      accompanying spouse and it applies only when a spouse accompanies.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#010
+        quote: "Doctoral level university degree (PhD)  | 10  | n/a"
+    machine_check:
+      kind: points_table
+      field: spouse_education_level
+      points_by_level:
+        - label: doctoral_with_spouse
+          level: doctoral
+          points: 10
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: spouse.language
+    factor_group: spouse_common_law
+    factor_ids: [spouse.language]
+    check_type: points
+    query: spouse language benchmark ability
+    selector:
+      family: guidance
+      marker: "Maximum 20 points for section"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Spouse first-official-language points are per ability from the spouse's
+      CLB level, using an accepted test with all four abilities within validity,
+      and are capped for the section.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#011
+        quote: "Maximum 20 points for section"
+      - chunk_id: guidance/crs-criteria.md#011
+        quote: "CLB 9 or more  | 5  | n/a"
+    machine_check:
+      kind: cap
+      field: spouse_language_section
+      cap_value: 20
+      citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: spouse.work
+    factor_group: spouse_common_law
+    factor_ids: [spouse.work]
+    check_type: points
+    query: spouse Canadian work experience points
+    selector:
+      family: guidance
+      marker: "1 year  | 5  | n/a"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Spouse Canadian work experience points use the same Canadian-work
+      admissibility as the principal; the work must belong to the accompanying
+      spouse (owner separation is mandatory).
+    citations:
+      - chunk_id: guidance/crs-criteria.md#011
+        quote: "1 year  | 5  | n/a"
+    machine_check:
+      kind: points_table
+      field: spouse_canadian_work_years
+      points_by_level:
+        - label: one_year_with_spouse
+          level: "1"
+          points: 5
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"

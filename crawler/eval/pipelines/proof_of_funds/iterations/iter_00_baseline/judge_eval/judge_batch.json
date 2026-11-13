@@ -1,0 +1,202 @@
+{
+  "doc_type": "proof_of_funds",
+  "case_evaluations": {
+    "75020f3835be47d6cfaad0bb86482535": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e184ae33c04195fa69ca2d6fac3177c0": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "52fbe99ff00e3eed7a6c48250c9c6542": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "dcae3557e51603e6e9cdb8d7696a3f17": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "1539c5ec76f1aa910e0113344cf1896f": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ac9e5cb3c7409d47eb1035cb3d59e243": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "55947540f2c8fdab1f3b9b50e96d95fa": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3f6155f5c0da2ce979509587f5d5cb27": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "86168ac017954594f42615674de871c0": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b3e59446693bd79bbf81deb79059cda7": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "52fbe99ff00e3eed7a6c48250c9c6542",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-PROOF_OF-01. Document shows current balance 30,000 CAD vs 6-month narrative average 2,500 CAD from 'a recent single deposit of 27,500.00 CAD on June 10, 2026 without accompanying transfer records or gift deed documentation.' Worker emitted only generic policy, no abstention/defect flag."
+    },
+    {
+      "case_id": "dcae3557e51603e6e9cdb8d7696a3f17",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-PROOF_OF-01 (scanned sibling of 52fbe99f). Unexplained 27,500 CAD lump sum with no paper trail/gift deed visible in the letter narrative; worker recited generic settlement-fund rules without detecting the defect."
+    },
+    {
+      "case_id": "1539c5ec76f1aa910e0113344cf1896f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-PROOF_OF-02. Document states current balance 12,000 CAD against a declared family size of 4 requiring 25,000 CAD minimum — funds are below LICO threshold. Worker did not flag insufficiency."
+    },
+    {
+      "case_id": "ac9e5cb3c7409d47eb1035cb3d59e243",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-PROOF_OF-02 (scanned sibling). 12,000 CAD balance vs 25,000 CAD required for family of 4 clearly stated in the narrative; worker gave only generic policy text."
+    },
+    {
+      "case_id": "55947540f2c8fdab1f3b9b50e96d95fa",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-PROOF_OF-03. Account type is 'Personal Line of Credit', balance 'consists entirely of drawn funds from an active credit line encumbered by repayment obligations, leaving 0.00 CAD in unencumbered liquid funds.' Borrowed/encumbered funds not flagged despite worker quoting the very 'can't borrow' rule."
+    },
+    {
+      "case_id": "3f6155f5c0da2ce979509587f5d5cb27",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-PROOF_OF-03 (scanned sibling). Worker correctly noted the file is a rasterized scan but still failed to detect the Personal Line of Credit / zero unencumbered liquid funds defect explicit in the narrative."
+    },
+    {
+      "case_id": "86168ac017954594f42615674de871c0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-PROOF_OF-04. Narrative explicitly states 'The letter omits the mandatory six-month average account balance, account opening date, outstanding debt details, and official institutional letterhead.' Worker did not flag the non-compliant bank letter."
+    },
+    {
+      "case_id": "b3e59446693bd79bbf81deb79059cda7",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-PROOF_OF-04 (scanned sibling). Same explicit omission of mandatory bank-letter fields; worker's prose asserts generic compliance requirements but never assesses the document against them."
+    },
+    {
+      "case_id": "75020f3835be47d6cfaad0bb86482535",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Clean case correctly not flagged, but the report never issues an explicit meets_requirements verdict nor grounds any assessment in the document's specific fields (balance 28,500 vs 17,835 required); response is generic policy recitation that happens to align."
+    },
+    {
+      "case_id": "55947540f2c8fdab1f3b9b50e96d95fa",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Systemic across all 10 reports: the Worker reduced a document-review-with-defect-detection task to a single fixed generic claim about settlement-fund eligibility. It produces no per-document verdict, no affected_fields, and no abstention when data is missing, so defective documents receive the same output as clean ones."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/proof_of_funds.md",
+      "suggested_patch": "Add a mandatory field-level check pass: (1) compare liquid_account_balances against minimum_required_funds/LICO for the declared family_size and flag shortfalls (PFL-02); (2) flag current_balance materially exceeding average_balance_for_past_6_months or any single large deposit lacking gift-deed/transfer paper trail (PFL-01); (3) flag account_type of Line of Credit/loan or narrative indicating drawn/encumbered/borrowed funds or zero unencumbered balance (PFL-03); (4) verify presence of 6-month average, account opening date, outstanding-debt breakdown, and official letterhead, flagging any omission (PFL-04). Each detected defect must be emitted as an abstention or defect claim citing the affected fields."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Require every document-review report to conclude with an explicit per-document verdict (meets_requirements | defective | insufficient_evidence) grounded in the specific document's extracted fields, not a generic policy recitation. Prohibit returning only reusable boilerplate claims; when mandatory data is missing or a threshold is violated, the Worker must record it in abstentions[] with the specific affected fields."
+    }
+  ],
+  "rationale": "All 10 Worker reports emit a single near-identical generic claim ('settlement funds must be legally accessible, not borrowed, not real-property equity') citing guidance/proof-funds.md#007 with a quote that matches official IRCC language, so citation_exactness, grounding (no fabrication), PII containment (applicant facts abstracted, none leaked into claims/prose), and blind compliance (no ground-truth leakage) all score well. The decisive failure is defect_recall: the Worker treats every case as a generic policy Q&A and detects 0 of 8 injected defects (PFL-01 lump sum x2, PFL-02 sub-LICO balance x2, PFL-03 encumbered line-of-credit x2, PFL-04 non-compliant bank letter x2), even when the document narrative states the defect verbatim. The two clean sibling cases score defect_recall 1.0 only because there was nothing to detect. Patches target adding an explicit field-level defect-detection pass and requiring a grounded per-document verdict.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "1539c5ec76f1aa910e0113344cf1896f.pdf",
+      "--attachment",
+      "3f6155f5c0da2ce979509587f5d5cb27.pdf",
+      "--attachment",
+      "52fbe99ff00e3eed7a6c48250c9c6542.pdf",
+      "--attachment",
+      "55947540f2c8fdab1f3b9b50e96d95fa.pdf",
+      "--attachment",
+      "75020f3835be47d6cfaad0bb86482535.pdf",
+      "--attachment",
+      "86168ac017954594f42615674de871c0.pdf",
+      "--attachment",
+      "ac9e5cb3c7409d47eb1035cb3d59e243.pdf",
+      "--attachment",
+      "b3e59446693bd79bbf81deb79059cda7.pdf",
+      "--attachment",
+      "dcae3557e51603e6e9cdb8d7696a3f17.pdf",
+      "--attachment",
+      "e184ae33c04195fa69ca2d6fac3177c0.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "ceef793d3dc2a9c25fd0684bb7f1e36cdf36d61d3a167ad6ee8bd7c720a0420c",
+    "research_hash": "174665cc803cce3ebab97f1563cccb9b070b33f5f53763b181c63d7eb15288c3",
+    "ground_truth_hash": "7e9b0ff7121a39d81cb55300b0fb16f67d1e9a57610d7d7d158c512f48702e94",
+    "output_hash": "b49d8d71eab8826133154c119f79773a63e892e3d86a2a8c9b833f221e8d5938",
+    "timestamp": "2026-07-23T23:21:01.510590+00:00",
+    "provenance_digest": "0835f6c3895b19472ea97a6ed41a8f83a961fb094ae89059c6d3f14f6894d05b"
+  }
+}

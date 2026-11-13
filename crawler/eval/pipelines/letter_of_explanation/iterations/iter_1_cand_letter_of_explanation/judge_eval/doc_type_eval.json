@@ -1,0 +1,206 @@
+{
+  "doc_type": "letter_of_explanation",
+  "case_evaluations": {
+    "0d6b65e8291756ef8e83f31caeeddfeb": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "1f121f987b78c16a25b391c698098edd": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "2a14f66215cc8f70c4cdaacab6d97efd": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "339df681bb5b1d873ef8920aa7941897": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "647090503f5fa3c971b1ddf4cfee6cef": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "830e9a3ccd2825171046e225f3a4ee8e": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "939fc849afc556fa64096d9beda03ceb": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.85,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "94315e1c3dc58eb42a9fab23dced3f12": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c8c3343ab8ccedd87a9d1caf9cfbbf7e": {
+      "grounding_accuracy": 0.5,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 0.9
+    },
+    "fff0df94dc4f84d0db0d79147c910f20": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "830e9a3ccd2825171046e225f3a4ee8e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Worker abstained 'not_in_corpus' despite the letter itself admitting the defect: 'I was unable to visit a notary public before submission ... submitting this signed statement directly.' This is the PFL-LETTER_O-02 unsworn-statement failure, observable entirely within the document. Same miss on sibling vector case 0d6b65e8 (identical unsworn-declaration text)."
+    },
+    {
+      "case_id": "339df681bb5b1d873ef8920aa7941897",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LETTER_O-01. The letter states the CAD 50,000 was 'gifted ... by my uncle, Robert Smith' and 'I do not have additional financial records from my uncle available at this time' — a self-evident unsubstantiated-gift defect. Worker abstained instead of flagging."
+    },
+    {
+      "case_id": "2a14f66215cc8f70c4cdaacab6d97efd",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LETTER_O-04 (misrepresentation-risk). Letter asserts 'never been refused a visa, permit, or entry to any country, nor ... overstayed', contradicting recorded visa history. Worker abstained. Same miss on sibling vector case fff0df94 with identical assertion text."
+    },
+    {
+      "case_id": "647090503f5fa3c971b1ddf4cfee6cef",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LETTER_O-03. Abstained on the scanned variant even though the sibling vector case c8c3343a (identical Quantum Solutions employment claim) was correctly flagged. Root cause appears to be failure to read scanned/image-only PDFs — every scanned variant abstained; only vector variants were reviewed."
+    },
+    {
+      "case_id": "c8c3343ab8ccedd87a9d1caf9cfbbf7e",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Reached the correct 'defective' verdict but fabricated the evidentiary basis: it asserts the LOE 'directly contradicts primary employer reference letters, CRA tax records (T4/NOA), and payroll records' — none of which are present in the single attached LOE. The salary/role/dates are grounded, but the contradicting third-party documents and their contents were invented rather than observed."
+    },
+    {
+      "case_id": "c8c3343ab8ccedd87a9d1caf9cfbbf7e",
+      "category": "blind_input",
+      "severity": "minor",
+      "description": "Output echoes internal failure-mode code 'PFL-LETTER_O-03' and cites 'Express Entry document review guidelines' mandating the flag. Not ground-truth leakage (the sibling scanned case with the same defect was abstained), but exposing internal taxonomy codes in a blind worker report is undesirable."
+    },
+    {
+      "case_id": "939fc849afc556fa64096d9beda03ceb",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Correct defect and verdict (PFL-LETTER_O-01). Minor overstatement: prose/basis assert absence of a 'formal notarized gift deed' while the document's boilerplate lists 'Gift Deed Affidavit' as attached. Substance aligns with ground truth (narrative admits donor records unavailable), so the conclusion holds, but the claim slightly overreaches the visible attachment list."
+    },
+    {
+      "case_id": "939fc849afc556fa64096d9beda03ceb",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Single citation 'express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024' with quote 'letter of explanation (where no birth certificate is available...)' is a genuine IRCC completeness-check phrase but only tangentially supports a proof-of-funds/gift defect; the cited authority does not directly ground the settlement-fund substantiation requirement being applied."
+    },
+    {
+      "case_id": "1f121f987b78c16a25b391c698098edd",
+      "category": "defect_recall",
+      "severity": "minor",
+      "description": "Correctly produced no false positive on a meets_requirements letter (notarized gift deed, donor 6-month statements, employment-gap explanation). However it abstained 'not_in_corpus' rather than affirming compliance, so specificity is good but the clean-pass was not positively confirmed. Same pattern on sibling vector case 94315e1c."
+    },
+    {
+      "case_id": "0d6b65e8291756ef8e83f31caeeddfeb",
+      "category": "pii",
+      "severity": "minor",
+      "description": "PII containment is strong across all cases: applicant identifiers, employer names, salaries and relationships remain confined to basis[]; claims and prose are name/number-free. Noted as a positive control observation, not a violation."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/letter_of_explanation.md",
+      "suggested_patch": "Add a mandatory rule: when the LOE body itself evidences a failure mode — e.g. an admission of missing notarization ('unable to visit a notary'), a statement that donor/financial source records are unavailable, an internal claim of never-refused visa/overstay, or a salary/employment assertion inconsistent with declared attachments — the worker MUST return a 'defective' verdict and flag the failure. Abstaining 'not_in_corpus' is prohibited for self-contained, document-observable defects; the corpus is only needed to cite the governing requirement, not to detect the defect."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Add an OCR fallback for scanned/image-only LOE PDFs. Root cause of 6/8 missed defects: every scanned variant abstained while the byte-identical-content vector variants were reviewed and (2/2 in-range) flagged. When embedded text extraction yields sparse/empty narrative content, run OCR on rendered pages before review so scanned submissions receive the same substantive analysis as native-text PDFs."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Prohibit asserting the existence or contents of corroborating documents (T4/NOA, employer reference letters, bank statements) that are not present in the reviewed attachment. Cross-document contradictions must be phrased conditionally ('the claim would require verification against ...') and grounded only in the attached document. Additionally, do not emit internal failure-mode taxonomy codes (e.g. PFL-LETTER_O-##) in worker report fields."
+    }
+  ],
+  "rationale": "The Worker (Gemini 3.6 Flash) exhibits a decisive read-path failure: all five scanned/image-only variants and one vector case defaulted to blanket 'not_in_corpus' abstention, missing 6 of 8 injected defects (O-01, O-02x2 via siblings, O-03, O-04x2) even though several defects are admitted verbatim in the letter body. It succeeded only on the two vector cases it actually read (939fc849 O-01, c8c3343a O-03) and correctly produced no false positives on the two clean meets_requirements letters — showing good specificity and genuine blind operation (siblings with identical injected defects were handled inconsistently, ruling out ground-truth leakage). Grounding is otherwise clean, but c8c3343a fabricated the contents of contradicting third-party documents absent from its single-PDF input, and 939fc849 mildly overstated the missing gift deed. PII containment is uniformly excellent — applicant facts stay in basis[], claims/prose remain PII-free. Primary remediation: OCR fallback for scanned PDFs plus an explicit directive to flag document-observable defects rather than abstaining.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "0d6b65e8291756ef8e83f31caeeddfeb.pdf",
+      "--attachment",
+      "1f121f987b78c16a25b391c698098edd.pdf",
+      "--attachment",
+      "2a14f66215cc8f70c4cdaacab6d97efd.pdf",
+      "--attachment",
+      "339df681bb5b1d873ef8920aa7941897.pdf",
+      "--attachment",
+      "647090503f5fa3c971b1ddf4cfee6cef.pdf",
+      "--attachment",
+      "830e9a3ccd2825171046e225f3a4ee8e.pdf",
+      "--attachment",
+      "939fc849afc556fa64096d9beda03ceb.pdf",
+      "--attachment",
+      "94315e1c3dc58eb42a9fab23dced3f12.pdf",
+      "--attachment",
+      "c8c3343ab8ccedd87a9d1caf9cfbbf7e.pdf",
+      "--attachment",
+      "fff0df94dc4f84d0db0d79147c910f20.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "5b9ee898566f5cd7614243277835e4615f0bd2f9e612c2a04849dd214bad19eb",
+    "research_hash": "4042b2574c1d437edf6f22aa7734d3c55bfc354428af1e8069d44fe8e23b157c",
+    "ground_truth_hash": "f62b036b569391d13224bcba228411d8eece5b1d551c48e42d87d8893ca5ebcd",
+    "output_hash": "2c49a23221012a17f6d20a787f381c5d3e0769f9f879e04b384d8763c5565116",
+    "timestamp": "2026-07-25T03:39:55.744097+00:00",
+    "provenance_digest": "72055619a34e220c316b115b39346c88eac0c4ee4536be8cb25dc65d09302cbd"
+  }
+}

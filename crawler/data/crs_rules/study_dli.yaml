@@ -1,0 +1,70 @@
+rows:
+  # ===================================================================== #
+  # STUDY-01 — the ONE grounded DLI designation row.
+  #
+  # Ships EXACTLY ONE row (`study.dli.designation`) on a DEDICATED inert
+  # factor-id namespace so the shipped credential-only study decider and the
+  # `additional_points` required grid stay behaviorally unchanged until Phase
+  # 44 explicitly consumes `study.dli.designation`. It grounds a verbatim
+  # CURRENT-STATUS span from the generated DLI family (chunk #000 of the
+  # University of Toronto per-DLI doc) — current designation status ONLY,
+  # never historical designation, never program-level PGWP eligibility.
+  #
+  # There is NO self-grounded freshness-bound row here (no `safe.dli_snapshot`
+  # max-age / bound / window): the operational max-age is Phase-44 config
+  # (SAFE-09 "grounded/config value"), never grounded from a project-authored
+  # doc, and `manifest.json` is never cited.
+  # ===================================================================== #
+  - rule_id: study.dli.designation
+    factor_group: additional_points        # FactorGroup Literal member (crawler/models/vault.py)
+    factor_ids: [study.dli.designation]     # DEDICATED inert namespace (NOT additional.study) — Phase 44 consumes it
+    check_type: admissibility
+    query: "University of Toronto designated learning institution DLI number"
+    selector:
+      family: dli                          # -> relpath LIKE 'dli/%' (searchindex.search family)
+      marker: "DLI number: O19332746152"   # verbatim non-volatile marker: deterministically pins chunk #000
+    claim_text: >-
+      University of Toronto is a designated learning institution identified by DLI
+      number O19332746152 in the current IRCC list (current status only).
+    citations:
+      - chunk_id: dli/O19332746152.md#000
+        quote: "DLI number: O19332746152"  # ASCII line — verbatim substring of the generated body (no Unicode folding)
+    machine_check:
+      kind: accepted_enum
+      field: dli_number
+      accepted_values:
+        - {value: "O19332746152", citation_index: 0}
+    volatility:
+      volatility: volatile
+      source_family: dli
+      crawl_date: "2026-07-16"
+
+  # R73(1) is a stable governing definition.  The applicant-facing completion
+  # tokens are inert review.study values; this row awards no points and carries
+  # no DLI/current-status implication.
+  - rule_id: study.r73_definition
+    factor_group: additional_points
+    factor_ids: [study.r73_definition]
+    check_type: admissibility
+    query: "Canadian educational credential completion Canadian program study training"
+    selector:
+      family: legislation-irpr
+      marker: "Canadian educational credential means any secondary school diploma"
+      require_title_contains: "Immigration and Refugee Protection Regulations"
+    claim_text: >-
+      IRPR subsection 73(1) defines a Canadian educational credential as a
+      recognized credential issued on completion of a Canadian program of study
+      or training.
+    citations:
+      - chunk_id: legislation-irpr/FullText.md#214
+        quote: "Canadian educational credential means any secondary school diploma or any post-secondary diploma, certificate or credential that is issued on the completion of a Canadian program of study or training at an educational or training institution that is recognized by the provincial authorities responsible for registering, accrediting, supervising and regulating such institutions."
+    machine_check:
+      kind: accepted_enum
+      field: study_status
+      accepted_values:
+        - {value: "completed", citation_index: 0}
+        - {value: "graduated", citation_index: 0}
+    volatility:
+      volatility: stable
+      source_family: legislation-irpr
+      crawl_date: "2026-06-10T23:27:33Z"

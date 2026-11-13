@@ -1,0 +1,58 @@
+{
+  "question": "Who needs a police certificate for this application?",
+  "claims": [
+    {
+      "id": "police-certificate-requirement",
+      "text": "Applicants and family members who are 18 years or older must provide a police certificate for every country stayed in during the last 10 years for 6 months in a row or longer.",
+      "citations": [
+        "guidance/police-certificates.md#002"
+      ],
+      "quote": "every country you (or a family member) stayed in during the last 10 years for **6 months in a row or longer**"
+    }
+  ],
+  "basis": [
+    "Case ID: 45955a9e84cd0c3dddd8f9f36bdb0c42",
+    "Document slot: police_certificate",
+    "Attached file: 45955a9e84cd0c3dddd8f9f36bdb0c42.pdf (1 page, generated via ReportLab)",
+    "Extracted document fields: Page count: 1; Encoding/Font: WinAnsiEncoding / Helvetica; Issuing authority: Unspecified canvas; Issue date: Unspecified; Jurisdiction: Unspecified",
+    "Mandatory 5-point defect checklist evaluation: 1. Past residence issuance: Cannot verify issue_date >= residence_end_date due to unspecified issue date; 2. Current residence currency: Cannot verify issue_date <= 6 months from eAPR submission; 3. Language & translation: English font structure detected; 4. Authority & jurisdiction: Authority level unspecified; 5. Residence coverage: Pending verification against applicant residence history."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "45955a9e84cd0c3dddd8f9f36bdb0c42",
+  "doc_type": "police_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "45955a9e84cd0c3dddd8f9f36bdb0c42.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9513332a5ec1d7cee0eb62c2fd41db6c80d1eb7b7915b3f2e42bea20f2780b1e",
+    "allowed_text_sha256": null,
+    "bundle_hash": "9404b5516960afee825c50e07ea24c25f585472bfc383e1e1fedeefe6733e6ed",
+    "prompt_hash": "7fb99efa77a4b18a4fda84caebcdbf8e40363cb9580a12c9e52bda89d2b2bcf4",
+    "output_hash": "9fac98c19f4ee94b51c707981707f0b95b69ee13516367ed7e391557af14630c",
+    "returncode": 0,
+    "timestamp": "2026-07-24T12:09:50.193709+00:00",
+    "provenance_digest": "3ccedd8f373d5a79e1b8a164cddda5613df3a24427d4852219e5dfc5e493e438"
+  }
+}

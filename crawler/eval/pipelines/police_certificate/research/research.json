@@ -1,0 +1,155 @@
+{
+  "doc_type": "police_certificate",
+  "timestamp": "2026-07-23T03:37:24.476000+00:00",
+  "summary": "Online research into IRCC Express Entry operational instructions and real-world failure modes for police certificates reveals five main refusal/PFL triggers: premature issuance prior to departing a foreign country, expired certificates for current residence, uncertified translations, submission of incorrect jurisdictional level certificates (state vs national), and omitted certificates for foreign residence stays exceeding six consecutive months.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:40:11.779764+00:00",
+    "duration_seconds": 178.597,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "bde9ba47b4e89dc3c971602e179e81f1b3f2bb1c0128a75eb82bd158a0a60592",
+    "raw_output_sha256": "cf680928f2fc7aaefcf411787df370112cb0789fe1bc913fd02ab6d51adf6b9b",
+    "returncode": 0,
+    "provenance_token": "75ffd55787f2ab2221742059eed580dcba1e975cf43746d62baebab43febcc90",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_fetch",
+      "web_search"
+    ],
+    "tool_call_count": 12,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-POLICE_C-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Police Certificate Issued Prior to Departure or End of Stay in Foreign Country",
+      "description": "Applicant submits a police certificate for a foreign country where they previously resided for 6 consecutive months or longer, but the certificate was issued BEFORE their final departure or period of residence ended. IRCC operational guidelines mandate that police clearance for past residences must be issued AFTER the applicant last lived there for 6 consecutive months or longer.",
+      "affected_fields": [
+        "issue_date",
+        "country_of_residence",
+        "residence_history_end_date"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/police-certificates.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "For any other country, the police certificate must be issued after the last time you stayed there for 6 months in a row or longer. If you submit a certificate issued before your last stay there, your application is incomplete.",
+      "remediation_hypothesis": "Obtain a newly issued police certificate from the foreign country with an issue date that falls on or after the applicant's final date of departure. If a PFL is issued or application rejected under Section 10 (R10), re-request the certificate from the country's police authority ensuring the date covers the entire stay.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POLICE_C-02",
+      "category": "pfl_validity_period_exceeded",
+      "severity": "critical",
+      "title": "Police Certificate Older Than 6 Months for Current Country of Residence",
+      "description": "Applicant submits a police clearance certificate for their current country of residence that was issued more than 6 months prior to the submission date of the electronic Application for Permanent Residence (eAPR). IRCC rules strictly enforce a 6-month currency window for current residence clearances.",
+      "affected_fields": [
+        "issue_date",
+        "eapr_submission_date",
+        "current_country_of_residence"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/police-certificates.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The police certificate for the country where you currently live must be issued no more than 6 months before the date you submit your application.",
+      "remediation_hypothesis": "Apply for a fresh police certificate from the local or national authority in the current country of residence immediately upon receiving an Invitation to Apply (ITA) to ensure the issue date is within 180 days of eAPR submission.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POLICE_C-03",
+      "category": "pfl_translation_defect",
+      "severity": "critical",
+      "title": "Police Certificate Submitted Without Certified Translation or Required Affidavit",
+      "description": "Applicant submits a non-English and non-French police certificate translated by themselves, an uncertified translator, or a family member, or submits a translation lacking a certified translator's seal/stamp or notarized affidavit. IRCC completeness checks require a certified translation by a recognized translation body member or an affidavit accompanying a non-certified translation.",
+      "affected_fields": [
+        "document_language",
+        "translation_certificate",
+        "translator_qualification"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If your certificate is in a language other than English or French, send the original police certificate along with a translation from a certified translator.",
+      "remediation_hypothesis": "Engage a certified translator (such as a member in good standing of a Canadian provincial translation association like ATIO/STIBC/OTTIAQ or certified international translation body). Upload the complete bundle: scanned original certificate in colour, certified translation with official stamp/signature, and translator declaration.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POLICE_C-04",
+      "category": "pfl_incorrect_document_type",
+      "severity": "critical",
+      "title": "Submission of Local or State Clearance Instead of Required Federal/National Certificate",
+      "description": "Applicant submits a local municipal or state-level police certificate (e.g., state police record check) for a country where IRCC explicitly demands a national/federal level criminal record check (e.g., FBI Identity History Summary check for the US, or Australian Federal Police check). Submitting lower-level jurisdiction documents leads to rejection for completeness.",
+      "affected_fields": [
+        "issuing_authority",
+        "jurisdiction_level",
+        "country_of_issuance"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how/united-states.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You can apply for an Identity History Summary Check (commonly known as a police certificate) directly from the FBI... IRCC may specify which certificates are required based on your residence history.",
+      "remediation_hypothesis": "Verify the exact country-specific IRCC requirements on Canada.ca ('How to get a police certificate') before applying. Ensure the certificate is issued by the mandated national authority (e.g., FBI CJIS for USA, AFP for Australia, NBI for Philippines) rather than local police departments.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-POLICE_C-05",
+      "category": "pfl_missing_mandatory_document",
+      "severity": "critical",
+      "title": "Omission of Police Certificate for Foreign Residence Exceeding 6 Consecutive Months",
+      "description": "Applicant lived in a foreign country for 6 consecutive months or longer since turning 18 within the past 10 years, but failed to upload a police certificate for that country. Unexplained omission causes application cancellation under R10 or triggers a Procedural Fairness Letter regarding completeness and inadmissibility.",
+      "affected_fields": [
+        "residence_history",
+        "country_list",
+        "police_certificate_uploaded"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/police-certificates.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Our online system will ask for a police certificate for: you and your family members who are 18 years or older and every country you (or a family member) stayed in during the last 10 years for 6 months in a row or longer.",
+      "remediation_hypothesis": "Audit 10-year personal residence history against entry/exit visa stamps. Request police certificates for all countries where stay met or exceeded 6 consecutive months. If unable to obtain before the 60-day ITA window expires, upload proof of application submission (payment receipt, delivery tracking) along with a detailed explanation letter to request IRCC extension.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

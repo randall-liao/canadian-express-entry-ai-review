@@ -1,0 +1,31 @@
+{
+  "as_of": "2026-07-16T18:08:26Z",
+  "family_sha256": "5d4a9d46bbff84646d5e54d8b0a04874682ef2e3514681df74164f85f8e87935",
+  "files": [
+    {
+      "content_sha256": "9695194af7b05576338c3e0f9b8e9b70d17450208b8b95f999f374f263080b76",
+      "file": "O110120953397.md"
+    },
+    {
+      "content_sha256": "b7f7204dd9636ec9de66e83c5c8c886628eff4db89894c198c66f625653816b6",
+      "file": "O112937696097.md"
+    },
+    {
+      "content_sha256": "12e278d6f9bc6df095fe675f92cd7ab28f8438fbe4b0817c691081fe4b01b052",
+      "file": "O153601941355.md"
+    },
+    {
+      "content_sha256": "fc452f5765b830a6b51f7a3132057a5f65551c3f22f45288f00265341a98d4f9",
+      "file": "O19305471522.md"
+    },
+    {
+      "content_sha256": "f0ef24f44e78a9488cad1d5209dff3c603563c41374d53cae053cc6433dfe884",
+      "file": "O19332746152.md"
+    }
+  ],
+  "generator": "ircc-dli-json",
+  "last_modified": "2026-07-16T18:08:26Z",
+  "note": "Status scope: current status only — this snapshot does NOT establish DLI designation during any prior study period, nor program-level PGWP eligibility.",
+  "source_url": "https://www.canada.ca/content/dam/ircc/documents/json/dli/dli-full-list.json",
+  "status_scope": "current-only"
+}

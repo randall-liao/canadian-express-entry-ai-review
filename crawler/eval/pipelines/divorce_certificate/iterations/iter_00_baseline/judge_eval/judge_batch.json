@@ -1,0 +1,202 @@
+{
+  "doc_type": "divorce_certificate",
+  "case_evaluations": {
+    "1fd061130e832b671a1250f5d601d4b0": {
+      "grounding_accuracy": 0.4,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "319138bf893b2b7253f6f3a0584477ca": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "34deced1d7ef322d64c8f85a2bddeadd": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "360b466384206dbbdaa0738f02ecab34": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4b106252dcc76348742dcf5c78a492e9": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "88f49a6ec80395e9d4f0095a76ed1d63": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "90c896810f6e19a09888182bdc1166d4": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "a3447f8d38a7a4cd081489a49fdef076": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d14bb2557dda55dc015adfb98b67a50b": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e9e70535927f430f79cb44134371f299": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "1fd061130e832b671a1250f5d601d4b0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DIVORCE-01 (Decree Nisi / interlocutory, not final) undetected. Document explicitly states decree_type 'Interlocutory Decree Nisi', marital_status 'Married (Decree Nisi Conditional)', and narrative warns 'This Decree Nisi does not finalize the dissolution... until a Decree Absolute is formally granted.' Worker returned generic policy only."
+    },
+    {
+      "case_id": "1fd061130e832b671a1250f5d601d4b0",
+      "category": "grounding",
+      "severity": "major",
+      "description": "basis[] asserts 'declared marital status is divorced', contradicting the document which states marital_status 'Married (Decree Nisi Conditional)'. Indicates the worker did not read document fields and invented civil status."
+    },
+    {
+      "case_id": "34deced1d7ef322d64c8f85a2bddeadd",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DIVORCE-01 (Decree Nisi, not final Decree Absolute) undetected. Scanned sibling of 1fd061; same Decree Nisi / conditional-marital-status content ignored."
+    },
+    {
+      "case_id": "4b106252dcc76348742dcf5c78a492e9",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DIVORCE-02 (uncertified copy) undetected. Document shows court_seal_present False, judicial_signature N/A, certified_copy_status 'Uncertified Photocopy', issuing_authority 'Unverified Court Printout', with narrative 'Uncertified copies are not valid legal proof of divorce.' Worker gave generic policy."
+    },
+    {
+      "case_id": "319138bf893b2b7253f6f3a0584477ca",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DIVORCE-02 (uncertified copy, no seal/signature) undetected. Scanned sibling of 4b1062; identical authenticity defects ignored."
+    },
+    {
+      "case_id": "d14bb2557dda55dc015adfb98b67a50b",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DIVORCE-03 (untranslated foreign decree) undetected. Document is Spanish (document_language Spanish, translation_certified False, translator_affidavit null), narrative confirms no certified English translation. Worker did not flag the translation non-compliance."
+    },
+    {
+      "case_id": "e9e70535927f430f79cb44134371f299",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DIVORCE-03 (untranslated Spanish decree) undetected. Scanned sibling of d14bb2; missing certified translation ignored."
+    },
+    {
+      "case_id": "88f49a6ec80395e9d4f0095a76ed1d63",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DIVORCE-04 (invalid jurisdiction / no residency nexus) undetected. Document shows Dominican Republic ex parte decree, spouse_residency_duration '0 days', foreign_divorce_validity 'Invalid - Lacks Residency Nexus', narrative 'JURISDICTIONAL DEFECT... rendering the dissolution legally invalid.' Worker returned generic policy."
+    },
+    {
+      "case_id": "a3447f8d38a7a4cd081489a49fdef076",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Injected defect PFL-DIVORCE-04 (foreign divorce lacking residency nexus) undetected. Scanned sibling of 88f49a; invalid jurisdiction defect ignored."
+    },
+    {
+      "case_id": "90c896810f6e19a09888182bdc1166d4",
+      "category": "defect_recall",
+      "severity": "minor",
+      "description": "Clean case (Final Decree Absolute, certified, valid US decree). No defect present and none falsely flagged; however the worker rendered no verdict, only a generic policy answer, so the pass is incidental rather than evidence-based."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/divorce_certificate.md",
+      "suggested_patch": "Require the agent to move beyond policy retrieval and emit a per-document verdict (meets_requirements|defective) derived from the document's own fields. Mandate explicit checks of: decree_type/marital_status (reject Decree Nisi / interlocutory / conditional statuses — require Final Decree Absolute), certified_copy_status + court_seal_present + judicial_signature (reject uncertified/no-seal/no-signature printouts), document_language + translation_certified + translator_affidavit (reject non-English/French decrees lacking certified translation), and jurisdiction_country + spouse_residency_duration + foreign_divorce_validity (reject foreign decrees with no 12-month residency nexus)."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a directive that document-review questions phrased as 'what document is required' must still trigger a full defect scan of the attached PDF, not a generic corpus answer. The agent must read every rendered field and the narrative/notes page, and surface any field or narrative that self-declares invalidity (e.g., 'does not finalize', 'Uncertified copies are not valid', 'JURISDICTIONAL DEFECT') as a blocking finding placed in claims/prose, keeping applicant PII confined to basis[]."
+    }
+  ],
+  "rationale": "The Gemini 3.6 Flash worker systematically treated all 10 cases as a policy-retrieval question ('what document is required when divorced') and returned a near-identical generic answer citing the completeness-check corpus, without ever evaluating the attached documents. Consequently every one of the 8 injected defects (Decree Nisi x2, uncertified copy x2, untranslated Spanish decree x2, invalid Dominican jurisdiction x2) went undetected — defect_recall 0.0 across all defective cases, despite each PDF explicitly self-declaring its defect in both fields and narrative notes. The 2 clean sibling cases (90c896, 360b46) 'pass' only incidentally since no defect existed and none was falsely raised. Citation grounding is acceptable: the corpus quote about the legal separation agreement and the fuller bullet quote in 88f49a are consistent with genuine IRCC guidance, so grounding_accuracy and citation_exactness remain high — the exception is 1fd061, whose basis falsely asserts 'marital status is divorced' when the document states 'Married (Decree Nisi Conditional)', an invented civil status. PII containment is clean throughout: claims/prose contain no applicant names, case numbers, or dates, and applicant facts are confined to basis[]. No ground-truth leakage is present, so blind_input_compliance is full. The dominant, critical failure is defect detection: the worker must be forced to analyze document fields and render evidence-based verdicts rather than emit boilerplate requirements.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "1fd061130e832b671a1250f5d601d4b0.pdf",
+      "--attachment",
+      "319138bf893b2b7253f6f3a0584477ca.pdf",
+      "--attachment",
+      "34deced1d7ef322d64c8f85a2bddeadd.pdf",
+      "--attachment",
+      "360b466384206dbbdaa0738f02ecab34.pdf",
+      "--attachment",
+      "4b106252dcc76348742dcf5c78a492e9.pdf",
+      "--attachment",
+      "88f49a6ec80395e9d4f0095a76ed1d63.pdf",
+      "--attachment",
+      "90c896810f6e19a09888182bdc1166d4.pdf",
+      "--attachment",
+      "a3447f8d38a7a4cd081489a49fdef076.pdf",
+      "--attachment",
+      "d14bb2557dda55dc015adfb98b67a50b.pdf",
+      "--attachment",
+      "e9e70535927f430f79cb44134371f299.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "44d48824310bf50e1d64a61735ed53a2fe22b23308e53a9889a02ff05169b31c",
+    "research_hash": "15170feed2eb1245b456903c8a01a60373bac57d6cf8ea309d05308556f0a586",
+    "ground_truth_hash": "fd4b41fecbf8e41624432ce19156b9b5995dbba02f2a4ee5b661edf9bc908d8e",
+    "output_hash": "a99186be725f2970c299bc8e07f0722b53e31fdf33afc40f7e9501df6dfdd98a",
+    "timestamp": "2026-07-23T23:02:12.682812+00:00",
+    "provenance_digest": "0750dad49bb5ca91750b9d3864b58f962f417cc80602d1502e19d220516e17f5"
+  }
+}

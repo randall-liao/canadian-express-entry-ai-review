@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "Document uploaded in adoption_certificate slot for case 095b78d1af850e5e35ab8da981e2d0e1 satisfies the requirement for an adopted dependent child."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "095b78d1af850e5e35ab8da981e2d0e1",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "095b78d1af850e5e35ab8da981e2d0e1.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "8c580b6acd52747a4963c03e5a236e504379d234d11dd9b373ba4906c9026278",
+    "allowed_text_sha256": null,
+    "bundle_hash": "129ef955fe8dac19cf9f98b704c507cd09fe2678d3dff76a6e07cd81e56a972f",
+    "prompt_hash": "68869bb91d93726835ac0cdf632daa920a2a808d4c0a8b5390ab68fb82de3a7e",
+    "output_hash": "7e7432af1af4c1f33f95469f82b34a78c1d14c6ea627cf48d2506a0556e61bd0",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:27:20.939521+00:00",
+    "provenance_digest": "d42a0976e4a1fb5f1609fb6c0a79ad4ad0470dbb9a4851f8847f2cb874f23fb7"
+  }
+}

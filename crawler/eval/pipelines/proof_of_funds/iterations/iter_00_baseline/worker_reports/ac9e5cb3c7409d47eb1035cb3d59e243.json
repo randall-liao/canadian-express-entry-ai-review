@@ -1,0 +1,55 @@
+{
+  "question": "What must the applicant's settlement funds satisfy?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "settlement funds must be legally accessible, not borrowed, not real-property equity",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "you can't use equity on real property as proof of settlement funds"
+    }
+  ],
+  "basis": [
+    "Program applicability and applicant-specific funds stay in basis: FSWC and FSTC candidates are required to meet the settlement funds requirement unless currently authorized to work in Canada and holding a qualifying offer of arranged employment; CEC candidates are exempt.",
+    "Opaque Case ID: ac9e5cb3c7409d47eb1035cb3d59e243, Upload-Slot Type: proof_of_funds."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "ac9e5cb3c7409d47eb1035cb3d59e243",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ac9e5cb3c7409d47eb1035cb3d59e243.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "051a3a4e5d9f9b6adc7687a894145d6198e61e7b3e4778cbc55b5fc27238f17c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "08401b80e3700210a5b3546e3c49ff29c36936bb0a3094fc5d8e23b18f1b5827",
+    "prompt_hash": "305a3caa0ea449b748b4846c3519a3e8ecd3f8c7ee96d56d458a06d797b57819",
+    "output_hash": "dc4ba674429f637ef7e8a316b922fe05e96c7c0476484a2bb484904c2590f76f",
+    "returncode": 0,
+    "timestamp": "2026-07-23T15:54:54.529457+00:00",
+    "provenance_digest": "a754ae0071bd06387729ca7462bef6331fde511af1c99d90742dbe8ea5721fac"
+  }
+}

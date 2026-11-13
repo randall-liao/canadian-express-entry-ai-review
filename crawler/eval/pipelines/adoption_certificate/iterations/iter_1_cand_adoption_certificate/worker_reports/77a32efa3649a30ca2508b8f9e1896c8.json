@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "Document submitted for review under upload-slot type adoption_certificate for case 77a32efa3649a30ca2508b8f9e1896c8."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "77a32efa3649a30ca2508b8f9e1896c8",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "77a32efa3649a30ca2508b8f9e1896c8.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "accd62922b467fbf695fae2c55de211b47e069f5332f42ab4291f0f75f9e27ff",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "c8adbe2be997f32cee278e3c7eaaad6a9fee3a7dc5f0a7749b7a1d5c95ef0648",
+    "output_hash": "71622504fdf2e21f871299539bff62bb5b70aa44e64635eb30b21d9fcd37db18",
+    "returncode": 0,
+    "timestamp": "2026-07-24T16:02:59.153392+00:00",
+    "provenance_digest": "d8b946a6c2d4a6e1931855082a70ad707ce8c4f5ca1174844de0bebaa1df436e"
+  }
+}

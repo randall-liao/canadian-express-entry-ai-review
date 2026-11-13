@@ -1,0 +1,51 @@
+{
+  "question": "How must a foreign educational credential be assessed?",
+  "claims": [],
+  "basis": [
+    "Educational Credential Assessment document (case ID: 247b21f5e0e8e32e24f9a488989ffc60) submitted under upload-slot type educational_credential_assessment: Foreign educational credential is from an unaccredited institution and lacks recognized accreditation; Canadian educational equivalency cannot be established.",
+    "affected_fields: foreign_institution_name, credential_level, canadian_equivalency_summary"
+  ],
+  "abstentions": [
+    {
+      "text": "Educational Credential Assessment document defect: foreign educational credential is from an unaccredited institution or lacks Canadian educational equivalency.",
+      "reason": "defective_document"
+    }
+  ],
+  "prose": "",
+  "case_id": "247b21f5e0e8e32e24f9a488989ffc60",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "247b21f5e0e8e32e24f9a488989ffc60.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "75a9b9060bff18ff9643c5a0ac06adf2f5e89b2b4036f36b0f5275f07fae20d8",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e28d80dcf0f63f2981fd09c4f47946e9b1e830f1c429c5fc3d124e3b107720b1",
+    "prompt_hash": "ee8051b6641fde1d5ad5c187bd9a880fb460b34386bbdf79a841eea2e8797239",
+    "output_hash": "105b88b6ee484c47ce2f9f53e86ae08db067668ce24339d39a952160745f298a",
+    "returncode": 0,
+    "timestamp": "2026-07-24T06:58:10.152403+00:00",
+    "provenance_digest": "1461a520dfaf416cc3659fea0bf92c72ae73ed349909aa20cfc2944c6fdb73ce"
+  }
+}

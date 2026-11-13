@@ -1,0 +1,54 @@
+{
+  "question": "When must an applicant provide a Use of a Representative form?",
+  "claims": [
+    {
+      "id": "representative-form",
+      "text": "The Use of a Representative form (IMM 5476) is requested if the applicant indicates they are using a representative or if a consultant completes an application on behalf of the applicant through the consultant portal.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#039"
+      ],
+      "quote": "The document is requested only if the applicant indicates they are using a representative or if a consultant completes an application on behalf of the applicant through the consultant portal."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a Use of a Representative form (IMM 5476) in slot use_of_representative for case 2365e3329599e9e3dd008b951734d9ac."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "2365e3329599e9e3dd008b951734d9ac",
+  "doc_type": "use_of_representative",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "2365e3329599e9e3dd008b951734d9ac.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "b20f4d2448c356b8fc06df3a19d1b2cbf873a7e50b3434e49d34fb971c1378c5",
+    "allowed_text_sha256": null,
+    "bundle_hash": "a95acd55399cd66bce75637140f17d2e17df7ab2af54a46853278ac5f0cb1145",
+    "prompt_hash": "5b72a1daf5a6cb7f1e0b323c5f77a83e1060c1d6ee377ba42b7a6d92766f37c6",
+    "output_hash": "7330b510e85661b9829c26e03965efacd6afa8de2a76b6f851bcae3e2535dd4f",
+    "returncode": 0,
+    "timestamp": "2026-07-25T01:16:58.895908+00:00",
+    "provenance_digest": "dc3f145c91d4f0fd2045e1ed6de5271e03c940019206ba85003a00cba90ea8e2"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "question": "What must an applicant provide to claim a relative in Canada for points?",
+  "claims": [
+    {
+      "id": "proof-of-status",
+      "text": "A copy of both sides of the family member's Canadian citizenship document, Canadian birth certificate and/or permanent resident card must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "A copy of **both** sides of the family member's Canadian citizenship document, Canadian birth certificate and/or permanent resident card must be provided."
+    },
+    {
+      "id": "evidence-of-residence",
+      "text": "Evidence that the family member currently resides in Canada must be provided (a residential lease, mortgage documents, utility bills, etc.).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Evidence that the family member currently resides in Canada must be provided (a residential lease, mortgage documents, utility bills, etc.)."
+    },
+    {
+      "id": "proof-of-relationship",
+      "text": "Proof of the relationship of the applicant or the accompanying spouse or common-law partner to the family member must also be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "Proof of the relationship of the applicant or the accompanying spouse or common-law partner to the family member must also be provided (e.g., a birth certificate, an official document naming the applicant as a relative, a copy of the inside back cover of the relative’s passport showing the relative’s parents’ marriage certificate, legal adoption documents and any other documents that prove or describe the relationship)."
+    }
+  ],
+  "basis": [
+    "The applicant or accompanying spouse indicates a relative in Canada who is a Canadian citizen or permanent resident to claim adaptability or additional CRS points."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "5c3713e834776dec91df152cdd87d694",
+  "doc_type": "relative_in_canada",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "5c3713e834776dec91df152cdd87d694.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "5b04c51f95f31f28543f1e1ad667023fbfb193fed60ae93f8f36cc64305378d3",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2f1f40f094cef106be7456e66355dedb2f4bfb3f04e122aa516f1b82e15a9223",
+    "prompt_hash": "ff48c47cb218ee9b1eab6319d70f98396d67752975389f3342e056aeb1deda46",
+    "output_hash": "cd4928559b17c8e219a3db3c8b8112b412f6014ce86a2b3fea217ed1475dc441",
+    "returncode": 0,
+    "timestamp": "2026-07-23T18:28:45.374188+00:00",
+    "provenance_digest": "3bc1af95f1a2333081c522880008d0e5d1eeffa185ee7108ce6ddeeacf4d90e0"
+  }
+}

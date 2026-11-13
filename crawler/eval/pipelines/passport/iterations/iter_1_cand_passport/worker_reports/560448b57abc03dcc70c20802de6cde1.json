@@ -1,0 +1,54 @@
+{
+  "question": "What passport or travel document copy must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "passport-bio-page",
+      "text": "Express Entry applications require a clear and legible copy of the biographical data page of a passport or travel document.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#016"
+      ],
+      "quote": "* A clear and legible copy of the biographical data page of a passport or travel document must be provided."
+    }
+  ],
+  "basis": [
+    "Document upload slot type is passport for opaque case ID 560448b57abc03dcc70c20802de6cde1. Field verification checks (R10 completeness, profile consistency, validity window, statutory alignment, and document capacity) confirm a clear, legible biographical data page with valid fields and no document defects."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "560448b57abc03dcc70c20802de6cde1",
+  "doc_type": "passport",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "560448b57abc03dcc70c20802de6cde1.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e4fdc564f416ef72969dd7bc33f4e756de730324f805fd67448dbd3e923a6c0d",
+    "allowed_text_sha256": null,
+    "bundle_hash": "bc3bc5bb0bc01cc3915ba835b515833df93b2601b5bc3edd8a8906aec1db7832",
+    "prompt_hash": "7435ce679f13b8b15e8c10ee8aff15b210541be378cb2f23ee2a5dede4ebffce",
+    "output_hash": "bf81235932746dfad73c64b9f658274cf607ec5223eac117d16580d3ceea5587",
+    "returncode": 0,
+    "timestamp": "2026-07-24T11:36:34.654996+00:00",
+    "provenance_digest": "3e2889e87083496f4dbbeda93331de72866a0944bcaf34012617d6f95ccbdba9"
+  }
+}

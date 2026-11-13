@@ -1,0 +1,188 @@
+{
+  "doc_type": "language_test",
+  "case_evaluations": {
+    "121b0172fe512b84282a552552e9954b": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "44fb9983f21ca0cf7eae8f3bc1e4a357": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4de47fe931f148ccc9db31540c4494d0": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "56153966a2e4f647dbfb9c2293705fd0": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6a0d115a74ef3abc8ea910b979316fb0": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "798d8e90554521d6d1dc68e184b0079d": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "925877636c7160d8f84a1977761d133f": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "bb591d2d1c871f262baf0440fcf1f3b6": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ce799711157fdcc498337972abeb7199": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "fa85bcee6564c40d67c9cdffc9a4bc9b": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "4de47fe931f148ccc9db31540c4494d0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-03. Narrative explicitly states 'Compréhension écrite 150 (CLB 5)' and 'Overall language proficiency evaluation determined to be CLB 5 based on the lowest subscore threshold', below the CLB 7 program minimum. Worker's scanned sibling (121b0172) caught this exact defect; the vector variant was passed with only a generic claim."
+    },
+    {
+      "case_id": "798d8e90554521d6d1dc68e184b0079d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-01. Narrative reads 'Note: Results expired on January 10, 2025, prior to the submission date of the application' (test 2023-01-10). Worker's vector sibling (56153966) detected the expiry; the scanned variant produced only a generic claim with no defect."
+    },
+    {
+      "case_id": "ce799711157fdcc498337972abeb7199",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-02. Document shows zeroed Registration No 0000000000000000, TRF 00CA000000TAY000X, PIN 00000000 and narrative 'returned no matching candidate record in the IELTS Verification Service database'. Worker's scanned sibling (6a0d115a) flagged misrepresentation in detail; the vector variant missed it entirely."
+    },
+    {
+      "case_id": "925877636c7160d8f84a1977761d133f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-04. Title 'OFFICIAL IELTS ACADEMIC LANGUAGE TEST REPORT FORM' and narrative 'submission contains an Academic stream module rather than the required General Training stream' make the unapproved-stream defect explicit. Worker instead asserted 'Verified language test result document', an unsupported positive claim."
+    },
+    {
+      "case_id": "bb591d2d1c871f262baf0440fcf1f3b6",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-LANGUAGE-04. IELTS Academic stream explicitly identified in title and narrative as not accepted for economic immigration; worker produced only a generic claim with no defect flag. Both PFL-04 siblings (this and 925877636) were missed."
+    },
+    {
+      "case_id": "925877636c7160d8f84a1977761d133f",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis calls the document 'Verified language test result document submitted for Express Entry' — a positive verification assertion contradicting the document's own Academic-stream disqualifier. Overclaims validity of a defective artifact."
+    },
+    {
+      "case_id": "6a0d115a74ef3abc8ea910b979316fb0",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Reported per-skill scores 'Listening 8.0, Reading 8.0, Writing 8.0, Speaking 8.0' but the visible score table shows 8.5/8.0/7.5/7.5 (only overall band 8.0 in narrative). Individual skill values were flattened/invented, though the core PFL-LANGUAGE-02 defect was correctly caught."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/language_test.md",
+      "suggested_patch": "Add a mandatory defect checklist the Worker must evaluate on EVERY language_test document before emitting a verdict: (1) validity — compute expiry vs submission and flag if expired/>2yr; (2) test stream — flag IELTS Academic, IELTS One Skill Retake, TOEFL or any non-approved variant (only CELPIP-General, IELTS General Training, PTE Core, TEF Canada, TCF Canada accepted); (3) verifiability — flag zeroed/placeholder or unverifiable Registration/TRF/PIN values; (4) subscores — map each of the 4 skill scores to CLB and flag any below the program minimum (e.g., CLB 7 for FSWP/CEC), treating the narrative as authoritative when it conflicts with the summary table. Each check must produce an explicit pass/fail in basis[]."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Direct Workers to always fully read the 'Narrative Statements / Detailed Notes' block, not just the header/score table. In these documents the injected defect is stated verbatim in the narrative (expiry notice, 'Academic stream rather than required General Training', zeroed TRF/verification failure, 'CLB 5 based on lowest subscore'). Never emit 'Verified' or a meets-requirements framing without reconciling the narrative against the table."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a determinism/consistency directive: identical semantic content rendered as scanned vs vector must yield the same verdict. Require re-reading rendered text at higher fidelity for scanned variants and re-running the full defect checklist, since this Worker caught defects in one sibling variant while missing the same defect in the paired variant for 3 of 4 defect classes."
+    }
+  ],
+  "rationale": "The Worker (Gemini 3.6 Flash) showed strong citation exactness (uniform, correct guidance/language-test.md#001 quote), clean PII containment (applicant names/IDs/scores confined to basis[], claims and prose generic), and no blind-input leakage — proven by the fact that it MISSED 5 defects it would have caught with ground-truth access. Both meets_requirements cases (44fb9983, fa85bcee) were correctly passed with no false positives. However, defect recall was poor and strikingly inconsistent across scanned/vector sibling pairs: it caught PFL-03 (121b0172), PFL-01 (56153966), and PFL-02 (6a0d115a) in one variant but missed the identical defect in the paired variant (4de47fe9, 798d8e90, ce799711), and missed PFL-04 in BOTH variants (925877636, bb591d2d) despite the disqualifier being stated verbatim in the narrative. Net: only 3 of 8 defective documents detected. Grounding was deducted for one 'Verified' overclaim on a defective doc (925877636) and one instance of flattened/invented per-skill scores (6a0d115a). Primary remediation is a mandatory, narrative-inclusive defect checklist enforced on every document.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "121b0172fe512b84282a552552e9954b.pdf",
+      "--attachment",
+      "44fb9983f21ca0cf7eae8f3bc1e4a357.pdf",
+      "--attachment",
+      "4de47fe931f148ccc9db31540c4494d0.pdf",
+      "--attachment",
+      "56153966a2e4f647dbfb9c2293705fd0.pdf",
+      "--attachment",
+      "6a0d115a74ef3abc8ea910b979316fb0.pdf",
+      "--attachment",
+      "798d8e90554521d6d1dc68e184b0079d.pdf",
+      "--attachment",
+      "925877636c7160d8f84a1977761d133f.pdf",
+      "--attachment",
+      "bb591d2d1c871f262baf0440fcf1f3b6.pdf",
+      "--attachment",
+      "ce799711157fdcc498337972abeb7199.pdf",
+      "--attachment",
+      "fa85bcee6564c40d67c9cdffc9a4bc9b.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "1a5682f374a14a67103d1c515b22b3e3a194179d758dedf691bd737cd4908bc0",
+    "research_hash": "6bfcc63237b3fce0121524a9e6f932a47a14e54d33af569e60a704d335bf99ec",
+    "ground_truth_hash": "1ce7a8e22372c6583b47873b95ad48ad380b2f4dd582d47c7967f4897b897586",
+    "output_hash": "5a4e396e106353959848c58cc42e4926d9a0dd9116947551034ab2b0a8fbe3f6",
+    "timestamp": "2026-07-25T03:32:22.604970+00:00",
+    "provenance_digest": "71e43f0d121f5e6ba9b9c9eb9d2eb461f29e67cc3ec96fae3a513f2d0ec34b46"
+  }
+}

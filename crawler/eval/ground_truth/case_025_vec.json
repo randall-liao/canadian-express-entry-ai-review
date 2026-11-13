@@ -1,0 +1,18 @@
+{
+  "case_id": "case_025_vec",
+  "doc_type": "police_certificate",
+  "variant": "vector",
+  "file_name": "case_025_vec.pdf",
+  "fields": {
+    "country": "Canada",
+    "issue_date": "2024-04-01",
+    "subject_name": "Jane Doe",
+    "is_clear": true,
+    "offenses": [],
+    "residence_start_date": "2015-01-01",
+    "residence_end_date": "2024-03-31"
+  },
+  "expected_verdict": "meets_requirements",
+  "injected_defects": [],
+  "must_abstain": false
+}

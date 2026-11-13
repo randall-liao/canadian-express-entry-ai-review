@@ -1,0 +1,86 @@
+# personal.example/crs-profile.example.yaml — SYNTHETIC example CRS factor breakdown
+# (Phase 29, VAULT-01).
+#
+# THIS FILE IS TRACKED and contains ZERO real personal data. Every value below is a
+# deliberate, illustrative placeholder — no real name, UCI, application number,
+# passport number, or identity-tied score. It exists so the vault's
+# import_profile_yaml() has a safe example to load and so the Plan-04 publish-safety
+# self-scan can assert no CRS PII ever enters a tracked file.
+#
+# Your REAL factor breakdown lives in the git-ignored candidate vault
+# (personal/candidates/<id>/vault.sqlite, default $PR_PERSONAL_DIR=./personal/).
+# Load this example with:
+#     corpus-crawler vault profile set --factor-file personal.example/crs-profile.example.yaml
+# then re-run it against your own private copy filled with true values.
+#
+# Schema: a list under `factors:`. Each entry maps to one crs_profile_factors row:
+#   factor_id      — the CANONICAL dotted grid id the auditor recognises (must be a
+#                    member of auditors.FULL_GRID_FACTORS, e.g. `core.language.first`).
+#                    An id NOT on the grid audits as N/A `not_claimed` and demonstrates
+#                    nothing — so these are pinned to the live grid by
+#                    crawler/tests/test_example_profile_pinned.py.
+#   factor_group   — one of: core_human_capital | spouse_common_law |
+#                    skill_transferability | additional_points (must match
+#                    auditors.FACTOR_GROUP for the dotted id).
+#   claimed_points — the CRS sub-score you believe you claimed (illustrative here)
+#   claimed_level  — optional level/label (e.g. a CLB band or credential tier)
+#   claimed_value  — arbitrary structured detail (stored as JSON)
+#
+# What the auditor does with the example: a CLAIMED factor with no confirmed
+# audit-eligible evidence audits as GAP/AT-RISK — an *applicable* verdict, not N/A —
+# because SUBSTANTIATED additionally requires confirmed, quality-ok, corpus-grounded
+# evidence (which a bare profile has none of). A single-applicant profile also
+# legitimately audits a spouse factor as N/A `not_applicable`. So the example
+# illustrates the real audited grid, not a wall of N/A.
+#
+# The four groups below are all represented so the example exercises every branch.
+
+factors:
+  # --- core_human_capital ---------------------------------------------------
+  - factor_id: core.age
+    factor_group: core_human_capital
+    claimed_points: 100
+    claimed_level: null
+    claimed_value:
+      age_years: 29
+
+  - factor_id: core.education
+    factor_group: core_human_capital
+    claimed_points: 120
+    claimed_level: bachelors
+    claimed_value:
+      credential: bachelors_degree
+
+  - factor_id: core.language.first
+    factor_group: core_human_capital
+    claimed_points: 124
+    claimed_level: CLB9
+    claimed_value:
+      listening: CLB9
+      reading: CLB9
+      writing: CLB9
+      speaking: CLB9
+
+  # --- spouse_common_law ----------------------------------------------------
+  - factor_id: spouse.education
+    factor_group: spouse_common_law
+    claimed_points: 10
+    claimed_level: bachelors
+    claimed_value:
+      credential: bachelors_degree
+
+  # --- skill_transferability ------------------------------------------------
+  - factor_id: transfer.education_language
+    factor_group: skill_transferability
+    claimed_points: 50
+    claimed_level: null
+    claimed_value:
+      combination: education_plus_language
+
+  # --- additional_points ----------------------------------------------------
+  - factor_id: additional.nomination
+    factor_group: additional_points
+    claimed_points: 0
+    claimed_level: null
+    claimed_value:
+      has_nomination: false

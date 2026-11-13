@@ -1,0 +1,54 @@
+{
+  "question": "What digital photos must an Express Entry applicant provide, and does the submitted document meet IRCC specifications?",
+  "claims": [
+    {
+      "id": "digital-photos-spec",
+      "text": "Digital photos meeting IRCC's permanent resident card photo specifications must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#061"
+      ],
+      "quote": "Digital photos meeting [IRCC’s permanent resident card photo specifications (PDF, 614.24 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/information/applications/guides/pdf/5445eb-e.pdf) must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a 2-page digital photo document (case ID: 567864bdadffc58ba6391652a353fb8f) containing embedded image objects measuring 2562 x 3311 pixels on page 1 and 2590 x 3333 pixels on page 2."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "567864bdadffc58ba6391652a353fb8f",
+  "doc_type": "digital_photo",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "567864bdadffc58ba6391652a353fb8f.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9f0944d9e28ad26ee2f91abdc06a43ac6516da4f06aeb2fcb0b3e5dd25044579",
+    "allowed_text_sha256": null,
+    "bundle_hash": "52fe2a617ece78ce90df802cc559f61f4dd05488aa67e934f752f89c23fee48f",
+    "prompt_hash": "d66d9ff86711e4f1bc5c5174278ed234f3c295eb805539c245e0e63f5b590b5f",
+    "output_hash": "d20e1742940cc5e7f51d719c7cd321af2807b43706a2322395ccf2d7bb2fbdc9",
+    "returncode": 0,
+    "timestamp": "2026-07-24T05:22:17.942626+00:00",
+    "provenance_digest": "8cd45ede79486301e275eef7c7e11594adc4bd7b54ca64796b79640f24d6c53b"
+  }
+}

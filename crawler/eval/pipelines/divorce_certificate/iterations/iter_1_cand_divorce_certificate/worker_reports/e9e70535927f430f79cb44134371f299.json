@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "When an applicant's marital status is divorced, a copy of the divorce order, certificate of divorce, or legal certificate issued where the divorce took place must be provided, along with a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "Document upload slot type is divorce_certificate for case e9e70535927f430f79cb44134371f299."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e9e70535927f430f79cb44134371f299",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e9e70535927f430f79cb44134371f299.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2b29ae86dc857e76e869f444faa78b67434d81f560265ef2d32035102517cd2e",
+    "allowed_text_sha256": null,
+    "bundle_hash": "96adfcfc94df22d419234f5a4c06d54f1588f3bdd17b3529f840f869e8cf6da9",
+    "prompt_hash": "25705a74a1825ef4c6d2e73341865425434037d990eb7e9b982ecf0fd68f506f",
+    "output_hash": "5ea3ed95142cfda2c120c17fb1a814c50b52591d195c5a22af6629ab3a2a234d",
+    "returncode": 0,
+    "timestamp": "2026-07-24T06:32:14.782684+00:00",
+    "provenance_digest": "40d0756d7a3ec5c99004f7993a1ad095c0cb78638f7d8a1d1317361e61a3f4ca"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "question": "What birth document is required for an applicant's dependent children?",
+  "claims": [
+    {
+      "id": "birth-cert-options",
+      "text": "A birth certificate, an equivalent document from the birth country, or a letter of explanation (where no birth certificate is available in the country) is required if the applicant identifies dependent children.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024"
+      ],
+      "quote": "* This document is required only if the applicant identifies dependent children.\n  * The document must be one of the following: \n    * birth certificate;\n    * equivalent document from the birth country; or\n    * letter of explanation (where no birth certificate is available in the country)."
+    },
+    {
+      "id": "birth-cert-defect-untranslated",
+      "text": "The provided birth certificate is defective because it is an untranslated foreign-language document (Spanish) lacking an official certified translation and translator affidavit (deficient fields: document_language, translation_certification, translator_affidavit).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024"
+      ],
+      "quote": "* This document is required only if the applicant identifies dependent children.\n  * The document must be one of the following: \n    * birth certificate;\n    * equivalent document from the birth country; or\n    * letter of explanation (where no birth certificate is available in the country)."
+    }
+  ],
+  "basis": [
+    "The applicant identified dependent children for opaque case ID ad9e9d39b2c7ae1d67091d5a214d450d.",
+    "The attached document ad9e9d39b2c7ae1d67091d5a214d450d.pdf is an untranslated Spanish-language birth certificate record submitted without a certified translation or translator affidavit."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "ad9e9d39b2c7ae1d67091d5a214d450d",
+  "doc_type": "birth_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ad9e9d39b2c7ae1d67091d5a214d450d.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "8a0ff88d14a2633f93d179437793e33e7b67e61b194b86147e56a72a149fa929",
+    "allowed_text_sha256": null,
+    "bundle_hash": "4dd7349c189f49d36a24d6a0cdcdeca9345491cc49c85f9d2e054bf2f9ac6513",
+    "prompt_hash": "f05a1d7b0f67dcba9bda8f81e666b070bb6d8bb230fca6ba7de73306e456ffe6",
+    "output_hash": "d78aa5e532653d7b6952ea783be95c8ef707f47b30c4a6719dc5683496496180",
+    "returncode": 0,
+    "timestamp": "2026-07-25T01:57:47.575243+00:00",
+    "provenance_digest": "91e7dc7f4b3710eb1242e541fd6469dfd913ba46d90b324b6ca6a7c1bf292a43"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-certificate-requirement",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, territory or region where the death occurred must be provided when marital status is widowed.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "This document is requested only when the marital status is listed as widowed."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a document in the death_certificate upload slot under case 33d577bd1521d896ecbc6b63af055d8e to validate widowed marital status."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "33d577bd1521d896ecbc6b63af055d8e",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "33d577bd1521d896ecbc6b63af055d8e.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c789082684a50ac888e14c6c7ad5539229760fe25bf658bfc9a531f5e73d2ab3",
+    "allowed_text_sha256": null,
+    "bundle_hash": "51fce1863792a81354afdd824aed615df113966c691902f31c45d9c82b1979e7",
+    "prompt_hash": "5e8fbc8debee8f15d7475e5193a1c41ee06e562ce393702500fc7b6936218fe0",
+    "output_hash": "d076b64450a31fcbdad2eb021d5c1dbc2b6d1ead82d70fb4b0f37886b6d9396e",
+    "returncode": 0,
+    "timestamp": "2026-07-23T10:45:56.228004+00:00",
+    "provenance_digest": "82b636f0f8c59bf6fc73f4ef0fa5a5a5da41e02b75ed90cfddb77dbceeb9eb45"
+  }
+}

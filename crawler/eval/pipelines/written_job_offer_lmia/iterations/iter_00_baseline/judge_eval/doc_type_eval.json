@@ -1,0 +1,202 @@
+{
+  "doc_type": "written_job_offer_lmia",
+  "case_evaluations": {
+    "440c4e52222f5864f8a9b2ea092f4e53": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "5ef2ea9721515c97ebb4b2fba32dc636": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "6a85334ea8ee238d4b41ea791d677e78": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "82946cdcf5fe36b30cf82ea9fd71c5da": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "af18b112d998b1433eb96ad2f0a1b70d": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "afc3c6ff93b0e2dd7bccd01ece586a25": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b4b2695cdf784a8c69fe3f3ac27b4299": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "dd6c7bada82b2f60cc1183535d543678": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e891fe38c1b6ace7fd5b685a8901f9a9": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f83db12a2941d7d1888e582e7d6ac548": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "b4b2695cdf784a8c69fe3f3ac27b4299",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-WRITTEN-LMIA-01 missed. Document shows LMIA issue/expiry 2024-02-01/2024-08-01 (expired before 2025-02-01 offer) and 'Expired Work Permit (No Legal Authorization)'; narrative explicitly states LMIA expired Aug 1, 2024 and loss of work authorization. Worker emitted only a generic requirements statement and flagged nothing."
+    },
+    {
+      "case_id": "440c4e52222f5864f8a9b2ea092f4e53",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-WRITTEN-LMIA-01 missed (scanned sibling). Identical expired-LMIA / expired work permit defect present and explicitly narrated; worker returned only generic letter requirements with no defect detection."
+    },
+    {
+      "case_id": "dd6c7bada82b2f60cc1183535d543678",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-WRITTEN-LMIA-02 missed. Employment_type 'Part-Time, Temporary Seasonal', 20 hrs/week, 6-month contract (2025-03-01 to 2025-09-01) fails the continuous/full-time/non-seasonal/1-year post-PR test. Worker did not flag; prose restated generic requirements only."
+    },
+    {
+      "case_id": "afc3c6ff93b0e2dd7bccd01ece586a25",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-WRITTEN-LMIA-02 missed (scanned sibling). Part-time/seasonal 20 hrs/week 6-month term present; worker only recited the full completeness-check requirement without comparing it against the document's disqualifying terms."
+    },
+    {
+      "case_id": "f83db12a2941d7d1888e582e7d6ac548",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-WRITTEN-LMIA-03 missed. NOC 65102 / TEER 5 (Store Shelf Stocker) is ineligible and conflicts with the LMIA's skilled Software Developer (NOC 21232, TEER 1); narrative states the conflict outright. Worker flagged nothing."
+    },
+    {
+      "case_id": "5ef2ea9721515c97ebb4b2fba32dc636",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-WRITTEN-LMIA-03 missed (scanned sibling). TEER 5 duties mismatched to LMIA TEER 1 with explicit conflict narrative; worker's prose only paraphrased generic letter requirements."
+    },
+    {
+      "case_id": "e891fe38c1b6ace7fd5b685a8901f9a9",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-WRITTEN-LMIA-04 missed. Wage_rate 25.00 CAD/hr is below the 46.00 prevailing rate and below the 48.50 LMIA-approved rate; narrative states both. Worker did not detect the wage defect."
+    },
+    {
+      "case_id": "af18b112d998b1433eb96ad2f0a1b70d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-WRITTEN-LMIA-04 missed (scanned sibling). Offered wage 25.00 below prevailing/LMIA rate explicitly narrated; worker returned generic requirements with no wage comparison."
+    },
+    {
+      "case_id": "e891fe38c1b6ace7fd5b685a8901f9a9",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Claim appends 'associated LMIA details' to the letter-content requirement, which is not part of the cited completeness-check letter requirements and exceeds the provided quote."
+    },
+    {
+      "case_id": "6a85334ea8ee238d4b41ea791d677e78",
+      "category": "defect_recall",
+      "severity": "minor",
+      "description": "Correctly clean (meets_requirements), but the worker never affirmatively verified LMIA validity, full-time/continuous terms, NOC/TEER-LMIA alignment, or wage-vs-prevailing; a 'pass' by omission rather than by evaluation."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/written_job_offer_lmia.md",
+      "suggested_patch": "Add a mandatory validation checklist the agent must evaluate against the document fields and emit as pass/defect claims: (1) LMIA validity — lmia_expiry_date must be after job_offer_date/application and work_permit_status must show valid authorization (flag PFL-WRITTEN-LMIA-01 on expiry/expired permit); (2) Employment terms — employment_type continuous, non-seasonal, full-time hours_per_week >= 30, and job_duration >= 1 year post-PR (flag PFL-02 on part-time/seasonal/short-term); (3) NOC alignment — teer_category must be 0/1/2/3 and job_title/duties must match the LMIA occupation (flag PFL-03 on TEER 4/5 or duty conflict); (4) Wage — wage_rate >= prevailing_wage_rate and >= lmia_wage_offered (flag PFL-04 when below). Require the agent to cite the Narrative Statements when they self-declare a conflict."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Direct workers that a static requirements question is only the rubric, not the deliverable: they must review the attached document field-by-field against that rubric and output defect findings (with expected_verdict-style meets/defective reasoning) rather than merely restating what a compliant letter should contain. A report that recites generic requirements without comparing them to the document's actual values is incomplete."
+    }
+  ],
+  "rationale": "All 10 Gemini-3.6-flash reports treated the prompt as a literal static-knowledge question and returned only a generic restatement of the IRCC completeness-check letter requirement, never comparing it to the attached document. Consequently every one of the 8 defective cases (expired LMIA x2, part-time/seasonal x2, TEER-5/NOC-conflict x2, sub-prevailing wage x2) received defect_recall 0.0 despite the defects being explicit in structured fields and even stated verbatim in the Narrative Statements. The 2 genuinely clean cases score 1.0 on recall only because there was nothing to detect, not because the worker verified compliance. Grounding is otherwise acceptable (no invented document facts; PII fully absent from claims/prose), citations resolve to a consistent PDI corpus anchor, and there is no ground-truth leakage — but the systemic absence of document-level defect detection is the dominant, critical failure.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "440c4e52222f5864f8a9b2ea092f4e53.pdf",
+      "--attachment",
+      "5ef2ea9721515c97ebb4b2fba32dc636.pdf",
+      "--attachment",
+      "6a85334ea8ee238d4b41ea791d677e78.pdf",
+      "--attachment",
+      "82946cdcf5fe36b30cf82ea9fd71c5da.pdf",
+      "--attachment",
+      "af18b112d998b1433eb96ad2f0a1b70d.pdf",
+      "--attachment",
+      "afc3c6ff93b0e2dd7bccd01ece586a25.pdf",
+      "--attachment",
+      "b4b2695cdf784a8c69fe3f3ac27b4299.pdf",
+      "--attachment",
+      "dd6c7bada82b2f60cc1183535d543678.pdf",
+      "--attachment",
+      "e891fe38c1b6ace7fd5b685a8901f9a9.pdf",
+      "--attachment",
+      "f83db12a2941d7d1888e582e7d6ac548.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "6cade482c028be708c1fd76211303ff4e796c220f487c53b66d894280e33e8e0",
+    "research_hash": "a4646fd9e85f08dc53202d8b74a951d186c3e2ea4bbd8d1749979e7dd8bb1b2c",
+    "ground_truth_hash": "d0a173177865566a1d1c23602c86a52c0b9dbdc4a8020a3fe0e0ebe2fc314197",
+    "output_hash": "5f23ed8cbccfb21decf31dfc74a58b153cfd6f031d3ed09a9b601ecab64be3e9",
+    "timestamp": "2026-07-23T23:32:58.594746+00:00",
+    "provenance_digest": "075bddf420a6384e554df5ecd630d9a758ce32329be00e70e853c030f6098c8b"
+  }
+}

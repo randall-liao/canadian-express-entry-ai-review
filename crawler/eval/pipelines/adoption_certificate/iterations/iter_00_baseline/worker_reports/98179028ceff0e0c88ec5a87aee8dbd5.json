@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "Case 98179028ceff0e0c88ec5a87aee8dbd5 includes a 2-page document submitted under the adoption_certificate upload slot for an Express Entry application declaring an adopted dependent child."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "98179028ceff0e0c88ec5a87aee8dbd5",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "98179028ceff0e0c88ec5a87aee8dbd5.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c39f29e1f0d45ae65a6a3bafa3b61d9319fb119b99d2d67682bc39216a081199",
+    "allowed_text_sha256": null,
+    "bundle_hash": "129ef955fe8dac19cf9f98b704c507cd09fe2678d3dff76a6e07cd81e56a972f",
+    "prompt_hash": "8c745eb91b604852a68dee0f0da253bd0d6073b5e5781c4f4d70355b0895bd29",
+    "output_hash": "f9d070ad8fad63f6bfd42ff7a4d368b4399c168d6e0f6bc9189cb5d0dddeb3ee",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:02:27.391679+00:00",
+    "provenance_digest": "574648367a8c9d6f6e426d01e00f5da03c91f4b9bc64971a9ff5295bbc2c7eca"
+  }
+}

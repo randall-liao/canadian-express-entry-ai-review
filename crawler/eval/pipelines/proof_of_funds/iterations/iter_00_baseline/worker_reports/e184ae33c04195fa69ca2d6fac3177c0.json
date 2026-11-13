@@ -1,0 +1,54 @@
+{
+  "question": "What must the applicant's settlement funds satisfy?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "Settlement funds must be legally accessible, cannot be borrowed from another person, and cannot be derived from equity on real property.",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "you can't use equity on real property as proof of settlement funds"
+    }
+  ],
+  "basis": [
+    "The applicant submitted proof of funds documentation (e184ae33c04195fa69ca2d6fac3177c0.pdf) for Express Entry settlement funds evaluation. Program applicability (such as FSWC/FSTC requirements versus CEC exemption with job offer) and applicant profile details including family size and available funds are maintained in basis."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e184ae33c04195fa69ca2d6fac3177c0",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e184ae33c04195fa69ca2d6fac3177c0.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a3c84d63d3fe2bc41dc22594f53e315aa1bec951e60daf6ff48dedc3c6c6e01f",
+    "allowed_text_sha256": null,
+    "bundle_hash": "08401b80e3700210a5b3546e3c49ff29c36936bb0a3094fc5d8e23b18f1b5827",
+    "prompt_hash": "05dd964dd9028c7bdde60c3750ac4992ed7aef3999beb013b7f2c6c3363cf035",
+    "output_hash": "bb054d4e5f4d08ca2e55e553f04f31aba5e15d06503050e30cfeadac92f1322b",
+    "returncode": 0,
+    "timestamp": "2026-07-23T15:52:34.119772+00:00",
+    "provenance_digest": "c080a848a173c9f54764c68b92ded0c944fbee7bb2d4f6791775b0ccc9e44669"
+  }
+}

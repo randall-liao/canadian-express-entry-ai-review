@@ -1,0 +1,295 @@
+{
+  "doc_type": "written_job_offer_lmia",
+  "timestamp": "2026-07-23T03:01:51.432-04:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "written_job_offer_lmia",
+      "title": "Valid Full-time Permanent Job Offer with Approved LMIA - Software Developer",
+      "issuing_authority": "Apex Global Tech Solutions Inc. / Employment and Social Development Canada (ESDC)",
+      "issue_date": "2025-02-01",
+      "expiry_date": null,
+      "fields": {
+        "employer_name": "Apex Global Tech Solutions Inc.",
+        "employer_address": "100 King Street West, Suite 3500, Toronto, ON M5X 1A9",
+        "employer_contact_person": "Jane Doe",
+        "employer_contact_title": "Human Resources Director",
+        "employer_business_number": "892341567BC0001",
+        "applicant_name": "John Smith",
+        "applicant_address": "456 Oak Avenue, Vancouver, BC V6B 2T1",
+        "job_title": "Software Developer",
+        "noc_code": "21232",
+        "teer_category": "TEER 1",
+        "duties_and_responsibilities": "Write, modify, integrate and test software code; Maintain existing computer programs by making modifications as required; Identify and communicate technical problems, processes and solutions; Prepare technical documentation and specifications.",
+        "employment_type": "Full-time, Permanent",
+        "hours_per_week": "40.0",
+        "job_duration": "Indefinite / Permanent post-PR issuance",
+        "job_start_date": "2025-03-01",
+        "job_end_date": null,
+        "wage_rate": "48.50 CAD per hour",
+        "pay_frequency": "Bi-weekly",
+        "prevailing_wage_rate": "46.00 CAD per hour",
+        "lmia_wage_offered": "48.50 CAD per hour",
+        "lmia_number": "LMIA-87654321",
+        "lmia_issue_date": "2025-01-15",
+        "lmia_expiry_date": "2026-01-15",
+        "job_offer_date": "2025-02-01",
+        "work_permit_status": "Valid Employer-Specific Work Permit",
+        "work_location": "Toronto, ON",
+        "benefits_summary": "Extended medical, dental, vision coverage, and 15 days paid annual vacation"
+      },
+      "narrative_blocks": [
+        "Apex Global Tech Solutions Inc. is pleased to extend an offer of employment to John Smith for the full-time, permanent position of Software Developer (NOC 21232, TEER 1) at our head office located at 100 King Street West, Suite 3500, Toronto, ON M5X 1A9.",
+        "In this role, you will be expected to work 40 hours per week at an hourly wage of 48.50 CAD, paid bi-weekly. This wage rate equals or exceeds the regional ESDC prevailing wage rate of 46.00 CAD per hour for Software Developers in Toronto, ON.",
+        "This written job offer is supported by a positive Labour Market Impact Assessment (LMIA #LMIA-87654321) issued by Employment and Social Development Canada (ESDC) on January 15, 2025, which remains valid through January 15, 2026. Employment will commence on March 1, 2025, and will continue on a permanent, full-time basis following the issuance of permanent resident status.",
+        "Benefits package includes comprehensive group extended health, dental, and vision insurance, along with 15 days of paid annual vacation leave."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "written_job_offer_lmia",
+      "title": "Defective Case - Expired LMIA Validity and Loss of Work Authorization",
+      "issuing_authority": "Apex Global Tech Solutions Inc. / Employment and Social Development Canada (ESDC)",
+      "issue_date": "2025-02-01",
+      "expiry_date": "2024-08-01",
+      "fields": {
+        "employer_name": "Apex Global Tech Solutions Inc.",
+        "employer_address": "100 King Street West, Suite 3500, Toronto, ON M5X 1A9",
+        "employer_contact_person": "Jane Doe",
+        "employer_contact_title": "Human Resources Director",
+        "employer_business_number": "892341567BC0001",
+        "applicant_name": "John Smith",
+        "applicant_address": "456 Oak Avenue, Vancouver, BC V6B 2T1",
+        "job_title": "Software Developer",
+        "noc_code": "21232",
+        "teer_category": "TEER 1",
+        "duties_and_responsibilities": "Write, modify, integrate and test software code; Maintain existing computer programs by making modifications as required; Identify and communicate technical problems, processes and solutions; Prepare technical documentation and specifications.",
+        "employment_type": "Full-time, Permanent",
+        "hours_per_week": "40.0",
+        "job_duration": "Indefinite / Permanent post-PR issuance",
+        "job_start_date": "2025-03-01",
+        "job_end_date": null,
+        "wage_rate": "48.50 CAD per hour",
+        "pay_frequency": "Bi-weekly",
+        "prevailing_wage_rate": "46.00 CAD per hour",
+        "lmia_wage_offered": "48.50 CAD per hour",
+        "lmia_number": "LMIA-87654321",
+        "lmia_issue_date": "2024-02-01",
+        "lmia_expiry_date": "2024-08-01",
+        "job_offer_date": "2025-02-01",
+        "work_permit_status": "Expired Work Permit (No Legal Authorization)",
+        "work_location": "Toronto, ON",
+        "benefits_summary": "Extended medical, dental, vision coverage, and 15 days paid annual vacation"
+      },
+      "narrative_blocks": [
+        "Apex Global Tech Solutions Inc. is offering John Smith the position of Software Developer (NOC 21232, TEER 1) located at 100 King Street West, Suite 3500, Toronto, ON M5X 1A9.",
+        "The position requires 40 hours per week at an hourly wage of 48.50 CAD per hour.",
+        "Please note that the supporting Labour Market Impact Assessment (LMIA #LMIA-87654321) expired on August 1, 2024. The candidate's work permit has also expired, resulting in a current lack of work authorization prior to submission.",
+        "Employment was intended to commence on March 1, 2025."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-WRITTEN-LMIA-01",
+        "category": "pfl_expired_lmia_validity",
+        "severity": "critical",
+        "description": "The LMIA document (LMIA-87654321) expired on 2024-08-01, prior to the job offer issuance date of 2025-02-01 and PR application submission. Additionally, the applicant's work permit status is expired, resulting in loss of legal work authorization.",
+        "affected_fields": [
+          "lmia_number",
+          "lmia_expiry_date",
+          "job_offer_date",
+          "work_permit_status"
+        ],
+        "mutation_details": {
+          "lmia_number": "LMIA-87654321",
+          "lmia_expiry_date": "2024-08-01",
+          "job_offer_date": "2025-02-01",
+          "work_permit_status": "Expired Work Permit (No Legal Authorization)",
+          "defect_reason": "LMIA expired prior to job offer date and application submission with loss of work authorization."
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "written_job_offer_lmia",
+      "title": "Defective Case - Non-Permanent, Part-Time, and Seasonal Job Offer Duration",
+      "issuing_authority": "Apex Global Tech Solutions Inc. / Employment and Social Development Canada (ESDC)",
+      "issue_date": "2025-02-01",
+      "expiry_date": "2025-09-01",
+      "fields": {
+        "employer_name": "Apex Global Tech Solutions Inc.",
+        "employer_address": "100 King Street West, Suite 3500, Toronto, ON M5X 1A9",
+        "employer_contact_person": "Jane Doe",
+        "employer_contact_title": "Human Resources Director",
+        "employer_business_number": "892341567BC0001",
+        "applicant_name": "John Smith",
+        "applicant_address": "456 Oak Avenue, Vancouver, BC V6B 2T1",
+        "job_title": "Software Developer",
+        "noc_code": "21232",
+        "teer_category": "TEER 1",
+        "duties_and_responsibilities": "Write, modify, integrate and test software code; Maintain existing computer programs by making modifications as required; Identify and communicate technical problems, processes and solutions; Prepare technical documentation and specifications.",
+        "employment_type": "Part-Time, Temporary Seasonal",
+        "hours_per_week": "20.0",
+        "job_duration": "6 Months Contract",
+        "job_start_date": "2025-03-01",
+        "job_end_date": "2025-09-01",
+        "wage_rate": "48.50 CAD per hour",
+        "pay_frequency": "Bi-weekly",
+        "prevailing_wage_rate": "46.00 CAD per hour",
+        "lmia_wage_offered": "48.50 CAD per hour",
+        "lmia_number": "LMIA-87654321",
+        "lmia_issue_date": "2025-01-15",
+        "lmia_expiry_date": "2026-01-15",
+        "job_offer_date": "2025-02-01",
+        "work_permit_status": "Valid Employer-Specific Work Permit",
+        "work_location": "Toronto, ON",
+        "benefits_summary": "Limited temporary employee health benefits"
+      },
+      "narrative_blocks": [
+        "Apex Global Tech Solutions Inc. is offering John Smith a temporary seasonal position as Software Developer at 100 King Street West, Suite 3500, Toronto, ON M5X 1A9.",
+        "This position is offered on a part-time basis for 20 hours per week for a fixed contract duration of 6 months, starting March 1, 2025 and ending September 1, 2025.",
+        "The wage rate for this temporary seasonal role is 48.50 CAD per hour, paid bi-weekly."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-WRITTEN-LMIA-02",
+        "category": "pfl_non_permanent_duration",
+        "severity": "critical",
+        "description": "The job offer is for part-time (20 hours per week) seasonal temporary work with a total duration of 6 months, failing to satisfy the mandatory requirement of full-time (at least 30 hours/week), continuous, non-seasonal employment for at least 1 year post-PR issuance.",
+        "affected_fields": [
+          "employment_type",
+          "hours_per_week",
+          "job_duration",
+          "job_end_date"
+        ],
+        "mutation_details": {
+          "employment_type": "Part-Time, Temporary Seasonal",
+          "hours_per_week": "20.0",
+          "job_duration": "6 Months Contract",
+          "job_end_date": "2025-09-01",
+          "defect_reason": "Offer is seasonal, part-time (20 hrs/week), and limited to a 6-month contract duration."
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "written_job_offer_lmia",
+      "title": "Defective Case - NOC TEER Ineligibility and Duty Discrepancy",
+      "issuing_authority": "Apex Global Tech Solutions Inc. / Employment and Social Development Canada (ESDC)",
+      "issue_date": "2025-02-01",
+      "expiry_date": null,
+      "fields": {
+        "employer_name": "Apex Global Tech Solutions Inc.",
+        "employer_address": "100 King Street West, Suite 3500, Toronto, ON M5X 1A9",
+        "employer_contact_person": "Jane Doe",
+        "employer_contact_title": "Human Resources Director",
+        "employer_business_number": "892341567BC0001",
+        "applicant_name": "John Smith",
+        "applicant_address": "456 Oak Avenue, Vancouver, BC V6B 2T1",
+        "job_title": "Store Shelf Stocker / General Clerk",
+        "noc_code": "65102",
+        "teer_category": "TEER 5",
+        "duties_and_responsibilities": "Unpack products and stock retail store shelves; Clean retail display aisles; Assist customers with locating items; Perform basic inventory counts.",
+        "employment_type": "Full-time, Permanent",
+        "hours_per_week": "40.0",
+        "job_duration": "Indefinite / Permanent post-PR issuance",
+        "job_start_date": "2025-03-01",
+        "job_end_date": null,
+        "wage_rate": "48.50 CAD per hour",
+        "pay_frequency": "Bi-weekly",
+        "prevailing_wage_rate": "17.20 CAD per hour",
+        "lmia_wage_offered": "48.50 CAD per hour",
+        "lmia_number": "LMIA-87654321",
+        "lmia_issue_date": "2025-01-15",
+        "lmia_expiry_date": "2026-01-15",
+        "job_offer_date": "2025-02-01",
+        "work_permit_status": "Valid Employer-Specific Work Permit",
+        "work_location": "Toronto, ON",
+        "benefits_summary": "Extended medical, dental, vision coverage, and 15 days paid annual vacation"
+      },
+      "narrative_blocks": [
+        "Apex Global Tech Solutions Inc. is offering John Smith employment for the position of Store Shelf Stocker / General Clerk at 100 King Street West, Suite 3500, Toronto, ON M5X 1A9.",
+        "The position falls under NOC code 65102 (TEER 5). Primary duties include unpacking products, stocking retail shelves, maintaining aisle cleanliness, and performing basic inventory counts.",
+        "This offer conflicts with the supporting LMIA approval which was issued for skilled Software Developer duties (NOC 21232, TEER 1)."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-WRITTEN-LMIA-03",
+        "category": "pfl_noc_teer_mismatch",
+        "severity": "critical",
+        "description": "The job offer lists job title, NOC code (65102), TEER category (TEER 5), and duties corresponding to an entry-level retail shelf stocker, creating a critical mismatch against the LMIA approved for a TEER 1 Software Developer role.",
+        "affected_fields": [
+          "noc_code",
+          "teer_category",
+          "job_title",
+          "duties_and_responsibilities"
+        ],
+        "mutation_details": {
+          "noc_code": "65102",
+          "teer_category": "TEER 5",
+          "job_title": "Store Shelf Stocker / General Clerk",
+          "duties_and_responsibilities": "Unpack products and stock retail store shelves; Clean retail display aisles; Assist customers with locating items; Perform basic inventory counts.",
+          "defect_reason": "NOC code and duties changed to TEER 5 non-skilled retail worker, conflicting directly with the approved LMIA."
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "written_job_offer_lmia",
+      "title": "Defective Case - Wage Rate Below Regional ESDC Prevailing Rate",
+      "issuing_authority": "Apex Global Tech Solutions Inc. / Employment and Social Development Canada (ESDC)",
+      "issue_date": "2025-02-01",
+      "expiry_date": null,
+      "fields": {
+        "employer_name": "Apex Global Tech Solutions Inc.",
+        "employer_address": "100 King Street West, Suite 3500, Toronto, ON M5X 1A9",
+        "employer_contact_person": "Jane Doe",
+        "employer_contact_title": "Human Resources Director",
+        "employer_business_number": "892341567BC0001",
+        "applicant_name": "John Smith",
+        "applicant_address": "456 Oak Avenue, Vancouver, BC V6B 2T1",
+        "job_title": "Software Developer",
+        "noc_code": "21232",
+        "teer_category": "TEER 1",
+        "duties_and_responsibilities": "Write, modify, integrate and test software code; Maintain existing computer programs by making modifications as required; Identify and communicate technical problems, processes and solutions; Prepare technical documentation and specifications.",
+        "employment_type": "Full-time, Permanent",
+        "hours_per_week": "40.0",
+        "job_duration": "Indefinite / Permanent post-PR issuance",
+        "job_start_date": "2025-03-01",
+        "job_end_date": null,
+        "wage_rate": "25.00 CAD per hour",
+        "pay_frequency": "Bi-weekly",
+        "prevailing_wage_rate": "46.00 CAD per hour",
+        "lmia_wage_offered": "48.50 CAD per hour",
+        "lmia_number": "LMIA-87654321",
+        "lmia_issue_date": "2025-01-15",
+        "lmia_expiry_date": "2026-01-15",
+        "job_offer_date": "2025-02-01",
+        "work_permit_status": "Valid Employer-Specific Work Permit",
+        "work_location": "Toronto, ON",
+        "benefits_summary": "Extended medical, dental, vision coverage, and 15 days paid annual vacation"
+      },
+      "narrative_blocks": [
+        "Apex Global Tech Solutions Inc. is pleased to offer John Smith the full-time, permanent position of Software Developer (NOC 21232, TEER 1) at 100 King Street West, Suite 3500, Toronto, ON M5X 1A9.",
+        "The position requires 40 hours per week at an offered hourly wage rate of 25.00 CAD per hour, paid bi-weekly.",
+        "Note: The offered wage rate of 25.00 CAD per hour is below the regional ESDC prevailing wage rate of 46.00 CAD per hour for NOC 21232 in Toronto, ON, and below the approved LMIA rate of 48.50 CAD per hour."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-WRITTEN-LMIA-04",
+        "category": "pfl_wage_below_prevailing_rate",
+        "severity": "critical",
+        "description": "The offered wage rate of 25.00 CAD per hour is significantly below both the regional ESDC prevailing wage rate of 46.00 CAD per hour and the approved LMIA wage rate of 48.50 CAD per hour.",
+        "affected_fields": [
+          "wage_rate",
+          "pay_frequency",
+          "lmia_wage_offered",
+          "prevailing_wage_rate"
+        ],
+        "mutation_details": {
+          "wage_rate": "25.00 CAD per hour",
+          "pay_frequency": "Bi-weekly",
+          "lmia_wage_offered": "48.50 CAD per hour",
+          "prevailing_wage_rate": "46.00 CAD per hour",
+          "defect_reason": "Offered wage rate of 25.00 CAD/hr is less than prevailing wage (46.00 CAD/hr) and approved LMIA wage (48.50 CAD/hr)."
+        }
+      }
+    }
+  ]
+}

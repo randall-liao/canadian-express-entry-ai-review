@@ -1,0 +1,57 @@
+{
+  "question": "Does the applicant need an immigration medical examination?",
+  "claims": [
+    {
+      "id": "medical-exam-defect-expiry",
+      "text": "The submitted immigration medical examination has expired beyond its validity period, requiring a new medical examination before a final decision can be made on the application.",
+      "citations": [
+        "medical/who-must-submit-immigration-medical-examination.md#000",
+        "medical/requirements-permanent-residents.md#000"
+      ],
+      "quote": "must hold a valid medical certificate before a final decision can be made on their application"
+    }
+  ],
+  "basis": [
+    "Opaque Case ID: 8dea2c3807b07b17487e2209b1e77ca0",
+    "Document Upload-Slot Type: medical_examination",
+    "Document Notes: Submitted medical examination completed on 2024-03-10 expired on 2025-03-10; narrative notes indicate the exam has expired and a new medical examination is required."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "8dea2c3807b07b17487e2209b1e77ca0",
+  "doc_type": "medical_examination",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "8dea2c3807b07b17487e2209b1e77ca0.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "ddc1dcecf00b33b04afc408cb1da1894ca5cc1f378b807982468ef00ccc8614d",
+    "allowed_text_sha256": null,
+    "bundle_hash": "59f5b302d2be7e7ccaef4e74931512afed25631d3e574278e2580d2dcbf5892d",
+    "prompt_hash": "9342d476611197cf7beb20ad1195c026f62f52b4ffbf02a447da6caa2ccd57a8",
+    "output_hash": "aef18e15b4cb7640d74dfe9540eb54c295885ebb6716c3db4e81689c187f6fbd",
+    "returncode": 0,
+    "timestamp": "2026-07-24T10:54:40.593115+00:00",
+    "provenance_digest": "f2117d207b7b0f727e7374401d4e576ab83a736da4bc2b7a18ebbd7a4ff94d2b"
+  }
+}

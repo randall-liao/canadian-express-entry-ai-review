@@ -1,0 +1,55 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "The [IMM 5475 form (PDF, 593.57 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5475e.pdf) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant submitted an Authority to Release Personal Information to a Designated Individual form (IMM 5475) in the authority_to_release_info upload slot for case e5640785a8c957a693d4da097babd255.",
+    "Document instance evaluation against IMM 5475 compliance rules reveals a form scope mismatch defect: the submitted form designates a paid legal representative to conduct business and act as an authorized immigration representative on behalf of the applicant, whereas Form IMM 5475 is strictly limited to releasing personal information to a designated individual. Appointing a legal representative or conducting business with IRCC requires Form IMM 5476 (Use of a Representative)."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e5640785a8c957a693d4da097babd255",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e5640785a8c957a693d4da097babd255.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9a2086e056751aaaca4b464c5a699e34cdf312b1836fd6e34d643594af7ab3db",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f951b805068342902119ce4352c5fd293ceba3f7d5d799ee9cfde2c99f700e59",
+    "prompt_hash": "00d474b92f06b661ca829de7c008aad19fddff772b428693e6a4a7d50ef16a2c",
+    "output_hash": "27092c2cef552c1f5b19d44c37e6593c795c2fd7522ee7e3169946b7e3f6b14a",
+    "returncode": 0,
+    "timestamp": "2026-07-24T02:31:32.201177+00:00",
+    "provenance_digest": "f89440723f7faa26bfdedda425f422620e0c5347ed8c4eae7a9b927f4dee42a1"
+  }
+}

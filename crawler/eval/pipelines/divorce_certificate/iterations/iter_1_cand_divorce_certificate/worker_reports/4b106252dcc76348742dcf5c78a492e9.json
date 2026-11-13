@@ -1,0 +1,63 @@
+{
+  "question": "What document is required when an applicant's marital status is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "When an applicant's marital status is divorced, a copy of the divorce order or certificate of divorce issued where the divorce took place must be provided, along with a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "A copy of the legal separation agreement must be provided, if available."
+    },
+    {
+      "id": "divorce-cert-authenticity-defect",
+      "text": "Uncertified copies, missing official court seals, or unverified printouts lacking judicial signatures do not satisfy official proof of divorce requirements.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "If the applicant divorced in Canada, a copy of the divorce order or certificate of divorce issued by the province or territory where the divorce took place must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant's document slot is divorce_certificate for case 4b106252dcc76348742dcf5c78a492e9.",
+    "Inspection of the attached document indicates an authenticity defect (PFL-DIVORCE-02): the document is marked as an uncertified photocopy with court_seal_present false, judicial_signature N/A, issuing_authority unverified court printout, and narrative notes confirming uncertified copies are not valid legal proof."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "4b106252dcc76348742dcf5c78a492e9",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4b106252dcc76348742dcf5c78a492e9.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "50644fa1d48c78fc57d3148bf2c17c06f1b9cd8b48d5e97922b261095bc794c8",
+    "allowed_text_sha256": null,
+    "bundle_hash": "96adfcfc94df22d419234f5a4c06d54f1588f3bdd17b3529f840f869e8cf6da9",
+    "prompt_hash": "02236cdd6702a837b99d523a9bb2cd936280f82806147afd5ee6c28df47c3aea",
+    "output_hash": "d418ae07d4ef837345169eaff25a2a6cdc58f05f64c06df1596a8b176a04cd61",
+    "returncode": 0,
+    "timestamp": "2026-07-24T06:05:37.202301+00:00",
+    "provenance_digest": "1320e5031a95c9365df1a9efab92bd0dd4adfbbf39c8e6101de2441a1908d366"
+  }
+}

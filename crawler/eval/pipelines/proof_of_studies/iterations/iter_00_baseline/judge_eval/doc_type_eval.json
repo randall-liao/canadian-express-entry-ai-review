@@ -1,0 +1,196 @@
+{
+  "doc_type": "proof_of_studies",
+  "case_evaluations": {
+    "65ed60c24d64b3cbf0c07c3d92b38586": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "7569807440a36824e792e6d4783f8a41": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "83f94eaa269e4ed1dfb2a0f665ebd2c3": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "94e48d786f7bfe57750beeb5e4b447c0": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "9b9ac159c726f3f5d59c98d72f67bbad": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b2bef3258d3d169c00720c5186330554": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c36da93602d8c031f6e2d9ebb6a64a28": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "d51594714a01433fb19fce2139b04a59": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f5a4b6612709aec0393de5a528a77531": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "fbd266f1c8493eedab7365af9d02f430": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "94e48d786f7bfe57750beeb5e4b447c0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POS_STUD-01. PDF narrative explicitly states 'complete official transcript schedules and verified institution credentials could not be retrieved' and institution_name is blank (transcripts=null). Worker asserted the applicant 'submitted educational credential documents' and flagged no defect; abstentions empty."
+    },
+    {
+      "case_id": "c36da93602d8c031f6e2d9ebb6a64a28",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POS_STUD-01 (scanned sibling). Same explicit narrative that transcripts/institution credentials 'could not be retrieved'; missing institution_name and null transcripts. Worker claimed 'educational credential documents and transcripts' were submitted — contradicts the document."
+    },
+    {
+      "case_id": "7569807440a36824e792e6d4783f8a41",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POS_STUD-02. PDF states 'ECA validation failed as the issuing authority is not recognized' (Global Virtual Apex University; eca_reference INVALID-ECA-UNACCREDITED-9999). Worker flagged no unaccredited-institution defect."
+    },
+    {
+      "case_id": "f5a4b6612709aec0393de5a528a77531",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POS_STUD-02 (scanned sibling). Same failed-ECA / unaccredited-institution narrative in PDF. Worker produced only a generic policy claim and detected no defect."
+    },
+    {
+      "case_id": "83f94eaa269e4ed1dfb2a0f665ebd2c3",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POS_STUD-03. PDF states 'significant timeline discrepancy ... overlapping full-time overseas employment from 2014 to 2021 without corresponding leave of absence.' Worker did not flag the enrollment/employment timeline conflict."
+    },
+    {
+      "case_id": "65ed60c24d64b3cbf0c07c3d92b38586",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POS_STUD-03 (scanned sibling). Same overlapping study/employment timeline discrepancy stated in the narrative. Worker returned boilerplate and no defect."
+    },
+    {
+      "case_id": "d51594714a01433fb19fce2139b04a59",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POS_STUD-04. PDF states applicant listed completion May 15, 2021 while official records show completion/conferral November 20, 2023 — 'a multi-year mismatch.' Worker detected no completion-date discrepancy."
+    },
+    {
+      "case_id": "9b9ac159c726f3f5d59c98d72f67bbad",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed PFL-POS_STUD-04 (scanned sibling). Same completion/conferral date mismatch narrative. Worker returned generic policy prose and no defect."
+    },
+    {
+      "case_id": "94e48d786f7bfe57750beeb5e4b447c0",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Worker basis states the file 'was reviewed for compliance with Express Entry education credential documentation guidelines,' implying compliance for a document whose own narrative reports missing transcripts and institution — an unsupported favorable framing."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/proof_of_studies.md",
+      "suggested_patch": "Require the worker to parse the 'Narrative Statements / Detailed Notes' block and each field (institution_name, transcripts, start/end/completion/conferral dates, eca_reference_number) and emit an explicit verdict (meets_requirements|defective) with affected_fields. Enumerate mandatory defect checks: missing/blank institution_name or null transcripts (PFL-01), failed/unrecognized ECA or invalid eca_reference (PFL-02), study/employment timeline overlap or unexplained gaps (PFL-03), and completion/conferral date mismatches (PFL-04). Any narrative sentence describing a discrepancy, failure, or 'could not be retrieved' must be surfaced as a defect, not ignored."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Instruct workers that the review question is a document-adjudication task, not a generic policy Q&A. Boilerplate answers that merely restate what proof-of-studies 'can include' without inspecting the attached PDF's specific fields and narrative are non-compliant. When the document self-reports a defect, the worker must record it in claims (defect finding) or abstentions with the affected field, and must not imply compliance."
+    }
+  ],
+  "rationale": "The Worker produced a near-identical, generic policy answer ('proof of completed credentials can include copies of documents and transcripts') for all 10 cases, citing completeness-check.md#027 with verbatim quotes. Citations resolve and quotes are accurate (citation_exactness 1.0), and no applicant PII leaked into claims/prose — names appear only in the PDFs, not the reports (pii_containment 1.0). No ground-truth leakage; opaque IDs used throughout (blind_input_compliance 1.0). The decisive failure is defect_recall: 8 of 10 cases are defective with the defect stated explicitly in each PDF's narrative (missing transcripts/institution, failed ECA/unaccredited institution, timeline overlap, multi-year completion-date mismatch), yet the Worker detected zero defects and abstentions were empty (0.0 on all defective cases). The two clean sibling cases score full marks. Grounding is lightly penalized on defective cases because basis text implies the documents were 'reviewed for compliance,' framing defective submissions as acceptable. Root cause: the Worker treated the prompt as a generic knowledge question rather than a per-document adjudication of the attached PDF.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "65ed60c24d64b3cbf0c07c3d92b38586.pdf",
+      "--attachment",
+      "7569807440a36824e792e6d4783f8a41.pdf",
+      "--attachment",
+      "83f94eaa269e4ed1dfb2a0f665ebd2c3.pdf",
+      "--attachment",
+      "94e48d786f7bfe57750beeb5e4b447c0.pdf",
+      "--attachment",
+      "9b9ac159c726f3f5d59c98d72f67bbad.pdf",
+      "--attachment",
+      "b2bef3258d3d169c00720c5186330554.pdf",
+      "--attachment",
+      "c36da93602d8c031f6e2d9ebb6a64a28.pdf",
+      "--attachment",
+      "d51594714a01433fb19fce2139b04a59.pdf",
+      "--attachment",
+      "f5a4b6612709aec0393de5a528a77531.pdf",
+      "--attachment",
+      "fbd266f1c8493eedab7365af9d02f430.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "d283e4036ee76702a5e4a9a8083b8757dd7b55a13490f4434edffe9f8b31e8ac",
+    "research_hash": "5193cedd7425108e69619548549038993191116fdbdb31580711f50324569fdc",
+    "ground_truth_hash": "cc03d005e355a3efb23b40cd20546e36f127b44ae2861247acb9799ff0d9b663",
+    "output_hash": "80adbfd4a478de01b8bc36e8d4c9ba1a37e4f9b1a0229c7b8ba6d5265e9e6fa5",
+    "timestamp": "2026-07-23T23:24:37.041506+00:00",
+    "provenance_digest": "2ad770fc8b2938e41df36e83e01f222b1acccda5a8d12c7c044218665f9fa672"
+  }
+}

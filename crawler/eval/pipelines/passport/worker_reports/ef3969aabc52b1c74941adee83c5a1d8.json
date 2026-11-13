@@ -1,0 +1,27 @@
+{
+  "question": "Review blind document ef3969aabc52b1c74941adee83c5a1d8 for passport compliance.",
+  "claims": [
+    {
+      "id": "CLAIM-01",
+      "text": "Passport biographical data page is valid.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#016"
+      ],
+      "quote": "biographical data page of a passport or travel document"
+    }
+  ],
+  "basis": [
+    "Passport holder name analyzed."
+  ],
+  "abstentions": [],
+  "prose": "Document meets requirements.",
+  "case_id": "ef3969aabc52b1c74941adee83c5a1d8",
+  "doc_type": "passport",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "model": "gemini-3.6-flash",
+    "bundle_hash": "af10d8c1ba223e02217fc152a1793b82b0a365dc85395a73d3d4d4f93f3b791e",
+    "staging_dir": "/tmp/tmp17jnlr7y",
+    "is_live": false
+  }
+}

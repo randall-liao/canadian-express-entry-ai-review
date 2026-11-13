@@ -1,0 +1,57 @@
+{
+  "question": "What must an applicant provide for a provincial or territorial certificate of qualification?",
+  "claims": [
+    {
+      "id": "cert-qualification-copy",
+      "text": "A copy of the certificate of qualification is required.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#031"
+      ],
+      "quote": "A copy of the certificate of qualification is required."
+    }
+  ],
+  "basis": [
+    "The applicant indicates they have a provincial certificate of qualification issued by Skilled Trades Ontario.",
+    "Field-level verification of the certificate reveals a trade qualification NOC code discrepancy (PFL-CERTIFIC-02).",
+    "The submitted Certificate of Qualification confirms qualification for Residential Construction Carpenter (NOC 72310), whereas the applicant's Express Entry profile primary occupation claim specifies Industrial Electrician (NOC 72201).",
+    "Because the trade qualification credential does not match the declared Express Entry profile occupation, the qualification points claim under NOC 72201 is defective."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "a28f9c3da567a294a5545f2ccbf92dd4",
+  "doc_type": "certificate_of_qualification",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "a28f9c3da567a294a5545f2ccbf92dd4.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "13203d68ddfa6cd7acf9dcb5c1814a9161c21b4665f1e4697be31b1ef0210b24",
+    "allowed_text_sha256": null,
+    "bundle_hash": "d3aeb3b7c20bae1d63db393270641bb90b21201f6e94f38481a73e145adb8b14",
+    "prompt_hash": "e2782cc1603baee35b0107aaf6699342f8c340299969121f200c810f3bacc643",
+    "output_hash": "a3a07c4644467a3752819a2d5ad1e742bf12c6708e1387de2835fc89196c8f55",
+    "returncode": 0,
+    "timestamp": "2026-07-24T03:32:29.527502+00:00",
+    "provenance_digest": "54ea43130a5188bc99e1ea7e1de1dfc31391c1008419d21092965fde42cdf127"
+  }
+}

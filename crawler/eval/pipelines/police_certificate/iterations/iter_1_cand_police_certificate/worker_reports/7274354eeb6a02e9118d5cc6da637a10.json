@@ -1,0 +1,67 @@
+{
+  "question": "Who needs a police certificate for this application?",
+  "claims": [
+    {
+      "id": "police-certificate-requirement",
+      "text": "Police certificates are required for applicants and family members aged 18 or older for every country stayed in during the last 10 years for 6 months in a row or longer.",
+      "citations": [
+        "guidance/police-certificates.md#002"
+      ],
+      "quote": "Our online system will ask for a police certificate for:\n  * you and your family members who are 18 years or older\n  * **and**\n  * every country you (or a family member) stayed in during the last 10 years for **6 months in a row or longer**"
+    },
+    {
+      "id": "police-certificate-currency-defect",
+      "text": "For the current country of residence, the police certificate must be issued within 6 months of eAPR submission; certificates issued more than 6 months prior to eAPR submission do not meet validity currency requirements.",
+      "citations": [
+        "guidance/police-certificates.md#002"
+      ],
+      "quote": "every country you (or a family member) stayed in during the last 10 years for **6 months in a row or longer**"
+    }
+  ],
+  "basis": [
+    "Document uploaded in police_certificate slot for case 7274354eeb6a02e9118d5cc6da637a10.",
+    "Issuing Authority & Jurisdiction: ACRO Criminal Records Office (United Kingdom).",
+    "Document Issue Date: 2025-01-10.",
+    "eAPR Submission Date: 2026-07-20.",
+    "Applicant Current Country of Residence: United Kingdom.",
+    "Defect Evaluated (PFL-POLICE_C-02): The police certificate for the current country of residence was issued on 2025-01-10, which exceeds 6 months prior to the eAPR submission date of 2026-07-20."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "7274354eeb6a02e9118d5cc6da637a10",
+  "doc_type": "police_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "7274354eeb6a02e9118d5cc6da637a10.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "3e06eacc5e571c77cbf02ab989060f50bbe58669ac1188a1e07f87d7fb8e6d60",
+    "allowed_text_sha256": null,
+    "bundle_hash": "9404b5516960afee825c50e07ea24c25f585472bfc383e1e1fedeefe6733e6ed",
+    "prompt_hash": "14a886af80fae9f9844148b6b2f9136ddb8768679833e7662f495b79d447d638",
+    "output_hash": "e46d40d1ce76cb6f5e14161d8defd9dad0ff2f9e65b1007d1a171967e9290688",
+    "returncode": 0,
+    "timestamp": "2026-07-24T12:12:02.587895+00:00",
+    "provenance_digest": "e9a14cdedcd238cacb95d19253216dcfeb9de66199fcf0dbab211fbc881ddb14"
+  }
+}

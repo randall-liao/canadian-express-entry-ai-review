@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant translate a supporting document that is not in English or French?",
+  "claims": [
+    {
+      "id": "translation-certified",
+      "text": "Supporting documents in a language other than English or French must be accompanied by an English or French translation stamped by a certified translator or with an affidavit, a copy of the original source document, and a scan of the original document.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French."
+    }
+  ],
+  "basis": [
+    "Document upload slot certified_translation (case ID 7c2d425357da8cf81469fdde73ea98f6) evaluated for Express Entry translation requirements."
+  ],
+  "abstentions": [],
+  "prose": "Supporting documents submitted in a language other than English or French require an official translation stamped by a certified translator or accompanied by an affidavit, including a copy of the source document and a scan of the original.",
+  "case_id": "7c2d425357da8cf81469fdde73ea98f6",
+  "doc_type": "certified_translation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "7c2d425357da8cf81469fdde73ea98f6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "3095f01522a9a5553204f1e0a79059c3572c06465ff19a73fcc0b008815657d6",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e9f23f2d5cd4c65f1adfb34a08570cd935f71cacedf08fd7e62b6bb76ba90f1d",
+    "prompt_hash": "9c0ef510b04ef604c9d69d1f204a1f6bdf405931f7f7c7c440a163e28cb840c2",
+    "output_hash": "ceff0c833ec12aa15c9df2868454e8857a642439272b55201ece406b39446fe0",
+    "returncode": 0,
+    "timestamp": "2026-07-23T10:42:25.934795+00:00",
+    "provenance_digest": "daf86b8e64faec9d6fab8677b644da38e42fc27d003cc9dd6015527dbfd0847e"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What passport or travel document copy must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "passport-bio-page",
+      "text": "A clear and legible copy of the biographical data page of a passport or travel document must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#016"
+      ],
+      "quote": "A clear and legible copy of the biographical data page of a passport or travel document must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a passport document (6905c8726394082c7692d8a43533fed7.pdf). Mandatory field checks including R10 completeness, profile consistency, validity window, statutory alignment, and document type/capacity were verified."
+  ],
+  "abstentions": [],
+  "prose": "An Express Entry applicant must provide a clear and legible copy of the biographical data page of their passport or travel document.",
+  "case_id": "6905c8726394082c7692d8a43533fed7",
+  "doc_type": "passport",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "6905c8726394082c7692d8a43533fed7.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2fc9e1131c29f880e4c1971dd640ecb0072e86d1f55358b40a170af96af4f46a",
+    "allowed_text_sha256": null,
+    "bundle_hash": "bc3bc5bb0bc01cc3915ba835b515833df93b2601b5bc3edd8a8906aec1db7832",
+    "prompt_hash": "1d29e8779ede0c16c8d4e21e7b9b218495793740f363d4cc3dc19f33800f8624",
+    "output_hash": "200fddfb4ada6b6fa871d2a9caf985939f162895836c1ae1519ad055277c9d55",
+    "returncode": 0,
+    "timestamp": "2026-07-24T11:20:13.291514+00:00",
+    "provenance_digest": "124b530600006b2ba3b9bb9de9103f99a83b22ca0204ec50a69e18559feec528"
+  }
+}

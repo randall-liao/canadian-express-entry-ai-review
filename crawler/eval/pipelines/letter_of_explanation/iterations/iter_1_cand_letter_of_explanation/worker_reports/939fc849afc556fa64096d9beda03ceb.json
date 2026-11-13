@@ -1,0 +1,55 @@
+{
+  "question": "Does the submitted Letter of Explanation satisfy Express Entry e-APR requirements?",
+  "claims": [
+    {
+      "id": "letter-explanation-doc",
+      "text": "A letter of explanation may be submitted during Express Entry completeness checks to outline special circumstances or clarify documentation.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024"
+      ],
+      "quote": "letter of explanation (where no birth certificate is available in the country)."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a Letter of Explanation asserting gifted settlement funds from a relative (uncle) while explicitly stating that additional financial records from the donor are unavailable at this time.",
+    "The submission lacks a formal notarized gift deed and official 6-month donor bank statement trail to substantiate the gifted settlement funds."
+  ],
+  "abstentions": [],
+  "prose": "The submitted Letter of Explanation is defective for Express Entry proof-of-funds requirements. Assertions of financial gift funds for settlement purposes that lack a formal notarized gift deed and donor source-of-funds/bank history—specifically where donor financial records are declared unavailable—do not satisfy Express Entry settlement fund requirements. While a letter of explanation may be provided during e-APR completeness checks to clarify specific document availability or circumstances, it cannot replace required primary financial evidence and legal gift verification.",
+  "case_id": "939fc849afc556fa64096d9beda03ceb",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "939fc849afc556fa64096d9beda03ceb.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "1fc67da0b484a150187f7acf93f4963b674515b507ff25144b77a319326bff69",
+    "allowed_text_sha256": null,
+    "bundle_hash": "14fa852af814d2404ab92386699b5caef3ad1fc99505dcb0bfeeb94713c4dc69",
+    "prompt_hash": "a750261ace06fc0d2e2b587b1181bd0c49ac58d997dae5f2bbe822a9fbb03556",
+    "output_hash": "60c0371e05ee09225a6adff9c63ea97d5a9a8ac43814f8aaf9b6bf1c625a9c42",
+    "returncode": 0,
+    "timestamp": "2026-07-24T09:29:39.785903+00:00",
+    "provenance_digest": "a634d57a8dcffaf0c513e5287b0b8d18d27a927193cf2fc13499bbf86fdbda23"
+  }
+}

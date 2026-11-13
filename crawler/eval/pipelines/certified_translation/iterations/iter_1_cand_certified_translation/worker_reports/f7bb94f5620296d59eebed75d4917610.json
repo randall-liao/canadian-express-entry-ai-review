@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant translate a supporting document that is not in English or French?",
+  "claims": [
+    {
+      "id": "translation-certified",
+      "text": "Supporting documents in a language other than English or French must be accompanied by an official translation and a copy of the original source document.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French."
+    }
+  ],
+  "basis": [
+    "The applicant submitted document file f7bb94f5620296d59eebed75d4917610.pdf for opaque case ID f7bb94f5620296d59eebed75d4917610 under document upload-slot type certified_translation."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "f7bb94f5620296d59eebed75d4917610",
+  "doc_type": "certified_translation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f7bb94f5620296d59eebed75d4917610.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a083b1210ac63eed20d7cda501162efd1274489509e80d23e2a2acd960f89964",
+    "allowed_text_sha256": null,
+    "bundle_hash": "4a37d63bb4b1ec8d3568c9d28d63373033f20464f6e70d6cc52d3ed8159fd14a",
+    "prompt_hash": "138db18c2eb4921570aca055cfc1fe9ef64b7d6964111dde4e7df5e696c0704b",
+    "output_hash": "7a6dc8b1f77a2ee1ec39b901fe931597a0868899565c1ada4494f99a831a8eba",
+    "returncode": 0,
+    "timestamp": "2026-07-24T04:37:40.253131+00:00",
+    "provenance_digest": "87bcd61547b623071837696c56dfbad6148f0da138aae139ce93d2bf97c61fef"
+  }
+}

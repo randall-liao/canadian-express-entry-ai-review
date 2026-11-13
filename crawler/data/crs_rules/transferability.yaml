@@ -1,0 +1,290 @@
+rows:
+  # ===================================================================== #
+  # C. SKILL TRANSFERABILITY  (factor group skill_transferability)
+  # Combination rows recombine already-substantiated core evidence; each
+  # combination depends on grounded CLB/year tiers, and three grounded CAP
+  # rows (education 50, foreign-work 50, total 100) let Plan 31-04 clamp from
+  # grounded values, never literals.
+  # ===================================================================== #
+
+  - rule_id: transfer.education_language
+    factor_group: skill_transferability
+    factor_ids: [transfer.education_language, core.education, core.language.first]
+    check_type: points
+    query: post-secondary degree official languages proficiency
+    selector:
+      family: guidance
+      marker: "With good official language proficiency (Canadian Language Benchmark Level [CLB] 7 or higher) and a post-secondary degree"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Education combined with first-official-language proficiency awards
+      transferability points on a two-tier ladder, where the higher tier needs
+      the higher benchmark on all four abilities; use the first official
+      language only and one ability below the threshold breaks the combination.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#014
+        quote: "With good official language proficiency (Canadian Language Benchmark Level [CLB] 7 or higher) and a post-secondary degree"
+    machine_check:
+      kind: points_table
+      field: education_x_language
+      points_by_level:
+        - label: lower_tier_clb7
+          level: 7
+          points: 25
+          citation_index: 0
+        - label: upper_tier_clb9
+          level: 9
+          points: 50
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: transfer.education_work
+    factor_group: skill_transferability
+    factor_ids: [transfer.education_work, core.education, core.work]
+    check_type: points
+    query: education Canadian work experience post-secondary degree
+    selector:
+      family: guidance
+      marker: "With Canadian work experience and a post-secondary degree"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Education combined with Canadian work experience awards transferability
+      points on a two-tier ladder keyed to the number of years of Canadian work;
+      both component factors must be independently substantiated.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#014
+        quote: "With Canadian work experience and a post-secondary degree"
+    machine_check:
+      kind: points_table
+      field: education_x_canadian_work
+      points_by_level:
+        - label: one_year_tier
+          level: "1"
+          points: 25
+          citation_index: 0
+        - label: two_plus_year_tier
+          level: "2+"
+          points: 50
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: transfer.foreign_language
+    factor_group: skill_transferability
+    factor_ids: [transfer.foreign_language, core.language.first]
+    check_type: points
+    query: foreign work experience official language
+    selector:
+      family: guidance
+      marker: "Points for foreign work experience + CLB 9 or more on all four first official language abilities"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Foreign work experience combined with first-official-language proficiency
+      awards transferability points on a two-tier ladder keyed to years of
+      foreign work and the language benchmark on all four abilities.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#016
+        quote: "Points for foreign work experience + CLB 9 or more"
+    machine_check:
+      kind: points_table
+      field: foreign_work_x_language
+      points_by_level:
+        - label: lower_tier
+          level: 7
+          points: 25
+          citation_index: 0
+        - label: upper_tier
+          level: 9
+          points: 50
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: transfer.foreign_work
+    factor_group: skill_transferability
+    factor_ids: [transfer.foreign_work, core.work]
+    check_type: points
+    query: foreign work experience Canadian work experience
+    selector:
+      family: guidance
+      marker: "Points for foreign work experience + 2 years or more of Canadian work experience"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Foreign work experience combined with Canadian work experience awards
+      transferability points on a two-tier ladder; overlapping or double-counted
+      hours must be avoided and the foreign-work-combination cap applies.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#017
+        quote: "Points for foreign work experience + 2 years or more of Canadian work experience"
+    machine_check:
+      kind: points_table
+      field: foreign_work_x_canadian_work
+      points_by_level:
+        - label: lower_tier
+          level: "1"
+          points: 25
+          citation_index: 0
+        - label: upper_tier
+          level: "2+"
+          points: 50
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: transfer.certificate_language
+    factor_group: skill_transferability
+    factor_ids: [transfer.certificate_language, core.language.first]
+    check_type: points
+    query: certificate of qualification trade language
+    selector:
+      family: guidance
+      marker: "Certificate of qualification (trade occupations)"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      A certificate of qualification for a trade occupation combined with
+      first-official-language proficiency awards transferability points on a
+      two-tier ladder keyed to the language benchmark on all four abilities.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#017
+        quote: "Certificate of qualification (trade occupations)"
+    machine_check:
+      kind: points_table
+      field: certificate_x_language
+      points_by_level:
+        - label: lower_tier
+          level: 5
+          points: 25
+          citation_index: 0
+        - label: upper_tier
+          level: 7
+          points: 50
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  # ---- Grounded CAP rows (Plan 31-04 clamps from these, never literals) ---- #
+
+  - rule_id: transfer.cap.education
+    factor_group: skill_transferability
+    factor_ids: [transfer.cap.education]
+    check_type: cap
+    query: good strong official languages post-secondary degree
+    selector:
+      family: guidance
+      marker: "With good/strong official languages proficiency **and** a post-secondary degree"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      The education-combination section of skill transferability is capped.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#012
+        quote: "With good/strong official languages proficiency **and** a post-secondary degree  | 50"
+    machine_check:
+      kind: cap
+      field: education_combination
+      cap_value: 50
+      citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: transfer.cap.foreign_work
+    factor_group: skill_transferability
+    factor_ids: [transfer.cap.foreign_work]
+    check_type: cap
+    query: foreign work experience points maximum
+    selector:
+      family: guidance
+      marker: "Foreign work experience  | Points"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      The foreign-work-combination section of skill transferability is capped.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#012
+        quote: "Foreign work experience  | Points"
+      - chunk_id: guidance/crs-criteria.md#012
+        quote: "With good/strong official languages proficiency (Canadian Language Benchmark [CLB] level 7 or higher) **and** foreign work experience  | 50"
+    machine_check:
+      kind: cap
+      field: foreign_work_combination
+      cap_value: 50
+      citation_index: 1
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: transfer.cap.total
+    factor_group: skill_transferability
+    factor_ids: [transfer.cap.total]
+    check_type: cap
+    query: skill transferability factors maximum
+    selector:
+      family: guidance
+      marker: "For skill transferability factors: Maximum of 100 points"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Total skill-transferability points are capped across all combinations.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#013
+        quote: "For skill transferability factors: Maximum of 100 points"
+    machine_check:
+      kind: cap
+      field: skill_transferability_total
+      cap_value: 100
+      citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"

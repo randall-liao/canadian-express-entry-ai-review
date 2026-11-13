@@ -1,0 +1,1482 @@
+rows:
+  # ===================================================================== #
+  # A. CORE / HUMAN CAPITAL  (factor group core_human_capital)
+  # Grounded from the current CRS criteria grid + language/ECA guidance.
+  # Volatile numbers live ONLY in machine_check payloads + verbatim quotes.
+  # ===================================================================== #
+
+  - rule_id: core.age.table
+    factor_group: core_human_capital
+    factor_ids: [core.age]
+    check_type: points
+    query: years of age spouse
+    selector:
+      family: guidance
+      marker: "20 to 29 years of age"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+    claim_text: >-
+      Age on the date of the invitation to apply maps to the CRS age points
+      table, which differs for candidates with and without an accompanying
+      spouse or common-law partner.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#004
+        quote: "20 to 29 years of age  | 100  | 110"
+    machine_check:
+      kind: points_table
+      field: age_years
+      points_by_level:
+        - label: peak_with_spouse
+          level: "20-29"
+          points: 100
+          citation_index: 0
+        - label: peak_without_spouse
+          level: "20-29"
+          points: 110
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.education.table
+    factor_group: core_human_capital
+    factor_ids: [core.education]
+    check_type: points
+    query: years of age spouse
+    selector:
+      family: guidance
+      marker: "Secondary diploma (high school graduation)"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Highest completed level of education maps to the CRS education points
+      table (spouse and no-spouse columns).
+    citations:
+      - chunk_id: guidance/crs-criteria.md#004
+        quote: "Secondary diploma (high school graduation)  | 28  | 30"
+    machine_check:
+      kind: points_table
+      field: education_level
+      points_by_level:
+        - label: secondary_with_spouse
+          level: secondary
+          points: 28
+          citation_index: 0
+        - label: secondary_without_spouse
+          level: secondary
+          points: 30
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.education.eca_validity
+    factor_group: core_human_capital
+    factor_ids: [core.education]
+    check_type: threshold
+    query: ECA validity years profile
+    selector:
+      family: guidance
+      marker: "less than 5 years"
+      deny_families:
+        - guidance/express-entry-year-end-report
+    claim_text: >-
+      A foreign educational credential assessment (ECA) must be under the
+      validity window at profile creation and application; an expired ECA is
+      refused.
+    citations:
+      - chunk_id: guidance/education-assessment.md#003
+        quote: "Your ECA must be **less than 5 years** old when you"
+    machine_check:
+      kind: validity_window
+      field: eca_report_date
+      window_days: 1825
+      citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.education.eca_designated
+    factor_group: core_human_capital
+    factor_ids: [core.education]
+    check_type: admissibility
+    query: foreign educational credential equivalency assessment
+    selector:
+      family: eca
+      marker: "must submit a completed foreign educational credential"
+    claim_text: >-
+      A foreign credential must be substantiated by an Educational Credential
+      Assessment report from a designated organization or professional body.
+    citations:
+      - chunk_id: eca/educational-credential-assessment.md#000
+        quote: "must submit a completed foreign educational credential and an equivalency assessment"
+    machine_check:
+      kind: policy_flag
+      field: eca_designated_required
+      flag_value: true
+      citation_index: 0
+    volatility:
+      volatility: stable
+      source_family: eca
+      crawl_date: "2026-06-11T01:09:52Z"
+
+  - rule_id: core.language.first.approved_test
+    factor_group: core_human_capital
+    factor_ids: [core.language.first]
+    check_type: admissibility
+    query: prove language skills approved test
+    selector:
+      family: guidance
+      marker: "approved language test"
+      deny_families:
+        - guidance/express-entry-year-end-report
+    claim_text: >-
+      First official language proficiency must be proven with an approved
+      language test taken with an IRCC-approved agency.
+    citations:
+      - chunk_id: guidance/language-test.md#001
+        quote: "You must prove your language skills by taking an approved language test."
+    machine_check:
+      kind: policy_flag
+      field: approved_test_required
+      flag_value: true
+      citation_index: 0
+    volatility:
+      volatility: stable
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.language.first.accepted_tests
+    factor_group: core_human_capital
+    factor_ids: [core.language.first]
+    check_type: admissibility
+    query: approved language tests
+    selector:
+      family: guidance
+      marker: "You can take any of these approved language tests"
+      deny_families:
+        - guidance/express-entry-year-end-report
+    claim_text: >-
+      The accepted first-official-language tests are CELPIP-General, IELTS
+      General Training, PTE Core (English) and TEF Canada, TCF Canada (French).
+    citations:
+      - chunk_id: guidance/language-test.md#002
+        quote: "You can take any of these approved language tests:"
+      - chunk_id: guidance/language-test.md#002
+        quote: "You must take the **IELTS General Training** option."
+    machine_check:
+      kind: accepted_enum
+      field: test_type
+      accepted_values:
+        - value: CELPIP-General
+          citation_index: 0
+        - value: IELTS General Training
+          citation_index: 1
+        - value: PTE Core
+          citation_index: 0
+        - value: TEF Canada
+          citation_index: 0
+        - value: TCF Canada
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.language.first.validity
+    factor_group: core_human_capital
+    factor_ids: [core.language.first]
+    check_type: threshold
+    query: test results less than years old
+    selector:
+      family: guidance
+      marker: "less than 2 years old"
+      deny_families:
+        - guidance/express-entry-year-end-report
+    claim_text: >-
+      Language test results must be within the validity window at profile
+      creation and at application; expired results are not accepted.
+    citations:
+      - chunk_id: guidance/language-test.md#009
+        quote: "Your test results must be **less than 2 years old** when you"
+    machine_check:
+      kind: validity_window
+      field: test_date
+      window_days: 730
+      citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.language.first.points
+    factor_group: core_human_capital
+    factor_ids: [core.language.first]
+    check_type: points
+    query: language benchmark ability spouse
+    selector:
+      family: guidance
+      marker: "Maximum points for each ability (reading, writing, speaking and listening)"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+    claim_text: >-
+      First official language points are awarded per ability from the
+      candidate's CLB level, with spouse and no-spouse column maxima.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#006
+        quote: "CLB 9  | 29  | 31"
+      - chunk_id: guidance/crs-criteria.md#006
+        quote: "Less than CLB 4  | 0  | 0"
+      - chunk_id: guidance/crs-criteria.md#006
+        quote: "CLB 4 or 5  | 6  | 6"
+      - chunk_id: guidance/crs-criteria.md#006
+        quote: "CLB 6  | 8  | 9"
+      - chunk_id: guidance/crs-criteria.md#006
+        quote: "CLB 7  | 16  | 17"
+      - chunk_id: guidance/crs-criteria.md#006
+        quote: "CLB 8  | 22  | 23"
+      - chunk_id: guidance/crs-criteria.md#006
+        quote: "CLB 10 or more  | 32  | 34"
+    machine_check:
+      kind: points_table
+      field: clb_per_ability
+      points_by_level:
+        - label: clb9_with_spouse
+          level: 9
+          points: 29
+          citation_index: 0
+        - label: clb9_without_spouse
+          level: 9
+          points: 31
+          citation_index: 0
+        - label: clb3_with_spouse
+          level: 3
+          points: 0
+          citation_index: 1
+        - label: clb3_without_spouse
+          level: 3
+          points: 0
+          citation_index: 1
+        - label: clb4_with_spouse
+          level: 4
+          points: 6
+          citation_index: 2
+        - label: clb4_without_spouse
+          level: 4
+          points: 6
+          citation_index: 2
+        - label: clb5_with_spouse
+          level: 5
+          points: 6
+          citation_index: 2
+        - label: clb5_without_spouse
+          level: 5
+          points: 6
+          citation_index: 2
+        - label: clb6_with_spouse
+          level: 6
+          points: 8
+          citation_index: 3
+        - label: clb6_without_spouse
+          level: 6
+          points: 9
+          citation_index: 3
+        - label: clb7_with_spouse
+          level: 7
+          points: 16
+          citation_index: 4
+        - label: clb7_without_spouse
+          level: 7
+          points: 17
+          citation_index: 4
+        - label: clb8_with_spouse
+          level: 8
+          points: 22
+          citation_index: 5
+        - label: clb8_without_spouse
+          level: 8
+          points: 23
+          citation_index: 5
+        - label: clb10_with_spouse
+          level: 10
+          points: 32
+          citation_index: 6
+        - label: clb10_without_spouse
+          level: 10
+          points: 34
+          citation_index: 6
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.language.conversion.celpip
+    factor_group: core_human_capital
+    factor_ids: [core.language.conversion]
+    check_type: conversion
+    query: CELPIP CLB level
+    selector:
+      family: language
+      marker: "CELPIP (General)   | CLB level"
+    claim_text: >-
+      CELPIP-General raw ability scores convert to a CLB level for reading, writing,
+      listening and speaking per the language test equivalency chart.
+    citations:
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "CELPIP (General)"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**10**  | 10  | 10  | 10  | 10"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**9**  | 9  | 9  | 9  | 9"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**8**  | 8  | 8  | 8  | 8"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**7**  | 7  | 7  | 7  | 7"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**6**  | 6  | 6  | 6  | 6"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**5**  | 5  | 5  | 5  | 5"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**4**  | 4  | 4  | 4  | 4"
+    machine_check:
+      kind: conversion
+      field: clb
+      points_by_level:
+        - test_type: CELPIP-General
+          ability: reading
+          level: 10
+          min_score: 10
+          max_score: 10
+          citation_index: 1
+        - test_type: CELPIP-General
+          ability: writing
+          level: 10
+          min_score: 10
+          max_score: 10
+          citation_index: 1
+        - test_type: CELPIP-General
+          ability: listening
+          level: 10
+          min_score: 10
+          max_score: 10
+          citation_index: 1
+        - test_type: CELPIP-General
+          ability: speaking
+          level: 10
+          min_score: 10
+          max_score: 10
+          citation_index: 1
+        - test_type: CELPIP-General
+          ability: reading
+          level: 9
+          min_score: 9
+          max_score: 9
+          citation_index: 2
+        - test_type: CELPIP-General
+          ability: writing
+          level: 9
+          min_score: 9
+          max_score: 9
+          citation_index: 2
+        - test_type: CELPIP-General
+          ability: listening
+          level: 9
+          min_score: 9
+          max_score: 9
+          citation_index: 2
+        - test_type: CELPIP-General
+          ability: speaking
+          level: 9
+          min_score: 9
+          max_score: 9
+          citation_index: 2
+        - test_type: CELPIP-General
+          ability: reading
+          level: 8
+          min_score: 8
+          max_score: 8
+          citation_index: 3
+        - test_type: CELPIP-General
+          ability: writing
+          level: 8
+          min_score: 8
+          max_score: 8
+          citation_index: 3
+        - test_type: CELPIP-General
+          ability: listening
+          level: 8
+          min_score: 8
+          max_score: 8
+          citation_index: 3
+        - test_type: CELPIP-General
+          ability: speaking
+          level: 8
+          min_score: 8
+          max_score: 8
+          citation_index: 3
+        - test_type: CELPIP-General
+          ability: reading
+          level: 7
+          min_score: 7
+          max_score: 7
+          citation_index: 4
+        - test_type: CELPIP-General
+          ability: writing
+          level: 7
+          min_score: 7
+          max_score: 7
+          citation_index: 4
+        - test_type: CELPIP-General
+          ability: listening
+          level: 7
+          min_score: 7
+          max_score: 7
+          citation_index: 4
+        - test_type: CELPIP-General
+          ability: speaking
+          level: 7
+          min_score: 7
+          max_score: 7
+          citation_index: 4
+        - test_type: CELPIP-General
+          ability: reading
+          level: 6
+          min_score: 6
+          max_score: 6
+          citation_index: 5
+        - test_type: CELPIP-General
+          ability: writing
+          level: 6
+          min_score: 6
+          max_score: 6
+          citation_index: 5
+        - test_type: CELPIP-General
+          ability: listening
+          level: 6
+          min_score: 6
+          max_score: 6
+          citation_index: 5
+        - test_type: CELPIP-General
+          ability: speaking
+          level: 6
+          min_score: 6
+          max_score: 6
+          citation_index: 5
+        - test_type: CELPIP-General
+          ability: reading
+          level: 5
+          min_score: 5
+          max_score: 5
+          citation_index: 6
+        - test_type: CELPIP-General
+          ability: writing
+          level: 5
+          min_score: 5
+          max_score: 5
+          citation_index: 6
+        - test_type: CELPIP-General
+          ability: listening
+          level: 5
+          min_score: 5
+          max_score: 5
+          citation_index: 6
+        - test_type: CELPIP-General
+          ability: speaking
+          level: 5
+          min_score: 5
+          max_score: 5
+          citation_index: 6
+        - test_type: CELPIP-General
+          ability: reading
+          level: 4
+          min_score: 4
+          max_score: 4
+          citation_index: 7
+        - test_type: CELPIP-General
+          ability: writing
+          level: 4
+          min_score: 4
+          max_score: 4
+          citation_index: 7
+        - test_type: CELPIP-General
+          ability: listening
+          level: 4
+          min_score: 4
+          max_score: 4
+          citation_index: 7
+        - test_type: CELPIP-General
+          ability: speaking
+          level: 4
+          min_score: 4
+          max_score: 4
+          citation_index: 7
+    volatility:
+      volatility: volatile
+      source_family: language
+      crawl_date: "2026-06-11T01:09:50Z"
+
+  - rule_id: core.language.conversion.ielts
+    factor_group: core_human_capital
+    factor_ids: [core.language.conversion]
+    check_type: conversion
+    query: IELTS CLB level
+    selector:
+      family: language
+      marker: "IELTS (General Training)   | CLB level"
+    claim_text: >-
+      IELTS General Training raw ability scores convert to a CLB level for reading, writing,
+      listening and speaking per the language test equivalency chart.
+    citations:
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "IELTS (General Training)"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**10**  | 8.0  | 7.5  | 8.5  | 7.5"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**9**  | 7.0  | 7.0  | 8.0  | 7.0"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**8**  | 6.5  | 6.5  | 7.5  | 6.5"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**7**  | 6.0  | 6.0  | 6.0  | 6.0"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**6**  | 5.0  | 5.5  | 5.5  | 5.5"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**5**  | 4.0  | 5.0  | 5.0  | 5.0"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**4**  | 3.5  | 4.0  | 4.5  | 4.0"
+    machine_check:
+      kind: conversion
+      field: clb
+      points_by_level:
+        - test_type: IELTS General Training
+          ability: reading
+          level: 10
+          min_score: 8
+          max_score: 9
+          citation_index: 1
+        - test_type: IELTS General Training
+          ability: writing
+          level: 10
+          min_score: 7.5
+          max_score: 9
+          citation_index: 1
+        - test_type: IELTS General Training
+          ability: listening
+          level: 10
+          min_score: 8.5
+          max_score: 9
+          citation_index: 1
+        - test_type: IELTS General Training
+          ability: speaking
+          level: 10
+          min_score: 7.5
+          max_score: 9
+          citation_index: 1
+        - test_type: IELTS General Training
+          ability: reading
+          level: 9
+          min_score: 7
+          max_score: 7.5
+          citation_index: 2
+        - test_type: IELTS General Training
+          ability: writing
+          level: 9
+          min_score: 7
+          max_score: 7
+          citation_index: 2
+        - test_type: IELTS General Training
+          ability: listening
+          level: 9
+          min_score: 8
+          max_score: 8
+          citation_index: 2
+        - test_type: IELTS General Training
+          ability: speaking
+          level: 9
+          min_score: 7
+          max_score: 7
+          citation_index: 2
+        - test_type: IELTS General Training
+          ability: reading
+          level: 8
+          min_score: 6.5
+          max_score: 6.5
+          citation_index: 3
+        - test_type: IELTS General Training
+          ability: writing
+          level: 8
+          min_score: 6.5
+          max_score: 6.5
+          citation_index: 3
+        - test_type: IELTS General Training
+          ability: listening
+          level: 8
+          min_score: 7.5
+          max_score: 7.5
+          citation_index: 3
+        - test_type: IELTS General Training
+          ability: speaking
+          level: 8
+          min_score: 6.5
+          max_score: 6.5
+          citation_index: 3
+        - test_type: IELTS General Training
+          ability: reading
+          level: 7
+          min_score: 6
+          max_score: 6
+          citation_index: 4
+        - test_type: IELTS General Training
+          ability: writing
+          level: 7
+          min_score: 6
+          max_score: 6
+          citation_index: 4
+        - test_type: IELTS General Training
+          ability: listening
+          level: 7
+          min_score: 6
+          max_score: 7
+          citation_index: 4
+        - test_type: IELTS General Training
+          ability: speaking
+          level: 7
+          min_score: 6
+          max_score: 6
+          citation_index: 4
+        - test_type: IELTS General Training
+          ability: reading
+          level: 6
+          min_score: 5
+          max_score: 5.5
+          citation_index: 5
+        - test_type: IELTS General Training
+          ability: writing
+          level: 6
+          min_score: 5.5
+          max_score: 5.5
+          citation_index: 5
+        - test_type: IELTS General Training
+          ability: listening
+          level: 6
+          min_score: 5.5
+          max_score: 5.5
+          citation_index: 5
+        - test_type: IELTS General Training
+          ability: speaking
+          level: 6
+          min_score: 5.5
+          max_score: 5.5
+          citation_index: 5
+        - test_type: IELTS General Training
+          ability: reading
+          level: 5
+          min_score: 4
+          max_score: 4.5
+          citation_index: 6
+        - test_type: IELTS General Training
+          ability: writing
+          level: 5
+          min_score: 5
+          max_score: 5
+          citation_index: 6
+        - test_type: IELTS General Training
+          ability: listening
+          level: 5
+          min_score: 5
+          max_score: 5
+          citation_index: 6
+        - test_type: IELTS General Training
+          ability: speaking
+          level: 5
+          min_score: 5
+          max_score: 5
+          citation_index: 6
+        - test_type: IELTS General Training
+          ability: reading
+          level: 4
+          min_score: 3.5
+          max_score: 3.5
+          citation_index: 7
+        - test_type: IELTS General Training
+          ability: writing
+          level: 4
+          min_score: 4
+          max_score: 4.5
+          citation_index: 7
+        - test_type: IELTS General Training
+          ability: listening
+          level: 4
+          min_score: 4.5
+          max_score: 4.5
+          citation_index: 7
+        - test_type: IELTS General Training
+          ability: speaking
+          level: 4
+          min_score: 4
+          max_score: 4.5
+          citation_index: 7
+    volatility:
+      volatility: volatile
+      source_family: language
+      crawl_date: "2026-06-11T01:09:50Z"
+
+  - rule_id: core.language.conversion.pte
+    factor_group: core_human_capital
+    factor_ids: [core.language.conversion]
+    check_type: conversion
+    query: PTE Core CLB level
+    selector:
+      family: language
+      marker: "PTE Core   | CLB level"
+    claim_text: >-
+      PTE Core raw ability scores convert to a CLB level for reading, writing,
+      listening and speaking per the language test equivalency chart.
+    citations:
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "PTE Core"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**10**  | 88-90  | 90  | 89-90  | 89-90"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**9**  | 78-87  | 88-89  | 82-88  | 84-88"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**8**  | 69-77  | 79-87  | 71-81  | 76-83"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**7**  | 60-68  | 69-78  | 60-70  | 68-75"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**6**  | 51-59  | 60-68  | 50-59  | 59-67"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**5**  | 42-50  | 51-59  | 39-49  | 51-58"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**4**  | 33-41  | 41-50  | 28-38  | 42-50"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**3**  | 24-32  | 32-40  | 18-27  | 34-41"
+    machine_check:
+      kind: conversion
+      field: clb
+      points_by_level:
+        - test_type: PTE Core
+          ability: reading
+          level: 10
+          min_score: 88
+          max_score: 90
+          citation_index: 1
+        - test_type: PTE Core
+          ability: writing
+          level: 10
+          min_score: 90
+          max_score: 90
+          citation_index: 1
+        - test_type: PTE Core
+          ability: listening
+          level: 10
+          min_score: 89
+          max_score: 90
+          citation_index: 1
+        - test_type: PTE Core
+          ability: speaking
+          level: 10
+          min_score: 89
+          max_score: 90
+          citation_index: 1
+        - test_type: PTE Core
+          ability: reading
+          level: 9
+          min_score: 78
+          max_score: 87
+          citation_index: 2
+        - test_type: PTE Core
+          ability: writing
+          level: 9
+          min_score: 88
+          max_score: 89
+          citation_index: 2
+        - test_type: PTE Core
+          ability: listening
+          level: 9
+          min_score: 82
+          max_score: 88
+          citation_index: 2
+        - test_type: PTE Core
+          ability: speaking
+          level: 9
+          min_score: 84
+          max_score: 88
+          citation_index: 2
+        - test_type: PTE Core
+          ability: reading
+          level: 8
+          min_score: 69
+          max_score: 77
+          citation_index: 3
+        - test_type: PTE Core
+          ability: writing
+          level: 8
+          min_score: 79
+          max_score: 87
+          citation_index: 3
+        - test_type: PTE Core
+          ability: listening
+          level: 8
+          min_score: 71
+          max_score: 81
+          citation_index: 3
+        - test_type: PTE Core
+          ability: speaking
+          level: 8
+          min_score: 76
+          max_score: 83
+          citation_index: 3
+        - test_type: PTE Core
+          ability: reading
+          level: 7
+          min_score: 60
+          max_score: 68
+          citation_index: 4
+        - test_type: PTE Core
+          ability: writing
+          level: 7
+          min_score: 69
+          max_score: 78
+          citation_index: 4
+        - test_type: PTE Core
+          ability: listening
+          level: 7
+          min_score: 60
+          max_score: 70
+          citation_index: 4
+        - test_type: PTE Core
+          ability: speaking
+          level: 7
+          min_score: 68
+          max_score: 75
+          citation_index: 4
+        - test_type: PTE Core
+          ability: reading
+          level: 6
+          min_score: 51
+          max_score: 59
+          citation_index: 5
+        - test_type: PTE Core
+          ability: writing
+          level: 6
+          min_score: 60
+          max_score: 68
+          citation_index: 5
+        - test_type: PTE Core
+          ability: listening
+          level: 6
+          min_score: 50
+          max_score: 59
+          citation_index: 5
+        - test_type: PTE Core
+          ability: speaking
+          level: 6
+          min_score: 59
+          max_score: 67
+          citation_index: 5
+        - test_type: PTE Core
+          ability: reading
+          level: 5
+          min_score: 42
+          max_score: 50
+          citation_index: 6
+        - test_type: PTE Core
+          ability: writing
+          level: 5
+          min_score: 51
+          max_score: 59
+          citation_index: 6
+        - test_type: PTE Core
+          ability: listening
+          level: 5
+          min_score: 39
+          max_score: 49
+          citation_index: 6
+        - test_type: PTE Core
+          ability: speaking
+          level: 5
+          min_score: 51
+          max_score: 58
+          citation_index: 6
+        - test_type: PTE Core
+          ability: reading
+          level: 4
+          min_score: 33
+          max_score: 41
+          citation_index: 7
+        - test_type: PTE Core
+          ability: writing
+          level: 4
+          min_score: 41
+          max_score: 50
+          citation_index: 7
+        - test_type: PTE Core
+          ability: listening
+          level: 4
+          min_score: 28
+          max_score: 38
+          citation_index: 7
+        - test_type: PTE Core
+          ability: speaking
+          level: 4
+          min_score: 42
+          max_score: 50
+          citation_index: 7
+        - test_type: PTE Core
+          ability: reading
+          level: 3
+          min_score: 24
+          max_score: 32
+          citation_index: 8
+        - test_type: PTE Core
+          ability: writing
+          level: 3
+          min_score: 32
+          max_score: 40
+          citation_index: 8
+        - test_type: PTE Core
+          ability: listening
+          level: 3
+          min_score: 18
+          max_score: 27
+          citation_index: 8
+        - test_type: PTE Core
+          ability: speaking
+          level: 3
+          min_score: 34
+          max_score: 41
+          citation_index: 8
+    volatility:
+      volatility: volatile
+      source_family: language
+      crawl_date: "2026-06-11T01:09:50Z"
+
+  - rule_id: core.language.conversion.tef
+    factor_group: core_human_capital
+    factor_ids: [core.language.conversion]
+    check_type: conversion
+    query: TEF Canada NCLC level
+    selector:
+      family: language
+      marker: "TEF Canada If you took your test after December 10, 2023"
+    claim_text: >-
+      TEF Canada raw ability scores convert to a NCLC level for reading, writing,
+      listening and speaking per the language test equivalency chart.
+    citations:
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "TEF Canada If you took your test after December 10, 2023"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**10**  | 546-699  | 558-699  | 546-699  | 556-699"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**9**  | 503-545  | 512-557  | 503-545  | 518-555"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**8**  | 462-502  | 472-511  | 462-502  | 494-517"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**7**  | 434-461  | 428-471  | 434-461  | 456-493"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**6**  | 393-433  | 379-427  | 393-433  | 422-455"
+      - chunk_id: language/test-equivalency-charts.md#002
+        quote: "**5**  | 352-392  | 330-378  | 352-392  | 387-421"
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "**4**  | 306-351  | 268-329  | 306-351  | 328-386"
+    machine_check:
+      kind: conversion
+      field: clb
+      points_by_level:
+        - test_type: TEF Canada
+          ability: reading
+          level: 10
+          min_score: 546
+          max_score: 699
+          citation_index: 1
+        - test_type: TEF Canada
+          ability: writing
+          level: 10
+          min_score: 558
+          max_score: 699
+          citation_index: 1
+        - test_type: TEF Canada
+          ability: listening
+          level: 10
+          min_score: 546
+          max_score: 699
+          citation_index: 1
+        - test_type: TEF Canada
+          ability: speaking
+          level: 10
+          min_score: 556
+          max_score: 699
+          citation_index: 1
+        - test_type: TEF Canada
+          ability: reading
+          level: 9
+          min_score: 503
+          max_score: 545
+          citation_index: 2
+        - test_type: TEF Canada
+          ability: writing
+          level: 9
+          min_score: 512
+          max_score: 557
+          citation_index: 2
+        - test_type: TEF Canada
+          ability: listening
+          level: 9
+          min_score: 503
+          max_score: 545
+          citation_index: 2
+        - test_type: TEF Canada
+          ability: speaking
+          level: 9
+          min_score: 518
+          max_score: 555
+          citation_index: 2
+        - test_type: TEF Canada
+          ability: reading
+          level: 8
+          min_score: 462
+          max_score: 502
+          citation_index: 3
+        - test_type: TEF Canada
+          ability: writing
+          level: 8
+          min_score: 472
+          max_score: 511
+          citation_index: 3
+        - test_type: TEF Canada
+          ability: listening
+          level: 8
+          min_score: 462
+          max_score: 502
+          citation_index: 3
+        - test_type: TEF Canada
+          ability: speaking
+          level: 8
+          min_score: 494
+          max_score: 517
+          citation_index: 3
+        - test_type: TEF Canada
+          ability: reading
+          level: 7
+          min_score: 434
+          max_score: 461
+          citation_index: 4
+        - test_type: TEF Canada
+          ability: writing
+          level: 7
+          min_score: 428
+          max_score: 471
+          citation_index: 4
+        - test_type: TEF Canada
+          ability: listening
+          level: 7
+          min_score: 434
+          max_score: 461
+          citation_index: 4
+        - test_type: TEF Canada
+          ability: speaking
+          level: 7
+          min_score: 456
+          max_score: 493
+          citation_index: 4
+        - test_type: TEF Canada
+          ability: reading
+          level: 6
+          min_score: 393
+          max_score: 433
+          citation_index: 5
+        - test_type: TEF Canada
+          ability: writing
+          level: 6
+          min_score: 379
+          max_score: 427
+          citation_index: 5
+        - test_type: TEF Canada
+          ability: listening
+          level: 6
+          min_score: 393
+          max_score: 433
+          citation_index: 5
+        - test_type: TEF Canada
+          ability: speaking
+          level: 6
+          min_score: 422
+          max_score: 455
+          citation_index: 5
+        - test_type: TEF Canada
+          ability: reading
+          level: 5
+          min_score: 352
+          max_score: 392
+          citation_index: 6
+        - test_type: TEF Canada
+          ability: writing
+          level: 5
+          min_score: 330
+          max_score: 378
+          citation_index: 6
+        - test_type: TEF Canada
+          ability: listening
+          level: 5
+          min_score: 352
+          max_score: 392
+          citation_index: 6
+        - test_type: TEF Canada
+          ability: speaking
+          level: 5
+          min_score: 387
+          max_score: 421
+          citation_index: 6
+        - test_type: TEF Canada
+          ability: reading
+          level: 4
+          min_score: 306
+          max_score: 351
+          citation_index: 7
+        - test_type: TEF Canada
+          ability: writing
+          level: 4
+          min_score: 268
+          max_score: 329
+          citation_index: 7
+        - test_type: TEF Canada
+          ability: listening
+          level: 4
+          min_score: 306
+          max_score: 351
+          citation_index: 7
+        - test_type: TEF Canada
+          ability: speaking
+          level: 4
+          min_score: 328
+          max_score: 386
+          citation_index: 7
+    volatility:
+      volatility: volatile
+      source_family: language
+      crawl_date: "2026-06-11T01:09:50Z"
+
+  - rule_id: core.language.conversion.tcf
+    factor_group: core_human_capital
+    factor_ids: [core.language.conversion]
+    check_type: conversion
+    query: TCF Canada NCLC level
+    selector:
+      family: language
+      marker: "TCF Canada   | NCLC level"
+    claim_text: >-
+      TCF Canada raw ability scores convert to a NCLC level for reading, writing,
+      listening and speaking per the language test equivalency chart.
+    citations:
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "TCF Canada"
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "**10**  | 549-699  | 16-20  | 549-699  | 16-20"
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "**9**  | 524-548  | 14-15  | 523-548  | 14-15"
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "**8**  | 499-523  | 12-13  | 503-522  | 12-13"
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "**7**  | 453-498  | 10-11  | 458-502  | 10-11"
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "**6**  | 406-452  | 7-9  | 398-457  | 7-9"
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "**5**  | 375-405  | 6  | 369-397  | 6"
+      - chunk_id: language/test-equivalency-charts.md#003
+        quote: "**4**  | 342-374  | 4-5  | 331-368  | 4-5"
+    machine_check:
+      kind: conversion
+      field: clb
+      points_by_level:
+        - test_type: TCF Canada
+          ability: reading
+          level: 10
+          min_score: 549
+          max_score: 699
+          citation_index: 1
+        - test_type: TCF Canada
+          ability: writing
+          level: 10
+          min_score: 16
+          max_score: 20
+          citation_index: 1
+        - test_type: TCF Canada
+          ability: listening
+          level: 10
+          min_score: 549
+          max_score: 699
+          citation_index: 1
+        - test_type: TCF Canada
+          ability: speaking
+          level: 10
+          min_score: 16
+          max_score: 20
+          citation_index: 1
+        - test_type: TCF Canada
+          ability: reading
+          level: 9
+          min_score: 524
+          max_score: 548
+          citation_index: 2
+        - test_type: TCF Canada
+          ability: writing
+          level: 9
+          min_score: 14
+          max_score: 15
+          citation_index: 2
+        - test_type: TCF Canada
+          ability: listening
+          level: 9
+          min_score: 523
+          max_score: 548
+          citation_index: 2
+        - test_type: TCF Canada
+          ability: speaking
+          level: 9
+          min_score: 14
+          max_score: 15
+          citation_index: 2
+        - test_type: TCF Canada
+          ability: reading
+          level: 8
+          min_score: 499
+          max_score: 523
+          citation_index: 3
+        - test_type: TCF Canada
+          ability: writing
+          level: 8
+          min_score: 12
+          max_score: 13
+          citation_index: 3
+        - test_type: TCF Canada
+          ability: listening
+          level: 8
+          min_score: 503
+          max_score: 522
+          citation_index: 3
+        - test_type: TCF Canada
+          ability: speaking
+          level: 8
+          min_score: 12
+          max_score: 13
+          citation_index: 3
+        - test_type: TCF Canada
+          ability: reading
+          level: 7
+          min_score: 453
+          max_score: 498
+          citation_index: 4
+        - test_type: TCF Canada
+          ability: writing
+          level: 7
+          min_score: 10
+          max_score: 11
+          citation_index: 4
+        - test_type: TCF Canada
+          ability: listening
+          level: 7
+          min_score: 458
+          max_score: 502
+          citation_index: 4
+        - test_type: TCF Canada
+          ability: speaking
+          level: 7
+          min_score: 10
+          max_score: 11
+          citation_index: 4
+        - test_type: TCF Canada
+          ability: reading
+          level: 6
+          min_score: 406
+          max_score: 452
+          citation_index: 5
+        - test_type: TCF Canada
+          ability: writing
+          level: 6
+          min_score: 7
+          max_score: 9
+          citation_index: 5
+        - test_type: TCF Canada
+          ability: listening
+          level: 6
+          min_score: 398
+          max_score: 457
+          citation_index: 5
+        - test_type: TCF Canada
+          ability: speaking
+          level: 6
+          min_score: 7
+          max_score: 9
+          citation_index: 5
+        - test_type: TCF Canada
+          ability: reading
+          level: 5
+          min_score: 375
+          max_score: 405
+          citation_index: 6
+        - test_type: TCF Canada
+          ability: writing
+          level: 5
+          min_score: 6
+          max_score: 6
+          citation_index: 6
+        - test_type: TCF Canada
+          ability: listening
+          level: 5
+          min_score: 369
+          max_score: 397
+          citation_index: 6
+        - test_type: TCF Canada
+          ability: speaking
+          level: 5
+          min_score: 6
+          max_score: 6
+          citation_index: 6
+        - test_type: TCF Canada
+          ability: reading
+          level: 4
+          min_score: 342
+          max_score: 374
+          citation_index: 7
+        - test_type: TCF Canada
+          ability: writing
+          level: 4
+          min_score: 4
+          max_score: 5
+          citation_index: 7
+        - test_type: TCF Canada
+          ability: listening
+          level: 4
+          min_score: 331
+          max_score: 368
+          citation_index: 7
+        - test_type: TCF Canada
+          ability: speaking
+          level: 4
+          min_score: 4
+          max_score: 5
+          citation_index: 7
+    volatility:
+      volatility: volatile
+      source_family: language
+      crawl_date: "2026-06-11T01:09:50Z"
+
+  - rule_id: core.language.second.points
+    factor_group: core_human_capital
+    factor_ids: [core.language.second]
+    check_type: points
+    query: combined maximum ability
+    selector:
+      family: guidance
+      marker: "up to a combined maximum of 24 points"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+    claim_text: >-
+      Second official language points are awarded per ability under the same
+      accepted-test and validity rules, with a lower combined maximum than the
+      first language.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#007
+        quote: "up to a combined maximum of 24 points"
+    machine_check:
+      kind: points_table
+      field: clb_per_ability
+      points_by_level:
+        - label: clb9_or_more_without_spouse
+          level: 9
+          points: 6
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.work.definition
+    factor_group: core_human_capital
+    factor_ids: [core.work]
+    check_type: admissibility
+    query: NOC TEER categories skilled
+    selector:
+      family: guidance
+      marker: "training, education, experience and responsibilities (TEER) 0, 1, 2, or 3"
+    claim_text: >-
+      Eligible Canadian work experience must be skilled (NOC TEER 0-3) and
+      gained in Canada while authorized to work.
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#002
+        quote: "be in 1 or more of these NOC categories: training, education, experience and responsibilities (TEER) 0, 1, 2, or 3"
+    machine_check:
+      kind: accepted_enum
+      field: teer
+      accepted_values:
+        - value: "0"
+          citation_index: 0
+        - value: "1"
+          citation_index: 0
+        - value: "2"
+          citation_index: 0
+        - value: "3"
+          citation_index: 0
+    volatility:
+      volatility: stable
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.work.hours
+    factor_group: core_human_capital
+    factor_ids: [core.work]
+    check_type: threshold
+    query: part-time work full time hours
+    selector:
+      family: guidance
+      marker: "up to 30 hours a week for 12 months"
+    claim_text: >-
+      Full-time equivalence is measured at the stated weekly-hours ceiling; work
+      above full-time hours does not over-count toward the requirement.
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#004
+        quote: "up to 30 hours a week for 12 months = 1 year full time (1,560 hours)"
+    machine_check:
+      kind: threshold
+      field: hours_per_week
+      max_value: 30
+      citation_index: 0
+    volatility:
+      volatility: stable
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: core.work.exclusions
+    factor_group: core_human_capital
+    factor_ids: [core.work]
+    check_type: admissibility
+    query: self-employment student experience count
+    selector:
+      family: guidance
+      marker: "Self-employment and work experience gained while you were a full-time student"
+    claim_text: >-
+      Self-employment and work gained while a full-time student do not count
+      toward eligible Canadian work experience.
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#005
+        quote: "Self-employment and work experience gained while you were a full-time student"
+    machine_check:
+      kind: policy_flag
+      field: excluded_self_employment_and_study
+      flag_value: true
+      citation_index: 0
+    volatility:
+      volatility: stable
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"

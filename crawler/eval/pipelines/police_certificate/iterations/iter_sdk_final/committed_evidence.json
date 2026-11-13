@@ -1,0 +1,24 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "police_certificate",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/police_certificate/judge.json": "af8517da17da7db08d69786a2d12bf88a1c8426be4859ab8f28be75f13b2e793",
+    "documents/police_certificate/shared_evaluation.json": "cd9b780a9157fb1a3614b25daa571f8f910d17957da0a2c792ef3731233739d7",
+    "documents/police_certificate/workers/00195703b570ce064add36cf1f9f2e73.json": "a6b7e23adda9c01b3afe5972f29a30156349179b60052a4e92be68e2a9dcabd2",
+    "documents/police_certificate/workers/0b687fadca0d1150a50e3b7b7a559f44.json": "664e58590e8041a13b715f3f7349c28049f5913140b32baddeb1bff06313d7c5",
+    "documents/police_certificate/workers/2ba60f34da8c27a2749030008ce1455e.json": "f545f5ed167a16fc02e572f667b502ae53cc8adea992c5ad93e5c1d389cb3132",
+    "documents/police_certificate/workers/45955a9e84cd0c3dddd8f9f36bdb0c42.json": "f400dc92875ff176a7ec24b168900459e2a4ec399527b905b88573f9570330b8",
+    "documents/police_certificate/workers/5b9c88842ae98195505a86f1a846271d.json": "52d19db13ec9405e9f7af5babe9ad288030aa420d9a0b6d1a345826cab945289",
+    "documents/police_certificate/workers/7274354eeb6a02e9118d5cc6da637a10.json": "f7c6fd205d37ad2f97f0867899b9dbb7a5c687cce2ac8ef4e466269bc5d3a034",
+    "documents/police_certificate/workers/8724cfb1cbb69a3527f94b3a3d770654.json": "653841d86189dce828caa3acda05cb684fbee1584077a738fa63c90b36264309",
+    "documents/police_certificate/workers/90aee43f4fe4814560fc96a0cd48ed8e.json": "078a9b187012fcbf9fec6aa7a18f5944804c9dfa84c5af9f8da64a7b8481e0a7",
+    "documents/police_certificate/workers/e2e11d1542e49ce9727409292c6c5e50.json": "edd88c20aa14ba082ae89b032039f7ab613abdea9e17f63ed48038a3212b9bad",
+    "documents/police_certificate/workers/e61ac121842319c5790f1d465cf894a8.json": "e5f65e141c37ff833171fa91455392043fdd1234e98fd92d00564ea888de58ec",
+    "documents/police_certificate/workers/f1172b9588913c916aaf068448e3350c.json": "7915d094da12e53d9b80560a230daa28c35088328f809d8fb5c2fd457d29c6a3",
+    "documents/police_certificate/workers/f5feb507bfa2b32e70ad8385aded7626.json": "e00f0275e54479954fc668f29834e7c6bd1b4df95d2dc540a7416a072b304847"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

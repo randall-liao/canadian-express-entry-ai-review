@@ -1,0 +1,54 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Express Entry applicants must provide proof of completed Canadian or foreign educational credentials, including copies of education documents and transcripts.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of      * secondary or post-secondary education documents (certificates, diplomas or degrees); and     * transcripts for successfully completed secondary or post-secondary studies, if available."
+    }
+  ],
+  "basis": [
+    "The applicant submitted proof of completed educational credentials and transcripts for the proof_of_studies upload slot (opaque case ID: 65ed60c24d64b3cbf0c07c3d92b38586)."
+  ],
+  "abstentions": [],
+  "prose": "Express Entry applicants claiming points for education must provide proof of completed Canadian or foreign educational credentials, including copies of secondary or post-secondary education documents (certificates, diplomas, or degrees) and transcripts for successfully completed studies.",
+  "case_id": "65ed60c24d64b3cbf0c07c3d92b38586",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "65ed60c24d64b3cbf0c07c3d92b38586.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "195816a458df1ae9151716efe256508b9bae34bec34f22e9a34c3a04677466e9",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2b2d40a170ad72815969c52b906db214cdf801c0459d35fb3d319be3c30d5fbe",
+    "prompt_hash": "9cce9cb52a04eac0d35f5679593bf348f61c361bf44b80a18b6a5eba947071f6",
+    "output_hash": "dbed3378f9da3abde0d42ae51bbefd20ff3007694b1bef4e529fb9c7c26a7638",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:41:07.900406+00:00",
+    "provenance_digest": "f54ee6b524aaf1fec61ace9e09016c1cb51e62e3c22f487f1677673fa7cfbce9"
+  }
+}

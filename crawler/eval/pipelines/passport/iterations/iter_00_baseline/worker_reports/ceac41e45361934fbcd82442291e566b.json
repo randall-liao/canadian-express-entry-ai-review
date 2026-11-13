@@ -1,0 +1,54 @@
+{
+  "question": "What passport or travel document copy must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "passport-bio-page",
+      "text": "A clear and legible copy of the biographical data page of a passport or travel document must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#016"
+      ],
+      "quote": "A clear and legible copy of the biographical data page of a passport or travel document must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant provided a 1-page scanned PDF document for the passport upload slot under case ID ceac41e45361934fbcd82442291e566b, making the passport requirement applicable."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "ceac41e45361934fbcd82442291e566b",
+  "doc_type": "passport",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ceac41e45361934fbcd82442291e566b.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "01e0426933e1e81175653c0000ba54a7a973c3b7750f4f66ccbfed0ff54c775b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c726e0e3d37a597de0dda5fd0dd1b96e152539ecd72e738cd5fd2096833190a7",
+    "prompt_hash": "171e1b316bc8bec6199ae8aca14f8aa0ed51b5ceaa9c5c6a5022b709fdb94a6e",
+    "output_hash": "71adf0940e0321f31e28e99a0f1829e6397bbd34089c80b419f8c3d6f5436495",
+    "returncode": 0,
+    "timestamp": "2026-07-23T14:49:00.596665+00:00",
+    "provenance_digest": "b48e97487bad1fe90855fba2ea6e0f6c134b0b312510c331aa831e2515c4dd55"
+  }
+}

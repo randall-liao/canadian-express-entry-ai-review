@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-certificate-requirement",
+      "text": "A copy of a legal marriage certificate issued by the province, territory, country, or region where the marriage took place must be provided when marital status is listed as married, and the marriage must be valid under both Canadian law and the law of the place where it occurred.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "* This document is requested only when marital status is listed as married.\n  * The marriage must be valid under the law of the country where it took place and under Canadian law. \n    * A marriage performed in an embassy or consulate must comply with the law of the host country where it took place, not the country of nationality of the embassy or consulate.\n  * If the applicant married in Canada, a copy of the marriage certificate issued by the province or territory where the marriage took place must be provided.\n  * If the applicant married outside Canada, a copy of a legal certificate issued by the country, the territory or the region where the marriage took place must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a document in the marriage_certificate upload slot for Express Entry case 9b6fdcf58ace208994d99a6b21d82453."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "9b6fdcf58ace208994d99a6b21d82453",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "9b6fdcf58ace208994d99a6b21d82453.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "802afac6789f4d7d8bfb010a982e5d616be30ce984f53df3e4bf84fab3c2609c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "328c1537d7a24ab66576fb71af807091e040ae378f118d3952b32275e6f3c6d5",
+    "prompt_hash": "455494c10f53183950536cce8139c47d75ba61b455685e949473ec9bcfb31e4b",
+    "output_hash": "62628b223f862061378b13d84d9f759435dc06ec2523878b1c7b7e754ef634d8",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:39:40.381928+00:00",
+    "provenance_digest": "2ca2fabc18e8822bbdc5b355ce87fb7400f43df6bed7b52502bbf688323a5b74"
+  }
+}

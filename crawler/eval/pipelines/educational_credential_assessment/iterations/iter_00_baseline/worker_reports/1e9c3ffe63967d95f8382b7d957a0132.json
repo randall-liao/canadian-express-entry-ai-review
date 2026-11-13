@@ -1,0 +1,54 @@
+{
+  "question": "How must a foreign educational credential be assessed?",
+  "claims": [
+    {
+      "id": "eca",
+      "text": "Foreign educational credentials must be assessed by a designated organization to establish Canadian equivalency and authenticity.",
+      "citations": [
+        "eca/educational-credential-assessment.md#014"
+      ],
+      "quote": "ECA reports include the designated organization’s assessment of the authenticity of the applicant’s completed foreign educational credentials."
+    }
+  ],
+  "basis": [
+    "Educational credential assessment document submitted for case 1e9c3ffe63967d95f8382b7d957a0132 in slot type educational_credential_assessment."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "1e9c3ffe63967d95f8382b7d957a0132",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "1e9c3ffe63967d95f8382b7d957a0132.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "858af3efa01ed8f014232abaa1f232c8344d4affe85d44fc064accf273151653",
+    "allowed_text_sha256": null,
+    "bundle_hash": "3fba09ee6cc737403cf7f5bc2b1bff4b78d04d92506e4eed3415347a3598173c",
+    "prompt_hash": "52bc1da6943c730ed3517e92f2dd8e29e7cae1f94e0fa654a683817b919dfb37",
+    "output_hash": "c5da21a155438b29e8262953cc3f0293f4ce6aa3db20559c6de7e4c3f3c26b59",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:59:15.423263+00:00",
+    "provenance_digest": "aae1594a77978802fd317ede1e73aeb4fa19f5f7b252542bd3c8f1fea28962d8"
+  }
+}

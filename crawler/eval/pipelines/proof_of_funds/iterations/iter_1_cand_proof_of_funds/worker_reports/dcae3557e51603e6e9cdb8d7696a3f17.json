@@ -1,0 +1,55 @@
+{
+  "question": "What must the applicant's settlement funds satisfy?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "Settlement funds must be legally accessible, not borrowed, and not derived from real-property equity.",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "you can't use equity on real property as proof of settlement funds"
+    }
+  ],
+  "basis": [
+    "Applicants under the Federal Skilled Worker Class (FSWC) or Federal Skilled Trades Class (FSTC) must demonstrate sufficient unencumbered settlement funds unless they are currently authorized to work in Canada and hold a qualifying offer of arranged employment. Candidates invited under the Canadian Experience Class (CEC) are exempt from demonstrating settlement funds.",
+    "The applicant's specific program, declared family size, liquid account balances, 6-month average balances, and exemption eligibility are profile-level details evaluated in basis."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "dcae3557e51603e6e9cdb8d7696a3f17",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "dcae3557e51603e6e9cdb8d7696a3f17.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "cebfde2f353b4ca4b8c5d1bcf6507c59ff63f24780a5908d1d5bcb1eb7685a46",
+    "allowed_text_sha256": null,
+    "bundle_hash": "19d31602f6addcce52eb3db77bc26febb8b1ad858256dbe1c2cfa1d82a3ed8f1",
+    "prompt_hash": "5d8c5fc03b334b29fa122512fe074e1453087d8d9c0a4defe6adefffd09d163c",
+    "output_hash": "53db883837975df7e0812a6c5ccc2df2b2c342b772f434197143fac1e293216c",
+    "returncode": 0,
+    "timestamp": "2026-07-24T13:31:03.080398+00:00",
+    "provenance_digest": "b594ff9ec40b5489db0c9387abdee5971aa4b262cacda1790195ac9599594376"
+  }
+}

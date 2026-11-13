@@ -1,0 +1,55 @@
+{
+  "question": "What digital photos must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "digital-photos-spec",
+      "text": "Digital photos meeting IRCC's permanent resident card photo specifications must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#061"
+      ],
+      "quote": "Digital photos meeting [IRCC’s permanent resident card photo specifications (PDF, 614.24 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/information/applications/guides/pdf/5445eb-e.pdf) must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a document for case ID c3ab14c68d3930110ddcaacf939d3916 under the digital_photo upload-slot type.",
+    "Digital photo requirements apply to Express Entry e-APR applications for the principal applicant, spouse or common-law partner, and dependent children."
+  ],
+  "abstentions": [],
+  "prose": "Express Entry e-APR applicants must provide digital photos that meet IRCC's permanent resident card photo specifications.",
+  "case_id": "c3ab14c68d3930110ddcaacf939d3916",
+  "doc_type": "digital_photo",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c3ab14c68d3930110ddcaacf939d3916.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "221b4199e78e6c75cbf85ae85fb9817f73e03a274c798b09878a17f0bfcf2378",
+    "allowed_text_sha256": null,
+    "bundle_hash": "6cfcef53b5c2c79bb3d4aeacc136df21882a4974409ec1324f9ca311ae87c909",
+    "prompt_hash": "0fe477abaacc64aa3dfd1a2b3110942b1f8dfca8da05a2773cdc6dc9d87c8894",
+    "output_hash": "5eca949ce40481b9aba578d979d712c05e4e52b2856be716dc3afbac277eb4c7",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:01:32.756974+00:00",
+    "provenance_digest": "fe57ee7d53d91adb90e0ee7dd6c33eb72c555c972e069e229c5f84387d35a35c"
+  }
+}

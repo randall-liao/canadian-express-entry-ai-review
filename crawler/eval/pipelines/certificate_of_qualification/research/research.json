@@ -1,0 +1,141 @@
+{
+  "doc_type": "certificate_of_qualification",
+  "timestamp": "2026-07-23T03:40:11.783638+00:00",
+  "summary": "Comprehensive research on IRCC Express Entry operational guidelines and refusal patterns for 'certificate_of_qualification'. Key failure modes stem from submitting non-qualifying documents or unrecognized authority credentials, NOC classification mismatches between provincial certificates and profiles, expired trade seals or inactive provincial registrations, and claiming qualification points without meeting mandatory language or final exam thresholds.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:44:33.519645+00:00",
+    "duration_seconds": 276.761,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "38131ceffc95f180526866419f425aa4a479a56bde28088ce000851058d09c7b",
+    "raw_output_sha256": "5e8216273f6b56b43ed70e760c1bbaecfc8801137175ca6ea76f77f05f95a593",
+    "returncode": 0,
+    "provenance_token": "428841b8f7572ec62a636ce5a06e199f967c283e36b0c0ad4765249a598d177e",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 14,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-CERTIFIC-01",
+      "category": "pfl_unrecognized_authority",
+      "severity": "critical",
+      "title": "Submission of Unrecognized Provincial Trade Authority Certificate or Non-Qualifying Document",
+      "description": "The applicant claimed Express Entry CRS points (50 points) or eligibility under the Federal Skilled Trades Program (FSTP) by uploading an apprenticeship registration card, membership certificate, professional regulated license (e.g., P.Eng, CPA, RN), or diploma from a private training institute, rather than an official Certificate of Qualification issued by a recognized Canadian provincial/territorial trade regulatory body (e.g., Skilled Trades Ontario, SkilledTradesBC, Apprenticeship Manitoba) or federal body.",
+      "affected_fields": [
+        "issuing_authority",
+        "certificate_type",
+        "trade_name",
+        "crs_points_claimed"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "To be eligible, you must have a certificate of qualification in that skilled trade issued by a Canadian provincial, territorial or federal authority... Proof of a certificate of qualification must be issued by the governing body that regulates the trade in the province or territory where you plan to live.",
+      "remediation_hypothesis": "Obtain and submit an official Certificate of Qualification or Red Seal Certificate directly issued by the designated provincial or territorial skilled trades regulatory authority after passing the trade certification examination.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-CERTIFIC-02",
+      "category": "pfl_noc_mismatch",
+      "severity": "critical",
+      "title": "Trade NOC Mismatch Between Express Entry Profile and Provincial Qualification Certificate",
+      "description": "The applicant selected a specific 5-digit National Occupational Classification (NOC) code in their Express Entry profile, but the attached Certificate of Qualification specifies a different trade designation or non-matching NOC classification. IRCC officers verify that the trade for which the provincial qualification was granted directly corresponds to the eligible trade NOC code declared in the candidate's profile.",
+      "affected_fields": [
+        "noc_code",
+        "certified_occupation_title",
+        "trade_scope",
+        "crs_qualification_points"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If you claimed points for a certificate of qualification in a trade occupation, you must provide a copy of the certificate of qualification issued by a Canadian province or territory... The certificate must match the eligible trade occupation identified in your Express Entry profile.",
+      "remediation_hypothesis": "Align the primary NOC code in the Express Entry profile with the exact trade named on the provincial Certificate of Qualification, or obtain an official clarification statement from the provincial regulatory body confirming NOC equivalence.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-CERTIFIC-03",
+      "category": "pfl_expired_credential",
+      "severity": "high",
+      "title": "Expired Qualification Seal, Inactive Registration, or Lapsed Trade License",
+      "description": "The applicant submitted a Certificate of Qualification whose annual maintenance fee, active membership status, or qualification seal had expired or lapsed prior to receiving an Invitation to Apply (ITA) or submitting the PR application. IRCC mandates that trade qualifications must be valid, active, and legally in force at the time of ITA and application lock-in.",
+      "affected_fields": [
+        "issue_date",
+        "expiry_date",
+        "registration_status",
+        "seal_validity"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must meet the requirements at the time you are invited to apply... Proof of qualification must demonstrate that the candidate holds a valid certificate of qualification issued by the competent authority.",
+      "remediation_hypothesis": "Provide official proof of license renewal, annual membership fee payment receipts, or a letter of good standing from the provincial trade authority demonstrating that the certificate was valid and active when the ITA was received and submitted.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-CERTIFIC-04",
+      "category": "pfl_incomplete_evidence",
+      "severity": "high",
+      "title": "Ineligible Claim of Certificate Transferability Points Without Required Language Threshold",
+      "description": "The candidate claimed 50 additional CRS points under skills transferability for holding a Certificate of Qualification without meeting the prerequisite language benchmark (CLB 5 in speaking/listening and CLB 4 in reading/writing for FSTP eligibility, or higher CLB benchmarks for transferability points), or submitted an examination eligibility permission letter instead of the completed qualification credential.",
+      "affected_fields": [
+        "language_test_score",
+        "clb_level",
+        "certificate_document",
+        "crs_transferability_points"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-application-management-system/current.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Points for a certificate of qualification in a trade occupation are awarded based on the candidate's language ability... A candidate must hold a valid certificate of qualification in a skilled trade issued by a Canadian province or territory.",
+      "remediation_hypothesis": "Ensure valid language test results meeting or exceeding the required CLB threshold are attached, and submit the final official Certificate of Qualification rather than interim examination authorization letters or apprenticeship cards.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

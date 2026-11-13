@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant translate a supporting document that is not in English or French?",
+  "claims": [
+    {
+      "id": "translation-certified",
+      "text": "An English or French translation stamped by a certified translator or accompanied by an affidavit, plus a scan of the original source document.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded document slot 'certified_translation' for opaque case ID 9fd142f43a76e01584146263ed63f638."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "9fd142f43a76e01584146263ed63f638",
+  "doc_type": "certified_translation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "9fd142f43a76e01584146263ed63f638.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "65fb2c90383f6c3029632df0f1f952fb05679b1fece0071a8703d32dcad2a0af",
+    "allowed_text_sha256": null,
+    "bundle_hash": "4a37d63bb4b1ec8d3568c9d28d63373033f20464f6e70d6cc52d3ed8159fd14a",
+    "prompt_hash": "7320b7338f26c14e32dbc2024f8fc91f64bc1d640db82c87b4d36e23e9b9fc4f",
+    "output_hash": "c41e0ddc212f5a2b5c4edab7626c6111dcc137c988398bf22251be12abb9c4cf",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:57:24.799704+00:00",
+    "provenance_digest": "379422d97a47020080d238543d77ea7683f7f0107e30c964857550969104ed8e"
+  }
+}

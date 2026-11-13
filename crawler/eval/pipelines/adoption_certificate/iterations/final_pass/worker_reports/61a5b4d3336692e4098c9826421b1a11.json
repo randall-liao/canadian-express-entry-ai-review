@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided. Document verification verdict: defective — the submitted document constitutes temporary legal guardianship/custody retaining biological parental rights rather than full legal adoption severing biological parental ties (PFL-ADOPTION-02).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant's profile includes an adopted dependent child for case ID 61a5b4d3336692e4098c9826421b1a11. Verification reveals the uploaded document (GUARDIANSHIP-ORD-2023-3321) reflects temporary legal guardianship with biological rights retained rather than a full legal adoption severing biological parental ties."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "61a5b4d3336692e4098c9826421b1a11",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "61a5b4d3336692e4098c9826421b1a11.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "28701e67e4eeb0b5142c3f67002c798c06dcef3af26261d4dc8bf9de3a7e5c85",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "8645504036d092816020ea62d7ce8d12f75b6d580c6a128be490e8a45f83a3d6",
+    "output_hash": "df8f3ddc0ea00b4101938a00b90a036b06cdb894901bdf8154aff89d048badc9",
+    "returncode": 0,
+    "timestamp": "2026-07-25T02:56:16.976952+00:00",
+    "provenance_digest": "8942ffface658b7b6ce475b7a47353f5b2606302cc3bbc0b736e841fcfb23050"
+  }
+}

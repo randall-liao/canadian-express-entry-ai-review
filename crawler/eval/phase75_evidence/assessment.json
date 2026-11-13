@@ -1,0 +1,55 @@
+{
+  "schema_version": "phase75-assessment-evidence-v1",
+  "release_evidence_hash": "298de720e1f1857751556d188f4f258bb5c9ffe3f89ffbb832eb806a8ecab54d",
+  "assessment": {
+    "schema_version": "phase75-release-assessment-v1",
+    "verdict": "ready",
+    "phase74_run_id": "sdk-20260727T082623Z-539def5d2bd9",
+    "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+    "release_evidence_hash": "298de720e1f1857751556d188f4f258bb5c9ffe3f89ffbb832eb806a8ecab54d",
+    "summary": "The evidence identifies no release blockers and supports release readiness.",
+    "strengths": [
+      "All listed validation results passed.",
+      "All document reviews completed.",
+      "Cleanup reported no errors or survivors.",
+      "Publish-safety and tamper checks passed."
+    ],
+    "blockers": [],
+    "recommendations": [
+      "Proceed with release.",
+      "Monitor document types showing negative final metric deltas."
+    ]
+  },
+  "provenance": {
+    "engine": "copilot-sdk",
+    "sdk_version": "1.0.8",
+    "runtime_protocol_version": "3",
+    "role": "orchestrator",
+    "model": "gpt-5.6-sol",
+    "effort": "xhigh",
+    "context_tier": "long_context",
+    "session_id": "66be8b27-0669-4e37-baa6-dd113f6bd27b",
+    "prompt_hash": "822efe32ad163f1b7370a6891b8f091c030c9a19c57e536b934587be12fe750d",
+    "attachment_hashes": [],
+    "output_hash": "313aea21cf81bbdfc62c7301fe11cb3ee53f17413386368be70e18c519162171",
+    "started_at": "2026-07-27T15:15:29.878388+00:00",
+    "completed_at": "2026-07-27T15:15:48.177298+00:00",
+    "duration_seconds": 14.838895147004223,
+    "terminal_event": "assistant.message",
+    "is_live": true,
+    "retry_classification": null,
+    "turn_count": 1,
+    "format_correction_count": 0,
+    "initial_prompt_hash": "822efe32ad163f1b7370a6891b8f091c030c9a19c57e536b934587be12fe750d",
+    "correction_prompt_hashes": [],
+    "assistant_response_hash_chain": [
+      "313aea21cf81bbdfc62c7301fe11cb3ee53f17413386368be70e18c519162171"
+    ],
+    "turn_session_ids": [
+      "66be8b27-0669-4e37-baa6-dd113f6bd27b"
+    ],
+    "correction_kind": null
+  },
+  "raw_response": "{\"schema_version\":\"phase75-release-assessment-v1\",\"verdict\":\"ready\",\"phase74_run_id\":\"sdk-20260727T082623Z-539def5d2bd9\",\"evidence_manifest_hash\":\"3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811\",\"release_evidence_hash\":\"298de720e1f1857751556d188f4f258bb5c9ffe3f89ffbb832eb806a8ecab54d\",\"summary\":\"The evidence identifies no release blockers and supports release readiness.\",\"strengths\":[\"All listed validation results passed.\",\"All document reviews completed.\",\"Cleanup reported no errors or survivors.\",\"Publish-safety and tamper checks passed.\"],\"blockers\":[],\"recommendations\":[\"Proceed with release.\",\"Monitor document types showing negative final metric deltas.\"]}",
+  "evidence_hash": "bb2dc324acba5b5c4fd40a1c6057737f79b3eaa7341f98b58cefd9f10fdcc051"
+}

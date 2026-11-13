@@ -1,0 +1,54 @@
+{
+  "question": "What birth document is required for an applicant's dependent children?",
+  "claims": [
+    {
+      "id": "birth-cert-options",
+      "text": "The required birth document for dependent children must be a birth certificate, an equivalent document from the birth country, or a letter of explanation where no birth certificate is available in the country.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#024"
+      ],
+      "quote": "equivalent document from the birth country"
+    }
+  ],
+  "basis": [
+    "The document was submitted under the birth_certificate slot for the applicant's dependent children."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "70dbae49cf2c9a06af51ca5f0843648c",
+  "doc_type": "birth_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "70dbae49cf2c9a06af51ca5f0843648c.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "bb61aa26cf3669d6ca2e58828bb550f67e353b015f05807cbaa3077a46dff253",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c6fb3ed46c3c9f1c6e75316462cae682d3647ca04da25bdfdc64b5b62b58cc5d",
+    "prompt_hash": "94356f796b8df82a5f0ebb151d4b27c7bd25c4e73adfc32e2e431b6a3b1bf9dc",
+    "output_hash": "09394e2c4210f5b20dac5678bf9f185ec94c9bc676b54eb488ed62815182bc29",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:18:27.525218+00:00",
+    "provenance_digest": "33190339f4d9d9b78fb895e09876c723261914450580f6f4bd5aba159f09a243"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-validity",
+      "text": "When an applicant's marital status is married, a copy of the legal marriage certificate issued by the jurisdiction where the marriage took place must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a document in the marriage_certificate upload slot for opaque case ID a4453420ffab993724ce5a87ddb68531 (file: a4453420ffab993724ce5a87ddb68531.pdf)."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "a4453420ffab993724ce5a87ddb68531",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "a4453420ffab993724ce5a87ddb68531.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "99dca863962f5bd48762678b41add0ce4eb30788c439b1b0adc8afc98feb8a59",
+    "allowed_text_sha256": null,
+    "bundle_hash": "328c1537d7a24ab66576fb71af807091e040ae378f118d3952b32275e6f3c6d5",
+    "prompt_hash": "cac027f849dcabbc4aca200f028a05cec5a1fe48ff8d393a299452515185aef9",
+    "output_hash": "bc1611d5c276dc8fd8aaebca44e98f244d24157fbb85145e09065055ab86a508",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:58:15.493247+00:00",
+    "provenance_digest": "5259c837a5c681013cc322c2fbf91f5ea1d82c3673a2232f7caacc88b4c17680"
+  }
+}

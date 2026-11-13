@@ -1,0 +1,88 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain, and does the submitted document meet these requirements?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "An employment reference letter should be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "An employment reference letter must include the applicant's name, company contact information (address, telephone number, and email address), and the name, title, and signature of the immediate supervisor or personnel officer.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "(must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company)"
+    },
+    {
+      "id": "positions-held",
+      "text": "An employment reference letter should indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "An employment reference letter must include job title, duties and responsibilities, job status (if current job), dates worked, number of work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    },
+    {
+      "id": "defect-missing-signatory",
+      "text": "The submitted employment reference letter is defective because it omits the mandatory signatory block, lacking the name, title, and signature of an immediate supervisor or personnel officer at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "(must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company)"
+    }
+  ],
+  "basis": [
+    "Applicant declares skilled work experience for opaque case ID a38580ddaa3c103b3955871ba2a5c8d2.",
+    "The submitted employment reference letter includes company letterhead, applicant name, company contact details (address, phone, email), job title, duties and responsibilities, employment status, dates worked, weekly hours, and annual salary plus benefits.",
+    "The submitted reference letter lacks the name, job title, and signature of an immediate supervisor or personnel officer, ending only with a generic closing 'Regards, Pinnacle Cloud Solutions Team'."
+  ],
+  "abstentions": [],
+  "prose": "Verdict: defective.\n\nThe submitted employment reference letter was evaluated against Express Entry completeness-check requirements:\n\n1. Company Letterhead: Present.\n2. Applicant Name: Present.\n3. Company Contact Information (address, telephone, email): Present.\n4. Signatory (name, title, signature of supervisor or personnel officer): DEFECTIVE / MISSING. The document lacks the name, title, and signature of an immediate supervisor or personnel officer, containing only a generic team closing.\n5. Positions Held: Present.\n6. Employment Details (job title, duties, job status, dates worked, work hours per week, annual salary plus benefits): Present.\n\nConclusion: The document is defective and fails Express Entry completeness requirements due to the missing supervisor or personnel officer signatory block.",
+  "case_id": "a38580ddaa3c103b3955871ba2a5c8d2",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "a38580ddaa3c103b3955871ba2a5c8d2.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c1b85a2e8c84c67b1799e18e7590b3f616fe4ef475c3072c5983c307b8eaa4fc",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70e3cfc57c53364513e772f06ffe625ca9a019fb5141008af4e62d59611e23bf",
+    "prompt_hash": "6112d6d15eaaed323efd5ead8d373e083efba4b560e88e5ae5b6d1dd1c0eba63",
+    "output_hash": "192b4323741226fd9540d43495b439a68b40bd63f8b20a84fee4bbdf9d8df284",
+    "returncode": 0,
+    "timestamp": "2026-07-24T07:54:51.822164+00:00",
+    "provenance_digest": "22978171544e72dbb9b49566d2af09c36487b4832057cd2cf09c8d1478625a6f"
+  }
+}

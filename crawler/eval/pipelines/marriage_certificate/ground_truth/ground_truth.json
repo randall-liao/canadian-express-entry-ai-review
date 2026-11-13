@@ -1,0 +1,288 @@
+[
+  {
+    "opaque_case_id": "9b6fdcf58ace208994d99a6b21d82453",
+    "sibling_case_id": "9554c0f14517c28067bab42ef2c48589",
+    "doc_type": "marriage_certificate",
+    "variant": "vector",
+    "blind_filename": "9b6fdcf58ace208994d99a6b21d82453.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "certificate_number": "MC-2023-8849201",
+      "primary_spouse_given_names": "Alexander",
+      "primary_spouse_family_name": "Taylor",
+      "spouse_given_names": "Elena",
+      "spouse_family_name": "Rostova",
+      "marriage_date": "2023-06-10",
+      "marriage_location": "Toronto, Ontario, Canada",
+      "marital_status": "married",
+      "spouse_accompanying": true,
+      "officiant_name": "Rev. Michael H. Vance",
+      "registration_date": "2023-06-15",
+      "registration_number": "REG-2023-009412",
+      "document_translation": null,
+      "passport_details": "Pass # A9841023, Name: Elena Rostova"
+    },
+    "pdf_sha256": "802afac6789f4d7d8bfb010a982e5d616be30ce984f53df3e4bf84fab3c2609c",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:05.786162+00:00"
+  },
+  {
+    "opaque_case_id": "9554c0f14517c28067bab42ef2c48589",
+    "sibling_case_id": "9b6fdcf58ace208994d99a6b21d82453",
+    "doc_type": "marriage_certificate",
+    "variant": "scanned",
+    "blind_filename": "9554c0f14517c28067bab42ef2c48589.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "certificate_number": "MC-2023-8849201",
+      "primary_spouse_given_names": "Alexander",
+      "primary_spouse_family_name": "Taylor",
+      "spouse_given_names": "Elena",
+      "spouse_family_name": "Rostova",
+      "marriage_date": "2023-06-10",
+      "marriage_location": "Toronto, Ontario, Canada",
+      "marital_status": "married",
+      "spouse_accompanying": true,
+      "officiant_name": "Rev. Michael H. Vance",
+      "registration_date": "2023-06-15",
+      "registration_number": "REG-2023-009412",
+      "document_translation": null,
+      "passport_details": "Pass # A9841023, Name: Elena Rostova"
+    },
+    "pdf_sha256": "7faf228f4165d12f14d7eda8864d80a93d8a56ccef15555983ddf09d6dca43f7",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:05.786162+00:00"
+  },
+  {
+    "opaque_case_id": "62047462224a7c79cb71a0147b60dbf2",
+    "sibling_case_id": "3390ed26f7f603e47445d0edbbad2850",
+    "doc_type": "marriage_certificate",
+    "variant": "vector",
+    "blind_filename": "62047462224a7c79cb71a0147b60dbf2.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-MARRIAGE-01",
+    "affected_fields": [
+      "marriage_certificate",
+      "marital_status",
+      "spouse_accompanying"
+    ],
+    "fields": {
+      "certificate_number": "REL-CEREMONY-4412",
+      "primary_spouse_given_names": "Julian",
+      "primary_spouse_family_name": "Vance",
+      "spouse_given_names": "Sophia",
+      "spouse_family_name": "Martinez",
+      "marriage_date": "2022-11-10",
+      "marriage_location": "Community Chapel, Local District",
+      "marital_status": "single",
+      "spouse_accompanying": true,
+      "marriage_certificate": "Unregistered religious ceremony certificate without civil registry record",
+      "civil_registration_status": "unregistered"
+    },
+    "pdf_sha256": "bdd1d6df97e7bf2031f81dcf769190479d038f4baaf42ed920eeefd1fc53bb36",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:07.898147+00:00"
+  },
+  {
+    "opaque_case_id": "3390ed26f7f603e47445d0edbbad2850",
+    "sibling_case_id": "62047462224a7c79cb71a0147b60dbf2",
+    "doc_type": "marriage_certificate",
+    "variant": "scanned",
+    "blind_filename": "3390ed26f7f603e47445d0edbbad2850.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-MARRIAGE-01",
+    "affected_fields": [
+      "marriage_certificate",
+      "marital_status",
+      "spouse_accompanying"
+    ],
+    "fields": {
+      "certificate_number": "REL-CEREMONY-4412",
+      "primary_spouse_given_names": "Julian",
+      "primary_spouse_family_name": "Vance",
+      "spouse_given_names": "Sophia",
+      "spouse_family_name": "Martinez",
+      "marriage_date": "2022-11-10",
+      "marriage_location": "Community Chapel, Local District",
+      "marital_status": "single",
+      "spouse_accompanying": true,
+      "marriage_certificate": "Unregistered religious ceremony certificate without civil registry record",
+      "civil_registration_status": "unregistered"
+    },
+    "pdf_sha256": "c119ee23530200b015d531cf74e4d53e6eba68cee182046c984cee242250cc71",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:07.898147+00:00"
+  },
+  {
+    "opaque_case_id": "68ab52b554b15a231b0b0b85259b511b",
+    "sibling_case_id": "1781d2df270fc83167489c204a99691b",
+    "doc_type": "marriage_certificate",
+    "variant": "vector",
+    "blind_filename": "68ab52b554b15a231b0b0b85259b511b.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-MARRIAGE-02",
+    "affected_fields": [
+      "spouse_given_names",
+      "spouse_family_name",
+      "marriage_certificate",
+      "passport_details"
+    ],
+    "fields": {
+      "certificate_number": "MC-2021-99201",
+      "primary_spouse_given_names": "David",
+      "primary_spouse_family_name": "Miller",
+      "spouse_given_names": "Sora",
+      "spouse_family_name": "Takahashi",
+      "passport_details": "Pass # J88219401, Name: Sora Kim",
+      "marriage_certificate": "MC-2021-99201 issued to Sora Takahashi",
+      "marriage_date": "2021-08-01",
+      "marriage_location": "Civil Registry Hall, Metro City"
+    },
+    "pdf_sha256": "dc52af9dbcbb2d5996bb437956c5dd65ab8f28a0fd5a2019b761f212b6a3fddf",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:09.023985+00:00"
+  },
+  {
+    "opaque_case_id": "1781d2df270fc83167489c204a99691b",
+    "sibling_case_id": "68ab52b554b15a231b0b0b85259b511b",
+    "doc_type": "marriage_certificate",
+    "variant": "scanned",
+    "blind_filename": "1781d2df270fc83167489c204a99691b.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-MARRIAGE-02",
+    "affected_fields": [
+      "spouse_given_names",
+      "spouse_family_name",
+      "marriage_certificate",
+      "passport_details"
+    ],
+    "fields": {
+      "certificate_number": "MC-2021-99201",
+      "primary_spouse_given_names": "David",
+      "primary_spouse_family_name": "Miller",
+      "spouse_given_names": "Sora",
+      "spouse_family_name": "Takahashi",
+      "passport_details": "Pass # J88219401, Name: Sora Kim",
+      "marriage_certificate": "MC-2021-99201 issued to Sora Takahashi",
+      "marriage_date": "2021-08-01",
+      "marriage_location": "Civil Registry Hall, Metro City"
+    },
+    "pdf_sha256": "0cec76213ffacc640d7801b6913b042ac1119c4bcf2c28aebc88c19adb497511",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:09.023985+00:00"
+  },
+  {
+    "opaque_case_id": "ed4d7b4c822bb83db08528f0909a57f1",
+    "sibling_case_id": "662ae9361192247ca50249b086041de7",
+    "doc_type": "marriage_certificate",
+    "variant": "vector",
+    "blind_filename": "ed4d7b4c822bb83db08528f0909a57f1.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-MARRIAGE-03",
+    "affected_fields": [
+      "marriage_certificate",
+      "marriage_date",
+      "marriage_location"
+    ],
+    "fields": {
+      "certificate_number": "PROXY-2023-0104",
+      "primary_spouse_given_names": "Lucas",
+      "primary_spouse_family_name": "Bennett",
+      "spouse_given_names": "Amara",
+      "spouse_family_name": "Okonkwo",
+      "marriage_date": "2023-03-15",
+      "marriage_location": "Virtual Videoconference / Online Portal",
+      "physical_presence": false,
+      "marriage_certificate": "PROXY-2023-0104 (Virtual Proxy Marriage)"
+    },
+    "pdf_sha256": "ca4e4c61f168e3a71b0bd886943abf4496a0e6f79a13c1cb3f0f48b00eb66737",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:10.147910+00:00"
+  },
+  {
+    "opaque_case_id": "662ae9361192247ca50249b086041de7",
+    "sibling_case_id": "ed4d7b4c822bb83db08528f0909a57f1",
+    "doc_type": "marriage_certificate",
+    "variant": "scanned",
+    "blind_filename": "662ae9361192247ca50249b086041de7.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-MARRIAGE-03",
+    "affected_fields": [
+      "marriage_certificate",
+      "marriage_date",
+      "marriage_location"
+    ],
+    "fields": {
+      "certificate_number": "PROXY-2023-0104",
+      "primary_spouse_given_names": "Lucas",
+      "primary_spouse_family_name": "Bennett",
+      "spouse_given_names": "Amara",
+      "spouse_family_name": "Okonkwo",
+      "marriage_date": "2023-03-15",
+      "marriage_location": "Virtual Videoconference / Online Portal",
+      "physical_presence": false,
+      "marriage_certificate": "PROXY-2023-0104 (Virtual Proxy Marriage)"
+    },
+    "pdf_sha256": "8e1a40ff965d9313f81ca16561d66fcd76b85aee7d4fe19f404b014712512806",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:10.147910+00:00"
+  },
+  {
+    "opaque_case_id": "389f742cefb679419534ceb780680248",
+    "sibling_case_id": "a4453420ffab993724ce5a87ddb68531",
+    "doc_type": "marriage_certificate",
+    "variant": "vector",
+    "blind_filename": "389f742cefb679419534ceb780680248.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-MARRIAGE-04",
+    "affected_fields": [
+      "marriage_certificate",
+      "document_translation"
+    ],
+    "fields": {
+      "certificate_number": "MX-RC-2022-77182",
+      "primary_spouse_given_names": "Carlos",
+      "primary_spouse_family_name": "Gomez",
+      "spouse_given_names": "Maria",
+      "spouse_family_name": "Hernandez",
+      "marriage_date": "2022-05-10",
+      "marriage_location": "Ciudad de México, México",
+      "marriage_certificate": "Acta de Matrimonio Original (Spanish)",
+      "document_translation": "Informal machine translation without translator affidavit, certification stamp, or credentials"
+    },
+    "pdf_sha256": "78b33b8b4d00b466dd4fcd80c973227fa33a976fecc2b9030f4a86ca7b515ba9",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:11.270175+00:00"
+  },
+  {
+    "opaque_case_id": "a4453420ffab993724ce5a87ddb68531",
+    "sibling_case_id": "389f742cefb679419534ceb780680248",
+    "doc_type": "marriage_certificate",
+    "variant": "scanned",
+    "blind_filename": "a4453420ffab993724ce5a87ddb68531.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-MARRIAGE-04",
+    "affected_fields": [
+      "marriage_certificate",
+      "document_translation"
+    ],
+    "fields": {
+      "certificate_number": "MX-RC-2022-77182",
+      "primary_spouse_given_names": "Carlos",
+      "primary_spouse_family_name": "Gomez",
+      "spouse_given_names": "Maria",
+      "spouse_family_name": "Hernandez",
+      "marriage_date": "2022-05-10",
+      "marriage_location": "Ciudad de México, México",
+      "marriage_certificate": "Acta de Matrimonio Original (Spanish)",
+      "document_translation": "Informal machine translation without translator affidavit, certification stamp, or credentials"
+    },
+    "pdf_sha256": "99dca863962f5bd48762678b41add0ce4eb30788c439b1b0adc8afc98feb8a59",
+    "agent_spec_sha256": "58b097966f30cabafd49b95d72e52a5d39f7f4856e44f22a22a2a3306f176a08",
+    "timestamp": "2026-07-23T07:06:11.270175+00:00"
+  }
+]

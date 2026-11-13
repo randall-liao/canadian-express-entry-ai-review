@@ -1,0 +1,243 @@
+{
+  "doc_type": "birth_certificate",
+  "timestamp": "2026-07-23T03:03:00.950000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "birth_certificate",
+      "title": "Certified Certificate of Live Birth",
+      "issuing_authority": "California Department of Public Health - Vital Records",
+      "issue_date": "2023-01-15",
+      "expiry_date": null,
+      "fields": {
+        "child_full_name": "Jane Alice Smith",
+        "date_of_birth": "2022-05-14",
+        "time_of_birth": "08:32 AM",
+        "place_of_birth": "San Francisco General Hospital, San Francisco, CA",
+        "sex": "Female",
+        "mother_full_name": "Mary Elizabeth Smith",
+        "mother_maiden_name": "Mary Elizabeth Jones",
+        "mother_date_of_birth": "1990-03-22",
+        "father_full_name": "John Robert Smith",
+        "father_date_of_birth": "1988-11-10",
+        "parent_names": "Mary Elizabeth Smith and John Robert Smith",
+        "proof_of_relationship": "Parental relationship established via birth record",
+        "certificate_number": "BC-2022-987654",
+        "registration_date": "2022-05-18",
+        "civil_register_entry_number": "REG-2022-004321",
+        "issuing_authority": "California Department of Public Health - Vital Records",
+        "official_seal": "State of California Official Embossed Seal Present",
+        "issuing_authority_signature": "Certified Signature of State Registrar",
+        "issuing_stamp": "Official Department Stamp and Security Watermark Verified",
+        "document_authenticity": "Verified Authentic Original Certified Copy",
+        "document_language": "English",
+        "translation_certification": "Not Applicable - Original English Document",
+        "translator_affidavit": "Not Applicable",
+        "original_document_copy": "Primary Certified Record"
+      },
+      "narrative_blocks": [
+        "THIS IS TO CERTIFY THAT THE FOLLOWING IS A TRUE AND CORRECT COPY OF THE OFFICIAL CERTIFICATE OF LIVE BIRTH REGISTERED AND ON FILE WITH THE STATE VITAL STATISTICS OFFICE.",
+        "THE CHILD JANE ALICE SMITH WAS BORN AT SAN FRANCISCO GENERAL HOSPITAL ON MAY 14, 2022. PARENTS MARY ELIZABETH SMITH AND JOHN ROBERT SMITH ARE DULY RECORDED AS LEGAL PARENTS.",
+        "WITNESS THE HAND AND OFFICIAL SEAL OF THE STATE REGISTRAR AT SACRAMENTO, CALIFORNIA."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "birth_certificate",
+      "title": "Short-Form Abstract Birth Certificate Lacking Parent Information",
+      "issuing_authority": "State Vital Records Registry",
+      "issue_date": "2023-02-10",
+      "expiry_date": null,
+      "fields": {
+        "child_full_name": "Jane Alice Smith",
+        "date_of_birth": "2022-05-14",
+        "sex": "Female",
+        "certificate_number": "BC-2022-987654",
+        "registration_date": "2022-05-18",
+        "civil_register_entry_number": "REG-2022-004321",
+        "issuing_authority": "State Vital Records Registry",
+        "official_seal": "State Seal Present",
+        "issuing_authority_signature": "State Registrar Signature Present",
+        "issuing_stamp": "Official Stamp Present",
+        "document_authenticity": "Official Abstract Document",
+        "document_language": "English",
+        "translation_certification": "Not Applicable",
+        "translator_affidavit": "Not Applicable",
+        "original_document_copy": "Abstract Copy",
+        "parent_names": null,
+        "father_full_name": null,
+        "mother_full_name": null,
+        "proof_of_relationship": null
+      },
+      "narrative_blocks": [
+        "CERTIFICATE OF BIRTH ABSTRACT - SHORT FORM.",
+        "THIS CERTIFICATE CONFIRMS THE BIRTH OF JANE ALICE SMITH ON MAY 14, 2022. THIS SHORT-FORM CARD DOES NOT CONTAIN PARENTAL INFORMATION OR PROOF OF PARENTAL RELATIONSHIP."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-BIRTH_CE-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The submitted document is a short-form birth certification abstract that omits mother and father full names and proof of relationship required to establish parental link.",
+        "affected_fields": [
+          "parent_names",
+          "father_full_name",
+          "mother_full_name",
+          "proof_of_relationship"
+        ],
+        "mutation_details": {
+          "mutation_type": "omit_required_fields",
+          "reason": "Short-form certificate missing parental identity fields"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "birth_certificate",
+      "title": "Unregistered or Delayed Registration Birth Record",
+      "issuing_authority": "County Clerk Office - Vital Records Division",
+      "issue_date": "2025-06-01",
+      "expiry_date": null,
+      "fields": {
+        "child_full_name": "Robert David Johnson",
+        "date_of_birth": "2010-03-12",
+        "sex": "Male",
+        "mother_full_name": "Sarah Miller Johnson",
+        "father_full_name": "David Edward Johnson",
+        "parent_names": "Sarah Miller Johnson and David Edward Johnson",
+        "proof_of_relationship": "Parental relationship listed on delayed filing",
+        "certificate_number": "BC-DELAYED-99120",
+        "registration_date": "2025-05-20",
+        "civil_register_entry_number": null,
+        "issuing_authority": "Pending Local Civil Registry Review",
+        "official_seal": "Preliminary Seal - Registration Pending",
+        "issuing_authority_signature": "Deputy Clerk Temporary Signature",
+        "issuing_stamp": "Provisional Registration Stamp",
+        "document_authenticity": "Unverified - Registration Delayed 15 Years Post-Birth",
+        "document_language": "English",
+        "translation_certification": "Not Applicable",
+        "translator_affidavit": "Not Applicable",
+        "original_document_copy": "Delayed Registration Application Copy"
+      },
+      "narrative_blocks": [
+        "NOTICE OF DELAYED BIRTH REGISTRATION RECORD.",
+        "APPLICATION FOR LATE REGISTRATION OF BIRTH SUBMITTED ON MAY 20, 2025 FOR BIRTH OCCURRING ON MARCH 12, 2010. CIVIL REGISTER ENTRY NUMBER UNASSIGNED PENDING JUDICIAL REVIEW."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-BIRTH_CE-02",
+        "category": "pfl_credibility_gap",
+        "severity": "critical",
+        "description": "The birth certificate shows a significant gap exceeding 15 years between date of birth and registration date, lacking a valid civil register entry number and formal issuing authority approval.",
+        "affected_fields": [
+          "registration_date",
+          "date_of_birth",
+          "issuing_authority",
+          "civil_register_entry_number"
+        ],
+        "mutation_details": {
+          "mutation_type": "field_value_manipulation",
+          "reason": "Anomalous delay between date of birth and registration date without official registration entry"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "birth_certificate",
+      "title": "Unauthenticated Birth Record Lacking Official Seal and Signature",
+      "issuing_authority": "Department of Health Civil Registry",
+      "issue_date": "2023-08-11",
+      "expiry_date": null,
+      "fields": {
+        "child_full_name": "Emily Rose Davis",
+        "date_of_birth": "2023-07-20",
+        "sex": "Female",
+        "mother_full_name": "Karen White Davis",
+        "father_full_name": "Mark Steven Davis",
+        "parent_names": "Karen White Davis and Mark Steven Davis",
+        "proof_of_relationship": "Parental relationship listed",
+        "certificate_number": "BC-2023-441029",
+        "registration_date": "2023-07-25",
+        "civil_register_entry_number": "REG-2023-08871",
+        "issuing_authority": "Department of Health Civil Registry",
+        "official_seal": null,
+        "issuing_authority_signature": null,
+        "issuing_stamp": null,
+        "document_authenticity": "Unverified - Missing Official Validation Credentials",
+        "document_language": "English",
+        "translation_certification": "Not Applicable",
+        "translator_affidavit": "Not Applicable",
+        "original_document_copy": "Unsigned Draft Record Copy"
+      },
+      "narrative_blocks": [
+        "UNOFFICIAL INFORMATIONAL COPY - CERTIFICATE OF BIRTH.",
+        "THIS DOCUMENT IS AN UNVALIDATED PRINTOUT OF BIRTH RECORD DATA. IT DOES NOT BEAR THE EMBOSSED OFFICIAL SEAL, AUTHORIZED REGISTRAR SIGNATURE, OR STAMP REQUIRED FOR LEGAL VERIFICATION."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-BIRTH_CE-03",
+        "category": "pfl_invalid_format",
+        "severity": "critical",
+        "description": "The document lacks mandatory authentication markers including the official civil registry seal, registrar signature, official stamp, rendering document authenticity unverified.",
+        "affected_fields": [
+          "official_seal",
+          "issuing_authority_signature",
+          "issuing_stamp",
+          "document_authenticity"
+        ],
+        "mutation_details": {
+          "mutation_type": "omit_authentication_elements",
+          "reason": "Missing state seal, issuing signature, and official registry stamps"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "birth_certificate",
+      "title": "Untranslated Foreign Language Birth Certificate",
+      "issuing_authority": "Registro Civil de Madrid, Espana",
+      "issue_date": "2023-04-12",
+      "expiry_date": null,
+      "fields": {
+        "child_full_name": "Carlos Mateo Fernandez",
+        "date_of_birth": "2023-03-01",
+        "sex": "Masculino",
+        "mother_full_name": "Lucia Fernandez Gomez",
+        "father_full_name": "Alejandro Fernandez Ruiz",
+        "parent_names": "Lucia Fernandez Gomez y Alejandro Fernandez Ruiz",
+        "proof_of_relationship": "Inscripcion de nacimiento en Registro Civil",
+        "certificate_number": "ES-MAD-2023-9901",
+        "registration_date": "2023-03-05",
+        "civil_register_entry_number": "TOMO-402-PAG-118",
+        "issuing_authority": "Registro Civil de Madrid, Espana",
+        "official_seal": "Sello Oficial del Registro Civil de Madrid",
+        "issuing_authority_signature": "Firma del Encargado del Registro Civil",
+        "issuing_stamp": "Sello de Certificacion de Nacimiento",
+        "document_authenticity": "Documento Original en Espanol Sin Traducir",
+        "document_language": "Spanish",
+        "translation_certification": null,
+        "translator_affidavit": null,
+        "original_document_copy": "Copia Literal del Registro Civil"
+      },
+      "narrative_blocks": [
+        "CERTIFICADO LITERAL DE NACIMIENTO - REGISTRO CIVIL DE MADRID.",
+        "CERTIFICO QUE EN EL TOMO 402, PAGINA 118 DEL REGISTRO CIVIL DE NACIMIENTOS CONSTA EL NACIMIENTO DE CARLOS MATEO FERNANDEZ.",
+        "EL PRESENTE DOCUMENTO SE EXPIDE EN IDIOMA ESPANOL Y NO INCLUYE TRADUCCION CERTIFICADA NI DECLARACION JURADA DEL TRADUCTOR."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-BIRTH_CE-04",
+        "category": "pfl_translation_defect",
+        "severity": "critical",
+        "description": "The birth record is provided in Spanish without an accompanying certified English translation or sworn translator affidavit.",
+        "affected_fields": [
+          "translation_certification",
+          "translator_affidavit",
+          "original_document_copy",
+          "document_language"
+        ],
+        "mutation_details": {
+          "mutation_type": "missing_translation_credentials",
+          "reason": "Foreign language document provided without certified translation or translator affidavit"
+        }
+      }
+    }
+  ]
+}

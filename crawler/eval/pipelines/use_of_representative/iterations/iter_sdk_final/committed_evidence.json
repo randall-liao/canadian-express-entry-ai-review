@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "use_of_representative",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/use_of_representative/judge.json": "ecca57addbc71c109af44630b7733a71c393ca88a6f77b967f64125535bd0d03",
+    "documents/use_of_representative/shared_evaluation.json": "14b36796ff805a0f6f7f7e9685801555a9000e137a5ca444437b8e0d80f83732",
+    "documents/use_of_representative/workers/07f52552e960a329bbcc898927226172.json": "32184057fbc0f48b40382afaf5b9cf684a453312cc35ffb75f91c720218f246f",
+    "documents/use_of_representative/workers/2365e3329599e9e3dd008b951734d9ac.json": "a3b3168d8d885a8640a2351383766cd3524c462a734634c89fd0b15588ee38b2",
+    "documents/use_of_representative/workers/3f2713a25076425d858714b700b2f938.json": "f7800758e8fb4cc65d350f8164cdf84216924ba5752e37e4df9504fba5c6f39c",
+    "documents/use_of_representative/workers/75037cf1b7ed6ec5eff88b9270bd4983.json": "985fd4aa010995dfd02b5999c1189a952be29bde80e7347f3691201ac9474a84",
+    "documents/use_of_representative/workers/7c151afd79a7df426ac1e5bdd96ce385.json": "d21a2512eeec0c0b000a80f0ec1b855b632b78fe0b9b5a48c6e7e048405f416f",
+    "documents/use_of_representative/workers/a4b2a8f91503e100d72a83ff733763e0.json": "ad923241b3db79d4c362992135c25a2231c82eed20947852369bd0b6b8175773",
+    "documents/use_of_representative/workers/ad6e15df8e933cb251d417913e205757.json": "5dc4b0608269f05b65c7dfd72b81574effd6dca60595ffcd62098ff72d45dbd6",
+    "documents/use_of_representative/workers/e1fc59f1b2b34723ba31a22693316566.json": "f05318a51eece3b314a8daab247383428ac9bbe0062fc3dfe8ea429ca48b2072",
+    "documents/use_of_representative/workers/e71e2c87731b7b3b207a89e6ca4effd6.json": "81404f9feafa95919e04b1cf5a3326e4d0d320d050ac156da1686ecc57014d3b",
+    "documents/use_of_representative/workers/f5055bdc13d05c643cd11c40913f65df.json": "3e4dae0fdffe58af2c6ca344769fd4a2fee3c6c7c584ef4b26a222b35606f6da"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

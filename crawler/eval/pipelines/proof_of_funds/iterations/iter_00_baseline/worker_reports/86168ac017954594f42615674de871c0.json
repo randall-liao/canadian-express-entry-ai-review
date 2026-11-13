@@ -1,0 +1,54 @@
+{
+  "question": "What must the applicant's settlement funds satisfy?",
+  "claims": [
+    {
+      "id": "proof-of-funds",
+      "text": "Settlement funds must be legally accessible, cannot be borrowed, and cannot be derived from real-property equity.",
+      "citations": [
+        "guidance/proof-funds.md#007"
+      ],
+      "quote": "you can't use equity on real property as proof of settlement funds"
+    }
+  ],
+  "basis": [
+    "Applicant profile and document upload slot: proof_of_funds, opaque case ID: 86168ac017954594f42615674de871c0. FSWC applicant program and funds verification evaluated against IRCC settlement funds criteria."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "86168ac017954594f42615674de871c0",
+  "doc_type": "proof_of_funds",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "86168ac017954594f42615674de871c0.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "7d5e218b2829e4379d43dc237e98a84f8b4aea48c2fcdeaa72334169511d5fd8",
+    "allowed_text_sha256": null,
+    "bundle_hash": "08401b80e3700210a5b3546e3c49ff29c36936bb0a3094fc5d8e23b18f1b5827",
+    "prompt_hash": "e8966bd15871fb007b7555497c8614e1f557b703141cb0341fd3cf083f3db1ff",
+    "output_hash": "c338ae85f241444220e169dfcdb2e64c70ab578f7b230e1c19823d16c1d9ac88",
+    "returncode": 0,
+    "timestamp": "2026-07-23T16:02:05.778614+00:00",
+    "provenance_digest": "c7e04e7083abb17a295dadcdb5bee1071888e7361fa13664512aa44f8b17ce16"
+  }
+}

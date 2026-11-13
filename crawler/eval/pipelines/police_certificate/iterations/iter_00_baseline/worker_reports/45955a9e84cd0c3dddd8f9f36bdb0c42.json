@@ -1,0 +1,54 @@
+{
+  "question": "Who needs a police certificate for this application?",
+  "claims": [
+    {
+      "id": "police-certificate",
+      "text": "Police certificates are required for the applicant and family members 18 years or older for every country stayed in during the last 10 years for 6 months in a row or longer.",
+      "citations": [
+        "guidance/police-certificates.md#002"
+      ],
+      "quote": "Our online system will ask for a police certificate for:\n  * you and your family members who are 18 years or older\n  * **and**\n  * every country you (or a family member) stayed in during the last 10 years for **6 months in a row or longer**"
+    }
+  ],
+  "basis": [
+    "Applicant document upload 45955a9e84cd0c3dddd8f9f36bdb0c42.pdf in upload-slot police_certificate evaluated for residence history and police certificate requirements."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "45955a9e84cd0c3dddd8f9f36bdb0c42",
+  "doc_type": "police_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "45955a9e84cd0c3dddd8f9f36bdb0c42.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9513332a5ec1d7cee0eb62c2fd41db6c80d1eb7b7915b3f2e42bea20f2780b1e",
+    "allowed_text_sha256": null,
+    "bundle_hash": "033e7663f74420d5cd489034f2d478e685f9327e43a3b8cac0a7f94e139736d8",
+    "prompt_hash": "afda298aa7eeb3b5ad9c47c9ac2f33cd19a5f7fc1ecc12cffd0b528a9cd35f44",
+    "output_hash": "f78504d5dc8a0509ce3deeb2b51e981629e08e9d8428e44d6f5a7ef7f26a5d3e",
+    "returncode": 0,
+    "timestamp": "2026-07-23T15:06:49.897604+00:00",
+    "provenance_digest": "ecea8b9a0e8f2590bc7494135593d8df2ef2c3036d9263ddfea46324d8adfa02"
+  }
+}

@@ -1,0 +1,990 @@
+{
+  "schema_version": "phase75-release-evidence-record-v1",
+  "release_evidence_hash": "298de720e1f1857751556d188f4f258bb5c9ffe3f89ffbb832eb806a8ecab54d",
+  "evidence": {
+    "schema_version": "phase75-release-evidence-v1",
+    "phase72_research_documents": 23,
+    "phase73_logical_cases": 118,
+    "phase73_pdf_count": 236,
+    "phase74_run_id": "sdk-20260727T082623Z-539def5d2bd9",
+    "phase74_final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+    "phase74_final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59",
+    "phase74_evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+    "sdk_version": "1.0.8",
+    "runtime_version": "1.0.73",
+    "protocol_version": "3",
+    "worker_model": "gemini-3.6-flash",
+    "optimizer_model": "gemini-3.6-flash",
+    "judge_model": "claude-opus-4.8",
+    "judge_effort": "xhigh",
+    "orchestrator_model": "gpt-5.6-sol",
+    "context_tier": "long_context",
+    "worker_count": 236,
+    "judge_count": 23,
+    "optimizer_count": 23,
+    "shared_evaluation_count": 23,
+    "accepted_patch_count": 11,
+    "rejected_patch_count": 23,
+    "accepted_patches": [
+      {
+        "sequence": 1,
+        "doc_type": "digital_photo",
+        "commit": "b2dfc21cd33557911363bb61ded323b3d1c7a4fb",
+        "target_file": "skills/document-agents/digital-photos.md",
+        "training_overall_delta": 0.010000000000000009,
+        "holdout_overall_delta": 0.010000000000000009
+      },
+      {
+        "sequence": 2,
+        "doc_type": "letter_of_explanation",
+        "commit": "9b5b8b55583a1f6ed97af492100d564fa3a29ac8",
+        "target_file": "skills/document-agents/letter-of-explanation.md",
+        "training_overall_delta": 0.1333333333333332,
+        "holdout_overall_delta": 0.10999999999999999
+      },
+      {
+        "sequence": 3,
+        "doc_type": "marriage_certificate",
+        "commit": "2c4000ecd1e666e71b1999e9d37f1a1cfb7fdf2d",
+        "target_file": "skills/document-agents/marriage-certificate.md",
+        "training_overall_delta": 0.023333333333333317,
+        "holdout_overall_delta": 0.022499999999999964
+      },
+      {
+        "sequence": 4,
+        "doc_type": "medical_examination",
+        "commit": "90d6aab27bfd44dacef5f659f77804f604be82f3",
+        "target_file": "skills/document-agents/medical.md",
+        "training_overall_delta": 0.05999999999999994,
+        "holdout_overall_delta": 0.057499999999999885
+      },
+      {
+        "sequence": 5,
+        "doc_type": "proof_of_other_name",
+        "commit": "64e2e0a49bf3d1214bcf2f2c237f2d8adb284c8e",
+        "target_file": "skills/document-agents/other-name.md",
+        "training_overall_delta": 0.07499999999999996,
+        "holdout_overall_delta": 0.06750000000000012
+      },
+      {
+        "sequence": 6,
+        "doc_type": "proof_of_studies",
+        "commit": "1fe4e35421e751803356e99e2da1ef61ac3d025b",
+        "target_file": "skills/document-agents/proof-of-studies.md",
+        "training_overall_delta": 0.00666666666666671,
+        "holdout_overall_delta": 0.0
+      },
+      {
+        "sequence": 7,
+        "doc_type": "medical_examination",
+        "commit": "7975782565b94dba78f94dc3d5ca3ba38b8acd09",
+        "target_file": "skills/document-agents/medical.md",
+        "training_overall_delta": 0.023333333333333317,
+        "holdout_overall_delta": 0.007499999999999951
+      },
+      {
+        "sequence": 8,
+        "doc_type": "employment_reference_letter",
+        "commit": "06071757e8f64fe86b15df3000ae2790b64006bc",
+        "target_file": "skills/document-agents/employment-reference-letter.md",
+        "training_overall_delta": 0.010000000000000009,
+        "holdout_overall_delta": 0.009999999999999898
+      },
+      {
+        "sequence": 9,
+        "doc_type": "letter_of_explanation",
+        "commit": "bbe1e46fd9a6339d33761557cea2e2589d0affa9",
+        "target_file": "skills/document-agents/letter-of-explanation.md",
+        "training_overall_delta": 0.05166666666666664,
+        "holdout_overall_delta": 0.09749999999999992
+      },
+      {
+        "sequence": 10,
+        "doc_type": "letter_of_explanation",
+        "commit": "a2c6497df92c19bcf86237cccc81bb0207486828",
+        "target_file": "skills/document-agents/letter-of-explanation.md",
+        "training_overall_delta": 0.0016666666666664831,
+        "holdout_overall_delta": 0.0774999999999999
+      },
+      {
+        "sequence": 11,
+        "doc_type": "proof_of_other_name",
+        "commit": "b00e9cf65225aee44b2dcc8eece7de8540755367",
+        "target_file": "skills/document-agents/other-name.md",
+        "training_overall_delta": 0.09166666666666667,
+        "holdout_overall_delta": 0.040000000000000036
+      }
+    ],
+    "peak_concurrency": 5,
+    "imported_model_artifact_count": 0,
+    "cleanup_survivor_count": 0,
+    "cleanup_error_count": 0,
+    "documents": [
+      {
+        "doc_type": "adoption_certificate",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.34500000000000003,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.57,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.783
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.384,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.5,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.7767999999999999
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.03899999999999998,
+          "citation_exactness": 0.0,
+          "defect_recall": -0.06999999999999995,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.006200000000000094
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "authority_to_release_info",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.9800000000000001,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.836
+        },
+        "metric_deltas": {
+          "grounding_accuracy": -0.019999999999999907,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.004000000000000115
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "birth_certificate",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.9099999999999999,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 0.9800000000000001,
+          "overall_score": 0.818
+        },
+        "final_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.09000000000000008,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.019999999999999907,
+          "overall_score": 0.02200000000000013
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "certificate_of_qualification",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.9,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.82
+        },
+        "final_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.09999999999999998,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.02000000000000013
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "certified_translation",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.843,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.22000000000000003,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8126
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.6649999999999999,
+          "citation_exactness": 0.85,
+          "defect_recall": 0.3,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.763
+        },
+        "metric_deltas": {
+          "grounding_accuracy": -0.17800000000000005,
+          "citation_exactness": -0.15000000000000002,
+          "defect_recall": 0.07999999999999996,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.04959999999999998
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "death_certificate",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.22999999999999998,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.27999999999999997,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.702
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.35000000000000003,
+          "citation_exactness": 0.9800000000000001,
+          "defect_recall": 0.3,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.726
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.12000000000000005,
+          "citation_exactness": -0.019999999999999907,
+          "defect_recall": 0.020000000000000018,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.02400000000000002
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "digital_photo",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.9800000000000001,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.836
+        },
+        "metric_deltas": {
+          "grounding_accuracy": -0.019999999999999907,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.004000000000000115
+        },
+        "accepted_patch_count": 1,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "divorce_certificate",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "final_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.0,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.0
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "educational_credential_assessment",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.9,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.82
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.9400000000000001,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8280000000000001
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.040000000000000036,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.008000000000000118
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "employment_reference_letter",
+        "status": "completed",
+        "case_count": 12,
+        "worker_count": 12,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.8166666666666668,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.16666666666666666,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.7966666666666667
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.8374999999999999,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.16666666666666666,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8008333333333333
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.02083333333333315,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.004166666666666541
+        },
+        "accepted_patch_count": 1,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "language_test",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "final_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.0,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.0
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "letter_of_explanation",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.425,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.23500000000000004,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.732
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.67,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.41,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8160000000000001
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.24500000000000005,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.17499999999999993,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.08400000000000007
+        },
+        "accepted_patch_count": 3,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "marriage_certificate",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.755,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.215,
+          "pii_containment": 0.99,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.792
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.7649999999999999,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 0.99,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.791
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.009999999999999898,
+          "citation_exactness": 0.0,
+          "defect_recall": -0.014999999999999986,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.0010000000000000009
+        },
+        "accepted_patch_count": 1,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "medical_examination",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.42000000000000004,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.27999999999999997,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.74
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.38499999999999995,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.3,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.737
+        },
+        "metric_deltas": {
+          "grounding_accuracy": -0.03500000000000009,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.020000000000000018,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.0030000000000000027
+        },
+        "accepted_patch_count": 2,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "passport",
+        "status": "completed",
+        "case_count": 12,
+        "worker_count": 12,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.9874999999999999,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.16666666666666666,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8308333333333334
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.9750000000000001,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.16666666666666666,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8283333333333334
+        },
+        "metric_deltas": {
+          "grounding_accuracy": -0.012499999999999845,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.0025000000000000577
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "police_certificate",
+        "status": "completed",
+        "case_count": 12,
+        "worker_count": 12,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.16666666666666666,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8333333333333334
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.9125000000000001,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.16666666666666666,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8158333333333333
+        },
+        "metric_deltas": {
+          "grounding_accuracy": -0.08749999999999991,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.01750000000000007
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "proof_of_funds",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "final_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.0,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.0
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "proof_of_other_name",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.375,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.23500000000000001,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.722
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.5900000000000001,
+          "citation_exactness": 0.9400000000000001,
+          "defect_recall": 0.21000000000000002,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.748
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.21500000000000008,
+          "citation_exactness": -0.05999999999999994,
+          "defect_recall": -0.024999999999999994,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.026000000000000023
+        },
+        "accepted_patch_count": 2,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "proof_of_studies",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.54,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.748
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.7,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.78
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.15999999999999992,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.03200000000000003
+        },
+        "accepted_patch_count": 1,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "relative_in_canada",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.9550000000000001,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8310000000000001
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.9649999999999999,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.833
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.009999999999999787,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.0019999999999998908
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "statutory_declaration_common_law",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.9199999999999999,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8240000000000001
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.825,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.805
+        },
+        "metric_deltas": {
+          "grounding_accuracy": -0.09499999999999997,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.019000000000000017
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "use_of_representative",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 0.8,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.9199999999999999,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8240000000000001
+        },
+        "metric_deltas": {
+          "grounding_accuracy": 0.11999999999999988,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": 0.02400000000000002
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      },
+      {
+        "doc_type": "written_job_offer_lmia",
+        "status": "completed",
+        "case_count": 10,
+        "worker_count": 10,
+        "judge_count": 1,
+        "shared_evaluation_count": 1,
+        "baseline_metrics": {
+          "grounding_accuracy": 1.0,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.8400000000000001
+        },
+        "final_metrics": {
+          "grounding_accuracy": 0.8250000000000002,
+          "citation_exactness": 1.0,
+          "defect_recall": 0.2,
+          "pii_containment": 1.0,
+          "blind_input_compliance": 1.0,
+          "overall_score": 0.805
+        },
+        "metric_deltas": {
+          "grounding_accuracy": -0.17499999999999982,
+          "citation_exactness": 0.0,
+          "defect_recall": 0.0,
+          "pii_containment": 0.0,
+          "blind_input_compliance": 0.0,
+          "overall_score": -0.03500000000000003
+        },
+        "accepted_patch_count": 0,
+        "rejected_patch_count": 1,
+        "blockers": []
+      }
+    ],
+    "validation_results": [
+      {
+        "name": "phase74-full-suite",
+        "command": ".venv/bin/python -m pytest crawler/tests/test_copilot_sdk_runtime.py crawler/tests/test_phase74_*.py -q",
+        "status": "passed",
+        "duration_seconds": 1217.3,
+        "detail": "742 passed, 200371 subtests passed"
+      },
+      {
+        "name": "phase74-live-gate",
+        "command": "REQUIRE_LIVE_PHASE74_CONFORMANCE=1 .venv/bin/python -m pytest crawler/tests/test_live_phase74_conformance_gate.py -q",
+        "status": "passed",
+        "duration_seconds": 9.68,
+        "detail": "83 passed"
+      },
+      {
+        "name": "phase74-tamper-suite",
+        "command": ".venv/bin/python -m pytest crawler/tests/test_phase74_committed_evidence.py -q",
+        "status": "passed",
+        "duration_seconds": 108.38,
+        "detail": "140 passed"
+      },
+      {
+        "name": "phase75-targeted",
+        "command": ".venv/bin/python -m pytest crawler/tests/test_phase75_release.py crawler/tests/test_root_agent_workflow.py -q",
+        "status": "passed",
+        "duration_seconds": 1.12,
+        "detail": "29 passed"
+      },
+      {
+        "name": "publish-safety",
+        "command": ".venv/bin/python scripts/check_publish_safe.py",
+        "status": "passed",
+        "duration_seconds": 7.04,
+        "detail": "1584 tracked files scanned, 0 violations"
+      },
+      {
+        "name": "doctor-preflight",
+        "command": ".venv/bin/corpus-crawler --json doctor",
+        "status": "passed",
+        "duration_seconds": 0.63,
+        "detail": "ok true, overall ok, all required extraction dependencies present"
+      },
+      {
+        "name": "duplicate-audit",
+        "command": "timeout --signal=TERM --kill-after=30s 1200s .venv/bin/python -m pytest crawler/tests/test_dupaudit.py::TestRealCorpus::test_audit_runs_clean_with_expected_counts -q",
+        "status": "passed",
+        "duration_seconds": 679.79,
+        "detail": "1 passed; pytest duration 611.77 seconds"
+      },
+      {
+        "name": "repository-suite",
+        "command": "timeout --signal=TERM --kill-after=30s 2400s .venv/bin/python -m pytest crawler/tests -q --deselect crawler/tests/test_dupaudit.py::TestRealCorpus::test_audit_runs_clean_with_expected_counts",
+        "status": "passed",
+        "duration_seconds": 2333.98,
+        "detail": "2409 passed, 8 skipped, 1 deselected, 203795 subtests passed"
+      }
+    ],
+    "blockers": []
+  },
+  "evidence_hash": "27ebd2f7d80584a2811141203fafb180d4eb45045cc007dffc2e5a03913ee959"
+}

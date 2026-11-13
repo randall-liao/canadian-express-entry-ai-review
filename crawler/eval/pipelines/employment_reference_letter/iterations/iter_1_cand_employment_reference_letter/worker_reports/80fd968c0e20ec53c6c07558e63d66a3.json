@@ -1,0 +1,88 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "The employment reference or experience letter should be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "The letter must include the applicant's name, company contact information (address, telephone number and email address), and the name, title and signature of the immediate supervisor or personnel officer at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company"
+    },
+    {
+      "id": "positions-held",
+      "text": "The letter should indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "The letter must include employment details including job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    },
+    {
+      "id": "job-duties-defect",
+      "text": "The submitted document is defective because the job duties and responsibilities are copied verbatim from National Occupational Classification (NOC) lead statements or descriptions rather than providing specific, tailored duty descriptions.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    }
+  ],
+  "basis": [
+    "Evaluation of the submitted employment reference letter document slot for opaque case ID 80fd968c0e20ec53c6c07558e63d66a3 claiming declared skilled work experience.",
+    "Document verdict: defective.",
+    "Defect category: PFL-EMPLOYME-02 (Duties copied verbatim from NOC lead statement/duties and NOC/title mismatch)."
+  ],
+  "abstentions": [],
+  "prose": "An Express Entry employment reference letter must be an official document printed on company letterhead and must include the applicant's name, company contact information (address, telephone number, and email address), and signatory details (name, title, and signature of the immediate supervisor or personnel officer). It must indicate all positions held and specify job title, duties and responsibilities, job status, dates worked, weekly work hours, and annual salary plus benefits. Upon evaluation of the submitted document, it is determined to be defective because the listed duties and responsibilities are copied verbatim from NOC lead statements rather than providing tailored job duties.",
+  "case_id": "80fd968c0e20ec53c6c07558e63d66a3",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "80fd968c0e20ec53c6c07558e63d66a3.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "8efe518c1d03ef82b2922bf85509a9d6fac81ee0bc76326ef6680ec0fc32e92c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70e3cfc57c53364513e772f06ffe625ca9a019fb5141008af4e62d59611e23bf",
+    "prompt_hash": "d8408c5a21f20dc02e5c30989364c0e2362ef4138960fd3bd2fba6f38344246b",
+    "output_hash": "e949f009f8644775e56759816e4a13ff5aae5eb7fa2304ea39cde7e30634e5e5",
+    "returncode": 0,
+    "timestamp": "2026-07-24T07:48:42.417361+00:00",
+    "provenance_digest": "c781bfff6265c67d71e8d85570cb6862884006ee8b2bf8931f3d4e90707b4440"
+  }
+}

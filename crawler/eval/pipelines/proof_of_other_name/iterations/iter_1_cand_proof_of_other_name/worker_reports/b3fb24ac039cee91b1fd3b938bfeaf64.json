@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "An applicant who indicates having used another name must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "This documentation is requested if the applicant indicates having used another name (e.g., a maiden name)."
+    }
+  ],
+  "basis": [
+    "The applicant indicated having used another name and submitted supporting documentation under slot proof_of_other_name for case b3fb24ac039cee91b1fd3b938bfeaf64."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b3fb24ac039cee91b1fd3b938bfeaf64",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b3fb24ac039cee91b1fd3b938bfeaf64.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a51a113cc3e310856afd8f7f1c2600bef3e376f04f348eeabcec645f984ede2a",
+    "allowed_text_sha256": null,
+    "bundle_hash": "748b40f14cf988381632e9add00202e9c1a5ae2f047e07ca25d5ecd9f374c4d8",
+    "prompt_hash": "98bc2f8f47722bb3c6f6b714d5771430400f5100a8b642cc52c93e9b64e334a1",
+    "output_hash": "380fb39e7b212bc463e09d69341380f89bbbdd9fb178233baeada14a008e1fbc",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:09:39.714971+00:00",
+    "provenance_digest": "fa67091738e67ce2c6dd6dc15a994e128ec422273e349b5f5f755e44fc221e93"
+  }
+}

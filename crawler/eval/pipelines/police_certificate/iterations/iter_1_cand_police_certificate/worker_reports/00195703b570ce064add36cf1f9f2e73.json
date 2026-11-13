@@ -1,0 +1,59 @@
+{
+  "question": "Who needs a police certificate for this application?",
+  "claims": [
+    {
+      "id": "police-certificate-requirement",
+      "text": "Police certificates are required for the applicant and family members 18 years or older for every country stayed in during the last 10 years for 6 consecutive months or longer, excluding time spent in Canada or before age 18.",
+      "citations": [
+        "guidance/police-certificates.md#002"
+      ],
+      "quote": "every country you (or a family member) stayed in during the last 10 years for **6 months in a row or longer**"
+    }
+  ],
+  "basis": [
+    "Document slot type: police_certificate",
+    "Opaque case ID: 00195703b570ce064add36cf1f9f2e73",
+    "Attached document file: 00195703b570ce064add36cf1f9f2e73.pdf",
+    "PDF metadata creation date: 2026-07-23 (D:20260723030141-04'00')",
+    "PDF metadata producer: ReportLab PDF Library - (opensource)",
+    "Mandatory 5-point defect checklist evaluated: past residence issuance, current residence currency, language/translation, issuing authority level, and residence coverage."
+  ],
+  "abstentions": [],
+  "prose": "Evaluated the police certificate submission against IRCC guidance and the mandatory 5-point defect checklist (past residence issuance timing, current residence currency, language and translation, authority level, and residence coverage).",
+  "case_id": "00195703b570ce064add36cf1f9f2e73",
+  "doc_type": "police_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "00195703b570ce064add36cf1f9f2e73.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "d49812ff7260a0785a150e9ea60464e944458b6aabeaaf7a30f6275701d1a308",
+    "allowed_text_sha256": null,
+    "bundle_hash": "9404b5516960afee825c50e07ea24c25f585472bfc383e1e1fedeefe6733e6ed",
+    "prompt_hash": "ed93bcf884f92f437fa5be4908803b633e232029a066843ed47a9cde2ac587af",
+    "output_hash": "5c332181647308fe8f07c5ed5845ff4a1ff116dc950128649b8e1dc88f5035a6",
+    "returncode": 0,
+    "timestamp": "2026-07-24T12:10:30.439770+00:00",
+    "provenance_digest": "f1579522630cc8d3ad0371a3466e77103ac995d94240306d76fc896321f84967"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "death_certificate",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/death_certificate/judge.json": "fca11c8fedc98d4a6eb046caf6a7d67fe5adfc9b6e18faa994c0601d9cab1a74",
+    "documents/death_certificate/shared_evaluation.json": "7b0a2d5f6acbf538ea416242032ad890a219ce008493d4474a8f912ab6c14094",
+    "documents/death_certificate/workers/142cafca554f10fc1521a2d97b364cf8.json": "db104a37af49a458fc95c0d88ab8d63bb7eba1c6c8568c69f60186f94f93ca9e",
+    "documents/death_certificate/workers/2efcf44a387b51aab4bf72eaed4b8953.json": "f50a0d067892b9f99a00df1e279b1e28be790be2465fa7aa68f72198f9411ad1",
+    "documents/death_certificate/workers/33d577bd1521d896ecbc6b63af055d8e.json": "d18671d8aa8f686d0aab6d92f2204f7375e8718bc064814e3b49c2e303c3eb18",
+    "documents/death_certificate/workers/4532662d42f42c242130dedf908fe366.json": "6e9b0e91dcde08ab64bce78fcb841f6a101e91cb16d17eb24e42f0beb7eb29d1",
+    "documents/death_certificate/workers/4edb78278ebeb2fa6be52ea5c71e4c21.json": "448e8cd2d128993fa35d6cdcd9ffd4b7e8e6534a40bd9fe8ce877645780d9626",
+    "documents/death_certificate/workers/c962ebca01cd59cc782888d9c3acceae.json": "f1b6b5a8fd5c41bd64f6750c5fb57154114199379771fe1fd9bc62f12a50e0fa",
+    "documents/death_certificate/workers/da4fc991c2be8fdff4851ffbfc34bbc7.json": "d316a5afae0dec40660097c1b3d02ab511bea7396a1e9df4bf07a4140abcc158",
+    "documents/death_certificate/workers/eb89d69f0be42ad0ef1169b92e3bbe17.json": "71ce2555eb397ac119f39e9faa62a01505bc7c4e00fd39ae2e55f106e1244c1f",
+    "documents/death_certificate/workers/f6b01f82ff20d1f63cdb591fc46c66a8.json": "396a756d1f2aa142ff47fa37a0d849770d36630e1de1b014eaa3b1b1a37defac",
+    "documents/death_certificate/workers/fc56e629214694f8bdc1d7e70122721b.json": "93b99c14cb5d591aba8d095c47ca36edb1e71aabfd27dbd7d90d88297000d3ae"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

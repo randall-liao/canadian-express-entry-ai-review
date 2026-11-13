@@ -1,0 +1,10 @@
+{
+  "recorded": 2,
+  "skipped_stub": 1,
+  "skipped_scope": 1,
+  "skipped_dup": 2,
+  "recorded_ids": [
+    "medical-requirements",
+    "express-entry-overview"
+  ]
+}

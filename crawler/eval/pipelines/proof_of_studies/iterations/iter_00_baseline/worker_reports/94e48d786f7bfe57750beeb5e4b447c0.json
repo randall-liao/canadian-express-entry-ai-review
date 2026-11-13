@@ -1,0 +1,55 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Express Entry applicants claiming points for education must submit copies of secondary or post-secondary education documents (certificates, diplomas, or degrees) and transcripts for successfully completed studies.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of      * secondary or post-secondary education documents (certificates, diplomas or degrees); and     * transcripts for successfully completed secondary or post-secondary studies, if available."
+    }
+  ],
+  "basis": [
+    "Evaluated document upload slot proof_of_studies for case 94e48d786f7bfe57750beeb5e4b447c0 (file: 94e48d786f7bfe57750beeb5e4b447c0.pdf).",
+    "The submitted proof of studies file was reviewed for compliance with Express Entry education credential documentation guidelines."
+  ],
+  "abstentions": [],
+  "prose": "To receive Express Entry program-specific points for education, applicants must submit copies of secondary or post-secondary educational credentials (certificates, diplomas, or degrees) along with transcripts for successfully completed studies.",
+  "case_id": "94e48d786f7bfe57750beeb5e4b447c0",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "94e48d786f7bfe57750beeb5e4b447c0.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "0fccc45d9234a30e416a0b384ca7f6dd5dc8f163bc630805194fa0c1a432fc17",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8ee74fb34dd036795a103de06e3e1b1e478c36af309da4719bd79bf8d0dbc6c6",
+    "prompt_hash": "6415574b469d393b1493e42ba6f9a547368620b2b963c43f2a2647713aa51f90",
+    "output_hash": "522d7f52e0b79fcea86811b16ef3b4e4a7a8627ea45d02eeda1d9ebeb7f5cd7b",
+    "returncode": 0,
+    "timestamp": "2026-07-23T17:15:55.732288+00:00",
+    "provenance_digest": "911dbfe563cf1c1bd0275302e06047760886160bf48c9f3325e6806428a2972b"
+  }
+}

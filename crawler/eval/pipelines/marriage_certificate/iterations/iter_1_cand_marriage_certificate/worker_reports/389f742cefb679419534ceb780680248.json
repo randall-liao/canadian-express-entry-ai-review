@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-validity",
+      "text": "A valid marriage certificate issued by the country, territory, or province where the marriage took place is required when an applicant's marital status is listed as married.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant's declared marital status is married for case 389f742cefb679419534ceb780680248, requiring a valid marriage certificate issued by the legal authority of the jurisdiction where the marriage took place."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "389f742cefb679419534ceb780680248",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "389f742cefb679419534ceb780680248.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "78b33b8b4d00b466dd4fcd80c973227fa33a976fecc2b9030f4a86ca7b515ba9",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70d5c9e6de1b058c0a06652945be079d07ca12b21cbeaa54c33b6cb451fc21bd",
+    "prompt_hash": "e5c9050e0a1f37f9fd1b54381f4e24116c07d7744d0cf8bd85372571789adf54",
+    "output_hash": "9d435493b5fe8f03ddf84abbba8c67fa55e37695e96e790cdd38c45e80587e06",
+    "returncode": 0,
+    "timestamp": "2026-07-24T09:47:47.168335+00:00",
+    "provenance_digest": "ee177d3496211fd706718034494e6849c05c2d07dac86557b29f49f8e64ab733"
+  }
+}

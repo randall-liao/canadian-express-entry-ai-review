@@ -1,0 +1,55 @@
+{
+  "question": "What must an applicant provide for a provincial or territorial certificate of qualification?",
+  "claims": [
+    {
+      "id": "cert-qualification-copy",
+      "text": "A copy of the certificate of qualification is required.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#031"
+      ],
+      "quote": "A copy of the certificate of qualification is required."
+    }
+  ],
+  "basis": [
+    "The applicant indicates a claim for a provincial or territorial certificate of qualification under case 8311eae852046d1463e32546e35d2e64.",
+    "Field-level validation confirms the credential is issued by a recognized provincial or territorial trade governing body, the trade matches the primary occupation NOC, registration status is active and valid at submission, and language test results meet or exceed CLB 7 across all abilities."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "8311eae852046d1463e32546e35d2e64",
+  "doc_type": "certificate_of_qualification",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "8311eae852046d1463e32546e35d2e64.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "daf6d6c1dd917c0b7a4433c7bf2147585913d1498cb68439dfab96035e0c50f4",
+    "allowed_text_sha256": null,
+    "bundle_hash": "d3aeb3b7c20bae1d63db393270641bb90b21201f6e94f38481a73e145adb8b14",
+    "prompt_hash": "03e7e0327ebcc7fe0ccb2c8e011cc5ff8dc3a3266fb225de46e2359a06340acd",
+    "output_hash": "728a654494e1892301bb1468a626a1871bae68eba61cb6fcb9c45eb071eab2ed",
+    "returncode": 0,
+    "timestamp": "2026-07-24T03:43:16.422741+00:00",
+    "provenance_digest": "008291c095e0ba23cf8c9741b08c6872c344df109e29e8a6b4be8ce001a47a7d"
+  }
+}

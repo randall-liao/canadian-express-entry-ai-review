@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant is married?",
+  "claims": [
+    {
+      "id": "marriage-certificate-requirement",
+      "text": "This document is requested only when marital status is listed as married. The marriage must be valid under the law of the country where it took place and under Canadian law.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "The applicant declared marital status as married and provided a marriage certificate for evaluation under case ed4d7b4c822bb83db08528f0909a57f1."
+  ],
+  "abstentions": [],
+  "prose": "When an applicant declares their marital status as married, a marriage certificate is required to prove a legal marriage valid both in the jurisdiction where it occurred and under Canadian law.",
+  "case_id": "ed4d7b4c822bb83db08528f0909a57f1",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ed4d7b4c822bb83db08528f0909a57f1.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "ca4e4c61f168e3a71b0bd886943abf4496a0e6f79a13c1cb3f0f48b00eb66737",
+    "allowed_text_sha256": null,
+    "bundle_hash": "328c1537d7a24ab66576fb71af807091e040ae378f118d3952b32275e6f3c6d5",
+    "prompt_hash": "53b3e7ea81b353454a7836b9de104a347f7f4038a34182d94c710a35ed75a86f",
+    "output_hash": "5eb57319b6261f645237b2e742dd10063eca0c0252d6ff1a3a05830275c2944e",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:49:22.927415+00:00",
+    "provenance_digest": "e4769c87b0f46bd1f590e7ff445a068ceb289da8f7c144261acec53860ed4319"
+  }
+}

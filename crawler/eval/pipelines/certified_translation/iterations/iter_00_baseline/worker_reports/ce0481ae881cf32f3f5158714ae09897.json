@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant translate a supporting document that is not in English or French?",
+  "claims": [
+    {
+      "id": "translation-certified",
+      "text": "If a supporting document is in a language other than English or French, the applicant must provide an English or French translation stamped by a certified translator or accompanied by an affidavit, along with a scan of the original document.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#004"
+      ],
+      "quote": "The translation package should include a copy the original source document that was used by the translator, and the translation of all contents of the original document in either English or French."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a certified translation upload slot for case ce0481ae881cf32f3f5158714ae09897 requiring translation rules under Express Entry completeness checks."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "ce0481ae881cf32f3f5158714ae09897",
+  "doc_type": "certified_translation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ce0481ae881cf32f3f5158714ae09897.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "71be01389170832a5537e7759e1e0d3e399998bc6dec9864fc859617de91a8d2",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e9f23f2d5cd4c65f1adfb34a08570cd935f71cacedf08fd7e62b6bb76ba90f1d",
+    "prompt_hash": "666628e5f3edbf7674dbbc4a7b8fcddae55c28b97a2075a12c921212d863e5f3",
+    "output_hash": "15ad00bce42a7f688ca5ccf3f3dd3e288576cbc08452675ef4c0d73238386112",
+    "returncode": 0,
+    "timestamp": "2026-07-23T10:30:47.811350+00:00",
+    "provenance_digest": "a1234ae3affd1bc04911582546140e48b15964bf28e4645a626c55197e9fe6da"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "question": "When may an applicant submit a Letter of Explanation?",
+  "claims": [],
+  "basis": [
+    "Evaluated the submitted Letter of Explanation document for opaque case ID c8c3343ab8ccedd87a9d1caf9cfbbf7e under upload slot type letter_of_explanation.",
+    "Evidence Contradiction Defect Flag (PFL-LETTER_O-03): Audit of the submitted document body reveals direct contradictions between assertions in the Letter of Explanation and primary supporting employment and financial evidence.",
+    "The Letter of Explanation asserts continuous full-time Lead Systems Architect employment at Quantum Solutions Inc (Jan 2021–Dec 2023, CAD 95,000), which directly contradicts primary employer reference letters, CRA tax records (T4/NOA), and payroll records.",
+    "Per Express Entry document review guidelines, when observable completeness or consistency defects exist in the submitted document, the defect must be explicitly flagged (PFL-LETTER_O-03) rather than abstaining for missing corpus chunks."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "c8c3343ab8ccedd87a9d1caf9cfbbf7e",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c8c3343ab8ccedd87a9d1caf9cfbbf7e.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "612856cf2043f26d7471989f197e9c22c380fee82d48e108304119832fc9597c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "14fa852af814d2404ab92386699b5caef3ad1fc99505dcb0bfeeb94713c4dc69",
+    "prompt_hash": "b251f8572f77b183b0be9337d5673e993eef6da7f927b2642c0f7e26a5d87c28",
+    "output_hash": "14a5e3d9c9f05edc54ea487f0962b2d75116987e599c3416b6eb6e1b4308a11f",
+    "returncode": 0,
+    "timestamp": "2026-07-24T20:52:52.435112+00:00",
+    "provenance_digest": "6415b1cf69601f1a87db5aae7e49cc79df86725fbe8997337869fbf28d3d1300"
+  }
+}

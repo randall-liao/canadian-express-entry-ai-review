@@ -1,0 +1,18 @@
+{
+  "case_id": "case_021_vec",
+  "doc_type": "medical_examination",
+  "variant": "vector",
+  "file_name": "case_021_vec.pdf",
+  "fields": {
+    "ime_number": "IME-99201948",
+    "umi_number": "UMI-1029381",
+    "exam_date": "2024-05-18",
+    "clinic_name": "Metro Panel Physician Clinic",
+    "doctor_name": "Dr. Sarah Jenkins",
+    "panel_physician_id": "PP-881",
+    "result_status": "COMPLETE - PASSED"
+  },
+  "expected_verdict": "meets_requirements",
+  "injected_defects": [],
+  "must_abstain": false
+}

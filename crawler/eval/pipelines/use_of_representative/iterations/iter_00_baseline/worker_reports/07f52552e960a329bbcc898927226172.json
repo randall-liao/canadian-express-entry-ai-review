@@ -1,0 +1,56 @@
+{
+  "question": "When must an applicant provide a Use of a Representative form?",
+  "claims": [
+    {
+      "id": "representative-form",
+      "text": "The Use of a Representative form (IMM 5476) is requested if the applicant indicates they are using a representative or if a consultant completes an application on their behalf through the consultant portal.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#039"
+      ],
+      "quote": "The document is requested only if the applicant indicates they are using a representative or if a consultant completes an application on behalf of the applicant through the consultant portal."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a Use of a Representative document in upload slot 'use_of_representative' for case 07f52552e960a329bbcc898927226172.",
+    "The submitted PDF file 07f52552e960a329bbcc898927226172.pdf is a 2-page document provided for the Use of a Representative requirement.",
+    "The requirement applies because the applicant indicated the use of an authorized representative or consultant for their Express Entry application."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "07f52552e960a329bbcc898927226172",
+  "doc_type": "use_of_representative",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "07f52552e960a329bbcc898927226172.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "3a3b631ab48467ac2cf0687238e4547664071f72761f6090e18909e2a6c75f0b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "00b7a4a7042a215d504c0fe20f3531293ac00d7cd4874161578593fa288a63cd",
+    "prompt_hash": "5f6dee5b0453b1ead9b718499a36fd111cbc9627387252c346281ee7c09af95f",
+    "output_hash": "b968fd5d0ee3326a507a2089ef149510d1c16ac6ba1fb3dcee0941015158e223",
+    "returncode": 0,
+    "timestamp": "2026-07-23T19:20:18.599376+00:00",
+    "provenance_digest": "f1b59b24500c38272f70e8212f5b7acb9812482d213fe7a195dd1f97a9fd85cf"
+  }
+}

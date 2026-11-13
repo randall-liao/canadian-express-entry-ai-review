@@ -1,0 +1,206 @@
+{
+  "doc_type": "statutory_declaration_common_law",
+  "case_evaluations": {
+    "392bbc629edd5900ff817cd97c34fcfc": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4568fffad4bd217dfae1784151cadb3f": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "531796afc9517613c611f6987f25dab4": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "861dd16bc003a0e0b3443c506c8d306d": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "aabab0e3988a4c663661d6b6f284bac6": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ac818e742e2f4972c663179deb96b26d": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b9bcac8b1a6d22563f8d98394697af56": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c2fefdb03eb7232907ded8013c85cdbf": {
+      "grounding_accuracy": 0.8,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "fa14b8f8e895915eb64b8d3adf6e06a5": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.8,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "fe518795975250588461a0cff81741f1": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.8,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "4568fffad4bd217dfae1784151cadb3f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-STATUTOR-01 missed. Document shows Deponent Signatures, Solemn Declaration Signature, Commissioner Stamp, and Declaration Date all 'N/A' and narrative explicitly states the declaration 'was submitted without being solemnized' and 'lacks required attestation signatures, official notarization stamp, and solemnization date'. Worker emitted only a generic requirement statement and no defect flag or verdict."
+    },
+    {
+      "case_id": "b9bcac8b1a6d22563f8d98394697af56",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-STATUTOR-01 missed (scanned sibling). Same missing-solemnization defect (all signature/stamp/date fields N/A, narrative confirms Section 4 unexecuted). Worker returned identical boilerplate with no detection."
+    },
+    {
+      "case_id": "aabab0e3988a4c663661d6b6f284bac6",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-STATUTOR-02 missed. Cohabitation Duration Months = 6, CRA status 'Single', and narrative explicitly states it fails 'the legal standard of 12 continuous months'. Worker's own claim asserts the 12-month requirement yet failed to flag the document's 6-month shortfall."
+    },
+    {
+      "case_id": "392bbc629edd5900ff817cd97c34fcfc",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-STATUTOR-02 missed (scanned sibling). Identical 6-month cohabitation shortfall with explicit narrative admission. Worker gave no verdict or defect."
+    },
+    {
+      "case_id": "c2fefdb03eb7232907ded8013c85cdbf",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-STATUTOR-03 missed. Section 2 financial arrangements 'None selected', joint bank/utility/insurance all N/A, CRA 'Single', narrative states 'zero joint financial arrangements or shared financial interdependence'. Worker did not detect absent financial interdependence."
+    },
+    {
+      "case_id": "861dd16bc003a0e0b3443c506c8d306d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-STATUTOR-03 missed (scanned sibling). Same absence of joint financial evidence. Worker returned identical boilerplate."
+    },
+    {
+      "case_id": "531796afc9517613c611f6987f25dab4",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-STATUTOR-04 missed. Cross-form discrepancies: Express Entry address history '789 Portage Ave' vs current '1500 Main Street', CRA 'Single' for 2021-2023, driver's licence '221 Baker Street' until Feb 2024, and narrative flags 'potential misrepresentation'. Worker detected none."
+    },
+    {
+      "case_id": "ac818e742e2f4972c663179deb96b26d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-STATUTOR-04 missed (scanned sibling). Same address/marital-status/date discrepancies across records. Worker gave no defect or verdict."
+    },
+    {
+      "case_id": "fe518795975250588461a0cff81741f1",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Worker output is generic requirement boilerplate identical across all 10 cases; it does not reference or verify any field of the attached document. No invented facts (so grounding not zero), but there is no evidence of actual document analysis or a rendered verdict, which is the systemic root cause of the total defect-recall failure on siblings."
+    },
+    {
+      "case_id": "fa14b8f8e895915eb64b8d3adf6e06a5",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Generic requirement statement happens to align with this genuinely compliant document (25-month cohabitation, full financial interdependence, valid solemnization), but the alignment is incidental — the Worker did not verify the document's fields; the same boilerplate was emitted for defective cases."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/statutory_declaration_common_law.md",
+      "suggested_patch": "Require the Worker to render an explicit per-document verdict (meets_requirements | defective) plus a defect list, not a generic requirement restatement. Mandate field-level checks against the four IMM 5409 failure modes: (1) solemnization present — deponent signatures, Commissioner/Notary signature, official stamp, and declaration date must all be non-null/non-'N/A'; (2) continuous cohabitation >= 12 months (compute from start/end dates and cross-check duration field); (3) financial interdependence — Section 2 must list joint arrangements with at least one of joint bank/utility/insurance evidence non-null; (4) cross-form consistency across IMM5409 cohabitation dates, Express Entry address history, CRA marital status, and driver's licence address. Any failed check must be emitted as a defect claim."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Add a directive that when a document attachment is provided, the agent MUST extract and cite specific field values from the document (and its Narrative/Detailed Notes section) before answering. Prohibit answering document-review prompts with generic corpus-requirement boilerplate alone; every case must include document-derived evidence in basis[] and a case-specific verdict."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a completeness gate: reject/flag any Worker report whose claims are byte-identical across distinct case_ids of the same doc_type, since this signals the document was not actually inspected. Require at least one document-grounded observation (e.g., cohabitation months, solemnization status) per case."
+    }
+  ],
+  "rationale": "The Worker (gemini-3.6-flash) produced near-identical generic boilerplate for all 10 cases — a single claim restating the IMM 5409 + 12-month cohabitation requirement with a consistent corpus citation — and never inspected the attached documents. Ground truth contains 8 defective cases spanning four failure modes (missing solemnization x2, <12-month cohabitation x2, no financial interdependence x2, cross-form discrepancy x2) and 2 compliant cases. Every injected defect was explicitly stated in the document narratives yet the Worker detected zero of them, yielding defect_recall=0.0 on all 8 defective cases; the 2 compliant cases score 1.0 only because there was nothing to miss (incidental, not verified). Grounding is moderate (0.8) because no facts were fabricated, but there is no document-level analysis. Citation exactness is moderate (0.8): the corpus path is plausible and consistent but unverified. PII containment (1.0) and blind_input_compliance (1.0) are strong — no declarant names, addresses, or account numbers leaked into claims/prose, and no ground-truth verdicts, failure IDs, or sibling IDs surfaced. The systemic issue is that the Worker answered a static requirements question instead of reviewing each document; patches must force explicit per-document verdicts and field-level defect checks.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "392bbc629edd5900ff817cd97c34fcfc.pdf",
+      "--attachment",
+      "4568fffad4bd217dfae1784151cadb3f.pdf",
+      "--attachment",
+      "531796afc9517613c611f6987f25dab4.pdf",
+      "--attachment",
+      "861dd16bc003a0e0b3443c506c8d306d.pdf",
+      "--attachment",
+      "aabab0e3988a4c663661d6b6f284bac6.pdf",
+      "--attachment",
+      "ac818e742e2f4972c663179deb96b26d.pdf",
+      "--attachment",
+      "b9bcac8b1a6d22563f8d98394697af56.pdf",
+      "--attachment",
+      "c2fefdb03eb7232907ded8013c85cdbf.pdf",
+      "--attachment",
+      "fa14b8f8e895915eb64b8d3adf6e06a5.pdf",
+      "--attachment",
+      "fe518795975250588461a0cff81741f1.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "a362cff07e9f6e715f64f0a7334cc2d6bb8efa0f9b5200f1ae055e6da4f59ed9",
+    "research_hash": "77fe26b69ce64924e9bf34041392881686f5ee0094a858ba6471a2de64ae6938",
+    "ground_truth_hash": "b2cade6e09b53ffb7e10ae89a05927a48396bed5baf3370c8d019a16cf1745e0",
+    "output_hash": "71e46bd6ac188a936b74231b30d35d4834e427e6329a3475bade132ab24e4247",
+    "timestamp": "2026-07-23T23:28:21.877874+00:00",
+    "provenance_digest": "4666f32915305e7135fe41de2e83098cd579c3225a73b361e9632857e7b4e8c0"
+  }
+}

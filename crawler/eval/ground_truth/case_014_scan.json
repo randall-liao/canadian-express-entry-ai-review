@@ -1,0 +1,30 @@
+{
+  "case_id": "case_014_scan",
+  "doc_type": "employment_reference_letter",
+  "variant": "scanned",
+  "dpi": 300,
+  "file_name": "case_014_scan.pdf",
+  "fields": {
+    "employer_name": "Acme Software Solutions Ltd.",
+    "job_title": "Software Engineer",
+    "noc_code": "21231",
+    "start_date": "2021-01-15",
+    "end_date": null,
+    "hours_per_week": 37.5,
+    "annual_salary": 95000.0,
+    "lead_statement": "Lead engineer responsible for NOC 21231 cloud software development.",
+    "main_duties": [
+      "Analyze user requirements and engineer resilient cloud microservices.",
+      "Write clean, maintainable Python and TypeScript web applications.",
+      "Conduct unit testing, code reviews, and automated CI/CD deployment pipelines."
+    ],
+    "supervisor_name": "Alex Mercer",
+    "supervisor_title": "Engineering Director",
+    "contact_email": "hr@acmesoftware.com"
+  },
+  "expected_verdict": "defective",
+  "injected_defects": [
+    "no_translation"
+  ],
+  "must_abstain": false
+}

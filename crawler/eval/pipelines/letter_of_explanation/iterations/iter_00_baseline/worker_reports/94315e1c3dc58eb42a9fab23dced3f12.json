@@ -1,0 +1,49 @@
+{
+  "question": "When may an applicant submit a Letter of Explanation?",
+  "claims": [],
+  "basis": [
+    "Evaluated document 94315e1c3dc58eb42a9fab23dced3f12.pdf for upload-slot type letter_of_explanation."
+  ],
+  "abstentions": [
+    {
+      "reason": "not_in_corpus"
+    }
+  ],
+  "prose": "",
+  "case_id": "94315e1c3dc58eb42a9fab23dced3f12",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "94315e1c3dc58eb42a9fab23dced3f12.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e5320a04e9349eb4ffdbffbf3d4df2697be838568d0fd98f6d889b92fa8a7b36",
+    "allowed_text_sha256": null,
+    "bundle_hash": "d7a377868aba667471d45ab34cc55ae257326eb2adaf961952e773a671b3de7f",
+    "prompt_hash": "4cb6be72dcce16861dd6d4a267c2bec63d2da6f90b039eb0ab2c3b446c93076b",
+    "output_hash": "112fe66f8f1c63e2bd9d15791654c974f0bac46ad7e011ffe6b95408e53a8240",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:19:03.413971+00:00",
+    "provenance_digest": "cd3f2352494becdcea794087e16b71ae1fee5d106fc211caaea36265636f384f"
+  }
+}

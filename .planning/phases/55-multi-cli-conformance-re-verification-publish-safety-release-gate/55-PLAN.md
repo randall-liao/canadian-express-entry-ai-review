@@ -1,0 +1,17 @@
+# Phase 55 Plan: Multi-CLI Conformance Re-verification & Publish Safety Release Gate
+
+## Goal
+Re-verify that all system prompts (`AGENTS.md`), thin multi-CLI pointer adapters (`CLAUDE.md`, `.github/copilot-instructions.md`, `.codex/AGENTS.md`, `.cursor/rules/agents.mdc`, `.windsurfrules`), document review skills, and Python tools pass the complete 209-node SAFE-01..12 multi-CLI conformance suite and the zero PII / zero path leak publish-safety check before final release assembly.
+
+## Requirements
+- `GATE-01`: Re-verify that all refined prompts, skills, and tools pass the 209-node SAFE-01..12 multi-CLI conformance suite.
+- `GATE-02`: Verify zero PII leakage and zero absolute path violations using `scripts/check_publish_safe.py`.
+
+## Tasks
+1. Execute `scripts/run_multi_cli_conformance.py` to re-verify multi-CLI release gate conformance across all supported agent runtimes.
+2. Execute `scripts/check_publish_safe.py` to verify 0 absolute path or secret shape violations across all tracked repository files.
+3. Run complete unit test suite across the entire codebase (`.venv/bin/python -m pytest crawler/tests -q`).
+4. Authored and verified `crawler/tests/test_production_release.py`.
+
+## Verification
+Run `scripts/run_multi_cli_conformance.py`, `scripts/check_publish_safe.py`, and `.venv/bin/python -m pytest crawler/tests -q`.

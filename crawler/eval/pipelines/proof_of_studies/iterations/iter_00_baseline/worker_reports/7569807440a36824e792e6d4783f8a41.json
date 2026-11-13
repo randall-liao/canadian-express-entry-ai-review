@@ -1,0 +1,54 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "Proof of completed educational credentials including copies of education documents (certificates, diplomas, or degrees) and transcripts.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of      * secondary or post-secondary education documents (certificates, diplomas or degrees); and     * transcripts for successfully completed secondary or post-secondary studies, if available."
+    }
+  ],
+  "basis": [
+    "The applicant provided educational proof documents for case 7569807440a36824e792e6d4783f8a41 under document upload slot proof_of_studies."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "7569807440a36824e792e6d4783f8a41",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "7569807440a36824e792e6d4783f8a41.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "7a3410f5e51b26a685c5adafa2a6cd180aae3c83faedde4e4b8340f667bf3c48",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8ee74fb34dd036795a103de06e3e1b1e478c36af309da4719bd79bf8d0dbc6c6",
+    "prompt_hash": "e02e0904c04d94b35b93578e9927a54f52e0ce4eeb1fc448f67bd6335b46588e",
+    "output_hash": "45cfef3fc26f4141d3e52daba6c2f628877d8ebe40560dc011213558bc2a9738",
+    "returncode": 0,
+    "timestamp": "2026-07-23T17:18:07.881666+00:00",
+    "provenance_digest": "e090aa01a5b674d580756c177c3df2e27941fd98b7bbfe09eac0339ac8ee9e79"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "This documentation is requested if the applicant indicates having used another name (e.g., a maiden name)."
+    }
+  ],
+  "basis": [
+    "The applicant submitted an Official Certificate of Legal Change of Name (Registration ON-2022-892104, Ontario, Canada) confirming a legal name change from Jane Smith to Jane Doe. The document is issued by the Registrar General of Ontario and bears an official seal."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "8d3ad7599ed52ad934b1acd144530744",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "8d3ad7599ed52ad934b1acd144530744.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "07bbf3610985e1368c9ca8c46a3d8ead61b508d7e83813c5146d55c99266853c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "748b40f14cf988381632e9add00202e9c1a5ae2f047e07ca25d5ecd9f374c4d8",
+    "prompt_hash": "d4077da8e276c1b8a32f07e8980ce5c89ea54b20324d736a493f4c732f4e5c2e",
+    "output_hash": "efdde192f9690a4661386fd96a372b92e9be3ce57f1ae6d543034df43f0cdc47",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:02:12.459601+00:00",
+    "provenance_digest": "55ba75535ff7be30a7ad8d0e11668c1b6b69b115b69f8e31a2736d54f41deda2"
+  }
+}

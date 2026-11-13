@@ -1,0 +1,55 @@
+{
+  "question": "What must an Express Entry arranged-employment job-offer letter contain?",
+  "claims": [
+    {
+      "id": "job-offer-requirements",
+      "text": "A letter from the employer(s) offering the job in Canada is required, printed on company letterhead with contact information, supervisor signature, expected start date, continuous paid full-time commitment for at least one year, job title, duties, hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#034"
+      ],
+      "quote": "A letter from the employer(s) offering the job in Canada is required, and it must"
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a 2-page document in the written_job_offer_lmia slot for case af18b112d998b1433eb96ad2f0a1b70d.",
+    "The document was reviewed against IRCC Express Entry completeness requirements for arranged-employment job offers."
+  ],
+  "abstentions": [],
+  "prose": "An arranged-employment job-offer letter is required when an applicant claims arranged employment. When required, the letter must be printed on company letterhead and include the applicant's name, employer contact information, supervisor/personnel officer signature, expected start date, continuous paid full-time employment commitment for at least one year post-visa issuance, job title, duties, work hours, and annual salary plus benefits.",
+  "case_id": "af18b112d998b1433eb96ad2f0a1b70d",
+  "doc_type": "written_job_offer_lmia",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "af18b112d998b1433eb96ad2f0a1b70d.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "5064900d6507b4f97989faa2d5c7ba7c4c577604333f99ea4d88ae3078ac7603",
+    "allowed_text_sha256": null,
+    "bundle_hash": "385731eb510290f10b07c9c229675d720aa24dffc28e5fe50a2fe3f75e204533",
+    "prompt_hash": "2be7475db62252d0635b2c84bcf2ff6dd673714c6c53c42b3ebea494c36dc40e",
+    "output_hash": "da5cea44f358170af913929c8d3c5e96f12ed5bb1b2faf68af9cc007ba304cd3",
+    "returncode": 0,
+    "timestamp": "2026-07-23T20:17:25.878571+00:00",
+    "provenance_digest": "8640e57f0552e693c80b504bd51733d6b1253351f9c75405b6e8ab9937d6083f"
+  }
+}

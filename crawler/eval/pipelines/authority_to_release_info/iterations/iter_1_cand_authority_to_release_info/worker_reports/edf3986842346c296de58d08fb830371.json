@@ -1,0 +1,58 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form (IMM 5475) when an applicant designates an individual to inquire about their application, and whether the document instance meets compliance requirements.",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual, while dependent children 18 years of age or older must complete their own form.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "The [IMM 5475 form (PDF, 593.57 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5475e.pdf) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant submitted an Authority to Release Personal Information form (IMM 5475) in upload slot authority_to_release_info for case ID edf3986842346c296de58d08fb830371.",
+    "Evaluating instance fields confirms signature_date and section_c_date are populated with valid YYYY-MM-DD dates.",
+    "Evaluating consent and scope confirms section_c_consent_checkbox is true and authorization_scope is populated.",
+    "Form scope evaluation indicates the form designates an individual for information release without representative authorization mismatch.",
+    "Accompanying family member consent requirement family_member_consent is evaluated as true."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "edf3986842346c296de58d08fb830371",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "edf3986842346c296de58d08fb830371.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "6d1d021bb9fb6b82406ed78bcbca054baf5e1d6ddc39fbbf3915f7b7cd4efa68",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f951b805068342902119ce4352c5fd293ceba3f7d5d799ee9cfde2c99f700e59",
+    "prompt_hash": "2402c058f06a3dcb96f2d00a42c757bdbd14249fdf8c7d9bb8d181b5db08e2b1",
+    "output_hash": "20ede51ef6c8511ab528dacf72391b7507e4b747515ad9481c35ee5e6583d351",
+    "returncode": 0,
+    "timestamp": "2026-07-24T02:33:37.619439+00:00",
+    "provenance_digest": "3d4f80367b306d78a07be8439aabdcca5f7c00f0552a0535edd529989be0438a"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual, and dependent children 18 years of age or older must complete their own form.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "The [IMM 5475 form (PDF, 593.57 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5475e.pdf) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant provided an Authority to Release Personal Information form (IMM 5475) in case e5640785a8c957a693d4da097babd255 designating an individual to receive personal information regarding their Express Entry application."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e5640785a8c957a693d4da097babd255",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e5640785a8c957a693d4da097babd255.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9a2086e056751aaaca4b464c5a699e34cdf312b1836fd6e34d643594af7ab3db",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8a6d76f09c87b792bdb054da74787bee3998b9ee3be9ce94d349840641933915",
+    "prompt_hash": "b1f3f3d0a292e81fbac894e19bfabac7d83cc98ccae832e36f74292c542084a0",
+    "output_hash": "1fd4d1f6ed30333e0f9d4b9ce4553b0c54e290766c58aa6b3df91a13ad3f2073",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:13:58.688891+00:00",
+    "provenance_digest": "dc92cb19f168fd71d350b71e4861bf5e4eccf7f2c4522564df98eae4a9d08b0c"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "question": "How must a foreign educational credential be assessed?",
+  "claims": [],
+  "basis": [
+    "Educational Credential Assessment document notes for case c84a98765ddd8a869194b1bc2a3bd14f indicate that the credential is from an unaccredited institution and unable to establish Canadian educational equivalency."
+  ],
+  "abstentions": [
+    {
+      "text": "Educational credential assessment document indicates an unaccredited institution and is unable to establish Canadian educational equivalency.",
+      "reason": "defective_document"
+    }
+  ],
+  "prose": "",
+  "case_id": "c84a98765ddd8a869194b1bc2a3bd14f",
+  "doc_type": "educational_credential_assessment",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "c84a98765ddd8a869194b1bc2a3bd14f.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2e839df863edcac1dd2099db14ee68eb81b4c62860903616c84f996788d989fe",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e28d80dcf0f63f2981fd09c4f47946e9b1e830f1c429c5fc3d124e3b107720b1",
+    "prompt_hash": "b7632fd265090dac25a4e9cc64bb98987527ac4644acd27bb70a39fad326b4e6",
+    "output_hash": "61cd49cf110ea45ed7edaae106067c6be81c1628218013ef18154a6e1ad28b5f",
+    "returncode": 0,
+    "timestamp": "2026-07-24T07:23:45.902033+00:00",
+    "provenance_digest": "cf4edeb5f1fbb962ac14261aca3e933dfbc3bd5a2d350a6d41cc08ca3800c6ea"
+  }
+}

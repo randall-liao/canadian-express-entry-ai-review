@@ -1,0 +1,54 @@
+{
+  "question": "What marriage document is required when an applicant's marital status is married?",
+  "claims": [
+    {
+      "id": "marriage-validity",
+      "text": "This document is requested only when marital status is listed as married, and must be a legal certificate issued by the jurisdiction where the marriage took place.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#045"
+      ],
+      "quote": "This document is requested only when marital status is listed as married."
+    }
+  ],
+  "basis": [
+    "Applicable for case 1781d2df270fc83167489c204a99691b under upload slot marriage_certificate where applicant's marital status is married."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "1781d2df270fc83167489c204a99691b",
+  "doc_type": "marriage_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "1781d2df270fc83167489c204a99691b.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "0cec76213ffacc640d7801b6913b042ac1119c4bcf2c28aebc88c19adb497511",
+    "allowed_text_sha256": null,
+    "bundle_hash": "328c1537d7a24ab66576fb71af807091e040ae378f118d3952b32275e6f3c6d5",
+    "prompt_hash": "8e00ac9988b179ae2d5f48aea5474902e0dc8c343f57af39d17325246b8825fe",
+    "output_hash": "38b331fbc7a58a521b87ddb55e7e91451afdb68f2a06061c605f1ebcf2c8c16e",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:47:35.426699+00:00",
+    "provenance_digest": "e24845f993089126986b6cbc53a98829ace9c1ae124ac4a78049c0145cffc073"
+  }
+}

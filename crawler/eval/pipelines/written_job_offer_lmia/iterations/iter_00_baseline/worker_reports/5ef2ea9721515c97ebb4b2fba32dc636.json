@@ -1,0 +1,56 @@
+{
+  "question": "What must an Express Entry arranged-employment job-offer letter contain?",
+  "claims": [
+    {
+      "id": "job-offer-letter",
+      "text": "A letter from the employer(s) offering the job in Canada is required",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#034"
+      ],
+      "quote": "A letter from the employer(s) offering the job in Canada is required"
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a document under the written_job_offer_lmia slot for case ID 5ef2ea9721515c97ebb4b2fba32dc636.",
+    "The file 5ef2ea9721515c97ebb4b2fba32dc636.pdf is a 2-page PDF document comprised of rasterized image objects.",
+    "The generic requirement for a job offer letter applies when an applicant claims arranged employment points."
+  ],
+  "abstentions": [],
+  "prose": "An arranged-employment job-offer letter for Express Entry must be a letter from the employer offering the job in Canada, printed on company letterhead, specifying the job details and continuous full-time employment terms.",
+  "case_id": "5ef2ea9721515c97ebb4b2fba32dc636",
+  "doc_type": "written_job_offer_lmia",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "5ef2ea9721515c97ebb4b2fba32dc636.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "6f350ebe761edfa600c38914bdd842f0760db5ac8f3bf975200c8b1f833436ba",
+    "allowed_text_sha256": null,
+    "bundle_hash": "385731eb510290f10b07c9c229675d720aa24dffc28e5fe50a2fe3f75e204533",
+    "prompt_hash": "2fcc7b6c5f33dd4a73c03913930b93ef954b59bc5f2c3171b05c2366ff594da8",
+    "output_hash": "726b9abefc7fe4b0aef249152fe8b3c278dd18c883ecdf53da2eb460fb044e79",
+    "returncode": 0,
+    "timestamp": "2026-07-23T20:50:39.647133+00:00",
+    "provenance_digest": "63353ade81eb6354e9225b2280318156e622398068167e192c64155db400c8e7"
+  }
+}

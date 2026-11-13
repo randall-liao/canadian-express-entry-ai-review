@@ -1,0 +1,56 @@
+{
+  "question": "How must an applicant prove their language ability?",
+  "claims": [
+    {
+      "id": "language-test",
+      "text": "An applicant must prove their language skills by taking an approved language test.",
+      "citations": [
+        "guidance/language-test.md#001"
+      ],
+      "quote": "You must prove your language skills by taking an approved language test."
+    }
+  ],
+  "basis": [
+    "Document submitted in slot language_test is a TEF Canada test result certificate.",
+    "Subscores and Consistency Defect Flag (PFL-LANGUAGE-03): Narrative subscore analysis shows Compréhension écrite score of 150 (CLB 5). The overall language proficiency evaluation is determined to be CLB 5 based on the lowest subscore threshold, which is below the program minimum threshold of CLB 7 required for economic immigration programs (e.g., FSWP / CEC).",
+    "Table vs. Narrative Discrepancy: Cross-consistency check indicates the summary table reports CLB 9, contradicting the detailed narrative notes stating CLB 5 (Compréhension écrite 150). Per document evaluation rules, the narrative is authoritative, confirming the sub-cutoff score defect and internal data inconsistency."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "121b0172fe512b84282a552552e9954b",
+  "doc_type": "language_test",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "121b0172fe512b84282a552552e9954b.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "00d6badbbeac24d28a6b5d45cbb76b82702e42432811abbc33225ffcca09159e",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e8c9a43c1f2795f2e0feaaaab9532807127f3e278329c2e080bad51297b842f2",
+    "prompt_hash": "4e984e9db7c4e928b1534a5f9aee145963acf83305fd8fa51df09f49d5c4eb28",
+    "output_hash": "108bd96087ce62a970371c2121479e8bf570196df29a31e7b9a4390c81f95f8b",
+    "returncode": 0,
+    "timestamp": "2026-07-24T08:24:47.332304+00:00",
+    "provenance_digest": "4523d3ceeb1f9ec6baf4c06038fa7fd7b962951e60fda1afb266387fced31578"
+  }
+}

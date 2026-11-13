@@ -1,0 +1,54 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The IMM 5475 form must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "The [IMM 5475 form (PDF, 593.57 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5475e.pdf) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant provided an Authority to Release Personal Information form (IMM 5475) in the open upload field for case 3dac93470c38cd92756a9ed787f164f6."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "3dac93470c38cd92756a9ed787f164f6",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "3dac93470c38cd92756a9ed787f164f6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2514bcb902ad267e3b51e71606db5a9998ba252a524195347ccf6e9173ac5d0f",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8a6d76f09c87b792bdb054da74787bee3998b9ee3be9ce94d349840641933915",
+    "prompt_hash": "26713c951d525dc8ef8db1fbac1e649e06e6ff6e52cb7adddcda58a04128e83b",
+    "output_hash": "4a1d1078e0425f99400ad5798d650dffb325d35c3eaa1da9f7d01b44ce3a573c",
+    "returncode": 0,
+    "timestamp": "2026-07-23T09:30:22.198038+00:00",
+    "provenance_digest": "d5294505e2ef8911177231240e4fab6bce2cf7aa1db40490d1cddb66e471222f"
+  }
+}

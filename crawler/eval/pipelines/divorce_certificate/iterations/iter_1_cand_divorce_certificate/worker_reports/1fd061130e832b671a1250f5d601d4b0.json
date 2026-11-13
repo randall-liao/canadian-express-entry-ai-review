@@ -1,0 +1,63 @@
+{
+  "question": "What document is required when an applicant is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "When an applicant's marital status is listed as divorced, a copy of the divorce order or certificate of divorce issued by the province, territory, or country where the divorce took place must be provided, along with a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "If the applicant divorced in Canada, a copy of the divorce order or certificate of divorce issued by the province or territory where the divorce took place must be provided."
+    },
+    {
+      "id": "divorce-decree-finality",
+      "text": "A divorce certificate or order is requested when marital status is listed as divorced, requiring a final decree of divorce rather than an interlocutory or conditional order.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "The divorce certificate is requested only when marital status is listed as divorced."
+    }
+  ],
+  "basis": [
+    "The submitted document for case 1fd061130e832b671a1250f5d601d4b0 lists the decree type as Interlocutory Decree Nisi and marital status as Married (Decree Nisi Conditional).",
+    "The document's narrative notes state that the Decree Nisi does not finalize the dissolution of marriage until a Decree Absolute is formally granted."
+  ],
+  "abstentions": [],
+  "prose": "When an applicant's marital status is listed as divorced, a final divorce certificate or order must be provided. The submitted document is an interlocutory Decree Nisi with a conditional marital status, which does not constitute a final dissolution of marriage or a final divorce certificate.",
+  "case_id": "1fd061130e832b671a1250f5d601d4b0",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "1fd061130e832b671a1250f5d601d4b0.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "bfc5d9e479dc0202c5d8e97c296eb6381e29be4cdadb0392de104b9a98c6658c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "96adfcfc94df22d419234f5a4c06d54f1588f3bdd17b3529f840f869e8cf6da9",
+    "prompt_hash": "e5b1a49ad250face426c2428ab1aad1727c33be91fa8eaa4234fb372b2b6d93f",
+    "output_hash": "b91f5f67c4802895dca60c30de89a432ca6d583c2ec75dc1bd1a676d59535b0e",
+    "returncode": 0,
+    "timestamp": "2026-07-24T06:09:28.585843+00:00",
+    "provenance_digest": "57e70aaea59f3af5a857e73f2bf7fc7694c889e3efd215e701412a8ba048a992"
+  }
+}

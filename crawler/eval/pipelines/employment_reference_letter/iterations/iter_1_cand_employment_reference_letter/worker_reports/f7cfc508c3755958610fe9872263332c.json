@@ -1,0 +1,79 @@
+{
+  "question": "What must an Express Entry employment / reference letter contain?",
+  "claims": [
+    {
+      "id": "letterhead",
+      "text": "An employment reference letter from an employer should be an official document printed on company letterhead.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should be an official document printed on company letterhead"
+    },
+    {
+      "id": "identity-contact-signatory",
+      "text": "The employment reference letter must include the applicant's name, company contact information, and the name, title, and signature of the immediate supervisor or personnel officer.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the applicant’s name, the company’s contact information [address, telephone number and email address], and the name, title and signature of the immediate supervisor or personnel officer at the company"
+    },
+    {
+      "id": "positions-held",
+      "text": "The employment reference letter should indicate all positions held while employed at the company.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "should indicate all positions held while employed at the company"
+    },
+    {
+      "id": "employment-details",
+      "text": "The employment reference letter must include job title, duties and responsibilities, job status, dates worked, number of work hours per week, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#019"
+      ],
+      "quote": "must include the following details: job title, duties and responsibilities, job status (if current job), dates worked for the company, number of work hours per week and annual salary plus benefits"
+    }
+  ],
+  "basis": [
+    "Evaluated attached document f7cfc508c3755958610fe9872263332c.pdf for upload-slot type employment_reference_letter under case ID f7cfc508c3755958610fe9872263332c.",
+    "Document is submitted to support a declared skilled work experience claim for Express Entry completeness check."
+  ],
+  "abstentions": [],
+  "prose": "An Express Entry employment reference letter must be an official document printed on company letterhead. It must include the applicant's name, company contact information (address, telephone number, and email address), and the name, title, and signature of the immediate supervisor or personnel officer. It must also show all positions held and specify job title, duties and responsibilities, job status, dates worked, weekly work hours, and annual salary plus benefits.",
+  "case_id": "f7cfc508c3755958610fe9872263332c",
+  "doc_type": "employment_reference_letter",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f7cfc508c3755958610fe9872263332c.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "207529436cd0ba08944c16c9b9869888c4df576b6c2a4a8f6405331ce00a285c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "70e3cfc57c53364513e772f06ffe625ca9a019fb5141008af4e62d59611e23bf",
+    "prompt_hash": "e123b543cf612b14ae0adb3ae43c3b18aed93372321b69b9936619345da43410",
+    "output_hash": "649f550c5cb5bea285bcf39335bf469c24cfa5c2e2ea01918e6f2a65bb919e79",
+    "returncode": 0,
+    "timestamp": "2026-07-24T08:13:04.562700+00:00",
+    "provenance_digest": "18e601dc39a925d674013b01abcb18c986e36bf84273285af2769925e7b13f9a"
+  }
+}

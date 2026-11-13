@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "Information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)."
+    }
+  ],
+  "basis": [
+    "The applicant indicated having used another name and submitted document b6204160a8aae6b7e26e698019dfce0d.pdf under the proof_of_other_name document slot."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b6204160a8aae6b7e26e698019dfce0d",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b6204160a8aae6b7e26e698019dfce0d.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "83644cacaf79dfc35bda01b085e953ab558962136932db80ac5d30f63cf8569a",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2a1ea05a7d87f67391e31f1c27fe234320822f6f65215f1b49f946e67b8eb337",
+    "prompt_hash": "2dae80f61453af481b0212b54ac4964b17bd6871dc9babeccbcc6ac0972d9bb5",
+    "output_hash": "7cd59f92af0efe9b1945382247be055ac213c56a28e438e4c314c3dd395a9988",
+    "returncode": 0,
+    "timestamp": "2026-07-23T16:26:01.636192+00:00",
+    "provenance_digest": "1d4a4c892be212af7e7910c98c352739dad73287be52ab6a6c0f56052eea7f77"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What digital photos must an Express Entry applicant provide for an e-APR?",
+  "claims": [
+    {
+      "id": "digital-photos-spec",
+      "text": "An Express Entry applicant must provide digital photos that meet IRCC permanent resident card photo specifications.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#061"
+      ],
+      "quote": "Digital photos meeting [IRCC’s permanent resident card photo specifications (PDF, 614.24 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/information/applications/guides/pdf/5445eb-e.pdf) must be provided."
+    }
+  ],
+  "basis": [
+    "The submitted document 96122ac7bfc0f2e0b1b13daf962a2fc0.pdf was reviewed for slot digital_photo under Express Entry permanent resident card photo specifications."
+  ],
+  "abstentions": [],
+  "prose": "An Express Entry applicant must provide digital photos that comply with IRCC permanent resident card photo specifications.",
+  "case_id": "96122ac7bfc0f2e0b1b13daf962a2fc0",
+  "doc_type": "digital_photo",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "96122ac7bfc0f2e0b1b13daf962a2fc0.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "17b435db9f12e8f7787a16fb1aab9be26895f9ebfcedc790edebab4561edc5e5",
+    "allowed_text_sha256": null,
+    "bundle_hash": "52fe2a617ece78ce90df802cc559f61f4dd05488aa67e934f752f89c23fee48f",
+    "prompt_hash": "e3cc16bda43a7317a27752f3386c1903462423bfd971ba9524e74590c18ef39e",
+    "output_hash": "38b910a23fb703be2298b8696a45f78111cc1e38643fbeac6183e64102cc8f1b",
+    "returncode": 0,
+    "timestamp": "2026-07-24T05:38:17.656574+00:00",
+    "provenance_digest": "f9769197c19ea4503abef996f7182944ec255bab670c4183514c5638b337a550"
+  }
+}

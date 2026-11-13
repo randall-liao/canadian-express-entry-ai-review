@@ -1,0 +1,18 @@
+{
+  "case_id": "case_005_vec",
+  "doc_type": "language_test",
+  "variant": "vector",
+  "file_name": "case_005_vec.pdf",
+  "fields": {
+    "test_type": "IELTS",
+    "registration_number": "TRF-2024-883921",
+    "test_date": "2024-03-10",
+    "listening": 8.5,
+    "reading": 8.0,
+    "writing": 7.5,
+    "speaking": 7.5
+  },
+  "expected_verdict": "meets_requirements",
+  "injected_defects": [],
+  "must_abstain": false
+}

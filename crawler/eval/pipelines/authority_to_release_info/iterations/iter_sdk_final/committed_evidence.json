@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "authority_to_release_info",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/authority_to_release_info/judge.json": "e66c5e4d65be2e3631baf8dde8d584424a867754e8e2baf7019aeef0ed1ca34b",
+    "documents/authority_to_release_info/shared_evaluation.json": "a874fc28f455eae3212e565b9508fdf11a03fabeb6c7f97a50a724114d1fd7f0",
+    "documents/authority_to_release_info/workers/3dac93470c38cd92756a9ed787f164f6.json": "e7b057124c21d4446adae9ae152f861e6d99cad452d63dedcf6d2753f19d9832",
+    "documents/authority_to_release_info/workers/4c56c2c964dfba94392d1618b13a0c2f.json": "e63926f098c607fe59236c7ff5c41cd0b860f2f3dddd8dd5851cfbffc6d27d88",
+    "documents/authority_to_release_info/workers/6a6e5a95c3d62a03e652578bbb0d4682.json": "45b29933eb20fee0362fb01946d52c5a7202d2e74bbf4ae8557b1ab5f88fc3f0",
+    "documents/authority_to_release_info/workers/77c80029756ad10ac323c20d71dbdc25.json": "dcc876118fe6bcf174d6668fb313612a333a58de5b880078dd851d7312867c4e",
+    "documents/authority_to_release_info/workers/856740ac739ace81aa940753804e8179.json": "3cc54913eb81f39c0f332412edfc7de353a663bf9739c7ba54e1c25f8b3936db",
+    "documents/authority_to_release_info/workers/a70d7f47c21039f6b8d51584d2291835.json": "2fd52c49c657df529d3015e3e510432bb863177eb225fa85a6b3528cac58c851",
+    "documents/authority_to_release_info/workers/ae84248b5d47a4077a47a1ae22b7239b.json": "6b668547bef78c018dc60d197366f13674db546b4258ee57f8abcbe52e8e33fe",
+    "documents/authority_to_release_info/workers/e0b45d2f4bed604ce5fb3e5abe2ef047.json": "374a2fca7355796db759a073389d89ed97b154209701ed83a9acfe0538d1dea7",
+    "documents/authority_to_release_info/workers/e5640785a8c957a693d4da097babd255.json": "c062b820a3cf498fd010722f317a449ae950a3c9a0a479c00944f597fb0da948",
+    "documents/authority_to_release_info/workers/edf3986842346c296de58d08fb830371.json": "214c8909ddb8a9766d091cef885d089db3831bb0e533f7be5248667a92dd9789"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

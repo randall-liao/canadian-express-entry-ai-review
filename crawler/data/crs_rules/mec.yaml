@@ -1,0 +1,932 @@
+guidance_fsw: &guidance_fsw
+  family: guidance
+  require_title_contains: "Federal Skilled Worker Program"
+guidance_fst: &guidance_fst
+  family: guidance
+  require_title_contains: "Federal Skilled Trades Program"
+guidance_cec: &guidance_cec
+  family: guidance
+  require_title_contains: "Canadian Experience Class"
+guidance_language: &guidance_language
+  family: guidance
+  require_title_contains: "Language test results"
+guidance_volatility: &guidance_volatility
+  volatility: volatile
+  source_family: guidance
+  crawl_date: "2026-06-11T01:09:06Z"
+pdi_volatility: &pdi_volatility
+  volatility: volatile
+  source_family: pr-pdi
+  crawl_date: "2026-06-11T01:48:51Z"
+
+rows:
+  # Federal Skilled Worker minimum requirements
+  - rule_id: fsw.work.primary_noc
+    factor_group: program_eligibility
+    factor_ids: [fsw.work.primary_noc]
+    check_type: admissibility
+    query: "primary occupation same NOC skilled work experience"
+    selector:
+      <<: *guidance_fsw
+      marker: "same NOC as the job you want to use for your immigration application"
+    claim_text: "Qualifying work must match the primary occupation."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#002
+        quote: "have the same NOC as the job you want to use for your immigration application (called your **primary occupation**)"
+    machine_check:
+      kind: accepted_enum
+      field: primary_noc_match
+      accepted_values:
+        - {value: same_noc_as_primary_occupation, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.work.teer
+    factor_group: program_eligibility
+    factor_ids: [fsw.work.teer]
+    check_type: admissibility
+    query: "skilled work experience TEER categories primary occupation"
+    selector:
+      <<: *guidance_fsw
+      marker: "be in 1 of these TEER categories"
+    claim_text: "Qualifying work is limited to the cited occupational hierarchy."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#002
+        quote: "be in 1 of these TEER categories: 0, 1, 2, or 3"
+    machine_check:
+      kind: hierarchy
+      field: fsw_teer
+      included_hierarchy:
+        - {value: "TEER 0", citation_index: 0}
+        - {value: "TEER 1", citation_index: 0}
+        - {value: "TEER 2", citation_index: 0}
+        - {value: "TEER 3", citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.work.paid
+    factor_group: program_eligibility
+    factor_ids: [fsw.work.paid]
+    check_type: admissibility
+    query: "skilled work experience paid wages commission"
+    selector:
+      <<: *guidance_fsw
+      marker: "be paid work"
+    claim_text: "Qualifying work must be paid."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#002
+        quote: "be paid work (you must have been paid wages or earned commission—volunteer work or unpaid internships don’t count)"
+    machine_check:
+      kind: policy_flag
+      field: paid_work
+      flag_value: true
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.work.recency
+    factor_group: program_eligibility
+    factor_ids: [fsw.work.recency]
+    check_type: threshold
+    query: "skilled work experience obtained within last years"
+    selector:
+      <<: *guidance_fsw
+      marker: "obtained within the last 10 years"
+    claim_text: "Qualifying work must fall within the cited lookback."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#002
+        quote: "have been obtained within the last 10 years, in Canada or abroad"
+    machine_check:
+      kind: duration_hours
+      field: fsw_work_recency
+      lookback_years: {value: 10, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.work.continuity_duration_hours
+    factor_group: program_eligibility
+    factor_ids: [fsw.work.continuity_duration_hours]
+    check_type: threshold
+    query: "continuous work hours per week total"
+    selector:
+      <<: *guidance_fsw
+      marker: "1 year of continuous work"
+    claim_text: "Qualifying work must meet the cited continuity, duration, and hours rules."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#002
+        quote: "be at least **1 year of continuous work** or 1,560 hours total (30 hours per week)"
+      - chunk_id: guidance/federal-skilled-workers.md#005
+        quote: "We **don’t** count any hours you work above 30 hours/week."
+    machine_check:
+      kind: duration_hours
+      field: fsw_work_duration
+      minimum_duration_months: {value: 12, citation_index: 0}
+      minimum_hours: {value: 1560, citation_index: 0}
+      maximum_hours_per_week: {value: 30, citation_index: 1}
+      applicability:
+        - {value: continuous, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.work.noc_duties
+    factor_group: program_eligibility
+    factor_ids: [fsw.work.noc_duties]
+    check_type: admissibility
+    query: "lead statement most main duties NOC"
+    selector:
+      <<: *guidance_fsw
+      marker: "actions in the **lead statement**"
+    claim_text: "Qualifying work requires the cited occupational duty review."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#002
+        quote: "the actions in the **lead statement** of the NOC job description, and\n    * most of the main duties listed"
+    machine_check:
+      kind: accepted_enum
+      field: noc_duties
+      accepted_values:
+        - {value: lead_statement, citation_index: 0}
+        - {value: most_main_duties, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.language.first
+    factor_group: program_eligibility
+    factor_ids: [fsw.language.first]
+    check_type: threshold
+    query: "language minimum abilities"
+    selector:
+      <<: *guidance_language
+      marker: "Minimum level for all 4 abilities"
+    claim_text: "The first official language must meet the cited level in every ability."
+    citations:
+      - chunk_id: guidance/language-test.md#006
+        quote: "| English  | CLB 7  |\n| French  | NCLC7  |"
+      - chunk_id: guidance/language-test.md#009
+        quote: "Your test results must be **less than 2 years old**"
+    machine_check:
+      kind: hierarchy
+      field: fsw_first_language
+      included_hierarchy:
+        - {value: "English CLB 7 all abilities", citation_index: 0}
+        - {value: "French NCLC 7 all abilities", citation_index: 0}
+      lookback_years: {value: 2, citation_index: 1}
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.education.minimum
+    factor_group: program_eligibility
+    factor_ids: [fsw.education.minimum]
+    check_type: admissibility
+    query: "Canadian education foreign credential Educational Credential Assessment"
+    selector:
+      <<: *guidance_fsw
+      marker: "If you have **foreign** education"
+    claim_text: "Education must use the cited Canadian or foreign-credential branch."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#008
+        quote: "If you went to school **in Canada** , you must have a certificate, diploma or degree from a Canadian"
+      - chunk_id: guidance/federal-skilled-workers.md#008
+        quote: "If you have **foreign** education, you must have:\n  * a completed educational credential and\n  * an Educational Credential Assessment for immigration purposes"
+    machine_check:
+      kind: applicability
+      field: fsw_education
+      applicability:
+        - {value: canadian_secondary_or_post_secondary_credential, citation_index: 0}
+        - {value: foreign_completed_credential_and_eca, citation_index: 1}
+    volatility: *guidance_volatility
+
+  # Federal Skilled Worker selection grid
+  - rule_id: fsw.grid.language
+    factor_group: program_eligibility
+    factor_ids: [fsw.grid.language]
+    check_type: points
+    query: "first official language CLB level points speaking listening reading writing"
+    selector:
+      <<: *guidance_fsw
+      marker: "CLB level 9 or higher"
+    claim_text: "Language selection points use the cited first- and second-language grid."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#010
+        quote: "| CLB level 9 or higher  | 6  | 6  | 6  | 6  |\n| CLB level 8  | 5  | 5  | 5  | 5  |\n| CLB level 7  | 4  | 4  | 4  | 4  |"
+      - chunk_id: guidance/federal-skilled-workers.md#011
+        quote: "You can get 4 points only if you have a score of at least CLB 5 in each of the 4 language abilities."
+      - chunk_id: legislation-irpr/FullText.md#229
+        quote: "Proficiency in English and French (28 points)"
+    machine_check:
+      kind: points_table
+      field: fsw_language_grid
+      points_by_level:
+        - {label: first_per_ability, level: 7, points: 4, citation_index: 0}
+        - {label: first_per_ability, level: 8, points: 5, citation_index: 0}
+        - {label: first_per_ability, level: 9, points: 6, citation_index: 0}
+        - {label: second_all_abilities, level: 5, points: 4, citation_index: 1}
+      cap_value: 28
+      citation_index: 2
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.grid.education
+    factor_group: program_eligibility
+    factor_ids: [fsw.grid.education]
+    check_type: points
+    query: "award points education"
+    selector:
+      family: pr-pdi
+      require_title_contains: "Education"
+      marker: "award the applicant up to 25 points for education"
+    claim_text: "Education selection points use the cited credential grid."
+    citations:
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-education.md#000
+        quote: "Officers should assess the application and award the applicant up to 25 points for education"
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-education.md#001
+        quote: "| 23  |\n| 2 or more post-secondary program credentials, at least 1 of which must have been issued on completion of a post-secondary program of 3 years or longer [R78(1)(_e_)]  | 22  |\n| Post-secondary program credential of 3 years or longer [R78(1)(_d_)]  | 21  |\n| 2-year post-secondary program credential [R78(1)(_c_)]  | 19  |\n| 1-year post-secondary program credential [R78(1)(_b_)]  | 15  |\n| Secondary school (high school) credential [R78(1)(_a_)]  | 5  |"
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-education.md#000
+        quote: "| University-level credential at the doctoral level [R78(1)(_g_)]  | 25  |"
+    machine_check:
+      kind: points_table
+      field: fsw_education_grid
+      points_by_level:
+        - {label: secondary, level: secondary, points: 5, citation_index: 1}
+        - {label: one_year_post_secondary, level: one_year, points: 15, citation_index: 1}
+        - {label: two_year_post_secondary, level: two_year, points: 19, citation_index: 1}
+        - {label: three_year_post_secondary, level: three_year, points: 21, citation_index: 1}
+        - {label: multiple_credentials, level: multiple, points: 22, citation_index: 1}
+        - {label: masters_or_professional, level: masters, points: 23, citation_index: 1}
+        - {label: doctoral, level: doctoral, points: 25, citation_index: 2}
+      cap_value: 25
+      citation_index: 0
+    volatility: *pdi_volatility
+
+  - rule_id: fsw.grid.experience
+    factor_group: program_eligibility
+    factor_ids: [fsw.grid.experience]
+    check_type: points
+    query: "number years skilled work experience maximum points"
+    selector:
+      <<: *guidance_fsw
+      marker: "2-3 years  | 11"
+    claim_text: "Work-experience selection points use the cited duration bands."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#013
+        quote: "| 1 year  | 9  |\n| 2-3 years  | 11  |\n| 4-5 years  | 13  |\n| 6 or more years  | 15  |"
+    machine_check:
+      kind: points_table
+      field: fsw_experience_grid
+      points_by_level:
+        - {label: one_year, years_min: 1, years_max: 1, points: 9, citation_index: 0}
+        - {label: two_to_three, years_min: 2, years_max: 3, points: 11, citation_index: 0}
+        - {label: four_to_five, years_min: 4, years_max: 5, points: 13, citation_index: 0}
+        - {label: six_or_more, years_min: 6, points: 15, citation_index: 0}
+      cap_value: 15
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.grid.age
+    factor_group: program_eligibility
+    factor_ids: [fsw.grid.age]
+    check_type: points
+    query: "age points under older"
+    selector:
+      <<: *guidance_fsw
+      marker: "47 and older  | 0"
+    claim_text: "Age selection points use the cited age bands."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#014
+        quote: "| Under 18  | 0  |\n| 18-35  | 12  |\n| 36  | 11  |\n| 37  | 10  |\n| 38  | 9  |\n| 39  | 8  |\n| 40  | 7  |\n| 41  | 6  |\n| 42  | 5  |\n| 43  | 4  |\n| 44  | 3  |\n| 45  | 2  |\n| 46  | 1  |\n| 47 and older  | 0  |"
+    machine_check:
+      kind: points_table
+      field: fsw_age_grid
+      points_by_level:
+        - {label: under_18, level: "under 18", points: 0, citation_index: 0}
+        - {label: age_18_35, level: "18-35", points: 12, citation_index: 0}
+        - {label: age_36, level: 36, points: 11, citation_index: 0}
+        - {label: age_37, level: 37, points: 10, citation_index: 0}
+        - {label: age_38, level: 38, points: 9, citation_index: 0}
+        - {label: age_39, level: 39, points: 8, citation_index: 0}
+        - {label: age_40, level: 40, points: 7, citation_index: 0}
+        - {label: age_41, level: 41, points: 6, citation_index: 0}
+        - {label: age_42, level: 42, points: 5, citation_index: 0}
+        - {label: age_43, level: 43, points: 4, citation_index: 0}
+        - {label: age_44, level: 44, points: 3, citation_index: 0}
+        - {label: age_45, level: 45, points: 2, citation_index: 0}
+        - {label: age_46, level: 46, points: 1, citation_index: 0}
+        - {label: age_47_plus, level: "47+", points: 0, citation_index: 0}
+      cap_value: 12
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.grid.arranged_employment
+    factor_group: program_eligibility
+    factor_ids: [fsw.grid.arranged_employment]
+    check_type: points
+    query: "job offer Canadian employer"
+    selector:
+      <<: *guidance_fsw
+      marker: "To get 10 points for a valid job offer"
+    claim_text: "Arranged-employment points remain manual because the cited ability-to-perform and licensing determinations must be made by an officer."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#015
+        quote: "To get 10 points for a valid job offer, **one of these situations** must also apply."
+      - chunk_id: guidance/federal-skilled-workers.md#015
+        quote: "for continuous, paid, full-time work (minimum of 30 hours/week) that is: \n    * not seasonal\n    * for at least 1 year\n  * in an occupation listed in TEER category 0, 1, 2 or 3 of the NOC"
+      - chunk_id: guidance/federal-skilled-workers.md#016
+        quote: "You currently work in Canada on a work permit and you meet **all** of the following conditions: \n  * Your work permit is valid both when you apply and when the permanent resident visa is issued (or you’re allowed to work in Canada without a work permit when your visa is issued).\n  * We issued your work permit based on a positive labour market impact assessment (LMIA) from Employment and Social Development Canada in an occupation listed in TEER category 0, 1, 2 or 3 of the NOC.\n  * You’re working for an employer named on your work permit.\n  * That employer has made a valid job offer based on you being accepted as a skilled worker."
+      - chunk_id: guidance/federal-skilled-workers.md#017
+        quote: "You currently work in Canada in a job that is exempt from the LMIA requirement because of **1** of the following:\n  * an international agreement (such as, the North American Free Trade Agreement) or\n  * significant benefit to Canadian interests or\n  * a federal-provincial agreement"
+      - chunk_id: guidance/federal-skilled-workers.md#018
+        quote: "You must meet **all** of the following conditions:\n  * You currently don’t have a work permit, or don’t plan to work in Canada before you get a permanent resident visa.\n  * An employer has a LMIA. \n  * That employer has made you a valid job offer based on that LMIA and on you being accepted as a skilled worker."
+      - chunk_id: guidance/federal-skilled-workers.md#019
+        quote: "You must meet **all** of the following conditions:\n  * You have a valid work permit or are allowed to work in Canada without a work permit.\n  * You’re currently working in Canada in a job that is exempt from a LMIA, but it is **not** under an international, federal-provincial agreement or because of significant benefit to Canadian interests.\n  * An employer other than the one you are currently working for:\n    * has a LMIA\n    * has made you a valid job offer based on that LMIA and on you being accepted as a skilled worker. "
+      - chunk_id: guidance/federal-skilled-workers.md#017
+        quote: "Your work permit is valid both when you apply and when the permanent resident visa is issued (or you’re allowed to work in Canada without a permit when your permanent resident visa is issued).\n  * Your current employer has made a valid job offer based on you being accepted as a skilled worker.\n  * You are currently working for the employer specified on your work permit.\n  * You have been working for that employer for at least 1 year, continuous full-time or part-time equivalent."
+      - chunk_id: guidance/federal-skilled-workers.md#015
+        quote: "You can get points if you have a job offer of **at least 1 year** from a Canadian employer."
+      - chunk_id: guidance/job-offer.md#003
+        quote: "A valid job offer has to be:\n  * from 1 employer"
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-arranged-employment-licensing-certification.md#000
+        quote: "However, officers must be satisfied that the applicant is likely to accept and capable of performing the employment being offered to them, and can with reasonable probability be expected to qualify for licensing/certification once in Canada. In making this determination, visa officers may take into account the applicant’s education and training, background, and prior work experience."
+    machine_check:
+      kind: points_table
+      field: fsw_arranged_employment_grid
+      points_by_level:
+        - {label: valid_arranged_employment, level: valid_offer, points: 10, citation_index: 0}
+      minimum_duration_months: {value: 12, citation_index: 1}
+      minimum_hours_per_week: {value: 30, citation_index: 1}
+      cap_value: 10
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.grid.adaptability
+    factor_group: program_eligibility
+    factor_ids: [fsw.grid.adaptability]
+    check_type: points
+    query: "award applicant maximum adaptability"
+    selector:
+      family: pr-pdi
+      require_title_contains: "Adaptability"
+      marker: "award the applicant up to a maximum of 10 points for adaptability"
+    claim_text: "Adaptability selection points use only the cited factors and cap."
+    citations:
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-adaptability.md#000
+        quote: "award the applicant up to a maximum of 10 points for adaptability"
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-adaptability.md#001
+        quote: "Award 5 points if the accompanying spouse or common-law partner, other than a permanent resident residing in Canada or a Canadian citizen, has a level of proficiency in either official language at **Canadian Language Benchmarks (CLB) level 4** or higher in all 4 language skill areas"
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-adaptability.md#002
+        quote: "Award 5 points if the principal applicant completed at least 2 academic years of full-time study (in a program of at least 2 years in duration) at a secondary or post-secondary institution in Canada."
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-adaptability.md#002
+        quote: "Award 5 points if the accompanying spouse or common-law partner, other than a permanent resident residing in Canada or a Canadian citizen, completed at least 2 academic years of full-time study (in a program of at least 2 years in duration) at a secondary or post-secondary institution in Canada."
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-adaptability.md#003
+        quote: "Award 10 points if the principal applicant completed at least 1 year of full-time work in Canada authorized under a work permit or under section R186"
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-adaptability.md#004
+        quote: "Award 5 points if the accompanying spouse or common-law partner, other than a Canadian citizen or permanent resident residing in Canada, completed at least 1 year of full-time work in Canada authorized under a work permit or under R186."
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-adaptability.md#004
+        quote: "Award 5 points if the principal applicant has been awarded points for arranged employment in Canada under subsection R82(2)."
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-selection-criteria-adaptability.md#004
+        quote: "Award 5 points if the principal applicant, or accompanying spouse or common-law partner, has a relative (parent, grandparent, child, grandchild, sibling, aunt, uncle, niece or nephew) who is 18 years of age or older as of the date of application, and who is a Canadian citizen or permanent resident residing in Canada."
+    machine_check:
+      kind: points_table
+      field: fsw_adaptability_grid
+      points_by_level:
+        - {label: spouse_language, level: "CLB 4", points: 5, citation_index: 1}
+        - {label: applicant_study, level: "2 academic years", points: 5, citation_index: 2}
+        - {label: spouse_study, level: "2 academic years", points: 5, citation_index: 3}
+        - {label: applicant_work, level: "1 year", points: 10, citation_index: 4}
+        - {label: spouse_work, level: "1 year", points: 5, citation_index: 5}
+        - {label: arranged_employment, level: eligible, points: 5, citation_index: 6}
+        - {label: relative, level: eligible, points: 5, citation_index: 7}
+      cap_value: 10
+      citation_index: 0
+    volatility: *pdi_volatility
+
+  - rule_id: fsw.grid.pass_mark
+    factor_group: program_eligibility
+    factor_ids: [fsw.grid.pass_mark]
+    check_type: threshold
+    query: "overall score out of points qualify Federal Skilled Worker"
+    selector:
+      <<: *guidance_fsw
+      marker: "score **67 points or higher**"
+    claim_text: "The selection-grid total is compared with the cited pass mark."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#009
+        quote: "We’ll assess your selection factors and assign an overall score out of 100.\n  * If you score **67 points or higher**"
+    machine_check:
+      kind: threshold
+      field: fsw_selection_total
+      min_value: 67
+      max_value: 100
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.funds.requirement
+    factor_group: program_eligibility
+    factor_ids: [fsw.funds.requirement]
+    check_type: admissibility
+    query: "proof funds employer Canada"
+    selector:
+      <<: *guidance_fsw
+      marker: "don't** need proof of funds"
+    claim_text: "Settlement-funds applicability and exemption use the cited conditions; sufficiency is not encoded."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#022
+        quote: "You **don't** need proof of funds if you:\n  * are currently able to legally work in Canada, **and**\n  * have a valid job offer from an employer in Canada"
+      - chunk_id: guidance/proof-funds.md#005
+        quote: "Your funds must be **available to you**"
+      - chunk_id: guidance/proof-funds.md#007
+        quote: "you can't use equity on real property as proof of settlement funds\n  * you can’t borrow this money from another person"
+    machine_check:
+      kind: applicability
+      field: fsw_funds
+      applicability:
+        - {value: settlement_funds_required, citation_index: 0}
+        - {value: funds_must_be_available, citation_index: 1}
+        - {value: funds_not_borrowed_or_equity, citation_index: 2}
+      conditional_na:
+        - {value: legal_work_authorization_and_valid_offer, citation_index: 0}
+      branches:
+        - label: funds_exemption
+          citation_index: 0
+          requirements:
+            - {field: legally_authorized_to_work_canada, operator: equals, value: true, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fsw.destination.outside_quebec
+    factor_group: program_eligibility
+    factor_ids: [fsw.destination.outside_quebec]
+    check_type: admissibility
+    query: "plan live outside province Quebec"
+    selector:
+      <<: *guidance_fsw
+      marker: "plan to live **outside the province of Quebec**"
+    claim_text: "The intended destination must satisfy the cited geographic condition."
+    citations:
+      - chunk_id: guidance/federal-skilled-workers.md#024
+        quote: "You must plan to live **outside the province of Quebec**."
+    machine_check:
+      kind: policy_flag
+      field: destination_outside_quebec
+      flag_value: true
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  # Federal Skilled Trades
+  - rule_id: fst.work.trade_noc
+    factor_group: program_eligibility
+    factor_ids: [fst.work.trade_noc]
+    check_type: admissibility
+    query: "skilled trades same NOC Major Groups Minor Group Unit Group"
+    selector:
+      <<: *guidance_fst
+      marker: "Major Groups **72**"
+    claim_text: "The skilled trade must be in the cited occupational hierarchy."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#003
+        quote: "Major Groups **72** (excluding Sub-Major Group 726), **73** , **82** , **83** , **92** , or **93** (excluding Sub-Major Group 932)\n    * Minor Group **6320**\n    * Unit Group **62200**"
+    machine_check:
+      kind: hierarchy
+      field: fst_trade_noc
+      included_hierarchy:
+        - {value: "Major Group 72", citation_index: 0}
+        - {value: "Major Group 73", citation_index: 0}
+        - {value: "Major Group 82", citation_index: 0}
+        - {value: "Major Group 83", citation_index: 0}
+        - {value: "Major Group 92", citation_index: 0}
+        - {value: "Major Group 93", citation_index: 0}
+        - {value: "Minor Group 6320", citation_index: 0}
+        - {value: "Unit Group 62200", citation_index: 0}
+      excluded_hierarchy:
+        - {value: "Sub-Major Group 726", citation_index: 0}
+        - {value: "Sub-Major Group 932", citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fst.work.same_noc
+    factor_group: program_eligibility
+    factor_ids: [fst.work.same_noc]
+    check_type: admissibility
+    query: "skilled trades work experience all same NOC"
+    selector:
+      <<: *guidance_fst
+      marker: "all be in the same NOC"
+    claim_text: "Qualifying skilled-trade work must share the cited occupation."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#003
+        quote: "all be in the same NOC and be in 1 of these NOC groups"
+    machine_check:
+      kind: policy_flag
+      field: same_noc
+      flag_value: true
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: fst.work.paid
+    factor_group: program_eligibility
+    factor_ids: [fst.work.paid]
+    check_type: admissibility
+    query: "skilled trades paid work wages commission"
+    selector:
+      <<: *guidance_fst
+      marker: "be paid work"
+    claim_text: "Qualifying skilled-trade work must be paid."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#003
+        quote: "be paid work\n    * You must have been paid wages or earned commission"
+    machine_check:
+      kind: policy_flag
+      field: paid_work
+      flag_value: true
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: fst.work.qualified_to_practise
+    factor_group: program_eligibility
+    factor_ids: [fst.work.qualified_to_practise]
+    check_type: admissibility
+    query: "qualified practise trade where work experience country"
+    selector:
+      <<: *guidance_fst
+      marker: "qualified to practise that trade where you got your work experience"
+    claim_text: "Each work period must satisfy the cited independent-practice condition."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#006
+        quote: "Your work experience only counts if you were qualified to practise that trade where you got your work experience."
+    machine_check:
+      kind: applicability
+      field: qualified_to_practise
+      applicability:
+        - {value: qualified_under_location_rules, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fst.work.student_exclusion
+    factor_group: program_eligibility
+    factor_ids: [fst.work.student_exclusion]
+    check_type: admissibility
+    query: "studying work"
+    selector:
+      <<: *guidance_fst
+      marker: "doesn't** count towards minimum requirements"
+    claim_text: "Student work is excluded as cited."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#008
+        quote: "Work experience gained while you were studying **doesn't** count towards minimum requirements for the Federal Skilled Trades Program."
+    machine_check:
+      kind: policy_flag
+      field: student_work_counts
+      flag_value: false
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: fst.work.recency_duration_hours
+    factor_group: program_eligibility
+    factor_ids: [fst.work.recency_duration_hours]
+    check_type: threshold
+    query: "skilled trade years full-time hours total before apply"
+    selector:
+      <<: *guidance_fst
+      marker: "3,120 hours total"
+    claim_text: "Skilled-trade work must meet the cited duration, hours, and lookback."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#003
+        quote: "be at least **2 years** of full-time work experience (or 3,120 hours total) in a skilled trade within the 5 years before you apply"
+      - chunk_id: guidance/federal-skilled-trades.md#007
+        quote: "We **don’t** count any hours you work above 30 hours/week."
+    machine_check:
+      kind: duration_hours
+      field: fst_work_duration
+      minimum_duration_months: {value: 24, citation_index: 0}
+      minimum_hours: {value: 3120, citation_index: 0}
+      maximum_hours_per_week: {value: 30, citation_index: 1}
+      lookback_years: {value: 5, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fst.work.noc_duties_requirements
+    factor_group: program_eligibility
+    factor_ids: [fst.work.noc_duties_requirements]
+    check_type: admissibility
+    query: "lead statement main duties job requirements skilled trade NOC"
+    selector:
+      <<: *guidance_fst
+      marker: "meet the job requirements for that skilled trade"
+    claim_text: "The occupational duty and employment-requirement review is mandatory."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#003
+        quote: "the actions in the **lead statement** of the NOC job description, and\n    * most of the main duties listed\n  * meet the job requirements for that skilled trade as set out in the NOC"
+    machine_check:
+      kind: accepted_enum
+      field: fst_noc_review
+      accepted_values:
+        - {value: lead_statement, citation_index: 0}
+        - {value: most_main_duties, citation_index: 0}
+        - {value: employment_requirements, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fst.language.minimum
+    factor_group: program_eligibility
+    factor_ids: [fst.language.minimum]
+    check_type: threshold
+    query: "speaking listening English French"
+    selector:
+      <<: *guidance_language
+      marker: "English  | Speaking and listening"
+    claim_text: "Each language ability must meet its cited minimum."
+    citations:
+      - chunk_id: guidance/language-test.md#008
+        quote: "| English  | Speaking and listening   | **CLB 5**  |\n| English  | Reading and writing   | **CLB 4**  |\n| French  | Speaking and listening   | **NCLC 5**  |\n| French  | Reading and writing   | **NCLC 4**  |"
+      - chunk_id: guidance/language-test.md#009
+        quote: "Your test results must be **less than 2 years old**"
+    machine_check:
+      kind: hierarchy
+      field: fst_language
+      included_hierarchy:
+        - {value: "English speaking listening CLB 5", citation_index: 0}
+        - {value: "English reading writing CLB 4", citation_index: 0}
+        - {value: "French speaking listening NCLC 5", citation_index: 0}
+        - {value: "French reading writing NCLC 4", citation_index: 0}
+      lookback_years: {value: 2, citation_index: 1}
+    volatility: *guidance_volatility
+
+  - rule_id: fst.offer_or_certificate
+    factor_group: program_eligibility
+    factor_ids: [fst.offer_or_certificate]
+    check_type: admissibility
+    query: "valid job offer certificate qualification skilled trade authority"
+    selector:
+      <<: *guidance_fst
+      marker: "certificate of qualification in your skilled trade"
+    claim_text: "A current matching certificate can satisfy this criterion; the offer alternative remains manual because the cited statutory circumstances require officer determinations unavailable to this screen."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#009
+        quote: "a valid job offer of full-time employment for a total period of at least 1 year, **or**\n  * a certificate of qualification in your skilled trade issued by a Canadian provincial, territorial or federal authority"
+      - chunk_id: guidance/federal-skilled-trades.md#011
+        quote: "you’ll need avalid job offer in your trade to be eligible for this program"
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-trades-assessing-application-against-selection-criteria.md#001
+        quote: "have an offer of employment for continuous full-time work for a total period of at least 1 year from up to 2 employers in that skilled trade occupation"
+      - chunk_id: guidance/job-offer.md#004
+        quote: "A valid job offer has to be:\n  * made by up to 2 employers\n  * for continuous, paid, full-time work (at least 30 hours a week)"
+      - chunk_id: legislation-irpr/FullText.md#258
+        quote: "the offer is made by up to two employers who are specified on the work permit, none of whom is an embassy, high commission or consulate in Canada or an employer who is referred to in subparagraph 200(3)(h)(ii) or (iii)"
+      - chunk_id: legislation-irpr/FullText.md#260
+        quote: "an officer has approved the offer of employment based on a valid assessment — provided to the officer by the Department of Employment and Social Development, on the same basis as an assessment provided for the issuance of a work permit, at the request of up to two employers or an officer — that the requirements set out in subsection 203(1) with respect to the offer have been met"
+    machine_check:
+      kind: applicability
+      field: fst_offer_or_certificate
+      minimum_duration_months: {value: 12, citation_index: 0}
+      applicability:
+        - {value: valid_full_time_offer, citation_index: 0}
+        - {value: canadian_trade_certificate, citation_index: 0}
+      conditional_na:
+        - {value: alternate_branch_satisfied, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fst.funds.requirement
+    factor_group: program_eligibility
+    factor_ids: [fst.funds.requirement]
+    check_type: admissibility
+    query: "proof funds employer Canada"
+    selector:
+      <<: *guidance_fst
+      marker: "don't** need proof of funds"
+    claim_text: "Settlement-funds applicability and exemption use the cited conditions; sufficiency is not encoded."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#015
+        quote: "You **don't** need proof of funds if you:\n  * are currently able to legally work in Canada, **and**\n  * have a valid job offer from an employer in Canada"
+      - chunk_id: guidance/proof-funds.md#005
+        quote: "Your funds must be **available to you**"
+      - chunk_id: guidance/proof-funds.md#007
+        quote: "you can't use equity on real property as proof of settlement funds\n  * you can’t borrow this money from another person"
+    machine_check:
+      kind: applicability
+      field: fst_funds
+      applicability:
+        - {value: settlement_funds_required, citation_index: 0}
+        - {value: funds_must_be_available, citation_index: 1}
+        - {value: funds_not_borrowed_or_equity, citation_index: 2}
+      conditional_na:
+        - {value: legal_work_authorization_and_valid_offer, citation_index: 0}
+      branches:
+        - label: funds_exemption
+          citation_index: 0
+          requirements:
+            - {field: legally_authorized_to_work_canada, operator: equals, value: true, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: fst.destination.outside_quebec
+    factor_group: program_eligibility
+    factor_ids: [fst.destination.outside_quebec]
+    check_type: admissibility
+    query: "outside Quebec"
+    selector:
+      <<: *guidance_fst
+      marker: "plan to live **outside the province of Quebec**"
+    claim_text: "The intended destination must satisfy the cited geographic condition."
+    citations:
+      - chunk_id: guidance/federal-skilled-trades.md#017
+        quote: "You must plan to live **outside the province of Quebec**."
+    machine_check:
+      kind: policy_flag
+      field: destination_outside_quebec
+      flag_value: true
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  # Canadian Experience Class
+  - rule_id: cec.work.teer
+    factor_group: program_eligibility
+    factor_ids: [cec.work.teer]
+    check_type: admissibility
+    query: "Canadian skilled work experience NOC TEER categories"
+    selector:
+      <<: *guidance_cec
+      marker: "be in 1 or more of these NOC categories"
+    claim_text: "Canadian work must be in the cited occupational hierarchy."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#002
+        quote: "be in 1 or more of these NOC categories: training, education, experience and responsibilities (TEER) 0, 1, 2, or 3"
+    machine_check:
+      kind: hierarchy
+      field: cec_teer
+      included_hierarchy:
+        - {value: "TEER 0", citation_index: 0}
+        - {value: "TEER 1", citation_index: 0}
+        - {value: "TEER 2", citation_index: 0}
+        - {value: "TEER 3", citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: cec.work.in_canada
+    factor_group: program_eligibility
+    factor_ids: [cec.work.in_canada]
+    check_type: admissibility
+    query: "working in Canada physically Canadian employer remote"
+    selector:
+      <<: *guidance_cec
+      marker: "physically in Canada and working for a Canadian employer"
+    claim_text: "The work must satisfy the cited physical-location condition."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#002
+        quote: "If you worked remotely, you must have been physically in Canada and working for a Canadian employer."
+    machine_check:
+      kind: applicability
+      field: work_in_canada
+      applicability:
+        - {value: physically_in_canada, citation_index: 0}
+        - {value: canadian_employer_if_remote, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: cec.work.authorized_tr_status
+    factor_group: program_eligibility
+    factor_ids: [cec.work.authorized_tr_status]
+    check_type: admissibility
+    query: "authorized work temporary resident status Canada"
+    selector:
+      <<: *guidance_cec
+      marker: "authorized to work under temporary resident status"
+    claim_text: "Each work period must satisfy the cited authorization and status condition."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#002
+        quote: "be gained by working **in Canada** while authorized to work under temporary resident status"
+    machine_check:
+      kind: applicability
+      field: authorized_tr_status
+      applicability:
+        - {value: authorized_to_work, citation_index: 0}
+        - {value: temporary_resident_status, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: cec.work.paid
+    factor_group: program_eligibility
+    factor_ids: [cec.work.paid]
+    check_type: admissibility
+    query: "Canadian skilled work paid wages commission"
+    selector:
+      <<: *guidance_cec
+      marker: "be paid work"
+    claim_text: "Qualifying Canadian work must be paid."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#002
+        quote: "be paid work (you must have been paid wages or earned commission—volunteer work or unpaid internships don’t count)"
+    machine_check:
+      kind: policy_flag
+      field: paid_work
+      flag_value: true
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: cec.work.recency_duration_hours
+    factor_group: program_eligibility
+    factor_ids: [cec.work.recency_duration_hours]
+    check_type: threshold
+    query: "Canadian work hours total years before apply"
+    selector:
+      <<: *guidance_cec
+      marker: "1,560 hours total"
+    claim_text: "Canadian work must meet the cited duration, hours, and lookback."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#002
+        quote: "be at least **1 year of work** or 1,560 hours total (30 hours per week) in the 3 years before you apply"
+      - chunk_id: guidance/canadian-experience-class.md#004
+        quote: "up to 30 hours a week for 12 months"
+    machine_check:
+      kind: duration_hours
+      field: cec_work_duration
+      minimum_duration_months: {value: 12, citation_index: 0}
+      minimum_hours: {value: 1560, citation_index: 0}
+      maximum_hours_per_week: {value: 30, citation_index: 1}
+      lookback_years: {value: 3, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: cec.work.student_exclusion
+    factor_group: program_eligibility
+    factor_ids: [cec.work.student_exclusion]
+    check_type: admissibility
+    query: "student work"
+    selector:
+      <<: *guidance_cec
+      marker: "full-time student"
+    claim_text: "Full-time student work is excluded as cited."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#005
+        quote: "work experience gained while you were a full-time student (even if you were on a co-op work term) **doesn’t count**"
+    machine_check:
+      kind: policy_flag
+      field: student_work_counts
+      flag_value: false
+      citation_index: 0
+    volatility: *guidance_volatility
+
+  - rule_id: cec.work.self_employment_exclusion
+    factor_group: program_eligibility
+    factor_ids: [cec.work.self_employment_exclusion]
+    check_type: admissibility
+    query: "self employment student"
+    selector:
+      <<: *guidance_cec
+      marker: "Self-employment and work experience gained"
+    claim_text: "Self-employment is excluded except for the cited manual physician policy branch."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#005
+        quote: "Self-employment and work experience gained while you were a full-time student"
+      - chunk_id: guidance/canadian-experience-class.md#006
+        quote: "invited to apply for permanent residence through Express Entry on or after April 25, 2023"
+    machine_check:
+      kind: applicability
+      field: self_employment
+      applicability:
+        - {value: self_employment_excluded, citation_index: 0}
+        - {value: physician_exception_manual_review, citation_index: 1}
+        - {value: "2023-04-25", citation_index: 1}
+    volatility: *guidance_volatility
+
+  - rule_id: cec.work.noc_duties
+    factor_group: program_eligibility
+    factor_ids: [cec.work.noc_duties]
+    check_type: admissibility
+    query: "Canadian work lead statement most main duties NOC"
+    selector:
+      <<: *guidance_cec
+      marker: "actions in the **lead statement**"
+    claim_text: "Canadian work requires the cited occupational duty review."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#002
+        quote: "the actions in the **lead statement** of the NOC job description, and\n    * most of the main duties listed"
+    machine_check:
+      kind: accepted_enum
+      field: noc_duties
+      accepted_values:
+        - {value: lead_statement, citation_index: 0}
+        - {value: most_main_duties, citation_index: 0}
+    volatility: *guidance_volatility
+
+  - rule_id: cec.language.minimum
+    factor_group: program_eligibility
+    factor_ids: [cec.language.minimum]
+    check_type: threshold
+    query: "CLB NCLC"
+    selector:
+      <<: *guidance_language
+      marker: "TEER 0 or 1"
+    claim_text: "Language minimums depend on the cited occupational tier."
+    citations:
+      - chunk_id: guidance/language-test.md#005
+        quote: "| TEER 0 or 1  | CLB 7  | NCLC 7  |\n| TEER 2 or 3  | CLB 5  | NCLC 5  |"
+      - chunk_id: guidance/language-test.md#009
+        quote: "Your test results must be **less than 2 years old**"
+    machine_check:
+      kind: hierarchy
+      field: cec_language
+      included_hierarchy:
+        - {value: "TEER 0 or 1 English CLB 7", citation_index: 0}
+        - {value: "TEER 0 or 1 French NCLC 7", citation_index: 0}
+        - {value: "TEER 2 or 3 English CLB 5", citation_index: 0}
+        - {value: "TEER 2 or 3 French NCLC 5", citation_index: 0}
+      lookback_years: {value: 2, citation_index: 1}
+    volatility: *guidance_volatility
+
+  - rule_id: cec.destination.outside_quebec
+    factor_group: program_eligibility
+    factor_ids: [cec.destination.outside_quebec]
+    check_type: admissibility
+    query: "outside Quebec"
+    selector:
+      <<: *guidance_cec
+      marker: "plan to live **outside the province of Quebec**"
+    claim_text: "The intended destination must satisfy the cited geographic condition."
+    citations:
+      - chunk_id: guidance/canadian-experience-class.md#010
+        quote: "You must plan to live **outside the province of Quebec**."
+    machine_check:
+      kind: policy_flag
+      field: destination_outside_quebec
+      flag_value: true
+      citation_index: 0
+    volatility: *guidance_volatility

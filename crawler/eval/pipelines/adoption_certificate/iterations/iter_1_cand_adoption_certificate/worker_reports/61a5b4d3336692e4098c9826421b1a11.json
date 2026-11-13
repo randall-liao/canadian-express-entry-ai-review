@@ -1,0 +1,56 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-certificate-requirement",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, territory, or region that formalized the adoption must be provided when a dependent child's status is listed as adopted. The submitted documentation is defective because it does not include a final judicial court adoption order, full severance of biological parental ties, a Provincial Letter of No Objection (LNO), and a completed Home Study Report with verified biological parent consent.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "This document is requested only when the dependent child status is listed as adopted."
+    }
+  ],
+  "basis": [
+    "The applicant submitted documentation for an adopted dependent child under case 61a5b4d3336692e4098c9826421b1a11.",
+    "The submitted adoption documentation was reviewed against Express Entry completeness requirements.",
+    "The document fails verification against the checklist as a final judicial court adoption order is missing, the legal status reflects temporary guardianship rather than full adoption severing biological ties, no Provincial Letter of No Objection (LNO) is provided, and the Home Study Report and biological parent consent are missing or unverified."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "61a5b4d3336692e4098c9826421b1a11",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "61a5b4d3336692e4098c9826421b1a11.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "28701e67e4eeb0b5142c3f67002c798c06dcef3af26261d4dc8bf9de3a7e5c85",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "8645504036d092816020ea62d7ce8d12f75b6d580c6a128be490e8a45f83a3d6",
+    "output_hash": "f816fcf3b2fd61232ae218185c6636e5446643a993247a8e8af253eff70c9060",
+    "returncode": 0,
+    "timestamp": "2026-07-24T01:24:08.045188+00:00",
+    "provenance_digest": "286585d267e8d2dd37973af7ce2c85b12598367b0f3d24e0457fe1e4b0105241"
+  }
+}

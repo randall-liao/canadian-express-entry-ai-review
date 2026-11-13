@@ -1,0 +1,240 @@
+{
+  "doc_type": "language_test",
+  "timestamp": "2026-07-23T06:57:47.968516+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "language_test",
+      "title": "IELTS General Training Official Test Report Form",
+      "issuing_authority": "IDP Education / IELTS Australia",
+      "issue_date": "2025-08-15",
+      "expiry_date": "2027-08-01",
+      "fields": {
+        "candidate_name": "Jane Doe",
+        "candidate_id": "123456",
+        "registration_number": "25CA123456DOE001G",
+        "test_provider": "IELTS",
+        "test_type": "IELTS General Training",
+        "test_variant": "General Training",
+        "test_date": "2025-08-01",
+        "expiry_date": "2027-08-01",
+        "trf_number": "25CA123456DOE001G",
+        "test_pin": "98765432",
+        "speaking_score": 7.5,
+        "listening_score": 8.5,
+        "reading_score": 7.0,
+        "writing_score": 7.5,
+        "overall_score": 7.5,
+        "clb_level": "CLB 9",
+        "validity_status": "valid"
+      },
+      "narrative_blocks": [
+        "Official Test Report Form issued by IDP Education for candidate Jane Doe.",
+        "The candidate completed the IELTS General Training test on August 01, 2025. Results achieved correspond to Canadian Language Benchmark (CLB) level 9 across all tested competencies (Listening: 8.5, Reading: 7.0, Writing: 7.5, Speaking: 7.5).",
+        "This official report remains valid for two years from the date of the test administration."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "language_test",
+      "title": "Expired CELPIP-General Official Score Report",
+      "issuing_authority": "Paragon Testing Enterprises",
+      "issue_date": "2023-01-20",
+      "expiry_date": "2025-01-10",
+      "fields": {
+        "candidate_name": "John Smith",
+        "candidate_id": "987654",
+        "registration_number": "300123456",
+        "test_provider": "CELPIP",
+        "test_type": "CELPIP-General",
+        "test_variant": "General",
+        "test_date": "2023-01-10",
+        "expiry_date": "2025-01-10",
+        "trf_number": "CELPIP-300123456",
+        "test_pin": "12345678",
+        "speaking_score": 9.0,
+        "listening_score": 9.0,
+        "reading_score": 8.0,
+        "writing_score": 8.0,
+        "overall_score": 8.5,
+        "clb_level": "CLB 9",
+        "validity_status": "expired"
+      },
+      "narrative_blocks": [
+        "CELPIP-General Official Score Report issued by Paragon Testing Enterprises for John Smith.",
+        "Test taken on January 10, 2023. Scores achieved: Listening 9, Reading 8, Writing 8, Speaking 9.",
+        "Note: Results expired on January 10, 2025, prior to the submission date of the application."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-LANGUAGE-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The submitted language test results were taken more than 2 years prior to the e-APR submission date, rendering the test results expired and invalid for immigration assessment.",
+        "affected_fields": [
+          "test_date",
+          "expiry_date",
+          "validity_status"
+        ],
+        "mutation_details": {
+          "test_date": "2023-01-10",
+          "expiry_date": "2025-01-10",
+          "validity_status": "expired",
+          "current_date": "2026-07-23",
+          "reason": "Test date exceeds the maximum 2-year validity window at e-APR submission"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "language_test",
+      "title": "IELTS Test Report Form - Verification Failure",
+      "issuing_authority": "British Council Test Center",
+      "issue_date": "2025-11-12",
+      "expiry_date": "2027-11-01",
+      "fields": {
+        "candidate_name": "Alex Taylor",
+        "candidate_id": "555123",
+        "registration_number": "0000000000000000",
+        "test_provider": "IELTS",
+        "test_type": "IELTS General Training",
+        "test_variant": "General Training",
+        "test_date": "2025-11-01",
+        "expiry_date": "2027-11-01",
+        "trf_number": "00CA000000TAY000X",
+        "test_pin": "00000000",
+        "speaking_score": 8.0,
+        "listening_score": 8.0,
+        "reading_score": 8.0,
+        "writing_score": 8.0,
+        "overall_score": 8.0,
+        "clb_level": "CLB 9",
+        "validity_status": "unverifiable"
+      },
+      "narrative_blocks": [
+        "IELTS Official Test Report Form submitted for candidate Alex Taylor.",
+        "Test date recorded as November 01, 2025 with reported overall score band 8.0.",
+        "Attempted online verification using TRF Number 00CA000000TAY000X and PIN 00000000 returned no matching candidate record in the IELTS Verification Service database."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-LANGUAGE-02",
+        "category": "pfl_misrepresentation",
+        "severity": "critical",
+        "description": "The TRF number and test verification credentials do not correspond to any registered result in the official test provider system, failing authenticity verification.",
+        "affected_fields": [
+          "trf_number",
+          "test_pin",
+          "registration_number",
+          "candidate_id"
+        ],
+        "mutation_details": {
+          "trf_number": "00CA000000TAY000X",
+          "test_pin": "00000000",
+          "registration_number": "0000000000000000",
+          "candidate_id": "555123",
+          "verification_result": "Record not found in issuing authority central registry"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "language_test",
+      "title": "TEF Canada Test Result Report - Below Minimum Cutoff",
+      "issuing_authority": "Le Français des Affaires / CCI Paris Île-de-France",
+      "issue_date": "2025-06-20",
+      "expiry_date": "2027-06-15",
+      "fields": {
+        "candidate_name": "Morgan Lee",
+        "candidate_id": "778899",
+        "registration_number": "TEF-2025-778899",
+        "test_provider": "TEF Canada",
+        "test_type": "TEF Canada",
+        "test_variant": "General",
+        "test_date": "2025-06-15",
+        "expiry_date": "2027-06-15",
+        "trf_number": "TEF2025778899ML",
+        "test_pin": "44556677",
+        "speaking_score": 310,
+        "listening_score": 249,
+        "reading_score": 150,
+        "writing_score": 225,
+        "overall_score": 233,
+        "clb_level": "CLB 5",
+        "validity_status": "valid"
+      },
+      "narrative_blocks": [
+        "Official TEF Canada Score Report issued by CCI Paris Île-de-France for Morgan Lee.",
+        "Evaluation completed on June 15, 2025. Individual section scores: Expression orale 310 (CLB 7), Compréhension orale 249 (CLB 7), Compréhension écrite 150 (CLB 5), Expression écrite 225 (CLB 6).",
+        "Overall language proficiency evaluation determined to be CLB 5 based on the lowest subscore threshold."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-LANGUAGE-03",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "One or more individual component test scores (Reading score 150 / CLB 5) fall below the minimum threshold required by the economic immigration stream (CLB 7 minimum per module).",
+        "affected_fields": [
+          "speaking_score",
+          "listening_score",
+          "reading_score",
+          "writing_score",
+          "clb_level"
+        ],
+        "mutation_details": {
+          "reading_score": 150,
+          "reading_clb_equivalent": "CLB 5",
+          "required_clb_cutoff": "CLB 7",
+          "reason": "Reading component score failed to meet the required CLB 7 program threshold"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "language_test",
+      "title": "IELTS Academic Test Report Form - Unapproved Stream",
+      "issuing_authority": "IDP Education / IELTS Australia",
+      "issue_date": "2025-09-10",
+      "expiry_date": "2027-09-01",
+      "fields": {
+        "candidate_name": "Sam Jordan",
+        "candidate_id": "334455",
+        "registration_number": "25CA334455JOR001A",
+        "test_provider": "IELTS",
+        "test_type": "IELTS Academic",
+        "test_variant": "Academic",
+        "test_date": "2025-09-01",
+        "expiry_date": "2027-09-01",
+        "trf_number": "25CA334455JOR001A",
+        "test_pin": "55667788",
+        "speaking_score": 7.5,
+        "listening_score": 8.0,
+        "reading_score": 8.0,
+        "writing_score": 7.0,
+        "overall_score": 7.5,
+        "clb_level": "CLB 9",
+        "validity_status": "valid"
+      },
+      "narrative_blocks": [
+        "Official Test Report Form issued by IDP Education for Sam Jordan.",
+        "Candidate completed the IELTS Academic module on September 01, 2025.",
+        "The submission contains an Academic stream module rather than the required General Training stream designated for economic immigration programs."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-LANGUAGE-04",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "Applicant submitted an unapproved test stream (IELTS Academic) instead of the mandatory designated language test (IELTS General Training).",
+        "affected_fields": [
+          "test_type",
+          "test_provider",
+          "test_variant"
+        ],
+        "mutation_details": {
+          "submitted_test_type": "IELTS Academic",
+          "submitted_test_variant": "Academic",
+          "required_test_type": "IELTS General Training",
+          "reason": "Academic module is not an accepted test stream for Express Entry / economic immigration applications"
+        }
+      }
+    }
+  ]
+}

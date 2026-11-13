@@ -1,0 +1,55 @@
+{
+  "question": "What must an applicant provide to claim a relative in Canada for points?",
+  "claims": [
+    {
+      "id": "relative-in-canada-requirements",
+      "text": "To claim points for a relative in Canada, the applicant must provide proof of the relative's status as a Canadian citizen or permanent resident, evidence of current Canadian residence, and proof of relationship.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#058"
+      ],
+      "quote": "This documentation is required if the applicant indicates that they, or their accompanying spouse or common-law partner, have a family member in Canada who is a permanent resident or a Canadian citizen."
+    }
+  ],
+  "basis": [
+    "The document bundle (e06da6c6b8a306d6620755a9e39e68bc.pdf) was evaluated for the relative_in_canada upload slot to claim adaptability/CRS points for a relative in Canada.",
+    "The submission requires proof of the relative's Canadian citizenship or permanent resident status, evidence of current Canadian residency (such as a residential lease, mortgage documents, or utility bills dated within six months prior to submission), and proof of relationship to the applicant or accompanying spouse."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e06da6c6b8a306d6620755a9e39e68bc",
+  "doc_type": "relative_in_canada",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e06da6c6b8a306d6620755a9e39e68bc.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "8c8668e0c94bcfd82cf89858c8186d742a4098a6511bbfd22e5369c8ed8b1f07",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2f1f40f094cef106be7456e66355dedb2f4bfb3f04e122aa516f1b82e15a9223",
+    "prompt_hash": "402810a6bcc64634160f30b843f8bf8856c6a83299d6e20c1d78bdd967af8adb",
+    "output_hash": "e641a2b49c163bc8ab44088696bbfb29201387d40b414044339c188b92e83789",
+    "returncode": 0,
+    "timestamp": "2026-07-23T18:00:43.019112+00:00",
+    "provenance_digest": "de8dcbcf3afed6e0c8b8a488c045e5d174b3f14837fe004417cdfc05c11bd849"
+  }
+}

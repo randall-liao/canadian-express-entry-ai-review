@@ -1,0 +1,204 @@
+{
+  "doc_type": "digital_photo",
+  "case_evaluations": {
+    "168fdffa85e7d011360ab2b4cd6c5449": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "1e0002adc5e8fd5d850aea9eb4f602fe": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "567864bdadffc58ba6391652a353fb8f": {
+      "grounding_accuracy": 0.6,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "7c57160c2899655c324701cdd8938e8c": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "96122ac7bfc0f2e0b1b13daf962a2fc0": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b0da7b46beb2e138560acd53eca0b245": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "bd9e0ba88f82848fc083628283b223c4": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c3ab14c68d3930110ddcaacf939d3916": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c7605c26fb4b1d6c1ee8b5662a029676": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e681d0fbc7ad8ded45a4234a3696e62f": {
+      "grounding_accuracy": 1.0,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "1e0002adc5e8fd5d850aea9eb4f602fe",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected recency defect (PFL-DIGITAL_-02). Document field states 'Photo captured 20 months ago (exceeds 6-month limit)' and page 2 explicitly reads 'CRITICAL RECENCY FAILURE', yet Worker emitted only the generic spec requirement with no defect claim and no defective verdict."
+    },
+    {
+      "case_id": "b0da7b46beb2e138560acd53eca0b245",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected recency defect (PFL-DIGITAL_-02). Sibling of 1e0002; identical 'exceeds 6-month limit' field and 'CRITICAL RECENCY FAILURE' narrative present, but Worker produced only the generic requirement claim."
+    },
+    {
+      "case_id": "567864bdadffc58ba6391652a353fb8f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected framing defect (PFL-DIGITAL_-03): chin-to-crown 20mm (below 31-36mm), off-center/head tilted 15deg, broad smile with half-closed eyes, and page 2 'FRAMING AND COMPOSITION FAILURE'. No defect flagged."
+    },
+    {
+      "case_id": "567864bdadffc58ba6391652a353fb8f",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis reports 'embedded image objects measuring 2562 x 3311 pixels' and '2590 x 3333 pixels', which contradict the document's stated Pixel Resolution field (1200 x 1680 px). Presenting raster page dimensions as the photo's characteristics is unsupported and misleading."
+    },
+    {
+      "case_id": "96122ac7bfc0f2e0b1b13daf962a2fc0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected framing defect (PFL-DIGITAL_-03): chin-to-crown 20mm, off-center/tilted head, broad smile, and page 2 'FRAMING AND COMPOSITION FAILURE'. Worker returned only the generic requirement claim."
+    },
+    {
+      "case_id": "bd9e0ba88f82848fc083628283b223c4",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected lighting/background defect (PFL-DIGITAL_-04): dark patterned blue wallpaper, uneven directional lighting with hot spot, heavy shadow and severe eyeglass glare, and page 2 'LIGHTING AND BACKGROUND FAILURE'. No defect flagged."
+    },
+    {
+      "case_id": "e681d0fbc7ad8ded45a4234a3696e62f",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected lighting/background defect (PFL-DIGITAL_-04). Sibling of bd9e0ba with identical dark background/glare fields and 'LIGHTING AND BACKGROUND FAILURE' narrative, but Worker gave only the generic requirement claim."
+    },
+    {
+      "case_id": "c3ab14c68d3930110ddcaacf939d3916",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected dimension defect (PFL-DIGITAL_-01): 30mm x 40mm, 240 x 320 px, 42 KB, and page 2 'CRITICAL SPECIFICATION FAILURE'. Notably inconsistent: the scanned sibling 168fdffa with identical field values WAS correctly flagged, but this vector variant (selectable text) was not."
+    },
+    {
+      "case_id": "168fdffa85e7d011360ab2b4cd6c5449",
+      "category": "defect_recall",
+      "severity": "minor",
+      "description": "Correctly detected the dimension/resolution/file-size defect with accurate cited measurements and IRCC thresholds — the only defective case of eight where the defect was caught. Demonstrates capability exists but is applied inconsistently."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/digital_photo.md",
+      "suggested_patch": "Add a mandatory per-field validation checklist executed for EVERY case: photo_dimensions must equal 50mm x 70mm; pixel_resolution must fall within 715x1000 to 2000x2800 px; file_size <= 4 MB; chin_to_crown_height within 31-36mm; photo_date_taken within 6 months of submission; face centered/neutral; background plain white; no shadows/glare. Any field outside range MUST yield a defect claim and a 'defective' verdict. Do not stop at restating the generic requirement."
+    },
+    {
+      "target_file": "skills/document-agents/digital_photo.md",
+      "suggested_patch": "Require the agent to read the page-2 'Narrative Statements / Detailed Notes' section on every submission and treat any line containing 'FAILURE' (e.g., CRITICAL SPECIFICATION/RECENCY, FRAMING AND COMPOSITION, LIGHTING AND BACKGROUND) as a dispositive defect signal that must be surfaced in a defect claim."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Instruct extraction to prioritize declared metadata FIELDS (e.g., 'Pixel Resolution: 1200 x 1680 px') over rasterized page/image object dimensions. Do not report page-render pixel sizes as the photo's resolution; if reporting image-object dimensions, label them distinctly and reconcile against the stated field to avoid contradictory grounding."
+    },
+    {
+      "target_file": "skills/document-agents/digital_photo.md",
+      "suggested_patch": "Enforce variant parity: identical field values must produce identical verdicts regardless of scanned vs. vector rendering. Add a self-check that the extracted spec fields (not layout) drive the verdict so vector-text PDFs are not under-inspected relative to scanned images."
+    }
+  ],
+  "rationale": "PII containment, blind-input compliance, and citation exactness are uniformly strong: applicant identifiers stayed inside basis[], claims/prose remained generic, and all citations resolve consistently to the same completeness-check corpus quote with no ground-truth leakage. Grounding is generally accurate (claims made contain no invented facts) except 567864, where the Worker reported raster pixel dimensions contradicting the stated photo resolution. The decisive weakness is defect_recall: of eight defective cases, only 168fdffa (dimensions) was caught. The Worker missed recency (2), framing (2), lighting/background (2), and a second dimension case (c3ab14c) — including a striking scanned-vs-vector inconsistency where identical field values were flagged in one variant but not its sibling. Both genuine meets_requirements cases (7c57160, c7605c26) were correctly not flagged, so the Worker is not over-flagging; it is systematically failing to compare individual spec fields against IRCC thresholds and to act on explicit page-2 FAILURE narratives. Patches target the digital_photo agent to enforce per-field validation, mandatory narrative-note review, variant parity, and metadata-over-raster extraction.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "168fdffa85e7d011360ab2b4cd6c5449.pdf",
+      "--attachment",
+      "1e0002adc5e8fd5d850aea9eb4f602fe.pdf",
+      "--attachment",
+      "567864bdadffc58ba6391652a353fb8f.pdf",
+      "--attachment",
+      "7c57160c2899655c324701cdd8938e8c.pdf",
+      "--attachment",
+      "96122ac7bfc0f2e0b1b13daf962a2fc0.pdf",
+      "--attachment",
+      "b0da7b46beb2e138560acd53eca0b245.pdf",
+      "--attachment",
+      "bd9e0ba88f82848fc083628283b223c4.pdf",
+      "--attachment",
+      "c3ab14c68d3930110ddcaacf939d3916.pdf",
+      "--attachment",
+      "c7605c26fb4b1d6c1ee8b5662a029676.pdf",
+      "--attachment",
+      "e681d0fbc7ad8ded45a4234a3696e62f.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "f74c8a0225ee7d106b7c98bcdd71e9ee2920edaf0dbc9dce29d4e0036011c817",
+    "research_hash": "c7f529d5e49631c4a87918740e0f1ffaf59329338c021836d4d9f70de64c9cb1",
+    "ground_truth_hash": "4a6196c07f8ce0c16e900dd67872389fd1b7ce885d5df93e81d6941b3cc645f7",
+    "output_hash": "7a28a365e63a961fc618d294fac3f6db83d129dd1a0d74fec5f153255d2794e3",
+    "timestamp": "2026-07-24T18:36:11.940700+00:00",
+    "provenance_digest": "18c4f10ee5b9b7e52bb84b02c4e49ed89be244ee94602d4c8bb5b144397eb493"
+  }
+}

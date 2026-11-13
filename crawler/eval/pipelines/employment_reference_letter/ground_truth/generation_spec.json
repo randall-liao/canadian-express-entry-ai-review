@@ -1,0 +1,341 @@
+{
+  "doc_type": "employment_reference_letter",
+  "timestamp": "2026-07-23T02:57:51.523000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "employment_reference_letter",
+      "title": "Employment Reference Letter - Senior Software Engineer",
+      "issuing_authority": "Apex Technology Solutions Inc. Human Resources Department",
+      "issue_date": "2023-06-15",
+      "expiry_date": null,
+      "fields": {
+        "employee_name": "Jane Doe",
+        "job_title": "Senior Software Engineer",
+        "noc_code": "21232",
+        "employment_start_date": "2020-03-01",
+        "employment_end_date": "2023-05-31",
+        "employment_status": "Full-time",
+        "work_hours_per_week": 37.5,
+        "annual_salary": "$98,000 CAD",
+        "benefits": "Comprehensive medical and dental coverage, 401k employer match, 4 weeks paid vacation",
+        "duties_and_responsibilities": [
+          "Architected and maintained high-throughput microservices using Python and Go.",
+          "Led sprint planning sessions and mentored 4 junior developers on best coding practices.",
+          "Designed database schemas and optimized SQL queries to reduce latency by 35%.",
+          "Engineered CI/CD automation pipelines for continuous deployment to AWS."
+        ],
+        "company_name": "Apex Technology Solutions Inc.",
+        "company_letterhead": true,
+        "company_address": "100 Innovation Way, Suite 400, Toronto, ON M5V 2T6, Canada",
+        "company_telephone": "+1-416-555-0182",
+        "company_email": "hr@apextechsolutions.example.com",
+        "supervisor_name": "Robert Smith",
+        "supervisor_title": "Director of Software Engineering",
+        "supervisor_signature": "Robert Smith",
+        "supervisor_contact_info": "rsmith@apextechsolutions.example.com | +1-416-555-0199"
+      },
+      "narrative_blocks": [
+        "To Whom It May Concern,",
+        "This letter is to confirm that Jane Doe was employed at Apex Technology Solutions Inc. as a Senior Software Engineer from March 1, 2020, through May 31, 2023.",
+        "Jane Doe worked on a full-time basis, performing 37.5 hours per week, with an annual base salary of $98,000 CAD along with standard employee benefits including medical coverage and paid vacation.",
+        "In her role as Senior Software Engineer (NOC 21232), her primary duties included architecting microservices, leading technical planning sessions, optimizing database queries, and automating CI/CD release pipelines.",
+        "If you require further verification or details regarding Jane Doe's employment history, please do not hesitate to contact me.",
+        "Sincerely,\nRobert Smith\nDirector of Software Engineering\nApex Technology Solutions Inc."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "employment_reference_letter",
+      "title": "Employment Reference Letter - Software Developer (Missing Hours & Status)",
+      "issuing_authority": "Nova Systems Ltd.",
+      "issue_date": "2023-08-20",
+      "expiry_date": null,
+      "fields": {
+        "employee_name": "John Smith",
+        "job_title": "Software Developer",
+        "noc_code": "21232",
+        "employment_start_date": "2021-01-10",
+        "employment_end_date": "2023-07-15",
+        "employment_status": null,
+        "work_hours_per_week": null,
+        "annual_salary": "$85,000 CAD",
+        "benefits": "Medical benefits, paid leave",
+        "duties_and_responsibilities": [
+          "Developed web applications using React and Node.js.",
+          "Integrated REST APIs and resolved system defects.",
+          "Participated in daily standup meetings and sprint reviews."
+        ],
+        "company_name": "Nova Systems Ltd.",
+        "company_letterhead": true,
+        "company_address": "250 Tech Boulevard, Vancouver, BC V6B 1A1, Canada",
+        "company_telephone": "+1-604-555-0144",
+        "company_email": "hr@novasystems.example.com",
+        "supervisor_name": "Sarah Jenkins",
+        "supervisor_title": "Engineering Manager",
+        "supervisor_signature": "Sarah Jenkins",
+        "supervisor_contact_info": "sjenkins@novasystems.example.com | +1-604-555-0150"
+      },
+      "narrative_blocks": [
+        "To Whom It May Concern,",
+        "This letter serves to confirm that John Smith was employed at Nova Systems Ltd. as a Software Developer from January 10, 2021 to July 15, 2023.",
+        "During his employment, John received an annual salary of $85,000 CAD plus standard benefits. His duties included developing React applications, writing server backend logic, and fixing technical issues.",
+        "Please feel free to contact us if additional information is required.",
+        "Sincerely,\nSarah Jenkins\nEngineering Manager\nNova Systems Ltd."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EMPLOYME-01",
+        "category": "pfl_incomplete_evidence",
+        "severity": "critical",
+        "description": "The employment reference letter fails to state the employee's weekly working hours and employment status (full-time vs part-time), rendering the evidence incomplete for economic immigration assessment.",
+        "affected_fields": [
+          "work_hours_per_week",
+          "employment_status"
+        ],
+        "mutation_details": {
+          "mutation_type": "omit_fields",
+          "target_fields": [
+            "work_hours_per_week",
+            "employment_status"
+          ]
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "employment_reference_letter",
+      "title": "Employment Reference Letter - Systems Analyst (Verbatim NOC Duty Copying)",
+      "issuing_authority": "Horizon Software Corp.",
+      "issue_date": "2023-09-10",
+      "expiry_date": null,
+      "fields": {
+        "employee_name": "Alex Taylor",
+        "job_title": "Systems Analyst",
+        "noc_code": "21232",
+        "employment_start_date": "2019-05-15",
+        "employment_end_date": "2023-04-30",
+        "employment_status": "Full-time",
+        "work_hours_per_week": 40.0,
+        "annual_salary": "$90,000 CAD",
+        "benefits": "Standard corporate benefits package",
+        "duties_and_responsibilities": [
+          "Write, modify, integrate and test software code.",
+          "Maintain existing computer programs by making modifications as required.",
+          "Identify and communicate technical problems, processes and solutions.",
+          "Prepare reports, manuals and other documentation on the status, operation and maintenance of software."
+        ],
+        "company_name": "Horizon Software Corp.",
+        "company_letterhead": true,
+        "company_address": "500 Enterprise Way, Calgary, AB T2P 2M7, Canada",
+        "company_telephone": "+1-403-555-0177",
+        "company_email": "hr@horizonsoftware.example.com",
+        "supervisor_name": "Michael Brown",
+        "supervisor_title": "VP of Operations",
+        "supervisor_signature": "Michael Brown",
+        "supervisor_contact_info": "mbrown@horizonsoftware.example.com | +1-403-555-0188"
+      },
+      "narrative_blocks": [
+        "To Whom It May Concern,",
+        "We confirm that Alex Taylor worked full-time (40 hours/week) as a Systems Analyst at Horizon Software Corp. from May 15, 2019 to April 30, 2023, earning an annual salary of $90,000 CAD.",
+        "Their main duties were: Write, modify, integrate and test software code; Maintain existing computer programs by making modifications as required; Identify and communicate technical problems, processes and solutions; Prepare reports, manuals and other documentation on the status, operation and maintenance of software.",
+        "For any further questions, please contact the undersigned.",
+        "Sincerely,\nMichael Brown\nVP of Operations\nHorizon Software Corp."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EMPLOYME-02",
+        "category": "pfl_duties_mismatch",
+        "severity": "critical",
+        "description": "The duties and responsibilities listed in the letter are copied verbatim from the official NOC job description lead statement, lacking specific detail about actual company projects or real work performed.",
+        "affected_fields": [
+          "duties_and_responsibilities",
+          "noc_code"
+        ],
+        "mutation_details": {
+          "mutation_type": "verbatim_noc_copying",
+          "target_fields": [
+            "duties_and_responsibilities",
+            "noc_code"
+          ]
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "employment_reference_letter",
+      "title": "Employment Reference Letter - Cloud Engineer (Missing Letterhead & Contact)",
+      "issuing_authority": "Vanguard Data Labs Inc.",
+      "issue_date": "2023-10-05",
+      "expiry_date": null,
+      "fields": {
+        "employee_name": "Emily Chen",
+        "job_title": "Cloud Infrastructure Engineer",
+        "noc_code": "21232",
+        "employment_start_date": "2021-06-01",
+        "employment_end_date": "2023-09-30",
+        "employment_status": "Full-time",
+        "work_hours_per_week": 37.5,
+        "annual_salary": "$92,000 CAD",
+        "benefits": "Medical, dental, and vision insurance",
+        "duties_and_responsibilities": [
+          "Configured AWS cloud infrastructure using Terraform scripts.",
+          "Monitored server health and managed automated deployment pipelines.",
+          "Maintained network security controls and access permissions."
+        ],
+        "company_name": "Vanguard Data Labs Inc.",
+        "company_letterhead": false,
+        "company_address": null,
+        "company_telephone": null,
+        "company_email": null,
+        "supervisor_name": "David Miller",
+        "supervisor_title": "Infrastructure Manager",
+        "supervisor_signature": "David Miller",
+        "supervisor_contact_info": "dmiller@vanguardlabs.example.com"
+      },
+      "narrative_blocks": [
+        "To Whom It May Concern,",
+        "This letter verifies that Emily Chen was employed full-time (37.5 hours per week) at Vanguard Data Labs Inc. as a Cloud Infrastructure Engineer from June 1, 2021 to September 30, 2023.",
+        "Her remuneration was $92,000 CAD per year plus health benefits. Her main responsibilities included managing AWS cloud infrastructure, writing Terraform automation scripts, and maintaining network security protocols.",
+        "Sincerely,\nDavid Miller\nInfrastructure Manager"
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EMPLOYME-03",
+        "category": "pfl_validity_authenticity",
+        "severity": "critical",
+        "description": "The letter is provided on plain unbranded paper with no official company letterhead, address, telephone number, or company email address.",
+        "affected_fields": [
+          "company_letterhead",
+          "company_address",
+          "company_telephone",
+          "company_email"
+        ],
+        "mutation_details": {
+          "mutation_type": "remove_letterhead_and_contact_info",
+          "target_fields": [
+            "company_letterhead",
+            "company_address",
+            "company_telephone",
+            "company_email"
+          ]
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "employment_reference_letter",
+      "title": "Employment Reference Letter - Backend Developer (Missing Supervisor Signature & Contact)",
+      "issuing_authority": "Pinnacle Cloud Solutions",
+      "issue_date": "2023-11-12",
+      "expiry_date": null,
+      "fields": {
+        "employee_name": "David Miller",
+        "job_title": "Backend Developer",
+        "noc_code": "21232",
+        "employment_start_date": "2020-11-01",
+        "employment_end_date": "2023-10-15",
+        "employment_status": "Full-time",
+        "work_hours_per_week": 40.0,
+        "annual_salary": "$88,000 CAD",
+        "benefits": "Health insurance and paid vacation",
+        "duties_and_responsibilities": [
+          "Developed backend RESTful APIs using Python and PostgreSQL.",
+          "Optimized relational database queries for high transaction volumes.",
+          "Collaborated with frontend developers to integrate client applications."
+        ],
+        "company_name": "Pinnacle Cloud Solutions",
+        "company_letterhead": true,
+        "company_address": "800 Bay Street, Suite 1200, Toronto, ON M5S 3A7, Canada",
+        "company_telephone": "+1-416-555-0133",
+        "company_email": "contact@pinnaclecloud.example.com",
+        "supervisor_name": null,
+        "supervisor_title": null,
+        "supervisor_signature": null,
+        "supervisor_contact_info": null
+      },
+      "narrative_blocks": [
+        "To Whom It May Concern,",
+        "This letter certifies that David Miller was employed full-time at Pinnacle Cloud Solutions from November 1, 2020 through October 15, 2023 as a Backend Developer (40 hours per week, $88,000 CAD/year).",
+        "His primary job responsibilities consisted of designing backend RESTful services, database query optimization, and collaborating on product features.",
+        "Regards,\nPinnacle Cloud Solutions Team"
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EMPLOYME-04",
+        "category": "pfl_incomplete_evidence",
+        "severity": "warning",
+        "description": "The reference letter is missing supervisor signature, supervisor name, supervisor job title, and direct supervisor contact information.",
+        "affected_fields": [
+          "supervisor_name",
+          "supervisor_title",
+          "supervisor_signature",
+          "supervisor_contact_info"
+        ],
+        "mutation_details": {
+          "mutation_type": "omit_fields",
+          "target_fields": [
+            "supervisor_name",
+            "supervisor_title",
+            "supervisor_signature",
+            "supervisor_contact_info"
+          ]
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "employment_reference_letter",
+      "title": "Employment Reference Letter - Full Stack Engineer (Missing Salary & Benefits)",
+      "issuing_authority": "Summit Enterprise Tech Ltd.",
+      "issue_date": "2023-12-01",
+      "expiry_date": null,
+      "fields": {
+        "employee_name": "Sarah Connor",
+        "job_title": "Full Stack Engineer",
+        "noc_code": "21232",
+        "employment_start_date": "2021-02-15",
+        "employment_end_date": "2023-11-01",
+        "employment_status": "Full-time",
+        "work_hours_per_week": 37.5,
+        "annual_salary": null,
+        "benefits": null,
+        "duties_and_responsibilities": [
+          "Built web application frontends using Vue.js and backends with Express.js.",
+          "Maintained continuous integration workflows and automated test suites.",
+          "Participated in code reviews and architectural discussions."
+        ],
+        "company_name": "Summit Enterprise Tech Ltd.",
+        "company_letterhead": true,
+        "company_address": "1200 Main Street, Suite 900, Montreal, QC H3B 2S2, Canada",
+        "company_telephone": "+1-514-555-0166",
+        "company_email": "hr@summittech.example.com",
+        "supervisor_name": "James Wilson",
+        "supervisor_title": "Engineering Lead",
+        "supervisor_signature": "James Wilson",
+        "supervisor_contact_info": "jwilson@summittech.example.com | +1-514-555-0170"
+      },
+      "narrative_blocks": [
+        "To Whom It May Concern,",
+        "We are writing to confirm that Sarah Connor was employed full-time as a Full Stack Engineer at Summit Enterprise Tech Ltd. from February 15, 2021 to November 1, 2023, working 37.5 hours per week.",
+        "Her duties included building web application interfaces with Vue.js, developing Node.js backend services, and managing test automation pipelines.",
+        "For further inquiries, please contact James Wilson at jwilson@summittech.example.com.",
+        "Sincerely,\nJames Wilson\nEngineering Lead\nSummit Enterprise Tech Ltd."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EMPLOYME-05",
+        "category": "pfl_incomplete_evidence",
+        "severity": "warning",
+        "description": "The reference letter omits annual salary and benefits details, failing to provide complete evidence of financial compensation.",
+        "affected_fields": [
+          "annual_salary",
+          "benefits"
+        ],
+        "mutation_details": {
+          "mutation_type": "omit_fields",
+          "target_fields": [
+            "annual_salary",
+            "benefits"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "question": "When may an applicant submit a Letter of Explanation?",
+  "claims": [],
+  "basis": [
+    "The applicant submitted a Letter of Explanation document under document upload-slot type letter_of_explanation for Express Entry e-APR case fff0df94dc4f84d0db0d79147c910f20."
+  ],
+  "abstentions": [
+    {
+      "reason": "not_in_corpus"
+    }
+  ],
+  "prose": "",
+  "case_id": "fff0df94dc4f84d0db0d79147c910f20",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "fff0df94dc4f84d0db0d79147c910f20.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "41919d14bdaf46cd832f2d63d9c256951203b0b7afe9f6a53f38312a7c0ca18a",
+    "allowed_text_sha256": null,
+    "bundle_hash": "14fa852af814d2404ab92386699b5caef3ad1fc99505dcb0bfeeb94713c4dc69",
+    "prompt_hash": "9b5d02b00d5aeeda2bdda0b4da9324c9c7f1ec74775344865f813d16cc77bb5f",
+    "output_hash": "03e979aa1297ee57052e6cd669c3a2b8dd18575a0e19bff17daec12485d6d716",
+    "returncode": 0,
+    "timestamp": "2026-07-24T09:40:58.646822+00:00",
+    "provenance_digest": "f0dcef4343964fc25e721ff0ef4df480eab0522b9941bd57339a835641b79cca"
+  }
+}

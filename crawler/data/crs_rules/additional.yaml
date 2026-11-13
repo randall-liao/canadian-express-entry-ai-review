@@ -1,0 +1,303 @@
+rows:
+  # ===================================================================== #
+  # D. ADDITIONAL POINTS  (factor group additional_points)
+  # Includes the highest-stakes v4.0 policy row: the current-policy
+  # arranged-employment repeal (job-offer additional CRS = 0 as of
+  # 2025-03-25) plus a DISTINCT ITA-era legacy row grounded from the
+  # ministerial instructions. The two never cross-ground (different families).
+  # ===================================================================== #
+
+  - rule_id: additional.nomination
+    factor_group: additional_points
+    factor_ids: [additional.nomination]
+    check_type: points
+    query: provincial territorial nomination points
+    selector:
+      family: guidance
+      marker: "Provincial or territorial nomination  | 600"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      A valid, accepted provincial or territorial nomination awards the
+      additional-points maximum; the nomination must be named, verified, and not
+      revoked, expired, or declined.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#018
+        quote: "Provincial or territorial nomination  | 600"
+    machine_check:
+      kind: points_table
+      field: nomination
+      points_by_level:
+        - label: valid_nomination
+          level: nomination
+          points: 600
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: additional.job_offer.current
+    factor_group: additional_points
+    factor_ids: [additional.job_offer]
+    check_type: policy
+    query: job offer points removing Comprehensive Ranking
+    selector:
+      family: guidance
+      marker: "We no longer give points for job offers"
+      deny_families:
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+    claim_text: >-
+      Under current policy, a job offer (arranged employment) gives no
+      additional CRS points for current and future Express Entry candidates; a
+      valid offer may still matter for program eligibility, but not for CRS
+      additional points.
+    citations:
+      - chunk_id: guidance/job-offer.md#001
+        quote: "We no longer give points for job offers"
+      - chunk_id: guidance/job-offer.md#001
+        quote: "removing job offer points from the Comprehensive Ranking System"
+    machine_check:
+      kind: policy_flag
+      field: job_offer_additional_points
+      flag_value: false
+      effective_from: "2025-03-25"
+      citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+      effective_from: "2025-03-25"
+
+  - rule_id: additional.job_offer.legacy
+    factor_group: additional_points
+    factor_ids: [additional.job_offer]
+    check_type: policy
+    query: occupation Major Group matrix
+    selector:
+      family: ministerial-instructions
+      marker: "200 points, if the offer is for employment in an occupation contained in Major Group 00"
+    claim_text: >-
+      Before the current-policy repeal, the ministerial instructions awarded
+      arranged-employment additional points for a qualifying offer; a legacy
+      claim is admissible only for an invitation issued before the repeal and,
+      even then, requires manual legacy resolution (never an automatic award).
+    citations:
+      - chunk_id: ministerial-instructions/amendment-2017-2.md#006
+        quote: "200 points, if the offer is for employment in an occupation contained in Major Group 00"
+    machine_check:
+      kind: points_table
+      field: job_offer_legacy
+      points_by_level:
+        - label: major_group_00
+          level: "Major Group 00"
+          points: 200
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: ministerial-instructions
+      crawl_date: "2026-06-11T03:41:00Z"
+      effective_to: "2025-03-25"
+
+  # ------------------------------------------------------------------- #
+  # Physician temporary public policy (POLICY-02) — a DISTINCT grounded
+  # row on the SAME `additional.job_offer` factor as current/legacy, but
+  # citing DISJOINT chunks + a distinct marker. Effective-dated
+  # (2023-04-25 → open-ended: runs "until revoked by the Minister", so
+  # `effective_to` is intentionally OMITTED). Never an automatic award —
+  # a match only routes the case to AT-RISK/manual physician review.
+  #
+  # LOAD-BEARING COUPLING: because this row shares `additional.job_offer`
+  # with current/legacy, the audit spine's `gate_subset` fail-closes the
+  # ENTIRE job-offer factor (current + legacy + physician) for EVERY
+  # applicant — not just physicians — if EITHER cited chunk below ungrounds
+  # on a corpus refresh. Do NOT casually retune the guidance / pr-pdi chunk
+  # spans or the marker: an ALWAYS-RUN hermetic grounding test
+  # (test_conformance_v40_retrieve_what_you_cite.py ::
+  # TestJobOfferPhysicianHermeticGrounding) guards this drift off the corpus.
+  # ------------------------------------------------------------------- #
+  - rule_id: additional.job_offer.physician
+    factor_group: additional_points
+    factor_ids: [additional.job_offer]          # SAME factor as current/legacy — no new factor id
+    check_type: policy
+    query: physician arranged employment offer of employment public policy
+    selector:
+      family: guidance
+      marker: "If you\u2019re a physician with a job offer in Canada"   # U+2019 curly apostrophe — VERIFIED verbatim in guidance/job-offer.md
+      deny_families:
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+    claim_text: >-
+      A physician public-policy arranged-employment case requires manual,
+      professional review of the temporary public policy; it is never an
+      automatic additional-CRS award and stays AT-RISK pending human
+      resolution.
+    citations:
+      - chunk_id: guidance/job-offer.md#002
+        quote: "were invited to apply for permanent residence through Express Entry on or after April 25, 2023"
+      - chunk_id: pr-pdi/economic-classes-federal-skilled-workers-arranged-employment-awarding-points-applications-received-on-after-may-4-2013.md#020
+        quote: "a specialist in clinical and laboratory medicine (NOC 31100), a specialist in surgery (NOC 31101) or a general practitioner and family physician (NOC 31102) under NOC 2021"
+    machine_check:
+      kind: accepted_enum
+      field: physician_noc
+      accepted_values:
+        - {value: "31100", citation_index: 1}
+        - {value: "31101", citation_index: 1}
+        - {value: "31102", citation_index: 1}
+      effective_from: "2023-04-25"              # grounded via citation_index 0 (guidance #002)
+      citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+      effective_from: "2023-04-25"
+      # effective_to intentionally OMITTED (null) — policy runs until revoked by the Minister
+
+  - rule_id: additional.study
+    factor_group: additional_points
+    factor_ids: [additional.study]
+    check_type: points
+    query: post-secondary education Canada credential
+    selector:
+      family: guidance
+      marker: "Post-secondary education in Canada - credential of one or two years"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Canadian post-secondary study awards additional points on a two-tier
+      ladder keyed to credential length; a secondary-school credential awards
+      none.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#019
+        quote: "Post-secondary education in Canada - credential of one or two years"
+      - chunk_id: guidance/crs-criteria.md#019
+        quote: "Post-secondary education in Canada - credential three years or longer"
+    machine_check:
+      kind: points_table
+      field: canadian_study
+      points_by_level:
+        - label: one_or_two_years
+          level: "1-2"
+          points: 15
+          citation_index: 0
+        - label: three_or_more_years
+          level: "3+"
+          points: 30
+          citation_index: 1
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: additional.french
+    factor_group: additional_points
+    factor_ids: [additional.french]
+    check_type: points
+    query: French language skills NCLC English
+    selector:
+      family: guidance
+      marker: "Scored NCLC 7 or higher on all four French language skills and scored CLB 5 or higher on all four English skills"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      Strong French-language skills award additional points; a higher award
+      requires also meeting the English-language threshold on all four abilities.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#019
+        quote: "Scored NCLC 7 or higher on all four French language skills and scored CLB 4 or lower in English"
+      - chunk_id: guidance/crs-criteria.md#019
+        quote: "Scored NCLC 7 or higher on all four French language skills and scored CLB 5 or higher on all four English skills"
+    machine_check:
+      kind: points_table
+      field: strong_french
+      points_by_level:
+        - label: french_only
+          level: french_only
+          points: 25
+          citation_index: 0
+        - label: french_plus_english
+          level: french_plus_english
+          points: 50
+          citation_index: 1
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: additional.sibling
+    factor_group: additional_points
+    factor_ids: [additional.sibling]
+    check_type: points
+    query: brother sister living Canada
+    selector:
+      family: guidance
+      marker: "Brother or sister living in Canada who is a citizen or permanent resident of Canada"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      A sibling in Canada who is an adult citizen or permanent resident awards
+      additional points; relationship, status, and current-residence evidence is
+      required.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#019
+        quote: "Brother or sister living in Canada who is a citizen or permanent resident of Canada"
+    machine_check:
+      kind: points_table
+      field: sibling_in_canada
+      points_by_level:
+        - label: sibling
+          level: sibling
+          points: 15
+          citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"
+
+  - rule_id: additional.sibling.adult
+    factor_group: additional_points
+    factor_ids: [additional.sibling]
+    check_type: threshold
+    query: brother sister 18 years or older citizen permanent resident
+    selector:
+      family: guidance
+      marker: "18 years or older"
+      deny_families:
+        - guidance/grid
+        - guidance/express-entry-year-end-report
+        - guidance/express-entry-midyear
+        - guidance/summary
+        - guidance/fact-sheet
+    claim_text: >-
+      A sibling in Canada must be an adult meeting the grounded minimum-age
+      requirement before the additional points can be awarded; a younger
+      sibling below that threshold does not qualify.
+    citations:
+      - chunk_id: guidance/crs-criteria.md#018
+        quote: "18 years or older"
+    machine_check:
+      kind: threshold
+      field: sibling_min_age
+      min_value: 18
+      citation_index: 0
+    volatility:
+      volatility: volatile
+      source_family: guidance
+      crawl_date: "2026-06-11T01:09:06Z"

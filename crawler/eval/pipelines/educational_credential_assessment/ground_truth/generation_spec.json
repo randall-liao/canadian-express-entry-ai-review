@@ -1,0 +1,237 @@
+{
+  "doc_type": "educational_credential_assessment",
+  "timestamp": "2026-07-23T06:57:51.827000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "educational_credential_assessment",
+      "title": "Educational Credential Assessment Report - World Education Services",
+      "issuing_authority": "World Education Services (WES)",
+      "issue_date": "2024-03-15",
+      "expiry_date": "2029-03-15",
+      "fields": {
+        "applicant_given_names": "Jane",
+        "applicant_family_name": "Doe",
+        "applicant_dob": "1991-08-22",
+        "issuing_organization": "World Education Services",
+        "eca_reference_number": "WES-4920183/ECA",
+        "eca_report_type": "Educational Credential Assessment for IRCC",
+        "eca_issue_date": "2024-03-15",
+        "eca_expiry_date": "2029-03-15",
+        "foreign_institution_name": "University of Manchester",
+        "foreign_credential_name": "Master of Science in Data Science",
+        "country_of_education": "United Kingdom",
+        "year_awarded": "2018",
+        "credential_level": "Master's Degree",
+        "canadian_equivalency_summary": "Master's degree",
+        "crs_education_points": "135"
+      },
+      "narrative_blocks": [
+        "This Educational Credential Assessment (ECA) report was evaluated by World Education Services (WES) for Immigration, Refugees and Citizenship Canada (IRCC) Express Entry purposes.",
+        "Credential Evaluation Summary: The Master of Science in Data Science awarded by the University of Manchester in 2018 has been evaluated as equivalent to a Canadian Master's degree.",
+        "Verification Status: Authentic electronic document verified directly against official academic transcripts supplied by the issuing institution."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "educational_credential_assessment",
+      "title": "Educational Credential Assessment Report - Expired 5-Year Validity",
+      "issuing_authority": "World Education Services (WES)",
+      "issue_date": "2019-01-10",
+      "expiry_date": "2024-01-10",
+      "fields": {
+        "applicant_given_names": "John",
+        "applicant_family_name": "Smith",
+        "applicant_dob": "1988-11-05",
+        "issuing_organization": "World Education Services",
+        "eca_reference_number": "WES-3104928/ECA",
+        "eca_report_type": "Educational Credential Assessment for IRCC",
+        "eca_issue_date": "2019-01-10",
+        "eca_expiry_date": "2024-01-10",
+        "foreign_institution_name": "University of Melbourne",
+        "foreign_credential_name": "Bachelor of Engineering",
+        "country_of_education": "Australia",
+        "year_awarded": "2014",
+        "credential_level": "Bachelor's Degree",
+        "canadian_equivalency_summary": "Bachelor's degree (four years)",
+        "crs_education_points": "0"
+      },
+      "narrative_blocks": [
+        "This Educational Credential Assessment (ECA) report was issued by World Education Services (WES) on January 10, 2019.",
+        "The evaluation report exceeded the maximum 5-year validity threshold for IRCC immigration submission as of the submission date in 2026.",
+        "Because the ECA report has expired, 0 Express Entry Comprehensive Ranking System (CRS) points can be awarded for this credential until a re-issuance or new assessment is completed."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EDUCATIO-01",
+        "category": "pfl_validity_expired",
+        "severity": "critical",
+        "description": "The ECA report issue date (2019-01-10) exceeds the 5-year validity window required by IRCC for immigration applications as of July 2026, rendering the report expired and ineligible for CRS points calculation.",
+        "affected_fields": [
+          "eca_issue_date",
+          "eca_reference_number",
+          "crs_education_points"
+        ],
+        "mutation_details": {
+          "original_issue_date": "2024-01-10",
+          "mutated_issue_date": "2019-01-10",
+          "validity_period_years": 5,
+          "current_date": "2026-07-23",
+          "impact": "ECA report expired prior to application submission; CRS points set to 0."
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "educational_credential_assessment",
+      "title": "Educational Credential Assessment Report - Unrecognized Foreign Credential",
+      "issuing_authority": "International Credential Assessment Service of Canada (ICAS)",
+      "issue_date": "2025-05-18",
+      "expiry_date": "2030-05-18",
+      "fields": {
+        "applicant_given_names": "Alice",
+        "applicant_family_name": "Taylor",
+        "applicant_dob": "1994-03-30",
+        "issuing_organization": "International Credential Assessment Service of Canada (ICAS)",
+        "eca_reference_number": "ICAS-8849201",
+        "eca_report_type": "Educational Credential Assessment for IRCC",
+        "eca_issue_date": "2025-05-18",
+        "eca_expiry_date": "2030-05-18",
+        "foreign_institution_name": "Global Online Unaccredited Institute",
+        "foreign_credential_name": "Diploma in Business Management",
+        "country_of_education": "United States",
+        "year_awarded": "2022",
+        "credential_level": "Unrecognized / Non-Accredited",
+        "canadian_equivalency_summary": "No Canadian Equivalency - Institution is not recognized or accredited by the authority in its home jurisdiction",
+        "crs_education_points": "0"
+      },
+      "narrative_blocks": [
+        "Assessment Result: The credential submitted from Global Online Unaccredited Institute was reviewed by ICAS.",
+        "Evaluation Findings: The issuing institution is not accredited or recognized by the national education ministry or competent regional accrediting authority in the country of origin.",
+        "Canadian Equivalency Outcome: Unable to establish Canadian educational equivalency. No educational points under Express Entry can be claimed."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EDUCATIO-02",
+        "category": "pfl_credential_unrecognized",
+        "severity": "critical",
+        "description": "The evaluated foreign educational institution is unaccredited and unrecognized by national education authorities, resulting in no Canadian equivalency rating.",
+        "affected_fields": [
+          "foreign_institution_name",
+          "credential_level",
+          "canadian_equivalency_summary"
+        ],
+        "mutation_details": {
+          "institution_status": "unaccredited",
+          "original_institution": "University of California, Berkeley",
+          "mutated_institution": "Global Online Unaccredited Institute",
+          "equivalency_result": "No Canadian Equivalency"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "educational_credential_assessment",
+      "title": "Educational Credential Assessment Report - Non-Designated Issuing Body",
+      "issuing_authority": "Global Academic Evaluation Agency Corp.",
+      "issue_date": "2024-09-01",
+      "expiry_date": "2029-09-01",
+      "fields": {
+        "applicant_given_names": "Robert",
+        "applicant_family_name": "Miller",
+        "applicant_dob": "1990-12-11",
+        "issuing_organization": "Global Academic Evaluation Agency Corp.",
+        "eca_report_type": "General Employment Evaluation Report",
+        "eca_reference_number": "GAEA-2024-99120",
+        "eca_issue_date": "2024-09-01",
+        "eca_expiry_date": "2029-09-01",
+        "foreign_institution_name": "Technical University of Munich",
+        "foreign_credential_name": "Bachelor of Science in Electrical Engineering",
+        "country_of_education": "Germany",
+        "year_awarded": "2016",
+        "credential_level": "Bachelor's Degree",
+        "canadian_equivalency_summary": "Bachelor's degree (four years)",
+        "crs_education_points": "0"
+      },
+      "narrative_blocks": [
+        "This credential evaluation was conducted by Global Academic Evaluation Agency Corp. for general employment and resume verification.",
+        "Notice regarding IRCC Designation: Global Academic Evaluation Agency Corp. is NOT an IRCC-designated organization for Express Entry Educational Credential Assessment.",
+        "This document is an evaluation for general employment purposes and cannot be accepted for Canadian economic immigration programs."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EDUCATIO-03",
+        "category": "pfl_invalid_issuing_body",
+        "severity": "critical",
+        "description": "The report was issued by an unauthorized private evaluation organization ('Global Academic Evaluation Agency Corp.') rather than an IRCC-designated ECA body, and uses a standard employment report type instead of an IRCC assessment.",
+        "affected_fields": [
+          "issuing_organization",
+          "eca_report_type",
+          "eca_reference_number"
+        ],
+        "mutation_details": {
+          "issuing_organization_status": "non_designated",
+          "original_issuing_organization": "Comparative Education Service (CES) - University of Toronto",
+          "mutated_issuing_organization": "Global Academic Evaluation Agency Corp.",
+          "report_type": "General Employment Evaluation Report",
+          "valid_designated_bodies": [
+            "WES",
+            "CES",
+            "ICAS",
+            "IQAS",
+            "ICES",
+            "MCC",
+            "PEBC"
+          ]
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "educational_credential_assessment",
+      "title": "Educational Credential Assessment Report - Applicant Identity Mismatch",
+      "issuing_authority": "Comparative Education Service (CES) - University of Toronto",
+      "issue_date": "2024-11-20",
+      "expiry_date": "2029-11-20",
+      "fields": {
+        "applicant_given_names": "Michael",
+        "applicant_family_name": "Brown",
+        "applicant_dob": "1993-07-04",
+        "issuing_organization": "Comparative Education Service (CES) - University of Toronto",
+        "eca_reference_number": "CES-7719204-INVALID",
+        "eca_report_type": "Educational Credential Assessment for IRCC",
+        "eca_issue_date": "2024-11-20",
+        "eca_expiry_date": "2029-11-20",
+        "foreign_institution_name": "National Autonomous University of Mexico",
+        "foreign_credential_name": "Licenciatura en Arquitectura",
+        "country_of_education": "Mexico",
+        "year_awarded": "2017",
+        "credential_level": "Bachelor's Degree",
+        "canadian_equivalency_summary": "Bachelor's degree (four years)",
+        "crs_education_points": "112"
+      },
+      "narrative_blocks": [
+        "Comparative Education Service (CES) assessment report issued for IRCC Express Entry application.",
+        "Applicant Identity on Document: Michael Brown (DOB: 1993-07-04).",
+        "System Verification Alert: Primary applicant listed on PR application is David Wilson (DOB: 1991-02-18). The ECA report reference number CES-7719204-INVALID failed automated verification against the issuing authority's database."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-EDUCATIO-04",
+        "category": "pfl_identity_mismatch",
+        "severity": "critical",
+        "description": "The applicant name ('Michael Brown') on the ECA report does not match the PR applicant ('David Wilson'), and the ECA reference number format is corrupted/invalid, preventing online verification.",
+        "affected_fields": [
+          "applicant_given_names",
+          "applicant_family_name",
+          "eca_reference_number"
+        ],
+        "mutation_details": {
+          "expected_given_name": "David",
+          "actual_given_name": "Michael",
+          "expected_family_name": "Wilson",
+          "actual_family_name": "Brown",
+          "reference_number_status": "unverifiable",
+          "verification_error": "ECA reference number not found in CES verification database"
+        }
+      }
+    }
+  ]
+}

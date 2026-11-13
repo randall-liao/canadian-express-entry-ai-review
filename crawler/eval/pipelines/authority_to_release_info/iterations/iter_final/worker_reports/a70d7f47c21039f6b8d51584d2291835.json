@@ -1,0 +1,55 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The Authority to Release Personal Information form (IMM 5475) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual, while dependent children 18 years of age or older must complete their own form.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "The [IMM 5475 form (PDF, 593.57 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5475e.pdf) must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant submitted an Authority to Release Personal Information to a Designated Individual form (IMM 5475) in the open field for case a70d7f47c21039f6b8d51584d2291835.",
+    "The signature requirements apply to the principal applicant and, if applicable, any accompanying spouse, common-law partner, or adult dependent children releasing personal information to the designated individual."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "a70d7f47c21039f6b8d51584d2291835",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "a70d7f47c21039f6b8d51584d2291835.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "521ee4a7d891996517690490cbfc93ad19c853aaad9ae8789bffd918650c0ab5",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8a6d76f09c87b792bdb054da74787bee3998b9ee3be9ce94d349840641933915",
+    "prompt_hash": "273f6eaec6211cd035c26628e5c97c4edb523adaf0c9a88d3aaaf39bb13e780f",
+    "output_hash": "db18756fa08f455968f26b84028fd9de86f0f69ad1b4708bbcd2507a86531b92",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:31:38.432643+00:00",
+    "provenance_digest": "a14c6a6c815e06fe97ee4139b13dffc21fdfbcbe5b69ed0db5c56a5351d4af5f"
+  }
+}

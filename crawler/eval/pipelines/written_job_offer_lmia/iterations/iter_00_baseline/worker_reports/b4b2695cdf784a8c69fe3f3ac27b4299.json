@@ -1,0 +1,54 @@
+{
+  "question": "What must an Express Entry arranged-employment job-offer letter contain?",
+  "claims": [
+    {
+      "id": "job-offer-letter",
+      "text": "A qualifying offer of arranged employment requires a letter from the Canadian employer printed on company letterhead containing contact information, supervisor signature, start date, continuous paid full-time commitment for at least one year post-visa issuance, job title, duties, work hours, and annual salary plus benefits.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#034"
+      ],
+      "quote": "A letter from the employer(s) offering the job in Canada is required, and it must"
+    }
+  ],
+  "basis": [
+    "The applicant submitted a job offer letter document under the written_job_offer_lmia slot for case b4b2695cdf784a8c69fe3f3ac27b4299 claiming arranged employment."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "b4b2695cdf784a8c69fe3f3ac27b4299",
+  "doc_type": "written_job_offer_lmia",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "b4b2695cdf784a8c69fe3f3ac27b4299.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "d09269d807c919fff521c1a7c4245775468329b6165caeaaa0a8921089ebc8c4",
+    "allowed_text_sha256": null,
+    "bundle_hash": "385731eb510290f10b07c9c229675d720aa24dffc28e5fe50a2fe3f75e204533",
+    "prompt_hash": "a0da05ecae5703151a410fbde58aeb0ba78743be4f6ad31fb775003eca2ca3de",
+    "output_hash": "1d8cb90d41c4b2e26dbcae2967a81414283b51c1d4df3439a4b6da9d01456482",
+    "returncode": 0,
+    "timestamp": "2026-07-23T19:51:14.969596+00:00",
+    "provenance_digest": "6339f9c719f016b4d1a671aed44f0dfc89167027f8f238b271ee81182736f9f3"
+  }
+}

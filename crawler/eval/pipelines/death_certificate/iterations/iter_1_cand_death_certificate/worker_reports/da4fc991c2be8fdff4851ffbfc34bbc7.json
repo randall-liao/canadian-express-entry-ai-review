@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant's marital status is widowed?",
+  "claims": [
+    {
+      "id": "death-certificate-requirement",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant's declared marital status is widowed, triggering the requirement to provide a death certificate or equivalent legal certificate for opaque case ID da4fc991c2be8fdff4851ffbfc34bbc7."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "da4fc991c2be8fdff4851ffbfc34bbc7",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "da4fc991c2be8fdff4851ffbfc34bbc7.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "cea0e7e1a221e8b41b681bdd0b14352ce0d2184e053b906906dc1dc809dd110a",
+    "allowed_text_sha256": null,
+    "bundle_hash": "f5dd7cb2d45c0135570f1d3733db8965b317ddc35c2e55734554615b82b27034",
+    "prompt_hash": "4978b7f2813dba6019a06807bd8d16038e1c0ab491aca32bba551a75471c2438",
+    "output_hash": "bb582cd4d46b43462af71c4e4a914121138eaa157355970cf14093bfd8959f3c",
+    "returncode": 0,
+    "timestamp": "2026-07-24T04:46:07.434356+00:00",
+    "provenance_digest": "4f296dad3ce335d3781b36dac7d001dd63b291dc683b5060d1e372dacb65ce31"
+  }
+}

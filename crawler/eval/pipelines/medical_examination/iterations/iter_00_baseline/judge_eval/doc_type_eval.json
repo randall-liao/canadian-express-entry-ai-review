@@ -1,0 +1,202 @@
+{
+  "doc_type": "medical_examination",
+  "case_evaluations": {
+    "02eaaaaa9fa8f8505e9dd51000b22bc2": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "226547037651a7f9cba75f96a46d98d6": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "235ea061f338b12a1dc82469a39c3a18": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "45b4e8926558b62da9b120f26903d826": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "879b80be8f913a574e5744fb045ff384": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "8dea2c3807b07b17487e2209b1e77ca0": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b1f4d2b707d6d50ecd9525cb712a2017": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c6429f65f2aaa4756dffe0fa5da7399d": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f8762afb20372ea557bb9118b672a65b": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ff8b28fdc2b030a2f13037b4a69c05e5": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "b1f4d2b707d6d50ecd9525cb712a2017",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth PFL-MEDICAL_-01 (expired IME). Document narrative explicitly states IME completed 2024-03-10, exceeds 12-month validity, expired 2025-03-10, new exam required. Worker emitted only generic 'exam required, subject to exemption' boilerplate and detected zero defects."
+    },
+    {
+      "case_id": "8dea2c3807b07b17487e2209b1e77ca0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth PFL-MEDICAL_-01 (expired IME, scanned sibling). Narrative states 12-month validity exceeded / expired. Worker produced identical boilerplate, no expiry detection, no defect claim."
+    },
+    {
+      "case_id": "235ea061f338b12a1dc82469a39c3a18",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth PFL-MEDICAL_-02 (non-designated physician). Narrative explicitly states Dr. Alan Miller (UNREGISTERED-999) is not a designated panel physician and Sunrise Family General Practice not authorized. Worker missed it entirely with generic boilerplate."
+    },
+    {
+      "case_id": "45b4e8926558b62da9b120f26903d826",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth PFL-MEDICAL_-02 (non-designated physician, scanned sibling). Narrative flags unregistered physician/unauthorized clinic. Worker emitted identical generic claim, zero defect detection."
+    },
+    {
+      "case_id": "879b80be8f913a574e5744fb045ff384",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth PFL-MEDICAL_-03 (unresolved furtherance). Narrative states abnormal chest X-ray (apical scarring), pending pulmonology report and sputum culture, furtherance unresolved. Worker detected nothing; boilerplate only."
+    },
+    {
+      "case_id": "c6429f65f2aaa4756dffe0fa5da7399d",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth PFL-MEDICAL_-03 (unresolved furtherance, scanned sibling). Narrative states incomplete assessment with pending specialist/lab results. Worker missed the defect with identical generic output."
+    },
+    {
+      "case_id": "02eaaaaa9fa8f8505e9dd51000b22bc2",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth PFL-MEDICAL_-04 (missing upfront proof). Narrative explicitly states file lacks proof of upfront exam, no IMM1017B form or eMedical receipt attachment. Worker missed the completeness defect entirely."
+    },
+    {
+      "case_id": "226547037651a7f9cba75f96a46d98d6",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth PFL-MEDICAL_-04 (missing upfront proof, scanned sibling). Narrative states missing IMM1017B/eMedical receipt. Worker produced identical boilerplate, no defect claim."
+    },
+    {
+      "case_id": "ff8b28fdc2b030a2f13037b4a69c05e5",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Worker output is non-responsive across all 10 cases: an identical, verbatim generic claim citing the corpus exemption, with no extraction or validation of document fields (ime_number, examination_date, panel_physician_id, furtherance_status, imm1017b/eMedical receipt). No invented facts (grounding not violated), but the report never engages the attached document, so it neither confirms clean cases nor surfaces defective ones."
+    },
+    {
+      "case_id": "f8762afb20372ea557bb9118b672a65b",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Clean case (meets_requirements). Worker did not falsely flag a defect (correctly no false positive), but also failed to extract/affirm the passing exam fields; single generic claim identical to all defective cases, providing no document-specific verification value."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/medical_examination.md",
+      "suggested_patch": "Require the agent to parse and validate the eMedical sheet's structured fields AND the 'Narrative Statements / Detailed Notes' block, then emit a per-document verdict. Add mandatory checks: (1) examination_date within 12-month validity vs current processing date (PFL-01); (2) panel_physician_id/clinic against designated-panel status, flagging 'UNREGISTERED'/'not a designated panel physician' language (PFL-02); (3) furtherance_status resolved and specialist/lab results present, flagging 'furtherance required/pending/unresolved' (PFL-03); (4) presence of imm1017b_form and eMedical receipt/attachment, flagging 'lacks proof'/'no IMM1017B' (PFL-04). Each failed check MUST produce a distinct defect claim, not a generic requirement statement."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Prohibit emitting identical, document-agnostic boilerplate claims. Every report must ground claims in the specific attached document's fields/narrative and answer the completeness/defect question, not merely restate the general medical-exam requirement. If the document narrative explicitly asserts a deficiency, the agent must surface it as a defect claim rather than defaulting to 'exam required, subject to exemption'."
+    }
+  ],
+  "rationale": "The Worker (gemini-3.6-flash) returned a near-verbatim, generic report for all 10 cases: a single claim that an IME is required subject to the corpus exemption, citing medical/requirements-permanent-residents.md#000. It never read document fields or the explicit narrative statements. Consequently it detected 0/8 injected defects (PFL-01 expired IME, PFL-02 non-designated physician, PFL-03 unresolved furtherance, PFL-04 missing upfront proof) even though each defect was stated in plain language in the PDF narrative — defect_recall=0.0 for all 8 defective cases. The 2 clean cases score defect_recall=1.0 (no defects existed, none falsely reported). PII containment and blind-input compliance are perfect: no applicant names/DOB/IDs leaked into claims/prose (basis[] holds only opaque case IDs and slot type), and no ground-truth leakage. Grounding_accuracy (0.9) and citation_exactness (0.9) remain high because the lone claim invents no facts and the corpus citation is consistent and plausible — but the reports are wholly non-responsive to the document-review task. The dominant, critical failure is complete absence of document engagement and defect detection.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "02eaaaaa9fa8f8505e9dd51000b22bc2.pdf",
+      "--attachment",
+      "226547037651a7f9cba75f96a46d98d6.pdf",
+      "--attachment",
+      "235ea061f338b12a1dc82469a39c3a18.pdf",
+      "--attachment",
+      "45b4e8926558b62da9b120f26903d826.pdf",
+      "--attachment",
+      "879b80be8f913a574e5744fb045ff384.pdf",
+      "--attachment",
+      "8dea2c3807b07b17487e2209b1e77ca0.pdf",
+      "--attachment",
+      "b1f4d2b707d6d50ecd9525cb712a2017.pdf",
+      "--attachment",
+      "c6429f65f2aaa4756dffe0fa5da7399d.pdf",
+      "--attachment",
+      "f8762afb20372ea557bb9118b672a65b.pdf",
+      "--attachment",
+      "ff8b28fdc2b030a2f13037b4a69c05e5.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "a2c2ea4304a593a1dc7afdd565e3da80780d6d9b5c54496570bdbca3ea0ab7cf",
+    "research_hash": "e1f009bcac8e2974497d21423144aedbe03f6181e78f13ffa66fd7999a7fb173",
+    "ground_truth_hash": "e6329511e532a10c2417efb0ba6dc01f8479df7f1c0003ec88a76674fb49372e",
+    "output_hash": "94611905745d4e96d2921031252ca4f506e71d00ee498b7f17e7b89e8006ea0f",
+    "timestamp": "2026-07-23T23:15:08.128650+00:00",
+    "provenance_digest": "79c0be63ebf4ef69e170fe0e644151cb4dcbd8c58e29289e35ad426c3152249c"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "doc_type": "authority_to_release_info",
+  "timestamp": "2026-07-23T03:49:04.109477+00:00",
+  "summary": "Online research into IRCC operational guidelines and applicant failure cases for Form IMM 5475 ('Authority to Release Personal Information to a Designated Individual') reveals four primary procedural failure modes and PFL triggers: (1) missing or invalid client signature dates, (2) failure to explicitly check consent declarations or specify authorization scope in Section C, (3) operational confusion between IMM 5475 (information release only) and IMM 5476 (legal representation), and (4) omitting separate authorization forms for accompanying spouses or dependent children aged 18 and older under Canadian privacy law.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:51:49.320425+00:00",
+    "duration_seconds": 173.362,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "f1995b9478c98140a692e74aee17ea4f9aea1042ac5d2e0be9c602047a261aec",
+    "raw_output_sha256": "4443795f572a9b1597e084023704b1eb72d3f2cb9e61d6a9504df94e654dd405",
+    "returncode": 0,
+    "provenance_token": "16a9e81324b91b6ce74c84ea27c4ab22289221ae6d6efe956472b7c738347577",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 9,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-AUTHORIT-01",
+      "category": "pfl_signature_defect",
+      "severity": "critical",
+      "title": "Missing or Invalid Client Signature Date on Form IMM 5475",
+      "description": "Submitting Form IMM 5475 without a signature date or with a signature date that is missing or post-dated. IRCC operational instructions strictly require a signature alongside an explicit date (YYYY-MM-DD). Without a signature date, IRCC cannot verify when disclosure authorization was conferred, resulting in immediate rejection of the authority request or issuance of a document completion request / PFL.",
+      "affected_fields": [
+        "signature_date",
+        "applicant_signature",
+        "section_c_date"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/imm5475.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must sign and date the form. If you do not sign and date the form, it will be returned to you or the request to release information will be refused.",
+      "remediation_hypothesis": "Re-download the latest IMM 5475, ensure the applicant signs by hand or approved signature method, and explicitly enters the signing date in YYYY-MM-DD format before uploading via IRCC Webform.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-AUTHORIT-02",
+      "category": "pfl_incomplete_evidence",
+      "severity": "high",
+      "title": "Missing Explicit Authorization Scope or Unchecked Consent Box in Section C",
+      "description": "Applicants fail to check the explicit consent authorization checkbox in Section C of IMM 5475 or leave the designated individual identification fields incomplete. Under the Privacy Act, IRCC officers cannot infer authorization; without an explicit positive declaration, officers are legally restricted from disclosing case status or personal information to the designated third party.",
+      "affected_fields": [
+        "authorization_scope",
+        "section_c_consent_checkbox",
+        "designated_individual_details"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/application-access.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "The person you name on this form will be able to get information on your file, such as the status of your application, but can't act as your representative... You must authorize Citizenship and Immigration Canada and Canada Border Services Agency to release information from your case file to the individual named.",
+      "remediation_hypothesis": "Complete Section C entirely by checking the explicit release box authorizing IRCC and CBSA to disclose case information, and verify that Section B contains complete contact details of the designated individual.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-AUTHORIT-03",
+      "category": "pfl_form_mismatch",
+      "severity": "critical",
+      "title": "Scope Mismatch: Using IMM 5475 to Conduct Business or Act as Legal Representative",
+      "description": "Submitting Form IMM 5475 with the expectation that the designated individual can update application details, submit procedural responses, or conduct business on behalf of the applicant. Form IMM 5475 grants authority strictly for information access and address updates; it does not confer legal representation. Attempts by a designated individual to act as a representative without Form IMM 5476 will be rejected by IRCC.",
+      "affected_fields": [
+        "form_type",
+        "designated_individual_role",
+        "representative_authorization"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigration-citizenship-representative/application-access.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "As long as this person: doesn't advise you on which program to apply for, doesn't complete or update your application as you or doesn't act as you when dealing with us, they're not considered a representative. To use a representative, see Add, change or cancel a representative to learn about the form you need to submit [IMM 5476].",
+      "remediation_hypothesis": "Assess the required scope of authorization. If the third party is intended to advise, complete forms, or correspond as an authorized representative, execute and upload Form IMM 5476 (Use of a Representative) instead of IMM 5475.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-AUTHORIT-04",
+      "category": "pfl_missing_dependant_consent",
+      "severity": "high",
+      "title": "Omission of Separate IMM 5475 Authorization for Accompanying Spouse or Adult Dependents (18+)",
+      "description": "The principal applicant submits a single IMM 5475 expecting it to cover disclosure of information for the entire family unit. Canadian privacy laws require that each individual aged 18 or older (including spouses and adult dependent children) provide their own written authorization. IRCC officers will refuse to share personal details of family members who have not executed a separate form.",
+      "affected_fields": [
+        "spouse_dependent_authorization",
+        "adult_dependant_signature",
+        "family_member_consent"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=20",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Your spouse or common-law partner, and any dependent children 18 years of age or older, must complete and sign their own IMM 5475 form if they also want to authorize the designated individual to access their personal information.",
+      "remediation_hypothesis": "Submit individual IMM 5475 forms signed and dated separately by the spouse and each dependent child aged 18 and older who wishes to authorize the designated individual to access their personal information.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

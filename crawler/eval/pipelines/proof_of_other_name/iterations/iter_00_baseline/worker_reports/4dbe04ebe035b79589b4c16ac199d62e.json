@@ -1,0 +1,55 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "The applicant must provide information and/or documentation on the use of this other name.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)."
+    }
+  ],
+  "basis": [
+    "The applicant submitted document file 4dbe04ebe035b79589b4c16ac199d62e.pdf in the proof_of_other_name upload slot.",
+    "The uploaded file was evaluated against IRCC Express Entry completeness requirements for proof of another name."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "4dbe04ebe035b79589b4c16ac199d62e",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "4dbe04ebe035b79589b4c16ac199d62e.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "28139f3aa0cbf965264c18574b8a4260c2c3fc78330bb7df6096878eb2b27825",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2a1ea05a7d87f67391e31f1c27fe234320822f6f65215f1b49f946e67b8eb337",
+    "prompt_hash": "27d175508de65edc7e3cd54e577eb70013544b9fa20dc47ab6c4000214034e49",
+    "output_hash": "e764d03b6d4202a6d3a9ccce71843d0da1d5dacfa8b316656e9666b6ca752abd",
+    "returncode": 0,
+    "timestamp": "2026-07-23T16:44:48.855442+00:00",
+    "provenance_digest": "3a7aee92328d92ed522d76e6ee59a1307d8d7a507160ff6efbe175ae3db40c34"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "This documentation is requested if the applicant indicates having used another name (e.g., a maiden name)."
+    }
+  ],
+  "basis": [
+    "The applicant uploaded a document under slot proof_of_other_name for case 8d3ad7599ed52ad934b1acd144530744."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "8d3ad7599ed52ad934b1acd144530744",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "8d3ad7599ed52ad934b1acd144530744.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "07bbf3610985e1368c9ca8c46a3d8ead61b508d7e83813c5146d55c99266853c",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2a1ea05a7d87f67391e31f1c27fe234320822f6f65215f1b49f946e67b8eb337",
+    "prompt_hash": "e83dd61d47f76363453a21511db5e4bf443e3a78f48b42486260c46f78953344",
+    "output_hash": "60e2d50c67027c123fd8a9851050b923949d5933e6d5914848ad899f01c41ba8",
+    "returncode": 0,
+    "timestamp": "2026-07-23T16:38:35.687472+00:00",
+    "provenance_digest": "2d7a137316e688bec5853bb2d3c9d271f49b611646906ea8ab006f144945c3bf"
+  }
+}

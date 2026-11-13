@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant prove their language ability?",
+  "claims": [
+    {
+      "id": "language-test",
+      "text": "An applicant must prove their language ability by taking an approved language test and entering the results into their Express Entry profile.",
+      "citations": [
+        "guidance/language-test.md#001"
+      ],
+      "quote": "You must prove your language skills by taking an approved language test.\nTo do this, you must:\n  * schedule your test with an agency approved by IRCC and pay the costs\n  * enter the test results into your Express Entry profile (and the language test result form or certificate number and test PIN, if the system asks for it)"
+    }
+  ],
+  "basis": [
+    "The applicant provided a language test document for review (slot: language_test, case ID: 798d8e90554521d6d1dc68e184b0079d)."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "798d8e90554521d6d1dc68e184b0079d",
+  "doc_type": "language_test",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "798d8e90554521d6d1dc68e184b0079d.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "93afbaaf492442f08885718d5416b9cba7e67d98515a5dcaa73c6bf3e022f18b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "e8c9a43c1f2795f2e0feaaaab9532807127f3e278329c2e080bad51297b842f2",
+    "prompt_hash": "17c966e850bfcd98ad0abfeeb73f3dde3766245a63ab0cb02ad7fe265f36f466",
+    "output_hash": "8358cba752ab57827e0a99f0dfc2e4a7c2861fc8d93429c22f6dc74cad78992d",
+    "returncode": 0,
+    "timestamp": "2026-07-24T20:25:01.100646+00:00",
+    "provenance_digest": "74c06f5958104aca10dc1a8dea066c63b5822d254f006b9e53a680c7dfe362f5"
+  }
+}

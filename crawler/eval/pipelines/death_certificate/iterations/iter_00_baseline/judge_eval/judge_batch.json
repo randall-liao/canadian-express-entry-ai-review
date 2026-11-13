@@ -1,0 +1,202 @@
+{
+  "doc_type": "death_certificate",
+  "case_evaluations": {
+    "142cafca554f10fc1521a2d97b364cf8": {
+      "grounding_accuracy": 0.35,
+      "citation_exactness": 0.7,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "2efcf44a387b51aab4bf72eaed4b8953": {
+      "grounding_accuracy": 0.3,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "33d577bd1521d896ecbc6b63af055d8e": {
+      "grounding_accuracy": 0.4,
+      "citation_exactness": 0.7,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4532662d42f42c242130dedf908fe366": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.7,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "4edb78278ebeb2fa6be52ea5c71e4c21": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.7,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c962ebca01cd59cc782888d9c3acceae": {
+      "grounding_accuracy": 0.35,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "da4fc991c2be8fdff4851ffbfc34bbc7": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "eb89d69f0be42ad0ef1169b92e3bbe17": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 0.8,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f6b01f82ff20d1f63cdb591fc46c66a8": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.7,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "fc56e629214694f8bdc1d7e70122721b": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.8,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "4532662d42f42c242130dedf908fe366",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Document is Spanish (Language: Spanish; Translation Affidavit: N/A; Spanish narrative) with no certified translation/affidavit — the injected PFL-DEATH_CE-01 defect. Worker returned only boilerplate 'death certificate required' policy and no abstention/defect flag."
+    },
+    {
+      "case_id": "eb89d69f0be42ad0ef1169b92e3bbe17",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Scanned sibling of the untranslated Spanish certificate (PFL-DEATH_CE-01). Missing translation affidavit and certified translator stamp were plainly visible; Worker flagged nothing."
+    },
+    {
+      "case_id": "da4fc991c2be8fdff4851ffbfc34bbc7",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Registration Number, Issuing Authority Seal, and Registrar Signature all show N/A and narrative states the document is 'legally unverified' (PFL-DEATH_CE-02). Worker did not detect the missing-seal/signature authenticity defect."
+    },
+    {
+      "case_id": "4edb78278ebeb2fa6be52ea5c71e4c21",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Scanned sibling of Robert Vance unsealed record (PFL-DEATH_CE-02). Absent seal/signature/registration number not surfaced; Worker gave generic requirement statement only."
+    },
+    {
+      "case_id": "c962ebca01cd59cc782888d9c3acceae",
+      "category": "grounding",
+      "severity": "critical",
+      "description": "Document declares Marital Status Code: MARRIED and an identity mismatch (certificate for brother Carlos Eduardo Gomez Ruiz vs declared spouse), yet Worker basis asserts 'declared marital status is widowed.' Invented status contradicting the document, and PFL-DEATH_CE-03 identity mismatch entirely missed."
+    },
+    {
+      "case_id": "142cafca554f10fc1521a2d97b364cf8",
+      "category": "grounding",
+      "severity": "critical",
+      "description": "Marital Status Code is MARRIED with brother-vs-spouse identity mismatch (PFL-DEATH_CE-03). Worker basis falsely states marital status is widowed and detects no mismatch defect."
+    },
+    {
+      "case_id": "33d577bd1521d896ecbc6b63af055d8e",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Marital Status Code MARRIED post-ITA despite spouse death, proof 'Omitted - Death certificate not provided post-ITA' (PFL-DEATH_CE-04 non-disclosure). Worker basis assumes widowed and flags no disclosure/omission defect."
+    },
+    {
+      "case_id": "2efcf44a387b51aab4bf72eaed4b8953",
+      "category": "grounding",
+      "severity": "critical",
+      "description": "Worker basis claims applicant 'declared marital status as widowed and provided a death certificate' — both false: document shows MARRIED and proof of marital status OMITTED (PFL-DEATH_CE-04). Two invented facts plus missed defect."
+    },
+    {
+      "case_id": "f6b01f82ff20d1f63cdb591fc46c66a8",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Same anchor #051 is cited across cases with two divergent 'verbatim' quotes; this case's quote ('This document is requested only when the marital status is listed as widowed.') reads as a paraphrase/annotation rather than exact source text, reducing quote fidelity even though the claim itself is correct for this valid document."
+    },
+    {
+      "case_id": "fc56e629214694f8bdc1d7e70122721b",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Valid document correctly handled, but citation quote fidelity is uncertain: the shared anchor #051 is presented with inconsistent quote strings across the batch, indicating imprecise verbatim citation practice."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/death_certificate.md",
+      "suggested_patch": "Require the agent to inspect and validate document fields before answering, not just recite the requirement: (1) if Language Of Document is not English/French, verify Translation Affidavit and Certified Translator Stamp are present, else flag PFL-DEATH_CE-01; (2) verify Registration Number, Issuing Authority Seal, and Registrar Signature are populated (reject 'N/A'/blank), else flag PFL-DEATH_CE-02; (3) cross-check Deceased Full Name/DOB and Applicant Relationship against the declared spouse and Marital Status Code, flagging identity or relationship mismatches (PFL-DEATH_CE-03); (4) when Marital Status Code is MARRIED but a spouse death is evidenced or Proof Of Marital Status is 'Omitted', flag non-disclosure (PFL-DEATH_CE-04). Emit a defective verdict or abstention with affected fields rather than a boilerplate 'meets requirements' policy statement."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Prohibit boilerplate policy-only answers on document-review tasks. The Worker must ground every marital-status assertion in the document's actual Marital Status Code field (never assume 'widowed' from the question framing), keep quotes strictly verbatim to the cited anchor, and populate abstentions[] whenever a required field is missing/inconsistent instead of returning an unconditional requirement claim."
+    }
+  ],
+  "rationale": "The Worker returned an identical boilerplate answer ('a death certificate must be provided') for every case regardless of document content. This is correct only for the two valid, meets_requirements cases (f6b01f82, fc56e629), which score well. For all 8 defective cases it missed every injected defect (defect_recall 0.0): untranslated Spanish certificates (CE-01), missing seal/signature/registration (CE-02), identity/relationship mismatch (CE-03), and undisclosed post-ITA death with omitted proof (CE-04). Worse, in the four MARRIED-coded cases (c962ebca, 142cafca, 33d577bd, 2efcf44a) the Worker invented a 'widowed' status contradicting the document — with 2efcf44a additionally fabricating that a death certificate was 'provided' when it was omitted — driving grounding_accuracy sharply down. PII containment is strong throughout (claims are generic policy text; applicant facts stay in basis[]) and there is no ground-truth leakage, so pii_containment and blind_input_compliance are 1.0 everywhere. Citation exactness is moderate: the anchor is consistent but the same #051 reference is paired with two different 'verbatim' quotes, one of which appears paraphrased. The dominant systemic failure is the absence of field-level validation and defect surfacing.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "142cafca554f10fc1521a2d97b364cf8.pdf",
+      "--attachment",
+      "2efcf44a387b51aab4bf72eaed4b8953.pdf",
+      "--attachment",
+      "33d577bd1521d896ecbc6b63af055d8e.pdf",
+      "--attachment",
+      "4532662d42f42c242130dedf908fe366.pdf",
+      "--attachment",
+      "4edb78278ebeb2fa6be52ea5c71e4c21.pdf",
+      "--attachment",
+      "c962ebca01cd59cc782888d9c3acceae.pdf",
+      "--attachment",
+      "da4fc991c2be8fdff4851ffbfc34bbc7.pdf",
+      "--attachment",
+      "eb89d69f0be42ad0ef1169b92e3bbe17.pdf",
+      "--attachment",
+      "f6b01f82ff20d1f63cdb591fc46c66a8.pdf",
+      "--attachment",
+      "fc56e629214694f8bdc1d7e70122721b.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "762315881438494860a8b3a4d1ad5b7d42b88aebad6115378c9c20b881954b15",
+    "research_hash": "bc28f2637a21f2d6d2dfb0646a4e5a4a111bbc5a902211f60946e06e30fa766b",
+    "ground_truth_hash": "9cf0249e8f062b052d5afff50069a3b9eb328f31dc63dd84406add9ee0847605",
+    "output_hash": "c40f7bbce6db50e79618d801b8046a4b2413bb079dfb6c66d94c1a780d7dc3e4",
+    "timestamp": "2026-07-23T22:58:55.399379+00:00",
+    "provenance_digest": "5a9f01843ce7ac18002bdaf1122b40c28f6eaac5ddfb105c82519cfce5b5e810"
+  }
+}

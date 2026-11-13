@@ -1,0 +1,54 @@
+{
+  "question": "When may an applicant submit a Letter of Explanation?",
+  "claims": [
+    {
+      "id": "letter-explanation-doc",
+      "text": "An applicant may submit a letter of explanation to outline circumstances or clarify details regarding their Express Entry application.",
+      "citations": [
+        "guidance/police-certificates.md#008"
+      ],
+      "quote": "a letter of explanation"
+    }
+  ],
+  "basis": [
+    "The applicant submitted a Letter of Explanation in the letter_of_explanation upload slot for Express Entry case 2a14f66215cc8f70c4cdaacab6d97efd."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "2a14f66215cc8f70c4cdaacab6d97efd",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "2a14f66215cc8f70c4cdaacab6d97efd.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "f53e3986fcf49d77bc3bb9af25981696c5fcd59719dcad6ed73f36c40629723b",
+    "allowed_text_sha256": null,
+    "bundle_hash": "d7a377868aba667471d45ab34cc55ae257326eb2adaf961952e773a671b3de7f",
+    "prompt_hash": "b11b24f59abf9f06ee673b1cf57533f73715403c962dca47f082a92aa725beaf",
+    "output_hash": "2426425c2739dae8ffc13b9e4a78f55c09ebf58e7e4cb81c711bc516155ee1f4",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:32:34.577789+00:00",
+    "provenance_digest": "2afa01e18a5f5dcf68e04e8b3f250dd98d19ca01726459a4a92325cc6b666143"
+  }
+}

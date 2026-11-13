@@ -1,0 +1,135 @@
+{
+  "doc_type": "certified_translation",
+  "timestamp": "2026-07-23T03:39:02.344815+00:00",
+  "summary": "IRCC requires strict compliance for non-English and non-French supporting documents submitted in Express Entry and permanent residence applications. Mandatory standards mandate that translations must be completed by a certified translator in good standing (bearing their official stamp, seal, and registration number) or accompanied by a sworn translator affidavit executed before an authorized commissioner of oaths. Common failure modes causing application rejections, completeness check failures, or Procedural Fairness Letters (PFL) include using non-certified translators without an affidavit, relying on family members for translation, submitting incomplete page translations that omit stamps or annotations, and missing certified stamps or credentials.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:41:28.072189+00:00",
+    "duration_seconds": 153.716,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "0232453f1095b838a512d547553efc37acf9f84ce3b0e8d4b18d2f55fca26d41",
+    "raw_output_sha256": "688dbd96e17d846f5ae1066373f65b20f500dfa343eab76685713e2391c25eed",
+    "returncode": 0,
+    "provenance_token": "df62f213fb9605b3a177f0694f0ec70fc8cc81faac05fd77faada3faae102821",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search"
+    ],
+    "tool_call_count": 12,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-CERTIFIE-01",
+      "category": "uncertified_translator_missing_affidavit",
+      "severity": "critical",
+      "title": "Translation Completed by Uncertified Translator Without Sworn Affidavit",
+      "description": "The submitted translation was performed by a translator who is not a certified member of a recognized provincial or national translation association, and the applicant failed to include a sworn affidavit from the translator attesting to language proficiency and accuracy executed before a commissioner authorized to administer oaths.",
+      "affected_fields": [
+        "translator_certification_status",
+        "translator_affidavit",
+        "commissioner_of_oaths_seal"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=018&top=4",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Unless we tell you otherwise, all supporting documents must be in English or French. If it is not in English or French, you must send it with: the English or French translation and an affidavit from the person who completed the translation and a certified photocopy of the original document",
+      "remediation_hypothesis": "Obtain a sworn affidavit signed by the non-certified translator in front of an authorized commissioner for taking affidavits, or re-translate the document using a certified translator affiliated with a recognized Canadian translation body.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-CERTIFIE-02",
+      "category": "prohibited_family_translation",
+      "severity": "critical",
+      "title": "Translation Prepared by Applicant or Family Member",
+      "description": "The document translation was completed by the applicant themselves or an immediate family member (e.g., spouse, parent, sibling, child), which violates explicit IRCC regulations even if the relative is a professional or certified translator.",
+      "affected_fields": [
+        "translator_identity",
+        "relationship_to_applicant",
+        "translator_declaration"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=039&top=4",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Yes. If your documents are not in English or French, you must send a translation from a certified translator with your application. We don’t accept translations by family members.",
+      "remediation_hypothesis": "Re-translate the document using an independent third-party certified translator who has no personal or familial relationship to the applicant.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-CERTIFIE-03",
+      "category": "incomplete_page_translation",
+      "severity": "high",
+      "title": "Incomplete Translation Omitting Stamps, Marginalia, or Back Pages",
+      "description": "The translated document omits portions of the original source document, such as government seals, registrar stamps, reverse-side endorsements, marginal notes, or attached pages, violating IRCC word-for-word completeness standards.",
+      "affected_fields": [
+        "translated_text_completeness",
+        "translated_stamps_and_seals",
+        "page_count_match"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Any document that is not in English or French must be accompanied by a certified translation. You must include a scan of both the original document and the complete translation.",
+      "remediation_hypothesis": "Obtain a comprehensive, unabridged translation covering all text, stamps, signatures, marginalia, and back-page notations present on the source document.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-CERTIFIE-04",
+      "category": "missing_certified_seal_or_stamp",
+      "severity": "high",
+      "title": "Missing Official Stamp or Seal of Recognized Certified Translator",
+      "description": "The translation claims to be certified but lacks the official stamp, seal, or membership credentials of a recognized provincial or territorial organization of translators (such as ATIO, STIBC, OTTIAQ), preventing IRCC officers from verifying the translator's professional certification status.",
+      "affected_fields": [
+        "certified_translator_stamp",
+        "translator_membership_number",
+        "professional_association_name"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=040&top=4",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "An affidavit for a translation is a document that says the translation is a true and accurate version of the original text. The translator swears that their translation is a true and accurate representation of the contents of the original document.",
+      "remediation_hypothesis": "Provide a re-issued translation bearing the official seal/stamp and membership number of a certified translator in good standing with a recognized professional translation body.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

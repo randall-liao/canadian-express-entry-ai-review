@@ -1,0 +1,54 @@
+{
+  "question": "How must an applicant prove their language ability for Express Entry?",
+  "claims": [
+    {
+      "id": "language-test",
+      "text": "Applicants must prove their language skills by taking an approved language test.",
+      "citations": [
+        "guidance/language-test.md#001"
+      ],
+      "quote": "You must prove your language skills by taking an approved language test."
+    }
+  ],
+  "basis": [
+    "Document upload-slot type: language_test (opaque case ID: ce799711157fdcc498337972abeb7199)."
+  ],
+  "abstentions": [],
+  "prose": "Express Entry applicants must prove their language proficiency by taking an IRCC-approved language test and entering the official results into their application.",
+  "case_id": "ce799711157fdcc498337972abeb7199",
+  "doc_type": "language_test",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "ce799711157fdcc498337972abeb7199.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "a93ce6275cc5a70b4a0e4cd339b8be3666bc1bb73a17b92e5720149d641eefc2",
+    "allowed_text_sha256": null,
+    "bundle_hash": "720289a4260833db98e62d2f0ec05026332be91c465e47e213f963dd74e337e4",
+    "prompt_hash": "60bcfd57ff3f32baf1e2b0eaf4634111275dfaeda222e05c855663f09edb4175",
+    "output_hash": "4801b64a29f56d26391d0c1ae8d1037ca211ee2c12718c4ea40ddec9e39aaeca",
+    "returncode": 0,
+    "timestamp": "2026-07-23T12:51:52.388307+00:00",
+    "provenance_digest": "543caab9e83eea73f1f21a17ea0fe13f5f01251fcca053228d353ff784924690"
+  }
+}

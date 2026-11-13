@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant declared a dependent child with status listed as adopted for opaque case ID 75254f8a61b22f28ece71d9194249faf."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "75254f8a61b22f28ece71d9194249faf",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "75254f8a61b22f28ece71d9194249faf.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "b9db06a659ffa004c2f4c84fd62e0aa1916fabcec7d00a79b787492a06bc8856",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "bfba850df085694e9251bc14158568fd39dbb2999d68779e9622138d7f8fad81",
+    "output_hash": "b434bfef2c46aa235a654d07387c92e4d0ca9ad2a82890b5a494900537fd0fb8",
+    "returncode": 0,
+    "timestamp": "2026-07-24T01:38:17.380559+00:00",
+    "provenance_digest": "33ac03637aef02bf1d40d6d00b880f85c72840b6c2ad73fec2b0b7b695095ddc"
+  }
+}

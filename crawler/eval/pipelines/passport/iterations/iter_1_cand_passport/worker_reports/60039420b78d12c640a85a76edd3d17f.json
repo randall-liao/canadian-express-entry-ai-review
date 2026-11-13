@@ -1,0 +1,56 @@
+{
+  "question": "What passport or travel document copy must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "passport-bio-page",
+      "text": "Express Entry requires a clear and legible copy of the biographical data page of a passport or travel document, but the submitted document lacks a valid biographical data page, MRZ, passport number, and expiry date.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#016"
+      ],
+      "quote": "A clear and legible copy of the biographical data page of a passport or travel document must be provided."
+    }
+  ],
+  "basis": [
+    "Evaluated uploaded document slot 'passport' for case ID 60039420b78d12c640a85a76edd3d17f.",
+    "The attached file is a single-page ReportLab-generated PDF that does not contain a passport biographical data page, passport number, expiry date, or MRZ.",
+    "Under R10 completeness requirements, the document is incomplete due to missing biographical data page and required passport details."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "60039420b78d12c640a85a76edd3d17f",
+  "doc_type": "passport",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "60039420b78d12c640a85a76edd3d17f.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "b61857508bb97555ee395bc591520475cd299af25461b17689874e643cffe839",
+    "allowed_text_sha256": null,
+    "bundle_hash": "bc3bc5bb0bc01cc3915ba835b515833df93b2601b5bc3edd8a8906aec1db7832",
+    "prompt_hash": "99ada5b74756bbdee948538f90d0376cbcbfccfc4884679e83a5716da0f231fe",
+    "output_hash": "67b04bd0ed5cbc03b0ad2abc055a1f46efc7f581021021a8ffbfc1761d35ceb7",
+    "returncode": 0,
+    "timestamp": "2026-07-24T11:22:04.422466+00:00",
+    "provenance_digest": "1aa498d26c35f4c3c3d94d913c05c5a1155b85909af04d0714c9895c5a0c4795"
+  }
+}

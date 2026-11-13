@@ -1,0 +1,139 @@
+{
+  "doc_type": "language_test",
+  "timestamp": "2026-07-23T03:34:31.759561+00:00",
+  "summary": "Online research into IRCC operational guidance and Express Entry requirements reveals major failure modes for language test documents: language test validity expiration exceeding the strict 2-year limit, Test Report Form (TRF) or registration number mismatches triggering verification failures or Procedural Fairness Letters (PFLs) under misrepresentation concerns, language component scores falling below minimum Canadian Language Benchmark (CLB) cutoffs for specific economic streams, and submission of unapproved test formats such as IELTS Academic or IELTS One Skill Retake.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:37:28.576981+00:00",
+    "duration_seconds": 186.381,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "576df56ac046b64cbec86a72389909d38d787d283c0b62dd0413bf2a10b09a5c",
+    "raw_output_sha256": "ef0b28b9fb0c52e8db67008a3c411c4393bfaa7bec85f8e0bf36b73bb0954a7f",
+    "returncode": 0,
+    "provenance_token": "a97e2d1634d28a5fb60cdda84bb249b4750e4e4fdab5eb5abcc6b64f2b41297a",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_fetch",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 13,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-LANGUAGE-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Language Test Results Expired (> 2 Years Old at e-APR)",
+      "description": "IRCC requires language test results to be valid (less than 2 years old) both when entering the Express Entry pool and on the date the electronic Application for Permanent Residence (e-APR) is submitted. If test results expire prior to e-APR submission, the application is rejected as incomplete under Section R10 of the IRPR or refused for failing minimum entry criteria.",
+      "affected_fields": [
+        "test_date",
+        "expiry_date",
+        "validity_status"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Your test results must be less than 2 years old when you: complete your Express Entry profile, and submit your application for permanent residence... If you apply for permanent residence with language test results that have expired, we'll refuse your application.",
+      "remediation_hypothesis": "The applicant must take a new IRCC-approved language test and obtain valid results before submitting the e-APR. If the current invitation to apply (ITA) window is too short, the applicant should decline the ITA and re-enter the pool with valid language test results.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-LANGUAGE-02",
+      "category": "pfl_misrepresentation",
+      "severity": "critical",
+      "title": "Test Report Form (TRF) Number Mismatch or Unverifiable Test Results",
+      "description": "Entering an inaccurate TRF number, PIN, or Registration Number in the profile/e-APR, or providing document details that cannot be verified against official language testing organization databases (e.g., IELTS, CELPIP, PTE online portals), causes an integrity flag and triggers a Procedural Fairness Letter (PFL) for suspected misrepresentation under A40.",
+      "affected_fields": [
+        "trf_number",
+        "test_pin",
+        "registration_number",
+        "candidate_id"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "enter the test results into your Express Entry profile (and the language test result form or certificate number and test PIN, if the system asks for it)... We'll verify both the averaged scores and the language test results you submit.",
+      "remediation_hypothesis": "The applicant must respond to the PFL within the specified deadline, providing a high-resolution copy of the official Test Report Form, explaining any typographical discrepancy in the TRF/PIN entry, and authorizing direct provider verification if necessary.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-LANGUAGE-03",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Individual Component Scores Below Minimum Program CLB Cutoff",
+      "description": "Submitting language test results where any individual component skill score (speaking, listening, reading, writing) falls below the mandatory minimum CLB cutoff for the selected program (e.g., CLB 7 across all 4 abilities for FSWP; CLB 7 for CEC TEER 0/1; CLB 5/4 for FSTP) leads to immediate refusal for failure to meet program eligibility requirements.",
+      "affected_fields": [
+        "speaking_score",
+        "listening_score",
+        "reading_score",
+        "writing_score",
+        "clb_level"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Federal Skilled Worker Program First official language Minimum level for all 4 abilities CLB 7... Canadian Experience Class Minimum level for all 4 abilities NOC TEER 0/1 CLB 7.",
+      "remediation_hypothesis": "The applicant must re-sit an approved language examination to achieve scores meeting or exceeding the minimum required CLB thresholds for all four language abilities before applying.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-LANGUAGE-04",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Submission of Unapproved Test Stream or Unaccepted Retake Variant",
+      "description": "Submitting an unapproved language test version (such as IELTS Academic instead of IELTS General Training, TOEFL, or using IELTS One Skill Retake, which IRCC does not accept for Express Entry) renders the proof invalid, resulting in rejection at the Section R10 completeness check stage.",
+      "affected_fields": [
+        "test_type",
+        "test_provider",
+        "test_variant"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-test.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "You must prove your language skills by taking an approved language test... You can take any of these approved language tests: CELPIP-General, IELTS General Training, PTE Core, TEF Canada, TCF Canada.",
+      "remediation_hypothesis": "The applicant must take a fully approved language test designation (e.g., IELTS General Training, CELPIP-General, PTE Core, TEF Canada, or TCF Canada) and submit valid results from a full single test session.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

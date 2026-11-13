@@ -1,0 +1,133 @@
+{
+  "doc_type": "birth_certificate",
+  "timestamp": "2026-07-22T23:41:31.847290+00:00",
+  "summary": "IRCC Express Entry requires official government-issued long-form birth certificates to verify identity, civil status, and parentage for primary applicants and accompanying dependants. Common real-world refusal triggers and Procedural Fairness Letters (PFL) stem from missing parental names on short-form certificates, late or uncertified birth registrations lacking contemporaneous corroborating evidence, missing official civil registry seals or stamps, and uncertified or incomplete translations of foreign-language birth records.",
+  "execution": {
+    "status": "success",
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "timestamp": "2026-07-23T03:43:33.325203+00:00",
+    "duration_seconds": 131.751,
+    "command": [
+      "copilot",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--available-tools",
+      "web_search,web_fetch",
+      "--allow-all-tools",
+      "--allow-all-urls",
+      "--disallow-temp-dir",
+      "--no-ask-user",
+      "--no-custom-instructions",
+      "--output-format",
+      "json",
+      "--stream",
+      "off"
+    ],
+    "prompt_sha256": "95baf3c333160f060d09ea3a0439b27d599d1fd8479730324d61fa69d48fd59d",
+    "raw_output_sha256": "752981ed32b5a4aad887e0f32cf92b9ef96c8fd4acc79c4c45100e61e5d52671",
+    "returncode": 0,
+    "provenance_token": "4bdc4b64b9d317e18ff23ebe89440d243672bb82b50b3b39d238cd0c717ad5d4",
+    "online_research_performed": true,
+    "tool_calls": [
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search",
+      "web_search"
+    ],
+    "tool_call_count": 6,
+    "output_format": "json",
+    "stream": "off"
+  },
+  "failure_modes": [
+    {
+      "failure_id": "PFL-BIRTH_CE-01",
+      "category": "pfl_incomplete_evidence",
+      "severity": "critical",
+      "title": "Short-Form Birth Certificate Lacking Parental Names",
+      "description": "The submitted birth certificate is a short-form extract or national ID card that omits the names of one or both parents. IRCC requires proof of relationship showing full parentage to establish child or sibling dependency and verify identity.",
+      "affected_fields": [
+        "parent_names",
+        "father_full_name",
+        "mother_full_name",
+        "proof_of_relationship"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/common-supporting-documents.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "A birth certificate must clearly show the names of the parents to confirm the relationship. If the birth certificate does not clearly show the relationship or parentage, an equivalent legal document from the authorities of the country of birth showing the relationship must be provided along with an explanation letter.",
+      "remediation_hypothesis": "Obtain a long-form birth certificate or legal civil registry extract from the birth country's issuing authority that explicitly names both parents. If unavailable, provide equivalent government civil status documents (e.g., family register, adoption decree, or school leaving records naming parents) alongside a formal letter of explanation and sworn affidavit.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-BIRTH_CE-02",
+      "category": "pfl_credibility_gap",
+      "severity": "high",
+      "title": "Late-Registered or Unregistered Birth Certificate",
+      "description": "The birth certificate shows a registration date years after the date of birth or was created post-facto specifically for the immigration application, prompting an IRCC officer to question the authenticity of the record or claimed lineage.",
+      "affected_fields": [
+        "registration_date",
+        "date_of_birth",
+        "issuing_authority",
+        "civil_register_entry_number"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=1536&top=14",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If your birth certificate is not available or was registered after birth, you must provide an equivalent official document (such as a civil register or baptismal certificate registered near birth) along with a letter detailing why the original was unavailable or registered late.",
+      "remediation_hypothesis": "Provide secondary contemporaneous evidence created near the time of birth, such as hospital records, early school admission/leaving certificates, baptismal records, or census logs, along with a sworn affidavit from parents/relatives and an official explanation from the local civil registrar regarding the late registration.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-BIRTH_CE-03",
+      "category": "pfl_invalid_format",
+      "severity": "critical",
+      "title": "Missing Official Civil Registry Stamp, Seal, or Authorized Signature",
+      "description": "The uploaded scan of the birth certificate lacks an official raised seal, ink stamp, or authorized signature from the government civil registry office, or is an unofficial hospital souvenir certificate, leading to rejection during completeness check.",
+      "affected_fields": [
+        "official_seal",
+        "issuing_authority_signature",
+        "issuing_stamp",
+        "document_authenticity"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2015-completeness-check.html",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "Documents must be official government-issued records bearing the official seal or stamp of the civil registry. Unofficial documents such as hospital souvenir birth certificates or copies lacking official civil registry stamps are not acceptable for completeness.",
+      "remediation_hypothesis": "Obtain an official certified copy or extract directly from the municipal civil registry or national vital statistics bureau bearing the official stamp, registrar signature, and registration volume/page reference numbers.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    },
+    {
+      "failure_id": "PFL-BIRTH_CE-04",
+      "category": "pfl_translation_defect",
+      "severity": "critical",
+      "title": "Untranslated or Improperly Translated Foreign Birth Record",
+      "description": "The birth record is in a language other than English or French and was submitted without a certified translation, translated by an uncertified translator without a sworn translator affidavit, translated by the applicant or a relative, or missing the original document scan.",
+      "affected_fields": [
+        "translation_certification",
+        "translator_affidavit",
+        "original_document_copy",
+        "document_language"
+      ],
+      "authority_classification": "discovery",
+      "source_url": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=018&top=4",
+      "retrieval_date": "2026-07-22",
+      "supporting_excerpt": "If a supporting document is not in English or French, you must provide a certified translation of the document, an affidavit from the person who completed the translation (if not a certified translator), and a certified copy of the original document. Translations by the applicant or family members are not accepted.",
+      "remediation_hypothesis": "Submit a complete, word-for-word translation from an accredited certified translator in good standing. If using a non-certified translator, ensure a sworn affidavit executed before a notary public accompanies the translation along with a legible scan of the original certified birth certificate copy.",
+      "local_corpus_verified": false,
+      "local_corpus_citations": [],
+      "local_corpus_evidence": []
+    }
+  ]
+}

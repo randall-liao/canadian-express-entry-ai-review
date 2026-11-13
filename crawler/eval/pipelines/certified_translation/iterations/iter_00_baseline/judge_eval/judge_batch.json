@@ -1,0 +1,196 @@
+{
+  "doc_type": "certified_translation",
+  "case_evaluations": {
+    "0ca9add770ee158e1fd95e44dfecf19b": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "25845c7d8474aa76eed215c0570a8af3": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3c0acc6d11b5e97060c63519a7534614": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "7c2d425357da8cf81469fdde73ea98f6": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "9fd142f43a76e01584146263ed63f638": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "b91951b85cdf5599e32d0446d9e423ac": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "c8dbc0e66f41b7349212abe9247243b5": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ce0481ae881cf32f3f5158714ae09897": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "eafe4305fda93ec934b2bce0f488d357": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f7bb94f5620296d59eebed75d4917610": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 0.9,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "b91951b85cdf5599e32d0446d9e423ac",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth defect PFL-CERTIFIE-01. Document shows Translator Certification Status 'Uncertified / Freelance Translator', Affidavit 'Not Provided', Commissioner Of Oaths Seal 'Missing', and page 2 narrative explicitly states 'not a member of a certified translation association and no official affidavit was sworn'. Worker returned only generic translation policy and flagged no defect."
+    },
+    {
+      "case_id": "0ca9add770ee158e1fd95e44dfecf19b",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth defect PFL-CERTIFIE-01 (scanned sibling). Uncertified freelance translator with no affidavit and no commissioner seal, confirmed in narrative. Worker emitted identical boilerplate policy claim and did not detect the missing certification/affidavit."
+    },
+    {
+      "case_id": "3c0acc6d11b5e97060c63519a7534614",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth defect PFL-CERTIFIE-02. Document shows Relationship To Applicant 'Spouse of Applicant (Jane Doe)' and declaration 'I, John Smith, spouse of the applicant'. IRCC prohibits family-member translations. Worker did not flag the prohibited relationship."
+    },
+    {
+      "case_id": "9fd142f43a76e01584146263ed63f638",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth defect PFL-CERTIFIE-02 (scanned sibling). Translator is applicant's spouse per fields and narrative. Worker produced generic policy only and missed the prohibited family-member translation."
+    },
+    {
+      "case_id": "eafe4305fda93ec934b2bce0f488d357",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Ground truth defect PFL-CERTIFIE-03. Document shows Translated Text Completeness 'Incomplete - Page 2 back stamps and legal marginalia omitted', Stamps 'Omitted', Page Count 'Mismatch - Original 2 pages / Translation 1 page', narrative admits page 2 omitted. Worker flagged no completeness defect."
+    },
+    {
+      "case_id": "7c2d425357da8cf81469fdde73ea98f6",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Ground truth defect PFL-CERTIFIE-03 (scanned sibling). Incomplete translation with omitted apostille/seals and page-count mismatch. Worker's report (even the prose field) restated policy only and did not detect the omission."
+    },
+    {
+      "case_id": "c8dbc0e66f41b7349212abe9247243b5",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Ground truth defect PFL-CERTIFIE-04. Document shows Certification 'Unverified', Association 'Missing', Membership 'Missing/Unverified', Stamp 'Missing - No official professional seal', narrative confirms seal/credentials 'not affixed'. Worker missed the missing certified-stamp defect; claim even weakened requirement to 'official translation'."
+    },
+    {
+      "case_id": "25845c7d8474aa76eed215c0570a8af3",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "Ground truth defect PFL-CERTIFIE-04 (scanned sibling). Missing professional stamp, association, and membership number. Worker returned generic policy and did not detect the absent certification credentials."
+    },
+    {
+      "case_id": "f7bb94f5620296d59eebed75d4917610",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Compliant document (ATIO certified translator, sworn affidavit, commissioner seal, complete). Worker's answer is generic policy rather than a document-specific verdict, but is grounded and correctly raises no false positive."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/certified_translation.md",
+      "suggested_patch": "Require the agent to render a per-document verdict (meets_requirements | defective) by field-level inspection, not a generic policy restatement. Mandate explicit checks on: translator_certification_status (reject 'Uncertified'/'Unverified'), translator_affidavit + commissioner_of_oaths_seal (reject 'None'/'Missing'/'Not Provided'), relationship_to_applicant (reject spouse/family/self), certified_translator_stamp + professional_association_name + translator_membership_number (reject 'Missing'), and translated_text_completeness + translated_stamps_and_seals + page_count_match (reject 'Incomplete'/'Omitted'/'Mismatch'). Each detected defect must be emitted as a distinct claim mapped to a failure category."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a rule that when a document review question is posed, the Worker must (1) enumerate the document's own field values as evidence and (2) compare each against policy to surface defects, before quoting corpus policy. Boilerplate policy-only answers that ignore the attached document's field values are non-compliant and must be treated as a failed review."
+    }
+  ],
+  "rationale": "All 10 Worker reports are near-identical generic restatements of IRCC translation policy citing the Express Entry completeness-check PDI, with no document-specific analysis. Grounding, citation exactness, PII containment (case IDs confined to basis[]; no Jane Doe/DOB leakage in claims/prose), and blind compliance are strong. The dominant failure is defect_recall: for the two compliant cases (f7bb..., ce04...) no defect exists and none was falsely raised (1.0), but for all eight defective cases the Worker missed clearly stated, field-level injected defects (uncertified/no-affidavit PFL-01, spouse/family-member PFL-02, incomplete/page-mismatch PFL-03, missing-stamp PFL-04). The agent behaves as a policy Q&A bot rather than a document reviewer, yielding 0% recall on injected defects.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "0ca9add770ee158e1fd95e44dfecf19b.pdf",
+      "--attachment",
+      "25845c7d8474aa76eed215c0570a8af3.pdf",
+      "--attachment",
+      "3c0acc6d11b5e97060c63519a7534614.pdf",
+      "--attachment",
+      "7c2d425357da8cf81469fdde73ea98f6.pdf",
+      "--attachment",
+      "9fd142f43a76e01584146263ed63f638.pdf",
+      "--attachment",
+      "b91951b85cdf5599e32d0446d9e423ac.pdf",
+      "--attachment",
+      "c8dbc0e66f41b7349212abe9247243b5.pdf",
+      "--attachment",
+      "ce0481ae881cf32f3f5158714ae09897.pdf",
+      "--attachment",
+      "eafe4305fda93ec934b2bce0f488d357.pdf",
+      "--attachment",
+      "f7bb94f5620296d59eebed75d4917610.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "08ed598a946174f889cb2c4c55b8c968748640462a164d889c68be9aa6139002",
+    "research_hash": "02ac48d391b510a4fa20522a1bd3a0fb9bed1c6f457b2c0f5efbe31e4f6b5a4e",
+    "ground_truth_hash": "a3863f2418d501ac87d487845d4db1066ee34ba9ecef295bd1c59a9b3e016413",
+    "output_hash": "eb8b00674dc438f68c2955acf9663a4663bc48f71f9eb92fec124026f4a9e9d0",
+    "timestamp": "2026-07-23T22:56:35.401305+00:00",
+    "provenance_digest": "705da3b69b673af688bd883077accbffffa1b0e218d3cd1665cc37a3d1838588"
+  }
+}

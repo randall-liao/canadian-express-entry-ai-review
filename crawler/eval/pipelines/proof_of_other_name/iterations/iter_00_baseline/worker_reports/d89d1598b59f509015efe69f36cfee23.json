@@ -1,0 +1,54 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)."
+    }
+  ],
+  "basis": [
+    "The applicant submitted a document in upload slot proof_of_other_name under case ID d89d1598b59f509015efe69f36cfee23."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "d89d1598b59f509015efe69f36cfee23",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "d89d1598b59f509015efe69f36cfee23.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "ab2cde651e9936e6f0451b2b8d0b97fdf6ef26b90646113850cb03a37835d6fe",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2a1ea05a7d87f67391e31f1c27fe234320822f6f65215f1b49f946e67b8eb337",
+    "prompt_hash": "7c465906a45cb8cf85b172bdfa457ccd9bc8d514b9a21325024210435057dd53",
+    "output_hash": "adfc35e05653abb68ab4f383dd4cc73e42ed35f67bf3ac5247486a9b5e2071b8",
+    "returncode": 0,
+    "timestamp": "2026-07-23T16:35:33.229380+00:00",
+    "provenance_digest": "c827cea4f3c79b019e01878e8facf224c71ff54a31bc61f394e07d47a01dc11b"
+  }
+}

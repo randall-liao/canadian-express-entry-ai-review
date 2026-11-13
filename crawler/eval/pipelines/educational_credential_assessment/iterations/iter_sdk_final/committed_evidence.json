@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase74-committed-evidence-link-v1",
+  "doc_type": "educational_credential_assessment",
+  "evidence_root": "crawler/eval/phase74_evidence",
+  "evidence_manifest_hash": "3c59e9b94802556e80de1685f4f3118a8f842548e3ba2f9c9e668e5ecfe3b811",
+  "document_files": {
+    "documents/educational_credential_assessment/judge.json": "a726b59dec07030e97d264a2e74ee7016dede8df3df06f23c24d68e0dd2e7688",
+    "documents/educational_credential_assessment/shared_evaluation.json": "51d3dc64ebd949d06d4a35d6887ee9417b197d53d5337b17f1735abe048eb454",
+    "documents/educational_credential_assessment/workers/1e9c3ffe63967d95f8382b7d957a0132.json": "be44e7cd83b2bdaa10dfefccfdc9df410007d5db0f32f52a1e3a73af3e3e9387",
+    "documents/educational_credential_assessment/workers/247b21f5e0e8e32e24f9a488989ffc60.json": "accf4fc6df9946fe12f05864cc932b31237a36eaf34707db5b86775bd56d0b95",
+    "documents/educational_credential_assessment/workers/3ae82acc1b3cf1589d70a7579dbff92a.json": "67e55b4fc4d6386a612677b28d948e0f71b2097b571d8dc691fae638cf4cc705",
+    "documents/educational_credential_assessment/workers/4f0d8388867b622426e1959578b5f9d7.json": "fa8ef3857734434e98f70c38e25f9bb4be80a4523e86e7e73b9d3f2678129f55",
+    "documents/educational_credential_assessment/workers/6600061de2dad8889f22ebee61109015.json": "f901cf75a7f18477e7ff22c338f3f6473eb03755becfffe05387cb359225acae",
+    "documents/educational_credential_assessment/workers/7c618b02e4899811caf7e22a9e420a70.json": "51c8276453f75edd4673e2bcd90772e9ec67cad28c6d1d1c9e103817d193de30",
+    "documents/educational_credential_assessment/workers/b12aaadf75f594b7e827de0c785a0170.json": "ff4594921ab582468446008e00a2b5710b9b3b0be72ec7754d430f5fa0214527",
+    "documents/educational_credential_assessment/workers/c84a98765ddd8a869194b1bc2a3bd14f.json": "f9d2a0df7f6d5a8df6cdac12b150fe61e4d6fde26334fb125ba63d91f5f187ca",
+    "documents/educational_credential_assessment/workers/d7b3a166716dbd585a0efce91515ff3e.json": "37eb75cff8551c8152d099e227cc3332b0f706ce35867389d679cbe48c3f7e35",
+    "documents/educational_credential_assessment/workers/f49c459f717534ca70ec124b8665b668.json": "9598a655fb1880b8cb43646bd55f9420a7edcde6afd69e0c3e84c0539263cce1"
+  },
+  "final_revision": "7a83a0100c2b064defe2a441f3a3db38aec4877f",
+  "final_manifest_hash": "9af44262a2a2cf09411fd14792bf437dfac99e06960ea51eb8247cf9eb292f59"
+}

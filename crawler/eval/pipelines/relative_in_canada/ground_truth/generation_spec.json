@@ -1,0 +1,256 @@
+{
+  "doc_type": "relative_in_canada",
+  "timestamp": "2026-07-23T03:07:19.970000+00:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "relative_in_canada",
+      "title": "Verification of Sibling Relationship and Canadian Residence",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-03-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "applicant_dob": "1992-05-14",
+        "applicant_birth_certificate": "ATTACHED_OFFICIAL_LONG_FORM_BC_1992_88341.pdf",
+        "relative_name": "John Doe",
+        "relative_dob": "1989-11-20",
+        "relative_relationship": "Brother (Biological)",
+        "sibling_birth_certificate": "ATTACHED_OFFICIAL_LONG_FORM_BC_1989_44120.pdf",
+        "proof_of_relationship": "VERIFIED_SHARED_PARENTS_LONG_FORM_BIRTH_CERTIFICATES",
+        "relative_status_in_canada": "Canadian Citizen",
+        "relative_status_proof": "VERIFIED_CANADIAN_PASSPORT_AND_CITIZENSHIP_CERTIFICATE",
+        "pr_card_copy": "NOT_APPLICABLE_CITIZEN",
+        "canadian_citizenship_proof": "ATTACHED_CITIZENSHIP_CERT_C1098472.pdf",
+        "relative_proof_of_residence": "VERIFIED_CRA_NOA_AND_UTILITY_BILLS",
+        "utility_bills": "ATTACHED_TORONTO_HYDRO_STATEMENT_2025_Q4.pdf",
+        "notice_of_assessment": "ATTACHED_CRA_NOA_TAX_YEAR_2024.pdf",
+        "residential_address_proof": "123 Yonge Street, Unit 402, Toronto, ON M5E 1W7",
+        "step_sibling_proof": "NOT_APPLICABLE_BIOLOGICAL_SIBLING",
+        "adoption_certificate": "NOT_APPLICABLE",
+        "parental_marriage_certificate": "ATTACHED_MARRIAGE_CERT_MC_1988_0029.pdf",
+        "relationship_chain_docs": "VERIFIED_DIRECT_BIOLOGICAL_CHAIN",
+        "crs_points_sibling_in_canada": 15
+      },
+      "narrative_blocks": [
+        "This document establishes and verifies the relationship between the Express Entry applicant, Jane Doe, and her biological brother, John Doe, who is a Canadian citizen residing in Toronto, Ontario.",
+        "The applicant submitted official long-form birth certificates for both individuals establishing identical parents (Robert Doe and Mary Smith). The relative's status as a Canadian citizen is substantiated by a valid Canadian Citizenship Certificate.",
+        "Physical residence in Canada is confirmed through recent CRA Notice of Assessment records and residential utility statements covering the past 12 months. All required evidence meets IRCC Express Entry requirements for sibling CRS point allocation."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "relative_in_canada",
+      "title": "Relative Sibling Proof - Missing Birth Certificate Data",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-03-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Carlos Garcia",
+        "applicant_dob": "1994-08-10",
+        "applicant_birth_certificate": "ATTACHED_SHORT_FORM_CARD_NO_PARENTS_LISTED.pdf",
+        "relative_name": "Mateo Garcia",
+        "relative_dob": "1991-03-22",
+        "relative_relationship": "Brother",
+        "sibling_birth_certificate": "MISSING",
+        "proof_of_relationship": "INCOMPLETE_MISSING_PARENTAL_DETAILS",
+        "relative_status_in_canada": "Permanent Resident",
+        "relative_status_proof": "VERIFIED_PR_CARD_VALID",
+        "pr_card_copy": "ATTACHED_PR_CARD_EXP_2028.pdf",
+        "canadian_citizenship_proof": "NOT_APPLICABLE",
+        "relative_proof_of_residence": "VERIFIED_CRA_NOA_AND_LEASE",
+        "utility_bills": "ATTACHED_BC_HYDRO_2025.pdf",
+        "notice_of_assessment": "ATTACHED_CRA_NOA_TAX_YEAR_2024.pdf",
+        "residential_address_proof": "456 Granville Street, Vancouver, BC V6C 1V5",
+        "step_sibling_proof": "NOT_APPLICABLE",
+        "adoption_certificate": "NOT_APPLICABLE",
+        "parental_marriage_certificate": "NOT_PROVIDED",
+        "relationship_chain_docs": "INSUFFICIENT_PROOF_OF_PARENTAGES",
+        "crs_points_sibling_in_canada": 0
+      },
+      "narrative_blocks": [
+        "The applicant, Carlos Garcia, claims Express Entry CRS points for having a biological sibling residing in Canada, Mateo Garcia.",
+        "However, the applicant submitted only a short-form birth registration card that does not list the names of either parent. Furthermore, no birth certificate or legal vital statistics record was provided for the sibling residing in Canada.",
+        "As a result, shared parentage cannot be verified by IRCC officers, leading to a procedural fairness concern regarding the validity of the claimed sibling relationship and associated CRS points."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-RELATIVE-01",
+        "category": "pfl_insufficient_proof_relationship",
+        "severity": "critical",
+        "description": "Missing long-form birth certificates establishing shared parentage between applicant and relative in Canada.",
+        "affected_fields": [
+          "proof_of_relationship",
+          "applicant_birth_certificate",
+          "sibling_birth_certificate",
+          "crs_points_sibling_in_canada"
+        ],
+        "mutation_details": {
+          "applicant_birth_certificate": "Replaced long-form birth certificate with short-form card omitting parental names",
+          "sibling_birth_certificate": "Omitted sibling birth certificate record entirely",
+          "proof_of_relationship": "Set status to incomplete due to missing parental details",
+          "crs_points_sibling_in_canada": "Reduced from 15 to 0"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "relative_in_canada",
+      "title": "Relative Status Verification - Expired Permanent Resident Status Proof",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-03-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Amina Khan",
+        "applicant_dob": "1996-01-25",
+        "applicant_birth_certificate": "ATTACHED_FULL_BIRTH_CERTIFICATE_LONG_FORM.pdf",
+        "relative_name": "Tariq Khan",
+        "relative_dob": "1990-07-12",
+        "relative_relationship": "Brother (Biological)",
+        "sibling_birth_certificate": "ATTACHED_FULL_BIRTH_CERTIFICATE_LONG_FORM.pdf",
+        "proof_of_relationship": "VERIFIED_SHARED_PARENTS",
+        "relative_status_in_canada": "Permanent Resident (Status Unverified)",
+        "relative_status_proof": "EXPIRED_PR_CARD_NO_RENEWAL_PROOF",
+        "pr_card_copy": "ATTACHED_PR_CARD_EXPIRED_2023_11_15.pdf",
+        "canadian_citizenship_proof": "EXPIRED_OR_MISSING",
+        "relative_proof_of_residence": "VERIFIED_LEASE_AGREEMENT",
+        "utility_bills": "ATTACHED_ENBRIDGE_GAS_2025.pdf",
+        "notice_of_assessment": "ATTACHED_CRA_NOA_TAX_YEAR_2024.pdf",
+        "residential_address_proof": "789 Main Street West, Hamilton, ON L8P 1H2",
+        "step_sibling_proof": "NOT_APPLICABLE",
+        "adoption_certificate": "NOT_APPLICABLE",
+        "parental_marriage_certificate": "ATTACHED_MARRIAGE_RECORD.pdf",
+        "relationship_chain_docs": "VERIFIED_DIRECT_BIOLOGICAL_CHAIN",
+        "crs_points_sibling_in_canada": 0
+      },
+      "narrative_blocks": [
+        "The applicant, Amina Khan, submitted documentation declaring that her biological brother, Tariq Khan, is a Permanent Resident of Canada residing in Ontario.",
+        "Review of the relative's status documentation reveals that the provided Permanent Resident Card expired on November 15, 2023. No valid PR card renewal, Confirmation of Permanent Residence, or Canadian Citizenship Certificate was included to demonstrate current valid status.",
+        "Because proof of current Canadian Citizenship or Permanent Resident status is expired and unverified, the applicant fails to satisfy statutory criteria for relative status under Express Entry regulations."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-RELATIVE-02",
+        "category": "pfl_invalid_status_proof",
+        "severity": "critical",
+        "description": "The Permanent Resident card copy submitted for the relative in Canada is expired and no valid proof of status was provided.",
+        "affected_fields": [
+          "relative_status_proof",
+          "pr_card_copy",
+          "canadian_citizenship_proof",
+          "relative_status_in_canada"
+        ],
+        "mutation_details": {
+          "pr_card_copy": "Expired PR card copy dated 2023-11-15",
+          "relative_status_proof": "Flagged as expired document without proof of extension or citizenship",
+          "relative_status_in_canada": "Set to unverified due to expired credentials"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "relative_in_canada",
+      "title": "Relative Canadian Residence Verification - Outdated Residence Evidence",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-03-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Lucas Silva",
+        "applicant_dob": "1993-11-05",
+        "applicant_birth_certificate": "ATTACHED_LONG_FORM_BIRTH_CERT.pdf",
+        "relative_name": "Isabela Silva",
+        "relative_dob": "1988-04-18",
+        "relative_relationship": "Sister (Biological)",
+        "sibling_birth_certificate": "ATTACHED_LONG_FORM_BIRTH_CERT.pdf",
+        "proof_of_relationship": "VERIFIED_SHARED_PARENTS",
+        "relative_status_in_canada": "Canadian Citizen",
+        "relative_status_proof": "VERIFIED_CANADIAN_PASSPORT",
+        "pr_card_copy": "NOT_APPLICABLE_CITIZEN",
+        "canadian_citizenship_proof": "ATTACHED_CITIZENSHIP_CERT.pdf",
+        "relative_proof_of_residence": "OUTDATED_RESIDENCE_DOCUMENTS_OVER_2_YEARS_OLD",
+        "utility_bills": "ATTACHED_HYDRO_QUEBEC_STATEMENT_DATED_MAY_2021.pdf",
+        "notice_of_assessment": "ATTACHED_CRA_NOA_TAX_YEAR_2021.pdf",
+        "residential_address_proof": "1010 Rue Sainte-Catherine O, Montreal, QC H3B 1E6 (Outdated)",
+        "step_sibling_proof": "NOT_APPLICABLE",
+        "adoption_certificate": "NOT_APPLICABLE",
+        "parental_marriage_certificate": "ATTACHED_MARRIAGE_CERT.pdf",
+        "relationship_chain_docs": "VERIFIED_DIRECT_BIOLOGICAL_CHAIN",
+        "crs_points_sibling_in_canada": 0
+      },
+      "narrative_blocks": [
+        "The applicant, Lucas Silva, provided documentation claiming Express Entry points for a sister, Isabela Silva, currently residing in Montreal, Quebec.",
+        "Although the sister's identity and Canadian citizenship were verified, the proof of residence documents submitted (a Hydro-Québec bill and CRA Notice of Assessment) are dated from May 2021 and tax year 2021 respectively.",
+        "No current evidence of physical residence in Canada within the past 12 months was provided. Consequently, the officer cannot verify that the relative is currently residing in Canada as required by IRCC policy."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-RELATIVE-03",
+        "category": "pfl_insufficient_proof_residence",
+        "severity": "critical",
+        "description": "Evidence of relative's physical residence in Canada relies on utility statements and tax notices dated more than two years prior.",
+        "affected_fields": [
+          "relative_proof_of_residence",
+          "utility_bills",
+          "notice_of_assessment",
+          "residential_address_proof"
+        ],
+        "mutation_details": {
+          "utility_bills": "Outdated Hydro-Québec statement from May 2021",
+          "notice_of_assessment": "Outdated CRA Notice of Assessment from tax year 2021",
+          "relative_proof_of_residence": "Marked as stale (exceeds maximum 12-month recency requirement)"
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "relative_in_canada",
+      "title": "Relative Relationship Verification - Unverified Step-Sibling Link",
+      "issuing_authority": "Immigration, Refugees and Citizenship Canada (IRCC)",
+      "issue_date": "2024-03-15",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Dmitri Ivanov",
+        "applicant_dob": "1991-09-30",
+        "applicant_birth_certificate": "ATTACHED_APPLICANT_BIRTH_CERT.pdf",
+        "relative_name": "Viktor Morozov",
+        "relative_dob": "1987-12-14",
+        "relative_relationship": "Step-Brother",
+        "sibling_birth_certificate": "ATTACHED_STEP_SIBLING_BIRTH_CERT.pdf",
+        "proof_of_relationship": "UNVERIFIED_STEP_RELATIONSHIP_CHAIN",
+        "relative_status_in_canada": "Canadian Citizen",
+        "relative_status_proof": "VERIFIED_CANADIAN_PASSPORT",
+        "pr_card_copy": "NOT_APPLICABLE_CITIZEN",
+        "canadian_citizenship_proof": "ATTACHED_CITIZENSHIP_CERT.pdf",
+        "relative_proof_of_residence": "VERIFIED_CRA_NOA_AND_UTILITY",
+        "utility_bills": "ATTACHED_ENMAX_ALBERTA_2025.pdf",
+        "notice_of_assessment": "ATTACHED_CRA_NOA_TAX_YEAR_2024.pdf",
+        "residential_address_proof": "555 8th Avenue SW, Calgary, AB T2P 1G1",
+        "step_sibling_proof": "MISSING_LEGAL_MARRIAGE_AND_CUSTODY_RECORDS",
+        "adoption_certificate": "NOT_PROVIDED",
+        "parental_marriage_certificate": "MISSING_PARENTAL_MARRIAGE_CERTIFICATE",
+        "relationship_chain_docs": "UNSUBSTANTIATED_STEP_RELATIONSHIP_LINK",
+        "crs_points_sibling_in_canada": 0
+      },
+      "narrative_blocks": [
+        "The applicant, Dmitri Ivanov, claims Express Entry CRS points for a step-brother, Viktor Morozov, living in Calgary, Alberta.",
+        "The submitted birth certificates show different biological parents for both individuals. While the applicant asserts that their parents married in 2012, no parental marriage certificate, legal adoption order, or official vital statistics documents linking the two families were provided.",
+        "Without official legal documentation establishing the step-relationship chain between the applicant and the relative, the family link remains unverified under IRCC Express Entry requirements."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-RELATIVE-04",
+        "category": "pfl_unverified_family_link",
+        "severity": "critical",
+        "description": "Claimed step-sibling relationship lacks supporting legal documentation such as parental marriage certificate or adoption records.",
+        "affected_fields": [
+          "step_sibling_proof",
+          "adoption_certificate",
+          "parental_marriage_certificate",
+          "relationship_chain_docs"
+        ],
+        "mutation_details": {
+          "parental_marriage_certificate": "Omitted parental marriage certificate",
+          "step_sibling_proof": "Set to missing required legal proof",
+          "relationship_chain_docs": "Marked as unsubstantiated step relationship link"
+        }
+      }
+    }
+  ]
+}

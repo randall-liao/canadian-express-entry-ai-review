@@ -1,0 +1,61 @@
+{
+  "question": "Who must provide a police certificate for an Express Entry application and what are the requirements for submitted documents?",
+  "claims": [
+    {
+      "id": "police-certificate-requirement",
+      "text": "A police certificate is required for the applicant and family members aged 18 years or older for every country stayed in during the last 10 years for 6 months in a row or longer, excluding time spent in Canada or before age 18.",
+      "citations": [
+        "guidance/police-certificates.md#002"
+      ],
+      "quote": "every country you (or a family member) stayed in during the last 10 years for **6 months in a row or longer**"
+    }
+  ],
+  "basis": [
+    "Document slot: police_certificate; Case ID: f1172b9588913c916aaf068448e3350c.",
+    "Document evaluated against the mandatory 5-point defect checklist: past residence issuance timing, current residence currency within 6 months of eAPR, language and certified translation, national/federal issuing authority level, and residence coverage for stays of 6 consecutive months or more.",
+    "Applicant residence history and extracted document fields are stored exclusively in basis to prevent PII leakage."
+  ],
+  "abstentions": [
+    {
+      "text": "Authoritative corpus guidance for specific police certificate defect checklist criteria (such as translation affidavit rules or issuing authority level requirements) is not present in the local corpus index.",
+      "reason": "not_in_corpus"
+    }
+  ],
+  "prose": "",
+  "case_id": "f1172b9588913c916aaf068448e3350c",
+  "doc_type": "police_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f1172b9588913c916aaf068448e3350c.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "b7cbfb9785bc4dee9f94e75d505c00257e1362d9b0704fc7c23dccfc9395c5c3",
+    "allowed_text_sha256": null,
+    "bundle_hash": "9404b5516960afee825c50e07ea24c25f585472bfc383e1e1fedeefe6733e6ed",
+    "prompt_hash": "0ce89ed1517591c3b093a86410adba7affbee8bdfdffa40eb959fb0491ba95fc",
+    "output_hash": "9029ea991139bbea1917c1bb9aeefab844cc136380ced0bb346134e080a9ab0b",
+    "returncode": 0,
+    "timestamp": "2026-07-24T12:36:57.009772+00:00",
+    "provenance_digest": "54b496c9d4242a3afbfda590246892921c59a69efa1b0943b7b3a161dc4af3dc"
+  }
+}

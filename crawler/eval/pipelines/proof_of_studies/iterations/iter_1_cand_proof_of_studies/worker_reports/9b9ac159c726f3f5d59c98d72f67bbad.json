@@ -1,0 +1,57 @@
+{
+  "question": "How does an Express Entry applicant prove completed education for points?",
+  "claims": [
+    {
+      "id": "proof-studies-transcripts",
+      "text": "To receive program-specific points for education, applicants must provide proof of completed Canadian or foreign educational credentials, including copies of education documents and transcripts if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#027"
+      ],
+      "quote": "Proof of completed Canadian or foreign educational credentials can include copies of      * secondary or post-secondary education documents (certificates, diplomas or degrees); and     * transcripts for successfully completed secondary or post-secondary studies, if available."
+    }
+  ],
+  "basis": [
+    "The applicant submitted educational credential documentation in upload slot proof_of_studies for Express Entry case 9b9ac159c726f3f5d59c98d72f67bbad (file: 9b9ac159c726f3f5d59c98d72f67bbad.pdf).",
+    "Document fields list applicant Emily Davis (Student ID: STU-8820194) for a Bachelor of Science in Nursing at University of British Columbia.",
+    "The reported education history indicates a start date of 2017-09-01 and a completion date of 2021-05-15, but official records list a degree conferral date of 2023-11-20 with transcripts showing active coursework (NURS401) in Fall 2023.",
+    "A critical defect is present: degree completion date mismatch between the self-reported completion date (2021-05-15) and official transcript/conferral records (2023-11-20)."
+  ],
+  "abstentions": [],
+  "prose": "To receive program-specific points for education, Express Entry applicants must provide proof of completed Canadian or foreign educational credentials, including copies of education documents (certificates, diplomas, or degrees) and transcripts for completed studies if available.",
+  "case_id": "9b9ac159c726f3f5d59c98d72f67bbad",
+  "doc_type": "proof_of_studies",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "9b9ac159c726f3f5d59c98d72f67bbad.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "269050e7f7d12427efef7ebc76cd81a25537058581c7a613b4d8377060c6f6cd",
+    "allowed_text_sha256": null,
+    "bundle_hash": "2b2d40a170ad72815969c52b906db214cdf801c0459d35fb3d319be3c30d5fbe",
+    "prompt_hash": "d2de456dc6409b698d160558bae86efa39de64a938ddfabfb6bb76953bed931d",
+    "output_hash": "dc13bae6291df666db6f9f83f84cbdab295af421925dd7c0475c4fd1109cbd28",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:32:36.403962+00:00",
+    "provenance_digest": "b73c0b3079ab8fa29b4f706c7a7d9eec91c831fb109f07ccc47eb60874e97f51"
+  }
+}

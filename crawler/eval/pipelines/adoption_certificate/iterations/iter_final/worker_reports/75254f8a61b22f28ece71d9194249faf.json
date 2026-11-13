@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-copy",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, territory, or region that formalized the adoption is required when a dependent child's status is listed as adopted. Verification verdict: meets_requirements.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "This document is requested only when the dependent child status is listed as adopted."
+    }
+  ],
+  "basis": [
+    "The applicant has declared a dependent child with status listed as adopted for case 75254f8a61b22f28ece71d9194249faf and submitted the required adoption certificate and legal adoption papers."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "75254f8a61b22f28ece71d9194249faf",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "75254f8a61b22f28ece71d9194249faf.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "b9db06a659ffa004c2f4c84fd62e0aa1916fabcec7d00a79b787492a06bc8856",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "bfba850df085694e9251bc14158568fd39dbb2999d68779e9622138d7f8fad81",
+    "output_hash": "ee901adc3ec6ef895f1f758b590ab54f4801a1e7db4b2a579dc8bed52eb59be6",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:06:08.504049+00:00",
+    "provenance_digest": "a19b9dacf2ed49f6f1d3edddbe32fa88441221fb004d21d59981eb7f65427aa5"
+  }
+}

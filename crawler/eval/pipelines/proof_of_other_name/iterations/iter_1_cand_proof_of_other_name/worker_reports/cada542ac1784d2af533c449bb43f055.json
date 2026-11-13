@@ -1,0 +1,55 @@
+{
+  "question": "What must an applicant provide if they have used another name?",
+  "claims": [
+    {
+      "id": "other-name-doc",
+      "text": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change).",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#064"
+      ],
+      "quote": "The applicant must provide information and/or documentation on the use of this other name (e.g., a letter of explanation, legal documents of a name change)."
+    }
+  ],
+  "basis": [
+    "The applicant indicated using another name and provided a document titled 'Petition for Change of Name' (Docket #2021-CV-0492) reflecting a change from Alice Tremblay to Alice Vane in the Central Judicial District.",
+    "The submitted document is an unverified copy of a court petition without an official issuing court seal or court clerk signature."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "cada542ac1784d2af533c449bb43f055",
+  "doc_type": "proof_of_other_name",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "cada542ac1784d2af533c449bb43f055.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "403a2c914f1060558c5e9fd43d0d0dcfe67264409b13409bdc5676bcb6cb2916",
+    "allowed_text_sha256": null,
+    "bundle_hash": "748b40f14cf988381632e9add00202e9c1a5ae2f047e07ca25d5ecd9f374c4d8",
+    "prompt_hash": "df94ec013e72a66b434a9cf48bc9a634ba844cde1b168e9d233acf0f2f23475b",
+    "output_hash": "341cac1f8ca92894e1feb69f0c9db5092f6b98c5943122f65993c002f05f3839",
+    "returncode": 0,
+    "timestamp": "2026-07-24T14:04:43.440559+00:00",
+    "provenance_digest": "403eaeb608ca7523e80d7fd9c25253c23f6d78c603b3b81a511306bf492c679d"
+  }
+}

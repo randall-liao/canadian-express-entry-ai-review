@@ -1,0 +1,55 @@
+{
+  "question": "What document is required when a dependent child is adopted?",
+  "claims": [
+    {
+      "id": "adoption-cert-requirement",
+      "text": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, territory or region that formalized the adoption must be provided when a dependent child status is listed as adopted. The submitted document is defective due to unverified biological parent consent and a missing Home Study Report.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#054"
+      ],
+      "quote": "A copy of the adoption certificate, legal adoption papers, and/or other relevant documents issued by the country, the territory or the region that formalized the adoption must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant declared a dependent child with status listed as adopted for opaque case ID 5ee67da4e1e315bc46078dbdd9301fd6.",
+    "Verification of the submitted adoption documentation against criterion 4 (Consent and Home Study) indicates that biological parent consent is provided via an unverified private affidavit and the required Home Study Report is missing."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "5ee67da4e1e315bc46078dbdd9301fd6",
+  "doc_type": "adoption_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "5ee67da4e1e315bc46078dbdd9301fd6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "64bcbe02d19b6f4a3069d580bf09b3b192995e3142f97c43bf048167686f9c7e",
+    "allowed_text_sha256": null,
+    "bundle_hash": "c17825438701ce1e048bcb4b5d12286182d69ed8b8061ff49274c363a2da36c5",
+    "prompt_hash": "72866dbc3fbf12ea2a91d08696ffd91661c4ebb0825ea608177f03a94089c096",
+    "output_hash": "af4770c64e158814b91a17ba66dd9a180b9df5076b56d502eae3182cc7070880",
+    "returncode": 0,
+    "timestamp": "2026-07-24T01:37:00.786813+00:00",
+    "provenance_digest": "4125ee3c64bc5a36ed2a84471b5d7e1021b07f01403eb9b58b1c0e9c66e2e31f"
+  }
+}

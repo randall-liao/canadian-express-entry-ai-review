@@ -1,0 +1,229 @@
+{
+  "doc_type": "medical_examination",
+  "timestamp": "2026-07-23T02:59:29.745-04:00",
+  "cases": [
+    {
+      "case_kind": "valid_control",
+      "doc_type": "medical_examination",
+      "title": "Immigration Medical Examination (IME) Record",
+      "issuing_authority": "Health Canada - Panel Physician Branch / IRCC eMedical",
+      "issue_date": "2026-01-15",
+      "expiry_date": "2027-01-15",
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "dob": "1988-05-12",
+        "gender": "Female",
+        "ime_number": "IME98765432",
+        "examination_date": "2026-01-15",
+        "emedical_receipt": "NZ-1029384756",
+        "panel_physician_id": "PP-40921",
+        "clinic_name": "Metro Health Panel Clinic",
+        "physician_signature": "Dr. Sarah Jenkins, MD",
+        "imm1017b_form": "IMM1017B-883920",
+        "document_attachment": "eMedical_Receipt_IME98765432.pdf",
+        "furtherance_status": "Cleared / Passed",
+        "specialist_report": "Not Required - Initial Assessment Normal",
+        "laboratory_results": "Chest X-Ray Normal, HIV Non-Reactive, Syphilis Non-Reactive, Serum Creatinine Normal",
+        "medical_history_questionnaire": "Complete - No relevant medical conditions or risks reported"
+      },
+      "narrative_blocks": [
+        "The applicant, Jane Doe, completed a comprehensive Immigration Medical Examination (IME) on 2026-01-15 administered by designated panel physician Dr. Sarah Jenkins (ID: PP-40921) at Metro Health Panel Clinic.",
+        "Laboratory and radiological screenings, including chest X-ray and blood tests, yielded normal and non-reactive results. No further medical evaluation (furtherance) was required. The eMedical receipt NZ-1029384756 and IMM1017B form were transmitted electronically to the immigration authority."
+      ],
+      "defect_spec": null
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "medical_examination",
+      "title": "Immigration Medical Examination (IME) Record - Expired Assessment",
+      "issuing_authority": "Health Canada - Panel Physician Branch / IRCC eMedical",
+      "issue_date": "2024-03-10",
+      "expiry_date": "2025-03-10",
+      "fields": {
+        "applicant_name": "John Smith",
+        "dob": "1982-11-20",
+        "gender": "Male",
+        "ime_number": "IME10293847",
+        "examination_date": "2024-03-10",
+        "emedical_receipt": "NZ-0019283746",
+        "panel_physician_id": "PP-11204",
+        "clinic_name": "Downtown Medical Center",
+        "physician_signature": "Dr. Robert Vance, MD",
+        "imm1017b_form": "IMM1017B-102938",
+        "document_attachment": "eMedical_Receipt_IME10293847.pdf",
+        "furtherance_status": "Cleared",
+        "specialist_report": "Not Required",
+        "laboratory_results": "Normal",
+        "medical_history_questionnaire": "Complete"
+      },
+      "narrative_blocks": [
+        "The applicant submitted an Immigration Medical Examination (IME) report completed on 2024-03-10 under receipt NZ-0019283746.",
+        "As of the current processing date, the medical examination results exceed the 12-month validity window and expired on 2025-03-10. A new medical examination is required before processing can proceed."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-MEDICAL_-01",
+        "category": "pfl_expired_document",
+        "severity": "critical",
+        "description": "The medical examination results were conducted on 2024-03-10 and expired on 2025-03-10, exceeding the maximum 12-month validity period at time of assessment.",
+        "affected_fields": [
+          "ime_number",
+          "examination_date",
+          "emedical_receipt"
+        ],
+        "mutation_details": {
+          "original_examination_date": "2026-01-15",
+          "mutated_examination_date": "2024-03-10",
+          "validity_period_months": 12,
+          "expiration_date": "2025-03-10",
+          "is_expired": true
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "medical_examination",
+      "title": "Immigration Medical Examination (IME) Record - Unauthorized Physician",
+      "issuing_authority": "Unaccredited Community Health Practice",
+      "issue_date": "2026-02-01",
+      "expiry_date": "2027-02-01",
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "dob": "1991-08-14",
+        "gender": "Female",
+        "ime_number": "IME55443322",
+        "examination_date": "2026-02-01",
+        "emedical_receipt": "INVALID-LOCAL-0092",
+        "panel_physician_id": "UNREGISTERED-999",
+        "clinic_name": "Sunrise Family General Practice",
+        "physician_signature": "Dr. Alan Miller, MD (General Practitioner)",
+        "imm1017b_form": "IMM1017B-554433",
+        "document_attachment": "clinic_internal_med_exam.pdf",
+        "furtherance_status": "Cleared",
+        "specialist_report": "Not Applicable",
+        "laboratory_results": "Standard CBC Normal",
+        "medical_history_questionnaire": "Complete"
+      },
+      "narrative_blocks": [
+        "The applicant provided medical examination results issued by Sunrise Family General Practice under Dr. Alan Miller (ID: UNREGISTERED-999).",
+        "Verification against the official Panel Physician Network database indicates that Dr. Alan Miller is not a designated panel physician, and Sunrise Family General Practice is not authorized to submit eMedical records."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-MEDICAL_-02",
+        "category": "pfl_invalid_issuer",
+        "severity": "critical",
+        "description": "Medical examination was administered and signed by a general practitioner who is not a designated or active member of the official Panel Physician Network.",
+        "affected_fields": [
+          "panel_physician_id",
+          "clinic_name",
+          "physician_signature",
+          "emedical_receipt"
+        ],
+        "mutation_details": {
+          "expected_issuer_type": "Designated Panel Physician Network",
+          "mutated_issuer_id": "UNREGISTERED-999",
+          "mutated_clinic_name": "Sunrise Family General Practice",
+          "emedical_registration_valid": false
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "medical_examination",
+      "title": "Immigration Medical Examination (IME) Record - Pending Specialist Furtherance",
+      "issuing_authority": "Health Canada - Panel Physician Branch / IRCC eMedical",
+      "issue_date": "2026-02-10",
+      "expiry_date": "2027-02-10",
+      "fields": {
+        "applicant_name": "John Smith",
+        "dob": "1979-03-25",
+        "gender": "Male",
+        "ime_number": "IME77889900",
+        "examination_date": "2026-02-10",
+        "emedical_receipt": "NZ-7788990011",
+        "panel_physician_id": "PP-30192",
+        "clinic_name": "Apex Medical Assessment Center",
+        "physician_signature": "Dr. Elena Rostova, MD",
+        "imm1017b_form": "IMM1017B-778899",
+        "document_attachment": "eMedical_Furtherance_Notice_IME77889900.pdf",
+        "furtherance_status": "Furtherance Required - Pulmonology Assessment Pending",
+        "specialist_report": null,
+        "laboratory_results": "Sputum Culture Pending, Chest X-Ray Inconclusive (Apical Scarring Noted)",
+        "medical_history_questionnaire": "Incomplete - History of Chronic Cough Requiring Additional Diagnostics"
+      },
+      "narrative_blocks": [
+        "The initial medical examination for John Smith identified abnormal chest X-ray findings (apical scarring) necessitating further medical evaluation (furtherance).",
+        "The required pulmonology specialist report and follow-up sputum culture laboratory results have not been submitted, leaving the furtherance requirement unresolved and medical assessment incomplete."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-MEDICAL_-03",
+        "category": "pfl_incomplete_evidence",
+        "severity": "warning",
+        "description": "Medical examination indicates mandatory furtherance requirements due to abnormal initial findings, but required specialist reports and follow-up laboratory results are missing.",
+        "affected_fields": [
+          "furtherance_status",
+          "specialist_report",
+          "laboratory_results",
+          "medical_history_questionnaire"
+        ],
+        "mutation_details": {
+          "furtherance_required": true,
+          "missing_reports": [
+            "specialist_report",
+            "sputum_culture_lab_results"
+          ],
+          "furtherance_resolution_status": "Unresolved",
+          "questionnaire_complete": false
+        }
+      }
+    },
+    {
+      "case_kind": "defective_case",
+      "doc_type": "medical_examination",
+      "title": "Immigration Medical Examination (IME) Record - Missing Examination Proof",
+      "issuing_authority": "Health Canada - Panel Physician Branch / IRCC eMedical",
+      "issue_date": "2026-03-01",
+      "expiry_date": null,
+      "fields": {
+        "applicant_name": "Jane Doe",
+        "dob": "1995-12-01",
+        "gender": "Female",
+        "ime_number": "IME33221100",
+        "examination_date": null,
+        "emedical_receipt": null,
+        "panel_physician_id": "PP-50211",
+        "clinic_name": "Pacific Rim Medical Clinic",
+        "physician_signature": null,
+        "imm1017b_form": null,
+        "document_attachment": null,
+        "furtherance_status": "Not Administered",
+        "specialist_report": null,
+        "laboratory_results": null,
+        "medical_history_questionnaire": "Unsubmitted"
+      },
+      "narrative_blocks": [
+        "The application file lacks proof of upfront medical examination or an eMedical information sheet/receipt at the completeness check stage.",
+        "No IMM1017B form or digital eMedical receipt attachment was provided to confirm that the applicant underwent the mandatory medical examination."
+      ],
+      "defect_spec": {
+        "research_failure_id": "PFL-MEDICAL_-04",
+        "category": "pfl_missing_required_document",
+        "severity": "critical",
+        "description": "Mandatory upfront medical examination proof (eMedical receipt, IMM1017B form, and attached document) is completely missing from the submission.",
+        "affected_fields": [
+          "emedical_receipt",
+          "imm1017b_form",
+          "document_attachment"
+        ],
+        "mutation_details": {
+          "missing_fields": [
+            "emedical_receipt",
+            "imm1017b_form",
+            "document_attachment"
+          ],
+          "upfront_proof_provided": false,
+          "completeness_check_passed": false
+        }
+      }
+    }
+  ]
+}

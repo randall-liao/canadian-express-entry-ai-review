@@ -1,0 +1,59 @@
+{
+  "question": "What must an applicant provide to evidence a common-law union?",
+  "claims": [
+    {
+      "id": "common-law-declaration",
+      "text": "The applicant must submit a Statutory Declaration of Common-Law Union form (IMM 5409) and evidence of cohabitation for a period of at least 12 continuous months.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#042"
+      ],
+      "quote": "The applicant must submit a Statutory Declaration of Common-Law Union form [[IMM 5409 (PDF, 636.51 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/kits/forms/imm5409e.pdf)] and evidence of cohabitation for a period of at least 12 continuous months."
+    }
+  ],
+  "basis": [
+    "The attached statutory declaration document for case ID fe518795975250588461a0cff81741f1 submitted under upload slot statutory_declaration_common_law was reviewed against Express Entry completeness criteria.",
+    "Solemnization check: Form IMM 5409 is fully executed with deponent signatures, commissioner/notary signature, official stamp, and declaration date.",
+    "Cohabitation duration check: Continuous cohabitation is evidenced for 25 months, satisfying the minimum requirement of at least 12 continuous months.",
+    "Financial interdependence check: Section 2 and supporting evidence demonstrate joint financial arrangements, including joint bank account statements, shared lease, and utility bills.",
+    "Cross-form consistency check: Cohabitation dates, residential address, and marital status are consistent across IMM 5409, Express Entry history, CRA filings, and identity documentation.",
+    "Overall verdict: No defects found; the submission satisfies all completeness requirements for a statutory declaration of common-law union."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "fe518795975250588461a0cff81741f1",
+  "doc_type": "statutory_declaration_common_law",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "fe518795975250588461a0cff81741f1.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "312afbb99545ae89c6e314c9db9f1077eb4d007aeec0b8bb4dedf3c3d7c04ece",
+    "allowed_text_sha256": null,
+    "bundle_hash": "272bee292c2e650f3ab8852eb53065803f17de1a85fcd3a07641a11c5cb076d6",
+    "prompt_hash": "19c137565b4c8d85c90c7bd7c9e5a1c32ef13e4e438bdac6feb2fab8318229ea",
+    "output_hash": "4248fcc3c08d4aa67f0d78c6523b0e95e51186e75a6885359445f3ec913b18cf",
+    "returncode": 0,
+    "timestamp": "2026-07-25T00:48:52.733268+00:00",
+    "provenance_digest": "859e749c4310aa09c11443bb02307ca5fa0421abc61c7ef59f0c838ee5f9479e"
+  }
+}

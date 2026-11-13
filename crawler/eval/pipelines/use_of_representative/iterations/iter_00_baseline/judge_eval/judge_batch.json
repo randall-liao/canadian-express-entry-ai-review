@@ -1,0 +1,234 @@
+{
+  "doc_type": "use_of_representative",
+  "case_evaluations": {
+    "ad6e15df8e933cb251d417913e205757": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "f5055bdc13d05c643cd11c40913f65df": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e1fc59f1b2b34723ba31a22693316566": {
+      "grounding_accuracy": 0.5,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e71e2c87731b7b3b207a89e6ca4effd6": {
+      "grounding_accuracy": 0.55,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "2365e3329599e9e3dd008b951734d9ac": {
+      "grounding_accuracy": 0.6,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "75037cf1b7ed6ec5eff88b9270bd4983": {
+      "grounding_accuracy": 0.6,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "07f52552e960a329bbcc898927226172": {
+      "grounding_accuracy": 0.55,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "7c151afd79a7df426ac1e5bdd96ce385": {
+      "grounding_accuracy": 0.6,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "a4b2a8f91503e100d72a83ff733763e0": {
+      "grounding_accuracy": 0.45,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3f2713a25076425d858714b700b2f938": {
+      "grounding_accuracy": 0.35,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "e1fc59f1b2b34723ba31a22693316566",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected defect PFL-USE_OF_R-01: Section B representative signature, Section B signature date, and Section E applicant/spouse signatures are all 'N/A' (unsigned), with narrative explicitly citing a PFL for absent signatures. Worker emitted only a generic 'when is the form required' statement, no defect claim, empty abstentions."
+    },
+    {
+      "case_id": "e1fc59f1b2b34723ba31a22693316566",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Claim text asserts 'Signed Use of a Representative form (IMM 5476)' — factually false; the document shows all signature fields as N/A. Worker invented a completeness attribute contradicted by the document."
+    },
+    {
+      "case_id": "e71e2c87731b7b3b207a89e6ca4effd6",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Scanned sibling of the unsigned-form case (PFL-USE_OF_R-01). Section B/E signatures are N/A and narrative states a PFL was triggered for absent signatures, yet worker reported no defect and left abstentions empty."
+    },
+    {
+      "case_id": "2365e3329599e9e3dd008b951734d9ac",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected defect PFL-USE_OF_R-02: paid representative Arthur Pendelton has a blank Section B Membership Id and narrative confirms no active CICC license (unauthorized paid rep, IRPA s.91). Worker produced only generic policy text, no defect flag."
+    },
+    {
+      "case_id": "75037cf1b7ed6ec5eff88b9270bd4983",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Scanned sibling (PFL-USE_OF_R-02): empty membership ID for a paid representative and PFL narrative for unauthorized representation were not detected; report reduces to a templated requirement statement."
+    },
+    {
+      "case_id": "07f52552e960a329bbcc898927226172",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected defect PFL-USE_OF_R-03: outdated form edition 'IMM 5476 (06-2015) E' referencing decommissioned CSIC body and missing CICC identifiers; narrative states submission rejected for outdated edition. Worker did not flag the edition or regulator defect."
+    },
+    {
+      "case_id": "07f52552e960a329bbcc898927226172",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Basis asserts the requirement applies because the applicant used an 'authorized representative or consultant,' but the representative is tied to the decommissioned CSIC on an outdated form — an unsupported characterization of authorization."
+    },
+    {
+      "case_id": "7c151afd79a7df426ac1e5bdd96ce385",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Scanned sibling (PFL-USE_OF_R-03): outdated 06-2015/CSIC edition defect and rejection narrative were not detected; worker emitted a generic policy claim only."
+    },
+    {
+      "case_id": "a4b2a8f91503e100d72a83ff733763e0",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Missed injected defect PFL-USE_OF_R-04: applicant declared self-represented with no IMM 5476 filed, yet portal owner, contact email, and payment all trace to Apex Immigration Consulting Inc. (ghost consultant, IRPA A40(1)(a) misrepresentation). Worker reported no defect."
+    },
+    {
+      "case_id": "a4b2a8f91503e100d72a83ff733763e0",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis states the applicant 'provided a Use of a Representative document' when the document explicitly declares self-representation with no IMM 5476 filed — mischaracterizes the submission and obscures the ghost-consultant signal."
+    },
+    {
+      "case_id": "3f2713a25076425d858714b700b2f938",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Scanned sibling (PFL-USE_OF_R-04): undeclared paid rep / ghost-consultant pattern (agency-owned portal, agency email, corporate payment) with no IMM 5476 filed was not detected."
+    },
+    {
+      "case_id": "3f2713a25076425d858714b700b2f938",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Basis explicitly claims the applicant 'submitted a Use of a Representative form (IMM 5476)' when the document states 'Declared Self-Represented (No IMM 5476 filed).' This is an invented fact directly contradicted by the source."
+    },
+    {
+      "case_id": "ad6e15df8e933cb251d417913e205757",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Correctly did not flag this valid case, but the report is a generic policy recitation with no document-specific verification (edition current, signatures present, CICC ID R512398 valid) — provides no positive grounding evidence for the meets_requirements outcome."
+    },
+    {
+      "case_id": "f5055bdc13d05c643cd11c40913f65df",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Uses the identical single corpus quote as all other cases with no document-specific citation. The uniform copy-pasted citation across all 10 cases indicates recitation rather than grounding in the reviewed PDF."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/use_of_representative.md",
+      "suggested_patch": "Add a mandatory field-level verification checklist the worker must execute per document and emit as claims/abstentions (not a generic policy statement): (1) Form edition must be current — flag 'IMM 5476 (06-2015) E' or any reference to CSIC/decommissioned regulators as defective [PFL-USE_OF_R-03]; (2) All required signatures present — flag N/A/blank Section B representative signature, Section B signature date, or Section E applicant signature [PFL-USE_OF_R-01]; (3) Paid representative must have a non-empty valid CICC (R-number) or provincial law society membership ID — flag blank/absent ID on Paid/Compensated reps [PFL-USE_OF_R-02]; (4) Ghost-consultant screen — if self-represented (no IMM 5476), flag when portal owner, applicant email domain, IP origin, or payment method trace to a consulting/agency entity [PFL-USE_OF_R-04]."
+    },
+    {
+      "target_file": "skills/document-agents/use_of_representative.md",
+      "suggested_patch": "Require the worker to answer with a per-document verdict (meets_requirements | defective) plus specific defective fields, rather than restating the generic 'when is the form required' policy. Prohibit asserting completeness attributes (e.g., 'Signed', 'submitted IMM 5476') unless the corresponding document field is populated; when a declared self-representation contains no IMM 5476, the basis must state that no form was filed."
+    },
+    {
+      "target_file": "skills/pdf/SKILL.md",
+      "suggested_patch": "Instruct extraction to surface signature fields, form edition/footer date, membership body + membership ID, and portal/IP/payment ownership metadata as explicit key-value pairs, and to read page-2 narrative notes, so downstream document-agents can detect unsigned forms, outdated editions, missing accreditation, and ghost-consultant indicators."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a guardrail: a review report that only recites a generic regulatory requirement with an identical boilerplate citation across cases and empty abstentions must be treated as non-compliant. Each case report must contain document-specific evidence and cite the observed field values that drive the verdict."
+    }
+  ],
+  "rationale": "The gemini-3.6-flash worker produced near-identical, templated answers to the abstract question 'When must an applicant provide a Use of a Representative form?' for all 10 cases, citing one corpus completeness-check quote but performing no document-specific review. It missed all 8 injected defects: missing signatures (e1fc59f1, e71e2c87), missing CICC/law-society membership ID (2365e33, 75037cf1), outdated 06-2015/CSIC form edition (07f52552, 7c151afd), and ghost-consultant/undeclared-paid-rep with no IMM 5476 filed (a4b2a8f9, 3f2713a2) — hence defect_recall 0.0 across defective cases. Grounding was penalized where the worker asserted a 'Signed' form (e1fc59f1) or claimed an IMM 5476 was submitted for self-represented ghost-consultant cases (3f2713a2, a4b2a8f9), directly contradicting the documents. The two clean cases (ad6e15df, f5055bdc) were correctly not flagged (defect_recall 1.0) but lack positive verification. PII containment (1.0) and blind-input compliance (1.0) are clean: prose fields empty, no applicant names/DOBs/emails in claims, only opaque case IDs in basis, and no ground-truth leakage. Citation exactness is moderate (0.85): the single corpus reference is topically appropriate and consistently formatted but is copy-pasted verbatim across every case, evidencing recitation over grounding.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "07f52552e960a329bbcc898927226172.pdf",
+      "--attachment",
+      "2365e3329599e9e3dd008b951734d9ac.pdf",
+      "--attachment",
+      "3f2713a25076425d858714b700b2f938.pdf",
+      "--attachment",
+      "75037cf1b7ed6ec5eff88b9270bd4983.pdf",
+      "--attachment",
+      "7c151afd79a7df426ac1e5bdd96ce385.pdf",
+      "--attachment",
+      "a4b2a8f91503e100d72a83ff733763e0.pdf",
+      "--attachment",
+      "ad6e15df8e933cb251d417913e205757.pdf",
+      "--attachment",
+      "e1fc59f1b2b34723ba31a22693316566.pdf",
+      "--attachment",
+      "e71e2c87731b7b3b207a89e6ca4effd6.pdf",
+      "--attachment",
+      "f5055bdc13d05c643cd11c40913f65df.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "4cd2392b6c3b853f3a78d8873a1e786d76de4486153f1c6193b7d5c8b15c383a",
+    "research_hash": "bf5cbb069cafb48e9f173809bff4ef7444c60287010fd5c4a356d88e1ad0610e",
+    "ground_truth_hash": "110e791d985c15874d3847a4c4bc55609345dd862385a014ae68d07d67d932b9",
+    "output_hash": "03a46dfb1a8bc21e2c6e72cf053f3a94c49b00d9df958fa6a606603bc9ed0b75",
+    "timestamp": "2026-07-23T23:31:08.359167+00:00",
+    "provenance_digest": "5376315521095a90176cf5bb461fb1bead85ad0e9702480dd147d5241178b4db"
+  }
+}

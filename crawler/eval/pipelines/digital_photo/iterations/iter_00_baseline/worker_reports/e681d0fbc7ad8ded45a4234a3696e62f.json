@@ -1,0 +1,54 @@
+{
+  "question": "What digital photos must an Express Entry applicant provide?",
+  "claims": [
+    {
+      "id": "digital-photos-spec",
+      "text": "Digital photos meeting IRCC's permanent resident card photo specifications must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#061"
+      ],
+      "quote": "* Digital photos meeting [IRCC’s permanent resident card photo specifications (PDF, 614.24 KB)](https://www.canada.ca/content/dam/ircc/migration/ircc/english/information/applications/guides/pdf/5445eb-e.pdf) must be provided."
+    }
+  ],
+  "basis": [
+    "Document upload e681d0fbc7ad8ded45a4234a3696e62f.pdf provided for slot type digital_photo contains a digital photo submission for Express Entry e-APR completeness review."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "e681d0fbc7ad8ded45a4234a3696e62f",
+  "doc_type": "digital_photo",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "e681d0fbc7ad8ded45a4234a3696e62f.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "c27f7f2ec798b44bfb99a4111e331134852980ad656640689b34e2ac89dc1042",
+    "allowed_text_sha256": null,
+    "bundle_hash": "6cfcef53b5c2c79bb3d4aeacc136df21882a4974409ec1324f9ca311ae87c909",
+    "prompt_hash": "f593a953536e5d8652805327633faad8bffcd685f8d3b961db417b6803e19c78",
+    "output_hash": "8c28e752e3c020af64f68088624ec18544361e55da99cd4983fc68e53cd21c6f",
+    "returncode": 0,
+    "timestamp": "2026-07-23T11:09:32.355040+00:00",
+    "provenance_digest": "619fa35c1b20941cc0ebbb4353277bc670bd4c76890f20790a83a72ac3fe70a9"
+  }
+}

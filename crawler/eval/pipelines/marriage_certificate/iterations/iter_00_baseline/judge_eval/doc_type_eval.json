@@ -1,0 +1,202 @@
+{
+  "doc_type": "marriage_certificate",
+  "case_evaluations": {
+    "9b6fdcf58ace208994d99a6b21d82453": {
+      "grounding_accuracy": 0.95,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "9554c0f14517c28067bab42ef2c48589": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 1.0,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "62047462224a7c79cb71a0147b60dbf2": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "3390ed26f7f603e47445d0edbbad2850": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "68ab52b554b15a231b0b0b85259b511b": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "1781d2df270fc83167489c204a99691b": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "ed4d7b4c822bb83db08528f0909a57f1": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "662ae9361192247ca50249b086041de7": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "389f742cefb679419534ceb780680248": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "a4453420ffab993724ce5a87ddb68531": {
+      "grounding_accuracy": 0.85,
+      "citation_exactness": 1.0,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "62047462224a7c79cb71a0147b60dbf2",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-MARRIAGE-01 missed. Document explicitly shows 'Civil Registration Status: unregistered', 'Marital Status: single', and a page-2 notice 'Spousal status remains legally single under civil jurisdiction'. Worker returned only the generic requirement rule and flagged no defect."
+    },
+    {
+      "case_id": "3390ed26f7f603e47445d0edbbad2850",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-MARRIAGE-01 missed (scanned sibling). Unregistered religious ceremony with marital status 'single' and explicit non-registration notice went unflagged; Worker gave boilerplate requirement text only."
+    },
+    {
+      "case_id": "68ab52b554b15a231b0b0b85259b511b",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "PFL-MARRIAGE-02 missed. Narrative states certificate name 'Sora Takahashi' vs passport 'Sora Kim' without legal name-change documentation. Worker did not detect the identity mismatch."
+    },
+    {
+      "case_id": "1781d2df270fc83167489c204a99691b",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "PFL-MARRIAGE-02 missed (scanned sibling). Explicit Takahashi/Kim name discrepancy in narrative unflagged; Worker returned generic rule only."
+    },
+    {
+      "case_id": "ed4d7b4c822bb83db08528f0909a57f1",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-MARRIAGE-03 missed. Document shows 'Physical Presence: False', location 'Virtual Videoconference', and narrative confirming proxy/virtual solemnization with no physical presence — a marriage IRCC does not recognize. Worker flagged nothing."
+    },
+    {
+      "case_id": "662ae9361192247ca50249b086041de7",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "PFL-MARRIAGE-03 missed (scanned sibling). Proxy/virtual marriage (physical presence false, tele-marriage registrar) unflagged; Worker produced generic requirement text."
+    },
+    {
+      "case_id": "389f742cefb679419534ceb780680248",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "PFL-MARRIAGE-04 missed. Document Translation field states 'Informal machine translation without translator affidavit, certification stamp, or credentials' and narrative confirms uncertified web translation. Worker did not flag the translation deficiency."
+    },
+    {
+      "case_id": "a4453420ffab993724ce5a87ddb68531",
+      "category": "defect_recall",
+      "severity": "major",
+      "description": "PFL-MARRIAGE-04 missed (scanned sibling). Spanish certificate with uncertified machine translation lacking translator affidavit unflagged; Worker gave generic rule only."
+    },
+    {
+      "case_id": "9b6fdcf58ace208994d99a6b21d82453",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Systemic behavior: Worker answered the generic 'what document is required' question rather than reviewing the attached document. No fabrication, but no engagement with case-specific fields (correctly clean here, so no defect impact)."
+    },
+    {
+      "case_id": "9554c0f14517c28067bab42ef2c48589",
+      "category": "grounding",
+      "severity": "minor",
+      "description": "Claim text asserts validity requirements beyond the single quoted line ('requested only when marital status is married'). Rule is accurate to the corpus but the quote under-supports the fuller claim; document not substantively reviewed."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/marriage_certificate.md",
+      "suggested_patch": "Add a mandatory defect checklist the Worker must evaluate against the actual document fields before answering: (1) civil_registration_status/marital_status contradictions — reject if status is 'single'/'unregistered' or notes say religious/customary ceremony not civilly registered (PFL-MARRIAGE-01); (2) name consistency — compare spouse_given/family_name and marriage_certificate name against passport_details, flag mismatch absent legal name-change proof (PFL-MARRIAGE-02); (3) physical_presence/marriage_location — reject proxy, virtual, videoconference, or tele-marriage solemnizations (PFL-MARRIAGE-03); (4) document_translation — reject uncertified/machine/self translations lacking translator affidavit or credentials for non-English/French certificates (PFL-MARRIAGE-04)."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Require Workers to review the specific attached document and emit per-document defect findings (with affected fields) rather than returning a generic policy answer. A report that only restates the requirement rule without evaluating the document's fields and narrative notes must be treated as incomplete."
+    }
+  ],
+  "rationale": "All 10 Worker reports (gemini-3.6-flash) returned near-identical boilerplate answering the generic 'what document is required' question, citing the completeness-check corpus rule, without reviewing the attached documents. Citations are consistent and plausibly resolve (citation_exactness 1.0); claims contain no fabricated applicant facts and no PII leaked into claims/prose — all applicant references stayed in basis[] (pii_containment 1.0); no ground-truth verdicts or failure IDs leaked (blind_input_compliance 1.0). Grounding is high but not perfect because several claims assert validity/jurisdiction requirements beyond their one-line quote and never engage document reality. The decisive failure is defect_recall: 0/8 injected defects detected — including glaring, explicit signals (marital status 'single' with 'unregistered' civil status, Takahashi/Kim name mismatch, physical presence 'False' proxy marriage, and uncertified machine translation). Both clean cases score defect_recall 1.0 vacuously (no defects present). The Worker is safe on PII/blindness but non-functional as a defect detector.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "1781d2df270fc83167489c204a99691b.pdf",
+      "--attachment",
+      "3390ed26f7f603e47445d0edbbad2850.pdf",
+      "--attachment",
+      "389f742cefb679419534ceb780680248.pdf",
+      "--attachment",
+      "62047462224a7c79cb71a0147b60dbf2.pdf",
+      "--attachment",
+      "662ae9361192247ca50249b086041de7.pdf",
+      "--attachment",
+      "68ab52b554b15a231b0b0b85259b511b.pdf",
+      "--attachment",
+      "9554c0f14517c28067bab42ef2c48589.pdf",
+      "--attachment",
+      "9b6fdcf58ace208994d99a6b21d82453.pdf",
+      "--attachment",
+      "a4453420ffab993724ce5a87ddb68531.pdf",
+      "--attachment",
+      "ed4d7b4c822bb83db08528f0909a57f1.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "b4777d26bd25fc46da155bf90301280b9e61105dd30a3a78e93388aa1dd7347e",
+    "research_hash": "3bff6b6d90ca75ab41ee522008372f4cd6c2b164269164ea3267e5c1e5136996",
+    "ground_truth_hash": "c120a3bb3a148e48beb313c7a1b46b22be58171ed2e776682ae83bf52e0a61ab",
+    "output_hash": "e40f5cec0d9d1563474a3e4f499ccf0fa06de4a4e2ac212d1456a070c4516b22",
+    "timestamp": "2026-07-23T23:13:17.943710+00:00",
+    "provenance_digest": "afd6ad5bcf9cd743ab8bf851123c1bab8d06edc34afdc719be978ae0be8594da"
+  }
+}

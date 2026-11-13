@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant is widowed?",
+  "claims": [
+    {
+      "id": "death-cert-copy",
+      "text": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#051"
+      ],
+      "quote": "A copy of a death certificate, executorships or other legal certificate issued by the country, the territory or the region where the death occurred must be provided."
+    }
+  ],
+  "basis": [
+    "The applicant's declared marital status is widowed, triggering the requirement to provide a death certificate or equivalent legal certificate for case da4fc991c2be8fdff4851ffbfc34bbc7."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "da4fc991c2be8fdff4851ffbfc34bbc7",
+  "doc_type": "death_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "da4fc991c2be8fdff4851ffbfc34bbc7.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "cea0e7e1a221e8b41b681bdd0b14352ce0d2184e053b906906dc1dc809dd110a",
+    "allowed_text_sha256": null,
+    "bundle_hash": "51fce1863792a81354afdd824aed615df113966c691902f31c45d9c82b1979e7",
+    "prompt_hash": "515651740b5406cef789d6da909d15eb6efefb7198e3a9d64e5800aeeff2c4f8",
+    "output_hash": "54cc08b96966ac8537afb6d23354742280f929ee0f739222ef061b2d0ff3d381",
+    "returncode": 0,
+    "timestamp": "2026-07-23T10:44:10.200714+00:00",
+    "provenance_digest": "d916c719d241ad8e33700b48d734720c9bce4a0013818ce4be1b53903c601715"
+  }
+}

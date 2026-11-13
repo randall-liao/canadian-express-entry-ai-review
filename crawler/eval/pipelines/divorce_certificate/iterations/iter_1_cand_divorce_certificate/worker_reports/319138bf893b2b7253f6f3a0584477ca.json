@@ -1,0 +1,54 @@
+{
+  "question": "What document is required when an applicant is divorced?",
+  "claims": [
+    {
+      "id": "divorce-separation-doc",
+      "text": "A copy of the divorce certificate or divorce order issued by the jurisdiction where the divorce took place must be provided when marital status is listed as divorced, along with a copy of the legal separation agreement if available.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#048"
+      ],
+      "quote": "* The divorce certificate is requested only when marital status is listed as divorced.\n  * If the applicant divorced in Canada, a copy of the divorce order or certificate of divorce issued by the province or territory where the divorce took place must be provided.\n  * If the applicant divorced outside Canada, a copy of a legal certificate issued by the country, the territory or the region where the divorce took place must be provided.\n  * A copy of the legal separation agreement must be provided, if available."
+    }
+  ],
+  "basis": [
+    "The applicant declared marital status as divorced. Attached document 319138bf893b2b7253f6f3a0584477ca.pdf was provided for the divorce_certificate upload slot."
+  ],
+  "abstentions": [],
+  "prose": "When an applicant's marital status is listed as divorced, a copy of the divorce order or divorce certificate issued where the divorce took place must be provided, along with the legal separation agreement if available.",
+  "case_id": "319138bf893b2b7253f6f3a0584477ca",
+  "doc_type": "divorce_certificate",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "319138bf893b2b7253f6f3a0584477ca.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "b48e95d8a70ae1be93d57cba9ac27a4020c6fcaf4d669345afe779b12a1da093",
+    "allowed_text_sha256": null,
+    "bundle_hash": "96adfcfc94df22d419234f5a4c06d54f1588f3bdd17b3529f840f869e8cf6da9",
+    "prompt_hash": "a6b782e284248ecbbd78557575a830456372f6f2b6da0b417fd49b85de227229",
+    "output_hash": "19b385562c6bf7563e619290320bde5be01fdc6205f9d239b9353a9cdf97e602",
+    "returncode": 0,
+    "timestamp": "2026-07-25T02:30:31.492006+00:00",
+    "provenance_digest": "3aa218cfdc4274cf1b8b5c5444fb4cdf0a8c3144d30eece9f11f5117a7bf2e0e"
+  }
+}

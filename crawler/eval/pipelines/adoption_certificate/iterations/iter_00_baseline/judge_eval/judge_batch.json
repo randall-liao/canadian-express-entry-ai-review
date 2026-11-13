@@ -1,0 +1,202 @@
+{
+  "doc_type": "adoption_certificate",
+  "case_evaluations": {
+    "0113107932a37c66d2a27c161912cb34": {
+      "grounding_accuracy": 0.7,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "095b78d1af850e5e35ab8da981e2d0e1": {
+      "grounding_accuracy": 0.5,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "5ee67da4e1e315bc46078dbdd9301fd6": {
+      "grounding_accuracy": 0.7,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "61a5b4d3336692e4098c9826421b1a11": {
+      "grounding_accuracy": 0.7,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "62a2d308c5710bbc25a2327218691cc2": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "75254f8a61b22f28ece71d9194249faf": {
+      "grounding_accuracy": 0.7,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "77a32efa3649a30ca2508b8f9e1896c8": {
+      "grounding_accuracy": 0.6,
+      "citation_exactness": 0.55,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "98179028ceff0e0c88ec5a87aee8dbd5": {
+      "grounding_accuracy": 0.7,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "a35f0cbf25c73e570dd803b14f0c8eeb": {
+      "grounding_accuracy": 0.7,
+      "citation_exactness": 0.85,
+      "defect_recall": 0.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    },
+    "e65f2cb3df0d46c33919e8b555803c8d": {
+      "grounding_accuracy": 0.9,
+      "citation_exactness": 0.85,
+      "defect_recall": 1.0,
+      "pii_containment": 1.0,
+      "blind_input_compliance": 1.0
+    }
+  },
+  "findings": [
+    {
+      "case_id": "a35f0cbf25c73e570dd803b14f0c8eeb",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth = defective (PFL-ADOPTION-01): document is a Civil Status Registry extract (Adoption Certificate Document: CIVIL-REG-EXTRACT-2023-9910; Court Adoption Order: N/A; narrative: 'does not constitute a judicial court adoption order'). Worker only recited the generic requirement and flagged no defect. Missed defect entirely."
+    },
+    {
+      "case_id": "98179028ceff0e0c88ec5a87aee8dbd5",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth = defective (PFL-ADOPTION-01, scanned sibling). Same civil-registry extract with no court adoption order. Worker's report is a canned policy statement with no verdict and no defect detection."
+    },
+    {
+      "case_id": "61a5b4d3336692e4098c9826421b1a11",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth = defective (PFL-ADOPTION-02): temporary guardianship, not adoption (Legal Guardianship Status: 'Temporary Legal Guardianship (Biological Rights Retained)'; narrative: 'does not constitute a decree of final legal adoption'). Worker failed to detect that biological ties are not severed."
+    },
+    {
+      "case_id": "0113107932a37c66d2a27c161912cb34",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth = defective (PFL-ADOPTION-02, scanned sibling). Guardianship order substituted for full legal adoption; biological rights retained. Worker recited generic requirement only and missed the substitution defect."
+    },
+    {
+      "case_id": "77a32efa3649a30ca2508b8f9e1896c8",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth = defective (PFL-ADOPTION-03): non-accredited foreign jurisdiction with Provincial Letter of No Objection = N/A (narrative: 'finalized in a non-accredited jurisdiction without obtaining a Letter of No Objection'). Worker did not detect missing provincial endorsement."
+    },
+    {
+      "case_id": "75254f8a61b22f28ece71d9194249faf",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth = defective (PFL-ADOPTION-03, scanned sibling). Missing provincial LNO for non-accredited foreign adoption. Worker produced generic policy claim with no defect detection."
+    },
+    {
+      "case_id": "5ee67da4e1e315bc46078dbdd9301fd6",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth = defective (PFL-ADOPTION-04): biological consent = 'Unverified Private Affidavit' and Home Study Report = N/A (narrative: 'lacks verifiable biological parent consent documentation and an independent home study report or best-interests determination'). Worker missed both defects."
+    },
+    {
+      "case_id": "095b78d1af850e5e35ab8da981e2d0e1",
+      "category": "defect_recall",
+      "severity": "critical",
+      "description": "Ground truth = defective (PFL-ADOPTION-04, scanned sibling). Unverified consent affidavit and missing home study. Worker missed the defect."
+    },
+    {
+      "case_id": "095b78d1af850e5e35ab8da981e2d0e1",
+      "category": "grounding",
+      "severity": "major",
+      "description": "Worker basis asserts the document 'satisfies the requirement for an adopted dependent child,' but the document is defective (unverified private affidavit, no home study). This is an affirmatively false grounding claim contradicting the PDF's own narrative notes."
+    },
+    {
+      "case_id": "77a32efa3649a30ca2508b8f9e1896c8",
+      "category": "citation",
+      "severity": "minor",
+      "description": "Claim quote ('This document is requested only when the dependent child status is listed as adopted.') does not match the cited requirement anchor #054, which the other nine reports quote as the adoption-certificate requirement sentence. The quote appears fabricated/mismatched relative to the cited source."
+    }
+  ],
+  "patch_recommendations": [
+    {
+      "target_file": "skills/document-agents/adoption_certificate.md",
+      "suggested_patch": "Replace the generic 'state the required document' behavior with a mandatory per-document verification checklist that must emit an explicit verdict (meets_requirements | defective) and name the failing field(s): (1) confirm a full judicial court adoption order/decree is present and reject Civil Status Registry / birth-registration extracts where Court Adoption Order = N/A (PFL-ADOPTION-01); (2) confirm Legal Guardianship Status = full legal adoption with biological ties severed and reject temporary guardianship/custody (PFL-ADOPTION-02); (3) require a Provincial Letter of No Objection for foreign/non-accredited jurisdictions and flag when it is N/A (PFL-ADOPTION-03); (4) require verified biological parent consent and a Home Study Report, flagging 'Unverified' affidavits or N/A home study (PFL-ADOPTION-04)."
+    },
+    {
+      "target_file": "AGENTS.md",
+      "suggested_patch": "Add a directive that document-review tasks must ground the verdict in the attached PDF content and must never substitute a generic policy/requirement recitation for actual document verification. Explicitly instruct the agent to read the 'Narrative Statements / Detailed Notes' section, which frequently contains disqualifying admissions (e.g., 'does not constitute a decree of final legal adoption', 'does not constitute a judicial court adoption order', 'without obtaining a Letter of No Objection'), and to treat such statements as decisive evidence of a defect."
+    }
+  ],
+  "rationale": "The Worker returned an identical canned answer for all 10 cases — reciting the generic adoption-certificate requirement with the same citation — instead of reviewing each attached PDF. This produced a catastrophic defect_recall failure: all 8 injected defects (civil-registry extract vs court order, temporary guardianship vs adoption, missing provincial LNO, unverified consent/missing home study) went undetected, each explicitly disclosed in the PDFs' narrative notes. The two clean cases (e65f2cb3, 62a2d308) score defect_recall 1.0 vacuously. PII containment and blind-input compliance are excellent (basis[] statements are generic, no applicant names/reference numbers leak into claims/prose, no ground-truth leakage). Grounding is moderate because the recited policy claim is a true statement but the report implies acceptance without verifying content; 095b78d1 is lowest for affirmatively claiming a defective doc 'satisfies the requirement,' and 77a32efa's mismatched/fabricated quote lowers its citation score. Citations otherwise resolve consistently to a plausible official IRCC PR-PDI completeness-check source.",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "claude-opus-4.8",
+    "effort": "xhigh",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_privileged_prompt>",
+      "--attachment",
+      "0113107932a37c66d2a27c161912cb34.pdf",
+      "--attachment",
+      "095b78d1af850e5e35ab8da981e2d0e1.pdf",
+      "--attachment",
+      "5ee67da4e1e315bc46078dbdd9301fd6.pdf",
+      "--attachment",
+      "61a5b4d3336692e4098c9826421b1a11.pdf",
+      "--attachment",
+      "62a2d308c5710bbc25a2327218691cc2.pdf",
+      "--attachment",
+      "75254f8a61b22f28ece71d9194249faf.pdf",
+      "--attachment",
+      "77a32efa3649a30ca2508b8f9e1896c8.pdf",
+      "--attachment",
+      "98179028ceff0e0c88ec5a87aee8dbd5.pdf",
+      "--attachment",
+      "a35f0cbf25c73e570dd803b14f0c8eeb.pdf",
+      "--attachment",
+      "e65f2cb3df0d46c33919e8b555803c8d.pdf",
+      "--model",
+      "claude-opus-4.8",
+      "--effort",
+      "xhigh",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "returncode": 0,
+    "prompt_hash": "38cabf48b919d51ec26546bf3e6ec292f7f184e394bbae6c65455d887090c7d7",
+    "research_hash": "0ba78a4cbdcd5acfffe0cf8dc86ca582bbfb1b3f787b304d2ddbebca58124680",
+    "ground_truth_hash": "1a5eca057625ee47a7257388217fe43a4c1af7515dbbb5770f2707326a4de6bc",
+    "output_hash": "459a5cb1c828a7e0313d95a9dc77268ea6cb986f7de60c6816780ffd0977c4d5",
+    "timestamp": "2026-07-23T22:09:56.182554+00:00",
+    "provenance_digest": "28d2246ed4cd4c77e357a1953540b8984ea9a9032158e1dbc5c2a50d5567d197"
+  }
+}

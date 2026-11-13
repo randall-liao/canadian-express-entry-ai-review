@@ -1,0 +1,49 @@
+{
+  "question": "What are the requirements for submitting a Letter of Explanation in an Express Entry application?",
+  "claims": [],
+  "basis": [
+    "The applicant provided a document under the letter_of_explanation upload slot for case 0d6b65e8291756ef8e83f31caeeddfeb."
+  ],
+  "abstentions": [
+    {
+      "reason": "not_in_corpus"
+    }
+  ],
+  "prose": "",
+  "case_id": "0d6b65e8291756ef8e83f31caeeddfeb",
+  "doc_type": "letter_of_explanation",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "0d6b65e8291756ef8e83f31caeeddfeb.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "e976c5dbcbbd18472a2183b05e4767c460fd9a0f9f531b94bc078e4109cd89dd",
+    "allowed_text_sha256": null,
+    "bundle_hash": "d7a377868aba667471d45ab34cc55ae257326eb2adaf961952e773a671b3de7f",
+    "prompt_hash": "85ade7e05581f04f08028219a93556de5c2b8174bcd8eaf60360f7fa63ba9390",
+    "output_hash": "b5e24d4937451924b630a4aa40b6448809182440c8de55f23441329fc4818c9d",
+    "returncode": 0,
+    "timestamp": "2026-07-23T13:24:39.789400+00:00",
+    "provenance_digest": "8bc3a62b14d0a25ad2578595731d551ce6e45f679c0ba38237f8532135955447"
+  }
+}

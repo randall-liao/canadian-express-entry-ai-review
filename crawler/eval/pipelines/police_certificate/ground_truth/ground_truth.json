@@ -1,0 +1,364 @@
+[
+  {
+    "opaque_case_id": "00195703b570ce064add36cf1f9f2e73",
+    "sibling_case_id": "e61ac121842319c5790f1d465cf894a8",
+    "doc_type": "police_certificate",
+    "variant": "vector",
+    "blind_filename": "00195703b570ce064add36cf1f9f2e73.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "applicant_name": "Jane Doe",
+      "date_of_birth": "1992-04-12",
+      "country_of_residence": "Germany",
+      "issuing_authority": "Federal Criminal Police Office (Bundeskriminalamt)",
+      "jurisdiction_level": "national",
+      "issue_date": "2026-05-10",
+      "eapr_submission_date": "2026-07-20",
+      "document_language": "English",
+      "translation_certificate": "Not Applicable",
+      "translator_qualification": null,
+      "residence_history_start_date": "2021-01-01",
+      "residence_history_end_date": "2026-05-01",
+      "police_certificate_uploaded": true,
+      "clearance_status": "No Criminal Record",
+      "document_reference_number": "PCC-2026-88392011"
+    },
+    "pdf_sha256": "d49812ff7260a0785a150e9ea60464e944458b6aabeaaf7a30f6275701d1a308",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:43.007583+00:00"
+  },
+  {
+    "opaque_case_id": "e61ac121842319c5790f1d465cf894a8",
+    "sibling_case_id": "00195703b570ce064add36cf1f9f2e73",
+    "doc_type": "police_certificate",
+    "variant": "scanned",
+    "blind_filename": "e61ac121842319c5790f1d465cf894a8.pdf",
+    "expected_verdict": "meets_requirements",
+    "source_failure_id": null,
+    "affected_fields": [],
+    "fields": {
+      "applicant_name": "Jane Doe",
+      "date_of_birth": "1992-04-12",
+      "country_of_residence": "Germany",
+      "issuing_authority": "Federal Criminal Police Office (Bundeskriminalamt)",
+      "jurisdiction_level": "national",
+      "issue_date": "2026-05-10",
+      "eapr_submission_date": "2026-07-20",
+      "document_language": "English",
+      "translation_certificate": "Not Applicable",
+      "translator_qualification": null,
+      "residence_history_start_date": "2021-01-01",
+      "residence_history_end_date": "2026-05-01",
+      "police_certificate_uploaded": true,
+      "clearance_status": "No Criminal Record",
+      "document_reference_number": "PCC-2026-88392011"
+    },
+    "pdf_sha256": "fe33783c3e1899261d491e76eb9e17cd32a897654d060a282fe09dd877f9b794",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:43.007583+00:00"
+  },
+  {
+    "opaque_case_id": "45955a9e84cd0c3dddd8f9f36bdb0c42",
+    "sibling_case_id": "f1172b9588913c916aaf068448e3350c",
+    "doc_type": "police_certificate",
+    "variant": "vector",
+    "blind_filename": "45955a9e84cd0c3dddd8f9f36bdb0c42.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-01",
+    "affected_fields": [
+      "issue_date",
+      "country_of_residence",
+      "residence_history_end_date"
+    ],
+    "fields": {
+      "applicant_name": "John Smith",
+      "date_of_birth": "1988-09-23",
+      "country_of_residence": "Japan",
+      "issuing_authority": "National Police Agency of Japan",
+      "jurisdiction_level": "national",
+      "issue_date": "2024-06-15",
+      "residence_history_start_date": "2022-01-10",
+      "residence_history_end_date": "2024-12-31",
+      "police_certificate_uploaded": true,
+      "clearance_status": "No Record Found"
+    },
+    "pdf_sha256": "9513332a5ec1d7cee0eb62c2fd41db6c80d1eb7b7915b3f2e42bea20f2780b1e",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:44.072522+00:00"
+  },
+  {
+    "opaque_case_id": "f1172b9588913c916aaf068448e3350c",
+    "sibling_case_id": "45955a9e84cd0c3dddd8f9f36bdb0c42",
+    "doc_type": "police_certificate",
+    "variant": "scanned",
+    "blind_filename": "f1172b9588913c916aaf068448e3350c.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-01",
+    "affected_fields": [
+      "issue_date",
+      "country_of_residence",
+      "residence_history_end_date"
+    ],
+    "fields": {
+      "applicant_name": "John Smith",
+      "date_of_birth": "1988-09-23",
+      "country_of_residence": "Japan",
+      "issuing_authority": "National Police Agency of Japan",
+      "jurisdiction_level": "national",
+      "issue_date": "2024-06-15",
+      "residence_history_start_date": "2022-01-10",
+      "residence_history_end_date": "2024-12-31",
+      "police_certificate_uploaded": true,
+      "clearance_status": "No Record Found"
+    },
+    "pdf_sha256": "b7cbfb9785bc4dee9f94e75d505c00257e1362d9b0704fc7c23dccfc9395c5c3",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:44.072522+00:00"
+  },
+  {
+    "opaque_case_id": "7274354eeb6a02e9118d5cc6da637a10",
+    "sibling_case_id": "90aee43f4fe4814560fc96a0cd48ed8e",
+    "doc_type": "police_certificate",
+    "variant": "vector",
+    "blind_filename": "7274354eeb6a02e9118d5cc6da637a10.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-02",
+    "affected_fields": [
+      "issue_date",
+      "eapr_submission_date",
+      "current_country_of_residence"
+    ],
+    "fields": {
+      "applicant_name": "Alice Tremblay",
+      "date_of_birth": "1995-11-05",
+      "current_country_of_residence": "United Kingdom",
+      "issuing_authority": "ACRO Criminal Records Office",
+      "issue_date": "2025-01-10",
+      "eapr_submission_date": "2026-07-20",
+      "police_certificate_uploaded": true,
+      "clearance_status": "No Convictions Recorded"
+    },
+    "pdf_sha256": "3e06eacc5e571c77cbf02ab989060f50bbe58669ac1188a1e07f87d7fb8e6d60",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:45.138597+00:00"
+  },
+  {
+    "opaque_case_id": "90aee43f4fe4814560fc96a0cd48ed8e",
+    "sibling_case_id": "7274354eeb6a02e9118d5cc6da637a10",
+    "doc_type": "police_certificate",
+    "variant": "scanned",
+    "blind_filename": "90aee43f4fe4814560fc96a0cd48ed8e.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-02",
+    "affected_fields": [
+      "issue_date",
+      "eapr_submission_date",
+      "current_country_of_residence"
+    ],
+    "fields": {
+      "applicant_name": "Alice Tremblay",
+      "date_of_birth": "1995-11-05",
+      "current_country_of_residence": "United Kingdom",
+      "issuing_authority": "ACRO Criminal Records Office",
+      "issue_date": "2025-01-10",
+      "eapr_submission_date": "2026-07-20",
+      "police_certificate_uploaded": true,
+      "clearance_status": "No Convictions Recorded"
+    },
+    "pdf_sha256": "c709a422b0e51c8fca2133c59201d942b127657fd7fd185a50e672385b0b09d6",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:45.138597+00:00"
+  },
+  {
+    "opaque_case_id": "e2e11d1542e49ce9727409292c6c5e50",
+    "sibling_case_id": "5b9c88842ae98195505a86f1a846271d",
+    "doc_type": "police_certificate",
+    "variant": "vector",
+    "blind_filename": "e2e11d1542e49ce9727409292c6c5e50.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-03",
+    "affected_fields": [
+      "document_language",
+      "translation_certificate",
+      "translator_qualification"
+    ],
+    "fields": {
+      "applicant_name": "Carlos Silva",
+      "date_of_birth": "1990-07-18",
+      "country_of_residence": "Spain",
+      "document_language": "Spanish",
+      "translation_certificate": null,
+      "translator_qualification": null,
+      "issuing_authority": "Ministerio de Justicia de España",
+      "issue_date": "2026-03-01",
+      "police_certificate_uploaded": true
+    },
+    "pdf_sha256": "03455e6d88b214d58f2b4c3c7a997b32acd072160b002a6888607603721f7c4a",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:46.215012+00:00"
+  },
+  {
+    "opaque_case_id": "5b9c88842ae98195505a86f1a846271d",
+    "sibling_case_id": "e2e11d1542e49ce9727409292c6c5e50",
+    "doc_type": "police_certificate",
+    "variant": "scanned",
+    "blind_filename": "5b9c88842ae98195505a86f1a846271d.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-03",
+    "affected_fields": [
+      "document_language",
+      "translation_certificate",
+      "translator_qualification"
+    ],
+    "fields": {
+      "applicant_name": "Carlos Silva",
+      "date_of_birth": "1990-07-18",
+      "country_of_residence": "Spain",
+      "document_language": "Spanish",
+      "translation_certificate": null,
+      "translator_qualification": null,
+      "issuing_authority": "Ministerio de Justicia de España",
+      "issue_date": "2026-03-01",
+      "police_certificate_uploaded": true
+    },
+    "pdf_sha256": "b288a650f2d5c2300b4b659dbf978c2408cf53fa273166e79c5f3480020f2c9a",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:46.215012+00:00"
+  },
+  {
+    "opaque_case_id": "2ba60f34da8c27a2749030008ce1455e",
+    "sibling_case_id": "f5feb507bfa2b32e70ad8385aded7626",
+    "doc_type": "police_certificate",
+    "variant": "vector",
+    "blind_filename": "2ba60f34da8c27a2749030008ce1455e.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-04",
+    "affected_fields": [
+      "issuing_authority",
+      "jurisdiction_level",
+      "country_of_issuance"
+    ],
+    "fields": {
+      "applicant_name": "David Miller",
+      "date_of_birth": "1985-03-30",
+      "country_of_issuance": "United States",
+      "issuing_authority": "Austin Police Department",
+      "jurisdiction_level": "municipal",
+      "issue_date": "2026-04-12",
+      "police_certificate_uploaded": true,
+      "record_type": "City Police Department Background Check"
+    },
+    "pdf_sha256": "da7f64a00b66b6b05e6140a7528191a16c2afbca51e99e507957fb555fbca5a1",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:47.253461+00:00"
+  },
+  {
+    "opaque_case_id": "f5feb507bfa2b32e70ad8385aded7626",
+    "sibling_case_id": "2ba60f34da8c27a2749030008ce1455e",
+    "doc_type": "police_certificate",
+    "variant": "scanned",
+    "blind_filename": "f5feb507bfa2b32e70ad8385aded7626.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-04",
+    "affected_fields": [
+      "issuing_authority",
+      "jurisdiction_level",
+      "country_of_issuance"
+    ],
+    "fields": {
+      "applicant_name": "David Miller",
+      "date_of_birth": "1985-03-30",
+      "country_of_issuance": "United States",
+      "issuing_authority": "Austin Police Department",
+      "jurisdiction_level": "municipal",
+      "issue_date": "2026-04-12",
+      "police_certificate_uploaded": true,
+      "record_type": "City Police Department Background Check"
+    },
+    "pdf_sha256": "8ecf788155774bf62728e5af19f7aef1255fff6bb5ffc70b816260cba7f72f07",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:47.253461+00:00"
+  },
+  {
+    "opaque_case_id": "0b687fadca0d1150a50e3b7b7a559f44",
+    "sibling_case_id": "8724cfb1cbb69a3527f94b3a3d770654",
+    "doc_type": "police_certificate",
+    "variant": "vector",
+    "blind_filename": "0b687fadca0d1150a50e3b7b7a559f44.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-05",
+    "affected_fields": [
+      "residence_history",
+      "country_list",
+      "police_certificate_uploaded"
+    ],
+    "fields": {
+      "applicant_name": "Elena Rostova",
+      "date_of_birth": "1993-08-14",
+      "residence_history": [
+        {
+          "country": "Canada",
+          "start_date": "2024-09-01",
+          "end_date": "2026-07-01",
+          "duration_months": 22
+        },
+        {
+          "country": "France",
+          "start_date": "2023-10-01",
+          "end_date": "2024-06-01",
+          "duration_months": 8
+        }
+      ],
+      "country_list": [
+        "Canada",
+        "France"
+      ],
+      "police_certificate_uploaded": false
+    },
+    "pdf_sha256": "be1c6ee23bb5474bc4c8653c4c933159ceff5937cd9d131b9fe6b7d057608873",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:48.327808+00:00"
+  },
+  {
+    "opaque_case_id": "8724cfb1cbb69a3527f94b3a3d770654",
+    "sibling_case_id": "0b687fadca0d1150a50e3b7b7a559f44",
+    "doc_type": "police_certificate",
+    "variant": "scanned",
+    "blind_filename": "8724cfb1cbb69a3527f94b3a3d770654.pdf",
+    "expected_verdict": "defective",
+    "source_failure_id": "PFL-POLICE_C-05",
+    "affected_fields": [
+      "residence_history",
+      "country_list",
+      "police_certificate_uploaded"
+    ],
+    "fields": {
+      "applicant_name": "Elena Rostova",
+      "date_of_birth": "1993-08-14",
+      "residence_history": [
+        {
+          "country": "Canada",
+          "start_date": "2024-09-01",
+          "end_date": "2026-07-01",
+          "duration_months": 22
+        },
+        {
+          "country": "France",
+          "start_date": "2023-10-01",
+          "end_date": "2024-06-01",
+          "duration_months": 8
+        }
+      ],
+      "country_list": [
+        "Canada",
+        "France"
+      ],
+      "police_certificate_uploaded": false
+    },
+    "pdf_sha256": "1e9c95a94a91f370e0b6f99100ce3d6da280a480f9fa09ad410124a1b964cee5",
+    "agent_spec_sha256": "569186dda36380b43ea81d97f8b6605efade108b203e95b9abc92a8a08728895",
+    "timestamp": "2026-07-23T07:01:48.327808+00:00"
+  }
+]

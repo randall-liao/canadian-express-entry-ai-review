@@ -1,0 +1,62 @@
+{
+  "question": "Who must sign the Authority to Release Personal Information form?",
+  "claims": [
+    {
+      "id": "authority-release-signatories",
+      "text": "The form must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "must be signed by the applicant and, as applicable, their spouse or common-law partner if they also wish to release personal information to the same designated individual."
+    },
+    {
+      "id": "authority-release-dependent-children",
+      "text": "Dependent children 18 years of age or older must complete their own form if they wish to authorize the release of their information to a designated individual.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#067"
+      ],
+      "quote": "Dependent children 18 years of age or older must complete their own form if they wish to authorize the release of their information to a designated individual."
+    }
+  ],
+  "basis": [
+    "The applicant submitted an Authority to Release Personal Information form (IMM 5475) under upload slot authority_to_release_info for case ID 3dac93470c38cd92756a9ed787f164f6."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "3dac93470c38cd92756a9ed787f164f6",
+  "doc_type": "authority_to_release_info",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "3dac93470c38cd92756a9ed787f164f6.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "2514bcb902ad267e3b51e71606db5a9998ba252a524195347ccf6e9173ac5d0f",
+    "allowed_text_sha256": null,
+    "bundle_hash": "8a6d76f09c87b792bdb054da74787bee3998b9ee3be9ce94d349840641933915",
+    "prompt_hash": "26713c951d525dc8ef8db1fbac1e649e06e6ff6e52cb7adddcda58a04128e83b",
+    "output_hash": "99be7187d175495ecae947e02b7f9c0f66b9015acc4dec1de332039756905746",
+    "returncode": 0,
+    "timestamp": "2026-07-25T03:01:46.886756+00:00",
+    "provenance_digest": "29ebd2f6fe5fd020c174802415467569bb4f4c821fe3668225f0548a62163027"
+  }
+}

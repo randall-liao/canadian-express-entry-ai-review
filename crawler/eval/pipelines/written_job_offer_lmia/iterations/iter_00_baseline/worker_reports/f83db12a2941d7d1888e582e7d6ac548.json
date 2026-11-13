@@ -1,0 +1,54 @@
+{
+  "question": "What must an Express Entry arranged-employment job-offer letter contain?",
+  "claims": [
+    {
+      "id": "job-offer-letter",
+      "text": "A letter from the offering employer printed on company letterhead containing employer contact details, supervisor signature, and full employment details is required if the applicant claims arranged employment.",
+      "citations": [
+        "pr-pdi/express-entry-applications-received-on-after-january-1-2016-completeness-check.md#034"
+      ],
+      "quote": "A letter from the employer(s) offering the job in Canada is required, and it must"
+    }
+  ],
+  "basis": [
+    "Document uploaded under slot type written_job_offer_lmia for opaque case ID f83db12a2941d7d1888e582e7d6ac548."
+  ],
+  "abstentions": [],
+  "prose": "",
+  "case_id": "f83db12a2941d7d1888e582e7d6ac548",
+  "doc_type": "written_job_offer_lmia",
+  "_provenance": {
+    "engine": "copilot-cli",
+    "is_live": true,
+    "model": "gemini-3.6-flash",
+    "context": "long_context",
+    "command": [
+      "copilot",
+      "-p",
+      "<redacted_prompt>",
+      "--attachment",
+      "f83db12a2941d7d1888e582e7d6ac548.pdf",
+      "--model",
+      "gemini-3.6-flash",
+      "--context",
+      "long_context",
+      "--output-format",
+      "json",
+      "--stream",
+      "off",
+      "--no-custom-instructions",
+      "--no-ask-user",
+      "--disable-builtin-mcps",
+      "--disallow-temp-dir",
+      "--excluded-tools=*"
+    ],
+    "input_pdf_sha256": "9c94e3e2b7c8c57db7259a985bf1abc3589d01be3e0a6447d4c1018a4194a0f5",
+    "allowed_text_sha256": null,
+    "bundle_hash": "385731eb510290f10b07c9c229675d720aa24dffc28e5fe50a2fe3f75e204533",
+    "prompt_hash": "b516b12e12f1a9aadcb889d7875621f4ea9b621f3392bb147c162372b55bc87b",
+    "output_hash": "e38b7b11033af07882d16b9407690854a7e1abfb53dd815f7cb2a15aff5834d3",
+    "returncode": 0,
+    "timestamp": "2026-07-23T19:59:10.225856+00:00",
+    "provenance_digest": "91c146c34b65ce1c460a72669e8823fcb2bc20aa8c50cd0f8939aaf957d0d196"
+  }
+}
