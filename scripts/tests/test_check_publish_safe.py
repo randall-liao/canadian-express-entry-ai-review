@@ -74,6 +74,69 @@ class ScanTextAbsPathTests(unittest.TestCase):
         self.assertEqual(cats, ["ABS_PATH", "ABS_PATH"])
 
 
+class ScanTextHttpUrlPathTests(unittest.TestCase):
+    def test_official_http_home_pathnames_are_not_local_paths(self):
+        for text in (
+            "[Rwanda](http://nppa.gov.rw/home/?L=1)",
+            "[Switzerland](https://www.bj.admin.ch/bj/en/home/"
+            "publiservice/strafregister.html)",
+            "<https://www.dubaipolice.gov.ae/wps/portal/home/services/>",
+            'url = "HTTPS://www.canada.ca/en/home/services.html"',
+        ):
+            with self.subTest(text=text):
+                self.assertEqual(cps.scan_text("corpus/policy.md", text), [])
+
+    def test_http_pathname_does_not_hide_local_paths_on_same_line(self):
+        for text in (
+            "https://www.canada.ca/home/help /home/PrivateUser/project",
+            "[help](https://www.canada.ca/home/help)/Users/PrivateUser/project",
+            "<https://www.canada.ca/home/help>/root/private",
+        ):
+            with self.subTest(text=text):
+                violations = cps.scan_text("docs/setup.md", text)
+                self.assertEqual([v.category for v in violations], ["ABS_PATH"])
+
+    def test_http_queries_and_fragments_still_report_local_paths(self):
+        for text in (
+            "https://www.canada.ca/home/help?file=/home/PrivateUser/project",
+            "https://www.canada.ca/home/help?file=/Users/PrivateUser/project",
+            "https://www.canada.ca/home/help#file=/root/private",
+        ):
+            with self.subTest(text=text):
+                violations = cps.scan_text("docs/setup.md", text)
+                self.assertEqual([v.category for v in violations], ["ABS_PATH"])
+
+    def test_non_http_or_incomplete_urls_do_not_hide_local_paths(self):
+        for text in (
+            "file:///home/PrivateUser/project",
+            "ssh://example.test/home/PrivateUser/project",
+            "https:///home/PrivateUser/project",
+            "//example.test/home/PrivateUser/project",
+        ):
+            with self.subTest(text=text):
+                violations = cps.scan_text("docs/setup.md", text)
+                self.assertEqual([v.category for v in violations], ["ABS_PATH"])
+
+    def test_machine_markers_in_http_pathnames_remain_flagged(self):
+        for text in (
+            "https://example.test/home/public/pr-ai-venv/bin/python",
+            "https://example.test/home/public/usr/bin/python3.12",
+        ):
+            with self.subTest(text=text):
+                violations = cps.scan_text("docs/setup.md", text)
+                self.assertEqual([v.category for v in violations], ["ABS_PATH"])
+
+    def test_credentials_inside_http_urls_remain_flagged(self):
+        for text in (
+            "https://www.canada.ca/home/help?api_key=abcdef1234567890",
+            "https://www.canada.ca/home/password=abcdef1234567890",
+            "https://www.canada.ca/home/ghp_0123456789abcdefghijABCDEFGHIJ012345",
+        ):
+            with self.subTest(text=text):
+                violations = cps.scan_text("docs/setup.md", text)
+                self.assertEqual([v.category for v in violations], ["SECRET"])
+
+
 class ScanTextSecretTests(unittest.TestCase):
     def test_private_key_header_flagged(self):
         # Test 4a: a private-key header is a SECRET violation.

@@ -26,7 +26,11 @@ publicly. The checker also self-excludes its own source and the project's test
 trees (``scripts/tests/`` and ``crawler/tests/``) — they literally contain the
 tokens being hunted (abs-path / secret fixtures asserting the guards catch them).
 
-Pure stdlib only: subprocess, re, sys, os, dataclasses. No third-party imports.
+HTTP(S) URL pathnames can legitimately contain ``/home/``. Only those pathname
+spans are exempt from the home-directory patterns; local text, URL queries and
+fragments, fixed machine markers, and all credential patterns remain scanned.
+
+Pure stdlib only: subprocess, re, sys, os, dataclasses, urllib.parse.
 """
 
 import os
@@ -34,6 +38,7 @@ import re
 import subprocess
 import sys
 from dataclasses import dataclass
+from urllib.parse import urlsplit
 
 # --- Exclusions -------------------------------------------------------------
 
@@ -81,16 +86,21 @@ ALLOW_MARKER = "# publish-safe:" " allow"
 
 # --- Detection patterns -----------------------------------------------------
 
-ABS_PATH_PATTERNS = (
+_HOME_PATH_PATTERNS = (
     # Home directories for any username shape (capital, digit, underscore),
     # case-insensitive, on Linux and macOS, plus root's home.
     re.compile(r"(?i)/home/[^/\s'\"]"),
     re.compile(r"(?i)/Users/[^/\s'\"]"),
     re.compile(r"(?i)/root/"),
+)
+ABS_PATH_PATTERNS = _HOME_PATH_PATTERNS + (
     re.compile(r"pr-ai-venv"),
     # Pinned system interpreter, with or without a minor version.
     re.compile(r"/usr/bin/python3(?:\.\d+)?"),
 )
+
+# Stop at Markdown/HTML delimiters rather than swallowing adjacent local text.
+_HTTP_URL_RE = re.compile(r"(?i)\bhttps?://[^\s<>\"'`()\[\]\\]+")
 
 SECRET_PATTERNS = (
     re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----"),
@@ -142,6 +152,21 @@ def is_excluded(path: str) -> bool:
     return False
 
 
+def _http_path_spans(line: str) -> list[tuple[int, int]]:
+    """Locate HTTP(S) pathnames, excluding userinfo, queries, and fragments."""
+    spans = []
+    for match in _HTTP_URL_RE.finditer(line):
+        try:
+            parts = urlsplit(match.group())
+            if not parts.hostname or parts.username is not None or parts.password is not None:
+                continue
+        except ValueError:
+            continue
+        start = match.start() + len(parts.scheme) + 3 + len(parts.netloc)
+        spans.append((start, start + len(parts.path)))
+    return spans
+
+
 def scan_text(path: str, text: str) -> list:
     """Scan *text* (the contents of *path*) for abs-path and secret matches.
 
@@ -156,8 +181,19 @@ def scan_text(path: str, text: str) -> list:
         if ALLOW_MARKER in line:
             continue
         snippet = line.strip()
+        # A home pattern consumes the next character, even '?' in /home/?L=1.
+        # Its start identifies the pathname without masking a later query leak.
+        http_paths = _http_path_spans(line)
         for category, patterns in _LINE_CATEGORIES:
-            if any(p.search(line) for p in patterns):
+            if any(
+                not (
+                    category == "ABS_PATH"
+                    and pattern in _HOME_PATH_PATTERNS
+                    and any(start <= match.start() < end for start, end in http_paths)
+                )
+                for pattern in patterns
+                for match in pattern.finditer(line)
+            ):
                 violations.append(Violation(path, lineno, category, snippet))
     return violations
 

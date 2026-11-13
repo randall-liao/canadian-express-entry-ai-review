@@ -8,6 +8,8 @@
 
 **Canadian Express Entry AI Review** is an open-standard, multi-agent AI system designed to audit Canadian Express Entry permanent residence (e-APR) applications post-ITA. It verifies supporting documents, substantiates claimed Comprehensive Ranking System (CRS) points, screens edge-case IRCC policy rules, and exports redacted remediation packets for professional legal review.
 
+> **Stale snapshot warning:** General policy, legal and NOC sources were captured on **2026-06-10–11**; DLI data has a separate **2026-07-16** upstream as-of date. These are not live policy updates. Verify each cited official source before relying on a result. See [snapshot cutoffs and refresh instructions](#bundled-corpus-and-refresh).
+
 ---
 
 ## 🌟 Key Features
@@ -32,17 +34,34 @@ Ensure Python 3.11 is installed. Clone the repository and set up the environment
 git clone https://github.com/randall-liao/canadian-express-entry-ai-review.git
 cd canadian-express-entry-ai-review
 
-# Required for OCR of scanned documents on Debian/Ubuntu
-sudo apt-get install tesseract-ocr
-
 # Create the Poetry environment with Python 3.11
 poetry env use "$(uv python find 3.11)"
 
-# Install the package plus document extraction and OCR support
+# Install the core package; enough for offline search of the bundled index
+poetry install
+```
+
+### 2. Search the Bundled Corpus Offline
+
+The clone already contains `corpus/index.db`; no crawl or index build is required.
+From the repository root, search immediately after installation:
+
+```bash
+poetry run corpus-crawler --json search "medical examination" --db corpus/index.db --limit 3
+```
+
+Search runs locally without API credentials or network access. Read `ok` first;
+results carry source URLs and citation IDs, not a guarantee of current policy.
+
+For applicant-document review, also install extraction and OCR support:
+
+```bash
+# Debian/Ubuntu: required only for OCR of scanned applicant documents
+sudo apt-get install tesseract-ocr
 poetry install -E doc-extract -E ocr
 ```
 
-### 2. Run Preflight Doctor Check
+### 3. Run Preflight Doctor Check
 
 Verify that local dependencies, OCR tools, and corpus index are healthy:
 
@@ -50,7 +69,7 @@ Verify that local dependencies, OCR tools, and corpus index are healthy:
 poetry run corpus-crawler --json doctor
 ```
 
-### 3. Start a Review with GitHub Copilot
+### 4. Start a Review with GitHub Copilot
 
 Download the pinned Copilot SDK runtime, start Copilot at the repository root,
 and state what you want reviewed:
@@ -72,13 +91,191 @@ uncertain extracted fields, runs corpus-grounded review and applicable
 screening, and generates private remediation or a redacted review packet.
 Source documents, applicant facts, and extracted fields remain local.
 
-### 4. Run Multi-CLI Conformance Gate
+### 5. Run Multi-CLI Conformance Gate
 
 Verify system integrity across all CLI adapters and safety rules:
 
 ```bash
 .venv/bin/python scripts/run_multi_cli_conformance.py
 ```
+
+---
+
+## Bundled corpus and refresh
+
+The checkout ships **1,878 public-source Markdown documents** and a ready-to-use
+SQLite FTS5 index, [`corpus/index.db`](corpus/index.db). This is a curated subset,
+not a complete archive of Canadian immigration policy or the NOC classification.
+
+| Source family | Documents |
+|---|---:|
+| IRCC policy/guidance and Justice IRPA/IRPR legislation | 366 |
+| Statistics Canada NOC 2021 Version 1.0 | 376 |
+| IRCC designated learning institutions (DLI) | 1,136 |
+
+The **742 non-DLI documents** have recorded `crawl_date` values from
+`2026-06-10T23:27:24Z` through `2026-06-11T04:05:19Z`. DLI's
+[`manifest.json`](corpus/dli/manifest.json) records `as_of` =
+`2026-07-16T18:08:26Z`, derived from the upstream HTTP `Last-Modified` header;
+DLI files use that same value as `crawl_date`, **not a fetch timestamp**.
+The newest metadata date does not establish freshness for the rest of the corpus,
+or even that a source was substantively reviewed on that date. DLI records cover
+listed status at the snapshot date, not past designation or program-level PGWP
+eligibility. Always check the live source linked in each document/result.
+
+### Refresh one source family, then rebuild the index
+
+There is **no automatic all-source updater**. Refresh is an audited maintenance
+operation: acquire one family outside the shipped `corpus/`, quality-control it,
+review the differences and coverage, deliberately promote approved files, then
+reindex. A bounded crawl of one tree does not refresh the other families.
+
+For example, from the repository root, stage an IRCC medical-tree crawl:
+
+```bash
+poetry install -E crawl
+stage="$(mktemp -d)"
+poetry run corpus-crawler --json crawl \
+  --seed "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/standard-requirements/medical-requirements.html" \
+  --profile ircc --include "*medical*" --depth 2 --max-pages 40 \
+  --source-type pdi --out "$stage/medical"
+```
+
+Crawling and live completeness checks require the optional `crawl` extra and its
+Chromium/browser dependencies; see [`crawler/README.md`](crawler/README.md).
+Adjust the seed, profile, scope and limits for the chosen family. **NOC and Justice
+legislation need source-specific acquisition/curation** against their official
+classification or consolidated laws; the IRCC example and `refresh-dli` do not
+refresh them, and there is no dedicated NOC/legal refresh subcommand.
+
+Follow [`crawler/QC_RUNBOOK.md`](crawler/QC_RUNBOOK.md): save a pre-QC copy, prune
+only whole irrelevant sections without rewriting retained text, author one eval
+contract per document, and confirm zero verbatim changes. Preserve each file's
+`title`, `url`, `crawl_date` and publisher attribution (`label`); never make old
+content appear fresh by changing its date. Then run the existing gates:
+
+```bash
+poetry run python -m crawler.eval_runner "$stage/medical"
+poetry run corpus-crawler --json apply-verdicts "$stage/medical" --dry-run
+poetry run corpus-crawler --json apply-verdicts "$stage/medical"
+poetry run python -m crawler.eval_runner "$stage/medical"
+poetry run corpus-crawler --json completeness "$stage/medical" --fraction 0.1
+# Complete the runbook's sampled live-page audit and write its .check.json files
+# before generating the report; fetching a sample alone is not a passing audit.
+poetry run corpus-crawler --json report "$stage/medical"
+```
+
+Require passing evals and `result.verdict: "pass"` from the report. Review additions,
+removals, retained coverage and source rights before replacing the corresponding
+curated files under `corpus/`. Keep dropped pages, QC reports and temporary captures
+outside the shipped corpus; retain required family provenance such as DLI's
+manifest. After promotion, from the repository root:
+
+```bash
+poetry run corpus-crawler --json index corpus/ --db corpus/index.db
+```
+
+**Rebuilding the index reads local files only: it does not fetch policies or make
+the snapshot current.** Review public corpus changes and the rebuilt database
+together before publication, and update the documented counts/cutoffs.
+
+### Maintainer-only sanitized index export
+
+**Before publishing any rebuilt index, including after a DLI refresh**, export a
+sanitized copy. The index builder records an absolute `meta.corpus_root`; changing
+that value in place can leave the old path in unused SQLite pages. The ordinary
+publication checker skips binary contents, so it cannot audit the database.
+
+Close database users/writers first. From the repository root, run the following
+after rebuilding. It backs up to temporary files on the same filesystem, changes
+only location metadata, compacts into a fresh database and replaces the original
+atomically **only after integrity and raw-byte checks pass**:
+
+```bash
+poetry run python - <<'PY'
+from collections import Counter
+from contextlib import closing
+import json
+import os
+from pathlib import Path
+import sqlite3
+from tempfile import TemporaryDirectory
+
+from scripts.check_publish_safe import scan_text
+
+db = Path("corpus/index.db")
+if any(Path(str(db) + suffix).exists() for suffix in ("-wal", "-shm", "-journal")):
+    raise SystemExit("Close database users and resolve SQLite sidecars before export.")
+
+with TemporaryDirectory(prefix=".index-publish-", dir=db.parent) as temp:
+    working = Path(temp) / "working.db"
+    compact = Path(temp) / "publish.db"
+    source_uri = db.resolve().as_uri() + "?mode=ro"
+    with closing(sqlite3.connect(source_uri, uri=True)) as source:
+        with closing(sqlite3.connect(working)) as copy:
+            source.backup(copy)
+            changed = copy.execute(
+                "UPDATE meta SET value = ? WHERE key = ?", (".", "corpus_root")
+            ).rowcount
+            if changed != 1:
+                raise SystemExit("Unexpected corpus metadata; index not replaced.")
+            copy.commit()
+            copy.execute("VACUUM INTO ?", (str(compact),))
+
+    with closing(sqlite3.connect(compact)) as checked:
+        if checked.execute("PRAGMA integrity_check").fetchall() != [("ok",)]:
+            raise SystemExit("SQLite integrity check failed; index not replaced.")
+        root = checked.execute(
+            "SELECT value FROM meta WHERE key = ?", ("corpus_root",)
+        ).fetchone()
+        if root != (".",):
+            raise SystemExit("Unexpected corpus metadata; index not replaced.")
+
+    # Bypass decode_for_scan's binary skip and break NUL-delimited fields,
+    # so a URL cannot absorb an adjacent field containing a local path.
+    audit_text = compact.read_bytes().replace(b"\x00", b"\n").decode(
+        "utf-8", errors="replace"
+    )
+    violations = scan_text("corpus/index.db", audit_text)
+    counts = dict(sorted(Counter(item.category for item in violations).items()))
+    print(json.dumps({"violations": len(violations), "categories": counts}))
+    if violations:
+        raise SystemExit("Binary audit failed; index not replaced.")
+    os.replace(compact, db)
+PY
+poetry run python scripts/check_publish_safe.py
+```
+
+`VACUUM INTO` discards unused pages instead of merely hiding old metadata. The
+binary audit retains the existing machine-path and credential checks and reports
+only violation counts/categories, never matching snippets. A failure leaves the
+original rebuilt index unchanged: do not publish it; fix the source/problem and
+repeat the export. These pattern checks are **not a full content or PII audit**;
+publication still requires deliberately audited public sources and a review of
+the corpus/index changes. No scanner exemptions or source-text edits are a
+substitute for that review.
+
+### DLI-only refresh
+
+`refresh-dli` fetches the fixed [IRCC DLI JSON endpoint](https://www.canada.ca/content/dam/ircc/documents/json/dli/dli-full-list.json),
+validates its schema and regenerates only `corpus/dli/` plus its manifest. It does
+not refresh IRCC policy, NOC or legislation, or rebuild the index. It has no
+`--out` option, so run the installed command from a separate staging directory
+to avoid replacing the shipped family before review:
+
+```bash
+# Start from the repository root, with the package installed in the Poetry env
+dli_stage="$(mktemp -d)"
+crawler_python="$(poetry env info --executable)"
+(cd "$dli_stage" && "$crawler_python" -m crawler.cli --json refresh-dli)
+```
+
+Review `$dli_stage/corpus/dli/`, its counts, hashes, `as_of` and live-source
+coverage. Promote the **whole approved DLI family including `manifest.json`**,
+so removed institutions do not linger, then run the same rebuild, sanitized
+export/binary audit and publication checks above. This generator is stdlib-only;
+it does not need the `crawl` extra.
+Source-specific reproduction terms and required attribution are in [NOTICE](NOTICE).
 
 ---
 
@@ -235,11 +432,18 @@ corpus-crawler --json vault review-packet --candidate cand_001 --db corpus/index
 
 ## 🛡️ Publish Safety & Conformance
 
-To guarantee that no private candidate data, machine-specific paths, or secret tokens are published to public repositories, run the stdlib publish-safety checker:
+To check tracked text and filenames for private vault artifacts, machine-specific paths or secret tokens, run the stdlib publish-safety checker:
 
 ```bash
 .venv/bin/python scripts/check_publish_safe.py
 ```
+
+Public source URL path segments are not treated as machine paths. Embedded local
+paths, credentials and URL query values remain scanned; a source URL is not a
+blanket exemption from publication-safety checks.
+The checker skips binary file contents; publish a rebuilt SQLite index only
+after the [maintainer export and binary audit](#maintainer-only-sanitized-index-export)
+above. Neither pattern scan replaces public-source curation or a content/PII review.
 
 To run the complete system conformance suite:
 
@@ -256,7 +460,9 @@ commits dismiss earlier approvals. Resolve review conversations before merging.
 Force-pushes and branch deletion are disabled; the repository owner retains an
 administrator bypass for solo maintenance. GitHub Actions uses read-only default
 token permissions, and workflows from external contributors require approval.
-Never include applicant documents, vaults, credentials, or local corpora in a pull request.
+Audited, attributed public-source corpus updates may be included with their rebuilt
+index and documented cutoffs. Never include applicant documents, candidate vaults,
+credentials, private corpora or unaudited local crawl outputs in a pull request.
 
 ### Initial snapshot verification
 
@@ -272,6 +478,6 @@ this initial public release.
 
 ## 📄 License & Legal Disclaimer
 
-* **Software License**: Distributed under the [MIT License](LICENSE).
+* **Software License**: Code is distributed under the [MIT License](LICENSE); bundled source materials and their indexed text retain their source-specific reproduction terms, not MIT.
 * **Attribution**: See [NOTICE](NOTICE) for third-party citations and corpus source attribution.
 * **Disclaimer**: This system provides **substantiation screening**, NOT legal advice. It does not decide cases or guarantee IRCC application outcomes. Always consult a licensed Regulated Canadian Immigration Consultant (RCIC) or immigration lawyer for legal counsel.

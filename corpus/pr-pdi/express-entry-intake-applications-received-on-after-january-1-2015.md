@@ -1,0 +1,28 @@
+---
+url: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/intake-applications-received-on-after-january-1-2015.html"
+title: "Intake: Applications received for permanent resident programs subject to Express Entry - Canada.ca"
+source_type: "pdi"
+crawl_date: "2026-06-11T01:50:13Z"
+label: "Source: IRCC Program Delivery Instructions (canada.ca), reproduced for personal non-commercial use; verify against the live page."
+generator: "crawl4ai-list"
+---
+
+# Intake: Applications received for permanent resident programs subject to Express Entry
+Express Entry candidates who are invited to apply for the federal skilled worker class (FSWC), the federal skilled trades class (FSTC), the Canadian experience class (CEC) or the provincial nominee class (PNC) are required to submit their application for permanent residence electronically, in accordance with [section 12.01 of the Immigration and Refugee Protection Regulations (IRPR)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2002-227/section-12.01.html).
+When a candidate is issued an invitation to apply (ITA), a functionality allowing them to submit an electronic application for permanent residence (e-APR) automatically appears in their [online account](https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html). The e-APR is a dynamic form that asks the applicant questions based on the information provided in their profile (for example, if the applicant declared a spouse, the system prompts the applicant with questions about the spouse).
+The system automatically pre-populates the e-APR with the information from the candidate’s Express Entry profile. Applicants only need to verify that the information is correct and amend it as necessary. Since much of the application information is already captured, applicants will only have to answer questions related to family composition and admissibility.
+## Supporting documents
+When submitting their e-APR, applicants must provide supporting documentation to substantiate the information provided in their Express Entry profile (on the basis of which they were invited to apply) and their e-APR.
+If a candidate submits an e-APR but cannot substantiate the information upon which they were issued an ITA, the candidate’s application will be [refused in accordance with section 11.2 of the Immigration and Refugee Protection Act (IRPA)](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/assessing-electronic-application-on-section-a11-2.html). Misrepresentation [[A40](http://laws-lois.justice.gc.ca/eng/acts/I-2.5/section-40.html)] will also be considered, as warranted. The penalty for willful misrepresentation is a 5-year ban on applying to Canada.
+## Applicants who have multiple applications in process
+Foreign nationals may apply for multiple immigration programs at once, as long as they have paid the required [cost recovery fees](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/fees/immigration/express-entry-electronic-application-permanent-residence.html) for each program to which they have applied. For example, a foreign national could apply under the CEC if invited to do so through Express Entry, and could also apply under the caring for children class outside of the Express Entry system.
+Once permanent resident status is granted, any other pending applications for permanent residence should be administratively withdrawn and the applicant notified.
+## Lock-in date for age
+When an applicant submits their e-APR in their account, the system records in the Global Case Management System (GCMS) the date the application was received. The system then automatically issues an acknowledgement of receipt letter to the applicant through their account.
+For the FSWC, the FSTC and the CEC, the age of the principal applicant, their spouse or common-law partner and their dependent children (as applicable) is locked in on the date that IRCC receives the e-APR.
+For information about the age of principal applicants as it relates to their eligibility, see the [Exemption to section A11.2: Candidates whose birthday occurs after they receive an ITA](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/assessing-electronic-application-on-section-a11-2.html#birthday) section.
+## Full procedures
+  * [Cost recovery fees](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/fees/immigration/express-entry-electronic-application-permanent-residence.html)
+  * [Completeness check](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2016-completeness-check.html)
+  * [Alternative application process for persons with disabilities](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2015-alternative-application-process-persons-disabilities.html)
+  * [Language test scores for persons with disabilities](https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/applications-received-on-after-january-1-2015-language-test-scores-persons-disabilities.html)
