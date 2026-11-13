@@ -1,0 +1,39 @@
+---
+url: "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/express-entry-year-end-report-2023/fact-sheet-2023.html"
+title: "Express Entry Year-End Report 2023: Fact sheet - Canada.ca"
+source_type: "guidance"
+crawl_date: "2026-06-11T01:09:06Z"
+label: "Source: IRCC (canada.ca), reproduced for personal non-commercial use; verify against the live page."
+generator: "crawl4ai-deep"
+---
+
+# Express Entry Year-End Report 2023: Fact sheet
+Launched in January 2015, Express Entry (EE) is Canada’s flagship application management system for three federal high-skilled (FHS) permanent economic immigration programs (the Federal Skilled Worker Program [FSWP], Federal Skilled Trades Program [FSTP] and Canadian Experience Class [CEC] and a portion of the Provincial Nominee Program [PNP]). Express Entry is an effective tool to bring in workers with skills and attributes needed to respond to Canada’s evolving economic needs and help address labour market shortages.
+## Changes to Express Entry in 2023
+**Category-based selection:** Launched in Summer 2023, category-based selection is an enhancement to the Express Entry system and offers more flexibility in Canada’s immigration response to changing economic and labour market needs. It supplements general and program invitation rounds by inviting applicants whose selection can support economic priorities. Following a review of data, labour market information, engagement with federal, provincial and territorial partners as well as stakeholder consultations, the Minister established six categories designed to support economic growth through Francophone immigration outside Quebec and help address long-term labour market shortages. Candidates with French-language proficiency or with work experience in the occupations that were eligible under the following categories were invited to apply for permanent residence through category-based selection in 2023:
+  1. Healthcare occupations
+  2. Science, technology, engineering and math (STEM)
+  3. Trade occupations
+  4. Transport occupations
+  5. Agriculture and agri-food occupations
+
+The first use of category-based selection took place in June 28th, 2023. In total, there were 17 category-based selection rounds in 2023.
+**Changes to Eligibility Criteria for Physicians:** In 2023, IRCC provided further facilitations for physicians working in the Canadian health care system. Prior to the change, physicians in Canada faced barriers in accessing permanent residence through Express Entry due to the “fee-for-service” model, as they would be considered “self-employed.” These physicians may have arranged employment and/or work experience in Canada that would not meet the programs’ requirements due to the structure of their work. To remove these barriers, as of April 25, 2023, physicians who work in a fee-for-service model with public health authorities, became exempted from certain requirements of the program so that they can access permanent residence and help address labour shortages in the healthcare sector.
+## Who was invited to apply for permanent residence through Express Entry?
+In 2023, 488,571 EE profiles were submitted through the system and 70% of the profiles submitted were eligible for at least one of the FHS immigration programs managed by EE. Among the submitted profiles, 39% of all eligible profiles submitted qualified for category-based selection criteria. Among the eligible profiles submitted to Express Entry, 23% qualified for the STEM category, 6% qualified for the French-language proficiency category, around 6% qualified for the healthcare category, 2% for transport category and trade category and around 0.5% for agriculture and agri-food category.
+Through 42 rounds of invitations, IRCC issued 110, 266 invitations in 2023, a significant increase from 46,539 invitations issued in 2022. The majority of invitations to apply for permanent residence were issued to candidates under CEC, followed by FSWP and PNP. Furthermore, IRCC held 17 category-based selection rounds from June 28, 2023 to December 21, 2023. The Department issued 25,870 ITAs through category-based selection rounds, representing 23% of the total number of ITAs issued in 2023.
+The minimum Comprehensive Ranking System scores of eligible candidates in the pool remained consistently concentrated in the 301–500 range, meaning that they consistently demonstrate high levels of human capital. For instance in 2023, 92% of invitees claimed a post-secondary educational credential of at least three years. EE continues to bring in skilled workers with strong proficiency skills in official languages and attracting more French-speaking immigrants to Francophone minority communities outside of Quebec. 
+## What were the most common primary occupations among those invited to apply?
+Express Entry continues to support Canada’s technology sector by bringing in skilled workers with in-demand skills that can drive the sector forward and meet Canada’s innovation priorities and solidify its place as a world leader in emerging technologies. Software engineers and designers, software developers and programmers, information systems specialists were among the top five the most common occupations in 2023.
+## What was the province or territory of destination of principal applicants?
+Express Entry continues to support provinces and territories by bringing in skilled workers. In 2023, Ontario remained the most popular province among principal applicants, followed by British Columbia and Alberta. These have been the top provinces of destination over the past three years.
+## How long did it take to process Express Entry applications?
+In 2023, IRCC met its processing standard for 2023 by finalizing 80% of all applications for Canadian Experience Class and Federal Skilled Worker Program in 6 months. This is a significant decrease from 2022, highlighting IRCC’s operations and processing capacity’s recovery from the impacts of COVID-19. Provincial Nominee Program-nominated Express Entry candidate processing has seen a reduction from 12 months at the end of 2022 to 8 months in 2023. The processing times for all Express Entry programs except Federal Skilled Trades Program decreased from 2021 to 2023.
+## Who was admitted through Express Entry and where was their intended destination?
+In 2023, 120,770 principal applicants and their accompanying family members were admitted to Canada as permanent residents through Express Entry. Express Entry continues to attract applicants from various parts of the world. In 2023, India has remained, by a large margin, the most common country of citizenship among principal applicants and their accompanying family members, followed by Nigeria and China.
+## What were the economic outcomes of applicants?
+The median employment earnings for Express Entry federal high-skilled principal applicants, with the earliest cohort being admitted to Canada in 2016, show an annual increase in employment earnings in the five years since the applicants were admitted to Canada. For example, for the 2016 admission cohort, the median employment income was $58,400 in 2017 (at one year since admission), and increased to $76,800 in 2021 (five years since admission).
+When compared to Canadian median employment earnings, all EE cohorts of permanent residents have significantly higher median employment earnings.
+## Next steps
+In 2023, in its eighth year of operation, the EE application management system continued to provide a pathway to permanent residence for a range of highly-skilled candidates who demonstrated the potential to successfully integrate and contribute to Canada’s economy.
+The Department will continue to monitor EE and category-based selection to explore ways the system could be used to ensure that Canada continues to derive maximum benefit from economic immigration in a rapidly evolving environment.

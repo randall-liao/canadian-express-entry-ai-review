@@ -8,13 +8,37 @@ content that the crawler fetches.
 
 ## 1. Attribution of crawled content
 
-This tool reproduces content from third-party authoritative sources. The
-built-in IRCC profile targets Immigration, Refugees and Citizenship Canada
-content published on **canada.ca/IRCC**. That content remains the property of
-its original publisher (the Government of Canada / IRCC). Nothing in this
-repository transfers ownership of, or any license to, the crawled material. Any
-local corpus you build with this tool is a copy of someone else's content and
-must be attributed to its source publisher.
+The bundled `corpus/` Markdown and the source text in `corpus/index.db` reproduce
+or normalize public material from these publishers, not applicant documents:
+
+- **Immigration, Refugees and Citizenship Canada (IRCC), Government of Canada**:
+  Express Entry guidance, Program Delivery Instructions, ministerial instructions
+  and related public pages on [Canada.ca](https://www.canada.ca/en/immigration-refugees-citizenship.html),
+  including the [Designated learning institutions list](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html).
+- **Department of Justice Canada, Government of Canada**:
+  [Immigration and Refugee Protection Act, S.C. 2001, c. 27 (IRPA)](https://laws-lois.justice.gc.ca/eng/acts/i-2.5/FullText.html)
+  and [Immigration and Refugee Protection Regulations, SOR/2002-227 (IRPR)](https://laws-lois.justice.gc.ca/eng/regulations/SOR-2002-227/FullText.html).
+  These reproductions are **not official versions**.
+- **Statistics Canada**: [National Occupational Classification (NOC) 2021
+  Version 1.0](https://www.statcan.gc.ca/en/subjects/standard/noc/2021/indexV1),
+  reference year 2021 (released September 28, 2021).
+
+Source: Statistics Canada, National Occupational Classification (NOC) 2021
+Version 1.0, 2021. Reproduced and distributed on an "as is" basis with the
+permission of Statistics Canada.
+
+Adapted from Statistics Canada, National Occupational Classification (NOC) 2021
+Version 1.0, 2021. This does not constitute an endorsement by Statistics Canada
+of this product.
+
+Each corpus file retains its document title, original source URL, recorded date
+and attribution; search results carry the title, source URL and recorded date.
+The title/URL identify the original source; recorded dates identify the snapshot,
+not a live update.
+Keep this attribution and each document's provenance when redistributing copies
+or the index. Ownership of the source material remains with its rights holder.
+For IRPA/IRPR, use the Justice attribution above: those files retain legacy IRCC
+labels even though their original source URLs point to Justice Canada.
 
 ## 2. robots.txt compliance
 
@@ -26,18 +50,39 @@ disallowed.
 
 ## 3. Source Terms of Service
 
-Users **must** review and comply with each source site's Terms of Service
-before crawling it. The shipped IRCC profile does **not** grant any right to
-canada.ca content beyond what canada.ca's own terms of use allow. You are
-responsible for ensuring your use of any source is permitted by that source's
-terms.
+Review the applicable official terms before crawling, using or redistributing
+source material; this project's MIT software license does not relicense it:
 
-## 4. Non-commercial / personal-use expectation
+- **IRCC / Canada.ca**: [Terms and conditions](https://www.canada.ca/en/transparency/terms.html)
+  permit non-commercial reproduction unless otherwise specified, with due
+  diligence for accuracy, the complete title and author (where available), and
+  acknowledgment that the copy is from the original source URL. Commercial
+  redistribution generally requires prior written permission. Third-party
+  material may have additional restrictions.
+- **Federal legislation**: the [Reproduction of Federal Law Order](https://laws-lois.justice.gc.ca/eng/Regulations/SI-97-5/FullText.html)
+  permits reproduction without charge or permission, provided due diligence is
+  exercised for accuracy and the copy is not represented as an official version.
+- **Statistics Canada**: the [Statistics Canada Open Licence](https://www.statcan.gc.ca/en/terms-conditions/open-licence)
+  and [site terms](https://www.statcan.gc.ca/en/terms-conditions) allow commercial
+  and non-commercial use subject to their conditions, including accurate
+  reproduction, source acknowledgment and no implied endorsement. The source
+  and adaptation notices above apply to the NOC material and this curated/indexed
+  product respectively.
 
-Crawled corpora are intended for **personal, non-commercial reference** only.
-Immigration guidance changes; a local copy can become stale. You must verify
-any reproduced content against the **live authoritative source** before relying
-on it, and must not treat a stale local copy as authoritative.
+These permissions are source-specific; do not assume MIT or one publisher's
+terms cover every file. No rights to official symbols, logos or trademarks are
+granted by this project. Robots permission is not a copyright license.
+
+## 4. Snapshot limits and non-endorsement
+
+The corpus is a historical, curated snapshot for reference, not a live or
+official publication. See [README.md](README.md#bundled-corpus-and-refresh) for
+the recorded cutoffs and refresh procedure. Immigration guidance changes;
+verify reproduced content against the live authoritative source before relying
+on it. An index rebuild alone does not update the source material.
+
+This independent project is not affiliated with or endorsed by IRCC, the
+Department of Justice Canada, Statistics Canada or the Government of Canada.
 
 ---
 

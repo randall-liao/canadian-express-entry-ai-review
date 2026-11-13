@@ -3,19 +3,54 @@
 personal/
 !personal.example/
 
-# Crawled corpus + derived artifacts are regenerated locally (see CRWL/index phases).
+# Private candidate vaults stay local even outside the personal/ boundary.
+candidates/
+
+# Runtime crawls, derived artifacts, and database copies remain local.
 raw/
-corpus
 index/
 *.db
 *.db-shm
 *.db-wal
+*.db-journal
+
+# Publish only audited public-family Markdown, the DLI manifest, and the
+# sanitized ready-to-use index. All other corpus artifacts remain ignored.
+corpus
+!/corpus/
+/corpus/**
+!/corpus/application-submissions/
+!/corpus/biometrics/
+!/corpus/definitions/
+!/corpus/dli/
+!/corpus/eca/
+!/corpus/guidance/
+!/corpus/language/
+!/corpus/legislation-irpa/
+!/corpus/legislation-irpr/
+!/corpus/medical/
+!/corpus/mi-rounds/
+!/corpus/ministerial-instructions/
+!/corpus/noc-2021/
+!/corpus/police-certificates/
+!/corpus/pr-pdi/
+!/corpus/translation/
+!/corpus/*/*.md
+!/corpus/dli/manifest.json
+!/corpus/index.db
+
+# Crawl captures and audit artifacts are not curated policy documents.
+/corpus/**/_dropped/
+/corpus/**/completeness/
+/corpus/**/REPORT.md
+/corpus/**/*.live.md
 
 # Candidate vault DB + sidecars (defense in depth — the real vault lives under
 # the git-ignored personal/ boundary; these also catch a stray copy anywhere).
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
+*.sqlite-journal
 
 # Local trial corpus + crawl outputs (never tracked)
 trial/
